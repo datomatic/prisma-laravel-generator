@@ -13,6 +13,8 @@ jobs:
       matrix:
         node-version:
           - 16.x
+        php-version:
+          - "8.1"
         os:
           - ubuntu-latest
           - windows-latest
@@ -22,6 +24,11 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
+      - name: Use PHP ${{matrix.php-version}} with composer v2
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php-version }}
+          tools: composer:v2
       - uses: actions/cache@v2
         with:
           path: "**/node_modules"
@@ -30,15 +37,13 @@ jobs:
         run: yarn install --frozen-lockfile
       - uses: actions/cache@v2
         with:
-          path: /tmp/composer-cache
-          key: ${{ runner.os }}-${{ hashFiles('**/composer.lock') }}
+          path: "**/vendor"
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+      - name: Install node dependencies
+        run: yarn install --frozen-lockfile
       - name: Install composer dependencies
-        uses: php-actions/composer@v6
-        with:
-          version: 2.2.x
-          php_version: 8.0
-          dev: yes
-          command: (cd usage/tools/php-cs-fixer && composer install)
+        working-directory: ./packages/usage/tools/php-cs-fixer
+        run: composer install
       - name: Run Tests 🧪
         run: yarn test
   Publish:
