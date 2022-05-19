@@ -1,10 +1,8 @@
 import {getDMMF, getSchemaSync} from '@prisma/sdk';
-import {dirname, join} from 'node:path';
-import {fileURLToPath} from 'node:url';
+import {join} from 'node:path';
 
-const samplePrismaSchema = getSchemaSync(
-  join(dirname(fileURLToPath(import.meta.url)), './sample.prisma'),
-);
+// eslint-disable-next-line unicorn/prefer-module
+const samplePrismaSchema = getSchemaSync(join(__dirname, './sample.prisma'));
 
 const getSampleDmmf = async () => {
   return getDMMF({

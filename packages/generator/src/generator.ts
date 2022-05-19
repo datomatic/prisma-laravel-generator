@@ -4,7 +4,7 @@ import path from 'node:path';
 import {GENERATOR_NAME} from './constants';
 import generateEnum from './generators/enums/generator';
 import writeFileSafely from './utils/write-file-safely';
-import formatFile from './utils/php-cs-fixer';
+import {formatFile} from './utils/php-cs-fixer';
 
 import {version} from '../package.json';
 

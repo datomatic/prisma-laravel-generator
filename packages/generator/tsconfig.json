@@ -18,7 +18,7 @@
     "removeComments": true,
     "sourceMap": true,
     "baseUrl": ".",
-    "moduleResolution": "node",
+    "moduleResolution": "Node",
     "isolatedModules": true,
     "newLine": "lf",
     "incremental": true,

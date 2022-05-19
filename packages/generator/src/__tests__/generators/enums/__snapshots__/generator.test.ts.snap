@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`enum generation: Language 1`] = `
+"<?php
+
+namespace App\\\\Enums\\\\Prisma;
+
+enum Language
+{
+    case Typescript;
+
+    case Javascript;
+
+    case Rust;
+
+    case Go;
+
+    case Python;
+
+    case Cpp;
+}
+"
+`;
+
+exports[`enum generation: NotificationType 1`] = `
+"<?php
+
+namespace App\\\\Enums\\\\Prisma;
+
+enum NotificationType
+{
+    case newPosts;
+
+    case newComments;
+
+    case newFollowers;
+
+    case reply;
+
+    case heartOnPost;
+
+    case heartOnComment;
+
+    case heartOnReply;
+}
+"
+`;
+
+exports[`enum generation: State 1`] = `
+"<?php
+
+namespace App\\\\Enums\\\\Prisma;
+
+enum State
+{
+    case Active;
+
+    case Pending;
+
+    case Banned;
+}
+"
+`;

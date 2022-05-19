@@ -14,7 +14,8 @@
     "start": "node dist/bin.js",
     "dev": "tsc -w",
     "build": "tsc",
-    "test": "jest"
+    "test": "jest",
+    "type-check": "tsc --project tsconfig.json --pretty --noEmit"
   },
   "dependencies": {
     "@prisma/client": "3.12.0",

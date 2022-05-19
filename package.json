@@ -28,8 +28,7 @@
     "prepare": "husky install",
     "format": "eslint --fix",
     "lint": "eslint",
-    "test-watch": "(cd packages/generator && yarn jest --watch)",
-    "test": "(cd packages/generator && yarn jest)",
-    "type-check": "(cd packages/generator && tsc --project tsconfig.json --pretty --noEmit)"
+    "test": "(cd packages/generator && yarn test)",
+    "type-check": "(cd packages/generator && yarn type-check)"
   }
 }

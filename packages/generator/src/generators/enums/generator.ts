@@ -17,7 +17,9 @@ const generateEnum = ({name: enumName, values}: DMMF.DatamodelEnum) => {
     enum ${enumName} {
       ${enumValues}
     }
-  `;
+  `
+    .replaceAll(/\s+/g, ' ')
+    .trim();
 };
 
 export default generateEnum;
