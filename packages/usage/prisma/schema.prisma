@@ -1,0 +1,36 @@
+generator custom_generator {
+  provider              = "npx prisma-laravel-generator"
+  output                = "../generated"
+  phpCsFixerBinPath     = "./tools/php-cs-fixer/vendor/bin/php-cs-fixerr"
+  phpCsFixerConfigPath  = "./tools/php-cs-fixer/.php-cs.dist.php"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id    Int     @id @default(autoincrement())
+  email String  @unique
+  name  String?
+}
+
+enum NotificationType {
+  newPosts         @map("1")
+  newComments      @map("2")
+  newFollowers     @map("3")
+  reply            @map("4")
+  heartOnPost      @map("5")
+  heartOnComment   @map("6")
+  heartOnReply     @map("7")
+}
+
+enum Language {
+  Typescript
+  Javascript
+  Rust
+  Go
+  Python
+  Cpp
+}

@@ -1,0 +1,73 @@
+{
+  "name": "prisma-laravel-generator",
+  "description": "Prisma Generator for Laravel",
+  "version": "0.1.0",
+  "main": "dist/generator.js",
+  "license": "MIT",
+  "bin": {
+    "prisma-laravel-generator": "dist/bin.js"
+  },
+  "engines": {
+    "node": ">=14.0"
+  },
+  "scripts": {
+    "start": "node dist/bin.js",
+    "dev": "tsc -w",
+    "build": "tsc",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@prisma/client": "3.12.0",
+    "@prisma/generator-helper": "3.12.0",
+    "@prisma/sdk": "3.12.0"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/git": "^10.0.1",
+    "@types/jest": "27.0.3",
+    "@types/node": "17.0.21",
+    "jest": "27.4.7",
+    "prisma": "3.12.0",
+    "semantic-release": "^18.0.1",
+    "ts-jest": "27.1.4",
+    "typescript": "4.6.2"
+  },
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/squidlab-it/prisma-laravel-generator"
+  },
+  "author": "Roberto Negro <robertonegro@squidlab.it>",
+  "keywords": [
+    "prisma",
+    "prisma2",
+    "generator",
+    "laravel"
+  ],
+  "release": {
+    "branches": [
+      "main"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      [
+        "@semantic-release/changelog",
+        {
+          "changelogFile": "CHANGELOG.md"
+        }
+      ],
+      "@semantic-release/github",
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "CHANGELOG.md",
+            "package.json"
+          ],
+          "message": "chore(release): set `package.json` to ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+        }
+      ]
+    ]
+  }
+}
