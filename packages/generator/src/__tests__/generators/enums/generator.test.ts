@@ -10,8 +10,8 @@ test('enum generation', async () => {
       expect(
         await format(
           generateEnum(enumInfo),
-          '../usage/tools/php-cs-fixer/vendor/bin/php-cs-fixer',
-          '../usage/tools/php-cs-fixer/.php-cs.dist.php',
+          './../usage/tools/php-cs-fixer/vendor/bin/php-cs-fixer',
+          './../usage/tools/php-cs-fixer/.php-cs.dist.php',
         ),
       ).toMatchSnapshot(enumInfo.name);
     }),
