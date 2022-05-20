@@ -38,7 +38,7 @@ export const formatFile = async (
   checkPhpCsFixer(phpCsFixerBin, phpCsFixerConfig);
 
   await exec(
-    `${phpCsFixerBin} fix ${path} --quiet --config=${phpCsFixerConfig}`,
+    `"${phpCsFixerBin}" fix "${path}" --quiet --config="${phpCsFixerConfig}"`,
   );
 };
 
