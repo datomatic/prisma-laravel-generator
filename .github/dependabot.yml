@@ -8,16 +8,16 @@ updates:
   - package-ecosystem: 'npm'
     directory: '/packages/generator/'
     schedule:
-      interval: 'daily'
+      interval: 'weekly'
   - package-ecosystem: 'npm'
     directory: '/packages/usage/'
     schedule:
-      interval: 'daily'
+      interval: 'weekly'
   - package-ecosystem: 'npm'
     directory: '/'
     schedule:
-      interval: 'daily'
+      interval: 'weekly'
   - package-ecosystem: 'composer'
     directory: '/packages/usage/tools/php-cs-fixer'
     schedule:
-      interval: 'daily'
+      interval: 'weekly'
