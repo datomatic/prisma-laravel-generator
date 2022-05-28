@@ -1,5 +1,5 @@
 {
-  "name": "usage",
+  "name": "prisma-laravel-generator-usage",
   "private": true,
   "version": "1.0.0",
   "main": "src/app.js",
