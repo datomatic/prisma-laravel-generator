@@ -12,10 +12,11 @@
   },
   "scripts": {
     "start": "node dist/bin.js",
-    "dev": "tsc --build src --watch",
     "build": "tsc --build src",
+    "build:watch": "tsc --build src --watch",
+    "type-check": "tsc --project src/tsconfig.json --pretty --noEmit",
     "test": "jest",
-    "type-check": "tsc --project src/tsconfig.json --pretty --noEmit"
+    "test:watch": "jest --watch"
   },
   "dependencies": {
     "@prisma/client": "3.14.0",

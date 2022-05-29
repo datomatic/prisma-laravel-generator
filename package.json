@@ -27,8 +27,6 @@
   "scripts": {
     "prepare": "husky install",
     "format": "eslint --fix",
-    "lint": "eslint",
-    "test": "(cd packages/generator && yarn test)",
-    "type-check": "(cd packages/generator && yarn type-check)"
+    "lint": "eslint"
   }
 }
