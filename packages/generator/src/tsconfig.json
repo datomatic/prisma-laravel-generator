@@ -5,6 +5,7 @@
     "outDir": "../dist",
     "rootDir": "."
   },
+  "exclude": ["**/__tests__"],
   "references": [
     { "path": "../" }
   ],
