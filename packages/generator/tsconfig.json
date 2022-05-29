@@ -1,28 +1,13 @@
 {
-  "compilerOptions": {
-    "outDir": "./dist",
-    "rootDir": ".",
+  "extends": "../../tsconfig.compiler.json",
 
-    "target": "ES2018",
-    "module": "esnext",
-    "lib": ["esnext"],
-    "strict": true,
-    "strictPropertyInitialization": false,
-    "esModuleInterop": true,
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "skipLibCheck": true,
-    "allowJs": true,
-    "forceConsistentCasingInFileNames": true,
-    "resolveJsonModule": true,
-    "removeComments": true,
-    "sourceMap": true,
-    "baseUrl": ".",
-    "moduleResolution": "Node",
-    "isolatedModules": true,
-    "newLine": "lf",
-    "incremental": true,
+  "compilerOptions": {
+    "outDir": ".",
+    "rootDir": ".",
+    "composite": true
   },
-  "include": ["src/**/*.ts"],
-  "exclude": ["**/node_modules", "**/dist"]
+
+  "files": [
+    "package.json"
+  ],
 }
