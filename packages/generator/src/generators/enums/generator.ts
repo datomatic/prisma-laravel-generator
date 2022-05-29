@@ -1,4 +1,5 @@
 import {DMMF} from '@prisma/generator-helper';
+import minimizePhp from '../../helpers/minimize-php';
 
 const generateEnum = ({name: enumName, values}: DMMF.DatamodelEnum) => {
   const enumValues = values
@@ -10,16 +11,14 @@ const generateEnum = ({name: enumName, values}: DMMF.DatamodelEnum) => {
     })
     .join('\n');
 
-  return `
+  return minimizePhp(`
     <?php
     namespace App\\Enums\\Prisma;
 
     enum ${enumName} {
       ${enumValues}
     }
-  `
-    .replaceAll(/\s+/g, ' ')
-    .trim();
+  `);
 };
 
 export default generateEnum;

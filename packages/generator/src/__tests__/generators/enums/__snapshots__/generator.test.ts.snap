@@ -29,35 +29,19 @@ namespace App\\\\Enums\\\\Prisma;
 
 enum NotificationType
 {
-    case newPosts;
+    case newPosts = '1';
 
-    case newComments;
+    case newComments = '2';
 
-    case newFollowers;
+    case newFollowers = '3';
 
-    case reply;
+    case reply = '4';
 
-    case heartOnPost;
+    case heartOnPost = '5';
 
-    case heartOnComment;
+    case heartOnComment = '6';
 
-    case heartOnReply;
-}
-"
-`;
-
-exports[`enum generation: State 1`] = `
-"<?php
-
-namespace App\\\\Enums\\\\Prisma;
-
-enum State
-{
-    case Active;
-
-    case Pending;
-
-    case Banned;
+    case heartOnReply = '7';
 }
 "
 `;

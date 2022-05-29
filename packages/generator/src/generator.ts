@@ -30,7 +30,7 @@ generatorHandler({
           'Prisma',
           `${enumInfo.name}.php`,
         );
-        writeFileSafely(writeLocation, generatedEnum);
+        await writeFileSafely(writeLocation, generatedEnum);
 
         await formatFile(
           writeLocation,

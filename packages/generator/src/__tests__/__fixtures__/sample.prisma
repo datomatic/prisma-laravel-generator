@@ -10,13 +10,13 @@ model User {
 }
 
 enum NotificationType {
-  newPosts
-  newComments
-  newFollowers
-  reply
-  heartOnPost
-  heartOnComment
-  heartOnReply
+  newPosts         @map("1")
+  newComments      @map("2")
+  newFollowers     @map("3")
+  reply            @map("4")
+  heartOnPost      @map("5")
+  heartOnComment   @map("6")
+  heartOnReply     @map("7")
 }
 
 enum Language {
@@ -26,10 +26,4 @@ enum Language {
   Go
   Python
   Cpp
-}
-
-enum State {
-  Active
-  Pending
-  Banned
 }

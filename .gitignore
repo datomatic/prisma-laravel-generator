@@ -12,5 +12,8 @@ yarn-error.log*
 # env files
 .env*
 
+# jest
+coverage/
+
 # typescript
 *.tsbuildinfo

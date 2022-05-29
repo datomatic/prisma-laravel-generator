@@ -1,12 +1,12 @@
-import fs from 'node:fs';
+import {mkdir, writeFile} from 'node:fs/promises';
 import path from 'node:path';
 
-const writeFileSafely = (writeLocation: string, content: string) => {
-  fs.mkdirSync(path.dirname(writeLocation), {
+const writeFileSafely = async (writeLocation: string, content: string) => {
+  await mkdir(path.dirname(writeLocation), {
     recursive: true,
   });
 
-  fs.writeFileSync(writeLocation, content);
+  await writeFile(writeLocation, content ?? '', 'utf8');
 };
 
 export default writeFileSafely;
