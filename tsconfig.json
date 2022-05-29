@@ -1,7 +1,10 @@
 {
   "extends": "./tsconfig.compiler.json",
 
+  "compilerOptions": {
+    "noEmit": true
+  },
+
   "include": ["**/*.ts"],
   "exclude": ["**/node_modules", "**/dist"],
-  "noEmit": true
 }
