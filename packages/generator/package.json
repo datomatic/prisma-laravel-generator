@@ -16,7 +16,8 @@
     "build:watch": "tsc --build src --watch",
     "type-check": "tsc --project src/tsconfig.json --pretty --noEmit",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "prepack": "yarn build"
   },
   "dependencies": {
     "@prisma/client": "3.14.0",
