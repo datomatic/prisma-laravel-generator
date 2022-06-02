@@ -5,6 +5,12 @@ const rules = {
   // "@typescript-eslint/no-unsafe-member-access": "off",
   // "@typescript-eslint/no-unsafe-return": "off",
   // '@typescript-eslint/no-unsafe-argument': 'off',
+
+  // allow for(... of ...), we're not in browser
+  'no-restricted-syntax': 'off',
+
+  // allow __dirname
+  'unicorn/prefer-module': 'off',
 };
 
 module.exports = {
