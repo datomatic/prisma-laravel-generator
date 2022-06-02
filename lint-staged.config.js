@@ -6,4 +6,7 @@ module.exports = {
     `yarn format ${filenames.join(' ')}`,
     `yarn lint ${filenames.join(' ')}`,
   ],
+  // Run prisma format on all prisma schemas
+  '**/*.prisma': filenames =>
+    filenames.map(filename => `yarn prisma format --schema ${filename}`),
 };
