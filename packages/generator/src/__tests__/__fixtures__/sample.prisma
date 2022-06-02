@@ -3,20 +3,72 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model User {
-  id    Int     @id @default(autoincrement())
+model UserWithMap {
+  id    Int    @id @default(autoincrement()) @map("user_id") // COMMENT
+  // TEST COMMENT
+  email String @unique @map("user_email") @db.VarChar(100) /// Generator comment
+
+  /// Generator pre-comment
+  name String? @map("user_name")
+
+  circle Unsupported("circle")? @default(dbgenerated("'<(10,4),11>'::circle"))
+
+  @@map("users")
+}
+
+model UserWithPrimaryKey {
+  id    Int     @default(autoincrement())
   email String  @unique
   name  String?
+
+  @@id([id], name: "userId")
+}
+
+model User {
+  id      Int      @id @default(autoincrement())
+  email   String   @unique
+  name    String?
+  role    Role     @default(USER)
+  posts   Post[]
+  profile Profile?
+}
+
+model Profile {
+  id     Int    @id @default(autoincrement())
+  bio    String
+  user   User   @relation(fields: [userId], references: [id])
+  userId Int    @unique
+}
+
+model Post {
+  id         Int        @id @default(autoincrement())
+  createdAt  DateTime   @default(now())
+  title      String
+  published  Boolean    @default(false)
+  author     User       @relation(fields: [authorId], references: [id])
+  authorId   Int
+  categories Category[] @relation(references: [id])
+}
+
+model Category {
+  id    Int    @id @default(autoincrement())
+  name  String
+  posts Post[] @relation(references: [id])
+}
+
+enum Role {
+  USER
+  ADMIN
 }
 
 enum NotificationType {
-  newPosts         @map("1")
-  newComments      @map("2")
-  newFollowers     @map("3")
-  reply            @map("4")
-  heartOnPost      @map("5")
-  heartOnComment   @map("6")
-  heartOnReply     @map("7")
+  newPosts        @map("1")
+  newComments     @map("2")
+  newFollowers    @map("3")
+  reply           @map("4")
+  heartOnPost     @map("5")
+  heartOnComment  @map("6")
+  heartOnReply    @map("7")
 }
 
 enum Language {

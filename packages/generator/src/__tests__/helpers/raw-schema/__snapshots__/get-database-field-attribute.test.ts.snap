@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getDatabaseFieldAnnotation: Category - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Category - name 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Category - posts 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Post - author 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Post - authorId 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Post - categories 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Post - createdAt 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Post - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Post - published 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Post - title 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Profile - bio 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Profile - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Profile - user 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Profile - userId 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: User - email 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: User - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: User - name 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: User - posts 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: User - profile 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: User - role 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: UserWithMap - email 1`] = `"VarChar(100)"`;
+
+exports[`getDatabaseFieldAnnotation: UserWithMap - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: UserWithMap - name 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: UserWithPrimaryKey - email 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: UserWithPrimaryKey - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: UserWithPrimaryKey - name 1`] = `false`;

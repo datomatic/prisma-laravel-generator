@@ -1,0 +1,18 @@
+import getFieldAttribute from './get-field-attribute';
+
+const getDefaultFieldAttribute = (
+  fieldName: string,
+  modelName: string,
+  rawSchema: string,
+): false | string => {
+  return getFieldAttribute<string>(
+    /@default\(([^()]+(\([^)]*\))?)\)/g,
+    1,
+    false,
+    fieldName,
+    modelName,
+    rawSchema,
+  );
+};
+
+export default getDefaultFieldAttribute;

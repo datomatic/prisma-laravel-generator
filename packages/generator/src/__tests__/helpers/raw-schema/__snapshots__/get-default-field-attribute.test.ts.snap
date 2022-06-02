@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getDefaultFieldAnnotation: Category - id 1`] = `false`;
+
+exports[`getDefaultFieldAnnotation: Category - name 1`] = `false`;
+
+exports[`getDefaultFieldAnnotation: Category - posts 1`] = `false`;
+
+exports[`getDefaultFieldAnnotation: Post - author 1`] = `false`;
+
+exports[`getDefaultFieldAnnotation: Post - authorId 1`] = `false`;
+
+exports[`getDefaultFieldAnnotation: Post - categories 1`] = `false`;
+
+exports[`getDefaultFieldAnnotation: Post - createdAt 1`] = `"now()"`;
+
+exports[`getDefaultFieldAnnotation: Post - id 1`] = `false`;
+
+exports[`getDefaultFieldAnnotation: Post - published 1`] = `"false"`;
+
+exports[`getDefaultFieldAnnotation: Post - title 1`] = `false`;
+
+exports[`getDefaultFieldAnnotation: Profile - bio 1`] = `false`;
+
+exports[`getDefaultFieldAnnotation: Profile - id 1`] = `false`;
+
+exports[`getDefaultFieldAnnotation: Profile - user 1`] = `false`;
+
+exports[`getDefaultFieldAnnotation: Profile - userId 1`] = `false`;
+
+exports[`getDefaultFieldAnnotation: User - email 1`] = `false`;
+
+exports[`getDefaultFieldAnnotation: User - id 1`] = `false`;
+
+exports[`getDefaultFieldAnnotation: User - name 1`] = `false`;
+
+exports[`getDefaultFieldAnnotation: User - posts 1`] = `false`;
+
+exports[`getDefaultFieldAnnotation: User - profile 1`] = `false`;
+
+exports[`getDefaultFieldAnnotation: User - role 1`] = `"USER"`;
+
+exports[`getDefaultFieldAnnotation: UserWithMap - email 1`] = `false`;
+
+exports[`getDefaultFieldAnnotation: UserWithMap - id 1`] = `"autoincrement()"`;
+
+exports[`getDefaultFieldAnnotation: UserWithMap - name 1`] = `false`;
+
+exports[`getDefaultFieldAnnotation: UserWithPrimaryKey - email 1`] = `false`;
+
+exports[`getDefaultFieldAnnotation: UserWithPrimaryKey - id 1`] = `false`;
+
+exports[`getDefaultFieldAnnotation: UserWithPrimaryKey - name 1`] = `false`;

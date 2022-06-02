@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getMapFieldAnnotation: Category - id 1`] = `false`;
+
+exports[`getMapFieldAnnotation: Category - name 1`] = `false`;
+
+exports[`getMapFieldAnnotation: Category - posts 1`] = `false`;
+
+exports[`getMapFieldAnnotation: Post - author 1`] = `false`;
+
+exports[`getMapFieldAnnotation: Post - authorId 1`] = `false`;
+
+exports[`getMapFieldAnnotation: Post - categories 1`] = `false`;
+
+exports[`getMapFieldAnnotation: Post - createdAt 1`] = `false`;
+
+exports[`getMapFieldAnnotation: Post - id 1`] = `false`;
+
+exports[`getMapFieldAnnotation: Post - published 1`] = `false`;
+
+exports[`getMapFieldAnnotation: Post - title 1`] = `false`;
+
+exports[`getMapFieldAnnotation: Profile - bio 1`] = `false`;
+
+exports[`getMapFieldAnnotation: Profile - id 1`] = `false`;
+
+exports[`getMapFieldAnnotation: Profile - user 1`] = `false`;
+
+exports[`getMapFieldAnnotation: Profile - userId 1`] = `false`;
+
+exports[`getMapFieldAnnotation: User - email 1`] = `false`;
+
+exports[`getMapFieldAnnotation: User - id 1`] = `false`;
+
+exports[`getMapFieldAnnotation: User - name 1`] = `false`;
+
+exports[`getMapFieldAnnotation: User - posts 1`] = `false`;
+
+exports[`getMapFieldAnnotation: User - profile 1`] = `false`;
+
+exports[`getMapFieldAnnotation: User - role 1`] = `false`;
+
+exports[`getMapFieldAnnotation: UserWithMap - email 1`] = `"user_email"`;
+
+exports[`getMapFieldAnnotation: UserWithMap - id 1`] = `"user_id"`;
+
+exports[`getMapFieldAnnotation: UserWithMap - name 1`] = `"user_name"`;
+
+exports[`getMapFieldAnnotation: UserWithPrimaryKey - email 1`] = `false`;
+
+exports[`getMapFieldAnnotation: UserWithPrimaryKey - id 1`] = `false`;
+
+exports[`getMapFieldAnnotation: UserWithPrimaryKey - name 1`] = `false`;
