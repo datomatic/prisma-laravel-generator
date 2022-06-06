@@ -1,0 +1,12 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model CompositeKey {
+  id    Int     @default(autoincrement())
+  email String  @unique
+  name  String?
+
+  @@id(fields: [id, email])
+}

@@ -1,0 +1,24 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Timestamps1 {
+  id                Int      @id @default(autoincrement())
+  created_timestamp DateTime /// created_at
+}
+
+model Timestamps2 {
+  id         Int      @id @default(autoincrement())
+  created_at DateTime /// created_at
+}
+
+model Timestamps3 {
+  id                Int      @id @default(autoincrement())
+  updated_timestamp DateTime /// updated_at
+}
+
+model Timestamps4 {
+  id         Int      @id @default(autoincrement())
+  updated_at DateTime /// updated_at
+}

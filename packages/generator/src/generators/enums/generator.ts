@@ -1,7 +1,10 @@
 import {DMMF} from '@prisma/generator-helper';
-import minimizePhp from '../../helpers/minimize-php';
+import getPrismaFqcn from '../../helpers/get-prisma-fqcn';
+import {prettify} from '../../utils/prettier';
 
-const generateEnum = ({name: enumName, values}: DMMF.DatamodelEnum) => {
+const generateEnum = (enumInfo: DMMF.DatamodelEnum) => {
+  const {name: enumName, values} = enumInfo;
+
   const enumValues = values
     .map(({name: caseName, dbName}) => {
       if (dbName) {
@@ -11,9 +14,10 @@ const generateEnum = ({name: enumName, values}: DMMF.DatamodelEnum) => {
     })
     .join('\n');
 
-  return minimizePhp(`
-    <?php
-    namespace App\\Enums\\Prisma;
+  const {namespace} = getPrismaFqcn(enumInfo);
+
+  return prettify(`<?php
+    namespace ${namespace};
 
     enum ${enumName} {
       ${enumValues}

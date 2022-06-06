@@ -1,47 +1,69 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`enum generation: Language 1`] = `
+exports[`enum generation: BackedEnum 1`] = `
 "<?php
 
 namespace App\\\\Enums\\\\Prisma;
 
-enum Language
+enum BackedEnum
 {
-    case Typescript;
+    case A = '1';
 
-    case Javascript;
+    case B = '2';
 
-    case Rust;
+    case C = '3';
 
-    case Go;
-
-    case Python;
-
-    case Cpp;
+    case D = '4';
 }
 "
 `;
 
-exports[`enum generation: NotificationType 1`] = `
+exports[`enum generation: Enum 1`] = `
 "<?php
 
 namespace App\\\\Enums\\\\Prisma;
 
-enum NotificationType
+enum Enum
 {
-    case newPosts = '1';
+    case A;
 
-    case newComments = '2';
+    case B;
 
-    case newFollowers = '3';
+    case C;
 
-    case reply = '4';
+    case D;
+}
+"
+`;
 
-    case heartOnPost = '5';
+exports[`enum generation: PostType 1`] = `
+"<?php
 
-    case heartOnComment = '6';
+namespace App\\\\Enums\\\\Prisma;
 
-    case heartOnReply = '7';
+enum PostType
+{
+    case article = '1';
+
+    case release = '2';
+
+    case news = '3';
+
+    case event = '4';
+}
+"
+`;
+
+exports[`enum generation: Role 1`] = `
+"<?php
+
+namespace App\\\\Enums\\\\Prisma;
+
+enum Role
+{
+    case USER;
+
+    case ADMIN;
 }
 "
 `;

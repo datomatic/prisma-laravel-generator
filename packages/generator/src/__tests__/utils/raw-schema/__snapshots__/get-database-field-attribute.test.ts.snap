@@ -1,0 +1,301 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getDatabaseFieldAnnotation: Category - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Category - name 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Category - posts 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: DefaultValues - age 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: DefaultValues - bool 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: DefaultValues - email 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: DefaultValues - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: DefaultValues - name 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: DefaultValues - now 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: DefaultValues - role 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: DefaultValues - uuid 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: FieldComments - age 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: FieldComments - email 1`] = `"VarChar(100)"`;
+
+exports[`getDatabaseFieldAnnotation: FieldComments - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: FieldComments - name 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Fillable - age 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Fillable - email 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Fillable - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Fillable - name 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Fillable - password 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Guarded - age 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Guarded - email 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Guarded - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Guarded - name 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Guarded - password 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Hidden - api_key 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Hidden - email 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Hidden - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Hidden - name 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Hidden - password 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Ignore - age 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Ignore - email 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Ignore - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: MassAssignable - age 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: MassAssignable - email 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: MassAssignable - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: MassAssignable - name 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: MassAssignable - password 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: MultipleComments - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: MultipleComments - password 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: MultipleUnique - age 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: MultipleUnique - email 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: MultipleUnique - firstname 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: MultipleUnique - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: MultipleUnique - lastname 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: MultipleUnique2 - age 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: MultipleUnique2 - email 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: MultipleUnique2 - firstname 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: MultipleUnique2 - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: MultipleUnique2 - lastname 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: NullableField - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: NullableField - name 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Post - author 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Post - authorId 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Post - categories 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Post - createdAt 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Post - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Post - published 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Post - title 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Post - type 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Post - updatedAt 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Profile - bio 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Profile - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Profile - user 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Profile - userId 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ReadOnlyField - email 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ReadOnlyField - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ReadOnlyField - name 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ReadOnlyField - password 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ReadOnlyField - phone 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: SoftDelete1 - deleted_at 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: SoftDelete1 - email 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: SoftDelete1 - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: SoftDelete1 - password 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: SoftDelete2 - deleted_timestamp 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: SoftDelete2 - email 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: SoftDelete2 - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: SoftDelete2 - password 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Timestamps1 - created_timestamp 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Timestamps1 - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Timestamps1 - updated_timestamp 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Timestamps2 - created_at 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Timestamps2 - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Timestamps2 - updated_timestamp 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Timestamps3 - created_timestamp 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Timestamps3 - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Timestamps3 - updated_at 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Timestamps4 - created_at 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Timestamps4 - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Timestamps4 - updated_at 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Timestamps5 - created_at 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Timestamps5 - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Timestamps5 - updated_at 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Timestamps6 - created_at 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Timestamps6 - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Timestamps6 - updated_timestamp 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Timestamps7 - created_at 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Timestamps7 - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Timestamps7 - updated_at 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Timestamps8 - created_at 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Timestamps8 - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Timestamps8 - updated_timestamp 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Types - active 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Types - age 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Types - birth 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Types - blob 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Types - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Types - name 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Types - price 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Types - schema 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Types - seconds 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Types - speed 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Unique - email 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Unique - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Unique - name 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Unique - username 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: User - email 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: User - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: User - name 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: User - posts 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: User - profile 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: User - role 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Visible - api_key 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Visible - email 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Visible - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Visible - name 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: Visible - password 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: WithArray - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: WithArray - numbers 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: WithBackedEnum - array 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: WithBackedEnum - defaultEnum 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: WithBackedEnum - enum 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: WithBackedEnum - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: WithBackedEnum - nullable 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: WithDbType - email 1`] = `"VarChar(100)"`;
+
+exports[`getDatabaseFieldAnnotation: WithDbType - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: WithEnum - array 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: WithEnum - defaultEnum 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: WithEnum - enum 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: WithEnum - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: WithEnum - nullable 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: WithGlobalPrimaryKey - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: WithGlobalPrimaryKeyDifferentName - primary_id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: WithGlobalStringPrimaryKey - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: WithGlobalStringPrimaryKeyDifferentName - primary_id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: WithPrimaryKey - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: WithPrimaryKeyDifferentName - primary_id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: WithStringPrimaryKey - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: WithStringPrimaryKeyDifferentName - primary_id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: WithTableMap - id 1`] = `false`;

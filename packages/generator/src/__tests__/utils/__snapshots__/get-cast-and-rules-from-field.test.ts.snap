@@ -1,0 +1,3418 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getCastAndRulesFromField - mysql: UnsignedIntegers - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField - mysql: UnsignedIntegers - ubigint 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "min:0",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField - mysql: UnsignedIntegers - uint 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "min:0",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField - mysql: UnsignedIntegers - usmallint 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "min:0",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField - mysql: UnsignedIntegers - utinyint 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "min:0",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Category - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Category - name 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "string",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "string",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Category - posts 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "array",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "array",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: DefaultValues - age 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: DefaultValues - bool 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "boolean",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "boolean",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: DefaultValues - email 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "string",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "string",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: DefaultValues - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: DefaultValues - name 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "string",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "string",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: DefaultValues - now 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "immutable_datetime",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "date",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: DefaultValues - role 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": true,
+    "value": "Role::class",
+  },
+  "imports": Set {
+    "App\\\\Enums\\\\Prisma\\\\Role",
+    "Illuminate\\\\Validation\\\\Rules\\\\Enum",
+  },
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": true,
+      "value": "new Enum(Role::class)",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: DefaultValues - uuid 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "string",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "string",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "uuid",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: FieldComments - age 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: FieldComments - email 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "string",
+  },
+  "imports": Set {
+    "Illuminate\\\\Validation\\\\Rule",
+  },
+  "rules": Array [
+    Object {
+      "isMethodCall": true,
+      "value": "Rule::unique('FieldComments', 'email')->ignore($this->getKey(), $this->getKeyName())",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "string",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: FieldComments - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: FieldComments - name 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "string",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "string",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Fillable - age 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Fillable - email 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "string",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "string",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Fillable - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Fillable - name 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "string",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "string",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Fillable - password 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "string",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "string",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Guarded - age 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Guarded - email 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "string",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "string",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Guarded - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Guarded - name 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "string",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "string",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Guarded - password 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "string",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "string",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Hidden - api_key 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "string",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "string",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Hidden - email 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "string",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "string",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Hidden - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Hidden - name 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "string",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "string",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Hidden - password 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "string",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "string",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Ignore - age 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Ignore - email 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "string",
+  },
+  "imports": Set {
+    "Illuminate\\\\Validation\\\\Rule",
+  },
+  "rules": Array [
+    Object {
+      "isMethodCall": true,
+      "value": "Rule::unique('Ignore', 'email')->ignore($this->getKey(), $this->getKeyName())",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "string",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Ignore - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: MassAssignable - age 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: MassAssignable - email 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "string",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "string",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: MassAssignable - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: MassAssignable - name 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "string",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "string",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: MassAssignable - password 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "string",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "string",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: MultipleComments - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: MultipleComments - password 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "string",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "string",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: MultipleUnique - age 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: MultipleUnique - email 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "string",
+  },
+  "imports": Set {
+    "Illuminate\\\\Validation\\\\Rule",
+  },
+  "rules": Array [
+    Object {
+      "isMethodCall": true,
+      "value": "Rule::unique('MultipleUnique', 'email')->ignore($this->getKey(), $this->getKeyName())",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "string",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: MultipleUnique - firstname 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "string",
+  },
+  "imports": Set {
+    "Illuminate\\\\Validation\\\\Rule",
+  },
+  "rules": Array [
+    Object {
+      "isMethodCall": true,
+      "value": "Rule::unique('MultipleUnique', 'firstname')->ignore($this->getKey(), $this->getKeyName())->where(fn ($query) => $query->where('lastname', $this->lastname))",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "string",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: MultipleUnique - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: MultipleUnique - lastname 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "string",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "string",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: MultipleUnique2 - age 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: MultipleUnique2 - email 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "string",
+  },
+  "imports": Set {
+    "Illuminate\\\\Validation\\\\Rule",
+  },
+  "rules": Array [
+    Object {
+      "isMethodCall": true,
+      "value": "Rule::unique('MultipleUnique2', 'email')->ignore($this->getKey(), $this->getKeyName())",
+    },
+    Object {
+      "isMethodCall": true,
+      "value": "Rule::unique('MultipleUnique2', 'email')->ignore($this->getKey(), $this->getKeyName())->where(fn ($query) => $query->where('firstname', $this->firstname)->where('lastname', $this->lastname))",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "string",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: MultipleUnique2 - firstname 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "string",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "string",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: MultipleUnique2 - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: MultipleUnique2 - lastname 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "string",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "string",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: NullableField - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: NullableField - name 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "string",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "string",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Post - author 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": undefined,
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Post - authorId 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Post - categories 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "array",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "array",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Post - createdAt 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "immutable_datetime",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "date",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Post - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Post - published 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "boolean",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "boolean",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Post - title 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "string",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "string",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Post - type 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": true,
+    "value": "PostType::class",
+  },
+  "imports": Set {
+    "App\\\\Enums\\\\Prisma\\\\PostType",
+    "Illuminate\\\\Validation\\\\Rules\\\\Enum",
+  },
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": true,
+      "value": "new Enum(PostType::class)",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Post - updatedAt 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "immutable_datetime",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "date",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Profile - bio 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "string",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "string",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Profile - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Profile - user 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": undefined,
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Profile - userId 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {
+    "Illuminate\\\\Validation\\\\Rule",
+  },
+  "rules": Array [
+    Object {
+      "isMethodCall": true,
+      "value": "Rule::unique('Profile', 'userId')->ignore($this->getKey(), $this->getKeyName())",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ReadOnlyField - email 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "string",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "string",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ReadOnlyField - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ReadOnlyField - name 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "string",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "string",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ReadOnlyField - password 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "string",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "string",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ReadOnlyField - phone 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "string",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "string",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: SoftDelete1 - deleted_at 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "immutable_datetime",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "date",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: SoftDelete1 - email 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "string",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "string",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: SoftDelete1 - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: SoftDelete1 - password 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "string",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "string",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: SoftDelete2 - deleted_timestamp 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "immutable_datetime",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "date",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: SoftDelete2 - email 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "string",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "string",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: SoftDelete2 - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: SoftDelete2 - password 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "string",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "string",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Timestamps1 - created_timestamp 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "immutable_datetime",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "date",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Timestamps1 - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Timestamps1 - updated_timestamp 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "immutable_datetime",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "date",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Timestamps2 - created_at 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "immutable_datetime",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "date",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Timestamps2 - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Timestamps2 - updated_timestamp 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "immutable_datetime",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "date",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Timestamps3 - created_timestamp 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "immutable_datetime",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "date",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Timestamps3 - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Timestamps3 - updated_at 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "immutable_datetime",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "date",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Timestamps4 - created_at 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "immutable_datetime",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "date",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Timestamps4 - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Timestamps4 - updated_at 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "immutable_datetime",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "date",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Timestamps5 - created_at 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "immutable_datetime",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "date",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Timestamps5 - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Timestamps5 - updated_at 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "immutable_datetime",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "date",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Timestamps6 - created_at 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "immutable_datetime",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "date",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Timestamps6 - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Timestamps6 - updated_timestamp 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "immutable_datetime",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "date",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Timestamps7 - created_at 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "immutable_datetime",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "date",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Timestamps7 - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Timestamps7 - updated_at 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "immutable_datetime",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "date",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Timestamps8 - created_at 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "immutable_datetime",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "date",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Timestamps8 - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Timestamps8 - updated_timestamp 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "immutable_datetime",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "date",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Types - active 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "boolean",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "boolean",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Types - age 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Types - birth 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "immutable_datetime",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "date",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Types - blob 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Types - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Types - name 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "string",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "string",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Types - price 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "string",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Types - schema 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "array",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "json",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Types - seconds 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Types - speed 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "double",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Unique - email 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "string",
+  },
+  "imports": Set {
+    "Illuminate\\\\Validation\\\\Rule",
+  },
+  "rules": Array [
+    Object {
+      "isMethodCall": true,
+      "value": "Rule::unique('Unique', 'email')->ignore($this->getKey(), $this->getKeyName())",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "string",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Unique - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Unique - name 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "string",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "string",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Unique - username 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "string",
+  },
+  "imports": Set {
+    "Illuminate\\\\Validation\\\\Rule",
+  },
+  "rules": Array [
+    Object {
+      "isMethodCall": true,
+      "value": "Rule::unique('Unique', 'username')->ignore($this->getKey(), $this->getKeyName())",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "string",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: User - email 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "string",
+  },
+  "imports": Set {
+    "Illuminate\\\\Validation\\\\Rule",
+  },
+  "rules": Array [
+    Object {
+      "isMethodCall": true,
+      "value": "Rule::unique('User', 'email')->ignore($this->getKey(), $this->getKeyName())",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "string",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: User - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: User - name 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "string",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "string",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: User - posts 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "array",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "array",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: User - profile 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": undefined,
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: User - role 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": true,
+    "value": "Role::class",
+  },
+  "imports": Set {
+    "App\\\\Enums\\\\Prisma\\\\Role",
+    "Illuminate\\\\Validation\\\\Rules\\\\Enum",
+  },
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": true,
+      "value": "new Enum(Role::class)",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Visible - api_key 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "string",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "string",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Visible - email 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "string",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "string",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Visible - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Visible - name 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "string",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "string",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Visible - password 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "string",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "string",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: WithArray - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: WithArray - numbers 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "array",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "array",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: WithBackedEnum - array 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "array",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "array",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: WithBackedEnum - defaultEnum 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": true,
+    "value": "BackedEnum::class",
+  },
+  "imports": Set {
+    "App\\\\Enums\\\\Prisma\\\\BackedEnum",
+    "Illuminate\\\\Validation\\\\Rules\\\\Enum",
+  },
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": true,
+      "value": "new Enum(BackedEnum::class)",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: WithBackedEnum - enum 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": true,
+    "value": "BackedEnum::class",
+  },
+  "imports": Set {
+    "App\\\\Enums\\\\Prisma\\\\BackedEnum",
+    "Illuminate\\\\Validation\\\\Rules\\\\Enum",
+  },
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": true,
+      "value": "new Enum(BackedEnum::class)",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: WithBackedEnum - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: WithBackedEnum - nullable 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": true,
+    "value": "BackedEnum::class",
+  },
+  "imports": Set {
+    "App\\\\Enums\\\\Prisma\\\\BackedEnum",
+    "Illuminate\\\\Validation\\\\Rules\\\\Enum",
+  },
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+    Object {
+      "isMethodCall": true,
+      "value": "new Enum(BackedEnum::class)",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: WithDbType - email 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "string",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "string",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: WithDbType - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: WithEnum - array 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "array",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "array",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: WithEnum - defaultEnum 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": true,
+    "value": "Enum::class",
+  },
+  "imports": Set {
+    "App\\\\Enums\\\\Prisma\\\\Enum",
+    "Illuminate\\\\Validation\\\\Rules\\\\Enum",
+  },
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": true,
+      "value": "new Enum(Enum::class)",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: WithEnum - enum 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": true,
+    "value": "Enum::class",
+  },
+  "imports": Set {
+    "App\\\\Enums\\\\Prisma\\\\Enum",
+    "Illuminate\\\\Validation\\\\Rules\\\\Enum",
+  },
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": true,
+      "value": "new Enum(Enum::class)",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: WithEnum - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: WithEnum - nullable 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": true,
+    "value": "Enum::class",
+  },
+  "imports": Set {
+    "App\\\\Enums\\\\Prisma\\\\Enum",
+    "Illuminate\\\\Validation\\\\Rules\\\\Enum",
+  },
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+    Object {
+      "isMethodCall": true,
+      "value": "new Enum(Enum::class)",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: WithGlobalPrimaryKey - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: WithGlobalPrimaryKeyDifferentName - primary_id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: WithGlobalStringPrimaryKey - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "string",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "string",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: WithGlobalStringPrimaryKeyDifferentName - primary_id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "string",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "string",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: WithPrimaryKey - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: WithPrimaryKeyDifferentName - primary_id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: WithStringPrimaryKey - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "string",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "string",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: WithStringPrimaryKeyDifferentName - primary_id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "string",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "string",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: WithTableMap - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;

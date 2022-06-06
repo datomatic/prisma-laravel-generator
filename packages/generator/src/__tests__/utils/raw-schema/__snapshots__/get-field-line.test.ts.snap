@@ -1,0 +1,1099 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getFieldLine: Category - id 1`] = `false`;
+
+exports[`getFieldLine: Category - name 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": undefined,
+  "id": "name",
+  "type": "String",
+}
+`;
+
+exports[`getFieldLine: Category - posts 1`] = `
+Object {
+  "attributes": "@relation(references: [id])",
+  "comment": undefined,
+  "id": "posts",
+  "type": "Post[]",
+}
+`;
+
+exports[`getFieldLine: DefaultValues - age 1`] = `
+Object {
+  "attributes": "@default(18)",
+  "comment": undefined,
+  "id": "age",
+  "type": "Int",
+}
+`;
+
+exports[`getFieldLine: DefaultValues - bool 1`] = `
+Object {
+  "attributes": "@default(true)",
+  "comment": undefined,
+  "id": "bool",
+  "type": "Boolean",
+}
+`;
+
+exports[`getFieldLine: DefaultValues - email 1`] = `
+Object {
+  "attributes": "@default(\\"hello@world.test\\")",
+  "comment": undefined,
+  "id": "email",
+  "type": "String",
+}
+`;
+
+exports[`getFieldLine: DefaultValues - id 1`] = `
+Object {
+  "attributes": "@id @default(autoincrement())",
+  "comment": undefined,
+  "id": "id",
+  "type": "Int",
+}
+`;
+
+exports[`getFieldLine: DefaultValues - name 1`] = `
+Object {
+  "attributes": "@default(\\"N.A.\\")",
+  "comment": undefined,
+  "id": "name",
+  "type": "String?",
+}
+`;
+
+exports[`getFieldLine: DefaultValues - now 1`] = `
+Object {
+  "attributes": "@default(now())",
+  "comment": undefined,
+  "id": "now",
+  "type": "DateTime",
+}
+`;
+
+exports[`getFieldLine: DefaultValues - role 1`] = `
+Object {
+  "attributes": "@default(USER)",
+  "comment": undefined,
+  "id": "role",
+  "type": "Role",
+}
+`;
+
+exports[`getFieldLine: DefaultValues - uuid 1`] = `
+Object {
+  "attributes": "@default(uuid())",
+  "comment": undefined,
+  "id": "uuid",
+  "type": "String",
+}
+`;
+
+exports[`getFieldLine: FieldComments - age 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": "Both generator pre-comment and generated comment",
+  "id": "age",
+  "type": "Int",
+}
+`;
+
+exports[`getFieldLine: FieldComments - email 1`] = `
+Object {
+  "attributes": "@unique @db.VarChar(100)",
+  "comment": "Generator comment",
+  "id": "email",
+  "type": "String",
+}
+`;
+
+exports[`getFieldLine: FieldComments - id 1`] = `false`;
+
+exports[`getFieldLine: FieldComments - name 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": "Generator pre-comment",
+  "id": "name",
+  "type": "String",
+}
+`;
+
+exports[`getFieldLine: Fillable - age 1`] = `
+Object {
+  "attributes": "@default(18)",
+  "comment": "fillable",
+  "id": "age",
+  "type": "Int",
+}
+`;
+
+exports[`getFieldLine: Fillable - email 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": undefined,
+  "id": "email",
+  "type": "String",
+}
+`;
+
+exports[`getFieldLine: Fillable - id 1`] = `false`;
+
+exports[`getFieldLine: Fillable - name 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": "fillable",
+  "id": "name",
+  "type": "String?",
+}
+`;
+
+exports[`getFieldLine: Fillable - password 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": undefined,
+  "id": "password",
+  "type": "String",
+}
+`;
+
+exports[`getFieldLine: Guarded - age 1`] = `
+Object {
+  "attributes": "@default(18)",
+  "comment": undefined,
+  "id": "age",
+  "type": "Int",
+}
+`;
+
+exports[`getFieldLine: Guarded - email 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": "guarded",
+  "id": "email",
+  "type": "String",
+}
+`;
+
+exports[`getFieldLine: Guarded - id 1`] = `false`;
+
+exports[`getFieldLine: Guarded - name 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": undefined,
+  "id": "name",
+  "type": "String?",
+}
+`;
+
+exports[`getFieldLine: Guarded - password 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": "guarded",
+  "id": "password",
+  "type": "String",
+}
+`;
+
+exports[`getFieldLine: Hidden - api_key 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": "hidden",
+  "id": "api_key",
+  "type": "String",
+}
+`;
+
+exports[`getFieldLine: Hidden - email 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": undefined,
+  "id": "email",
+  "type": "String",
+}
+`;
+
+exports[`getFieldLine: Hidden - id 1`] = `false`;
+
+exports[`getFieldLine: Hidden - name 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": undefined,
+  "id": "name",
+  "type": "String?",
+}
+`;
+
+exports[`getFieldLine: Hidden - password 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": "hidden",
+  "id": "password",
+  "type": "String",
+}
+`;
+
+exports[`getFieldLine: Ignore - age 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": undefined,
+  "id": "age",
+  "type": "Int",
+}
+`;
+
+exports[`getFieldLine: Ignore - email 1`] = `
+Object {
+  "attributes": "@unique",
+  "comment": undefined,
+  "id": "email",
+  "type": "String",
+}
+`;
+
+exports[`getFieldLine: Ignore - id 1`] = `false`;
+
+exports[`getFieldLine: MassAssignable - age 1`] = `
+Object {
+  "attributes": "@default(18)",
+  "comment": undefined,
+  "id": "age",
+  "type": "Int",
+}
+`;
+
+exports[`getFieldLine: MassAssignable - email 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": undefined,
+  "id": "email",
+  "type": "String",
+}
+`;
+
+exports[`getFieldLine: MassAssignable - id 1`] = `false`;
+
+exports[`getFieldLine: MassAssignable - name 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": undefined,
+  "id": "name",
+  "type": "String?",
+}
+`;
+
+exports[`getFieldLine: MassAssignable - password 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": undefined,
+  "id": "password",
+  "type": "String",
+}
+`;
+
+exports[`getFieldLine: MultipleComments - id 1`] = `false`;
+
+exports[`getFieldLine: MultipleComments - password 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": "guarded, Hidden , read-only",
+  "id": "password",
+  "type": "String",
+}
+`;
+
+exports[`getFieldLine: MultipleUnique - age 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": undefined,
+  "id": "age",
+  "type": "Int?",
+}
+`;
+
+exports[`getFieldLine: MultipleUnique - email 1`] = `
+Object {
+  "attributes": "@unique",
+  "comment": undefined,
+  "id": "email",
+  "type": "String",
+}
+`;
+
+exports[`getFieldLine: MultipleUnique - firstname 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": undefined,
+  "id": "firstname",
+  "type": "String",
+}
+`;
+
+exports[`getFieldLine: MultipleUnique - id 1`] = `false`;
+
+exports[`getFieldLine: MultipleUnique - lastname 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": undefined,
+  "id": "lastname",
+  "type": "String",
+}
+`;
+
+exports[`getFieldLine: MultipleUnique2 - age 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": undefined,
+  "id": "age",
+  "type": "Int?",
+}
+`;
+
+exports[`getFieldLine: MultipleUnique2 - email 1`] = `
+Object {
+  "attributes": "@unique",
+  "comment": undefined,
+  "id": "email",
+  "type": "String",
+}
+`;
+
+exports[`getFieldLine: MultipleUnique2 - firstname 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": undefined,
+  "id": "firstname",
+  "type": "String",
+}
+`;
+
+exports[`getFieldLine: MultipleUnique2 - id 1`] = `false`;
+
+exports[`getFieldLine: MultipleUnique2 - lastname 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": undefined,
+  "id": "lastname",
+  "type": "String",
+}
+`;
+
+exports[`getFieldLine: NullableField - id 1`] = `false`;
+
+exports[`getFieldLine: NullableField - name 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": undefined,
+  "id": "name",
+  "type": "String?",
+}
+`;
+
+exports[`getFieldLine: Post - author 1`] = `
+Object {
+  "attributes": "@relation(fields: [authorId], references: [id])",
+  "comment": undefined,
+  "id": "author",
+  "type": "User",
+}
+`;
+
+exports[`getFieldLine: Post - authorId 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": undefined,
+  "id": "authorId",
+  "type": "Int",
+}
+`;
+
+exports[`getFieldLine: Post - categories 1`] = `
+Object {
+  "attributes": "@relation(references: [id])",
+  "comment": undefined,
+  "id": "categories",
+  "type": "Category[]",
+}
+`;
+
+exports[`getFieldLine: Post - createdAt 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": "created_at",
+  "id": "createdAt",
+  "type": "DateTime",
+}
+`;
+
+exports[`getFieldLine: Post - id 1`] = `false`;
+
+exports[`getFieldLine: Post - published 1`] = `
+Object {
+  "attributes": "@default(false)",
+  "comment": undefined,
+  "id": "published",
+  "type": "Boolean",
+}
+`;
+
+exports[`getFieldLine: Post - title 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": undefined,
+  "id": "title",
+  "type": "String",
+}
+`;
+
+exports[`getFieldLine: Post - type 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": undefined,
+  "id": "type",
+  "type": "PostType",
+}
+`;
+
+exports[`getFieldLine: Post - updatedAt 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": "updated_at",
+  "id": "updatedAt",
+  "type": "DateTime",
+}
+`;
+
+exports[`getFieldLine: Profile - bio 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": undefined,
+  "id": "bio",
+  "type": "String",
+}
+`;
+
+exports[`getFieldLine: Profile - id 1`] = `false`;
+
+exports[`getFieldLine: Profile - user 1`] = `
+Object {
+  "attributes": "@relation(fields: [userId], references: [id])",
+  "comment": undefined,
+  "id": "user",
+  "type": "User",
+}
+`;
+
+exports[`getFieldLine: Profile - userId 1`] = `
+Object {
+  "attributes": "@unique",
+  "comment": undefined,
+  "id": "userId",
+  "type": "Int",
+}
+`;
+
+exports[`getFieldLine: ReadOnlyField - email 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": "read-only",
+  "id": "email",
+  "type": "String",
+}
+`;
+
+exports[`getFieldLine: ReadOnlyField - id 1`] = `false`;
+
+exports[`getFieldLine: ReadOnlyField - name 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": undefined,
+  "id": "name",
+  "type": "String?",
+}
+`;
+
+exports[`getFieldLine: ReadOnlyField - password 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": undefined,
+  "id": "password",
+  "type": "String",
+}
+`;
+
+exports[`getFieldLine: ReadOnlyField - phone 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": "read-only",
+  "id": "phone",
+  "type": "String",
+}
+`;
+
+exports[`getFieldLine: SoftDelete1 - deleted_at 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": "deleted_at",
+  "id": "deleted_at",
+  "type": "DateTime",
+}
+`;
+
+exports[`getFieldLine: SoftDelete1 - email 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": undefined,
+  "id": "email",
+  "type": "String",
+}
+`;
+
+exports[`getFieldLine: SoftDelete1 - id 1`] = `false`;
+
+exports[`getFieldLine: SoftDelete1 - password 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": undefined,
+  "id": "password",
+  "type": "String",
+}
+`;
+
+exports[`getFieldLine: SoftDelete2 - deleted_timestamp 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": "deleted_at",
+  "id": "deleted_timestamp",
+  "type": "DateTime",
+}
+`;
+
+exports[`getFieldLine: SoftDelete2 - email 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": undefined,
+  "id": "email",
+  "type": "String",
+}
+`;
+
+exports[`getFieldLine: SoftDelete2 - id 1`] = `false`;
+
+exports[`getFieldLine: SoftDelete2 - password 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": undefined,
+  "id": "password",
+  "type": "String",
+}
+`;
+
+exports[`getFieldLine: Timestamps1 - created_timestamp 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": "created_at",
+  "id": "created_timestamp",
+  "type": "DateTime",
+}
+`;
+
+exports[`getFieldLine: Timestamps1 - id 1`] = `false`;
+
+exports[`getFieldLine: Timestamps1 - updated_timestamp 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": "updated_at",
+  "id": "updated_timestamp",
+  "type": "DateTime",
+}
+`;
+
+exports[`getFieldLine: Timestamps2 - created_at 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": "created_at",
+  "id": "created_at",
+  "type": "DateTime",
+}
+`;
+
+exports[`getFieldLine: Timestamps2 - id 1`] = `false`;
+
+exports[`getFieldLine: Timestamps2 - updated_timestamp 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": "updated_at",
+  "id": "updated_timestamp",
+  "type": "DateTime",
+}
+`;
+
+exports[`getFieldLine: Timestamps3 - created_timestamp 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": "created_at",
+  "id": "created_timestamp",
+  "type": "DateTime",
+}
+`;
+
+exports[`getFieldLine: Timestamps3 - id 1`] = `false`;
+
+exports[`getFieldLine: Timestamps3 - updated_at 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": "updated_at",
+  "id": "updated_at",
+  "type": "DateTime",
+}
+`;
+
+exports[`getFieldLine: Timestamps4 - created_at 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": "created_at",
+  "id": "created_at",
+  "type": "DateTime",
+}
+`;
+
+exports[`getFieldLine: Timestamps4 - id 1`] = `false`;
+
+exports[`getFieldLine: Timestamps4 - updated_at 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": "updated_at",
+  "id": "updated_at",
+  "type": "DateTime",
+}
+`;
+
+exports[`getFieldLine: Timestamps5 - created_at 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": "created_at",
+  "id": "created_at",
+  "type": "DateTime",
+}
+`;
+
+exports[`getFieldLine: Timestamps5 - id 1`] = `false`;
+
+exports[`getFieldLine: Timestamps5 - updated_at 1`] = `
+Object {
+  "attributes": "@updatedAt",
+  "comment": undefined,
+  "id": "updated_at",
+  "type": "DateTime",
+}
+`;
+
+exports[`getFieldLine: Timestamps6 - created_at 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": "created_at",
+  "id": "created_at",
+  "type": "DateTime",
+}
+`;
+
+exports[`getFieldLine: Timestamps6 - id 1`] = `false`;
+
+exports[`getFieldLine: Timestamps6 - updated_timestamp 1`] = `
+Object {
+  "attributes": "@updatedAt",
+  "comment": undefined,
+  "id": "updated_timestamp",
+  "type": "DateTime",
+}
+`;
+
+exports[`getFieldLine: Timestamps7 - created_at 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": "created_at",
+  "id": "created_at",
+  "type": "DateTime",
+}
+`;
+
+exports[`getFieldLine: Timestamps7 - id 1`] = `false`;
+
+exports[`getFieldLine: Timestamps7 - updated_at 1`] = `
+Object {
+  "attributes": "@updatedAt",
+  "comment": "updated_at",
+  "id": "updated_at",
+  "type": "DateTime",
+}
+`;
+
+exports[`getFieldLine: Timestamps8 - created_at 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": "created_at",
+  "id": "created_at",
+  "type": "DateTime",
+}
+`;
+
+exports[`getFieldLine: Timestamps8 - id 1`] = `false`;
+
+exports[`getFieldLine: Timestamps8 - updated_timestamp 1`] = `
+Object {
+  "attributes": "@updatedAt",
+  "comment": "updated_at",
+  "id": "updated_timestamp",
+  "type": "DateTime",
+}
+`;
+
+exports[`getFieldLine: Types - active 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": undefined,
+  "id": "active",
+  "type": "Boolean",
+}
+`;
+
+exports[`getFieldLine: Types - age 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": undefined,
+  "id": "age",
+  "type": "Int",
+}
+`;
+
+exports[`getFieldLine: Types - birth 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": undefined,
+  "id": "birth",
+  "type": "DateTime",
+}
+`;
+
+exports[`getFieldLine: Types - blob 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": undefined,
+  "id": "blob",
+  "type": "Bytes",
+}
+`;
+
+exports[`getFieldLine: Types - id 1`] = `false`;
+
+exports[`getFieldLine: Types - name 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": undefined,
+  "id": "name",
+  "type": "String",
+}
+`;
+
+exports[`getFieldLine: Types - price 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": undefined,
+  "id": "price",
+  "type": "Decimal",
+}
+`;
+
+exports[`getFieldLine: Types - schema 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": undefined,
+  "id": "schema",
+  "type": "Json",
+}
+`;
+
+exports[`getFieldLine: Types - seconds 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": undefined,
+  "id": "seconds",
+  "type": "BigInt",
+}
+`;
+
+exports[`getFieldLine: Types - speed 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": undefined,
+  "id": "speed",
+  "type": "Float",
+}
+`;
+
+exports[`getFieldLine: Unique - email 1`] = `
+Object {
+  "attributes": "@unique",
+  "comment": undefined,
+  "id": "email",
+  "type": "String",
+}
+`;
+
+exports[`getFieldLine: Unique - id 1`] = `false`;
+
+exports[`getFieldLine: Unique - name 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": undefined,
+  "id": "name",
+  "type": "String?",
+}
+`;
+
+exports[`getFieldLine: Unique - username 1`] = `
+Object {
+  "attributes": "@unique",
+  "comment": undefined,
+  "id": "username",
+  "type": "String",
+}
+`;
+
+exports[`getFieldLine: User - email 1`] = `
+Object {
+  "attributes": "@unique",
+  "comment": undefined,
+  "id": "email",
+  "type": "String",
+}
+`;
+
+exports[`getFieldLine: User - id 1`] = `
+Object {
+  "attributes": "@id @default(autoincrement())",
+  "comment": undefined,
+  "id": "id",
+  "type": "Int",
+}
+`;
+
+exports[`getFieldLine: User - name 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": undefined,
+  "id": "name",
+  "type": "String?",
+}
+`;
+
+exports[`getFieldLine: User - posts 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": undefined,
+  "id": "posts",
+  "type": "Post[]",
+}
+`;
+
+exports[`getFieldLine: User - profile 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": undefined,
+  "id": "profile",
+  "type": "Profile?",
+}
+`;
+
+exports[`getFieldLine: User - role 1`] = `
+Object {
+  "attributes": "@default(USER)",
+  "comment": undefined,
+  "id": "role",
+  "type": "Role",
+}
+`;
+
+exports[`getFieldLine: Visible - api_key 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": undefined,
+  "id": "api_key",
+  "type": "String",
+}
+`;
+
+exports[`getFieldLine: Visible - email 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": "visible",
+  "id": "email",
+  "type": "String",
+}
+`;
+
+exports[`getFieldLine: Visible - id 1`] = `false`;
+
+exports[`getFieldLine: Visible - name 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": "visible",
+  "id": "name",
+  "type": "String?",
+}
+`;
+
+exports[`getFieldLine: Visible - password 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": undefined,
+  "id": "password",
+  "type": "String",
+}
+`;
+
+exports[`getFieldLine: WithArray - id 1`] = `false`;
+
+exports[`getFieldLine: WithArray - numbers 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": undefined,
+  "id": "numbers",
+  "type": "Int[]",
+}
+`;
+
+exports[`getFieldLine: WithBackedEnum - array 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": undefined,
+  "id": "array",
+  "type": "BackedEnum[]",
+}
+`;
+
+exports[`getFieldLine: WithBackedEnum - defaultEnum 1`] = `
+Object {
+  "attributes": "@default(A)",
+  "comment": undefined,
+  "id": "defaultEnum",
+  "type": "BackedEnum",
+}
+`;
+
+exports[`getFieldLine: WithBackedEnum - enum 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": undefined,
+  "id": "enum",
+  "type": "BackedEnum",
+}
+`;
+
+exports[`getFieldLine: WithBackedEnum - id 1`] = `false`;
+
+exports[`getFieldLine: WithBackedEnum - nullable 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": undefined,
+  "id": "nullable",
+  "type": "BackedEnum?",
+}
+`;
+
+exports[`getFieldLine: WithDbType - email 1`] = `
+Object {
+  "attributes": "@db.VarChar(100)",
+  "comment": undefined,
+  "id": "email",
+  "type": "String",
+}
+`;
+
+exports[`getFieldLine: WithDbType - id 1`] = `false`;
+
+exports[`getFieldLine: WithEnum - array 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": undefined,
+  "id": "array",
+  "type": "Enum[]",
+}
+`;
+
+exports[`getFieldLine: WithEnum - defaultEnum 1`] = `
+Object {
+  "attributes": "@default(A)",
+  "comment": undefined,
+  "id": "defaultEnum",
+  "type": "Enum",
+}
+`;
+
+exports[`getFieldLine: WithEnum - enum 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": undefined,
+  "id": "enum",
+  "type": "Enum",
+}
+`;
+
+exports[`getFieldLine: WithEnum - id 1`] = `false`;
+
+exports[`getFieldLine: WithEnum - nullable 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": undefined,
+  "id": "nullable",
+  "type": "Enum?",
+}
+`;
+
+exports[`getFieldLine: WithGlobalPrimaryKey - id 1`] = `
+Object {
+  "attributes": "@default(autoincrement())",
+  "comment": undefined,
+  "id": "id",
+  "type": "Int",
+}
+`;
+
+exports[`getFieldLine: WithGlobalPrimaryKeyDifferentName - primary_id 1`] = `
+Object {
+  "attributes": "@default(autoincrement())",
+  "comment": undefined,
+  "id": "primary_id",
+  "type": "Int",
+}
+`;
+
+exports[`getFieldLine: WithGlobalStringPrimaryKey - id 1`] = `false`;
+
+exports[`getFieldLine: WithGlobalStringPrimaryKeyDifferentName - primary_id 1`] = `false`;
+
+exports[`getFieldLine: WithPrimaryKey - id 1`] = `
+Object {
+  "attributes": "@id @default(autoincrement())",
+  "comment": undefined,
+  "id": "id",
+  "type": "Int",
+}
+`;
+
+exports[`getFieldLine: WithPrimaryKeyDifferentName - primary_id 1`] = `
+Object {
+  "attributes": "@id @default(autoincrement())",
+  "comment": undefined,
+  "id": "primary_id",
+  "type": "Int",
+}
+`;
+
+exports[`getFieldLine: WithStringPrimaryKey - id 1`] = `false`;
+
+exports[`getFieldLine: WithStringPrimaryKeyDifferentName - primary_id 1`] = `false`;
+
+exports[`getFieldLine: WithTableMap - id 1`] = `false`;

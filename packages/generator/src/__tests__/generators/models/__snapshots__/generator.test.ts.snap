@@ -1,0 +1,2595 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`models: generation - mongodb: MongoDbNow 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+use Illuminate\\\\Support\\\\Carbon;
+
+/**
+ * MongoDbNow Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read string		$id
+ * @property Carbon $created_at
+ */
+abstract class MongoDbNow extends Model
+{
+    public $incrementing = false;
+
+    public $timestamps = false;
+    protected $table = 'MongoDbNow';
+
+    protected $keyType = 'string';
+
+    protected $attributes = [
+        'created_at' => Carbon::now(),
+    ];
+
+    protected $rules = [
+        'id' => ['nullable', 'string'],
+        'created_at' => ['nullable', 'date'],
+    ];
+
+    protected $casts = [
+        'id' => 'string',
+        'created_at' => 'immutable_datetime',
+    ];
+}
+"
+`;
+
+exports[`models: generation - mysql: UnsignedIntegers 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * UnsignedIntegers Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int		$id
+ * @property int $uint
+ * @property int $usmallint
+ * @property int $utinyint
+ * @property int $ubigint
+ */
+abstract class UnsignedIntegers extends Model
+{
+    public $timestamps = false;
+    protected $table = 'UnsignedIntegers';
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+        'uint' => ['nullable', 'numeric', 'integer', 'min:0'],
+        'usmallint' => ['nullable', 'numeric', 'integer', 'min:0'],
+        'utinyint' => ['nullable', 'numeric', 'integer', 'min:0'],
+        'ubigint' => ['nullable', 'numeric', 'integer', 'min:0'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'uint' => 'integer',
+        'usmallint' => 'integer',
+        'utinyint' => 'integer',
+        'ubigint' => 'integer',
+    ];
+}
+"
+`;
+
+exports[`models: generation: Category 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * Category Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int		$id
+ * @property string $name
+ */
+abstract class Category extends Model
+{
+    public $timestamps = false;
+    protected $table = 'Category';
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+        'name' => ['nullable', 'string'],
+        'posts' => ['array', 'required'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'name' => 'string',
+        'posts' => 'array',
+    ];
+}
+"
+`;
+
+exports[`models: generation: DefaultValues 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use App\\\\Enums\\\\Prisma\\\\Role;
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+use Illuminate\\\\Support\\\\Carbon;
+use Illuminate\\\\Support\\\\Str;
+use Illuminate\\\\Validation\\\\Rules\\\\Enum;
+
+/**
+ * DefaultValues Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int		$id
+ * @property string  $email
+ * @property ?string $name
+ * @property int     $age
+ * @property string  $uuid
+ * @property Carbon  $now
+ * @property bool    $bool
+ * @property Role    $role
+ */
+abstract class DefaultValues extends Model
+{
+    public $timestamps = false;
+    protected $table = 'DefaultValues';
+
+    protected $attributes = [
+        'email' => 'hello@world.test',
+        'name' => 'N.A.',
+        'age' => 18,
+        'uuid' => Str::orderedUuid(),
+        'bool' => true,
+        'role' => Role::USER,
+    ];
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+        'email' => ['nullable', 'string'],
+        'name' => ['required', 'string'],
+        'age' => ['nullable', 'numeric', 'integer'],
+        'uuid' => ['nullable', 'string', 'uuid'],
+        'now' => ['nullable', 'date'],
+        'bool' => ['nullable', 'boolean'],
+        'role' => ['nullable', new Enum(Role::class)],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'email' => 'string',
+        'name' => 'string',
+        'age' => 'integer',
+        'uuid' => 'string',
+        'now' => 'immutable_datetime',
+        'bool' => 'boolean',
+        'role' => Role::class,
+    ];
+}
+"
+`;
+
+exports[`models: generation: FieldComments 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+use Illuminate\\\\Validation\\\\Rule;
+
+/**
+ * FieldComments Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int		$id
+ * @property string $email
+ * @property string $name
+ * @property int    $age
+ */
+abstract class FieldComments extends Model
+{
+    public $timestamps = false;
+    protected $table = 'FieldComments';
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+        'email' => [
+            Rule::unique('FieldComments', 'email')->ignore(
+                $this->getKey(),
+                $this->getKeyName()
+            ),
+            'nullable',
+            'string',
+        ],
+        'name' => ['nullable', 'string'],
+        'age' => ['nullable', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'email' => 'string',
+        'name' => 'string',
+        'age' => 'integer',
+    ];
+}
+"
+`;
+
+exports[`models: generation: Fillable 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * Fillable Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int		$id
+ * @property string  $email
+ * @property string  $password
+ * @property int     $age
+ * @property ?string $name
+ */
+abstract class Fillable extends Model
+{
+    public $timestamps = false;
+    protected $table = 'Fillable';
+
+    protected $attributes = [
+        'age' => 18,
+    ];
+
+    protected $fillable = ['age', 'name'];
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+        'email' => ['nullable', 'string'],
+        'password' => ['nullable', 'string'],
+        'age' => ['nullable', 'numeric', 'integer'],
+        'name' => ['required', 'string'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'email' => 'string',
+        'password' => 'string',
+        'age' => 'integer',
+        'name' => 'string',
+    ];
+}
+"
+`;
+
+exports[`models: generation: Guarded 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * Guarded Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int		$id
+ * @property string  $email
+ * @property string  $password
+ * @property int     $age
+ * @property ?string $name
+ */
+abstract class Guarded extends Model
+{
+    public $timestamps = false;
+    protected $table = 'Guarded';
+
+    protected $attributes = [
+        'age' => 18,
+    ];
+
+    protected $guarded = ['id', 'email', 'password'];
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+        'email' => ['nullable', 'string'],
+        'password' => ['nullable', 'string'],
+        'age' => ['nullable', 'numeric', 'integer'],
+        'name' => ['required', 'string'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'email' => 'string',
+        'password' => 'string',
+        'age' => 'integer',
+        'name' => 'string',
+    ];
+}
+"
+`;
+
+exports[`models: generation: Hidden 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * Hidden Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int		$id
+ * @property string  $email
+ * @property string  $password
+ * @property string  $api_key
+ * @property ?string $name
+ */
+abstract class Hidden extends Model
+{
+    public $timestamps = false;
+    protected $table = 'Hidden';
+
+    protected $hidden = ['password', 'api_key'];
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+        'email' => ['nullable', 'string'],
+        'password' => ['nullable', 'string'],
+        'api_key' => ['nullable', 'string'],
+        'name' => ['required', 'string'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'email' => 'string',
+        'password' => 'string',
+        'api_key' => 'string',
+        'name' => 'string',
+    ];
+}
+"
+`;
+
+exports[`models: generation: Ignore 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+use Illuminate\\\\Validation\\\\Rule;
+
+/**
+ * Ignore Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int		$id
+ * @property string $email
+ * @property int    $age
+ */
+abstract class Ignore extends Model
+{
+    public $timestamps = false;
+    protected $table = 'Ignore';
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+        'email' => [
+            Rule::unique('Ignore', 'email')->ignore(
+                $this->getKey(),
+                $this->getKeyName()
+            ),
+            'nullable',
+            'string',
+        ],
+        'age' => ['nullable', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'email' => 'string',
+        'age' => 'integer',
+    ];
+}
+"
+`;
+
+exports[`models: generation: MassAssignable 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * MassAssignable Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property int     $id
+ * @property string  $email
+ * @property string  $password
+ * @property int     $age
+ * @property ?string $name
+ */
+abstract class MassAssignable extends Model
+{
+    public $timestamps = false;
+    protected $table = 'MassAssignable';
+
+    protected $attributes = [
+        'age' => 18,
+    ];
+
+    protected $guarded = [];
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+        'email' => ['nullable', 'string'],
+        'password' => ['nullable', 'string'],
+        'age' => ['nullable', 'numeric', 'integer'],
+        'name' => ['required', 'string'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'email' => 'string',
+        'password' => 'string',
+        'age' => 'integer',
+        'name' => 'string',
+    ];
+}
+"
+`;
+
+exports[`models: generation: MultipleComments 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * MultipleComments Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property int $id
+ * @property-read string		$password
+ */
+abstract class MultipleComments extends Model
+{
+    public $timestamps = false;
+    protected $table = 'MultipleComments';
+
+    protected $guarded = ['password'];
+
+    protected $hidden = ['password'];
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+        'password' => ['nullable', 'string'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'password' => 'string',
+    ];
+}
+"
+`;
+
+exports[`models: generation: MultipleUnique 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+use Illuminate\\\\Validation\\\\Rule;
+
+/**
+ * MultipleUnique Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int		$id
+ * @property string $email
+ * @property string $firstname
+ * @property string $lastname
+ * @property ?int   $age
+ */
+abstract class MultipleUnique extends Model
+{
+    public $timestamps = false;
+    protected $table = 'MultipleUnique';
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+        'email' => [
+            Rule::unique('MultipleUnique', 'email')->ignore(
+                $this->getKey(),
+                $this->getKeyName()
+            ),
+            'nullable',
+            'string',
+        ],
+        'firstname' => [
+            Rule::unique('MultipleUnique', 'firstname')
+                ->ignore($this->getKey(), $this->getKeyName())
+                ->where(
+                    fn ($query) => $query->where('lastname', $this->lastname)
+                ),
+            'nullable',
+            'string',
+        ],
+        'lastname' => ['nullable', 'string'],
+        'age' => ['required', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'email' => 'string',
+        'firstname' => 'string',
+        'lastname' => 'string',
+        'age' => 'integer',
+    ];
+}
+"
+`;
+
+exports[`models: generation: MultipleUnique2 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+use Illuminate\\\\Validation\\\\Rule;
+
+/**
+ * MultipleUnique2 Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int		$id
+ * @property string $email
+ * @property string $firstname
+ * @property string $lastname
+ * @property ?int   $age
+ */
+abstract class MultipleUnique2 extends Model
+{
+    public $timestamps = false;
+    protected $table = 'MultipleUnique2';
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+        'email' => [
+            Rule::unique('MultipleUnique2', 'email')->ignore(
+                $this->getKey(),
+                $this->getKeyName()
+            ),
+            Rule::unique('MultipleUnique2', 'email')
+                ->ignore($this->getKey(), $this->getKeyName())
+                ->where(
+                    fn ($query) => $query
+                        ->where('firstname', $this->firstname)
+                        ->where('lastname', $this->lastname)
+                ),
+            'nullable',
+            'string',
+        ],
+        'firstname' => ['nullable', 'string'],
+        'lastname' => ['nullable', 'string'],
+        'age' => ['required', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'email' => 'string',
+        'firstname' => 'string',
+        'lastname' => 'string',
+        'age' => 'integer',
+    ];
+}
+"
+`;
+
+exports[`models: generation: NullableField 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * NullableField Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int		$id
+ * @property ?string $name
+ */
+abstract class NullableField extends Model
+{
+    public $timestamps = false;
+    protected $table = 'NullableField';
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+        'name' => ['required', 'string'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'name' => 'string',
+    ];
+}
+"
+`;
+
+exports[`models: generation: Post 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use App\\\\Enums\\\\Prisma\\\\PostType;
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+use Illuminate\\\\Support\\\\Carbon;
+use Illuminate\\\\Validation\\\\Rules\\\\Enum;
+
+/**
+ * Post Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int		$id
+ * @property string   $title
+ * @property bool     $published
+ * @property PostType $type
+ * @property int      $authorId
+ * @property Carbon   $createdAt
+ * @property Carbon   $updatedAt
+ */
+abstract class Post extends Model
+{
+    public const CREATED_AT = 'createdAt';
+    public const UPDATED_AT = 'updatedAt';
+    protected $table = 'Post';
+
+    protected $attributes = [
+        'published' => false,
+    ];
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+        'title' => ['nullable', 'string'],
+        'published' => ['nullable', 'boolean'],
+        'type' => ['nullable', new Enum(PostType::class)],
+        'author' => ['nullable'],
+        'authorId' => ['nullable', 'numeric', 'integer'],
+        'categories' => ['array', 'required'],
+        'createdAt' => ['nullable', 'date'],
+        'updatedAt' => ['nullable', 'date'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'title' => 'string',
+        'published' => 'boolean',
+        'type' => PostType::class,
+        'authorId' => 'integer',
+        'categories' => 'array',
+        'createdAt' => 'immutable_datetime',
+        'updatedAt' => 'immutable_datetime',
+    ];
+}
+"
+`;
+
+exports[`models: generation: Profile 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+use Illuminate\\\\Validation\\\\Rule;
+
+/**
+ * Profile Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int		$id
+ * @property string $bio
+ * @property int    $userId
+ */
+abstract class Profile extends Model
+{
+    public $timestamps = false;
+    protected $table = 'Profile';
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+        'bio' => ['nullable', 'string'],
+        'user' => ['nullable'],
+        'userId' => [
+            Rule::unique('Profile', 'userId')->ignore(
+                $this->getKey(),
+                $this->getKeyName()
+            ),
+            'nullable',
+            'numeric',
+            'integer',
+        ],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'bio' => 'string',
+        'userId' => 'integer',
+    ];
+}
+"
+`;
+
+exports[`models: generation: ReadOnlyField 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * ReadOnlyField Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int		$id
+ * @property-read string		$email
+ * @property-read string		$phone
+ * @property string  $password
+ * @property ?string $name
+ */
+abstract class ReadOnlyField extends Model
+{
+    public $timestamps = false;
+    protected $table = 'ReadOnlyField';
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+        'email' => ['nullable', 'string'],
+        'phone' => ['nullable', 'string'],
+        'password' => ['nullable', 'string'],
+        'name' => ['required', 'string'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'email' => 'string',
+        'phone' => 'string',
+        'password' => 'string',
+        'name' => 'string',
+    ];
+}
+"
+`;
+
+exports[`models: generation: SoftDelete1 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+use Illuminate\\\\Database\\\\Eloquent\\\\SoftDeletes;
+use Illuminate\\\\Support\\\\Carbon;
+
+/**
+ * SoftDelete1 Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int		$id
+ * @property string $email
+ * @property string $password
+ * @property Carbon $deleted_at
+ */
+abstract class SoftDelete1 extends Model
+{
+    use SoftDeletes;
+
+    public $timestamps = false;
+
+    protected $table = 'SoftDelete1';
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+        'email' => ['nullable', 'string'],
+        'password' => ['nullable', 'string'],
+        'deleted_at' => ['nullable', 'date'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'email' => 'string',
+        'password' => 'string',
+        'deleted_at' => 'immutable_datetime',
+    ];
+}
+"
+`;
+
+exports[`models: generation: SoftDelete2 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+use Illuminate\\\\Database\\\\Eloquent\\\\SoftDeletes;
+use Illuminate\\\\Support\\\\Carbon;
+
+/**
+ * SoftDelete2 Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int		$id
+ * @property string $email
+ * @property string $password
+ * @property Carbon $deleted_timestamp
+ */
+abstract class SoftDelete2 extends Model
+{
+    use SoftDeletes;
+
+    public const DELETED_AT = 'deleted_timestamp';
+
+    public $timestamps = false;
+
+    protected $table = 'SoftDelete2';
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+        'email' => ['nullable', 'string'],
+        'password' => ['nullable', 'string'],
+        'deleted_timestamp' => ['nullable', 'date'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'email' => 'string',
+        'password' => 'string',
+        'deleted_timestamp' => 'immutable_datetime',
+    ];
+}
+"
+`;
+
+exports[`models: generation: Timestamps1 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+use Illuminate\\\\Support\\\\Carbon;
+
+/**
+ * Timestamps1 Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int		$id
+ * @property Carbon $created_timestamp
+ * @property Carbon $updated_timestamp
+ */
+abstract class Timestamps1 extends Model
+{
+    public const CREATED_AT = 'created_timestamp';
+    public const UPDATED_AT = 'updated_timestamp';
+    protected $table = 'Timestamps1';
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+        'created_timestamp' => ['nullable', 'date'],
+        'updated_timestamp' => ['nullable', 'date'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'created_timestamp' => 'immutable_datetime',
+        'updated_timestamp' => 'immutable_datetime',
+    ];
+}
+"
+`;
+
+exports[`models: generation: Timestamps2 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+use Illuminate\\\\Support\\\\Carbon;
+
+/**
+ * Timestamps2 Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int		$id
+ * @property Carbon $created_at
+ * @property Carbon $updated_timestamp
+ */
+abstract class Timestamps2 extends Model
+{
+    public const UPDATED_AT = 'updated_timestamp';
+    protected $table = 'Timestamps2';
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+        'created_at' => ['nullable', 'date'],
+        'updated_timestamp' => ['nullable', 'date'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'created_at' => 'immutable_datetime',
+        'updated_timestamp' => 'immutable_datetime',
+    ];
+}
+"
+`;
+
+exports[`models: generation: Timestamps3 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+use Illuminate\\\\Support\\\\Carbon;
+
+/**
+ * Timestamps3 Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int		$id
+ * @property Carbon $created_timestamp
+ * @property Carbon $updated_at
+ */
+abstract class Timestamps3 extends Model
+{
+    public const CREATED_AT = 'created_timestamp';
+    protected $table = 'Timestamps3';
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+        'created_timestamp' => ['nullable', 'date'],
+        'updated_at' => ['nullable', 'date'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'created_timestamp' => 'immutable_datetime',
+        'updated_at' => 'immutable_datetime',
+    ];
+}
+"
+`;
+
+exports[`models: generation: Timestamps4 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+use Illuminate\\\\Support\\\\Carbon;
+
+/**
+ * Timestamps4 Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int		$id
+ * @property Carbon $created_at
+ * @property Carbon $updated_at
+ */
+abstract class Timestamps4 extends Model
+{
+    protected $table = 'Timestamps4';
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+        'created_at' => ['nullable', 'date'],
+        'updated_at' => ['nullable', 'date'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'created_at' => 'immutable_datetime',
+        'updated_at' => 'immutable_datetime',
+    ];
+}
+"
+`;
+
+exports[`models: generation: Timestamps5 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+use Illuminate\\\\Support\\\\Carbon;
+
+/**
+ * Timestamps5 Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int		$id
+ * @property Carbon $created_at
+ * @property Carbon $updated_at
+ */
+abstract class Timestamps5 extends Model
+{
+    protected $table = 'Timestamps5';
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+        'created_at' => ['nullable', 'date'],
+        'updated_at' => ['nullable', 'date'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'created_at' => 'immutable_datetime',
+        'updated_at' => 'immutable_datetime',
+    ];
+}
+"
+`;
+
+exports[`models: generation: Timestamps6 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+use Illuminate\\\\Support\\\\Carbon;
+
+/**
+ * Timestamps6 Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int		$id
+ * @property Carbon $created_at
+ * @property Carbon $updated_timestamp
+ */
+abstract class Timestamps6 extends Model
+{
+    public const UPDATED_AT = 'updated_timestamp';
+    protected $table = 'Timestamps6';
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+        'created_at' => ['nullable', 'date'],
+        'updated_timestamp' => ['nullable', 'date'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'created_at' => 'immutable_datetime',
+        'updated_timestamp' => 'immutable_datetime',
+    ];
+}
+"
+`;
+
+exports[`models: generation: Timestamps7 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+use Illuminate\\\\Support\\\\Carbon;
+
+/**
+ * Timestamps7 Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int		$id
+ * @property Carbon $created_at
+ * @property Carbon $updated_at
+ */
+abstract class Timestamps7 extends Model
+{
+    protected $table = 'Timestamps7';
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+        'created_at' => ['nullable', 'date'],
+        'updated_at' => ['nullable', 'date'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'created_at' => 'immutable_datetime',
+        'updated_at' => 'immutable_datetime',
+    ];
+}
+"
+`;
+
+exports[`models: generation: Timestamps8 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+use Illuminate\\\\Support\\\\Carbon;
+
+/**
+ * Timestamps8 Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int		$id
+ * @property Carbon $created_at
+ * @property Carbon $updated_timestamp
+ */
+abstract class Timestamps8 extends Model
+{
+    public const UPDATED_AT = 'updated_timestamp';
+    protected $table = 'Timestamps8';
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+        'created_at' => ['nullable', 'date'],
+        'updated_timestamp' => ['nullable', 'date'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'created_at' => 'immutable_datetime',
+        'updated_timestamp' => 'immutable_datetime',
+    ];
+}
+"
+`;
+
+exports[`models: generation: Types 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+use Illuminate\\\\Support\\\\Carbon;
+
+/**
+ * Types Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int		$id
+ * @property string $name
+ * @property bool   $active
+ * @property int    $age
+ * @property int    $seconds
+ * @property int    $blob
+ * @property float  $speed
+ * @property string $price
+ * @property Carbon $birth
+ * @property array  $schema
+ */
+abstract class Types extends Model
+{
+    public $timestamps = false;
+    protected $table = 'Types';
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+        'name' => ['nullable', 'string'],
+        'active' => ['nullable', 'boolean'],
+        'age' => ['nullable', 'numeric', 'integer'],
+        'seconds' => ['nullable', 'numeric', 'integer'],
+        'blob' => ['nullable', 'numeric', 'integer'],
+        'speed' => ['nullable', 'numeric'],
+        'price' => ['nullable', 'numeric'],
+        'birth' => ['nullable', 'date'],
+        'schema' => ['nullable', 'json'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'name' => 'string',
+        'active' => 'boolean',
+        'age' => 'integer',
+        'seconds' => 'integer',
+        'blob' => 'integer',
+        'speed' => 'double',
+        'price' => 'string',
+        'birth' => 'immutable_datetime',
+        'schema' => 'array',
+    ];
+}
+"
+`;
+
+exports[`models: generation: Unique 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+use Illuminate\\\\Validation\\\\Rule;
+
+/**
+ * Unique Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int		$id
+ * @property string  $email
+ * @property string  $username
+ * @property ?string $name
+ */
+abstract class Unique extends Model
+{
+    public $timestamps = false;
+    protected $table = 'Unique';
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+        'email' => [
+            Rule::unique('Unique', 'email')->ignore(
+                $this->getKey(),
+                $this->getKeyName()
+            ),
+            'nullable',
+            'string',
+        ],
+        'username' => [
+            Rule::unique('Unique', 'username')->ignore(
+                $this->getKey(),
+                $this->getKeyName()
+            ),
+            'nullable',
+            'string',
+        ],
+        'name' => ['required', 'string'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'email' => 'string',
+        'username' => 'string',
+        'name' => 'string',
+    ];
+}
+"
+`;
+
+exports[`models: generation: User 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use App\\\\Enums\\\\Prisma\\\\Role;
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+use Illuminate\\\\Validation\\\\Rule;
+use Illuminate\\\\Validation\\\\Rules\\\\Enum;
+
+/**
+ * User Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int		$id
+ * @property string  $email
+ * @property ?string $name
+ * @property Role    $role
+ */
+abstract class User extends Model
+{
+    public $timestamps = false;
+    protected $table = 'User';
+
+    protected $attributes = [
+        'role' => Role::USER,
+    ];
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+        'email' => [
+            Rule::unique('User', 'email')->ignore(
+                $this->getKey(),
+                $this->getKeyName()
+            ),
+            'nullable',
+            'string',
+        ],
+        'name' => ['required', 'string'],
+        'role' => ['nullable', new Enum(Role::class)],
+        'posts' => ['array', 'required'],
+        'profile' => ['required'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'email' => 'string',
+        'name' => 'string',
+        'role' => Role::class,
+        'posts' => 'array',
+    ];
+}
+"
+`;
+
+exports[`models: generation: Visible 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * Visible Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int		$id
+ * @property string  $email
+ * @property string  $password
+ * @property string  $api_key
+ * @property ?string $name
+ */
+abstract class Visible extends Model
+{
+    public $timestamps = false;
+    protected $table = 'Visible';
+
+    protected $visible = ['email', 'name'];
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+        'email' => ['nullable', 'string'],
+        'password' => ['nullable', 'string'],
+        'api_key' => ['nullable', 'string'],
+        'name' => ['required', 'string'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'email' => 'string',
+        'password' => 'string',
+        'api_key' => 'string',
+        'name' => 'string',
+    ];
+}
+"
+`;
+
+exports[`models: generation: WithArray 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * WithArray Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int		$id
+ * @property int[] $numbers
+ */
+abstract class WithArray extends Model
+{
+    public $timestamps = false;
+    protected $table = 'WithArray';
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+        'numbers' => ['array', 'required'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'numbers' => 'array',
+    ];
+}
+"
+`;
+
+exports[`models: generation: WithBackedEnum 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use App\\\\Enums\\\\Prisma\\\\BackedEnum;
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+use Illuminate\\\\Validation\\\\Rules\\\\Enum;
+
+/**
+ * WithBackedEnum Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int		$id
+ * @property BackedEnum   $enum
+ * @property ?BackedEnum  $nullable
+ * @property BackedEnum[] $array
+ * @property BackedEnum   $defaultEnum
+ */
+abstract class WithBackedEnum extends Model
+{
+    public $timestamps = false;
+    protected $table = 'WithBackedEnum';
+
+    protected $attributes = [
+        'defaultEnum' => BackedEnum::A,
+    ];
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+        'enum' => ['nullable', new Enum(BackedEnum::class)],
+        'nullable' => ['required', new Enum(BackedEnum::class)],
+        'array' => ['array', 'required'],
+        'defaultEnum' => ['nullable', new Enum(BackedEnum::class)],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'enum' => BackedEnum::class,
+        'nullable' => BackedEnum::class,
+        'array' => 'array',
+        'defaultEnum' => BackedEnum::class,
+    ];
+}
+"
+`;
+
+exports[`models: generation: WithDbType 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * WithDbType Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int		$id
+ * @property string $email
+ */
+abstract class WithDbType extends Model
+{
+    public $timestamps = false;
+    protected $table = 'WithDbType';
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+        'email' => ['nullable', 'string'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'email' => 'string',
+    ];
+}
+"
+`;
+
+exports[`models: generation: WithEnum 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use App\\\\Enums\\\\Prisma\\\\Enum;
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+use Illuminate\\\\Validation\\\\Rules\\\\Enum;
+
+/**
+ * WithEnum Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int		$id
+ * @property Enum   $enum
+ * @property ?Enum  $nullable
+ * @property Enum[] $array
+ * @property Enum   $defaultEnum
+ */
+abstract class WithEnum extends Model
+{
+    public $timestamps = false;
+    protected $table = 'WithEnum';
+
+    protected $attributes = [
+        'defaultEnum' => Enum::A,
+    ];
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+        'enum' => ['nullable', new Enum(Enum::class)],
+        'nullable' => ['required', new Enum(Enum::class)],
+        'array' => ['array', 'required'],
+        'defaultEnum' => ['nullable', new Enum(Enum::class)],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'enum' => Enum::class,
+        'nullable' => Enum::class,
+        'array' => 'array',
+        'defaultEnum' => Enum::class,
+    ];
+}
+"
+`;
+
+exports[`models: generation: WithGlobalPrimaryKey 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * WithGlobalPrimaryKey Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int		$id
+ */
+abstract class WithGlobalPrimaryKey extends Model
+{
+    public $timestamps = false;
+    protected $table = 'WithGlobalPrimaryKey';
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+    ];
+}
+"
+`;
+
+exports[`models: generation: WithGlobalPrimaryKeyDifferentName 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * WithGlobalPrimaryKeyDifferentName Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int		$primary_id
+ */
+abstract class WithGlobalPrimaryKeyDifferentName extends Model
+{
+    public $timestamps = false;
+    protected $table = 'WithGlobalPrimaryKeyDifferentName';
+
+    protected $primaryKey = 'primary_id';
+
+    protected $rules = [
+        'primary_id' => ['nullable', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'primary_id' => 'integer',
+    ];
+}
+"
+`;
+
+exports[`models: generation: WithGlobalStringPrimaryKey 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * WithGlobalStringPrimaryKey Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read string		$id
+ */
+abstract class WithGlobalStringPrimaryKey extends Model
+{
+    public $incrementing = false;
+
+    public $timestamps = false;
+    protected $table = 'WithGlobalStringPrimaryKey';
+
+    protected $keyType = 'string';
+
+    protected $rules = [
+        'id' => ['nullable', 'string'],
+    ];
+
+    protected $casts = [
+        'id' => 'string',
+    ];
+}
+"
+`;
+
+exports[`models: generation: WithGlobalStringPrimaryKeyDifferentName 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * WithGlobalStringPrimaryKeyDifferentName Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read string		$primary_id
+ */
+abstract class WithGlobalStringPrimaryKeyDifferentName extends Model
+{
+    public $incrementing = false;
+
+    public $timestamps = false;
+    protected $table = 'WithGlobalStringPrimaryKeyDifferentName';
+
+    protected $primaryKey = 'primary_id';
+
+    protected $keyType = 'string';
+
+    protected $rules = [
+        'primary_id' => ['nullable', 'string'],
+    ];
+
+    protected $casts = [
+        'primary_id' => 'string',
+    ];
+}
+"
+`;
+
+exports[`models: generation: WithPrimaryKey 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * WithPrimaryKey Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int		$id
+ */
+abstract class WithPrimaryKey extends Model
+{
+    public $timestamps = false;
+    protected $table = 'WithPrimaryKey';
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+    ];
+}
+"
+`;
+
+exports[`models: generation: WithPrimaryKeyDifferentName 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * WithPrimaryKeyDifferentName Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int		$primary_id
+ */
+abstract class WithPrimaryKeyDifferentName extends Model
+{
+    public $timestamps = false;
+    protected $table = 'WithPrimaryKeyDifferentName';
+
+    protected $primaryKey = 'primary_id';
+
+    protected $rules = [
+        'primary_id' => ['nullable', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'primary_id' => 'integer',
+    ];
+}
+"
+`;
+
+exports[`models: generation: WithStringPrimaryKey 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * WithStringPrimaryKey Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read string		$id
+ */
+abstract class WithStringPrimaryKey extends Model
+{
+    public $incrementing = false;
+
+    public $timestamps = false;
+    protected $table = 'WithStringPrimaryKey';
+
+    protected $keyType = 'string';
+
+    protected $rules = [
+        'id' => ['nullable', 'string'],
+    ];
+
+    protected $casts = [
+        'id' => 'string',
+    ];
+}
+"
+`;
+
+exports[`models: generation: WithStringPrimaryKeyDifferentName 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * WithStringPrimaryKeyDifferentName Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read string		$primary_id
+ */
+abstract class WithStringPrimaryKeyDifferentName extends Model
+{
+    public $incrementing = false;
+
+    public $timestamps = false;
+    protected $table = 'WithStringPrimaryKeyDifferentName';
+
+    protected $primaryKey = 'primary_id';
+
+    protected $keyType = 'string';
+
+    protected $rules = [
+        'primary_id' => ['nullable', 'string'],
+    ];
+
+    protected $casts = [
+        'primary_id' => 'string',
+    ];
+}
+"
+`;
+
+exports[`models: generation: WithTableMap 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * WithTableMap Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int		$id
+ */
+abstract class WithTableMap extends Model
+{
+    public $timestamps = false;
+    protected $table = 'with_table_map';
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+    ];
+}
+"
+`;

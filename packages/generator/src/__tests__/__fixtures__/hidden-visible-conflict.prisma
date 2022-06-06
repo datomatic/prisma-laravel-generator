@@ -1,0 +1,15 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model HiddenVisibleConflict1 {
+  id        Int    @id @default(autoincrement())
+  email     String /// hidden
+  firstname String /// visible
+}
+
+model HiddenVisibleConflict2 {
+  id        Int    @id @default(autoincrement())
+  firstname String /// hidden, visible
+}

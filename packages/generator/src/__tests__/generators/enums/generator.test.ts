@@ -1,12 +1,12 @@
 import generateEnum from '../../../generators/enums/generator';
-import getSampleDmmf from '../../__fixtures__/get-sample-dmmf';
+import {getSample} from '../../__fixtures__/get-sample';
 import {format} from '../../../utils/php-cs-fixer';
 
 test('enum generation', async () => {
-  const sampleDMMF = await getSampleDmmf();
+  const {dmmf} = await getSample();
 
   await Promise.all(
-    sampleDMMF.datamodel.enums.map(async enumInfo => {
+    dmmf.datamodel.enums.map(async enumInfo => {
       expect(
         await format(
           generateEnum(enumInfo),

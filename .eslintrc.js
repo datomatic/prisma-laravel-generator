@@ -11,6 +11,9 @@ const rules = {
 
   // allow __dirname
   'unicorn/prefer-module': 'off',
+
+  // sometimes reduce can be useful
+  'unicorn/no-array-reduce': 'off',
 };
 
 module.exports = {
