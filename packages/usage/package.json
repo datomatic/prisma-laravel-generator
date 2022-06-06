@@ -1,0 +1,20 @@
+{
+  "name": "prisma-laravel-generator-usage",
+  "private": true,
+  "version": "1.0.0",
+  "main": "src/app.js",
+  "license": "MIT",
+  "scripts": {
+    "generate": "prisma generate",
+    "generate:watch": "prisma generate --watch"
+  },
+  "dependencies": {
+    "@prisma/client": "3.14.0"
+  },
+  "devDependencies": {
+    "@types/node": "17.0.35",
+    "prisma": "3.14.0",
+    "prisma-laravel-generator": "*",
+    "typescript": "4.6.4"
+  }
+}

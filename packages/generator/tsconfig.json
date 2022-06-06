@@ -1,0 +1,13 @@
+{
+  "extends": "../../tsconfig.compiler.json",
+
+  "compilerOptions": {
+    "outDir": ".",
+    "rootDir": ".",
+    "composite": true
+  },
+
+  "files": [
+    "package.json"
+  ],
+}

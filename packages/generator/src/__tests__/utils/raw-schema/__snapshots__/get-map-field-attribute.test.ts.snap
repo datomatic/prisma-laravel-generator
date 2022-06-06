@@ -1,0 +1,317 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getMapFieldAnnotation: mapped fields: MappedFields1 - firstname 1`] = `false`;
+
+exports[`getMapFieldAnnotation: mapped fields: MappedFields1 - id 1`] = `false`;
+
+exports[`getMapFieldAnnotation: mapped fields: MappedFields2 - firstname 1`] = `"first_name"`;
+
+exports[`getMapFieldAnnotation: mapped fields: MappedFields2 - id 1`] = `false`;
+
+exports[`getMapFieldAnnotation: mapped fields: MappedFields2 - lastname 1`] = `false`;
+
+exports[`getMapFieldAnnotation: mapped fields: MappedFields3 - firstname 1`] = `"first_name"`;
+
+exports[`getMapFieldAnnotation: mapped fields: MappedFields3 - id 1`] = `false`;
+
+exports[`getMapFieldAnnotation: mapped fields: MappedFields3 - lastname 1`] = `"last_name"`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Category - id 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Category - name 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Category - posts 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: DefaultValues - age 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: DefaultValues - bool 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: DefaultValues - email 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: DefaultValues - id 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: DefaultValues - name 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: DefaultValues - now 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: DefaultValues - role 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: DefaultValues - uuid 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: FieldComments - age 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: FieldComments - email 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: FieldComments - id 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: FieldComments - name 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Fillable - age 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Fillable - email 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Fillable - id 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Fillable - name 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Fillable - password 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Guarded - age 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Guarded - email 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Guarded - id 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Guarded - name 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Guarded - password 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Hidden - api_key 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Hidden - email 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Hidden - id 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Hidden - name 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Hidden - password 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Ignore - age 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Ignore - email 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Ignore - id 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: MassAssignable - age 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: MassAssignable - email 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: MassAssignable - id 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: MassAssignable - name 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: MassAssignable - password 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: MultipleComments - id 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: MultipleComments - password 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: MultipleUnique - age 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: MultipleUnique - email 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: MultipleUnique - firstname 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: MultipleUnique - id 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: MultipleUnique - lastname 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: MultipleUnique2 - age 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: MultipleUnique2 - email 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: MultipleUnique2 - firstname 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: MultipleUnique2 - id 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: MultipleUnique2 - lastname 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: NullableField - id 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: NullableField - name 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Post - author 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Post - authorId 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Post - categories 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Post - createdAt 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Post - id 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Post - published 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Post - title 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Post - type 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Post - updatedAt 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Profile - bio 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Profile - id 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Profile - user 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Profile - userId 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: ReadOnlyField - email 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: ReadOnlyField - id 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: ReadOnlyField - name 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: ReadOnlyField - password 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: ReadOnlyField - phone 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: SoftDelete1 - deleted_at 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: SoftDelete1 - email 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: SoftDelete1 - id 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: SoftDelete1 - password 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: SoftDelete2 - deleted_timestamp 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: SoftDelete2 - email 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: SoftDelete2 - id 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: SoftDelete2 - password 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Timestamps1 - created_timestamp 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Timestamps1 - id 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Timestamps1 - updated_timestamp 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Timestamps2 - created_at 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Timestamps2 - id 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Timestamps2 - updated_timestamp 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Timestamps3 - created_timestamp 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Timestamps3 - id 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Timestamps3 - updated_at 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Timestamps4 - created_at 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Timestamps4 - id 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Timestamps4 - updated_at 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Timestamps5 - created_at 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Timestamps5 - id 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Timestamps5 - updated_at 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Timestamps6 - created_at 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Timestamps6 - id 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Timestamps6 - updated_timestamp 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Timestamps7 - created_at 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Timestamps7 - id 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Timestamps7 - updated_at 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Timestamps8 - created_at 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Timestamps8 - id 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Timestamps8 - updated_timestamp 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Types - active 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Types - age 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Types - birth 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Types - blob 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Types - id 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Types - name 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Types - price 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Types - schema 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Types - seconds 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Types - speed 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Unique - email 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Unique - id 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Unique - name 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Unique - username 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: User - email 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: User - id 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: User - name 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: User - posts 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: User - profile 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: User - role 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Visible - api_key 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Visible - email 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Visible - id 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Visible - name 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Visible - password 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: WithArray - id 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: WithArray - numbers 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: WithBackedEnum - array 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: WithBackedEnum - defaultEnum 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: WithBackedEnum - enum 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: WithBackedEnum - id 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: WithBackedEnum - nullable 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: WithDbType - email 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: WithDbType - id 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: WithEnum - array 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: WithEnum - defaultEnum 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: WithEnum - enum 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: WithEnum - id 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: WithEnum - nullable 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: WithGlobalPrimaryKey - id 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: WithGlobalPrimaryKeyDifferentName - primary_id 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: WithGlobalStringPrimaryKey - id 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: WithGlobalStringPrimaryKeyDifferentName - primary_id 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: WithPrimaryKey - id 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: WithPrimaryKeyDifferentName - primary_id 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: WithStringPrimaryKey - id 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: WithStringPrimaryKeyDifferentName - primary_id 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: WithTableMap - id 1`] = `false`;

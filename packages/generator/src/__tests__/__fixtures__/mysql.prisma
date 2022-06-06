@@ -1,0 +1,12 @@
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model UnsignedIntegers {
+  id        Int    @id @default(autoincrement())
+  uint      Int    @db.UnsignedInt
+  usmallint Int    @db.UnsignedSmallInt
+  utinyint  Int    @db.UnsignedTinyInt
+  ubigint   BigInt @db.UnsignedBigInt
+}
