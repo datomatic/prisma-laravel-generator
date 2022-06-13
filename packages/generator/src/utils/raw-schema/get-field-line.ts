@@ -48,7 +48,7 @@ const getFieldLine = (
         }
       }
       if (comment) {
-        comment = comment.replaceAll(/\s+/g, ' ');
+        comment = comment.replaceAll(/\s+/g, ' ').trim();
       }
 
       return {id, type, attributes, comment};
