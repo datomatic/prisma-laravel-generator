@@ -20,9 +20,7 @@ import MassAssignableConflictError from '../../../errors/mass-assignable-conflic
 import HiddenVisibleConflictError from '../../../errors/hidden-visible-conflict-error';
 import FillableGuardedConflictError from '../../../errors/fillable-guarded-conflict-error';
 
-beforeEach((): void => {
-  jest.setTimeout(30_000);
-});
+jest.setTimeout(30_000);
 
 test('models: generation', async () => {
   const {dmmf, raw} = await getSample();
