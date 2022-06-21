@@ -6,7 +6,7 @@ const modelRegexp = (modelName: string) =>
 const commentsMatcher = /(?<!\/)\/\/[^\n/]+/gm;
 const modelAttributesMatcher = /@@\S+/gm;
 const fieldMatcher =
-  /(\/{3} *([^\n]*)\n\s*)?([^\s/]+)\s+([^\s/]+)((\s+@[^\n/]+)*)([\t ]*(\/{3}\s*([^\n]*)\s*)?)\s*/gm;
+  /((\/{3} *[^\n]*\n\s*)*)([^\s/]+)\s+([^\s/]+)((\s+@[^\n/]+)*)([\t ]*(\/{3}\s*([^\n]*)\s*)?)\s*/gm;
 
 const getFieldLine = (
   fieldName: string,
@@ -39,7 +39,8 @@ const getFieldLine = (
         ? fieldRow[5].trim().replaceAll(/\s+/g, ' ')
         : undefined;
 
-      let comment = fieldRow[2] ?? undefined;
+      let comment =
+        fieldRow[1] && fieldRow[1].length > 0 ? fieldRow[1] : undefined;
       if (fieldRow[9]) {
         if (comment) {
           comment += ` ${fieldRow[9]}`;
@@ -48,7 +49,10 @@ const getFieldLine = (
         }
       }
       if (comment) {
-        comment = comment.replaceAll(/\s+/g, ' ').trim();
+        comment = comment
+          .replaceAll(/\/+/g, ' ')
+          .replaceAll(/\s+/g, ' ')
+          .trim();
       }
 
       return {id, type, attributes, comment};

@@ -142,6 +142,22 @@ Object {
 }
 `;
 
+exports[`getDefaultFromField: FieldMultipleComments - id 1`] = `
+Object {
+  "defaultValue": undefined,
+  "imports": Set {},
+  "isMethodCall": false,
+}
+`;
+
+exports[`getDefaultFromField: FieldMultipleComments - name 1`] = `
+Object {
+  "defaultValue": undefined,
+  "imports": Set {},
+  "isMethodCall": false,
+}
+`;
+
 exports[`getDefaultFromField: Fillable - age 1`] = `
 Object {
   "defaultValue": 18,
@@ -319,6 +335,22 @@ Object {
 `;
 
 exports[`getDefaultFromField: MassAssignable - password 1`] = `
+Object {
+  "defaultValue": undefined,
+  "imports": Set {},
+  "isMethodCall": false,
+}
+`;
+
+exports[`getDefaultFromField: ModelComments - id 1`] = `
+Object {
+  "defaultValue": undefined,
+  "imports": Set {},
+  "isMethodCall": false,
+}
+`;
+
+exports[`getDefaultFromField: ModelMultipleComments - id 1`] = `
 Object {
   "defaultValue": undefined,
   "imports": Set {},

@@ -124,6 +124,22 @@ Object {
 }
 `;
 
+exports[`getPhpDocPropertiesFromField: FieldMultipleComments - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: FieldMultipleComments - name 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "string",
+  "readOnly": false,
+}
+`;
+
 exports[`getPhpDocPropertiesFromField: Fillable - age 1`] = `
 Object {
   "imports": Set {},
@@ -305,6 +321,22 @@ Object {
   "imports": Set {},
   "phpType": "string",
   "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ModelComments - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ModelMultipleComments - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
 }
 `;
 

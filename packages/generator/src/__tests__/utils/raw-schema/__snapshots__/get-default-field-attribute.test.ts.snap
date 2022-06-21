@@ -30,6 +30,10 @@ exports[`getDefaultFieldAnnotation: FieldComments - id 1`] = `false`;
 
 exports[`getDefaultFieldAnnotation: FieldComments - name 1`] = `false`;
 
+exports[`getDefaultFieldAnnotation: FieldMultipleComments - id 1`] = `false`;
+
+exports[`getDefaultFieldAnnotation: FieldMultipleComments - name 1`] = `false`;
+
 exports[`getDefaultFieldAnnotation: Fillable - age 1`] = `"18"`;
 
 exports[`getDefaultFieldAnnotation: Fillable - email 1`] = `false`;
@@ -75,6 +79,10 @@ exports[`getDefaultFieldAnnotation: MassAssignable - id 1`] = `false`;
 exports[`getDefaultFieldAnnotation: MassAssignable - name 1`] = `false`;
 
 exports[`getDefaultFieldAnnotation: MassAssignable - password 1`] = `false`;
+
+exports[`getDefaultFieldAnnotation: ModelComments - id 1`] = `false`;
+
+exports[`getDefaultFieldAnnotation: ModelMultipleComments - id 1`] = `"autoincrement()"`;
 
 exports[`getDefaultFieldAnnotation: MultipleComments - id 1`] = `false`;
 

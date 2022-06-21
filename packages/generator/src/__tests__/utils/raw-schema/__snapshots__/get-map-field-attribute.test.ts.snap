@@ -46,6 +46,10 @@ exports[`getMapFieldAnnotation: not mapped fields: FieldComments - id 1`] = `fal
 
 exports[`getMapFieldAnnotation: not mapped fields: FieldComments - name 1`] = `false`;
 
+exports[`getMapFieldAnnotation: not mapped fields: FieldMultipleComments - id 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: FieldMultipleComments - name 1`] = `false`;
+
 exports[`getMapFieldAnnotation: not mapped fields: Fillable - age 1`] = `false`;
 
 exports[`getMapFieldAnnotation: not mapped fields: Fillable - email 1`] = `false`;
@@ -91,6 +95,10 @@ exports[`getMapFieldAnnotation: not mapped fields: MassAssignable - id 1`] = `fa
 exports[`getMapFieldAnnotation: not mapped fields: MassAssignable - name 1`] = `false`;
 
 exports[`getMapFieldAnnotation: not mapped fields: MassAssignable - password 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: ModelComments - id 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: ModelMultipleComments - id 1`] = `false`;
 
 exports[`getMapFieldAnnotation: not mapped fields: MultipleComments - id 1`] = `false`;
 

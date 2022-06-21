@@ -469,6 +469,50 @@ Object {
 }
 `;
 
+exports[`getCastAndRulesFromField: FieldMultipleComments - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: FieldMultipleComments - name 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "string",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "string",
+    },
+  ],
+}
+`;
+
 exports[`getCastAndRulesFromField: Fillable - age 1`] = `
 Object {
   "cast": Object {
@@ -966,6 +1010,54 @@ Object {
     Object {
       "isMethodCall": false,
       "value": "string",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ModelComments - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ModelMultipleComments - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
     },
   ],
 }

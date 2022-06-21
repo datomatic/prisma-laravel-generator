@@ -30,6 +30,10 @@ exports[`getDatabaseFieldAnnotation: FieldComments - id 1`] = `false`;
 
 exports[`getDatabaseFieldAnnotation: FieldComments - name 1`] = `false`;
 
+exports[`getDatabaseFieldAnnotation: FieldMultipleComments - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: FieldMultipleComments - name 1`] = `false`;
+
 exports[`getDatabaseFieldAnnotation: Fillable - age 1`] = `false`;
 
 exports[`getDatabaseFieldAnnotation: Fillable - email 1`] = `false`;
@@ -75,6 +79,10 @@ exports[`getDatabaseFieldAnnotation: MassAssignable - id 1`] = `false`;
 exports[`getDatabaseFieldAnnotation: MassAssignable - name 1`] = `false`;
 
 exports[`getDatabaseFieldAnnotation: MassAssignable - password 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ModelComments - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ModelMultipleComments - id 1`] = `false`;
 
 exports[`getDatabaseFieldAnnotation: MultipleComments - id 1`] = `false`;
 

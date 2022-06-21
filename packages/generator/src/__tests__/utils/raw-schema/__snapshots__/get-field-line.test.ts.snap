@@ -121,6 +121,17 @@ Object {
 }
 `;
 
+exports[`getFieldLine: FieldMultipleComments - id 1`] = `false`;
+
+exports[`getFieldLine: FieldMultipleComments - name 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": "Comment 1 Comment 2 Comment 3",
+  "id": "name",
+  "type": "String",
+}
+`;
+
 exports[`getFieldLine: Fillable - age 1`] = `
 Object {
   "attributes": "@default(18)",
@@ -290,6 +301,17 @@ Object {
   "comment": undefined,
   "id": "password",
   "type": "String",
+}
+`;
+
+exports[`getFieldLine: ModelComments - id 1`] = `false`;
+
+exports[`getFieldLine: ModelMultipleComments - id 1`] = `
+Object {
+  "attributes": "@id @default(autoincrement())",
+  "comment": undefined,
+  "id": "id",
+  "type": "Int",
 }
 `;
 

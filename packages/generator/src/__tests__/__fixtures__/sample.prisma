@@ -96,6 +96,26 @@ model FieldComments {
   age Int /// and generated comment
 }
 
+model FieldMultipleComments {
+  id Int @id @default(autoincrement())
+
+  /// Comment 1
+  /// Comment 2
+  name String /// Comment 3
+}
+
+/// mass-assignable
+model ModelComments {
+  id Int @id @default(autoincrement())
+}
+
+/// model comment 1
+/// mass-assignable
+/// model comment 2
+model ModelMultipleComments {
+  id Int @id @default(autoincrement())
+}
+
 model WithDbType {
   id    Int    @id @default(autoincrement())
   email String @db.VarChar(100)

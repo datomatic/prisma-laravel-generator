@@ -11,6 +11,7 @@ const findOnDocumentation = (
   }
   const sanitizedFind = sanitize(find);
   return _.chain(documentation)
+    .replace('\n', ',')
     .split(',')
     .some(d => sanitize(d) === sanitizedFind)
     .value();
