@@ -24,7 +24,7 @@ import FillableGuardedConflictError from '../../../errors/fillable-guarded-confl
 import CompositeKeyOnRelationError from '../../../errors/composite-key-on-relation-error';
 import isModelPivot from '../../../helpers/is-model-pivot';
 
-jest.setTimeout(30_000);
+jest.setTimeout(60_000);
 
 test('models: generation', async () => {
   const {dmmf, raw} = await getSample();
