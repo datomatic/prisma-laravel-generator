@@ -92,6 +92,630 @@ Object {
 }
 `;
 
+exports[`getPhpDocPropertiesFromField: EagerLoadA - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: EagerLoadA - related 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: EagerLoadB - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: EagerLoadB - related 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: EagerLoadB - relatedId 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyA - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyA - related 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyA2 - explicit_many_to_many_b2 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyA2 - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyA3 - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyA3 - otherIdA 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyA3 - related 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyA4 - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyA4 - otherIdA 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyA4 - related 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyA5 - hasOne 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyA5 - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyA5 - related 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyA6 - key 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyA6 - related 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyA7 - key 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyA7 - related 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyB - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyB - related 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyB2 - explicit_many_to_many_a2 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyB2 - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyB3 - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyB3 - otherIdB 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyB3 - related 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyB4 - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyB4 - otherIdB 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyB4 - related 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyB5 - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyB5 - pivot 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyB5 - pivot_id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyB5 - related 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyB6 - key 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyB6 - related 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyB7 - key 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyB7 - related 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot - A 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot - A_id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot - B 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot - B_id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot2 - explicit_many_to_many_a2 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot2 - explicit_many_to_many_a2_id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot2 - explicit_many_to_many_b2 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot2 - explicit_many_to_many_b2_id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot2 - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot3 - A 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot3 - A_id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot3 - B 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot3 - B_id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot3 - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot4 - A 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot4 - A_id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot4 - B 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot4 - B_id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot4 - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot5 - A 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot5 - A_id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot5 - A2 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot5 - A2_id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot5 - B 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot5 - B_id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot5 - B2 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot5 - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot6 - A 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot6 - A_id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot6 - B 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot6 - B_id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot6 - key 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot7 - A 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot7 - A_id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot7 - B 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot7 - B_id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot7 - key 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
 exports[`getPhpDocPropertiesFromField: FieldComments - age 1`] = `
 Object {
   "imports": Set {},
@@ -104,6 +728,14 @@ exports[`getPhpDocPropertiesFromField: FieldComments - email 1`] = `
 Object {
   "imports": Set {},
   "phpType": "string",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: FieldComments - height 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
   "readOnly": false,
 }
 `;
@@ -284,6 +916,54 @@ Object {
 }
 `;
 
+exports[`getPhpDocPropertiesFromField: ImplicitManyToManyA - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ImplicitManyToManyA - related 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ImplicitManyToManyB - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ImplicitManyToManyB - related 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: MappedId - firstname 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "string",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: MappedId - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
 exports[`getPhpDocPropertiesFromField: MassAssignable - age 1`] = `
 Object {
   "imports": Set {},
@@ -336,7 +1016,7 @@ exports[`getPhpDocPropertiesFromField: ModelMultipleComments - id 1`] = `
 Object {
   "imports": Set {},
   "phpType": "int",
-  "readOnly": true,
+  "readOnly": false,
 }
 `;
 
@@ -436,6 +1116,22 @@ Object {
 }
 `;
 
+exports[`getPhpDocPropertiesFromField: NoPrimaryKey - age 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: NoPrimaryKey - name 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "string",
+  "readOnly": false,
+}
+`;
+
 exports[`getPhpDocPropertiesFromField: NullableField - id 1`] = `
 Object {
   "imports": Set {},
@@ -448,6 +1144,382 @@ exports[`getPhpDocPropertiesFromField: NullableField - name 1`] = `
 Object {
   "imports": Set {},
   "phpType": "?string",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToManyA - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToManyA - related 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToManyA2 - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToManyA2 - related 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToManyA3 - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToManyA3 - otherId 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToManyA3 - related 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToManyA4 - main_id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToManyA4 - related 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToManyB - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToManyB - one_to_one_a2 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToManyB - relatedId 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToManyB2 - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToManyB2 - one_to_many_a2 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToManyB2 - one_to_many_a2_id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToManyB3 - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToManyB3 - related 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToManyB3 - relatedId 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToManyB4 - main_id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToManyB4 - related 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToManyB4 - relatedId 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToOneA - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToOneA - related 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToOneA2 - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToOneA2 - related 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToOneA3 - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToOneA3 - otherId 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToOneA3 - related 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToOneA4 - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToOneA4 - related 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToOneA5 - main_id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToOneA5 - related 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToOneB - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToOneB - related 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToOneB - relatedId 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToOneB2 - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToOneB2 - one_to_one_a2 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToOneB2 - one_to_one_a2_id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToOneB3 - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToOneB3 - related 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToOneB3 - related_id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToOneB4 - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToOneB4 - related 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToOneB4 - relatedId 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "?int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToOneB5 - main_id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToOneB5 - related 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToOneB5 - relatedId 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "?int",
   "readOnly": false,
 }
 `;
@@ -599,6 +1671,38 @@ Object {
   "imports": Set {},
   "phpType": "string",
   "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: SelfRelation - child 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: SelfRelation - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: SelfRelation - parent 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: SelfRelation - relatedId 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
 }
 `;
 
@@ -894,6 +1998,46 @@ Object {
 }
 `;
 
+exports[`getPhpDocPropertiesFromField: TouchingA - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: TouchingA - related 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: TouchingB - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: TouchingB - related 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: TouchingB - relatedId 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
 exports[`getPhpDocPropertiesFromField: Types - active 1`] = `
 Object {
   "imports": Set {},
@@ -1005,6 +2149,14 @@ Object {
   "imports": Set {},
   "phpType": "string",
   "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: UnsupportedTypes - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
 }
 `;
 

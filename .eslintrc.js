@@ -9,6 +9,10 @@ const rules = {
   // allow for(... of ...), we're not in browser
   'no-restricted-syntax': 'off',
 
+  // if used carefully, can be used to avoid multiple
+  // nested ifs in loops (similarly to early returns)
+  'no-continue': 'off',
+
   // allow __dirname
   'unicorn/prefer-module': 'off',
 

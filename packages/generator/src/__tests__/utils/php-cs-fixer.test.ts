@@ -47,6 +47,22 @@ describe('formatFile: temporary folder setup', () => {
     );
   });
 
+  test('formatFile: default bin', async () => {
+    const path = join(temporaryPath, 'test_default_bin.php');
+    expect(existsSync(path)).toBeFalsy();
+
+    await writeFile(
+      path,
+      '<?php namespace App\\Enums\\Prisma; enum Test { case A = "A"; case B = \'B\'; case C; }',
+      'utf8',
+    );
+    expect(existsSync(path)).toBeTruthy();
+
+    await expect(async () => {
+      await formatFile(path);
+    }).rejects.toThrowError();
+  });
+
   test('formatFile: format php file', async () => {
     const path = join(temporaryPath, 'test_valid.php');
     expect(existsSync(path)).toBeFalsy();
@@ -126,4 +142,12 @@ test('format: empty content', async () => {
     './../usage/tools/php-cs-fixer/.php-cs.dist.php',
   );
   expect(prettified).toMatchSnapshot('prettified');
+});
+
+test('format: default bin', async () => {
+  await expect(async () => {
+    await format(
+      '<?php namespace App\\Enums\\Prisma; enum Test { case A = "A"; case B = \'B\'; case C; }',
+    );
+  }).rejects.toThrowError();
 });

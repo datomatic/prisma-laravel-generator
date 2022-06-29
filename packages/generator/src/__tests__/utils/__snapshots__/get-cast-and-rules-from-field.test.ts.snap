@@ -375,6 +375,1714 @@ Object {
 }
 `;
 
+exports[`getCastAndRulesFromField: EagerLoadA - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: EagerLoadA - related 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": undefined,
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: EagerLoadB - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: EagerLoadB - related 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": undefined,
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: EagerLoadB - relatedId 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {
+    "Illuminate\\\\Validation\\\\Rule",
+  },
+  "rules": Array [
+    Object {
+      "isMethodCall": true,
+      "value": "Rule::unique('EagerLoadB', 'relatedId')->ignore($this->getKey(), $this->getKeyName())",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyA - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyA - related 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "array",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "array",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyA2 - explicit_many_to_many_b2 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "array",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "array",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyA2 - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyA3 - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyA3 - otherIdA 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {
+    "Illuminate\\\\Validation\\\\Rule",
+  },
+  "rules": Array [
+    Object {
+      "isMethodCall": true,
+      "value": "Rule::unique('ExplicitManyToManyA3', 'otherIdA')->ignore($this->getKey(), $this->getKeyName())",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyA3 - related 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "array",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "array",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyA4 - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyA4 - otherIdA 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {
+    "Illuminate\\\\Validation\\\\Rule",
+  },
+  "rules": Array [
+    Object {
+      "isMethodCall": true,
+      "value": "Rule::unique('ExplicitManyToManyA4', 'otherIdA')->ignore($this->getKey(), $this->getKeyName())",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyA4 - related 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "array",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "array",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyA5 - hasOne 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": undefined,
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyA5 - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyA5 - related 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "array",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "array",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyA6 - key 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyA6 - related 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "array",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "array",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyA7 - key 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {
+    "Illuminate\\\\Validation\\\\Rule",
+  },
+  "rules": Array [
+    Object {
+      "isMethodCall": true,
+      "value": "Rule::unique('ExplicitManyToManyA7', 'key')->ignore($this->getKey(), $this->getKeyName())",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyA7 - related 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "array",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "array",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyB - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyB - related 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "array",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "array",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyB2 - explicit_many_to_many_a2 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "array",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "array",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyB2 - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyB3 - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyB3 - otherIdB 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {
+    "Illuminate\\\\Validation\\\\Rule",
+  },
+  "rules": Array [
+    Object {
+      "isMethodCall": true,
+      "value": "Rule::unique('ExplicitManyToManyB3', 'otherIdB')->ignore($this->getKey(), $this->getKeyName())",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyB3 - related 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "array",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "array",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyB4 - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyB4 - otherIdB 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {
+    "Illuminate\\\\Validation\\\\Rule",
+  },
+  "rules": Array [
+    Object {
+      "isMethodCall": true,
+      "value": "Rule::unique('ExplicitManyToManyB4', 'otherIdB')->ignore($this->getKey(), $this->getKeyName())",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyB4 - related 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "array",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "array",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyB5 - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyB5 - pivot 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": undefined,
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyB5 - pivot_id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyB5 - related 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "array",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "array",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyB6 - key 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyB6 - related 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "array",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "array",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyB7 - key 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {
+    "Illuminate\\\\Validation\\\\Rule",
+  },
+  "rules": Array [
+    Object {
+      "isMethodCall": true,
+      "value": "Rule::unique('ExplicitManyToManyB7', 'key')->ignore($this->getKey(), $this->getKeyName())",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyB7 - related 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "array",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "array",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyPivot - A 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": undefined,
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyPivot - A_id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyPivot - B 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": undefined,
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyPivot - B_id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyPivot - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyPivot2 - explicit_many_to_many_a2 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": undefined,
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyPivot2 - explicit_many_to_many_a2_id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyPivot2 - explicit_many_to_many_b2 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": undefined,
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyPivot2 - explicit_many_to_many_b2_id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyPivot2 - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyPivot3 - A 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": undefined,
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyPivot3 - A_id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyPivot3 - B 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": undefined,
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyPivot3 - B_id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyPivot3 - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyPivot4 - A 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": undefined,
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyPivot4 - A_id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyPivot4 - B 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": undefined,
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyPivot4 - B_id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyPivot4 - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyPivot5 - A 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": undefined,
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyPivot5 - A_id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyPivot5 - A2 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": undefined,
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyPivot5 - A2_id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {
+    "Illuminate\\\\Validation\\\\Rule",
+  },
+  "rules": Array [
+    Object {
+      "isMethodCall": true,
+      "value": "Rule::unique('ExplicitManyToManyPivot5', 'A2_id')->ignore($this->getKey(), $this->getKeyName())",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyPivot5 - B 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": undefined,
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyPivot5 - B_id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyPivot5 - B2 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "array",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "array",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyPivot5 - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyPivot6 - A 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": undefined,
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyPivot6 - A_id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyPivot6 - B 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": undefined,
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyPivot6 - B_id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyPivot6 - key 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyPivot7 - A 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": undefined,
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyPivot7 - A_id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyPivot7 - B 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": undefined,
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyPivot7 - B_id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ExplicitManyToManyPivot7 - key 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
 exports[`getCastAndRulesFromField: FieldComments - age 1`] = `
 Object {
   "cast": Object {
@@ -420,6 +2128,30 @@ Object {
     Object {
       "isMethodCall": false,
       "value": "string",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: FieldComments - height 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
     },
   ],
 }
@@ -907,6 +2639,138 @@ Object {
 }
 `;
 
+exports[`getCastAndRulesFromField: ImplicitManyToManyA - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ImplicitManyToManyA - related 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "array",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "array",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ImplicitManyToManyB - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ImplicitManyToManyB - related 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "array",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "array",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: MappedId - firstname 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "string",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "string",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: MappedId - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
 exports[`getCastAndRulesFromField: MassAssignable - age 1`] = `
 Object {
   "cast": Object {
@@ -1345,6 +3209,56 @@ Object {
 }
 `;
 
+exports[`getCastAndRulesFromField: NoPrimaryKey - age 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: NoPrimaryKey - name 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "string",
+  },
+  "imports": Set {
+    "Illuminate\\\\Validation\\\\Rule",
+  },
+  "rules": Array [
+    Object {
+      "isMethodCall": true,
+      "value": "Rule::unique('NoPrimaryKey', 'name')->ignore($this->getKey(), $this->getKeyName())",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "string",
+    },
+  ],
+}
+`;
+
 exports[`getCastAndRulesFromField: NullableField - id 1`] = `
 Object {
   "cast": Object {
@@ -1384,6 +3298,1072 @@ Object {
     Object {
       "isMethodCall": false,
       "value": "string",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: OneToManyA - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: OneToManyA - related 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "array",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "array",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: OneToManyA2 - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: OneToManyA2 - related 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "array",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "array",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: OneToManyA3 - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: OneToManyA3 - otherId 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {
+    "Illuminate\\\\Validation\\\\Rule",
+  },
+  "rules": Array [
+    Object {
+      "isMethodCall": true,
+      "value": "Rule::unique('OneToManyA3', 'otherId')->ignore($this->getKey(), $this->getKeyName())",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: OneToManyA3 - related 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "array",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "array",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: OneToManyA4 - main_id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {
+    "Illuminate\\\\Validation\\\\Rule",
+  },
+  "rules": Array [
+    Object {
+      "isMethodCall": true,
+      "value": "Rule::unique('OneToManyA4', 'main_id')->ignore($this->getKey(), $this->getKeyName())",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: OneToManyA4 - related 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "array",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "array",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: OneToManyB - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: OneToManyB - one_to_one_a2 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": undefined,
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: OneToManyB - relatedId 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: OneToManyB2 - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: OneToManyB2 - one_to_many_a2 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": undefined,
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: OneToManyB2 - one_to_many_a2_id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: OneToManyB3 - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: OneToManyB3 - related 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": undefined,
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: OneToManyB3 - relatedId 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: OneToManyB4 - main_id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {
+    "Illuminate\\\\Validation\\\\Rule",
+  },
+  "rules": Array [
+    Object {
+      "isMethodCall": true,
+      "value": "Rule::unique('OneToManyB4', 'main_id')->ignore($this->getKey(), $this->getKeyName())",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: OneToManyB4 - related 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": undefined,
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: OneToManyB4 - relatedId 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: OneToOneA - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: OneToOneA - related 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": undefined,
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: OneToOneA2 - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: OneToOneA2 - related 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": undefined,
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: OneToOneA3 - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: OneToOneA3 - otherId 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {
+    "Illuminate\\\\Validation\\\\Rule",
+  },
+  "rules": Array [
+    Object {
+      "isMethodCall": true,
+      "value": "Rule::unique('OneToOneA3', 'otherId')->ignore($this->getKey(), $this->getKeyName())",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: OneToOneA3 - related 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": undefined,
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: OneToOneA4 - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: OneToOneA4 - related 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": undefined,
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: OneToOneA5 - main_id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {
+    "Illuminate\\\\Validation\\\\Rule",
+  },
+  "rules": Array [
+    Object {
+      "isMethodCall": true,
+      "value": "Rule::unique('OneToOneA5', 'main_id')->ignore($this->getKey(), $this->getKeyName())",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: OneToOneA5 - related 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": undefined,
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: OneToOneB - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: OneToOneB - related 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": undefined,
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: OneToOneB - relatedId 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {
+    "Illuminate\\\\Validation\\\\Rule",
+  },
+  "rules": Array [
+    Object {
+      "isMethodCall": true,
+      "value": "Rule::unique('OneToOneB', 'relatedId')->ignore($this->getKey(), $this->getKeyName())",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: OneToOneB2 - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: OneToOneB2 - one_to_one_a2 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": undefined,
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: OneToOneB2 - one_to_one_a2_id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {
+    "Illuminate\\\\Validation\\\\Rule",
+  },
+  "rules": Array [
+    Object {
+      "isMethodCall": true,
+      "value": "Rule::unique('OneToOneB2', 'one_to_one_a2_id')->ignore($this->getKey(), $this->getKeyName())",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: OneToOneB3 - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: OneToOneB3 - related 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": undefined,
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: OneToOneB3 - related_id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {
+    "Illuminate\\\\Validation\\\\Rule",
+  },
+  "rules": Array [
+    Object {
+      "isMethodCall": true,
+      "value": "Rule::unique('OneToOneB3', 'related_id')->ignore($this->getKey(), $this->getKeyName())",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: OneToOneB4 - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: OneToOneB4 - related 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": undefined,
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: OneToOneB4 - relatedId 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {
+    "Illuminate\\\\Validation\\\\Rule",
+  },
+  "rules": Array [
+    Object {
+      "isMethodCall": true,
+      "value": "Rule::unique('OneToOneB4', 'relatedId')->ignore($this->getKey(), $this->getKeyName())",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: OneToOneB5 - main_id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {
+    "Illuminate\\\\Validation\\\\Rule",
+  },
+  "rules": Array [
+    Object {
+      "isMethodCall": true,
+      "value": "Rule::unique('OneToOneB5', 'main_id')->ignore($this->getKey(), $this->getKeyName())",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: OneToOneB5 - related 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": undefined,
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: OneToOneB5 - relatedId 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {
+    "Illuminate\\\\Validation\\\\Rule",
+  },
+  "rules": Array [
+    Object {
+      "isMethodCall": true,
+      "value": "Rule::unique('OneToOneB5', 'relatedId')->ignore($this->getKey(), $this->getKeyName())",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
     },
   ],
 }
@@ -1765,6 +4745,92 @@ Object {
     Object {
       "isMethodCall": false,
       "value": "string",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: SelfRelation - child 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": undefined,
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: SelfRelation - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: SelfRelation - parent 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": undefined,
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: SelfRelation - relatedId 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {
+    "Illuminate\\\\Validation\\\\Rule",
+  },
+  "rules": Array [
+    Object {
+      "isMethodCall": true,
+      "value": "Rule::unique('SelfRelation', 'relatedId')->ignore($this->getKey(), $this->getKeyName())",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
     },
   ],
 }
@@ -2450,6 +5516,116 @@ Object {
 }
 `;
 
+exports[`getCastAndRulesFromField: TouchingA - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: TouchingA - related 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": undefined,
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: TouchingB - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: TouchingB - related 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": undefined,
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: TouchingB - relatedId 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {
+    "Illuminate\\\\Validation\\\\Rule",
+  },
+  "rules": Array [
+    Object {
+      "isMethodCall": true,
+      "value": "Rule::unique('TouchingB', 'relatedId')->ignore($this->getKey(), $this->getKeyName())",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
 exports[`getCastAndRulesFromField: Types - active 1`] = `
 Object {
   "cast": Object {
@@ -2757,6 +5933,30 @@ Object {
     Object {
       "isMethodCall": false,
       "value": "string",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: UnsupportedTypes - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
     },
   ],
 }

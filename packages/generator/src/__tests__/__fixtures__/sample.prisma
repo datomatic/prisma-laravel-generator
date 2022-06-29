@@ -94,6 +94,8 @@ model FieldComments {
 
   /// Both generator pre-comment
   age Int /// and generated comment
+
+  height Int /// only generated comment
 }
 
 model FieldMultipleComments {
@@ -334,8 +336,307 @@ model MultipleComments {
   password String /// guarded, Hidden  ,  read-only
 }
 
+model NoPrimaryKey {
+  name String @unique()
+  age  Int
+}
+
+model NoRules {
+  name String @unique() @ignore
+}
+
+model OneToOneA {
+  id      Int        @id @default(autoincrement())
+  related OneToOneB?
+}
+
+model OneToOneB {
+  id        Int       @id @default(autoincrement())
+  relatedId Int       @unique
+  related   OneToOneA @relation(fields: [relatedId], references: [id])
+}
+
+model OneToOneA2 {
+  id      Int         @id @default(autoincrement())
+  related OneToOneB2?
+}
+
+model OneToOneB2 {
+  id               Int        @id @default(autoincrement())
+  one_to_one_a2_id Int        @unique
+  one_to_one_a2    OneToOneA2 @relation(fields: [one_to_one_a2_id], references: [id])
+}
+
+model OneToOneA3 {
+  id      Int         @id @default(autoincrement())
+  otherId Int         @unique
+  related OneToOneB3?
+}
+
+model OneToOneB3 {
+  id         Int        @id @default(autoincrement())
+  related_id Int        @unique
+  related    OneToOneA3 @relation(fields: [related_id], references: [otherId])
+}
+
+model OneToOneA4 {
+  id      Int         @id @default(autoincrement())
+  related OneToOneB4?
+}
+
+model OneToOneB4 {
+  id        Int         @id @default(autoincrement())
+  relatedId Int?        @unique
+  related   OneToOneA4? @relation(fields: [relatedId], references: [id])
+}
+
+model OneToOneA5 {
+  main_id Int         @unique() @default(autoincrement())
+  related OneToOneB5?
+}
+
+model OneToOneB5 {
+  main_id   Int         @unique() @default(autoincrement())
+  relatedId Int?        @unique
+  related   OneToOneA5? @relation(fields: [relatedId], references: [main_id])
+}
+
+model OneToManyA {
+  id      Int          @id @default(autoincrement())
+  related OneToManyB[]
+}
+
+model OneToManyB {
+  id            Int        @id @default(autoincrement())
+  relatedId     Int
+  one_to_one_a2 OneToManyA @relation(fields: [relatedId], references: [id])
+}
+
+model OneToManyA2 {
+  id      Int           @id @default(autoincrement())
+  related OneToManyB2[]
+}
+
+model OneToManyB2 {
+  id                Int         @id @default(autoincrement())
+  one_to_many_a2_id Int
+  one_to_many_a2    OneToManyA2 @relation(fields: [one_to_many_a2_id], references: [id])
+}
+
+model OneToManyA3 {
+  id      Int           @id @default(autoincrement())
+  otherId Int           @unique
+  related OneToManyB3[]
+}
+
+model OneToManyB3 {
+  id        Int         @id @default(autoincrement())
+  relatedId Int
+  related   OneToManyA3 @relation(fields: [relatedId], references: [otherId])
+}
+
+model OneToManyA4 {
+  main_id Int           @unique
+  related OneToManyB4[]
+}
+
+model OneToManyB4 {
+  main_id   Int         @unique @default(autoincrement())
+  relatedId Int
+  related   OneToManyA4 @relation(fields: [main_id], references: [main_id])
+}
+
+model ImplicitManyToManyA {
+  id      Int                   @id @default(autoincrement())
+  related ImplicitManyToManyB[]
+}
+
+model ImplicitManyToManyB {
+  id      Int                   @id @default(autoincrement())
+  related ImplicitManyToManyA[]
+}
+
+model ExplicitManyToManyA {
+  id      Int                       @id @default(autoincrement())
+  related ExplicitManyToManyPivot[]
+}
+
+/// pivot
+model ExplicitManyToManyPivot {
+  id   Int                 @id @default(autoincrement())
+  A_id Int
+  A    ExplicitManyToManyA @relation(fields: [A_id], references: [id])
+  B_id Int
+  B    ExplicitManyToManyB @relation(fields: [B_id], references: [id])
+}
+
+model ExplicitManyToManyB {
+  id      Int                       @id @default(autoincrement())
+  related ExplicitManyToManyPivot[]
+}
+
+model ExplicitManyToManyA2 {
+  id                       Int                        @id @default(autoincrement())
+  explicit_many_to_many_b2 ExplicitManyToManyPivot2[]
+}
+
+/// pivot
+model ExplicitManyToManyPivot2 {
+  id                          Int                  @id @default(autoincrement())
+  explicit_many_to_many_a2_id Int
+  explicit_many_to_many_a2    ExplicitManyToManyA2 @relation(fields: [explicit_many_to_many_a2_id], references: [id])
+  explicit_many_to_many_b2_id Int
+  explicit_many_to_many_b2    ExplicitManyToManyB2 @relation(fields: [explicit_many_to_many_b2_id], references: [id])
+}
+
+model ExplicitManyToManyB2 {
+  id                       Int                        @id @default(autoincrement())
+  explicit_many_to_many_a2 ExplicitManyToManyPivot2[]
+}
+
+model ExplicitManyToManyA3 {
+  id       Int                        @id @default(autoincrement())
+  otherIdA Int                        @unique
+  related  ExplicitManyToManyPivot3[]
+}
+
+/// pivot
+model ExplicitManyToManyPivot3 {
+  id   Int                  @id @default(autoincrement())
+  A_id Int
+  A    ExplicitManyToManyA3 @relation(fields: [A_id], references: [otherIdA])
+  B_id Int
+  B    ExplicitManyToManyB3 @relation(fields: [B_id], references: [otherIdB])
+}
+
+model ExplicitManyToManyB3 {
+  id       Int                        @id @default(autoincrement())
+  otherIdB Int                        @unique
+  related  ExplicitManyToManyPivot3[]
+}
+
+model ExplicitManyToManyA4 {
+  id       Int                        @id @default(autoincrement())
+  otherIdA Int                        @unique
+  related  ExplicitManyToManyPivot4[]
+}
+
+/// pivot
+model ExplicitManyToManyPivot4 {
+  id   Int                  @id @default(autoincrement())
+  A_id Int
+  A    ExplicitManyToManyA4 @relation(fields: [A_id], references: [otherIdA])
+  B_id Int
+  B    ExplicitManyToManyB4 @relation(fields: [B_id], references: [otherIdB])
+
+  @@map("explicit_many_to_many_a4_explicit_many_to_many_b4")
+}
+
+model ExplicitManyToManyB4 {
+  id       Int                        @id @default(autoincrement())
+  otherIdB Int                        @unique
+  related  ExplicitManyToManyPivot4[]
+}
+
+model ExplicitManyToManyA5 {
+  id      Int                        @id @default(autoincrement())
+  related ExplicitManyToManyPivot5[]
+  hasOne  ExplicitManyToManyPivot5?  @relation("hasOne")
+}
+
+/// pivot
+model ExplicitManyToManyPivot5 {
+  id    Int                    @id @default(autoincrement())
+  A_id  Int
+  A     ExplicitManyToManyA5   @relation(fields: [A_id], references: [id])
+  B_id  Int
+  B     ExplicitManyToManyB5   @relation(fields: [B_id], references: [id])
+  A2_id Int                    @unique
+  A2    ExplicitManyToManyA5   @relation("hasOne", fields: [A2_id], references: [id])
+  B2    ExplicitManyToManyB5[] @relation("pivot")
+}
+
+model ExplicitManyToManyB5 {
+  id       Int                        @id @default(autoincrement())
+  related  ExplicitManyToManyPivot5[]
+  pivot_id Int
+  pivot    ExplicitManyToManyPivot5   @relation("pivot", fields: [pivot_id], references: [id])
+}
+
+model ExplicitManyToManyA6 {
+  key     Int                        @id @default(autoincrement())
+  related ExplicitManyToManyPivot6[]
+}
+
+/// pivot
+model ExplicitManyToManyPivot6 {
+  key  Int                  @id @default(autoincrement())
+  A_id Int
+  A    ExplicitManyToManyA6 @relation(fields: [A_id], references: [key])
+  B_id Int
+  B    ExplicitManyToManyB6 @relation(fields: [B_id], references: [key])
+}
+
+model ExplicitManyToManyB6 {
+  key     Int                        @id @default(autoincrement())
+  related ExplicitManyToManyPivot6[]
+}
+
+model ExplicitManyToManyA7 {
+  key     Int                        @unique @default(autoincrement())
+  related ExplicitManyToManyPivot7[]
+}
+
+/// pivot
+model ExplicitManyToManyPivot7 {
+  key  Int                  @id @default(autoincrement())
+  A_id Int
+  A    ExplicitManyToManyA7 @relation(fields: [A_id], references: [key])
+  B_id Int
+  B    ExplicitManyToManyB7 @relation(fields: [B_id], references: [key])
+}
+
+model ExplicitManyToManyB7 {
+  key     Int                        @unique @default(autoincrement())
+  related ExplicitManyToManyPivot7[]
+}
+
+model EagerLoadA {
+  id      Int         @id @default(autoincrement())
+  related EagerLoadB? /// eager-loaded
+}
+
+model EagerLoadB {
+  id        Int        @id @default(autoincrement())
+  relatedId Int        @unique
+  related   EagerLoadA @relation(fields: [relatedId], references: [id]) /// eager-loaded
+}
+
+model TouchingA {
+  id      Int        @id @default(autoincrement())
+  related TouchingB? /// touch
+}
+
+model TouchingB {
+  id        Int       @id @default(autoincrement())
+  relatedId Int       @unique
+  related   TouchingA @relation(fields: [relatedId], references: [id]) /// touch
+}
+
+model SelfRelation {
+  id        Int           @id @default(autoincrement())
+  relatedId Int           @unique
+  parent    SelfRelation  @relation("one_to_one", fields: [relatedId], references: [id])
+  child     SelfRelation? @relation("one_to_one")
+}
+
+model MappedId {
+  id        Int    @id @default(autoincrement()) @map("primary_id") /// hidden, guarded
+  firstname String
+}
+
 model Types {
-  id      Int                    @id @default(autoincrement())
+  id      Int      @id @default(autoincrement())
   name    String
   active  Boolean
   age     Int
@@ -345,5 +646,12 @@ model Types {
   price   Decimal
   birth   DateTime
   schema  Json
-  circle  Unsupported("circle")? @default(dbgenerated("'<(10,4),11>'::circle"))
+}
+
+model UnsupportedTypes {
+  id        Int                              @id
+  circle    Unsupported("circle")?           @default(dbgenerated("'<(10,4),11>'::circle"))
+  square    Unsupported("square()!, hello!") @default(dbgenerated("'<(10,4),11>'::square(), test"))
+  triangle  Unsupported("triangle()")
+  rectangle Unsupported("rectangle()")[]
 }

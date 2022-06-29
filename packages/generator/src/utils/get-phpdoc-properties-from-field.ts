@@ -11,6 +11,7 @@ const getPhpDocPropertiesFromField = (
   guardedFields: DMMF.Field[],
   fillableFields: DMMF.Field[],
   massAssignable: boolean,
+  isPivot: boolean,
 ): {phpType: string | undefined; readOnly: boolean; imports: Set<string>} => {
   const imports = new Set<string>();
   let readOnly = false;
@@ -18,6 +19,7 @@ const getPhpDocPropertiesFromField = (
   if (
     isFieldReadOnly(field) ||
     (field.isId &&
+      !isPivot &&
       !massAssignable &&
       ((_.isEmpty(guardedFields) && _.isEmpty(fillableFields)) ||
         (_.isEmpty(guardedFields) && !_.includes(fillableFields, field)) ||

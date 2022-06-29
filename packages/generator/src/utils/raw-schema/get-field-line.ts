@@ -1,12 +1,5 @@
-// Inspired by:
-// https://github.com/iiian/prisma-generator-entityframework/blob/master/packages/generator/src/helpers/rawSchema/getMappedFieldLine.ts
-
-const modelRegexp = (modelName: string) =>
-  new RegExp(`(\\s+|^)model\\s+${modelName}\\s*\\{([^}]*)}`, 'gm');
-const commentsMatcher = /(?<!\/)\/\/[^\n/]+/gm;
-const modelAttributesMatcher = /@@\S+/gm;
-const fieldMatcher =
-  /((\/{3} *[^\n]*\n\s*)*)([^\s/]+)\s+([^\s/]+)((\s+@[^\n/]+)*)([\t ]*(\/{3}\s*([^\n]*)\s*)?)\s*/gm;
+import _ from 'lodash';
+import getFieldLines from './get-field-lines';
 
 const getFieldLine = (
   fieldName: string,
@@ -20,48 +13,12 @@ const getFieldLine = (
       attributes: string | undefined;
       comment: string | undefined;
     } => {
-  const modelSection = modelRegexp(modelName).exec(rawContent);
-  if (!modelSection || modelSection.length < 2) {
+  const fields = getFieldLines(modelName, rawContent);
+  if (!fields) {
     return false;
   }
 
-  const fields = `${modelSection[2]
-    .replaceAll(modelAttributesMatcher, '')
-    .replaceAll(commentsMatcher, '')}\n`;
-
-  let fieldRow = fieldMatcher.exec(fields);
-
-  while (fieldRow) {
-    const id = fieldRow[3];
-    if (id === fieldName) {
-      const type = fieldRow[4];
-      const attributes = fieldRow[5]
-        ? fieldRow[5].trim().replaceAll(/\s+/g, ' ')
-        : undefined;
-
-      let comment =
-        fieldRow[1] && fieldRow[1].length > 0 ? fieldRow[1] : undefined;
-      if (fieldRow[9]) {
-        if (comment) {
-          comment += ` ${fieldRow[9]}`;
-        } else {
-          comment = fieldRow[9] ?? undefined;
-        }
-      }
-      if (comment) {
-        comment = comment
-          .replaceAll(/\/+/g, ' ')
-          .replaceAll(/\s+/g, ' ')
-          .trim();
-      }
-
-      return {id, type, attributes, comment};
-    }
-
-    fieldRow = fieldMatcher.exec(fields);
-  }
-
-  return false;
+  return _.find(fields, f => f.id === fieldName) ?? false;
 };
 
 export default getFieldLine;

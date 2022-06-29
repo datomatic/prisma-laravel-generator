@@ -16,6 +16,8 @@ const readSample = async (filename: string) => {
 export const getSample = async () => readSample('sample.prisma');
 export const getCompositeKeySample = async () =>
   readSample('composite-key.prisma');
+export const getCompositeKeyOnRelationSample = async () =>
+  readSample('composite-key-on-relation.prisma');
 export const getInvalidTimestampsSample = async () =>
   readSample('invalid-timestamps.prisma');
 export const getCuidSample = async () => readSample('cuid.prisma');
@@ -34,6 +36,7 @@ export const getMySqlSample = async () => readSample('mysql.prisma');
 export default {
   getSample,
   getCompositeKeySample,
+  getCompositeKeyOnRelationSample,
   getInvalidTimestampsSample,
   getCuidSample,
   getMappedFieldsSample,

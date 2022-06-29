@@ -1,0 +1,2312 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getFieldLines: Category 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "name",
+    "type": "String",
+  },
+  Object {
+    "attributes": "@relation(references: [id])",
+    "comment": undefined,
+    "id": "posts",
+    "type": "Post[]",
+  },
+]
+`;
+
+exports[`getFieldLines: DefaultValues 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": "@default(\\"hello@world.test\\")",
+    "comment": undefined,
+    "id": "email",
+    "type": "String",
+  },
+  Object {
+    "attributes": "@default(\\"N.A.\\")",
+    "comment": undefined,
+    "id": "name",
+    "type": "String?",
+  },
+  Object {
+    "attributes": "@default(18)",
+    "comment": undefined,
+    "id": "age",
+    "type": "Int",
+  },
+  Object {
+    "attributes": "@default(uuid())",
+    "comment": undefined,
+    "id": "uuid",
+    "type": "String",
+  },
+  Object {
+    "attributes": "@default(now())",
+    "comment": undefined,
+    "id": "now",
+    "type": "DateTime",
+  },
+  Object {
+    "attributes": "@default(true)",
+    "comment": undefined,
+    "id": "bool",
+    "type": "Boolean",
+  },
+  Object {
+    "attributes": "@default(USER)",
+    "comment": undefined,
+    "id": "role",
+    "type": "Role",
+  },
+]
+`;
+
+exports[`getFieldLines: EagerLoadA 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": "eager-loaded",
+    "id": "related",
+    "type": "EagerLoadB?",
+  },
+]
+`;
+
+exports[`getFieldLines: EagerLoadB 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": "@unique",
+    "comment": undefined,
+    "id": "relatedId",
+    "type": "Int",
+  },
+  Object {
+    "attributes": "@relation(fields: [relatedId], references: [id])",
+    "comment": "eager-loaded",
+    "id": "related",
+    "type": "EagerLoadA",
+  },
+]
+`;
+
+exports[`getFieldLines: ExplicitManyToManyA 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "related",
+    "type": "ExplicitManyToManyPivot[]",
+  },
+]
+`;
+
+exports[`getFieldLines: ExplicitManyToManyA2 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "explicit_many_to_many_b2",
+    "type": "ExplicitManyToManyPivot2[]",
+  },
+]
+`;
+
+exports[`getFieldLines: ExplicitManyToManyA3 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": "@unique",
+    "comment": undefined,
+    "id": "otherIdA",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "related",
+    "type": "ExplicitManyToManyPivot3[]",
+  },
+]
+`;
+
+exports[`getFieldLines: ExplicitManyToManyA4 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": "@unique",
+    "comment": undefined,
+    "id": "otherIdA",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "related",
+    "type": "ExplicitManyToManyPivot4[]",
+  },
+]
+`;
+
+exports[`getFieldLines: ExplicitManyToManyA5 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "related",
+    "type": "ExplicitManyToManyPivot5[]",
+  },
+  Object {
+    "attributes": "@relation(\\"hasOne\\")",
+    "comment": undefined,
+    "id": "hasOne",
+    "type": "ExplicitManyToManyPivot5?",
+  },
+]
+`;
+
+exports[`getFieldLines: ExplicitManyToManyA6 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "key",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "related",
+    "type": "ExplicitManyToManyPivot6[]",
+  },
+]
+`;
+
+exports[`getFieldLines: ExplicitManyToManyA7 1`] = `
+Array [
+  Object {
+    "attributes": "@unique @default(autoincrement())",
+    "comment": undefined,
+    "id": "key",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "related",
+    "type": "ExplicitManyToManyPivot7[]",
+  },
+]
+`;
+
+exports[`getFieldLines: ExplicitManyToManyB 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "related",
+    "type": "ExplicitManyToManyPivot[]",
+  },
+]
+`;
+
+exports[`getFieldLines: ExplicitManyToManyB2 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "explicit_many_to_many_a2",
+    "type": "ExplicitManyToManyPivot2[]",
+  },
+]
+`;
+
+exports[`getFieldLines: ExplicitManyToManyB3 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": "@unique",
+    "comment": undefined,
+    "id": "otherIdB",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "related",
+    "type": "ExplicitManyToManyPivot3[]",
+  },
+]
+`;
+
+exports[`getFieldLines: ExplicitManyToManyB4 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": "@unique",
+    "comment": undefined,
+    "id": "otherIdB",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "related",
+    "type": "ExplicitManyToManyPivot4[]",
+  },
+]
+`;
+
+exports[`getFieldLines: ExplicitManyToManyB5 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "related",
+    "type": "ExplicitManyToManyPivot5[]",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "pivot_id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": "@relation(\\"pivot\\", fields: [pivot_id], references: [id])",
+    "comment": undefined,
+    "id": "pivot",
+    "type": "ExplicitManyToManyPivot5",
+  },
+]
+`;
+
+exports[`getFieldLines: ExplicitManyToManyB6 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "key",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "related",
+    "type": "ExplicitManyToManyPivot6[]",
+  },
+]
+`;
+
+exports[`getFieldLines: ExplicitManyToManyB7 1`] = `
+Array [
+  Object {
+    "attributes": "@unique @default(autoincrement())",
+    "comment": undefined,
+    "id": "key",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "related",
+    "type": "ExplicitManyToManyPivot7[]",
+  },
+]
+`;
+
+exports[`getFieldLines: ExplicitManyToManyPivot 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "A_id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": "@relation(fields: [A_id], references: [id])",
+    "comment": undefined,
+    "id": "A",
+    "type": "ExplicitManyToManyA",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "B_id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": "@relation(fields: [B_id], references: [id])",
+    "comment": undefined,
+    "id": "B",
+    "type": "ExplicitManyToManyB",
+  },
+]
+`;
+
+exports[`getFieldLines: ExplicitManyToManyPivot2 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "explicit_many_to_many_a2_id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": "@relation(fields: [explicit_many_to_many_a2_id], references: [id])",
+    "comment": undefined,
+    "id": "explicit_many_to_many_a2",
+    "type": "ExplicitManyToManyA2",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "explicit_many_to_many_b2_id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": "@relation(fields: [explicit_many_to_many_b2_id], references: [id])",
+    "comment": undefined,
+    "id": "explicit_many_to_many_b2",
+    "type": "ExplicitManyToManyB2",
+  },
+]
+`;
+
+exports[`getFieldLines: ExplicitManyToManyPivot3 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "A_id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": "@relation(fields: [A_id], references: [otherIdA])",
+    "comment": undefined,
+    "id": "A",
+    "type": "ExplicitManyToManyA3",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "B_id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": "@relation(fields: [B_id], references: [otherIdB])",
+    "comment": undefined,
+    "id": "B",
+    "type": "ExplicitManyToManyB3",
+  },
+]
+`;
+
+exports[`getFieldLines: ExplicitManyToManyPivot4 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "A_id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": "@relation(fields: [A_id], references: [otherIdA])",
+    "comment": undefined,
+    "id": "A",
+    "type": "ExplicitManyToManyA4",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "B_id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": "@relation(fields: [B_id], references: [otherIdB])",
+    "comment": undefined,
+    "id": "B",
+    "type": "ExplicitManyToManyB4",
+  },
+]
+`;
+
+exports[`getFieldLines: ExplicitManyToManyPivot5 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "A_id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": "@relation(fields: [A_id], references: [id])",
+    "comment": undefined,
+    "id": "A",
+    "type": "ExplicitManyToManyA5",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "B_id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": "@relation(fields: [B_id], references: [id])",
+    "comment": undefined,
+    "id": "B",
+    "type": "ExplicitManyToManyB5",
+  },
+  Object {
+    "attributes": "@unique",
+    "comment": undefined,
+    "id": "A2_id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": "@relation(\\"hasOne\\", fields: [A2_id], references: [id])",
+    "comment": undefined,
+    "id": "A2",
+    "type": "ExplicitManyToManyA5",
+  },
+  Object {
+    "attributes": "@relation(\\"pivot\\")",
+    "comment": undefined,
+    "id": "B2",
+    "type": "ExplicitManyToManyB5[]",
+  },
+]
+`;
+
+exports[`getFieldLines: ExplicitManyToManyPivot6 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "key",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "A_id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": "@relation(fields: [A_id], references: [key])",
+    "comment": undefined,
+    "id": "A",
+    "type": "ExplicitManyToManyA6",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "B_id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": "@relation(fields: [B_id], references: [key])",
+    "comment": undefined,
+    "id": "B",
+    "type": "ExplicitManyToManyB6",
+  },
+]
+`;
+
+exports[`getFieldLines: ExplicitManyToManyPivot7 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "key",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "A_id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": "@relation(fields: [A_id], references: [key])",
+    "comment": undefined,
+    "id": "A",
+    "type": "ExplicitManyToManyA7",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "B_id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": "@relation(fields: [B_id], references: [key])",
+    "comment": undefined,
+    "id": "B",
+    "type": "ExplicitManyToManyB7",
+  },
+]
+`;
+
+exports[`getFieldLines: FieldComments 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": "@unique @db.VarChar(100)",
+    "comment": "Generator comment",
+    "id": "email",
+    "type": "String",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": "Generator pre-comment",
+    "id": "name",
+    "type": "String",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": "Both generator pre-comment and generated comment",
+    "id": "age",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": "only generated comment",
+    "id": "height",
+    "type": "Int",
+  },
+]
+`;
+
+exports[`getFieldLines: FieldMultipleComments 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": "Comment 1 Comment 2 Comment 3",
+    "id": "name",
+    "type": "String",
+  },
+]
+`;
+
+exports[`getFieldLines: Fillable 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "email",
+    "type": "String",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "password",
+    "type": "String",
+  },
+  Object {
+    "attributes": "@default(18)",
+    "comment": "fillable",
+    "id": "age",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": "fillable",
+    "id": "name",
+    "type": "String?",
+  },
+]
+`;
+
+exports[`getFieldLines: Guarded 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": "guarded",
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": "guarded",
+    "id": "email",
+    "type": "String",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": "guarded",
+    "id": "password",
+    "type": "String",
+  },
+  Object {
+    "attributes": "@default(18)",
+    "comment": undefined,
+    "id": "age",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "name",
+    "type": "String?",
+  },
+]
+`;
+
+exports[`getFieldLines: Hidden 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "email",
+    "type": "String",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": "hidden",
+    "id": "password",
+    "type": "String",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": "hidden",
+    "id": "api_key",
+    "type": "String",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "name",
+    "type": "String?",
+  },
+]
+`;
+
+exports[`getFieldLines: Ignore 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": "@unique",
+    "comment": undefined,
+    "id": "email",
+    "type": "String",
+  },
+  Object {
+    "attributes": "@unique @ignore",
+    "comment": undefined,
+    "id": "interal",
+    "type": "String",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "age",
+    "type": "Int",
+  },
+  Object {
+    "attributes": "@ignore",
+    "comment": undefined,
+    "id": "ignored",
+    "type": "Int?",
+  },
+]
+`;
+
+exports[`getFieldLines: ImplicitManyToManyA 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "related",
+    "type": "ImplicitManyToManyB[]",
+  },
+]
+`;
+
+exports[`getFieldLines: ImplicitManyToManyB 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "related",
+    "type": "ImplicitManyToManyA[]",
+  },
+]
+`;
+
+exports[`getFieldLines: MappedId 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement()) @map(\\"primary_id\\")",
+    "comment": "hidden, guarded",
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "firstname",
+    "type": "String",
+  },
+]
+`;
+
+exports[`getFieldLines: MassAssignable 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "email",
+    "type": "String",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "password",
+    "type": "String",
+  },
+  Object {
+    "attributes": "@default(18)",
+    "comment": undefined,
+    "id": "age",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "name",
+    "type": "String?",
+  },
+]
+`;
+
+exports[`getFieldLines: ModelComments 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+]
+`;
+
+exports[`getFieldLines: ModelMultipleComments 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+]
+`;
+
+exports[`getFieldLines: MultipleComments 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": "guarded, Hidden , read-only",
+    "id": "password",
+    "type": "String",
+  },
+]
+`;
+
+exports[`getFieldLines: MultipleUnique 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": "@unique",
+    "comment": undefined,
+    "id": "email",
+    "type": "String",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "firstname",
+    "type": "String",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "lastname",
+    "type": "String",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "age",
+    "type": "Int?",
+  },
+]
+`;
+
+exports[`getFieldLines: MultipleUnique2 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": "@unique",
+    "comment": undefined,
+    "id": "email",
+    "type": "String",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "firstname",
+    "type": "String",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "lastname",
+    "type": "String",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "age",
+    "type": "Int?",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "firstname,",
+    "type": "lastname])",
+  },
+]
+`;
+
+exports[`getFieldLines: NoPrimaryKey 1`] = `
+Array [
+  Object {
+    "attributes": "@unique()",
+    "comment": undefined,
+    "id": "name",
+    "type": "String",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "age",
+    "type": "Int",
+  },
+]
+`;
+
+exports[`getFieldLines: NoRules 1`] = `
+Array [
+  Object {
+    "attributes": "@unique() @ignore",
+    "comment": undefined,
+    "id": "name",
+    "type": "String",
+  },
+]
+`;
+
+exports[`getFieldLines: NullableField 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "name",
+    "type": "String?",
+  },
+]
+`;
+
+exports[`getFieldLines: OneToManyA 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "related",
+    "type": "OneToManyB[]",
+  },
+]
+`;
+
+exports[`getFieldLines: OneToManyA2 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "related",
+    "type": "OneToManyB2[]",
+  },
+]
+`;
+
+exports[`getFieldLines: OneToManyA3 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": "@unique",
+    "comment": undefined,
+    "id": "otherId",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "related",
+    "type": "OneToManyB3[]",
+  },
+]
+`;
+
+exports[`getFieldLines: OneToManyA4 1`] = `
+Array [
+  Object {
+    "attributes": "@unique",
+    "comment": undefined,
+    "id": "main_id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "related",
+    "type": "OneToManyB4[]",
+  },
+]
+`;
+
+exports[`getFieldLines: OneToManyB 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "relatedId",
+    "type": "Int",
+  },
+  Object {
+    "attributes": "@relation(fields: [relatedId], references: [id])",
+    "comment": undefined,
+    "id": "one_to_one_a2",
+    "type": "OneToManyA",
+  },
+]
+`;
+
+exports[`getFieldLines: OneToManyB2 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "one_to_many_a2_id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": "@relation(fields: [one_to_many_a2_id], references: [id])",
+    "comment": undefined,
+    "id": "one_to_many_a2",
+    "type": "OneToManyA2",
+  },
+]
+`;
+
+exports[`getFieldLines: OneToManyB3 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "relatedId",
+    "type": "Int",
+  },
+  Object {
+    "attributes": "@relation(fields: [relatedId], references: [otherId])",
+    "comment": undefined,
+    "id": "related",
+    "type": "OneToManyA3",
+  },
+]
+`;
+
+exports[`getFieldLines: OneToManyB4 1`] = `
+Array [
+  Object {
+    "attributes": "@unique @default(autoincrement())",
+    "comment": undefined,
+    "id": "main_id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "relatedId",
+    "type": "Int",
+  },
+  Object {
+    "attributes": "@relation(fields: [main_id], references: [main_id])",
+    "comment": undefined,
+    "id": "related",
+    "type": "OneToManyA4",
+  },
+]
+`;
+
+exports[`getFieldLines: OneToOneA 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "related",
+    "type": "OneToOneB?",
+  },
+]
+`;
+
+exports[`getFieldLines: OneToOneA2 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "related",
+    "type": "OneToOneB2?",
+  },
+]
+`;
+
+exports[`getFieldLines: OneToOneA3 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": "@unique",
+    "comment": undefined,
+    "id": "otherId",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "related",
+    "type": "OneToOneB3?",
+  },
+]
+`;
+
+exports[`getFieldLines: OneToOneA4 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "related",
+    "type": "OneToOneB4?",
+  },
+]
+`;
+
+exports[`getFieldLines: OneToOneA5 1`] = `
+Array [
+  Object {
+    "attributes": "@unique() @default(autoincrement())",
+    "comment": undefined,
+    "id": "main_id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "related",
+    "type": "OneToOneB5?",
+  },
+]
+`;
+
+exports[`getFieldLines: OneToOneB 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": "@unique",
+    "comment": undefined,
+    "id": "relatedId",
+    "type": "Int",
+  },
+  Object {
+    "attributes": "@relation(fields: [relatedId], references: [id])",
+    "comment": undefined,
+    "id": "related",
+    "type": "OneToOneA",
+  },
+]
+`;
+
+exports[`getFieldLines: OneToOneB2 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": "@unique",
+    "comment": undefined,
+    "id": "one_to_one_a2_id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": "@relation(fields: [one_to_one_a2_id], references: [id])",
+    "comment": undefined,
+    "id": "one_to_one_a2",
+    "type": "OneToOneA2",
+  },
+]
+`;
+
+exports[`getFieldLines: OneToOneB3 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": "@unique",
+    "comment": undefined,
+    "id": "related_id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": "@relation(fields: [related_id], references: [otherId])",
+    "comment": undefined,
+    "id": "related",
+    "type": "OneToOneA3",
+  },
+]
+`;
+
+exports[`getFieldLines: OneToOneB4 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": "@unique",
+    "comment": undefined,
+    "id": "relatedId",
+    "type": "Int?",
+  },
+  Object {
+    "attributes": "@relation(fields: [relatedId], references: [id])",
+    "comment": undefined,
+    "id": "related",
+    "type": "OneToOneA4?",
+  },
+]
+`;
+
+exports[`getFieldLines: OneToOneB5 1`] = `
+Array [
+  Object {
+    "attributes": "@unique() @default(autoincrement())",
+    "comment": undefined,
+    "id": "main_id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": "@unique",
+    "comment": undefined,
+    "id": "relatedId",
+    "type": "Int?",
+  },
+  Object {
+    "attributes": "@relation(fields: [relatedId], references: [main_id])",
+    "comment": undefined,
+    "id": "related",
+    "type": "OneToOneA5?",
+  },
+]
+`;
+
+exports[`getFieldLines: Post 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "title",
+    "type": "String",
+  },
+  Object {
+    "attributes": "@default(false)",
+    "comment": undefined,
+    "id": "published",
+    "type": "Boolean",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "type",
+    "type": "PostType",
+  },
+  Object {
+    "attributes": "@relation(fields: [authorId], references: [id])",
+    "comment": undefined,
+    "id": "author",
+    "type": "User",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "authorId",
+    "type": "Int",
+  },
+  Object {
+    "attributes": "@relation(references: [id])",
+    "comment": undefined,
+    "id": "categories",
+    "type": "Category[]",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": "created_at",
+    "id": "createdAt",
+    "type": "DateTime",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": "updated_at",
+    "id": "updatedAt",
+    "type": "DateTime",
+  },
+]
+`;
+
+exports[`getFieldLines: Profile 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "bio",
+    "type": "String",
+  },
+  Object {
+    "attributes": "@relation(fields: [userId], references: [id])",
+    "comment": undefined,
+    "id": "user",
+    "type": "User",
+  },
+  Object {
+    "attributes": "@unique",
+    "comment": undefined,
+    "id": "userId",
+    "type": "Int",
+  },
+]
+`;
+
+exports[`getFieldLines: ReadOnlyField 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": "read-only",
+    "id": "email",
+    "type": "String",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": "read-only",
+    "id": "phone",
+    "type": "String",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "password",
+    "type": "String",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "name",
+    "type": "String?",
+  },
+]
+`;
+
+exports[`getFieldLines: SelfRelation 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": "@unique",
+    "comment": undefined,
+    "id": "relatedId",
+    "type": "Int",
+  },
+  Object {
+    "attributes": "@relation(\\"one_to_one\\", fields: [relatedId], references: [id])",
+    "comment": undefined,
+    "id": "parent",
+    "type": "SelfRelation",
+  },
+  Object {
+    "attributes": "@relation(\\"one_to_one\\")",
+    "comment": undefined,
+    "id": "child",
+    "type": "SelfRelation?",
+  },
+]
+`;
+
+exports[`getFieldLines: SoftDelete1 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "email",
+    "type": "String",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "password",
+    "type": "String",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": "deleted_at",
+    "id": "deleted_at",
+    "type": "DateTime",
+  },
+]
+`;
+
+exports[`getFieldLines: SoftDelete2 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "email",
+    "type": "String",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "password",
+    "type": "String",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": "deleted_at",
+    "id": "deleted_timestamp",
+    "type": "DateTime",
+  },
+]
+`;
+
+exports[`getFieldLines: Timestamps1 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": "created_at",
+    "id": "created_timestamp",
+    "type": "DateTime",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": "updated_at",
+    "id": "updated_timestamp",
+    "type": "DateTime",
+  },
+]
+`;
+
+exports[`getFieldLines: Timestamps2 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": "created_at",
+    "id": "created_at",
+    "type": "DateTime",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": "updated_at",
+    "id": "updated_timestamp",
+    "type": "DateTime",
+  },
+]
+`;
+
+exports[`getFieldLines: Timestamps3 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": "created_at",
+    "id": "created_timestamp",
+    "type": "DateTime",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": "updated_at",
+    "id": "updated_at",
+    "type": "DateTime",
+  },
+]
+`;
+
+exports[`getFieldLines: Timestamps4 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": "created_at",
+    "id": "created_at",
+    "type": "DateTime",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": "updated_at",
+    "id": "updated_at",
+    "type": "DateTime",
+  },
+]
+`;
+
+exports[`getFieldLines: Timestamps5 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": "created_at",
+    "id": "created_at",
+    "type": "DateTime",
+  },
+  Object {
+    "attributes": "@updatedAt",
+    "comment": undefined,
+    "id": "updated_at",
+    "type": "DateTime",
+  },
+]
+`;
+
+exports[`getFieldLines: Timestamps6 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": "created_at",
+    "id": "created_at",
+    "type": "DateTime",
+  },
+  Object {
+    "attributes": "@updatedAt",
+    "comment": undefined,
+    "id": "updated_timestamp",
+    "type": "DateTime",
+  },
+]
+`;
+
+exports[`getFieldLines: Timestamps7 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": "created_at",
+    "id": "created_at",
+    "type": "DateTime",
+  },
+  Object {
+    "attributes": "@updatedAt",
+    "comment": "updated_at",
+    "id": "updated_at",
+    "type": "DateTime",
+  },
+]
+`;
+
+exports[`getFieldLines: Timestamps8 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": "created_at",
+    "id": "created_at",
+    "type": "DateTime",
+  },
+  Object {
+    "attributes": "@updatedAt",
+    "comment": "updated_at",
+    "id": "updated_timestamp",
+    "type": "DateTime",
+  },
+]
+`;
+
+exports[`getFieldLines: TouchingA 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": "touch",
+    "id": "related",
+    "type": "TouchingB?",
+  },
+]
+`;
+
+exports[`getFieldLines: TouchingB 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": "@unique",
+    "comment": undefined,
+    "id": "relatedId",
+    "type": "Int",
+  },
+  Object {
+    "attributes": "@relation(fields: [relatedId], references: [id])",
+    "comment": "touch",
+    "id": "related",
+    "type": "TouchingA",
+  },
+]
+`;
+
+exports[`getFieldLines: Types 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "name",
+    "type": "String",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "active",
+    "type": "Boolean",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "age",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "seconds",
+    "type": "BigInt",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "blob",
+    "type": "Bytes",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "speed",
+    "type": "Float",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "price",
+    "type": "Decimal",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "birth",
+    "type": "DateTime",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "schema",
+    "type": "Json",
+  },
+]
+`;
+
+exports[`getFieldLines: Unique 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": "@unique",
+    "comment": undefined,
+    "id": "email",
+    "type": "String",
+  },
+  Object {
+    "attributes": "@unique",
+    "comment": undefined,
+    "id": "username",
+    "type": "String",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "name",
+    "type": "String?",
+  },
+]
+`;
+
+exports[`getFieldLines: UnsupportedTypes 1`] = `
+Array [
+  Object {
+    "attributes": "@id",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": "@default(dbgenerated(\\"'<(10,4),11>'::circle\\"))",
+    "comment": undefined,
+    "id": "circle",
+    "type": "Unsupported(\\"circle\\")?",
+  },
+  Object {
+    "attributes": "@default(dbgenerated(\\"'<(10,4),11>'::square(), test\\"))",
+    "comment": undefined,
+    "id": "square",
+    "type": "Unsupported(\\"square()!, hello!\\")",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "triangle",
+    "type": "Unsupported(\\"triangle()\\")",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "rectangle",
+    "type": "Unsupported(\\"rectangle()\\")[]",
+  },
+]
+`;
+
+exports[`getFieldLines: User 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": "@unique",
+    "comment": undefined,
+    "id": "email",
+    "type": "String",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "name",
+    "type": "String?",
+  },
+  Object {
+    "attributes": "@default(USER)",
+    "comment": undefined,
+    "id": "role",
+    "type": "Role",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "posts",
+    "type": "Post[]",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "profile",
+    "type": "Profile?",
+  },
+]
+`;
+
+exports[`getFieldLines: Visible 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": "visible",
+    "id": "email",
+    "type": "String",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "password",
+    "type": "String",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "api_key",
+    "type": "String",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": "visible",
+    "id": "name",
+    "type": "String?",
+  },
+]
+`;
+
+exports[`getFieldLines: WithArray 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "numbers",
+    "type": "Int[]",
+  },
+]
+`;
+
+exports[`getFieldLines: WithBackedEnum 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "enum",
+    "type": "BackedEnum",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "nullable",
+    "type": "BackedEnum?",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "array",
+    "type": "BackedEnum[]",
+  },
+  Object {
+    "attributes": "@default(A)",
+    "comment": undefined,
+    "id": "defaultEnum",
+    "type": "BackedEnum",
+  },
+]
+`;
+
+exports[`getFieldLines: WithDbType 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": "@db.VarChar(100)",
+    "comment": undefined,
+    "id": "email",
+    "type": "String",
+  },
+]
+`;
+
+exports[`getFieldLines: WithEnum 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "enum",
+    "type": "Enum",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "nullable",
+    "type": "Enum?",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "array",
+    "type": "Enum[]",
+  },
+  Object {
+    "attributes": "@default(A)",
+    "comment": undefined,
+    "id": "defaultEnum",
+    "type": "Enum",
+  },
+]
+`;
+
+exports[`getFieldLines: WithGlobalPrimaryKey 1`] = `
+Array [
+  Object {
+    "attributes": "@default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+]
+`;
+
+exports[`getFieldLines: WithGlobalPrimaryKeyDifferentName 1`] = `
+Array [
+  Object {
+    "attributes": "@default(autoincrement())",
+    "comment": undefined,
+    "id": "primary_id",
+    "type": "Int",
+  },
+]
+`;
+
+exports[`getFieldLines: WithGlobalStringPrimaryKey 1`] = `
+Array [
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "id",
+    "type": "String",
+  },
+]
+`;
+
+exports[`getFieldLines: WithGlobalStringPrimaryKeyDifferentName 1`] = `
+Array [
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "primary_id",
+    "type": "String",
+  },
+]
+`;
+
+exports[`getFieldLines: WithPrimaryKey 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+]
+`;
+
+exports[`getFieldLines: WithPrimaryKeyDifferentName 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "primary_id",
+    "type": "Int",
+  },
+]
+`;
+
+exports[`getFieldLines: WithStringPrimaryKey 1`] = `
+Array [
+  Object {
+    "attributes": "@id",
+    "comment": undefined,
+    "id": "id",
+    "type": "String",
+  },
+]
+`;
+
+exports[`getFieldLines: WithStringPrimaryKeyDifferentName 1`] = `
+Array [
+  Object {
+    "attributes": "@id",
+    "comment": undefined,
+    "id": "primary_id",
+    "type": "String",
+  },
+]
+`;
+
+exports[`getFieldLines: WithTableMap 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+]
+`;

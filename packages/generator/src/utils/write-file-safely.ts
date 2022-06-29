@@ -6,7 +6,7 @@ const writeFileSafely = async (writeLocation: string, content: string) => {
     recursive: true,
   });
 
-  await writeFile(writeLocation, content ?? '', 'utf8');
+  await writeFile(writeLocation, content, 'utf8');
 };
 
 export default writeFileSafely;

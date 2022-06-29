@@ -53,6 +53,7 @@ generatorHandler({
         ..._.map(options.dmmf.datamodel.models, async model => {
           const generatedModel = generateModel(
             model,
+            options.dmmf.datamodel.models,
             options.dmmf.datamodel.enums,
             rawSchema,
             options.datasources[0].provider,

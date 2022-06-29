@@ -30,7 +30,7 @@ use Illuminate\\\\Support\\\\Carbon;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  *
- * @property-read string		$id
+ * @property-read string $_id
  * @property Carbon $created_at
  */
 abstract class MongoDbNow extends Model
@@ -40,6 +40,8 @@ abstract class MongoDbNow extends Model
     public $timestamps = false;
     protected $table = 'MongoDbNow';
 
+    protected $primaryKey = '_id';
+
     protected $keyType = 'string';
 
     protected $attributes = [
@@ -47,12 +49,12 @@ abstract class MongoDbNow extends Model
     ];
 
     protected $rules = [
-        'id' => ['nullable', 'string'],
+        '_id' => ['nullable', 'string'],
         'created_at' => ['nullable', 'date'],
     ];
 
     protected $casts = [
-        'id' => 'string',
+        '_id' => 'string',
         'created_at' => 'immutable_datetime',
     ];
 }
@@ -88,7 +90,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  *
- * @property-read int		$id
+ * @property-read int $id
  * @property int $uint
  * @property int $usmallint
  * @property int $utinyint
@@ -125,6 +127,7 @@ namespace App\\\\Models\\\\Prisma;
 
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Collection;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 
 /**
@@ -147,8 +150,9 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  *
- * @property-read int		$id
+ * @property-read int $id
  * @property string $name
+ * @property-read Collection<Post> $posts
  */
 abstract class Category extends Model
 {
@@ -158,14 +162,17 @@ abstract class Category extends Model
     protected $rules = [
         'id' => ['nullable', 'numeric', 'integer'],
         'name' => ['nullable', 'string'],
-        'posts' => ['array', 'required'],
     ];
 
     protected $casts = [
         'id' => 'integer',
         'name' => 'string',
-        'posts' => 'array',
     ];
+
+    public function posts()
+    {
+        return $this->belongsToMany(Post::class, '_CategoryToPost', 'A', 'B');
+    }
 }
 "
 `;
@@ -203,7 +210,7 @@ use Illuminate\\\\Validation\\\\Rules\\\\Enum;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  *
- * @property-read int		$id
+ * @property-read int $id
  * @property string  $email
  * @property ?string $name
  * @property int     $age
@@ -251,6 +258,1448 @@ abstract class DefaultValues extends Model
 "
 `;
 
+exports[`models: generation: EagerLoadA 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * EagerLoadA Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ * @property-read null|EagerLoadB $related
+ */
+abstract class EagerLoadA extends Model
+{
+    public $timestamps = false;
+    protected $table = 'EagerLoadA';
+
+    protected $with = ['related'];
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+    ];
+
+    public function related()
+    {
+        return $this->hasOne(EagerLoadB::class, 'relatedId');
+    }
+}
+"
+`;
+
+exports[`models: generation: EagerLoadB 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+use Illuminate\\\\Validation\\\\Rule;
+
+/**
+ * EagerLoadB Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ * @property int $relatedId
+ * @property-read EagerLoadA $related
+ */
+abstract class EagerLoadB extends Model
+{
+    public $timestamps = false;
+    protected $table = 'EagerLoadB';
+
+    protected $with = ['related'];
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+        'relatedId' => [
+            Rule::unique('EagerLoadB', 'relatedId')->ignore(
+                $this->getKey(),
+                $this->getKeyName()
+            ),
+            'nullable',
+            'numeric',
+            'integer',
+        ],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'relatedId' => 'integer',
+    ];
+
+    public function related()
+    {
+        return $this->belongsTo(EagerLoadA::class, 'relatedId');
+    }
+}
+"
+`;
+
+exports[`models: generation: ExplicitManyToManyA 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Collection;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * ExplicitManyToManyA Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ * @property-read Collection<ExplicitManyToManyB> $related
+ */
+abstract class ExplicitManyToManyA extends Model
+{
+    public $timestamps = false;
+    protected $table = 'ExplicitManyToManyA';
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+    ];
+
+    public function related()
+    {
+        return $this->belongsToMany(
+            ExplicitManyToManyB::class,
+            'ExplicitManyToManyPivot',
+            'A_id',
+            'B_id'
+        )->using(ExplicitManyToManyPivot::class);
+    }
+}
+"
+`;
+
+exports[`models: generation: ExplicitManyToManyA2 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Collection;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * ExplicitManyToManyA2 Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ * @property-read Collection<ExplicitManyToManyB2> $explicit_many_to_many_b2
+ */
+abstract class ExplicitManyToManyA2 extends Model
+{
+    public $timestamps = false;
+    protected $table = 'ExplicitManyToManyA2';
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+    ];
+
+    public function explicit_many_to_many_b2()
+    {
+        return $this->belongsToMany(
+            ExplicitManyToManyB2::class,
+            'ExplicitManyToManyPivot2'
+        )->using(ExplicitManyToManyPivot2::class);
+    }
+}
+"
+`;
+
+exports[`models: generation: ExplicitManyToManyA3 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Collection;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+use Illuminate\\\\Validation\\\\Rule;
+
+/**
+ * ExplicitManyToManyA3 Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ * @property int $otherIdA
+ * @property-read Collection<ExplicitManyToManyB3> $related
+ */
+abstract class ExplicitManyToManyA3 extends Model
+{
+    public $timestamps = false;
+    protected $table = 'ExplicitManyToManyA3';
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+        'otherIdA' => [
+            Rule::unique('ExplicitManyToManyA3', 'otherIdA')->ignore(
+                $this->getKey(),
+                $this->getKeyName()
+            ),
+            'nullable',
+            'numeric',
+            'integer',
+        ],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'otherIdA' => 'integer',
+    ];
+
+    public function related()
+    {
+        return $this->belongsToMany(
+            ExplicitManyToManyB3::class,
+            'ExplicitManyToManyPivot3',
+            'A_id',
+            'B_id',
+            'otherIdA',
+            'otherIdB'
+        )->using(ExplicitManyToManyPivot3::class);
+    }
+}
+"
+`;
+
+exports[`models: generation: ExplicitManyToManyA4 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Collection;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+use Illuminate\\\\Validation\\\\Rule;
+
+/**
+ * ExplicitManyToManyA4 Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ * @property int $otherIdA
+ * @property-read Collection<ExplicitManyToManyB4> $related
+ */
+abstract class ExplicitManyToManyA4 extends Model
+{
+    public $timestamps = false;
+    protected $table = 'ExplicitManyToManyA4';
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+        'otherIdA' => [
+            Rule::unique('ExplicitManyToManyA4', 'otherIdA')->ignore(
+                $this->getKey(),
+                $this->getKeyName()
+            ),
+            'nullable',
+            'numeric',
+            'integer',
+        ],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'otherIdA' => 'integer',
+    ];
+
+    public function related()
+    {
+        return $this->belongsToMany(
+            ExplicitManyToManyB4::class,
+            null,
+            'A_id',
+            'B_id',
+            'otherIdA',
+            'otherIdB'
+        )->using(ExplicitManyToManyPivot4::class);
+    }
+}
+"
+`;
+
+exports[`models: generation: ExplicitManyToManyA5 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Collection;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * ExplicitManyToManyA5 Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ * @property-read null|ExplicitManyToManyPivot5 $hasOne
+ * @property-read Collection<ExplicitManyToManyB5> $related
+ */
+abstract class ExplicitManyToManyA5 extends Model
+{
+    public $timestamps = false;
+    protected $table = 'ExplicitManyToManyA5';
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+    ];
+
+    public function hasOne()
+    {
+        return $this->hasOne(ExplicitManyToManyPivot5::class, 'A2_id');
+    }
+
+    public function related()
+    {
+        return $this->belongsToMany(
+            ExplicitManyToManyB5::class,
+            'ExplicitManyToManyPivot5',
+            'A_id',
+            'B_id'
+        )->using(ExplicitManyToManyPivot5::class);
+    }
+}
+"
+`;
+
+exports[`models: generation: ExplicitManyToManyA6 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Collection;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * ExplicitManyToManyA6 Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $key
+ * @property-read Collection<ExplicitManyToManyB6> $related
+ */
+abstract class ExplicitManyToManyA6 extends Model
+{
+    public $timestamps = false;
+    protected $table = 'ExplicitManyToManyA6';
+
+    protected $primaryKey = 'key';
+
+    protected $rules = [
+        'key' => ['nullable', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'key' => 'integer',
+    ];
+
+    public function related()
+    {
+        return $this->belongsToMany(
+            ExplicitManyToManyB6::class,
+            'ExplicitManyToManyPivot6',
+            'A_id',
+            'B_id'
+        )->using(ExplicitManyToManyPivot6::class);
+    }
+}
+"
+`;
+
+exports[`models: generation: ExplicitManyToManyA7 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Collection;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+use Illuminate\\\\Validation\\\\Rule;
+
+/**
+ * ExplicitManyToManyA7 Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property int $key
+ * @property-read Collection<ExplicitManyToManyB7> $related
+ */
+abstract class ExplicitManyToManyA7 extends Model
+{
+    public $timestamps = false;
+    protected $table = 'ExplicitManyToManyA7';
+
+    protected $rules = [
+        'key' => [
+            Rule::unique('ExplicitManyToManyA7', 'key')->ignore(
+                $this->getKey(),
+                $this->getKeyName()
+            ),
+            'nullable',
+            'numeric',
+            'integer',
+        ],
+    ];
+
+    protected $casts = [
+        'key' => 'integer',
+    ];
+
+    public function related()
+    {
+        return $this->belongsToMany(
+            ExplicitManyToManyB7::class,
+            'ExplicitManyToManyPivot7',
+            'A_id',
+            'B_id',
+            'key',
+            'key'
+        )->using(ExplicitManyToManyPivot7::class);
+    }
+}
+"
+`;
+
+exports[`models: generation: ExplicitManyToManyB 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Collection;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * ExplicitManyToManyB Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ * @property-read Collection<ExplicitManyToManyA> $related
+ */
+abstract class ExplicitManyToManyB extends Model
+{
+    public $timestamps = false;
+    protected $table = 'ExplicitManyToManyB';
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+    ];
+
+    public function related()
+    {
+        return $this->belongsToMany(
+            ExplicitManyToManyA::class,
+            'ExplicitManyToManyPivot',
+            'B_id',
+            'A_id'
+        )->using(ExplicitManyToManyPivot::class);
+    }
+}
+"
+`;
+
+exports[`models: generation: ExplicitManyToManyB2 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Collection;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * ExplicitManyToManyB2 Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ * @property-read Collection<ExplicitManyToManyA2> $explicit_many_to_many_a2
+ */
+abstract class ExplicitManyToManyB2 extends Model
+{
+    public $timestamps = false;
+    protected $table = 'ExplicitManyToManyB2';
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+    ];
+
+    public function explicit_many_to_many_a2()
+    {
+        return $this->belongsToMany(
+            ExplicitManyToManyA2::class,
+            'ExplicitManyToManyPivot2'
+        )->using(ExplicitManyToManyPivot2::class);
+    }
+}
+"
+`;
+
+exports[`models: generation: ExplicitManyToManyB3 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Collection;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+use Illuminate\\\\Validation\\\\Rule;
+
+/**
+ * ExplicitManyToManyB3 Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ * @property int $otherIdB
+ * @property-read Collection<ExplicitManyToManyA3> $related
+ */
+abstract class ExplicitManyToManyB3 extends Model
+{
+    public $timestamps = false;
+    protected $table = 'ExplicitManyToManyB3';
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+        'otherIdB' => [
+            Rule::unique('ExplicitManyToManyB3', 'otherIdB')->ignore(
+                $this->getKey(),
+                $this->getKeyName()
+            ),
+            'nullable',
+            'numeric',
+            'integer',
+        ],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'otherIdB' => 'integer',
+    ];
+
+    public function related()
+    {
+        return $this->belongsToMany(
+            ExplicitManyToManyA3::class,
+            'ExplicitManyToManyPivot3',
+            'B_id',
+            'A_id',
+            'otherIdB',
+            'otherIdA'
+        )->using(ExplicitManyToManyPivot3::class);
+    }
+}
+"
+`;
+
+exports[`models: generation: ExplicitManyToManyB4 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Collection;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+use Illuminate\\\\Validation\\\\Rule;
+
+/**
+ * ExplicitManyToManyB4 Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ * @property int $otherIdB
+ * @property-read Collection<ExplicitManyToManyA4> $related
+ */
+abstract class ExplicitManyToManyB4 extends Model
+{
+    public $timestamps = false;
+    protected $table = 'ExplicitManyToManyB4';
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+        'otherIdB' => [
+            Rule::unique('ExplicitManyToManyB4', 'otherIdB')->ignore(
+                $this->getKey(),
+                $this->getKeyName()
+            ),
+            'nullable',
+            'numeric',
+            'integer',
+        ],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'otherIdB' => 'integer',
+    ];
+
+    public function related()
+    {
+        return $this->belongsToMany(
+            ExplicitManyToManyA4::class,
+            null,
+            'B_id',
+            'A_id',
+            'otherIdB',
+            'otherIdA'
+        )->using(ExplicitManyToManyPivot4::class);
+    }
+}
+"
+`;
+
+exports[`models: generation: ExplicitManyToManyB5 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Collection;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * ExplicitManyToManyB5 Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ * @property int $pivot_id
+ * @property-read ExplicitManyToManyPivot5 $pivot
+ * @property-read Collection<ExplicitManyToManyA5> $related
+ */
+abstract class ExplicitManyToManyB5 extends Model
+{
+    public $timestamps = false;
+    protected $table = 'ExplicitManyToManyB5';
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+        'pivot_id' => ['nullable', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'pivot_id' => 'integer',
+    ];
+
+    public function pivot()
+    {
+        return $this->belongsTo(ExplicitManyToManyPivot5::class);
+    }
+
+    public function related()
+    {
+        return $this->belongsToMany(
+            ExplicitManyToManyA5::class,
+            'ExplicitManyToManyPivot5',
+            'B_id',
+            'A_id'
+        )->using(ExplicitManyToManyPivot5::class);
+    }
+}
+"
+`;
+
+exports[`models: generation: ExplicitManyToManyB6 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Collection;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * ExplicitManyToManyB6 Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $key
+ * @property-read Collection<ExplicitManyToManyA6> $related
+ */
+abstract class ExplicitManyToManyB6 extends Model
+{
+    public $timestamps = false;
+    protected $table = 'ExplicitManyToManyB6';
+
+    protected $primaryKey = 'key';
+
+    protected $rules = [
+        'key' => ['nullable', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'key' => 'integer',
+    ];
+
+    public function related()
+    {
+        return $this->belongsToMany(
+            ExplicitManyToManyA6::class,
+            'ExplicitManyToManyPivot6',
+            'B_id',
+            'A_id'
+        )->using(ExplicitManyToManyPivot6::class);
+    }
+}
+"
+`;
+
+exports[`models: generation: ExplicitManyToManyB7 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Collection;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+use Illuminate\\\\Validation\\\\Rule;
+
+/**
+ * ExplicitManyToManyB7 Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property int $key
+ * @property-read Collection<ExplicitManyToManyA7> $related
+ */
+abstract class ExplicitManyToManyB7 extends Model
+{
+    public $timestamps = false;
+    protected $table = 'ExplicitManyToManyB7';
+
+    protected $rules = [
+        'key' => [
+            Rule::unique('ExplicitManyToManyB7', 'key')->ignore(
+                $this->getKey(),
+                $this->getKeyName()
+            ),
+            'nullable',
+            'numeric',
+            'integer',
+        ],
+    ];
+
+    protected $casts = [
+        'key' => 'integer',
+    ];
+
+    public function related()
+    {
+        return $this->belongsToMany(
+            ExplicitManyToManyA7::class,
+            'ExplicitManyToManyPivot7',
+            'B_id',
+            'A_id',
+            'key',
+            'key'
+        )->using(ExplicitManyToManyPivot7::class);
+    }
+}
+"
+`;
+
+exports[`models: generation: ExplicitManyToManyPivot 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\Pivot;
+
+/**
+ * ExplicitManyToManyPivot Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property int $id
+ * @property int $A_id
+ * @property int $B_id
+ */
+abstract class ExplicitManyToManyPivot extends Pivot
+{
+    public $incrementing = true;
+
+    public $timestamps = false;
+    protected $table = 'ExplicitManyToManyPivot';
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+        'A_id' => ['nullable', 'numeric', 'integer'],
+        'B_id' => ['nullable', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'A_id' => 'integer',
+        'B_id' => 'integer',
+    ];
+}
+"
+`;
+
+exports[`models: generation: ExplicitManyToManyPivot2 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\Pivot;
+
+/**
+ * ExplicitManyToManyPivot2 Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property int $id
+ * @property int $explicit_many_to_many_a2_id
+ * @property int $explicit_many_to_many_b2_id
+ */
+abstract class ExplicitManyToManyPivot2 extends Pivot
+{
+    public $incrementing = true;
+
+    public $timestamps = false;
+    protected $table = 'ExplicitManyToManyPivot2';
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+        'explicit_many_to_many_a2_id' => ['nullable', 'numeric', 'integer'],
+        'explicit_many_to_many_b2_id' => ['nullable', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'explicit_many_to_many_a2_id' => 'integer',
+        'explicit_many_to_many_b2_id' => 'integer',
+    ];
+}
+"
+`;
+
+exports[`models: generation: ExplicitManyToManyPivot3 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\Pivot;
+
+/**
+ * ExplicitManyToManyPivot3 Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property int $id
+ * @property int $A_id
+ * @property int $B_id
+ */
+abstract class ExplicitManyToManyPivot3 extends Pivot
+{
+    public $incrementing = true;
+
+    public $timestamps = false;
+    protected $table = 'ExplicitManyToManyPivot3';
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+        'A_id' => ['nullable', 'numeric', 'integer'],
+        'B_id' => ['nullable', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'A_id' => 'integer',
+        'B_id' => 'integer',
+    ];
+}
+"
+`;
+
+exports[`models: generation: ExplicitManyToManyPivot4 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\Pivot;
+
+/**
+ * ExplicitManyToManyPivot4 Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property int $id
+ * @property int $A_id
+ * @property int $B_id
+ */
+abstract class ExplicitManyToManyPivot4 extends Pivot
+{
+    public $incrementing = true;
+
+    public $timestamps = false;
+    protected $table = 'explicit_many_to_many_a4_explicit_many_to_many_b4';
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+        'A_id' => ['nullable', 'numeric', 'integer'],
+        'B_id' => ['nullable', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'A_id' => 'integer',
+        'B_id' => 'integer',
+    ];
+}
+"
+`;
+
+exports[`models: generation: ExplicitManyToManyPivot5 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\Pivot;
+use Illuminate\\\\Validation\\\\Rule;
+
+/**
+ * ExplicitManyToManyPivot5 Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property int $id
+ * @property int $A_id
+ * @property int $B_id
+ * @property int $A2_id
+ */
+abstract class ExplicitManyToManyPivot5 extends Pivot
+{
+    public $incrementing = true;
+
+    public $timestamps = false;
+    protected $table = 'ExplicitManyToManyPivot5';
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+        'A_id' => ['nullable', 'numeric', 'integer'],
+        'B_id' => ['nullable', 'numeric', 'integer'],
+        'A2_id' => [
+            Rule::unique('ExplicitManyToManyPivot5', 'A2_id')->ignore(
+                $this->getKey(),
+                $this->getKeyName()
+            ),
+            'nullable',
+            'numeric',
+            'integer',
+        ],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'A_id' => 'integer',
+        'B_id' => 'integer',
+        'A2_id' => 'integer',
+    ];
+}
+"
+`;
+
+exports[`models: generation: ExplicitManyToManyPivot6 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\Pivot;
+
+/**
+ * ExplicitManyToManyPivot6 Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property int $key
+ * @property int $A_id
+ * @property int $B_id
+ */
+abstract class ExplicitManyToManyPivot6 extends Pivot
+{
+    public $incrementing = true;
+
+    public $timestamps = false;
+    protected $table = 'ExplicitManyToManyPivot6';
+
+    protected $primaryKey = 'key';
+
+    protected $rules = [
+        'key' => ['nullable', 'numeric', 'integer'],
+        'A_id' => ['nullable', 'numeric', 'integer'],
+        'B_id' => ['nullable', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'key' => 'integer',
+        'A_id' => 'integer',
+        'B_id' => 'integer',
+    ];
+}
+"
+`;
+
+exports[`models: generation: ExplicitManyToManyPivot7 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\Pivot;
+
+/**
+ * ExplicitManyToManyPivot7 Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property int $key
+ * @property int $A_id
+ * @property int $B_id
+ */
+abstract class ExplicitManyToManyPivot7 extends Pivot
+{
+    public $incrementing = true;
+
+    public $timestamps = false;
+    protected $table = 'ExplicitManyToManyPivot7';
+
+    protected $primaryKey = 'key';
+
+    protected $rules = [
+        'key' => ['nullable', 'numeric', 'integer'],
+        'A_id' => ['nullable', 'numeric', 'integer'],
+        'B_id' => ['nullable', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'key' => 'integer',
+        'A_id' => 'integer',
+        'B_id' => 'integer',
+    ];
+}
+"
+`;
+
 exports[`models: generation: FieldComments 1`] = `
 "<?php
 
@@ -281,10 +1730,11 @@ use Illuminate\\\\Validation\\\\Rule;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  *
- * @property-read int		$id
+ * @property-read int $id
  * @property string $email
  * @property string $name
  * @property int    $age
+ * @property int    $height
  */
 abstract class FieldComments extends Model
 {
@@ -303,6 +1753,7 @@ abstract class FieldComments extends Model
         ],
         'name' => ['nullable', 'string'],
         'age' => ['nullable', 'numeric', 'integer'],
+        'height' => ['nullable', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -310,6 +1761,7 @@ abstract class FieldComments extends Model
         'email' => 'string',
         'name' => 'string',
         'age' => 'integer',
+        'height' => 'integer',
     ];
 }
 "
@@ -344,7 +1796,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  *
- * @property-read int		$id
+ * @property-read int $id
  * @property string $name
  */
 abstract class FieldMultipleComments extends Model
@@ -394,7 +1846,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  *
- * @property-read int		$id
+ * @property-read int $id
  * @property string  $email
  * @property string  $password
  * @property int     $age
@@ -459,7 +1911,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  *
- * @property-read int		$id
+ * @property-read int $id
  * @property string  $email
  * @property string  $password
  * @property int     $age
@@ -524,7 +1976,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  *
- * @property-read int		$id
+ * @property-read int $id
  * @property string  $email
  * @property string  $password
  * @property string  $api_key
@@ -586,7 +2038,7 @@ use Illuminate\\\\Validation\\\\Rule;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  *
- * @property-read int		$id
+ * @property-read int $id
  * @property string $email
  * @property int    $age
  */
@@ -612,6 +2064,180 @@ abstract class Ignore extends Model
         'id' => 'integer',
         'email' => 'string',
         'age' => 'integer',
+    ];
+}
+"
+`;
+
+exports[`models: generation: ImplicitManyToManyA 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Collection;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * ImplicitManyToManyA Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ * @property-read Collection<ImplicitManyToManyB> $related
+ */
+abstract class ImplicitManyToManyA extends Model
+{
+    public $timestamps = false;
+    protected $table = 'ImplicitManyToManyA';
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+    ];
+
+    public function related()
+    {
+        return $this->belongsToMany(
+            ImplicitManyToManyB::class,
+            '_ImplicitManyToManyAToImplicitManyToManyB',
+            'A',
+            'B'
+        );
+    }
+}
+"
+`;
+
+exports[`models: generation: ImplicitManyToManyB 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Collection;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * ImplicitManyToManyB Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ * @property-read Collection<ImplicitManyToManyA> $related
+ */
+abstract class ImplicitManyToManyB extends Model
+{
+    public $timestamps = false;
+    protected $table = 'ImplicitManyToManyB';
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+    ];
+
+    public function related()
+    {
+        return $this->belongsToMany(
+            ImplicitManyToManyA::class,
+            '_ImplicitManyToManyAToImplicitManyToManyB',
+            'B',
+            'A'
+        );
+    }
+}
+"
+`;
+
+exports[`models: generation: MappedId 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * MappedId Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $primary_id
+ * @property string $firstname
+ */
+abstract class MappedId extends Model
+{
+    public $timestamps = false;
+    protected $table = 'MappedId';
+
+    protected $primaryKey = 'primary_id';
+
+    protected $guarded = ['primary_id'];
+
+    protected $hidden = ['primary_id'];
+
+    protected $rules = [
+        'primary_id' => ['nullable', 'numeric', 'integer'],
+        'firstname' => ['nullable', 'string'],
+    ];
+
+    protected $casts = [
+        'primary_id' => 'integer',
+        'firstname' => 'string',
     ];
 }
 "
@@ -760,12 +2386,14 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  *
- * @property-read int		$id
+ * @property int $id
  */
 abstract class ModelMultipleComments extends Model
 {
     public $timestamps = false;
     protected $table = 'ModelMultipleComments';
+
+    protected $guarded = [];
 
     protected $rules = [
         'id' => ['nullable', 'numeric', 'integer'],
@@ -808,7 +2436,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  * @method static      null|static find($id, $columns = ['*'])
  *
  * @property int $id
- * @property-read string		$password
+ * @property-read string $password
  */
 abstract class MultipleComments extends Model
 {
@@ -862,7 +2490,7 @@ use Illuminate\\\\Validation\\\\Rule;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  *
- * @property-read int		$id
+ * @property-read int $id
  * @property string $email
  * @property string $firstname
  * @property string $lastname
@@ -937,7 +2565,7 @@ use Illuminate\\\\Validation\\\\Rule;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  *
- * @property-read int		$id
+ * @property-read int $id
  * @property string $email
  * @property string $firstname
  * @property string $lastname
@@ -981,6 +2609,101 @@ abstract class MultipleUnique2 extends Model
 "
 `;
 
+exports[`models: generation: NoPrimaryKey 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+use Illuminate\\\\Validation\\\\Rule;
+
+/**
+ * NoPrimaryKey Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property string $name
+ * @property int    $age
+ */
+abstract class NoPrimaryKey extends Model
+{
+    public $timestamps = false;
+    protected $table = 'NoPrimaryKey';
+
+    protected $rules = [
+        'name' => [
+            Rule::unique('NoPrimaryKey', 'name')->ignore(
+                $this->getKey(),
+                $this->getKeyName()
+            ),
+            'nullable',
+            'string',
+        ],
+        'age' => ['nullable', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'name' => 'string',
+        'age' => 'integer',
+    ];
+}
+"
+`;
+
+exports[`models: generation: NoRules 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * NoRules Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ */
+abstract class NoRules extends Model
+{
+    public $timestamps = false;
+    protected $table = 'NoRules';
+}
+"
+`;
+
 exports[`models: generation: NullableField 1`] = `
 "<?php
 
@@ -1010,7 +2733,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  *
- * @property-read int		$id
+ * @property-read int $id
  * @property ?string $name
  */
 abstract class NullableField extends Model
@@ -1031,6 +2754,1095 @@ abstract class NullableField extends Model
 "
 `;
 
+exports[`models: generation: OneToManyA 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Collection;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * OneToManyA Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ * @property-read Collection<OneToManyB> $related
+ */
+abstract class OneToManyA extends Model
+{
+    public $timestamps = false;
+    protected $table = 'OneToManyA';
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+    ];
+
+    public function related()
+    {
+        return $this->hasMany(OneToManyB::class, 'relatedId');
+    }
+}
+"
+`;
+
+exports[`models: generation: OneToManyA2 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Collection;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * OneToManyA2 Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ * @property-read Collection<OneToManyB2> $related
+ */
+abstract class OneToManyA2 extends Model
+{
+    public $timestamps = false;
+    protected $table = 'OneToManyA2';
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+    ];
+
+    public function related()
+    {
+        return $this->hasMany(OneToManyB2::class);
+    }
+}
+"
+`;
+
+exports[`models: generation: OneToManyA3 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Collection;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+use Illuminate\\\\Validation\\\\Rule;
+
+/**
+ * OneToManyA3 Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ * @property int $otherId
+ * @property-read Collection<OneToManyB3> $related
+ */
+abstract class OneToManyA3 extends Model
+{
+    public $timestamps = false;
+    protected $table = 'OneToManyA3';
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+        'otherId' => [
+            Rule::unique('OneToManyA3', 'otherId')->ignore(
+                $this->getKey(),
+                $this->getKeyName()
+            ),
+            'nullable',
+            'numeric',
+            'integer',
+        ],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'otherId' => 'integer',
+    ];
+
+    public function related()
+    {
+        return $this->hasMany(OneToManyB3::class, 'relatedId', 'otherId');
+    }
+}
+"
+`;
+
+exports[`models: generation: OneToManyA4 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Collection;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+use Illuminate\\\\Validation\\\\Rule;
+
+/**
+ * OneToManyA4 Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property int $main_id
+ * @property-read Collection<OneToManyB4> $related
+ */
+abstract class OneToManyA4 extends Model
+{
+    public $timestamps = false;
+    protected $table = 'OneToManyA4';
+
+    protected $rules = [
+        'main_id' => [
+            Rule::unique('OneToManyA4', 'main_id')->ignore(
+                $this->getKey(),
+                $this->getKeyName()
+            ),
+            'nullable',
+            'numeric',
+            'integer',
+        ],
+    ];
+
+    protected $casts = [
+        'main_id' => 'integer',
+    ];
+
+    public function related()
+    {
+        return $this->hasMany(OneToManyB4::class, 'main_id', 'main_id');
+    }
+}
+"
+`;
+
+exports[`models: generation: OneToManyB 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * OneToManyB Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ * @property int $relatedId
+ * @property-read OneToManyA $one_to_one_a2
+ */
+abstract class OneToManyB extends Model
+{
+    public $timestamps = false;
+    protected $table = 'OneToManyB';
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+        'relatedId' => ['nullable', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'relatedId' => 'integer',
+    ];
+
+    public function one_to_one_a2()
+    {
+        return $this->belongsTo(OneToManyA::class, 'relatedId');
+    }
+}
+"
+`;
+
+exports[`models: generation: OneToManyB2 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * OneToManyB2 Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ * @property int $one_to_many_a2_id
+ * @property-read OneToManyA2 $one_to_many_a2
+ */
+abstract class OneToManyB2 extends Model
+{
+    public $timestamps = false;
+    protected $table = 'OneToManyB2';
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+        'one_to_many_a2_id' => ['nullable', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'one_to_many_a2_id' => 'integer',
+    ];
+
+    public function one_to_many_a2()
+    {
+        return $this->belongsTo(OneToManyA2::class);
+    }
+}
+"
+`;
+
+exports[`models: generation: OneToManyB3 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * OneToManyB3 Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ * @property int $relatedId
+ * @property-read OneToManyA3 $related
+ */
+abstract class OneToManyB3 extends Model
+{
+    public $timestamps = false;
+    protected $table = 'OneToManyB3';
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+        'relatedId' => ['nullable', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'relatedId' => 'integer',
+    ];
+
+    public function related()
+    {
+        return $this->belongsTo(OneToManyA3::class, 'relatedId', 'otherId');
+    }
+}
+"
+`;
+
+exports[`models: generation: OneToManyB4 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+use Illuminate\\\\Validation\\\\Rule;
+
+/**
+ * OneToManyB4 Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property int $main_id
+ * @property int $relatedId
+ * @property-read OneToManyA4 $related
+ */
+abstract class OneToManyB4 extends Model
+{
+    public $timestamps = false;
+    protected $table = 'OneToManyB4';
+
+    protected $rules = [
+        'main_id' => [
+            Rule::unique('OneToManyB4', 'main_id')->ignore(
+                $this->getKey(),
+                $this->getKeyName()
+            ),
+            'nullable',
+            'numeric',
+            'integer',
+        ],
+        'relatedId' => ['nullable', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'main_id' => 'integer',
+        'relatedId' => 'integer',
+    ];
+
+    public function related()
+    {
+        return $this->belongsTo(OneToManyA4::class, 'main_id', 'main_id');
+    }
+}
+"
+`;
+
+exports[`models: generation: OneToOneA 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * OneToOneA Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ * @property-read null|OneToOneB $related
+ */
+abstract class OneToOneA extends Model
+{
+    public $timestamps = false;
+    protected $table = 'OneToOneA';
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+    ];
+
+    public function related()
+    {
+        return $this->hasOne(OneToOneB::class, 'relatedId');
+    }
+}
+"
+`;
+
+exports[`models: generation: OneToOneA2 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * OneToOneA2 Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ * @property-read null|OneToOneB2 $related
+ */
+abstract class OneToOneA2 extends Model
+{
+    public $timestamps = false;
+    protected $table = 'OneToOneA2';
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+    ];
+
+    public function related()
+    {
+        return $this->hasOne(OneToOneB2::class);
+    }
+}
+"
+`;
+
+exports[`models: generation: OneToOneA3 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+use Illuminate\\\\Validation\\\\Rule;
+
+/**
+ * OneToOneA3 Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ * @property int $otherId
+ * @property-read null|OneToOneB3 $related
+ */
+abstract class OneToOneA3 extends Model
+{
+    public $timestamps = false;
+    protected $table = 'OneToOneA3';
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+        'otherId' => [
+            Rule::unique('OneToOneA3', 'otherId')->ignore(
+                $this->getKey(),
+                $this->getKeyName()
+            ),
+            'nullable',
+            'numeric',
+            'integer',
+        ],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'otherId' => 'integer',
+    ];
+
+    public function related()
+    {
+        return $this->hasOne(OneToOneB3::class, 'related_id', 'otherId');
+    }
+}
+"
+`;
+
+exports[`models: generation: OneToOneA4 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * OneToOneA4 Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ * @property-read null|OneToOneB4 $related
+ */
+abstract class OneToOneA4 extends Model
+{
+    public $timestamps = false;
+    protected $table = 'OneToOneA4';
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+    ];
+
+    public function related()
+    {
+        return $this->hasOne(OneToOneB4::class, 'relatedId');
+    }
+}
+"
+`;
+
+exports[`models: generation: OneToOneA5 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+use Illuminate\\\\Validation\\\\Rule;
+
+/**
+ * OneToOneA5 Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property int $main_id
+ * @property-read null|OneToOneB5 $related
+ */
+abstract class OneToOneA5 extends Model
+{
+    public $timestamps = false;
+    protected $table = 'OneToOneA5';
+
+    protected $rules = [
+        'main_id' => [
+            Rule::unique('OneToOneA5', 'main_id')->ignore(
+                $this->getKey(),
+                $this->getKeyName()
+            ),
+            'nullable',
+            'numeric',
+            'integer',
+        ],
+    ];
+
+    protected $casts = [
+        'main_id' => 'integer',
+    ];
+
+    public function related()
+    {
+        return $this->hasOne(OneToOneB5::class, 'relatedId', 'main_id');
+    }
+}
+"
+`;
+
+exports[`models: generation: OneToOneB 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+use Illuminate\\\\Validation\\\\Rule;
+
+/**
+ * OneToOneB Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ * @property int $relatedId
+ * @property-read OneToOneA $related
+ */
+abstract class OneToOneB extends Model
+{
+    public $timestamps = false;
+    protected $table = 'OneToOneB';
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+        'relatedId' => [
+            Rule::unique('OneToOneB', 'relatedId')->ignore(
+                $this->getKey(),
+                $this->getKeyName()
+            ),
+            'nullable',
+            'numeric',
+            'integer',
+        ],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'relatedId' => 'integer',
+    ];
+
+    public function related()
+    {
+        return $this->belongsTo(OneToOneA::class, 'relatedId');
+    }
+}
+"
+`;
+
+exports[`models: generation: OneToOneB2 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+use Illuminate\\\\Validation\\\\Rule;
+
+/**
+ * OneToOneB2 Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ * @property int $one_to_one_a2_id
+ * @property-read OneToOneA2 $one_to_one_a2
+ */
+abstract class OneToOneB2 extends Model
+{
+    public $timestamps = false;
+    protected $table = 'OneToOneB2';
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+        'one_to_one_a2_id' => [
+            Rule::unique('OneToOneB2', 'one_to_one_a2_id')->ignore(
+                $this->getKey(),
+                $this->getKeyName()
+            ),
+            'nullable',
+            'numeric',
+            'integer',
+        ],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'one_to_one_a2_id' => 'integer',
+    ];
+
+    public function one_to_one_a2()
+    {
+        return $this->belongsTo(OneToOneA2::class);
+    }
+}
+"
+`;
+
+exports[`models: generation: OneToOneB3 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+use Illuminate\\\\Validation\\\\Rule;
+
+/**
+ * OneToOneB3 Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ * @property int $related_id
+ * @property-read OneToOneA3 $related
+ */
+abstract class OneToOneB3 extends Model
+{
+    public $timestamps = false;
+    protected $table = 'OneToOneB3';
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+        'related_id' => [
+            Rule::unique('OneToOneB3', 'related_id')->ignore(
+                $this->getKey(),
+                $this->getKeyName()
+            ),
+            'nullable',
+            'numeric',
+            'integer',
+        ],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'related_id' => 'integer',
+    ];
+
+    public function related()
+    {
+        return $this->belongsTo(OneToOneA3::class, 'related_id', 'otherId');
+    }
+}
+"
+`;
+
+exports[`models: generation: OneToOneB4 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+use Illuminate\\\\Validation\\\\Rule;
+
+/**
+ * OneToOneB4 Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ * @property ?int $relatedId
+ * @property-read null|OneToOneA4 $related
+ */
+abstract class OneToOneB4 extends Model
+{
+    public $timestamps = false;
+    protected $table = 'OneToOneB4';
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+        'relatedId' => [
+            Rule::unique('OneToOneB4', 'relatedId')->ignore(
+                $this->getKey(),
+                $this->getKeyName()
+            ),
+            'required',
+            'numeric',
+            'integer',
+        ],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'relatedId' => 'integer',
+    ];
+
+    public function related()
+    {
+        return $this->belongsTo(OneToOneA4::class, 'relatedId');
+    }
+}
+"
+`;
+
+exports[`models: generation: OneToOneB5 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+use Illuminate\\\\Validation\\\\Rule;
+
+/**
+ * OneToOneB5 Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property int  $main_id
+ * @property ?int $relatedId
+ * @property-read null|OneToOneA5 $related
+ */
+abstract class OneToOneB5 extends Model
+{
+    public $timestamps = false;
+    protected $table = 'OneToOneB5';
+
+    protected $rules = [
+        'main_id' => [
+            Rule::unique('OneToOneB5', 'main_id')->ignore(
+                $this->getKey(),
+                $this->getKeyName()
+            ),
+            'nullable',
+            'numeric',
+            'integer',
+        ],
+        'relatedId' => [
+            Rule::unique('OneToOneB5', 'relatedId')->ignore(
+                $this->getKey(),
+                $this->getKeyName()
+            ),
+            'required',
+            'numeric',
+            'integer',
+        ],
+    ];
+
+    protected $casts = [
+        'main_id' => 'integer',
+        'relatedId' => 'integer',
+    ];
+
+    public function related()
+    {
+        return $this->belongsTo(OneToOneA5::class, 'relatedId', 'main_id');
+    }
+}
+"
+`;
+
 exports[`models: generation: Post 1`] = `
 "<?php
 
@@ -1039,6 +3851,7 @@ namespace App\\\\Models\\\\Prisma;
 use App\\\\Enums\\\\Prisma\\\\PostType;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Collection;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 use Illuminate\\\\Support\\\\Carbon;
 use Illuminate\\\\Validation\\\\Rules\\\\Enum;
@@ -1063,13 +3876,15 @@ use Illuminate\\\\Validation\\\\Rules\\\\Enum;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  *
- * @property-read int		$id
+ * @property-read int $id
  * @property string   $title
  * @property bool     $published
  * @property PostType $type
  * @property int      $authorId
  * @property Carbon   $createdAt
  * @property Carbon   $updatedAt
+ * @property-read User $author
+ * @property-read Collection<Category> $categories
  */
 abstract class Post extends Model
 {
@@ -1086,9 +3901,7 @@ abstract class Post extends Model
         'title' => ['nullable', 'string'],
         'published' => ['nullable', 'boolean'],
         'type' => ['nullable', new Enum(PostType::class)],
-        'author' => ['nullable'],
         'authorId' => ['nullable', 'numeric', 'integer'],
-        'categories' => ['array', 'required'],
         'createdAt' => ['nullable', 'date'],
         'updatedAt' => ['nullable', 'date'],
     ];
@@ -1099,10 +3912,24 @@ abstract class Post extends Model
         'published' => 'boolean',
         'type' => PostType::class,
         'authorId' => 'integer',
-        'categories' => 'array',
         'createdAt' => 'immutable_datetime',
         'updatedAt' => 'immutable_datetime',
     ];
+
+    public function author()
+    {
+        return $this->belongsTo(User::class, 'authorId');
+    }
+
+    public function categories()
+    {
+        return $this->belongsToMany(
+            Category::class,
+            '_CategoryToPost',
+            'B',
+            'A'
+        );
+    }
 }
 "
 `;
@@ -1137,9 +3964,10 @@ use Illuminate\\\\Validation\\\\Rule;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  *
- * @property-read int		$id
+ * @property-read int $id
  * @property string $bio
  * @property int    $userId
+ * @property-read User $user
  */
 abstract class Profile extends Model
 {
@@ -1149,7 +3977,6 @@ abstract class Profile extends Model
     protected $rules = [
         'id' => ['nullable', 'numeric', 'integer'],
         'bio' => ['nullable', 'string'],
-        'user' => ['nullable'],
         'userId' => [
             Rule::unique('Profile', 'userId')->ignore(
                 $this->getKey(),
@@ -1166,6 +3993,11 @@ abstract class Profile extends Model
         'bio' => 'string',
         'userId' => 'integer',
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'userId');
+    }
 }
 "
 `;
@@ -1199,9 +4031,9 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  *
- * @property-read int		$id
- * @property-read string		$email
- * @property-read string		$phone
+ * @property-read int $id
+ * @property-read string $email
+ * @property-read string $phone
  * @property string  $password
  * @property ?string $name
  */
@@ -1225,6 +4057,77 @@ abstract class ReadOnlyField extends Model
         'password' => 'string',
         'name' => 'string',
     ];
+}
+"
+`;
+
+exports[`models: generation: SelfRelation 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+use Illuminate\\\\Validation\\\\Rule;
+
+/**
+ * SelfRelation Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ * @property int $relatedId
+ * @property-read null|SelfRelation $child
+ * @property-read SelfRelation $parent
+ */
+abstract class SelfRelation extends Model
+{
+    public $timestamps = false;
+    protected $table = 'SelfRelation';
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+        'relatedId' => [
+            Rule::unique('SelfRelation', 'relatedId')->ignore(
+                $this->getKey(),
+                $this->getKeyName()
+            ),
+            'nullable',
+            'numeric',
+            'integer',
+        ],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'relatedId' => 'integer',
+    ];
+
+    public function child()
+    {
+        return $this->hasOne(self::class, 'relatedId');
+    }
+
+    public function parent()
+    {
+        return $this->belongsTo(self::class, 'relatedId');
+    }
 }
 "
 `;
@@ -1260,7 +4163,7 @@ use Illuminate\\\\Support\\\\Carbon;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  *
- * @property-read int		$id
+ * @property-read int $id
  * @property string $email
  * @property string $password
  * @property Carbon $deleted_at
@@ -1321,7 +4224,7 @@ use Illuminate\\\\Support\\\\Carbon;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  *
- * @property-read int		$id
+ * @property-read int $id
  * @property string $email
  * @property string $password
  * @property Carbon $deleted_timestamp
@@ -1383,7 +4286,7 @@ use Illuminate\\\\Support\\\\Carbon;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  *
- * @property-read int		$id
+ * @property-read int $id
  * @property Carbon $created_timestamp
  * @property Carbon $updated_timestamp
  */
@@ -1438,7 +4341,7 @@ use Illuminate\\\\Support\\\\Carbon;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  *
- * @property-read int		$id
+ * @property-read int $id
  * @property Carbon $created_at
  * @property Carbon $updated_timestamp
  */
@@ -1492,7 +4395,7 @@ use Illuminate\\\\Support\\\\Carbon;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  *
- * @property-read int		$id
+ * @property-read int $id
  * @property Carbon $created_timestamp
  * @property Carbon $updated_at
  */
@@ -1546,7 +4449,7 @@ use Illuminate\\\\Support\\\\Carbon;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  *
- * @property-read int		$id
+ * @property-read int $id
  * @property Carbon $created_at
  * @property Carbon $updated_at
  */
@@ -1599,7 +4502,7 @@ use Illuminate\\\\Support\\\\Carbon;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  *
- * @property-read int		$id
+ * @property-read int $id
  * @property Carbon $created_at
  * @property Carbon $updated_at
  */
@@ -1652,7 +4555,7 @@ use Illuminate\\\\Support\\\\Carbon;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  *
- * @property-read int		$id
+ * @property-read int $id
  * @property Carbon $created_at
  * @property Carbon $updated_timestamp
  */
@@ -1706,7 +4609,7 @@ use Illuminate\\\\Support\\\\Carbon;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  *
- * @property-read int		$id
+ * @property-read int $id
  * @property Carbon $created_at
  * @property Carbon $updated_at
  */
@@ -1759,7 +4662,7 @@ use Illuminate\\\\Support\\\\Carbon;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  *
- * @property-read int		$id
+ * @property-read int $id
  * @property Carbon $created_at
  * @property Carbon $updated_timestamp
  */
@@ -1779,6 +4682,128 @@ abstract class Timestamps8 extends Model
         'created_at' => 'immutable_datetime',
         'updated_timestamp' => 'immutable_datetime',
     ];
+}
+"
+`;
+
+exports[`models: generation: TouchingA 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * TouchingA Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ * @property-read null|TouchingB $related
+ */
+abstract class TouchingA extends Model
+{
+    public $timestamps = false;
+    protected $table = 'TouchingA';
+
+    protected $touches = ['related'];
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+    ];
+
+    public function related()
+    {
+        return $this->hasOne(TouchingB::class, 'relatedId');
+    }
+}
+"
+`;
+
+exports[`models: generation: TouchingB 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+use Illuminate\\\\Validation\\\\Rule;
+
+/**
+ * TouchingB Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ * @property int $relatedId
+ * @property-read TouchingA $related
+ */
+abstract class TouchingB extends Model
+{
+    public $timestamps = false;
+    protected $table = 'TouchingB';
+
+    protected $touches = ['related'];
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+        'relatedId' => [
+            Rule::unique('TouchingB', 'relatedId')->ignore(
+                $this->getKey(),
+                $this->getKeyName()
+            ),
+            'nullable',
+            'numeric',
+            'integer',
+        ],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'relatedId' => 'integer',
+    ];
+
+    public function related()
+    {
+        return $this->belongsTo(TouchingA::class, 'relatedId');
+    }
 }
 "
 `;
@@ -1813,7 +4838,7 @@ use Illuminate\\\\Support\\\\Carbon;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  *
- * @property-read int		$id
+ * @property-read int $id
  * @property string $name
  * @property bool   $active
  * @property int    $age
@@ -1888,7 +4913,7 @@ use Illuminate\\\\Validation\\\\Rule;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  *
- * @property-read int		$id
+ * @property-read int $id
  * @property string  $email
  * @property string  $username
  * @property ?string $name
@@ -1929,6 +4954,60 @@ abstract class Unique extends Model
 "
 `;
 
+exports[`models: generation: UnsupportedTypes 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * UnsupportedTypes Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ */
+abstract class UnsupportedTypes extends Model
+{
+    public $incrementing = false;
+
+    public $timestamps = false;
+    protected $table = 'UnsupportedTypes';
+
+    protected $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+        'circle' => ['required'],
+        'square' => ['nullable'],
+        'triangle' => ['nullable'],
+        'rectangle' => ['array', 'required'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'rectangle' => 'array',
+    ];
+}
+"
+`;
+
 exports[`models: generation: User 1`] = `
 "<?php
 
@@ -1937,6 +5016,7 @@ namespace App\\\\Models\\\\Prisma;
 use App\\\\Enums\\\\Prisma\\\\Role;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Collection;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 use Illuminate\\\\Validation\\\\Rule;
 use Illuminate\\\\Validation\\\\Rules\\\\Enum;
@@ -1961,10 +5041,12 @@ use Illuminate\\\\Validation\\\\Rules\\\\Enum;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  *
- * @property-read int		$id
+ * @property-read int $id
  * @property string  $email
  * @property ?string $name
  * @property Role    $role
+ * @property-read null|Profile $profile
+ * @property-read Collection<Post> $posts
  */
 abstract class User extends Model
 {
@@ -1987,8 +5069,6 @@ abstract class User extends Model
         ],
         'name' => ['required', 'string'],
         'role' => ['nullable', new Enum(Role::class)],
-        'posts' => ['array', 'required'],
-        'profile' => ['required'],
     ];
 
     protected $casts = [
@@ -1996,8 +5076,17 @@ abstract class User extends Model
         'email' => 'string',
         'name' => 'string',
         'role' => Role::class,
-        'posts' => 'array',
     ];
+
+    public function profile()
+    {
+        return $this->hasOne(Profile::class, 'userId');
+    }
+
+    public function posts()
+    {
+        return $this->hasMany(Post::class, 'authorId');
+    }
 }
 "
 `;
@@ -2031,7 +5120,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  *
- * @property-read int		$id
+ * @property-read int $id
  * @property string  $email
  * @property string  $password
  * @property string  $api_key
@@ -2092,7 +5181,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  *
- * @property-read int		$id
+ * @property-read int $id
  * @property int[] $numbers
  */
 abstract class WithArray extends Model
@@ -2144,7 +5233,7 @@ use Illuminate\\\\Validation\\\\Rules\\\\Enum;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  *
- * @property-read int		$id
+ * @property-read int $id
  * @property BackedEnum   $enum
  * @property ?BackedEnum  $nullable
  * @property BackedEnum[] $array
@@ -2207,7 +5296,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  *
- * @property-read int		$id
+ * @property-read int $id
  * @property string $email
  */
 abstract class WithDbType extends Model
@@ -2259,7 +5348,7 @@ use Illuminate\\\\Validation\\\\Rules\\\\Enum;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  *
- * @property-read int		$id
+ * @property-read int $id
  * @property Enum   $enum
  * @property ?Enum  $nullable
  * @property Enum[] $array
@@ -2322,7 +5411,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  *
- * @property-read int		$id
+ * @property-read int $id
  */
 abstract class WithGlobalPrimaryKey extends Model
 {
@@ -2369,7 +5458,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  *
- * @property-read int		$primary_id
+ * @property-read int $primary_id
  */
 abstract class WithGlobalPrimaryKeyDifferentName extends Model
 {
@@ -2418,7 +5507,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  *
- * @property-read string		$id
+ * @property-read string $id
  */
 abstract class WithGlobalStringPrimaryKey extends Model
 {
@@ -2469,7 +5558,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  *
- * @property-read string		$primary_id
+ * @property-read string $primary_id
  */
 abstract class WithGlobalStringPrimaryKeyDifferentName extends Model
 {
@@ -2522,7 +5611,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  *
- * @property-read int		$id
+ * @property-read int $id
  */
 abstract class WithPrimaryKey extends Model
 {
@@ -2569,7 +5658,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  *
- * @property-read int		$primary_id
+ * @property-read int $primary_id
  */
 abstract class WithPrimaryKeyDifferentName extends Model
 {
@@ -2618,7 +5707,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  *
- * @property-read string		$id
+ * @property-read string $id
  */
 abstract class WithStringPrimaryKey extends Model
 {
@@ -2669,7 +5758,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  *
- * @property-read string		$primary_id
+ * @property-read string $primary_id
  */
 abstract class WithStringPrimaryKeyDifferentName extends Model
 {
@@ -2722,12 +5811,11 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  *
- * @property-read int		$id
+ * @property-read int $id
  */
 abstract class WithTableMap extends Model
 {
     public $timestamps = false;
-    protected $table = 'with_table_map';
 
     protected $rules = [
         'id' => ['nullable', 'numeric', 'integer'],

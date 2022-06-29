@@ -1,0 +1,602 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getModelLines: Category 1`] = `
+"id    Int    @id @default(autoincrement())
+  name  String
+  posts Post[] @relation(references: [id])"
+`;
+
+exports[`getModelLines: DefaultValues 1`] = `
+"id    Int      @id @default(autoincrement())
+  email String   @default(\\"hello@world.test\\")
+  name  String?  @default(\\"N.A.\\")
+  age   Int      @default(18)
+  uuid  String   @default(uuid())
+  now   DateTime @default(now())
+  bool  Boolean  @default(true)
+  role  Role     @default(USER)"
+`;
+
+exports[`getModelLines: EagerLoadA 1`] = `
+"id      Int         @id @default(autoincrement())
+  related EagerLoadB? /// eager-loaded"
+`;
+
+exports[`getModelLines: EagerLoadB 1`] = `
+"id        Int        @id @default(autoincrement())
+  relatedId Int        @unique
+  related   EagerLoadA @relation(fields: [relatedId], references: [id]) /// eager-loaded"
+`;
+
+exports[`getModelLines: ExplicitManyToManyA 1`] = `
+"id      Int                       @id @default(autoincrement())
+  related ExplicitManyToManyPivot[]"
+`;
+
+exports[`getModelLines: ExplicitManyToManyA2 1`] = `
+"id                       Int                        @id @default(autoincrement())
+  explicit_many_to_many_b2 ExplicitManyToManyPivot2[]"
+`;
+
+exports[`getModelLines: ExplicitManyToManyA3 1`] = `
+"id       Int                        @id @default(autoincrement())
+  otherIdA Int                        @unique
+  related  ExplicitManyToManyPivot3[]"
+`;
+
+exports[`getModelLines: ExplicitManyToManyA4 1`] = `
+"id       Int                        @id @default(autoincrement())
+  otherIdA Int                        @unique
+  related  ExplicitManyToManyPivot4[]"
+`;
+
+exports[`getModelLines: ExplicitManyToManyA5 1`] = `
+"id      Int                        @id @default(autoincrement())
+  related ExplicitManyToManyPivot5[]
+  hasOne  ExplicitManyToManyPivot5?  @relation(\\"hasOne\\")"
+`;
+
+exports[`getModelLines: ExplicitManyToManyA6 1`] = `
+"key     Int                        @id @default(autoincrement())
+  related ExplicitManyToManyPivot6[]"
+`;
+
+exports[`getModelLines: ExplicitManyToManyA7 1`] = `
+"key     Int                        @unique @default(autoincrement())
+  related ExplicitManyToManyPivot7[]"
+`;
+
+exports[`getModelLines: ExplicitManyToManyB 1`] = `
+"id      Int                       @id @default(autoincrement())
+  related ExplicitManyToManyPivot[]"
+`;
+
+exports[`getModelLines: ExplicitManyToManyB2 1`] = `
+"id                       Int                        @id @default(autoincrement())
+  explicit_many_to_many_a2 ExplicitManyToManyPivot2[]"
+`;
+
+exports[`getModelLines: ExplicitManyToManyB3 1`] = `
+"id       Int                        @id @default(autoincrement())
+  otherIdB Int                        @unique
+  related  ExplicitManyToManyPivot3[]"
+`;
+
+exports[`getModelLines: ExplicitManyToManyB4 1`] = `
+"id       Int                        @id @default(autoincrement())
+  otherIdB Int                        @unique
+  related  ExplicitManyToManyPivot4[]"
+`;
+
+exports[`getModelLines: ExplicitManyToManyB5 1`] = `
+"id       Int                        @id @default(autoincrement())
+  related  ExplicitManyToManyPivot5[]
+  pivot_id Int
+  pivot    ExplicitManyToManyPivot5   @relation(\\"pivot\\", fields: [pivot_id], references: [id])"
+`;
+
+exports[`getModelLines: ExplicitManyToManyB6 1`] = `
+"key     Int                        @id @default(autoincrement())
+  related ExplicitManyToManyPivot6[]"
+`;
+
+exports[`getModelLines: ExplicitManyToManyB7 1`] = `
+"key     Int                        @unique @default(autoincrement())
+  related ExplicitManyToManyPivot7[]"
+`;
+
+exports[`getModelLines: ExplicitManyToManyPivot 1`] = `
+"id   Int                 @id @default(autoincrement())
+  A_id Int
+  A    ExplicitManyToManyA @relation(fields: [A_id], references: [id])
+  B_id Int
+  B    ExplicitManyToManyB @relation(fields: [B_id], references: [id])"
+`;
+
+exports[`getModelLines: ExplicitManyToManyPivot2 1`] = `
+"id                          Int                  @id @default(autoincrement())
+  explicit_many_to_many_a2_id Int
+  explicit_many_to_many_a2    ExplicitManyToManyA2 @relation(fields: [explicit_many_to_many_a2_id], references: [id])
+  explicit_many_to_many_b2_id Int
+  explicit_many_to_many_b2    ExplicitManyToManyB2 @relation(fields: [explicit_many_to_many_b2_id], references: [id])"
+`;
+
+exports[`getModelLines: ExplicitManyToManyPivot3 1`] = `
+"id   Int                  @id @default(autoincrement())
+  A_id Int
+  A    ExplicitManyToManyA3 @relation(fields: [A_id], references: [otherIdA])
+  B_id Int
+  B    ExplicitManyToManyB3 @relation(fields: [B_id], references: [otherIdB])"
+`;
+
+exports[`getModelLines: ExplicitManyToManyPivot4 1`] = `
+"id   Int                  @id @default(autoincrement())
+  A_id Int
+  A    ExplicitManyToManyA4 @relation(fields: [A_id], references: [otherIdA])
+  B_id Int
+  B    ExplicitManyToManyB4 @relation(fields: [B_id], references: [otherIdB])
+
+  "
+`;
+
+exports[`getModelLines: ExplicitManyToManyPivot5 1`] = `
+"id    Int                    @id @default(autoincrement())
+  A_id  Int
+  A     ExplicitManyToManyA5   @relation(fields: [A_id], references: [id])
+  B_id  Int
+  B     ExplicitManyToManyB5   @relation(fields: [B_id], references: [id])
+  A2_id Int                    @unique
+  A2    ExplicitManyToManyA5   @relation(\\"hasOne\\", fields: [A2_id], references: [id])
+  B2    ExplicitManyToManyB5[] @relation(\\"pivot\\")"
+`;
+
+exports[`getModelLines: ExplicitManyToManyPivot6 1`] = `
+"key  Int                  @id @default(autoincrement())
+  A_id Int
+  A    ExplicitManyToManyA6 @relation(fields: [A_id], references: [key])
+  B_id Int
+  B    ExplicitManyToManyB6 @relation(fields: [B_id], references: [key])"
+`;
+
+exports[`getModelLines: ExplicitManyToManyPivot7 1`] = `
+"key  Int                  @id @default(autoincrement())
+  A_id Int
+  A    ExplicitManyToManyA7 @relation(fields: [A_id], references: [key])
+  B_id Int
+  B    ExplicitManyToManyB7 @relation(fields: [B_id], references: [key])"
+`;
+
+exports[`getModelLines: FieldComments 1`] = `
+"id    Int    @id @default(autoincrement()) 
+  
+  email String @unique @db.VarChar(100) /// Generator comment
+
+  /// Generator pre-comment
+  name String
+
+  /// Both generator pre-comment
+  age Int /// and generated comment
+
+  height Int /// only generated comment"
+`;
+
+exports[`getModelLines: FieldMultipleComments 1`] = `
+"id Int @id @default(autoincrement())
+
+  /// Comment 1
+  /// Comment 2
+  name String /// Comment 3"
+`;
+
+exports[`getModelLines: Fillable 1`] = `
+"id       Int     @id @default(autoincrement())
+  email    String
+  password String
+  age      Int     @default(18) /// fillable
+  name     String? /// fillable"
+`;
+
+exports[`getModelLines: Guarded 1`] = `
+"id       Int     @id @default(autoincrement()) /// guarded
+  email    String /// guarded
+  password String /// guarded
+  age      Int     @default(18)
+  name     String?"
+`;
+
+exports[`getModelLines: Hidden 1`] = `
+"id       Int     @id @default(autoincrement())
+  email    String
+  password String /// hidden
+  api_key  String /// hidden
+  name     String?"
+`;
+
+exports[`getModelLines: Ignore 1`] = `
+"id      Int    @id @default(autoincrement())
+  email   String @unique
+  interal String @unique @ignore
+  age     Int
+  ignored Int?   @ignore"
+`;
+
+exports[`getModelLines: ImplicitManyToManyA 1`] = `
+"id      Int                   @id @default(autoincrement())
+  related ImplicitManyToManyB[]"
+`;
+
+exports[`getModelLines: ImplicitManyToManyB 1`] = `
+"id      Int                   @id @default(autoincrement())
+  related ImplicitManyToManyA[]"
+`;
+
+exports[`getModelLines: MappedId 1`] = `
+"id        Int    @id @default(autoincrement()) @map(\\"primary_id\\") /// hidden, guarded
+  firstname String"
+`;
+
+exports[`getModelLines: MassAssignable 1`] = `
+"id       Int     @id @default(autoincrement())
+  email    String
+  password String
+  age      Int     @default(18)
+  name     String?"
+`;
+
+exports[`getModelLines: ModelComments 1`] = `"id Int @id @default(autoincrement())"`;
+
+exports[`getModelLines: ModelMultipleComments 1`] = `"id Int @id @default(autoincrement())"`;
+
+exports[`getModelLines: MultipleComments 1`] = `
+"id       Int    @id @default(autoincrement())
+  password String /// guarded, Hidden  ,  read-only"
+`;
+
+exports[`getModelLines: MultipleUnique 1`] = `
+"id        Int    @id @default(autoincrement())
+  email     String @unique
+  firstname String
+  lastname  String
+  age       Int?
+
+   lastname])"
+`;
+
+exports[`getModelLines: MultipleUnique2 1`] = `
+"id        Int    @id @default(autoincrement())
+  email     String @unique
+  firstname String
+  lastname  String
+  age       Int?
+
+   firstname, lastname])"
+`;
+
+exports[`getModelLines: NoPrimaryKey 1`] = `
+"name String @unique()
+  age  Int"
+`;
+
+exports[`getModelLines: NoRules 1`] = `"name String @unique() @ignore"`;
+
+exports[`getModelLines: NullableField 1`] = `
+"id   Int     @id @default(autoincrement())
+  name String?"
+`;
+
+exports[`getModelLines: OneToManyA 1`] = `
+"id      Int          @id @default(autoincrement())
+  related OneToManyB[]"
+`;
+
+exports[`getModelLines: OneToManyA2 1`] = `
+"id      Int           @id @default(autoincrement())
+  related OneToManyB2[]"
+`;
+
+exports[`getModelLines: OneToManyA3 1`] = `
+"id      Int           @id @default(autoincrement())
+  otherId Int           @unique
+  related OneToManyB3[]"
+`;
+
+exports[`getModelLines: OneToManyA4 1`] = `
+"main_id Int           @unique
+  related OneToManyB4[]"
+`;
+
+exports[`getModelLines: OneToManyB 1`] = `
+"id            Int        @id @default(autoincrement())
+  relatedId     Int
+  one_to_one_a2 OneToManyA @relation(fields: [relatedId], references: [id])"
+`;
+
+exports[`getModelLines: OneToManyB2 1`] = `
+"id                Int         @id @default(autoincrement())
+  one_to_many_a2_id Int
+  one_to_many_a2    OneToManyA2 @relation(fields: [one_to_many_a2_id], references: [id])"
+`;
+
+exports[`getModelLines: OneToManyB3 1`] = `
+"id        Int         @id @default(autoincrement())
+  relatedId Int
+  related   OneToManyA3 @relation(fields: [relatedId], references: [otherId])"
+`;
+
+exports[`getModelLines: OneToManyB4 1`] = `
+"main_id   Int         @unique @default(autoincrement())
+  relatedId Int
+  related   OneToManyA4 @relation(fields: [main_id], references: [main_id])"
+`;
+
+exports[`getModelLines: OneToOneA 1`] = `
+"id      Int        @id @default(autoincrement())
+  related OneToOneB?"
+`;
+
+exports[`getModelLines: OneToOneA2 1`] = `
+"id      Int         @id @default(autoincrement())
+  related OneToOneB2?"
+`;
+
+exports[`getModelLines: OneToOneA3 1`] = `
+"id      Int         @id @default(autoincrement())
+  otherId Int         @unique
+  related OneToOneB3?"
+`;
+
+exports[`getModelLines: OneToOneA4 1`] = `
+"id      Int         @id @default(autoincrement())
+  related OneToOneB4?"
+`;
+
+exports[`getModelLines: OneToOneA5 1`] = `
+"main_id Int         @unique() @default(autoincrement())
+  related OneToOneB5?"
+`;
+
+exports[`getModelLines: OneToOneB 1`] = `
+"id        Int       @id @default(autoincrement())
+  relatedId Int       @unique
+  related   OneToOneA @relation(fields: [relatedId], references: [id])"
+`;
+
+exports[`getModelLines: OneToOneB2 1`] = `
+"id               Int        @id @default(autoincrement())
+  one_to_one_a2_id Int        @unique
+  one_to_one_a2    OneToOneA2 @relation(fields: [one_to_one_a2_id], references: [id])"
+`;
+
+exports[`getModelLines: OneToOneB3 1`] = `
+"id         Int        @id @default(autoincrement())
+  related_id Int        @unique
+  related    OneToOneA3 @relation(fields: [related_id], references: [otherId])"
+`;
+
+exports[`getModelLines: OneToOneB4 1`] = `
+"id        Int         @id @default(autoincrement())
+  relatedId Int?        @unique
+  related   OneToOneA4? @relation(fields: [relatedId], references: [id])"
+`;
+
+exports[`getModelLines: OneToOneB5 1`] = `
+"main_id   Int         @unique() @default(autoincrement())
+  relatedId Int?        @unique
+  related   OneToOneA5? @relation(fields: [relatedId], references: [main_id])"
+`;
+
+exports[`getModelLines: Post 1`] = `
+"id         Int        @id @default(autoincrement())
+  title      String
+  published  Boolean    @default(false)
+  type       PostType
+  author     User       @relation(fields: [authorId], references: [id])
+  authorId   Int
+  categories Category[] @relation(references: [id])
+  createdAt  DateTime /// created_at
+  updatedAt  DateTime /// updated_at"
+`;
+
+exports[`getModelLines: Profile 1`] = `
+"id     Int    @id @default(autoincrement())
+  bio    String
+  user   User   @relation(fields: [userId], references: [id])
+  userId Int    @unique"
+`;
+
+exports[`getModelLines: ReadOnlyField 1`] = `
+"id       Int     @id @default(autoincrement())
+  email    String /// read-only
+  phone    String /// read-only
+  password String
+  name     String?"
+`;
+
+exports[`getModelLines: SelfRelation 1`] = `
+"id        Int           @id @default(autoincrement())
+  relatedId Int           @unique
+  parent    SelfRelation  @relation(\\"one_to_one\\", fields: [relatedId], references: [id])
+  child     SelfRelation? @relation(\\"one_to_one\\")"
+`;
+
+exports[`getModelLines: SoftDelete1 1`] = `
+"id         Int      @id @default(autoincrement())
+  email      String
+  password   String
+  deleted_at DateTime /// deleted_at"
+`;
+
+exports[`getModelLines: SoftDelete2 1`] = `
+"id                Int      @id @default(autoincrement())
+  email             String
+  password          String
+  deleted_timestamp DateTime /// deleted_at"
+`;
+
+exports[`getModelLines: Timestamps1 1`] = `
+"id                Int      @id @default(autoincrement())
+  created_timestamp DateTime /// created_at
+  updated_timestamp DateTime /// updated_at"
+`;
+
+exports[`getModelLines: Timestamps2 1`] = `
+"id                Int      @id @default(autoincrement())
+  created_at        DateTime /// created_at
+  updated_timestamp DateTime /// updated_at"
+`;
+
+exports[`getModelLines: Timestamps3 1`] = `
+"id                Int      @id @default(autoincrement())
+  created_timestamp DateTime /// created_at
+  updated_at        DateTime /// updated_at"
+`;
+
+exports[`getModelLines: Timestamps4 1`] = `
+"id         Int      @id @default(autoincrement())
+  created_at DateTime /// created_at
+  updated_at DateTime /// updated_at"
+`;
+
+exports[`getModelLines: Timestamps5 1`] = `
+"id         Int      @id @default(autoincrement())
+  created_at DateTime /// created_at
+  updated_at DateTime @updatedAt"
+`;
+
+exports[`getModelLines: Timestamps6 1`] = `
+"id                Int      @id @default(autoincrement())
+  created_at        DateTime /// created_at
+  updated_timestamp DateTime @updatedAt"
+`;
+
+exports[`getModelLines: Timestamps7 1`] = `
+"id         Int      @id @default(autoincrement())
+  created_at DateTime /// created_at
+  updated_at DateTime @updatedAt /// updated_at"
+`;
+
+exports[`getModelLines: Timestamps8 1`] = `
+"id                Int      @id @default(autoincrement())
+  created_at        DateTime /// created_at
+  updated_timestamp DateTime @updatedAt /// updated_at"
+`;
+
+exports[`getModelLines: TouchingA 1`] = `
+"id      Int        @id @default(autoincrement())
+  related TouchingB? /// touch"
+`;
+
+exports[`getModelLines: TouchingB 1`] = `
+"id        Int       @id @default(autoincrement())
+  relatedId Int       @unique
+  related   TouchingA @relation(fields: [relatedId], references: [id]) /// touch"
+`;
+
+exports[`getModelLines: Types 1`] = `
+"id      Int      @id @default(autoincrement())
+  name    String
+  active  Boolean
+  age     Int
+  seconds BigInt
+  blob    Bytes
+  speed   Float
+  price   Decimal
+  birth   DateTime
+  schema  Json"
+`;
+
+exports[`getModelLines: Unique 1`] = `
+"id       Int     @id @default(autoincrement())
+  email    String  @unique
+  username String  @unique
+  name     String?"
+`;
+
+exports[`getModelLines: UnsupportedTypes 1`] = `
+"id        Int                              @id
+  circle    Unsupported(\\"circle\\")?           @default(dbgenerated(\\"'<(10,4),11>'::circle\\"))
+  square    Unsupported(\\"square()!, hello!\\") @default(dbgenerated(\\"'<(10,4),11>'::square(), test\\"))
+  triangle  Unsupported(\\"triangle()\\")
+  rectangle Unsupported(\\"rectangle()\\")[]"
+`;
+
+exports[`getModelLines: User 1`] = `
+"id      Int      @id @default(autoincrement())
+  email   String   @unique
+  name    String?
+  role    Role     @default(USER)
+  posts   Post[]
+  profile Profile?"
+`;
+
+exports[`getModelLines: Visible 1`] = `
+"id       Int     @id @default(autoincrement())
+  email    String /// visible
+  password String
+  api_key  String
+  name     String? /// visible"
+`;
+
+exports[`getModelLines: WithArray 1`] = `
+"id      Int   @id @default(autoincrement())
+  numbers Int[]"
+`;
+
+exports[`getModelLines: WithBackedEnum 1`] = `
+"id          Int          @id @default(autoincrement())
+  enum        BackedEnum
+  nullable    BackedEnum?
+  array       BackedEnum[]
+  defaultEnum BackedEnum   @default(A)"
+`;
+
+exports[`getModelLines: WithDbType 1`] = `
+"id    Int    @id @default(autoincrement())
+  email String @db.VarChar(100)"
+`;
+
+exports[`getModelLines: WithEnum 1`] = `
+"id          Int    @id @default(autoincrement())
+  enum        Enum
+  nullable    Enum?
+  array       Enum[]
+  defaultEnum Enum   @default(A)"
+`;
+
+exports[`getModelLines: WithGlobalPrimaryKey 1`] = `
+"id Int @default(autoincrement())
+
+  "
+`;
+
+exports[`getModelLines: WithGlobalPrimaryKeyDifferentName 1`] = `
+"primary_id Int @default(autoincrement())
+
+  "
+`;
+
+exports[`getModelLines: WithGlobalStringPrimaryKey 1`] = `
+"id String
+
+  "
+`;
+
+exports[`getModelLines: WithGlobalStringPrimaryKeyDifferentName 1`] = `
+"primary_id String
+
+  "
+`;
+
+exports[`getModelLines: WithPrimaryKey 1`] = `"id Int @id @default(autoincrement())"`;
+
+exports[`getModelLines: WithPrimaryKeyDifferentName 1`] = `"primary_id Int @id @default(autoincrement())"`;
+
+exports[`getModelLines: WithStringPrimaryKey 1`] = `"id String @id"`;
+
+exports[`getModelLines: WithStringPrimaryKeyDifferentName 1`] = `"primary_id String @id"`;
+
+exports[`getModelLines: WithTableMap 1`] = `
+"id Int @id @default(autoincrement())
+
+  "
+`;

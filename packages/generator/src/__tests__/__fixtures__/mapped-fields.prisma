@@ -3,11 +3,6 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model MappedFields1 {
-  id        Int    @id @default(autoincrement()) @map("primary_id")
-  firstname String
-}
-
 model MappedFields2 {
   id        Int    @id @default(autoincrement())
   firstname String @map("first_name")

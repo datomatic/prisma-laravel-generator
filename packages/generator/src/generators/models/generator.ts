@@ -22,15 +22,30 @@ import FillableGuardedConflictError from '../../errors/fillable-guarded-conflict
 import isFieldHidden from '../../helpers/is-field-hidden';
 import isFieldVisible from '../../helpers/is-field-visible';
 import HiddenVisibleConflictError from '../../errors/hidden-visible-conflict-error';
+import isFieldRelation from '../../helpers/is-field-relation';
+import getRelationsFromModel from '../../utils/get-relations-from-model';
+import isFieldTouching from '../../helpers/is-field-touching';
+import isFieldEagerLoaded from '../../helpers/is-field-eager-loaded';
+import isModelPivot from '../../helpers/is-model-pivot';
+import snake from '../../utils/strings/snake';
+import getPhpArgumentsWithDefaults from '../../helpers/get-php-arguments-with-defaults';
+import getUnsupportedFields from '../../utils/raw-schema/get-unsupported-fields';
 
 const generateModel = (
   model: DMMF.Model,
+  models: DMMF.Model[],
   enums: DMMF.DatamodelEnum[],
   rawSchema: string,
   provider?: ConnectorType,
   baseModel = 'Illuminate\\Database\\Eloquent\\Model',
+  basePivotModel = 'Illuminate\\Database\\Eloquent\\Relations\\Pivot',
 ) => {
-  const {name: className, fields, primaryKey} = model;
+  const {name: className, fields: allFields, primaryKey} = model;
+
+  const fields = [
+    ..._.filter(allFields, f => !isFieldRelation(f)),
+    ...(getUnsupportedFields(className, rawSchema) as DMMF.Field[]),
+  ];
 
   const tableName = getTableNameFromModel(model);
 
@@ -45,11 +60,21 @@ const generateModel = (
     throw new CompositeKeyError();
   }
   const primaryKeyField = _.find(fields, f => f.isId);
+  if (primaryKeyField) {
+    const mappedField = getMapFieldAttribute(
+      primaryKeyField.name,
+      className,
+      rawSchema,
+    );
+    if (mappedField) {
+      primaryKeyField.name = mappedField;
+    }
+  }
 
   if (
     _.some(fields, field => {
       const mappedName = getMapFieldAttribute(field.name, className, rawSchema);
-      return mappedName && mappedName !== field.name;
+      return !field.isId && mappedName && mappedName !== field.name;
     })
   ) {
     throw new MappedFieldError();
@@ -64,6 +89,19 @@ const generateModel = (
       rawSchema,
       provider,
     ).cast;
+  }
+
+  const isPivot = isModelPivot(model);
+
+  const {
+    imports: relationImports,
+    hasOne,
+    belongsTo,
+    hasMany,
+    belongsToMany,
+  } = getRelationsFromModel(model, models);
+  for (const relationImport of relationImports) {
+    imports.add(relationImport);
   }
 
   const createdAtField = _.find(fields, f => isFieldCreatedTimestamp(f));
@@ -83,6 +121,9 @@ const generateModel = (
   const massAssignable = isModelMassAssignable(model);
   const fillableFields = _.filter(fields, f => isFieldFillable(f));
   const guardedFields = _.filter(fields, f => isFieldGuarded(f));
+  const touchingFields = _.filter(allFields, f => isFieldTouching(f));
+  const eagerLoadedFields = _.filter(allFields, f => isFieldEagerLoaded(f));
+
   if (
     massAssignable &&
     (!_.isEmpty(fillableFields) || !_.isEmpty(guardedFields))
@@ -183,6 +224,7 @@ const generateModel = (
           guardedFields,
           fillableFields,
           massAssignable,
+          isPivot,
         );
 
         result[field.name] = {value: phpType, readOnly};
@@ -201,10 +243,14 @@ const generateModel = (
     [fieldName: string]: {value: string; readOnly: boolean};
   };
 
+  if (hasMany.length > 0 || belongsToMany.length > 0) {
+    imports.add('\\Illuminate\\Database\\Eloquent\\Collection');
+  }
+
   return prettify(`<?php
     namespace ${namespace};
 
-    use ${baseModel};
+    use ${isPivot ? basePivotModel : baseModel};
 
     ${_.chain([...imports])
       .map(importFcqn => `use ${importFcqn};`)
@@ -236,19 +282,56 @@ const generateModel = (
          (phpDocument, fieldName) =>
            `* @property${phpDocument.readOnly ? '-read' : ''} ${
              phpDocument.value
-           }\t\t$${fieldName}`,
+           } $${fieldName}`,
+       )
+       .join('\n')
+       .value()}
+     *
+     ${_.chain(hasOne)
+       .map(
+         relation =>
+           `* @property-read null|${relation.className} $${relation.name}`,
+       )
+       .join('\n')
+       .value()}
+     ${_.chain(belongsTo)
+       .map(
+         relation =>
+           `* @property-read ${relation.nullable ? 'null|' : ''}${
+             relation.className
+           } $${relation.name}`,
+       )
+       .join('\n')
+       .value()}
+     ${_.chain(hasMany)
+       .map(
+         relation =>
+           `* @property-read Collection<${relation.className}> $${relation.name}`,
+       )
+       .join('\n')
+       .value()}
+     ${_.chain(belongsToMany)
+       .map(
+         relation =>
+           `* @property-read Collection<${relation.className}> $${relation.name}`,
        )
        .join('\n')
        .value()}
      */
-    abstract class ${className} extends ${getClassFromFQCN(baseModel)} {
+    abstract class ${className} extends ${getClassFromFQCN(
+    isPivot ? basePivotModel : baseModel,
+  )} {
 
       ${_.chain([...traits])
         .map(trait => `use ${trait};`)
         .join('\n')
         .value()}
 
-      protected $table = '${tableName}';
+      ${
+        tableName === snake(className)
+          ? ''
+          : `protected $table = '${tableName}';`
+      }
 
       ${
         primaryKeyField
@@ -265,6 +348,8 @@ const generateModel = (
           typeof primaryKeyField.default !== 'object' ||
           primaryKeyField.default.name !== 'autoincrement'
             ? 'public $incrementing = false;'
+            : isPivot
+            ? 'public $incrementing = true;'
             : ''
         }
 
@@ -367,6 +452,28 @@ const generateModel = (
       }
 
       ${
+        !_.isEmpty(touchingFields)
+          ? `protected $touches = [
+              ${_.chain(touchingFields)
+                .map(f => `'${f.name}'`)
+                .join(',\n')
+                .value()}
+            ];`
+          : ''
+      }
+
+      ${
+        !_.isEmpty(eagerLoadedFields)
+          ? `protected $with = [
+              ${_.chain(eagerLoadedFields)
+                .map(f => `'${f.name}'`)
+                .join(',\n')
+                .value()}
+            ];`
+          : ''
+      }
+
+      ${
         !_.isEmpty(rules)
           ? `protected $rules = [
               ${_.chain(rules)
@@ -398,6 +505,125 @@ const generateModel = (
                 .join(',\n')
                 .value()}
             ];`
+          : ''
+      }
+
+      ${
+        !_.isEmpty(hasOne)
+          ? _.chain(hasOne)
+              .map(
+                relation =>
+                  `public function ${relation.name}() {
+                    return $this->hasOne(
+                      ${getPhpArgumentsWithDefaults(
+                        [
+                          `${relation.className}::class`,
+                          relation.foreignKey
+                            ? `'${relation.foreignKey}'`
+                            : undefined,
+                          relation.localKey
+                            ? `'${relation.localKey}'`
+                            : undefined,
+                        ],
+                        'null',
+                      )}
+                    );
+                  }`,
+              )
+              .join('\n')
+              .value()
+          : ''
+      }
+
+      ${
+        !_.isEmpty(belongsTo)
+          ? _.chain(belongsTo)
+              .map(
+                relation =>
+                  `public function ${relation.name}() {
+                    return $this->belongsTo(
+                      ${getPhpArgumentsWithDefaults(
+                        [
+                          `${relation.className}::class`,
+                          relation.foreignKey
+                            ? `'${relation.foreignKey}'`
+                            : undefined,
+                          relation.ownerKey
+                            ? `'${relation.ownerKey}'`
+                            : undefined,
+                        ],
+                        'null',
+                      )}
+                    );
+                  }`,
+              )
+              .join('\n')
+              .value()
+          : ''
+      }
+
+      ${
+        !_.isEmpty(hasMany)
+          ? _.chain(hasMany)
+              .map(
+                relation =>
+                  `public function ${relation.name}() {
+                    return $this->hasMany(
+                      ${getPhpArgumentsWithDefaults(
+                        [
+                          `${relation.className}::class`,
+                          relation.foreignKey
+                            ? `'${relation.foreignKey}'`
+                            : undefined,
+                          relation.localKey
+                            ? `'${relation.localKey}'`
+                            : undefined,
+                        ],
+                        'null',
+                      )}
+                    );
+                  }`,
+              )
+              .join('\n')
+              .value()
+          : ''
+      }
+
+      ${
+        !_.isEmpty(belongsToMany)
+          ? _.chain(belongsToMany)
+              .map(
+                relation =>
+                  `public function ${relation.name}() {
+                    return $this->belongsToMany(
+                      ${getPhpArgumentsWithDefaults(
+                        [
+                          `${relation.className}::class`,
+                          relation.pivotTable
+                            ? `'${relation.pivotTable}'`
+                            : undefined,
+                          relation.foreignPivotKey
+                            ? `'${relation.foreignPivotKey}'`
+                            : undefined,
+                          relation.relatedPivotKey
+                            ? `'${relation.relatedPivotKey}'`
+                            : undefined,
+                          relation.parentKey
+                            ? `'${relation.parentKey}'`
+                            : undefined,
+                          relation.relatedKey
+                            ? `'${relation.relatedKey}'`
+                            : undefined,
+                        ],
+                        'null',
+                      )}
+                    )${
+                      relation.using ? `->using(${relation.using}::class)` : ''
+                    };
+                  }`,
+              )
+              .join('\n')
+              .value()
           : ''
       }
     }

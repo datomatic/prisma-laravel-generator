@@ -6,7 +6,7 @@ const getDefaultFieldAttribute = (
   rawSchema: string,
 ): false | string => {
   return getFieldAttribute<string>(
-    /@default\(([^()]+(\([^)]*\))?)\)/g,
+    /@default\((\d+|("(\\"|[^"])+")|(([^()]+)(\((("(\\"|[^"])+")|[^)])*\))?))\)/g,
     1,
     fieldName,
     modelName,

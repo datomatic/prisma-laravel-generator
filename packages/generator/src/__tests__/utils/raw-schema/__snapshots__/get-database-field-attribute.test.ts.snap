@@ -22,9 +22,167 @@ exports[`getDatabaseFieldAnnotation: DefaultValues - role 1`] = `false`;
 
 exports[`getDatabaseFieldAnnotation: DefaultValues - uuid 1`] = `false`;
 
+exports[`getDatabaseFieldAnnotation: EagerLoadA - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: EagerLoadA - related 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: EagerLoadB - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: EagerLoadB - related 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: EagerLoadB - relatedId 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyA - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyA - related 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyA2 - explicit_many_to_many_b2 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyA2 - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyA3 - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyA3 - otherIdA 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyA3 - related 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyA4 - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyA4 - otherIdA 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyA4 - related 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyA5 - hasOne 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyA5 - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyA5 - related 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyA6 - key 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyA6 - related 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyA7 - key 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyA7 - related 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyB - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyB - related 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyB2 - explicit_many_to_many_a2 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyB2 - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyB3 - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyB3 - otherIdB 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyB3 - related 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyB4 - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyB4 - otherIdB 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyB4 - related 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyB5 - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyB5 - pivot 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyB5 - pivot_id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyB5 - related 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyB6 - key 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyB6 - related 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyB7 - key 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyB7 - related 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyPivot - A 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyPivot - A_id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyPivot - B 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyPivot - B_id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyPivot - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyPivot2 - explicit_many_to_many_a2 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyPivot2 - explicit_many_to_many_a2_id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyPivot2 - explicit_many_to_many_b2 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyPivot2 - explicit_many_to_many_b2_id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyPivot2 - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyPivot3 - A 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyPivot3 - A_id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyPivot3 - B 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyPivot3 - B_id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyPivot3 - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyPivot4 - A 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyPivot4 - A_id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyPivot4 - B 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyPivot4 - B_id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyPivot4 - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyPivot5 - A 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyPivot5 - A_id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyPivot5 - A2 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyPivot5 - A2_id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyPivot5 - B 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyPivot5 - B_id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyPivot5 - B2 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyPivot5 - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyPivot6 - A 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyPivot6 - A_id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyPivot6 - B 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyPivot6 - B_id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyPivot6 - key 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyPivot7 - A 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyPivot7 - A_id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyPivot7 - B 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyPivot7 - B_id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExplicitManyToManyPivot7 - key 1`] = `false`;
+
 exports[`getDatabaseFieldAnnotation: FieldComments - age 1`] = `false`;
 
 exports[`getDatabaseFieldAnnotation: FieldComments - email 1`] = `"VarChar(100)"`;
+
+exports[`getDatabaseFieldAnnotation: FieldComments - height 1`] = `false`;
 
 exports[`getDatabaseFieldAnnotation: FieldComments - id 1`] = `false`;
 
@@ -70,6 +228,18 @@ exports[`getDatabaseFieldAnnotation: Ignore - email 1`] = `false`;
 
 exports[`getDatabaseFieldAnnotation: Ignore - id 1`] = `false`;
 
+exports[`getDatabaseFieldAnnotation: ImplicitManyToManyA - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ImplicitManyToManyA - related 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ImplicitManyToManyB - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ImplicitManyToManyB - related 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: MappedId - firstname 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: MappedId - id 1`] = `false`;
+
 exports[`getDatabaseFieldAnnotation: MassAssignable - age 1`] = `false`;
 
 exports[`getDatabaseFieldAnnotation: MassAssignable - email 1`] = `false`;
@@ -108,9 +278,107 @@ exports[`getDatabaseFieldAnnotation: MultipleUnique2 - id 1`] = `false`;
 
 exports[`getDatabaseFieldAnnotation: MultipleUnique2 - lastname 1`] = `false`;
 
+exports[`getDatabaseFieldAnnotation: NoPrimaryKey - age 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: NoPrimaryKey - name 1`] = `false`;
+
 exports[`getDatabaseFieldAnnotation: NullableField - id 1`] = `false`;
 
 exports[`getDatabaseFieldAnnotation: NullableField - name 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: OneToManyA - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: OneToManyA - related 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: OneToManyA2 - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: OneToManyA2 - related 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: OneToManyA3 - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: OneToManyA3 - otherId 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: OneToManyA3 - related 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: OneToManyA4 - main_id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: OneToManyA4 - related 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: OneToManyB - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: OneToManyB - one_to_one_a2 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: OneToManyB - relatedId 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: OneToManyB2 - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: OneToManyB2 - one_to_many_a2 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: OneToManyB2 - one_to_many_a2_id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: OneToManyB3 - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: OneToManyB3 - related 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: OneToManyB3 - relatedId 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: OneToManyB4 - main_id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: OneToManyB4 - related 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: OneToManyB4 - relatedId 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: OneToOneA - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: OneToOneA - related 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: OneToOneA2 - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: OneToOneA2 - related 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: OneToOneA3 - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: OneToOneA3 - otherId 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: OneToOneA3 - related 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: OneToOneA4 - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: OneToOneA4 - related 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: OneToOneA5 - main_id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: OneToOneA5 - related 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: OneToOneB - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: OneToOneB - related 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: OneToOneB - relatedId 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: OneToOneB2 - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: OneToOneB2 - one_to_one_a2 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: OneToOneB2 - one_to_one_a2_id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: OneToOneB3 - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: OneToOneB3 - related 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: OneToOneB3 - related_id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: OneToOneB4 - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: OneToOneB4 - related 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: OneToOneB4 - relatedId 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: OneToOneB5 - main_id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: OneToOneB5 - related 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: OneToOneB5 - relatedId 1`] = `false`;
 
 exports[`getDatabaseFieldAnnotation: Post - author 1`] = `false`;
 
@@ -147,6 +415,14 @@ exports[`getDatabaseFieldAnnotation: ReadOnlyField - name 1`] = `false`;
 exports[`getDatabaseFieldAnnotation: ReadOnlyField - password 1`] = `false`;
 
 exports[`getDatabaseFieldAnnotation: ReadOnlyField - phone 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: SelfRelation - child 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: SelfRelation - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: SelfRelation - parent 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: SelfRelation - relatedId 1`] = `false`;
 
 exports[`getDatabaseFieldAnnotation: SoftDelete1 - deleted_at 1`] = `false`;
 
@@ -212,6 +488,16 @@ exports[`getDatabaseFieldAnnotation: Timestamps8 - id 1`] = `false`;
 
 exports[`getDatabaseFieldAnnotation: Timestamps8 - updated_timestamp 1`] = `false`;
 
+exports[`getDatabaseFieldAnnotation: TouchingA - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: TouchingA - related 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: TouchingB - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: TouchingB - related 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: TouchingB - relatedId 1`] = `false`;
+
 exports[`getDatabaseFieldAnnotation: Types - active 1`] = `false`;
 
 exports[`getDatabaseFieldAnnotation: Types - age 1`] = `false`;
@@ -239,6 +525,8 @@ exports[`getDatabaseFieldAnnotation: Unique - id 1`] = `false`;
 exports[`getDatabaseFieldAnnotation: Unique - name 1`] = `false`;
 
 exports[`getDatabaseFieldAnnotation: Unique - username 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: UnsupportedTypes - id 1`] = `false`;
 
 exports[`getDatabaseFieldAnnotation: User - email 1`] = `false`;
 

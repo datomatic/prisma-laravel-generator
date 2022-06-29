@@ -8,7 +8,7 @@ const createTemporaryFile = async (data = '', filename = 'temp_file') => {
   );
 
   const filePath = join(temporaryPath, filename);
-  await writeFile(filePath, data ?? '', 'utf8');
+  await writeFile(filePath, data, 'utf8');
 
   return filePath;
 };
