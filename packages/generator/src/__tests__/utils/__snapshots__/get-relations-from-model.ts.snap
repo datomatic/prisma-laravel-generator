@@ -1,5 +1,437 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`getBelongsToManyRelation - implicit table names: Category - posts 1`] = `
+Array [
+  Array [
+    Object {
+      "className": "Post",
+      "foreignPivotKey": "A",
+      "name": "posts",
+      "pivotTable": "_CategoryToPost",
+      "relatedPivotKey": "B",
+    },
+  ],
+  Set {
+    "App\\\\Models\\\\Post",
+  },
+]
+`;
+
+exports[`getBelongsToManyRelation - implicit table names: EagerLoadA - related 1`] = `false`;
+
+exports[`getBelongsToManyRelation - implicit table names: EagerLoadB - related 1`] = `false`;
+
+exports[`getBelongsToManyRelation - implicit table names: ExplicitManyToManyA - related 1`] = `
+Array [
+  Array [
+    Object {
+      "className": "ExplicitManyToManyB",
+      "foreignPivotKey": "A_id",
+      "name": "related",
+      "pivotTable": "ExplicitManyToManyPivot",
+      "relatedPivotKey": "B_id",
+      "using": "ExplicitManyToManyPivot",
+    },
+  ],
+  Set {
+    "App\\\\Models\\\\ExplicitManyToManyB",
+    "App\\\\Models\\\\ExplicitManyToManyPivot",
+  },
+]
+`;
+
+exports[`getBelongsToManyRelation - implicit table names: ExplicitManyToManyA2 - explicit_many_to_many_b2 1`] = `
+Array [
+  Array [
+    Object {
+      "className": "ExplicitManyToManyB2",
+      "name": "explicit_many_to_many_b2",
+      "pivotTable": "ExplicitManyToManyPivot2",
+      "using": "ExplicitManyToManyPivot2",
+    },
+  ],
+  Set {
+    "App\\\\Models\\\\ExplicitManyToManyB2",
+    "App\\\\Models\\\\ExplicitManyToManyPivot2",
+  },
+]
+`;
+
+exports[`getBelongsToManyRelation - implicit table names: ExplicitManyToManyA3 - related 1`] = `
+Array [
+  Array [
+    Object {
+      "className": "ExplicitManyToManyB3",
+      "foreignPivotKey": "A_id",
+      "name": "related",
+      "parentKey": "otherIdA",
+      "pivotTable": "ExplicitManyToManyPivot3",
+      "relatedKey": "otherIdB",
+      "relatedPivotKey": "B_id",
+      "using": "ExplicitManyToManyPivot3",
+    },
+  ],
+  Set {
+    "App\\\\Models\\\\ExplicitManyToManyB3",
+    "App\\\\Models\\\\ExplicitManyToManyPivot3",
+  },
+]
+`;
+
+exports[`getBelongsToManyRelation - implicit table names: ExplicitManyToManyA4 - related 1`] = `
+Array [
+  Array [
+    Object {
+      "className": "ExplicitManyToManyB4",
+      "foreignPivotKey": "A_id",
+      "name": "related",
+      "parentKey": "otherIdA",
+      "relatedKey": "otherIdB",
+      "relatedPivotKey": "B_id",
+      "using": "ExplicitManyToManyPivot4",
+    },
+  ],
+  Set {
+    "App\\\\Models\\\\ExplicitManyToManyB4",
+    "App\\\\Models\\\\ExplicitManyToManyPivot4",
+  },
+]
+`;
+
+exports[`getBelongsToManyRelation - implicit table names: ExplicitManyToManyA5 - hasOne 1`] = `false`;
+
+exports[`getBelongsToManyRelation - implicit table names: ExplicitManyToManyA5 - related 1`] = `
+Array [
+  Array [
+    Object {
+      "className": "ExplicitManyToManyB5",
+      "foreignPivotKey": "A_id",
+      "name": "related",
+      "pivotTable": "ExplicitManyToManyPivot5",
+      "relatedPivotKey": "B_id",
+      "using": "ExplicitManyToManyPivot5",
+    },
+  ],
+  Set {
+    "App\\\\Models\\\\ExplicitManyToManyB5",
+    "App\\\\Models\\\\ExplicitManyToManyPivot5",
+  },
+]
+`;
+
+exports[`getBelongsToManyRelation - implicit table names: ExplicitManyToManyA6 - related 1`] = `
+Array [
+  Array [
+    Object {
+      "className": "ExplicitManyToManyB6",
+      "foreignPivotKey": "A_id",
+      "name": "related",
+      "pivotTable": "ExplicitManyToManyPivot6",
+      "relatedPivotKey": "B_id",
+      "using": "ExplicitManyToManyPivot6",
+    },
+  ],
+  Set {
+    "App\\\\Models\\\\ExplicitManyToManyB6",
+    "App\\\\Models\\\\ExplicitManyToManyPivot6",
+  },
+]
+`;
+
+exports[`getBelongsToManyRelation - implicit table names: ExplicitManyToManyA7 - related 1`] = `
+Array [
+  Array [
+    Object {
+      "className": "ExplicitManyToManyB7",
+      "foreignPivotKey": "A_id",
+      "name": "related",
+      "parentKey": "key",
+      "pivotTable": "ExplicitManyToManyPivot7",
+      "relatedKey": "key",
+      "relatedPivotKey": "B_id",
+      "using": "ExplicitManyToManyPivot7",
+    },
+  ],
+  Set {
+    "App\\\\Models\\\\ExplicitManyToManyB7",
+    "App\\\\Models\\\\ExplicitManyToManyPivot7",
+  },
+]
+`;
+
+exports[`getBelongsToManyRelation - implicit table names: ExplicitManyToManyB - related 1`] = `
+Array [
+  Array [
+    Object {
+      "className": "ExplicitManyToManyA",
+      "foreignPivotKey": "B_id",
+      "name": "related",
+      "pivotTable": "ExplicitManyToManyPivot",
+      "relatedPivotKey": "A_id",
+      "using": "ExplicitManyToManyPivot",
+    },
+  ],
+  Set {
+    "App\\\\Models\\\\ExplicitManyToManyA",
+    "App\\\\Models\\\\ExplicitManyToManyPivot",
+  },
+]
+`;
+
+exports[`getBelongsToManyRelation - implicit table names: ExplicitManyToManyB2 - explicit_many_to_many_a2 1`] = `
+Array [
+  Array [
+    Object {
+      "className": "ExplicitManyToManyA2",
+      "name": "explicit_many_to_many_a2",
+      "pivotTable": "ExplicitManyToManyPivot2",
+      "using": "ExplicitManyToManyPivot2",
+    },
+  ],
+  Set {
+    "App\\\\Models\\\\ExplicitManyToManyA2",
+    "App\\\\Models\\\\ExplicitManyToManyPivot2",
+  },
+]
+`;
+
+exports[`getBelongsToManyRelation - implicit table names: ExplicitManyToManyB3 - related 1`] = `
+Array [
+  Array [
+    Object {
+      "className": "ExplicitManyToManyA3",
+      "foreignPivotKey": "B_id",
+      "name": "related",
+      "parentKey": "otherIdB",
+      "pivotTable": "ExplicitManyToManyPivot3",
+      "relatedKey": "otherIdA",
+      "relatedPivotKey": "A_id",
+      "using": "ExplicitManyToManyPivot3",
+    },
+  ],
+  Set {
+    "App\\\\Models\\\\ExplicitManyToManyA3",
+    "App\\\\Models\\\\ExplicitManyToManyPivot3",
+  },
+]
+`;
+
+exports[`getBelongsToManyRelation - implicit table names: ExplicitManyToManyB4 - related 1`] = `
+Array [
+  Array [
+    Object {
+      "className": "ExplicitManyToManyA4",
+      "foreignPivotKey": "B_id",
+      "name": "related",
+      "parentKey": "otherIdB",
+      "relatedKey": "otherIdA",
+      "relatedPivotKey": "A_id",
+      "using": "ExplicitManyToManyPivot4",
+    },
+  ],
+  Set {
+    "App\\\\Models\\\\ExplicitManyToManyA4",
+    "App\\\\Models\\\\ExplicitManyToManyPivot4",
+  },
+]
+`;
+
+exports[`getBelongsToManyRelation - implicit table names: ExplicitManyToManyB5 - pivot 1`] = `false`;
+
+exports[`getBelongsToManyRelation - implicit table names: ExplicitManyToManyB5 - related 1`] = `
+Array [
+  Array [
+    Object {
+      "className": "ExplicitManyToManyA5",
+      "foreignPivotKey": "B_id",
+      "name": "related",
+      "pivotTable": "ExplicitManyToManyPivot5",
+      "relatedPivotKey": "A_id",
+      "using": "ExplicitManyToManyPivot5",
+    },
+  ],
+  Set {
+    "App\\\\Models\\\\ExplicitManyToManyA5",
+    "App\\\\Models\\\\ExplicitManyToManyPivot5",
+  },
+]
+`;
+
+exports[`getBelongsToManyRelation - implicit table names: ExplicitManyToManyB6 - related 1`] = `
+Array [
+  Array [
+    Object {
+      "className": "ExplicitManyToManyA6",
+      "foreignPivotKey": "B_id",
+      "name": "related",
+      "pivotTable": "ExplicitManyToManyPivot6",
+      "relatedPivotKey": "A_id",
+      "using": "ExplicitManyToManyPivot6",
+    },
+  ],
+  Set {
+    "App\\\\Models\\\\ExplicitManyToManyA6",
+    "App\\\\Models\\\\ExplicitManyToManyPivot6",
+  },
+]
+`;
+
+exports[`getBelongsToManyRelation - implicit table names: ExplicitManyToManyB7 - related 1`] = `
+Array [
+  Array [
+    Object {
+      "className": "ExplicitManyToManyA7",
+      "foreignPivotKey": "B_id",
+      "name": "related",
+      "parentKey": "key",
+      "pivotTable": "ExplicitManyToManyPivot7",
+      "relatedKey": "key",
+      "relatedPivotKey": "A_id",
+      "using": "ExplicitManyToManyPivot7",
+    },
+  ],
+  Set {
+    "App\\\\Models\\\\ExplicitManyToManyA7",
+    "App\\\\Models\\\\ExplicitManyToManyPivot7",
+  },
+]
+`;
+
+exports[`getBelongsToManyRelation - implicit table names: ExplicitManyToManyPivot - A 1`] = `false`;
+
+exports[`getBelongsToManyRelation - implicit table names: ExplicitManyToManyPivot - B 1`] = `false`;
+
+exports[`getBelongsToManyRelation - implicit table names: ExplicitManyToManyPivot2 - explicit_many_to_many_a2 1`] = `false`;
+
+exports[`getBelongsToManyRelation - implicit table names: ExplicitManyToManyPivot2 - explicit_many_to_many_b2 1`] = `false`;
+
+exports[`getBelongsToManyRelation - implicit table names: ExplicitManyToManyPivot3 - A 1`] = `false`;
+
+exports[`getBelongsToManyRelation - implicit table names: ExplicitManyToManyPivot3 - B 1`] = `false`;
+
+exports[`getBelongsToManyRelation - implicit table names: ExplicitManyToManyPivot4 - A 1`] = `false`;
+
+exports[`getBelongsToManyRelation - implicit table names: ExplicitManyToManyPivot4 - B 1`] = `false`;
+
+exports[`getBelongsToManyRelation - implicit table names: ExplicitManyToManyPivot5 - A 1`] = `false`;
+
+exports[`getBelongsToManyRelation - implicit table names: ExplicitManyToManyPivot5 - A2 1`] = `false`;
+
+exports[`getBelongsToManyRelation - implicit table names: ExplicitManyToManyPivot5 - B 1`] = `false`;
+
+exports[`getBelongsToManyRelation - implicit table names: ExplicitManyToManyPivot5 - B2 1`] = `false`;
+
+exports[`getBelongsToManyRelation - implicit table names: ExplicitManyToManyPivot6 - A 1`] = `false`;
+
+exports[`getBelongsToManyRelation - implicit table names: ExplicitManyToManyPivot6 - B 1`] = `false`;
+
+exports[`getBelongsToManyRelation - implicit table names: ExplicitManyToManyPivot7 - A 1`] = `false`;
+
+exports[`getBelongsToManyRelation - implicit table names: ExplicitManyToManyPivot7 - B 1`] = `false`;
+
+exports[`getBelongsToManyRelation - implicit table names: ImplicitManyToManyA - related 1`] = `
+Array [
+  Array [
+    Object {
+      "className": "ImplicitManyToManyB",
+      "foreignPivotKey": "A",
+      "name": "related",
+      "pivotTable": "_ImplicitManyToManyAToImplicitManyToManyB",
+      "relatedPivotKey": "B",
+    },
+  ],
+  Set {
+    "App\\\\Models\\\\ImplicitManyToManyB",
+  },
+]
+`;
+
+exports[`getBelongsToManyRelation - implicit table names: ImplicitManyToManyB - related 1`] = `
+Array [
+  Array [
+    Object {
+      "className": "ImplicitManyToManyA",
+      "foreignPivotKey": "B",
+      "name": "related",
+      "pivotTable": "_ImplicitManyToManyAToImplicitManyToManyB",
+      "relatedPivotKey": "A",
+    },
+  ],
+  Set {
+    "App\\\\Models\\\\ImplicitManyToManyA",
+  },
+]
+`;
+
+exports[`getBelongsToManyRelation - implicit table names: OneToManyA - related 1`] = `false`;
+
+exports[`getBelongsToManyRelation - implicit table names: OneToManyA2 - related 1`] = `false`;
+
+exports[`getBelongsToManyRelation - implicit table names: OneToManyA3 - related 1`] = `false`;
+
+exports[`getBelongsToManyRelation - implicit table names: OneToManyA4 - related 1`] = `false`;
+
+exports[`getBelongsToManyRelation - implicit table names: OneToManyB - one_to_one_a2 1`] = `false`;
+
+exports[`getBelongsToManyRelation - implicit table names: OneToManyB2 - one_to_many_a2 1`] = `false`;
+
+exports[`getBelongsToManyRelation - implicit table names: OneToManyB3 - related 1`] = `false`;
+
+exports[`getBelongsToManyRelation - implicit table names: OneToManyB4 - related 1`] = `false`;
+
+exports[`getBelongsToManyRelation - implicit table names: OneToOneA - related 1`] = `false`;
+
+exports[`getBelongsToManyRelation - implicit table names: OneToOneA2 - related 1`] = `false`;
+
+exports[`getBelongsToManyRelation - implicit table names: OneToOneA3 - related 1`] = `false`;
+
+exports[`getBelongsToManyRelation - implicit table names: OneToOneA4 - related 1`] = `false`;
+
+exports[`getBelongsToManyRelation - implicit table names: OneToOneA5 - related 1`] = `false`;
+
+exports[`getBelongsToManyRelation - implicit table names: OneToOneB - related 1`] = `false`;
+
+exports[`getBelongsToManyRelation - implicit table names: OneToOneB2 - one_to_one_a2 1`] = `false`;
+
+exports[`getBelongsToManyRelation - implicit table names: OneToOneB3 - related 1`] = `false`;
+
+exports[`getBelongsToManyRelation - implicit table names: OneToOneB4 - related 1`] = `false`;
+
+exports[`getBelongsToManyRelation - implicit table names: OneToOneB5 - related 1`] = `false`;
+
+exports[`getBelongsToManyRelation - implicit table names: Post - author 1`] = `false`;
+
+exports[`getBelongsToManyRelation - implicit table names: Post - categories 1`] = `
+Array [
+  Array [
+    Object {
+      "className": "Category",
+      "foreignPivotKey": "B",
+      "name": "categories",
+      "pivotTable": "_CategoryToPost",
+      "relatedPivotKey": "A",
+    },
+  ],
+  Set {
+    "App\\\\Models\\\\Category",
+  },
+]
+`;
+
+exports[`getBelongsToManyRelation - implicit table names: Profile - user 1`] = `false`;
+
+exports[`getBelongsToManyRelation - implicit table names: SelfRelation - child 1`] = `false`;
+
+exports[`getBelongsToManyRelation - implicit table names: SelfRelation - parent 1`] = `false`;
+
+exports[`getBelongsToManyRelation - implicit table names: TouchingA - related 1`] = `false`;
+
+exports[`getBelongsToManyRelation - implicit table names: TouchingB - related 1`] = `false`;
+
+exports[`getBelongsToManyRelation - implicit table names: User - posts 1`] = `false`;
+
+exports[`getBelongsToManyRelation - implicit table names: User - profile 1`] = `false`;
+
 exports[`getBelongsToManyRelation: Category - posts 1`] = `
 Array [
   Array [
@@ -454,6 +886,315 @@ exports[`getBelongsToManyRelation: User - posts 1`] = `false`;
 
 exports[`getBelongsToManyRelation: User - profile 1`] = `false`;
 
+exports[`getBelongsToRelation - implicit table names: Category - posts 1`] = `false`;
+
+exports[`getBelongsToRelation - implicit table names: EagerLoadA - related 1`] = `false`;
+
+exports[`getBelongsToRelation - implicit table names: EagerLoadB - related 1`] = `
+Array [
+  Object {
+    "className": "EagerLoadA",
+    "foreignKey": "relatedId",
+    "name": "related",
+    "nullable": false,
+  },
+  Set {
+    "App\\\\Models\\\\EagerLoadA",
+  },
+]
+`;
+
+exports[`getBelongsToRelation - implicit table names: ExplicitManyToManyA - related 1`] = `false`;
+
+exports[`getBelongsToRelation - implicit table names: ExplicitManyToManyA2 - explicit_many_to_many_b2 1`] = `false`;
+
+exports[`getBelongsToRelation - implicit table names: ExplicitManyToManyA3 - related 1`] = `false`;
+
+exports[`getBelongsToRelation - implicit table names: ExplicitManyToManyA4 - related 1`] = `false`;
+
+exports[`getBelongsToRelation - implicit table names: ExplicitManyToManyA5 - hasOne 1`] = `false`;
+
+exports[`getBelongsToRelation - implicit table names: ExplicitManyToManyA5 - related 1`] = `false`;
+
+exports[`getBelongsToRelation - implicit table names: ExplicitManyToManyA6 - related 1`] = `false`;
+
+exports[`getBelongsToRelation - implicit table names: ExplicitManyToManyA7 - related 1`] = `false`;
+
+exports[`getBelongsToRelation - implicit table names: ExplicitManyToManyB - related 1`] = `false`;
+
+exports[`getBelongsToRelation - implicit table names: ExplicitManyToManyB2 - explicit_many_to_many_a2 1`] = `false`;
+
+exports[`getBelongsToRelation - implicit table names: ExplicitManyToManyB3 - related 1`] = `false`;
+
+exports[`getBelongsToRelation - implicit table names: ExplicitManyToManyB4 - related 1`] = `false`;
+
+exports[`getBelongsToRelation - implicit table names: ExplicitManyToManyB5 - pivot 1`] = `
+Array [
+  Object {
+    "className": "ExplicitManyToManyPivot5",
+    "name": "pivot",
+    "nullable": false,
+  },
+  Set {
+    "App\\\\Models\\\\ExplicitManyToManyPivot5",
+  },
+]
+`;
+
+exports[`getBelongsToRelation - implicit table names: ExplicitManyToManyB5 - related 1`] = `false`;
+
+exports[`getBelongsToRelation - implicit table names: ExplicitManyToManyB6 - related 1`] = `false`;
+
+exports[`getBelongsToRelation - implicit table names: ExplicitManyToManyB7 - related 1`] = `false`;
+
+exports[`getBelongsToRelation - implicit table names: ExplicitManyToManyPivot - A 1`] = `false`;
+
+exports[`getBelongsToRelation - implicit table names: ExplicitManyToManyPivot - B 1`] = `false`;
+
+exports[`getBelongsToRelation - implicit table names: ExplicitManyToManyPivot2 - explicit_many_to_many_a2 1`] = `false`;
+
+exports[`getBelongsToRelation - implicit table names: ExplicitManyToManyPivot2 - explicit_many_to_many_b2 1`] = `false`;
+
+exports[`getBelongsToRelation - implicit table names: ExplicitManyToManyPivot3 - A 1`] = `false`;
+
+exports[`getBelongsToRelation - implicit table names: ExplicitManyToManyPivot3 - B 1`] = `false`;
+
+exports[`getBelongsToRelation - implicit table names: ExplicitManyToManyPivot4 - A 1`] = `false`;
+
+exports[`getBelongsToRelation - implicit table names: ExplicitManyToManyPivot4 - B 1`] = `false`;
+
+exports[`getBelongsToRelation - implicit table names: ExplicitManyToManyPivot5 - A 1`] = `false`;
+
+exports[`getBelongsToRelation - implicit table names: ExplicitManyToManyPivot5 - A2 1`] = `false`;
+
+exports[`getBelongsToRelation - implicit table names: ExplicitManyToManyPivot5 - B 1`] = `false`;
+
+exports[`getBelongsToRelation - implicit table names: ExplicitManyToManyPivot5 - B2 1`] = `false`;
+
+exports[`getBelongsToRelation - implicit table names: ExplicitManyToManyPivot6 - A 1`] = `false`;
+
+exports[`getBelongsToRelation - implicit table names: ExplicitManyToManyPivot6 - B 1`] = `false`;
+
+exports[`getBelongsToRelation - implicit table names: ExplicitManyToManyPivot7 - A 1`] = `false`;
+
+exports[`getBelongsToRelation - implicit table names: ExplicitManyToManyPivot7 - B 1`] = `false`;
+
+exports[`getBelongsToRelation - implicit table names: ImplicitManyToManyA - related 1`] = `false`;
+
+exports[`getBelongsToRelation - implicit table names: ImplicitManyToManyB - related 1`] = `false`;
+
+exports[`getBelongsToRelation - implicit table names: OneToManyA - related 1`] = `false`;
+
+exports[`getBelongsToRelation - implicit table names: OneToManyA2 - related 1`] = `false`;
+
+exports[`getBelongsToRelation - implicit table names: OneToManyA3 - related 1`] = `false`;
+
+exports[`getBelongsToRelation - implicit table names: OneToManyA4 - related 1`] = `false`;
+
+exports[`getBelongsToRelation - implicit table names: OneToManyB - one_to_one_a2 1`] = `
+Array [
+  Object {
+    "className": "OneToManyA",
+    "foreignKey": "relatedId",
+    "name": "one_to_one_a2",
+    "nullable": false,
+  },
+  Set {
+    "App\\\\Models\\\\OneToManyA",
+  },
+]
+`;
+
+exports[`getBelongsToRelation - implicit table names: OneToManyB2 - one_to_many_a2 1`] = `
+Array [
+  Object {
+    "className": "OneToManyA2",
+    "name": "one_to_many_a2",
+    "nullable": false,
+  },
+  Set {
+    "App\\\\Models\\\\OneToManyA2",
+  },
+]
+`;
+
+exports[`getBelongsToRelation - implicit table names: OneToManyB3 - related 1`] = `
+Array [
+  Object {
+    "className": "OneToManyA3",
+    "foreignKey": "relatedId",
+    "name": "related",
+    "nullable": false,
+    "ownerKey": "otherId",
+  },
+  Set {
+    "App\\\\Models\\\\OneToManyA3",
+  },
+]
+`;
+
+exports[`getBelongsToRelation - implicit table names: OneToManyB4 - related 1`] = `
+Array [
+  Object {
+    "className": "OneToManyA4",
+    "foreignKey": "main_id",
+    "name": "related",
+    "nullable": false,
+    "ownerKey": "main_id",
+  },
+  Set {
+    "App\\\\Models\\\\OneToManyA4",
+  },
+]
+`;
+
+exports[`getBelongsToRelation - implicit table names: OneToOneA - related 1`] = `false`;
+
+exports[`getBelongsToRelation - implicit table names: OneToOneA2 - related 1`] = `false`;
+
+exports[`getBelongsToRelation - implicit table names: OneToOneA3 - related 1`] = `false`;
+
+exports[`getBelongsToRelation - implicit table names: OneToOneA4 - related 1`] = `false`;
+
+exports[`getBelongsToRelation - implicit table names: OneToOneA5 - related 1`] = `false`;
+
+exports[`getBelongsToRelation - implicit table names: OneToOneB - related 1`] = `
+Array [
+  Object {
+    "className": "OneToOneA",
+    "foreignKey": "relatedId",
+    "name": "related",
+    "nullable": false,
+  },
+  Set {
+    "App\\\\Models\\\\OneToOneA",
+  },
+]
+`;
+
+exports[`getBelongsToRelation - implicit table names: OneToOneB2 - one_to_one_a2 1`] = `
+Array [
+  Object {
+    "className": "OneToOneA2",
+    "name": "one_to_one_a2",
+    "nullable": false,
+  },
+  Set {
+    "App\\\\Models\\\\OneToOneA2",
+  },
+]
+`;
+
+exports[`getBelongsToRelation - implicit table names: OneToOneB3 - related 1`] = `
+Array [
+  Object {
+    "className": "OneToOneA3",
+    "foreignKey": "related_id",
+    "name": "related",
+    "nullable": false,
+    "ownerKey": "otherId",
+  },
+  Set {
+    "App\\\\Models\\\\OneToOneA3",
+  },
+]
+`;
+
+exports[`getBelongsToRelation - implicit table names: OneToOneB4 - related 1`] = `
+Array [
+  Object {
+    "className": "OneToOneA4",
+    "foreignKey": "relatedId",
+    "name": "related",
+    "nullable": true,
+  },
+  Set {
+    "App\\\\Models\\\\OneToOneA4",
+  },
+]
+`;
+
+exports[`getBelongsToRelation - implicit table names: OneToOneB5 - related 1`] = `
+Array [
+  Object {
+    "className": "OneToOneA5",
+    "foreignKey": "relatedId",
+    "name": "related",
+    "nullable": true,
+    "ownerKey": "main_id",
+  },
+  Set {
+    "App\\\\Models\\\\OneToOneA5",
+  },
+]
+`;
+
+exports[`getBelongsToRelation - implicit table names: Post - author 1`] = `
+Array [
+  Object {
+    "className": "User",
+    "foreignKey": "authorId",
+    "name": "author",
+    "nullable": false,
+  },
+  Set {
+    "App\\\\Models\\\\User",
+  },
+]
+`;
+
+exports[`getBelongsToRelation - implicit table names: Post - categories 1`] = `false`;
+
+exports[`getBelongsToRelation - implicit table names: Profile - user 1`] = `
+Array [
+  Object {
+    "className": "User",
+    "foreignKey": "userId",
+    "name": "user",
+    "nullable": false,
+  },
+  Set {
+    "App\\\\Models\\\\User",
+  },
+]
+`;
+
+exports[`getBelongsToRelation - implicit table names: SelfRelation - child 1`] = `false`;
+
+exports[`getBelongsToRelation - implicit table names: SelfRelation - parent 1`] = `
+Array [
+  Object {
+    "className": "SelfRelation",
+    "foreignKey": "relatedId",
+    "name": "parent",
+    "nullable": false,
+  },
+  Set {
+    "App\\\\Models\\\\SelfRelation",
+  },
+]
+`;
+
+exports[`getBelongsToRelation - implicit table names: TouchingA - related 1`] = `false`;
+
+exports[`getBelongsToRelation - implicit table names: TouchingB - related 1`] = `
+Array [
+  Object {
+    "className": "TouchingA",
+    "foreignKey": "relatedId",
+    "name": "related",
+    "nullable": false,
+  },
+  Set {
+    "App\\\\Models\\\\TouchingA",
+  },
+]
+`;
+
+exports[`getBelongsToRelation - implicit table names: User - posts 1`] = `false`;
+
+exports[`getBelongsToRelation - implicit table names: User - profile 1`] = `false`;
+
 exports[`getBelongsToRelation: Category - posts 1`] = `false`;
 
 exports[`getBelongsToRelation: EagerLoadA - related 1`] = `false`;
@@ -776,6 +1517,348 @@ Array [
 exports[`getBelongsToRelation: User - posts 1`] = `false`;
 
 exports[`getBelongsToRelation: User - profile 1`] = `false`;
+
+exports[`getHasManyRelation - implicit table names: Category - posts 1`] = `false`;
+
+exports[`getHasManyRelation - implicit table names: EagerLoadA - related 1`] = `false`;
+
+exports[`getHasManyRelation - implicit table names: EagerLoadB - related 1`] = `false`;
+
+exports[`getHasManyRelation - implicit table names: ExplicitManyToManyA - related 1`] = `
+Array [
+  Object {
+    "className": "ExplicitManyToManyPivot",
+    "foreignKey": "A_id",
+    "name": "related",
+  },
+  Set {
+    "App\\\\Models\\\\ExplicitManyToManyPivot",
+  },
+]
+`;
+
+exports[`getHasManyRelation - implicit table names: ExplicitManyToManyA2 - explicit_many_to_many_b2 1`] = `
+Array [
+  Object {
+    "className": "ExplicitManyToManyPivot2",
+    "name": "explicit_many_to_many_b2",
+  },
+  Set {
+    "App\\\\Models\\\\ExplicitManyToManyPivot2",
+  },
+]
+`;
+
+exports[`getHasManyRelation - implicit table names: ExplicitManyToManyA3 - related 1`] = `
+Array [
+  Object {
+    "className": "ExplicitManyToManyPivot3",
+    "foreignKey": "A_id",
+    "localKey": "otherIdA",
+    "name": "related",
+  },
+  Set {
+    "App\\\\Models\\\\ExplicitManyToManyPivot3",
+  },
+]
+`;
+
+exports[`getHasManyRelation - implicit table names: ExplicitManyToManyA4 - related 1`] = `
+Array [
+  Object {
+    "className": "ExplicitManyToManyPivot4",
+    "foreignKey": "A_id",
+    "localKey": "otherIdA",
+    "name": "related",
+  },
+  Set {
+    "App\\\\Models\\\\ExplicitManyToManyPivot4",
+  },
+]
+`;
+
+exports[`getHasManyRelation - implicit table names: ExplicitManyToManyA5 - hasOne 1`] = `false`;
+
+exports[`getHasManyRelation - implicit table names: ExplicitManyToManyA5 - related 1`] = `
+Array [
+  Object {
+    "className": "ExplicitManyToManyPivot5",
+    "foreignKey": "A_id",
+    "name": "related",
+  },
+  Set {
+    "App\\\\Models\\\\ExplicitManyToManyPivot5",
+  },
+]
+`;
+
+exports[`getHasManyRelation - implicit table names: ExplicitManyToManyA6 - related 1`] = `
+Array [
+  Object {
+    "className": "ExplicitManyToManyPivot6",
+    "foreignKey": "A_id",
+    "name": "related",
+  },
+  Set {
+    "App\\\\Models\\\\ExplicitManyToManyPivot6",
+  },
+]
+`;
+
+exports[`getHasManyRelation - implicit table names: ExplicitManyToManyA7 - related 1`] = `
+Array [
+  Object {
+    "className": "ExplicitManyToManyPivot7",
+    "foreignKey": "A_id",
+    "localKey": "key",
+    "name": "related",
+  },
+  Set {
+    "App\\\\Models\\\\ExplicitManyToManyPivot7",
+  },
+]
+`;
+
+exports[`getHasManyRelation - implicit table names: ExplicitManyToManyB - related 1`] = `
+Array [
+  Object {
+    "className": "ExplicitManyToManyPivot",
+    "foreignKey": "B_id",
+    "name": "related",
+  },
+  Set {
+    "App\\\\Models\\\\ExplicitManyToManyPivot",
+  },
+]
+`;
+
+exports[`getHasManyRelation - implicit table names: ExplicitManyToManyB2 - explicit_many_to_many_a2 1`] = `
+Array [
+  Object {
+    "className": "ExplicitManyToManyPivot2",
+    "name": "explicit_many_to_many_a2",
+  },
+  Set {
+    "App\\\\Models\\\\ExplicitManyToManyPivot2",
+  },
+]
+`;
+
+exports[`getHasManyRelation - implicit table names: ExplicitManyToManyB3 - related 1`] = `
+Array [
+  Object {
+    "className": "ExplicitManyToManyPivot3",
+    "foreignKey": "B_id",
+    "localKey": "otherIdB",
+    "name": "related",
+  },
+  Set {
+    "App\\\\Models\\\\ExplicitManyToManyPivot3",
+  },
+]
+`;
+
+exports[`getHasManyRelation - implicit table names: ExplicitManyToManyB4 - related 1`] = `
+Array [
+  Object {
+    "className": "ExplicitManyToManyPivot4",
+    "foreignKey": "B_id",
+    "localKey": "otherIdB",
+    "name": "related",
+  },
+  Set {
+    "App\\\\Models\\\\ExplicitManyToManyPivot4",
+  },
+]
+`;
+
+exports[`getHasManyRelation - implicit table names: ExplicitManyToManyB5 - pivot 1`] = `false`;
+
+exports[`getHasManyRelation - implicit table names: ExplicitManyToManyB5 - related 1`] = `
+Array [
+  Object {
+    "className": "ExplicitManyToManyPivot5",
+    "foreignKey": "B_id",
+    "name": "related",
+  },
+  Set {
+    "App\\\\Models\\\\ExplicitManyToManyPivot5",
+  },
+]
+`;
+
+exports[`getHasManyRelation - implicit table names: ExplicitManyToManyB6 - related 1`] = `
+Array [
+  Object {
+    "className": "ExplicitManyToManyPivot6",
+    "foreignKey": "B_id",
+    "name": "related",
+  },
+  Set {
+    "App\\\\Models\\\\ExplicitManyToManyPivot6",
+  },
+]
+`;
+
+exports[`getHasManyRelation - implicit table names: ExplicitManyToManyB7 - related 1`] = `
+Array [
+  Object {
+    "className": "ExplicitManyToManyPivot7",
+    "foreignKey": "B_id",
+    "localKey": "key",
+    "name": "related",
+  },
+  Set {
+    "App\\\\Models\\\\ExplicitManyToManyPivot7",
+  },
+]
+`;
+
+exports[`getHasManyRelation - implicit table names: ExplicitManyToManyPivot - A 1`] = `false`;
+
+exports[`getHasManyRelation - implicit table names: ExplicitManyToManyPivot - B 1`] = `false`;
+
+exports[`getHasManyRelation - implicit table names: ExplicitManyToManyPivot2 - explicit_many_to_many_a2 1`] = `false`;
+
+exports[`getHasManyRelation - implicit table names: ExplicitManyToManyPivot2 - explicit_many_to_many_b2 1`] = `false`;
+
+exports[`getHasManyRelation - implicit table names: ExplicitManyToManyPivot3 - A 1`] = `false`;
+
+exports[`getHasManyRelation - implicit table names: ExplicitManyToManyPivot3 - B 1`] = `false`;
+
+exports[`getHasManyRelation - implicit table names: ExplicitManyToManyPivot4 - A 1`] = `false`;
+
+exports[`getHasManyRelation - implicit table names: ExplicitManyToManyPivot4 - B 1`] = `false`;
+
+exports[`getHasManyRelation - implicit table names: ExplicitManyToManyPivot5 - A 1`] = `false`;
+
+exports[`getHasManyRelation - implicit table names: ExplicitManyToManyPivot5 - A2 1`] = `false`;
+
+exports[`getHasManyRelation - implicit table names: ExplicitManyToManyPivot5 - B 1`] = `false`;
+
+exports[`getHasManyRelation - implicit table names: ExplicitManyToManyPivot5 - B2 1`] = `false`;
+
+exports[`getHasManyRelation - implicit table names: ExplicitManyToManyPivot6 - A 1`] = `false`;
+
+exports[`getHasManyRelation - implicit table names: ExplicitManyToManyPivot6 - B 1`] = `false`;
+
+exports[`getHasManyRelation - implicit table names: ExplicitManyToManyPivot7 - A 1`] = `false`;
+
+exports[`getHasManyRelation - implicit table names: ExplicitManyToManyPivot7 - B 1`] = `false`;
+
+exports[`getHasManyRelation - implicit table names: ImplicitManyToManyA - related 1`] = `false`;
+
+exports[`getHasManyRelation - implicit table names: ImplicitManyToManyB - related 1`] = `false`;
+
+exports[`getHasManyRelation - implicit table names: OneToManyA - related 1`] = `
+Array [
+  Object {
+    "className": "OneToManyB",
+    "foreignKey": "relatedId",
+    "name": "related",
+  },
+  Set {
+    "App\\\\Models\\\\OneToManyB",
+  },
+]
+`;
+
+exports[`getHasManyRelation - implicit table names: OneToManyA2 - related 1`] = `
+Array [
+  Object {
+    "className": "OneToManyB2",
+    "name": "related",
+  },
+  Set {
+    "App\\\\Models\\\\OneToManyB2",
+  },
+]
+`;
+
+exports[`getHasManyRelation - implicit table names: OneToManyA3 - related 1`] = `
+Array [
+  Object {
+    "className": "OneToManyB3",
+    "foreignKey": "relatedId",
+    "localKey": "otherId",
+    "name": "related",
+  },
+  Set {
+    "App\\\\Models\\\\OneToManyB3",
+  },
+]
+`;
+
+exports[`getHasManyRelation - implicit table names: OneToManyA4 - related 1`] = `
+Array [
+  Object {
+    "className": "OneToManyB4",
+    "foreignKey": "main_id",
+    "localKey": "main_id",
+    "name": "related",
+  },
+  Set {
+    "App\\\\Models\\\\OneToManyB4",
+  },
+]
+`;
+
+exports[`getHasManyRelation - implicit table names: OneToManyB - one_to_one_a2 1`] = `false`;
+
+exports[`getHasManyRelation - implicit table names: OneToManyB2 - one_to_many_a2 1`] = `false`;
+
+exports[`getHasManyRelation - implicit table names: OneToManyB3 - related 1`] = `false`;
+
+exports[`getHasManyRelation - implicit table names: OneToManyB4 - related 1`] = `false`;
+
+exports[`getHasManyRelation - implicit table names: OneToOneA - related 1`] = `false`;
+
+exports[`getHasManyRelation - implicit table names: OneToOneA2 - related 1`] = `false`;
+
+exports[`getHasManyRelation - implicit table names: OneToOneA3 - related 1`] = `false`;
+
+exports[`getHasManyRelation - implicit table names: OneToOneA4 - related 1`] = `false`;
+
+exports[`getHasManyRelation - implicit table names: OneToOneA5 - related 1`] = `false`;
+
+exports[`getHasManyRelation - implicit table names: OneToOneB - related 1`] = `false`;
+
+exports[`getHasManyRelation - implicit table names: OneToOneB2 - one_to_one_a2 1`] = `false`;
+
+exports[`getHasManyRelation - implicit table names: OneToOneB3 - related 1`] = `false`;
+
+exports[`getHasManyRelation - implicit table names: OneToOneB4 - related 1`] = `false`;
+
+exports[`getHasManyRelation - implicit table names: OneToOneB5 - related 1`] = `false`;
+
+exports[`getHasManyRelation - implicit table names: Post - author 1`] = `false`;
+
+exports[`getHasManyRelation - implicit table names: Post - categories 1`] = `false`;
+
+exports[`getHasManyRelation - implicit table names: Profile - user 1`] = `false`;
+
+exports[`getHasManyRelation - implicit table names: SelfRelation - child 1`] = `false`;
+
+exports[`getHasManyRelation - implicit table names: SelfRelation - parent 1`] = `false`;
+
+exports[`getHasManyRelation - implicit table names: TouchingA - related 1`] = `false`;
+
+exports[`getHasManyRelation - implicit table names: TouchingB - related 1`] = `false`;
+
+exports[`getHasManyRelation - implicit table names: User - posts 1`] = `
+Array [
+  Object {
+    "className": "Post",
+    "foreignKey": "authorId",
+    "name": "posts",
+  },
+  Set {
+    "App\\\\Models\\\\Post",
+  },
+]
+`;
+
+exports[`getHasManyRelation - implicit table names: User - profile 1`] = `false`;
 
 exports[`getHasManyRelation: Category - posts 1`] = `false`;
 
@@ -1133,6 +2216,245 @@ Array [
 
 exports[`getHasManyRelation: User - profile 1`] = `false`;
 
+exports[`getHasOneRelation - implicit table names: Category - posts 1`] = `false`;
+
+exports[`getHasOneRelation - implicit table names: EagerLoadA - related 1`] = `
+Array [
+  Object {
+    "className": "EagerLoadB",
+    "foreignKey": "relatedId",
+    "name": "related",
+  },
+  Set {
+    "App\\\\Models\\\\EagerLoadB",
+  },
+]
+`;
+
+exports[`getHasOneRelation - implicit table names: EagerLoadB - related 1`] = `false`;
+
+exports[`getHasOneRelation - implicit table names: ExplicitManyToManyA - related 1`] = `false`;
+
+exports[`getHasOneRelation - implicit table names: ExplicitManyToManyA2 - explicit_many_to_many_b2 1`] = `false`;
+
+exports[`getHasOneRelation - implicit table names: ExplicitManyToManyA3 - related 1`] = `false`;
+
+exports[`getHasOneRelation - implicit table names: ExplicitManyToManyA4 - related 1`] = `false`;
+
+exports[`getHasOneRelation - implicit table names: ExplicitManyToManyA5 - hasOne 1`] = `
+Array [
+  Object {
+    "className": "ExplicitManyToManyPivot5",
+    "foreignKey": "A2_id",
+    "name": "hasOne",
+  },
+  Set {
+    "App\\\\Models\\\\ExplicitManyToManyPivot5",
+  },
+]
+`;
+
+exports[`getHasOneRelation - implicit table names: ExplicitManyToManyA5 - related 1`] = `false`;
+
+exports[`getHasOneRelation - implicit table names: ExplicitManyToManyA6 - related 1`] = `false`;
+
+exports[`getHasOneRelation - implicit table names: ExplicitManyToManyA7 - related 1`] = `false`;
+
+exports[`getHasOneRelation - implicit table names: ExplicitManyToManyB - related 1`] = `false`;
+
+exports[`getHasOneRelation - implicit table names: ExplicitManyToManyB2 - explicit_many_to_many_a2 1`] = `false`;
+
+exports[`getHasOneRelation - implicit table names: ExplicitManyToManyB3 - related 1`] = `false`;
+
+exports[`getHasOneRelation - implicit table names: ExplicitManyToManyB4 - related 1`] = `false`;
+
+exports[`getHasOneRelation - implicit table names: ExplicitManyToManyB5 - pivot 1`] = `false`;
+
+exports[`getHasOneRelation - implicit table names: ExplicitManyToManyB5 - related 1`] = `false`;
+
+exports[`getHasOneRelation - implicit table names: ExplicitManyToManyB6 - related 1`] = `false`;
+
+exports[`getHasOneRelation - implicit table names: ExplicitManyToManyB7 - related 1`] = `false`;
+
+exports[`getHasOneRelation - implicit table names: ExplicitManyToManyPivot - A 1`] = `false`;
+
+exports[`getHasOneRelation - implicit table names: ExplicitManyToManyPivot - B 1`] = `false`;
+
+exports[`getHasOneRelation - implicit table names: ExplicitManyToManyPivot2 - explicit_many_to_many_a2 1`] = `false`;
+
+exports[`getHasOneRelation - implicit table names: ExplicitManyToManyPivot2 - explicit_many_to_many_b2 1`] = `false`;
+
+exports[`getHasOneRelation - implicit table names: ExplicitManyToManyPivot3 - A 1`] = `false`;
+
+exports[`getHasOneRelation - implicit table names: ExplicitManyToManyPivot3 - B 1`] = `false`;
+
+exports[`getHasOneRelation - implicit table names: ExplicitManyToManyPivot4 - A 1`] = `false`;
+
+exports[`getHasOneRelation - implicit table names: ExplicitManyToManyPivot4 - B 1`] = `false`;
+
+exports[`getHasOneRelation - implicit table names: ExplicitManyToManyPivot5 - A 1`] = `false`;
+
+exports[`getHasOneRelation - implicit table names: ExplicitManyToManyPivot5 - A2 1`] = `false`;
+
+exports[`getHasOneRelation - implicit table names: ExplicitManyToManyPivot5 - B 1`] = `false`;
+
+exports[`getHasOneRelation - implicit table names: ExplicitManyToManyPivot5 - B2 1`] = `false`;
+
+exports[`getHasOneRelation - implicit table names: ExplicitManyToManyPivot6 - A 1`] = `false`;
+
+exports[`getHasOneRelation - implicit table names: ExplicitManyToManyPivot6 - B 1`] = `false`;
+
+exports[`getHasOneRelation - implicit table names: ExplicitManyToManyPivot7 - A 1`] = `false`;
+
+exports[`getHasOneRelation - implicit table names: ExplicitManyToManyPivot7 - B 1`] = `false`;
+
+exports[`getHasOneRelation - implicit table names: ImplicitManyToManyA - related 1`] = `false`;
+
+exports[`getHasOneRelation - implicit table names: ImplicitManyToManyB - related 1`] = `false`;
+
+exports[`getHasOneRelation - implicit table names: OneToManyA - related 1`] = `false`;
+
+exports[`getHasOneRelation - implicit table names: OneToManyA2 - related 1`] = `false`;
+
+exports[`getHasOneRelation - implicit table names: OneToManyA3 - related 1`] = `false`;
+
+exports[`getHasOneRelation - implicit table names: OneToManyA4 - related 1`] = `false`;
+
+exports[`getHasOneRelation - implicit table names: OneToManyB - one_to_one_a2 1`] = `false`;
+
+exports[`getHasOneRelation - implicit table names: OneToManyB2 - one_to_many_a2 1`] = `false`;
+
+exports[`getHasOneRelation - implicit table names: OneToManyB3 - related 1`] = `false`;
+
+exports[`getHasOneRelation - implicit table names: OneToManyB4 - related 1`] = `false`;
+
+exports[`getHasOneRelation - implicit table names: OneToOneA - related 1`] = `
+Array [
+  Object {
+    "className": "OneToOneB",
+    "foreignKey": "relatedId",
+    "name": "related",
+  },
+  Set {
+    "App\\\\Models\\\\OneToOneB",
+  },
+]
+`;
+
+exports[`getHasOneRelation - implicit table names: OneToOneA2 - related 1`] = `
+Array [
+  Object {
+    "className": "OneToOneB2",
+    "name": "related",
+  },
+  Set {
+    "App\\\\Models\\\\OneToOneB2",
+  },
+]
+`;
+
+exports[`getHasOneRelation - implicit table names: OneToOneA3 - related 1`] = `
+Array [
+  Object {
+    "className": "OneToOneB3",
+    "foreignKey": "related_id",
+    "localKey": "otherId",
+    "name": "related",
+  },
+  Set {
+    "App\\\\Models\\\\OneToOneB3",
+  },
+]
+`;
+
+exports[`getHasOneRelation - implicit table names: OneToOneA4 - related 1`] = `
+Array [
+  Object {
+    "className": "OneToOneB4",
+    "foreignKey": "relatedId",
+    "name": "related",
+  },
+  Set {
+    "App\\\\Models\\\\OneToOneB4",
+  },
+]
+`;
+
+exports[`getHasOneRelation - implicit table names: OneToOneA5 - related 1`] = `
+Array [
+  Object {
+    "className": "OneToOneB5",
+    "foreignKey": "relatedId",
+    "localKey": "main_id",
+    "name": "related",
+  },
+  Set {
+    "App\\\\Models\\\\OneToOneB5",
+  },
+]
+`;
+
+exports[`getHasOneRelation - implicit table names: OneToOneB - related 1`] = `false`;
+
+exports[`getHasOneRelation - implicit table names: OneToOneB2 - one_to_one_a2 1`] = `false`;
+
+exports[`getHasOneRelation - implicit table names: OneToOneB3 - related 1`] = `false`;
+
+exports[`getHasOneRelation - implicit table names: OneToOneB4 - related 1`] = `false`;
+
+exports[`getHasOneRelation - implicit table names: OneToOneB5 - related 1`] = `false`;
+
+exports[`getHasOneRelation - implicit table names: Post - author 1`] = `false`;
+
+exports[`getHasOneRelation - implicit table names: Post - categories 1`] = `false`;
+
+exports[`getHasOneRelation - implicit table names: Profile - user 1`] = `false`;
+
+exports[`getHasOneRelation - implicit table names: SelfRelation - child 1`] = `
+Array [
+  Object {
+    "className": "SelfRelation",
+    "foreignKey": "relatedId",
+    "name": "child",
+  },
+  Set {
+    "App\\\\Models\\\\SelfRelation",
+  },
+]
+`;
+
+exports[`getHasOneRelation - implicit table names: SelfRelation - parent 1`] = `false`;
+
+exports[`getHasOneRelation - implicit table names: TouchingA - related 1`] = `
+Array [
+  Object {
+    "className": "TouchingB",
+    "foreignKey": "relatedId",
+    "name": "related",
+  },
+  Set {
+    "App\\\\Models\\\\TouchingB",
+  },
+]
+`;
+
+exports[`getHasOneRelation - implicit table names: TouchingB - related 1`] = `false`;
+
+exports[`getHasOneRelation - implicit table names: User - posts 1`] = `false`;
+
+exports[`getHasOneRelation - implicit table names: User - profile 1`] = `
+Array [
+  Object {
+    "className": "Profile",
+    "foreignKey": "userId",
+    "name": "profile",
+  },
+  Set {
+    "App\\\\Models\\\\Profile",
+  },
+]
+`;
+
 exports[`getHasOneRelation: Category - posts 1`] = `false`;
 
 exports[`getHasOneRelation: EagerLoadA - related 1`] = `
@@ -1379,6 +2701,1420 @@ Array [
     "App\\\\Models\\\\Profile",
   },
 ]
+`;
+
+exports[`getRelationsFromModel - implicit table names: Category 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [
+    Object {
+      "className": "Post",
+      "foreignPivotKey": "A",
+      "name": "posts",
+      "pivotTable": "_CategoryToPost",
+      "relatedPivotKey": "B",
+    },
+  ],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {
+    "App\\\\Models\\\\Post",
+  },
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: DefaultValues 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: EagerLoadA 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [
+    Object {
+      "className": "EagerLoadB",
+      "foreignKey": "relatedId",
+      "name": "related",
+    },
+  ],
+  "imports": Set {
+    "App\\\\Models\\\\EagerLoadB",
+  },
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: EagerLoadB 1`] = `
+Object {
+  "belongsTo": Array [
+    Object {
+      "className": "EagerLoadA",
+      "foreignKey": "relatedId",
+      "name": "related",
+      "nullable": false,
+    },
+  ],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {
+    "App\\\\Models\\\\EagerLoadA",
+  },
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: ExplicitManyToManyA 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [
+    Object {
+      "className": "ExplicitManyToManyB",
+      "foreignPivotKey": "A_id",
+      "name": "related",
+      "pivotTable": "ExplicitManyToManyPivot",
+      "relatedPivotKey": "B_id",
+      "using": "ExplicitManyToManyPivot",
+    },
+  ],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {
+    "App\\\\Models\\\\ExplicitManyToManyB",
+    "App\\\\Models\\\\ExplicitManyToManyPivot",
+  },
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: ExplicitManyToManyA2 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [
+    Object {
+      "className": "ExplicitManyToManyB2",
+      "name": "explicit_many_to_many_b2",
+      "pivotTable": "ExplicitManyToManyPivot2",
+      "using": "ExplicitManyToManyPivot2",
+    },
+  ],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {
+    "App\\\\Models\\\\ExplicitManyToManyB2",
+    "App\\\\Models\\\\ExplicitManyToManyPivot2",
+  },
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: ExplicitManyToManyA3 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [
+    Object {
+      "className": "ExplicitManyToManyB3",
+      "foreignPivotKey": "A_id",
+      "name": "related",
+      "parentKey": "otherIdA",
+      "pivotTable": "ExplicitManyToManyPivot3",
+      "relatedKey": "otherIdB",
+      "relatedPivotKey": "B_id",
+      "using": "ExplicitManyToManyPivot3",
+    },
+  ],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {
+    "App\\\\Models\\\\ExplicitManyToManyB3",
+    "App\\\\Models\\\\ExplicitManyToManyPivot3",
+  },
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: ExplicitManyToManyA4 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [
+    Object {
+      "className": "ExplicitManyToManyB4",
+      "foreignPivotKey": "A_id",
+      "name": "related",
+      "parentKey": "otherIdA",
+      "relatedKey": "otherIdB",
+      "relatedPivotKey": "B_id",
+      "using": "ExplicitManyToManyPivot4",
+    },
+  ],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {
+    "App\\\\Models\\\\ExplicitManyToManyB4",
+    "App\\\\Models\\\\ExplicitManyToManyPivot4",
+  },
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: ExplicitManyToManyA5 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [
+    Object {
+      "className": "ExplicitManyToManyB5",
+      "foreignPivotKey": "A_id",
+      "name": "related",
+      "pivotTable": "ExplicitManyToManyPivot5",
+      "relatedPivotKey": "B_id",
+      "using": "ExplicitManyToManyPivot5",
+    },
+  ],
+  "hasMany": Array [],
+  "hasOne": Array [
+    Object {
+      "className": "ExplicitManyToManyPivot5",
+      "foreignKey": "A2_id",
+      "name": "hasOne",
+    },
+  ],
+  "imports": Set {
+    "App\\\\Models\\\\ExplicitManyToManyB5",
+    "App\\\\Models\\\\ExplicitManyToManyPivot5",
+  },
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: ExplicitManyToManyA6 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [
+    Object {
+      "className": "ExplicitManyToManyB6",
+      "foreignPivotKey": "A_id",
+      "name": "related",
+      "pivotTable": "ExplicitManyToManyPivot6",
+      "relatedPivotKey": "B_id",
+      "using": "ExplicitManyToManyPivot6",
+    },
+  ],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {
+    "App\\\\Models\\\\ExplicitManyToManyB6",
+    "App\\\\Models\\\\ExplicitManyToManyPivot6",
+  },
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: ExplicitManyToManyA7 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [
+    Object {
+      "className": "ExplicitManyToManyB7",
+      "foreignPivotKey": "A_id",
+      "name": "related",
+      "parentKey": "key",
+      "pivotTable": "ExplicitManyToManyPivot7",
+      "relatedKey": "key",
+      "relatedPivotKey": "B_id",
+      "using": "ExplicitManyToManyPivot7",
+    },
+  ],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {
+    "App\\\\Models\\\\ExplicitManyToManyB7",
+    "App\\\\Models\\\\ExplicitManyToManyPivot7",
+  },
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: ExplicitManyToManyB 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [
+    Object {
+      "className": "ExplicitManyToManyA",
+      "foreignPivotKey": "B_id",
+      "name": "related",
+      "pivotTable": "ExplicitManyToManyPivot",
+      "relatedPivotKey": "A_id",
+      "using": "ExplicitManyToManyPivot",
+    },
+  ],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {
+    "App\\\\Models\\\\ExplicitManyToManyA",
+    "App\\\\Models\\\\ExplicitManyToManyPivot",
+  },
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: ExplicitManyToManyB2 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [
+    Object {
+      "className": "ExplicitManyToManyA2",
+      "name": "explicit_many_to_many_a2",
+      "pivotTable": "ExplicitManyToManyPivot2",
+      "using": "ExplicitManyToManyPivot2",
+    },
+  ],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {
+    "App\\\\Models\\\\ExplicitManyToManyA2",
+    "App\\\\Models\\\\ExplicitManyToManyPivot2",
+  },
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: ExplicitManyToManyB3 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [
+    Object {
+      "className": "ExplicitManyToManyA3",
+      "foreignPivotKey": "B_id",
+      "name": "related",
+      "parentKey": "otherIdB",
+      "pivotTable": "ExplicitManyToManyPivot3",
+      "relatedKey": "otherIdA",
+      "relatedPivotKey": "A_id",
+      "using": "ExplicitManyToManyPivot3",
+    },
+  ],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {
+    "App\\\\Models\\\\ExplicitManyToManyA3",
+    "App\\\\Models\\\\ExplicitManyToManyPivot3",
+  },
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: ExplicitManyToManyB4 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [
+    Object {
+      "className": "ExplicitManyToManyA4",
+      "foreignPivotKey": "B_id",
+      "name": "related",
+      "parentKey": "otherIdB",
+      "relatedKey": "otherIdA",
+      "relatedPivotKey": "A_id",
+      "using": "ExplicitManyToManyPivot4",
+    },
+  ],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {
+    "App\\\\Models\\\\ExplicitManyToManyA4",
+    "App\\\\Models\\\\ExplicitManyToManyPivot4",
+  },
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: ExplicitManyToManyB5 1`] = `
+Object {
+  "belongsTo": Array [
+    Object {
+      "className": "ExplicitManyToManyPivot5",
+      "name": "pivot",
+      "nullable": false,
+    },
+  ],
+  "belongsToMany": Array [
+    Object {
+      "className": "ExplicitManyToManyA5",
+      "foreignPivotKey": "B_id",
+      "name": "related",
+      "pivotTable": "ExplicitManyToManyPivot5",
+      "relatedPivotKey": "A_id",
+      "using": "ExplicitManyToManyPivot5",
+    },
+  ],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {
+    "App\\\\Models\\\\ExplicitManyToManyA5",
+    "App\\\\Models\\\\ExplicitManyToManyPivot5",
+  },
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: ExplicitManyToManyB6 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [
+    Object {
+      "className": "ExplicitManyToManyA6",
+      "foreignPivotKey": "B_id",
+      "name": "related",
+      "pivotTable": "ExplicitManyToManyPivot6",
+      "relatedPivotKey": "A_id",
+      "using": "ExplicitManyToManyPivot6",
+    },
+  ],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {
+    "App\\\\Models\\\\ExplicitManyToManyA6",
+    "App\\\\Models\\\\ExplicitManyToManyPivot6",
+  },
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: ExplicitManyToManyB7 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [
+    Object {
+      "className": "ExplicitManyToManyA7",
+      "foreignPivotKey": "B_id",
+      "name": "related",
+      "parentKey": "key",
+      "pivotTable": "ExplicitManyToManyPivot7",
+      "relatedKey": "key",
+      "relatedPivotKey": "A_id",
+      "using": "ExplicitManyToManyPivot7",
+    },
+  ],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {
+    "App\\\\Models\\\\ExplicitManyToManyA7",
+    "App\\\\Models\\\\ExplicitManyToManyPivot7",
+  },
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: ExplicitManyToManyPivot 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: ExplicitManyToManyPivot2 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: ExplicitManyToManyPivot3 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: ExplicitManyToManyPivot4 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: ExplicitManyToManyPivot5 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: ExplicitManyToManyPivot6 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: ExplicitManyToManyPivot7 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: FieldComments 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: FieldMultipleComments 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: Fillable 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: Guarded 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: Hidden 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: Ignore 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: ImplicitManyToManyA 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [
+    Object {
+      "className": "ImplicitManyToManyB",
+      "foreignPivotKey": "A",
+      "name": "related",
+      "pivotTable": "_ImplicitManyToManyAToImplicitManyToManyB",
+      "relatedPivotKey": "B",
+    },
+  ],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {
+    "App\\\\Models\\\\ImplicitManyToManyB",
+  },
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: ImplicitManyToManyB 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [
+    Object {
+      "className": "ImplicitManyToManyA",
+      "foreignPivotKey": "B",
+      "name": "related",
+      "pivotTable": "_ImplicitManyToManyAToImplicitManyToManyB",
+      "relatedPivotKey": "A",
+    },
+  ],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {
+    "App\\\\Models\\\\ImplicitManyToManyA",
+  },
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: MappedId 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: MassAssignable 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: ModelComments 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: ModelMultipleComments 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: MultipleComments 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: MultipleUnique 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: MultipleUnique2 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: NoPrimaryKey 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: NoRules 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: NullableField 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: OneToManyA 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [
+    Object {
+      "className": "OneToManyB",
+      "foreignKey": "relatedId",
+      "name": "related",
+    },
+  ],
+  "hasOne": Array [],
+  "imports": Set {
+    "App\\\\Models\\\\OneToManyB",
+  },
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: OneToManyA2 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [
+    Object {
+      "className": "OneToManyB2",
+      "name": "related",
+    },
+  ],
+  "hasOne": Array [],
+  "imports": Set {
+    "App\\\\Models\\\\OneToManyB2",
+  },
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: OneToManyA3 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [
+    Object {
+      "className": "OneToManyB3",
+      "foreignKey": "relatedId",
+      "localKey": "otherId",
+      "name": "related",
+    },
+  ],
+  "hasOne": Array [],
+  "imports": Set {
+    "App\\\\Models\\\\OneToManyB3",
+  },
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: OneToManyA4 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [
+    Object {
+      "className": "OneToManyB4",
+      "foreignKey": "main_id",
+      "localKey": "main_id",
+      "name": "related",
+    },
+  ],
+  "hasOne": Array [],
+  "imports": Set {
+    "App\\\\Models\\\\OneToManyB4",
+  },
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: OneToManyB 1`] = `
+Object {
+  "belongsTo": Array [
+    Object {
+      "className": "OneToManyA",
+      "foreignKey": "relatedId",
+      "name": "one_to_one_a2",
+      "nullable": false,
+    },
+  ],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {
+    "App\\\\Models\\\\OneToManyA",
+  },
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: OneToManyB2 1`] = `
+Object {
+  "belongsTo": Array [
+    Object {
+      "className": "OneToManyA2",
+      "name": "one_to_many_a2",
+      "nullable": false,
+    },
+  ],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {
+    "App\\\\Models\\\\OneToManyA2",
+  },
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: OneToManyB3 1`] = `
+Object {
+  "belongsTo": Array [
+    Object {
+      "className": "OneToManyA3",
+      "foreignKey": "relatedId",
+      "name": "related",
+      "nullable": false,
+      "ownerKey": "otherId",
+    },
+  ],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {
+    "App\\\\Models\\\\OneToManyA3",
+  },
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: OneToManyB4 1`] = `
+Object {
+  "belongsTo": Array [
+    Object {
+      "className": "OneToManyA4",
+      "foreignKey": "main_id",
+      "name": "related",
+      "nullable": false,
+      "ownerKey": "main_id",
+    },
+  ],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {
+    "App\\\\Models\\\\OneToManyA4",
+  },
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: OneToOneA 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [
+    Object {
+      "className": "OneToOneB",
+      "foreignKey": "relatedId",
+      "name": "related",
+    },
+  ],
+  "imports": Set {
+    "App\\\\Models\\\\OneToOneB",
+  },
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: OneToOneA2 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [
+    Object {
+      "className": "OneToOneB2",
+      "name": "related",
+    },
+  ],
+  "imports": Set {
+    "App\\\\Models\\\\OneToOneB2",
+  },
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: OneToOneA3 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [
+    Object {
+      "className": "OneToOneB3",
+      "foreignKey": "related_id",
+      "localKey": "otherId",
+      "name": "related",
+    },
+  ],
+  "imports": Set {
+    "App\\\\Models\\\\OneToOneB3",
+  },
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: OneToOneA4 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [
+    Object {
+      "className": "OneToOneB4",
+      "foreignKey": "relatedId",
+      "name": "related",
+    },
+  ],
+  "imports": Set {
+    "App\\\\Models\\\\OneToOneB4",
+  },
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: OneToOneA5 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [
+    Object {
+      "className": "OneToOneB5",
+      "foreignKey": "relatedId",
+      "localKey": "main_id",
+      "name": "related",
+    },
+  ],
+  "imports": Set {
+    "App\\\\Models\\\\OneToOneB5",
+  },
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: OneToOneB 1`] = `
+Object {
+  "belongsTo": Array [
+    Object {
+      "className": "OneToOneA",
+      "foreignKey": "relatedId",
+      "name": "related",
+      "nullable": false,
+    },
+  ],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {
+    "App\\\\Models\\\\OneToOneA",
+  },
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: OneToOneB2 1`] = `
+Object {
+  "belongsTo": Array [
+    Object {
+      "className": "OneToOneA2",
+      "name": "one_to_one_a2",
+      "nullable": false,
+    },
+  ],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {
+    "App\\\\Models\\\\OneToOneA2",
+  },
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: OneToOneB3 1`] = `
+Object {
+  "belongsTo": Array [
+    Object {
+      "className": "OneToOneA3",
+      "foreignKey": "related_id",
+      "name": "related",
+      "nullable": false,
+      "ownerKey": "otherId",
+    },
+  ],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {
+    "App\\\\Models\\\\OneToOneA3",
+  },
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: OneToOneB4 1`] = `
+Object {
+  "belongsTo": Array [
+    Object {
+      "className": "OneToOneA4",
+      "foreignKey": "relatedId",
+      "name": "related",
+      "nullable": true,
+    },
+  ],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {
+    "App\\\\Models\\\\OneToOneA4",
+  },
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: OneToOneB5 1`] = `
+Object {
+  "belongsTo": Array [
+    Object {
+      "className": "OneToOneA5",
+      "foreignKey": "relatedId",
+      "name": "related",
+      "nullable": true,
+      "ownerKey": "main_id",
+    },
+  ],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {
+    "App\\\\Models\\\\OneToOneA5",
+  },
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: Post 1`] = `
+Object {
+  "belongsTo": Array [
+    Object {
+      "className": "User",
+      "foreignKey": "authorId",
+      "name": "author",
+      "nullable": false,
+    },
+  ],
+  "belongsToMany": Array [
+    Object {
+      "className": "Category",
+      "foreignPivotKey": "B",
+      "name": "categories",
+      "pivotTable": "_CategoryToPost",
+      "relatedPivotKey": "A",
+    },
+  ],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {
+    "App\\\\Models\\\\User",
+    "App\\\\Models\\\\Category",
+  },
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: Profile 1`] = `
+Object {
+  "belongsTo": Array [
+    Object {
+      "className": "User",
+      "foreignKey": "userId",
+      "name": "user",
+      "nullable": false,
+    },
+  ],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {
+    "App\\\\Models\\\\User",
+  },
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: ReadOnlyField 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: SelfRelation 1`] = `
+Object {
+  "belongsTo": Array [
+    Object {
+      "className": "SelfRelation",
+      "foreignKey": "relatedId",
+      "name": "parent",
+      "nullable": false,
+    },
+  ],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [
+    Object {
+      "className": "SelfRelation",
+      "foreignKey": "relatedId",
+      "name": "child",
+    },
+  ],
+  "imports": Set {
+    "App\\\\Models\\\\SelfRelation",
+  },
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: SoftDelete1 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: SoftDelete2 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: Timestamps1 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: Timestamps2 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: Timestamps3 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: Timestamps4 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: Timestamps5 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: Timestamps6 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: Timestamps7 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: Timestamps8 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: TouchingA 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [
+    Object {
+      "className": "TouchingB",
+      "foreignKey": "relatedId",
+      "name": "related",
+    },
+  ],
+  "imports": Set {
+    "App\\\\Models\\\\TouchingB",
+  },
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: TouchingB 1`] = `
+Object {
+  "belongsTo": Array [
+    Object {
+      "className": "TouchingA",
+      "foreignKey": "relatedId",
+      "name": "related",
+      "nullable": false,
+    },
+  ],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {
+    "App\\\\Models\\\\TouchingA",
+  },
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: Types 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: Unique 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: UnsupportedTypes 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: User 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [
+    Object {
+      "className": "Post",
+      "foreignKey": "authorId",
+      "name": "posts",
+    },
+  ],
+  "hasOne": Array [
+    Object {
+      "className": "Profile",
+      "foreignKey": "userId",
+      "name": "profile",
+    },
+  ],
+  "imports": Set {
+    "App\\\\Models\\\\Post",
+    "App\\\\Models\\\\Profile",
+  },
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: Visible 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: WithArray 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: WithBackedEnum 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: WithDbType 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: WithEnum 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: WithGlobalPrimaryKey 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: WithGlobalPrimaryKeyDifferentName 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: WithGlobalStringPrimaryKey 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: WithGlobalStringPrimaryKeyDifferentName 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: WithPrimaryKey 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: WithPrimaryKeyDifferentName 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: WithStringPrimaryKey 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: WithStringPrimaryKeyDifferentName 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: WithTableMap 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
 `;
 
 exports[`getRelationsFromModel: Category 1`] = `

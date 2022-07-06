@@ -435,7 +435,11 @@ export const getBelongsToManyRelation = (
   return [relations, imports];
 };
 
-const getRelationsFromModel = (model: DMMF.Model, models: DMMF.Model[]) => {
+const getRelationsFromModel = (
+  model: DMMF.Model,
+  models: DMMF.Model[],
+  explicitTableNames = true,
+) => {
   const imports = new Set<string>();
 
   const hasOne: HasOneRelation[] = [];
@@ -458,6 +462,7 @@ const getRelationsFromModel = (model: DMMF.Model, models: DMMF.Model[]) => {
       relationField,
       relatedModel,
       relatedField,
+      explicitTableNames,
     );
     if (hasOneRelation) {
       const [relation, newImports] = hasOneRelation;
@@ -473,6 +478,7 @@ const getRelationsFromModel = (model: DMMF.Model, models: DMMF.Model[]) => {
       relationField,
       relatedModel,
       relatedField,
+      explicitTableNames,
     );
     if (belongsToRelation) {
       const [relation, newImports] = belongsToRelation;
@@ -489,6 +495,7 @@ const getRelationsFromModel = (model: DMMF.Model, models: DMMF.Model[]) => {
       relatedModel,
       relatedField,
       models,
+      explicitTableNames,
     );
     if (belongsToManyRelation) {
       const [relations, newImports] = belongsToManyRelation;
@@ -506,6 +513,7 @@ const getRelationsFromModel = (model: DMMF.Model, models: DMMF.Model[]) => {
       relationField,
       relatedModel,
       relatedField,
+      explicitTableNames,
     );
     if (hasManyRelation) {
       const [relation, newImports] = hasManyRelation;

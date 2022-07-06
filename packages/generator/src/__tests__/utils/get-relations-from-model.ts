@@ -20,6 +20,16 @@ test('getRelationsFromModel', async () => {
   }
 });
 
+test('getRelationsFromModel - implicit table names', async () => {
+  const {dmmf} = await getSample();
+
+  for (const model of dmmf.datamodel.models) {
+    expect(
+      getRelationsFromModel(model, dmmf.datamodel.models, false),
+    ).toMatchSnapshot(`${model.name}`);
+  }
+});
+
 test('getHasOneRelation', async () => {
   const {dmmf} = await getSample();
 
@@ -44,6 +54,36 @@ test('getHasOneRelation', async () => {
   }
 });
 
+test('getHasOneRelation - implicit table names', async () => {
+  const {dmmf} = await getSample();
+
+  for (const model of dmmf.datamodel.models) {
+    const relationFields = _.filter(model.fields, f => isFieldRelation(f));
+
+    for (const relationField of relationFields) {
+      const relatedModel = getModelByName(
+        relationField.type,
+        dmmf.datamodel.models,
+      );
+      const relatedField = getRelatedFieldOfRelatedModel(
+        model,
+        relatedModel,
+        relationField,
+      );
+
+      expect(
+        getHasOneRelation(
+          model,
+          relationField,
+          relatedModel,
+          relatedField,
+          false,
+        ),
+      ).toMatchSnapshot(`${model.name} - ${relationField.name}`);
+    }
+  }
+});
+
 test('getBelongsToRelation', async () => {
   const {dmmf} = await getSample();
 
@@ -63,6 +103,36 @@ test('getBelongsToRelation', async () => {
 
       expect(
         getBelongsToRelation(model, relationField, relatedModel, relatedField),
+      ).toMatchSnapshot(`${model.name} - ${relationField.name}`);
+    }
+  }
+});
+
+test('getBelongsToRelation - implicit table names', async () => {
+  const {dmmf} = await getSample();
+
+  for (const model of dmmf.datamodel.models) {
+    const relationFields = _.filter(model.fields, f => isFieldRelation(f));
+
+    for (const relationField of relationFields) {
+      const relatedModel = getModelByName(
+        relationField.type,
+        dmmf.datamodel.models,
+      );
+      const relatedField = getRelatedFieldOfRelatedModel(
+        model,
+        relatedModel,
+        relationField,
+      );
+
+      expect(
+        getBelongsToRelation(
+          model,
+          relationField,
+          relatedModel,
+          relatedField,
+          false,
+        ),
       ).toMatchSnapshot(`${model.name} - ${relationField.name}`);
     }
   }
@@ -98,6 +168,37 @@ test('getBelongsToManyRelation', async () => {
   }
 });
 
+test('getBelongsToManyRelation - implicit table names', async () => {
+  const {dmmf} = await getSample();
+
+  for (const model of dmmf.datamodel.models) {
+    const relationFields = _.filter(model.fields, f => isFieldRelation(f));
+
+    for (const relationField of relationFields) {
+      const relatedModel = getModelByName(
+        relationField.type,
+        dmmf.datamodel.models,
+      );
+      const relatedField = getRelatedFieldOfRelatedModel(
+        model,
+        relatedModel,
+        relationField,
+      );
+
+      expect(
+        getBelongsToManyRelation(
+          model,
+          relationField,
+          relatedModel,
+          relatedField,
+          dmmf.datamodel.models,
+          false,
+        ),
+      ).toMatchSnapshot(`${model.name} - ${relationField.name}`);
+    }
+  }
+});
+
 test('getHasManyRelation', async () => {
   const {dmmf} = await getSample();
 
@@ -117,6 +218,36 @@ test('getHasManyRelation', async () => {
 
       expect(
         getHasManyRelation(model, relationField, relatedModel, relatedField),
+      ).toMatchSnapshot(`${model.name} - ${relationField.name}`);
+    }
+  }
+});
+
+test('getHasManyRelation - implicit table names', async () => {
+  const {dmmf} = await getSample();
+
+  for (const model of dmmf.datamodel.models) {
+    const relationFields = _.filter(model.fields, f => isFieldRelation(f));
+
+    for (const relationField of relationFields) {
+      const relatedModel = getModelByName(
+        relationField.type,
+        dmmf.datamodel.models,
+      );
+      const relatedField = getRelatedFieldOfRelatedModel(
+        model,
+        relatedModel,
+        relationField,
+      );
+
+      expect(
+        getHasManyRelation(
+          model,
+          relationField,
+          relatedModel,
+          relatedField,
+          false,
+        ),
       ).toMatchSnapshot(`${model.name} - ${relationField.name}`);
     }
   }

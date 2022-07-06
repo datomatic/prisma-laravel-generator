@@ -2,7 +2,6 @@ import {ConnectorType, DMMF} from '@prisma/generator-helper';
 import _ from 'lodash';
 import CuidNotSupportedError from '../errors/cuid-not-supported-error';
 import isFieldEnum from '../helpers/is-field-enum';
-import getPrismaFqcn from '../helpers/get-prisma-fqcn';
 import getEnumFqcn from '../helpers/get-enum-fqcn';
 
 const getDefaultFromField = (

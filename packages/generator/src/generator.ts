@@ -3,14 +3,17 @@ import {logger} from '@prisma/sdk';
 import path from 'node:path';
 import {readFile} from 'node:fs/promises';
 import _ from 'lodash';
-import {GENERATOR_NAME} from './constants';
+import {existsSync} from 'node:fs';
 import generateEnum from './generators/enums/generator';
 import writeFileSafely from './utils/write-file-safely';
 import {formatFile} from './utils/php-cs-fixer';
 
 import {version} from '../package.json';
 import MultipleDataSourcesError from './errors/multiple-data-sources-error';
+import generatePrismaModel from './generators/prisma-models/generator';
 import generateModel from './generators/models/generator';
+
+const GENERATOR_NAME = 'prisma-laravel-generator';
 
 generatorHandler({
   onManifest() {
@@ -23,6 +26,16 @@ generatorHandler({
   },
   onGenerate: async (options: GeneratorOptions) => {
     const outputPath = options.generator.output?.value ?? '../generated';
+
+    const config = {
+      modelsPrefix: options.generator.config.modelsPrefix ?? 'Prisma',
+      baseModel: 'Illuminate\\Database\\Eloquent\\Model',
+      basePivotModel: 'Illuminate\\Database\\Eloquent\\Relations\\Pivot',
+      explicitTableNamesOnRelations: true,
+      phpCsFixerBinPath: undefined,
+      phpCsFixerConfigPath: undefined,
+      ...options.generator.config,
+    };
 
     if (options.datasources.length > 1) {
       throw new MultipleDataSourcesError();
@@ -45,19 +58,25 @@ generatorHandler({
           );
           await writeFileSafely(writeLocation, generatedEnum);
 
-          await formatFile(
-            writeLocation,
-            options.generator.config.phpCsFixerBinPath,
-            options.generator.config.phpCsFixerConfigPath,
-          );
+          if (config.phpCsFixerBinPath && config.phpCsFixerConfigPath) {
+            await formatFile(
+              writeLocation,
+              config.phpCsFixerBinPath,
+              config.phpCsFixerConfigPath,
+            );
+          }
         }),
         ..._.map(options.dmmf.datamodel.models, async model => {
-          const generatedModel = generateModel(
+          const generatedPrismaModel = generatePrismaModel(
             model,
             options.dmmf.datamodel.models,
             options.dmmf.datamodel.enums,
             rawSchema,
             options.datasources[0].provider,
+            config.baseModel,
+            config.basePivotModel,
+            config.modelsPrefix,
+            config.explicitTableNamesOnRelations,
           );
 
           const writeLocation = path.join(
@@ -65,15 +84,39 @@ generatorHandler({
             'app',
             'Models',
             'Prisma',
+            `${config.modelsPrefix}${model.name}.php`,
+          );
+          await writeFileSafely(writeLocation, generatedPrismaModel);
+
+          if (config.phpCsFixerBinPath && config.phpCsFixerConfigPath) {
+            await formatFile(
+              writeLocation,
+              config.phpCsFixerBinPath,
+              config.phpCsFixerConfigPath,
+            );
+          }
+        }),
+        ..._.map(options.dmmf.datamodel.models, async model => {
+          const generatedModel = generateModel(model, config.modelsPrefix);
+
+          const writeLocation = path.join(
+            outputPath,
+            'app',
+            'Models',
             `${model.name}.php`,
           );
-          await writeFileSafely(writeLocation, generatedModel);
 
-          await formatFile(
-            writeLocation,
-            options.generator.config.phpCsFixerBinPath,
-            options.generator.config.phpCsFixerConfigPath,
-          );
+          if (!existsSync(writeLocation)) {
+            await writeFileSafely(writeLocation, generatedModel);
+
+            if (config.phpCsFixerBinPath && config.phpCsFixerConfigPath) {
+              await formatFile(
+                writeLocation,
+                config.phpCsFixerBinPath,
+                config.phpCsFixerConfigPath,
+              );
+            }
+          }
         }),
       ].flat(),
     );
