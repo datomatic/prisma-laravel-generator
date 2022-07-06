@@ -38,6 +38,7 @@ generatorHandler({
 
           const writeLocation = path.join(
             outputPath,
+            'app',
             'Enums',
             'Prisma',
             `${enumInfo.name}.php`,
@@ -61,6 +62,7 @@ generatorHandler({
 
           const writeLocation = path.join(
             outputPath,
+            'app',
             'Models',
             'Prisma',
             `${model.name}.php`,
