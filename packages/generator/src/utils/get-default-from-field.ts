@@ -3,6 +3,7 @@ import _ from 'lodash';
 import CuidNotSupportedError from '../errors/cuid-not-supported-error';
 import isFieldEnum from '../helpers/is-field-enum';
 import getPrismaFqcn from '../helpers/get-prisma-fqcn';
+import getEnumFqcn from '../helpers/get-enum-fqcn';
 
 const getDefaultFromField = (
   field: DMMF.Field,
@@ -24,7 +25,7 @@ const getDefaultFromField = (
       enumInfo &&
       _.some(enumInfo.values, v => v.name === field.default)
     ) {
-      const {fqcn} = getPrismaFqcn(enumInfo);
+      const {fqcn} = getEnumFqcn(enumInfo);
       imports.add(fqcn);
       defaultValue = `${enumInfo.name}::${field.default.toString()}`;
       isMethodCall = true;

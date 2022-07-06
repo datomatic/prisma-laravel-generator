@@ -5,6 +5,7 @@ import getDatabaseFieldAttribute from './raw-schema/get-database-field-attribute
 import isFieldUuid from '../helpers/is-field-uuid';
 import isFieldEnum from '../helpers/is-field-enum';
 import getTableNameFromModel from '../helpers/get-table-name-from-model';
+import getEnumFqcn from '../helpers/get-enum-fqcn';
 
 const getCastAndRulesFromField = (
   field: DMMF.Field,
@@ -148,7 +149,7 @@ const getCastAndRulesFromField = (
       default: {
         const enumInfo = isFieldEnum(field, enums);
         if (enumInfo) {
-          const {fqcn} = getPrismaFqcn(enumInfo);
+          const {fqcn} = getEnumFqcn(enumInfo);
           imports.add(fqcn);
           imports.add('Illuminate\\Validation\\Rules\\Enum');
 

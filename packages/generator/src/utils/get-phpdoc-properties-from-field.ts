@@ -3,6 +3,7 @@ import _ from 'lodash';
 import getPrismaFqcn from '../helpers/get-prisma-fqcn';
 import isFieldEnum from '../helpers/is-field-enum';
 import isFieldReadOnly from '../helpers/is-field-read-only';
+import getEnumFqcn from '../helpers/get-enum-fqcn';
 
 // eslint-disable-next-line unicorn/prevent-abbreviations
 const getPhpDocPropertiesFromField = (
@@ -57,7 +58,7 @@ const getPhpDocPropertiesFromField = (
     default: {
       const enumInfo = isFieldEnum(field, enums);
       if (enumInfo) {
-        const {fqcn} = getPrismaFqcn(enumInfo);
+        const {fqcn} = getEnumFqcn(enumInfo);
         imports.add(fqcn);
 
         phpType = enumInfo.name;

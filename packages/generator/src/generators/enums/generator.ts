@@ -1,6 +1,6 @@
 import {DMMF} from '@prisma/generator-helper';
-import getPrismaFqcn from '../../helpers/get-prisma-fqcn';
 import {prettify} from '../../utils/prettier';
+import getEnumFqcn from '../../helpers/get-enum-fqcn';
 
 const generateEnum = (enumInfo: DMMF.DatamodelEnum) => {
   const {name: enumName, values} = enumInfo;
@@ -14,7 +14,7 @@ const generateEnum = (enumInfo: DMMF.DatamodelEnum) => {
     })
     .join('\n');
 
-  const {namespace} = getPrismaFqcn(enumInfo);
+  const {namespace} = getEnumFqcn(enumInfo);
 
   return prettify(`<?php
     namespace ${namespace};

@@ -12,7 +12,7 @@ Array [
     },
   ],
   Set {
-    "App\\\\Models\\\\Prisma\\\\Post",
+    "App\\\\Models\\\\Post",
   },
 ]
 `;
@@ -36,8 +36,8 @@ Array [
     },
   ],
   Set {
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyB",
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyPivot",
+    "App\\\\Models\\\\ExplicitManyToManyB",
+    "App\\\\Models\\\\ExplicitManyToManyPivot",
   },
 ]
 `;
@@ -57,8 +57,8 @@ Array [
     },
   ],
   Set {
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyB2",
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyPivot2",
+    "App\\\\Models\\\\ExplicitManyToManyB2",
+    "App\\\\Models\\\\ExplicitManyToManyPivot2",
   },
 ]
 `;
@@ -78,8 +78,8 @@ Array [
     },
   ],
   Set {
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyB3",
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyPivot3",
+    "App\\\\Models\\\\ExplicitManyToManyB3",
+    "App\\\\Models\\\\ExplicitManyToManyPivot3",
   },
 ]
 `;
@@ -99,8 +99,8 @@ Array [
     },
   ],
   Set {
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyB4",
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyPivot4",
+    "App\\\\Models\\\\ExplicitManyToManyB4",
+    "App\\\\Models\\\\ExplicitManyToManyPivot4",
   },
 ]
 `;
@@ -122,8 +122,8 @@ Array [
     },
   ],
   Set {
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyB5",
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyPivot5",
+    "App\\\\Models\\\\ExplicitManyToManyB5",
+    "App\\\\Models\\\\ExplicitManyToManyPivot5",
   },
 ]
 `;
@@ -143,8 +143,8 @@ Array [
     },
   ],
   Set {
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyB6",
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyPivot6",
+    "App\\\\Models\\\\ExplicitManyToManyB6",
+    "App\\\\Models\\\\ExplicitManyToManyPivot6",
   },
 ]
 `;
@@ -164,8 +164,8 @@ Array [
     },
   ],
   Set {
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyB7",
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyPivot7",
+    "App\\\\Models\\\\ExplicitManyToManyB7",
+    "App\\\\Models\\\\ExplicitManyToManyPivot7",
   },
 ]
 `;
@@ -185,8 +185,8 @@ Array [
     },
   ],
   Set {
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyA",
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyPivot",
+    "App\\\\Models\\\\ExplicitManyToManyA",
+    "App\\\\Models\\\\ExplicitManyToManyPivot",
   },
 ]
 `;
@@ -206,8 +206,8 @@ Array [
     },
   ],
   Set {
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyA2",
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyPivot2",
+    "App\\\\Models\\\\ExplicitManyToManyA2",
+    "App\\\\Models\\\\ExplicitManyToManyPivot2",
   },
 ]
 `;
@@ -227,8 +227,8 @@ Array [
     },
   ],
   Set {
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyA3",
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyPivot3",
+    "App\\\\Models\\\\ExplicitManyToManyA3",
+    "App\\\\Models\\\\ExplicitManyToManyPivot3",
   },
 ]
 `;
@@ -248,8 +248,8 @@ Array [
     },
   ],
   Set {
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyA4",
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyPivot4",
+    "App\\\\Models\\\\ExplicitManyToManyA4",
+    "App\\\\Models\\\\ExplicitManyToManyPivot4",
   },
 ]
 `;
@@ -271,8 +271,8 @@ Array [
     },
   ],
   Set {
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyA5",
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyPivot5",
+    "App\\\\Models\\\\ExplicitManyToManyA5",
+    "App\\\\Models\\\\ExplicitManyToManyPivot5",
   },
 ]
 `;
@@ -292,8 +292,8 @@ Array [
     },
   ],
   Set {
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyA6",
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyPivot6",
+    "App\\\\Models\\\\ExplicitManyToManyA6",
+    "App\\\\Models\\\\ExplicitManyToManyPivot6",
   },
 ]
 `;
@@ -313,8 +313,8 @@ Array [
     },
   ],
   Set {
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyA7",
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyPivot7",
+    "App\\\\Models\\\\ExplicitManyToManyA7",
+    "App\\\\Models\\\\ExplicitManyToManyPivot7",
   },
 ]
 `;
@@ -363,7 +363,7 @@ Array [
     },
   ],
   Set {
-    "App\\\\Models\\\\Prisma\\\\ImplicitManyToManyB",
+    "App\\\\Models\\\\ImplicitManyToManyB",
   },
 ]
 `;
@@ -380,7 +380,7 @@ Array [
     },
   ],
   Set {
-    "App\\\\Models\\\\Prisma\\\\ImplicitManyToManyA",
+    "App\\\\Models\\\\ImplicitManyToManyA",
   },
 ]
 `;
@@ -435,7 +435,7 @@ Array [
     },
   ],
   Set {
-    "App\\\\Models\\\\Prisma\\\\Category",
+    "App\\\\Models\\\\Category",
   },
 ]
 `;
@@ -468,7 +468,7 @@ Array [
     "ownerKey": "id",
   },
   Set {
-    "App\\\\Models\\\\Prisma\\\\EagerLoadA",
+    "App\\\\Models\\\\EagerLoadA",
   },
 ]
 `;
@@ -507,7 +507,7 @@ Array [
     "ownerKey": "id",
   },
   Set {
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyPivot5",
+    "App\\\\Models\\\\ExplicitManyToManyPivot5",
   },
 ]
 `;
@@ -572,7 +572,7 @@ Array [
     "ownerKey": "id",
   },
   Set {
-    "App\\\\Models\\\\Prisma\\\\OneToManyA",
+    "App\\\\Models\\\\OneToManyA",
   },
 ]
 `;
@@ -587,7 +587,7 @@ Array [
     "ownerKey": "id",
   },
   Set {
-    "App\\\\Models\\\\Prisma\\\\OneToManyA2",
+    "App\\\\Models\\\\OneToManyA2",
   },
 ]
 `;
@@ -602,7 +602,7 @@ Array [
     "ownerKey": "otherId",
   },
   Set {
-    "App\\\\Models\\\\Prisma\\\\OneToManyA3",
+    "App\\\\Models\\\\OneToManyA3",
   },
 ]
 `;
@@ -617,7 +617,7 @@ Array [
     "ownerKey": "main_id",
   },
   Set {
-    "App\\\\Models\\\\Prisma\\\\OneToManyA4",
+    "App\\\\Models\\\\OneToManyA4",
   },
 ]
 `;
@@ -642,7 +642,7 @@ Array [
     "ownerKey": "id",
   },
   Set {
-    "App\\\\Models\\\\Prisma\\\\OneToOneA",
+    "App\\\\Models\\\\OneToOneA",
   },
 ]
 `;
@@ -657,7 +657,7 @@ Array [
     "ownerKey": "id",
   },
   Set {
-    "App\\\\Models\\\\Prisma\\\\OneToOneA2",
+    "App\\\\Models\\\\OneToOneA2",
   },
 ]
 `;
@@ -672,7 +672,7 @@ Array [
     "ownerKey": "otherId",
   },
   Set {
-    "App\\\\Models\\\\Prisma\\\\OneToOneA3",
+    "App\\\\Models\\\\OneToOneA3",
   },
 ]
 `;
@@ -687,7 +687,7 @@ Array [
     "ownerKey": "id",
   },
   Set {
-    "App\\\\Models\\\\Prisma\\\\OneToOneA4",
+    "App\\\\Models\\\\OneToOneA4",
   },
 ]
 `;
@@ -702,7 +702,7 @@ Array [
     "ownerKey": "main_id",
   },
   Set {
-    "App\\\\Models\\\\Prisma\\\\OneToOneA5",
+    "App\\\\Models\\\\OneToOneA5",
   },
 ]
 `;
@@ -717,7 +717,7 @@ Array [
     "ownerKey": "id",
   },
   Set {
-    "App\\\\Models\\\\Prisma\\\\User",
+    "App\\\\Models\\\\User",
   },
 ]
 `;
@@ -734,7 +734,7 @@ Array [
     "ownerKey": "id",
   },
   Set {
-    "App\\\\Models\\\\Prisma\\\\User",
+    "App\\\\Models\\\\User",
   },
 ]
 `;
@@ -751,7 +751,7 @@ Array [
     "ownerKey": "id",
   },
   Set {
-    "App\\\\Models\\\\Prisma\\\\SelfRelation",
+    "App\\\\Models\\\\SelfRelation",
   },
 ]
 `;
@@ -768,7 +768,7 @@ Array [
     "ownerKey": "id",
   },
   Set {
-    "App\\\\Models\\\\Prisma\\\\TouchingA",
+    "App\\\\Models\\\\TouchingA",
   },
 ]
 `;
@@ -792,7 +792,7 @@ Array [
     "name": "related",
   },
   Set {
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyPivot",
+    "App\\\\Models\\\\ExplicitManyToManyPivot",
   },
 ]
 `;
@@ -806,7 +806,7 @@ Array [
     "name": "explicit_many_to_many_b2",
   },
   Set {
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyPivot2",
+    "App\\\\Models\\\\ExplicitManyToManyPivot2",
   },
 ]
 `;
@@ -820,7 +820,7 @@ Array [
     "name": "related",
   },
   Set {
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyPivot3",
+    "App\\\\Models\\\\ExplicitManyToManyPivot3",
   },
 ]
 `;
@@ -834,7 +834,7 @@ Array [
     "name": "related",
   },
   Set {
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyPivot4",
+    "App\\\\Models\\\\ExplicitManyToManyPivot4",
   },
 ]
 `;
@@ -850,7 +850,7 @@ Array [
     "name": "related",
   },
   Set {
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyPivot5",
+    "App\\\\Models\\\\ExplicitManyToManyPivot5",
   },
 ]
 `;
@@ -864,7 +864,7 @@ Array [
     "name": "related",
   },
   Set {
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyPivot6",
+    "App\\\\Models\\\\ExplicitManyToManyPivot6",
   },
 ]
 `;
@@ -878,7 +878,7 @@ Array [
     "name": "related",
   },
   Set {
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyPivot7",
+    "App\\\\Models\\\\ExplicitManyToManyPivot7",
   },
 ]
 `;
@@ -892,7 +892,7 @@ Array [
     "name": "related",
   },
   Set {
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyPivot",
+    "App\\\\Models\\\\ExplicitManyToManyPivot",
   },
 ]
 `;
@@ -906,7 +906,7 @@ Array [
     "name": "explicit_many_to_many_a2",
   },
   Set {
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyPivot2",
+    "App\\\\Models\\\\ExplicitManyToManyPivot2",
   },
 ]
 `;
@@ -920,7 +920,7 @@ Array [
     "name": "related",
   },
   Set {
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyPivot3",
+    "App\\\\Models\\\\ExplicitManyToManyPivot3",
   },
 ]
 `;
@@ -934,7 +934,7 @@ Array [
     "name": "related",
   },
   Set {
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyPivot4",
+    "App\\\\Models\\\\ExplicitManyToManyPivot4",
   },
 ]
 `;
@@ -950,7 +950,7 @@ Array [
     "name": "related",
   },
   Set {
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyPivot5",
+    "App\\\\Models\\\\ExplicitManyToManyPivot5",
   },
 ]
 `;
@@ -964,7 +964,7 @@ Array [
     "name": "related",
   },
   Set {
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyPivot6",
+    "App\\\\Models\\\\ExplicitManyToManyPivot6",
   },
 ]
 `;
@@ -978,7 +978,7 @@ Array [
     "name": "related",
   },
   Set {
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyPivot7",
+    "App\\\\Models\\\\ExplicitManyToManyPivot7",
   },
 ]
 `;
@@ -1028,7 +1028,7 @@ Array [
     "name": "related",
   },
   Set {
-    "App\\\\Models\\\\Prisma\\\\OneToManyB",
+    "App\\\\Models\\\\OneToManyB",
   },
 ]
 `;
@@ -1042,7 +1042,7 @@ Array [
     "name": "related",
   },
   Set {
-    "App\\\\Models\\\\Prisma\\\\OneToManyB2",
+    "App\\\\Models\\\\OneToManyB2",
   },
 ]
 `;
@@ -1056,7 +1056,7 @@ Array [
     "name": "related",
   },
   Set {
-    "App\\\\Models\\\\Prisma\\\\OneToManyB3",
+    "App\\\\Models\\\\OneToManyB3",
   },
 ]
 `;
@@ -1070,7 +1070,7 @@ Array [
     "name": "related",
   },
   Set {
-    "App\\\\Models\\\\Prisma\\\\OneToManyB4",
+    "App\\\\Models\\\\OneToManyB4",
   },
 ]
 `;
@@ -1126,7 +1126,7 @@ Array [
     "name": "posts",
   },
   Set {
-    "App\\\\Models\\\\Prisma\\\\Post",
+    "App\\\\Models\\\\Post",
   },
 ]
 `;
@@ -1144,7 +1144,7 @@ Array [
     "name": "related",
   },
   Set {
-    "App\\\\Models\\\\Prisma\\\\EagerLoadB",
+    "App\\\\Models\\\\EagerLoadB",
   },
 ]
 `;
@@ -1168,7 +1168,7 @@ Array [
     "name": "hasOne",
   },
   Set {
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyPivot5",
+    "App\\\\Models\\\\ExplicitManyToManyPivot5",
   },
 ]
 `;
@@ -1256,7 +1256,7 @@ Array [
     "name": "related",
   },
   Set {
-    "App\\\\Models\\\\Prisma\\\\OneToOneB",
+    "App\\\\Models\\\\OneToOneB",
   },
 ]
 `;
@@ -1270,7 +1270,7 @@ Array [
     "name": "related",
   },
   Set {
-    "App\\\\Models\\\\Prisma\\\\OneToOneB2",
+    "App\\\\Models\\\\OneToOneB2",
   },
 ]
 `;
@@ -1284,7 +1284,7 @@ Array [
     "name": "related",
   },
   Set {
-    "App\\\\Models\\\\Prisma\\\\OneToOneB3",
+    "App\\\\Models\\\\OneToOneB3",
   },
 ]
 `;
@@ -1298,7 +1298,7 @@ Array [
     "name": "related",
   },
   Set {
-    "App\\\\Models\\\\Prisma\\\\OneToOneB4",
+    "App\\\\Models\\\\OneToOneB4",
   },
 ]
 `;
@@ -1312,7 +1312,7 @@ Array [
     "name": "related",
   },
   Set {
-    "App\\\\Models\\\\Prisma\\\\OneToOneB5",
+    "App\\\\Models\\\\OneToOneB5",
   },
 ]
 `;
@@ -1342,7 +1342,7 @@ Array [
     "name": "child",
   },
   Set {
-    "App\\\\Models\\\\Prisma\\\\SelfRelation",
+    "App\\\\Models\\\\SelfRelation",
   },
 ]
 `;
@@ -1358,7 +1358,7 @@ Array [
     "name": "related",
   },
   Set {
-    "App\\\\Models\\\\Prisma\\\\TouchingB",
+    "App\\\\Models\\\\TouchingB",
   },
 ]
 `;
@@ -1376,7 +1376,7 @@ Array [
     "name": "profile",
   },
   Set {
-    "App\\\\Models\\\\Prisma\\\\Profile",
+    "App\\\\Models\\\\Profile",
   },
 ]
 `;
@@ -1396,7 +1396,7 @@ Object {
   "hasMany": Array [],
   "hasOne": Array [],
   "imports": Set {
-    "App\\\\Models\\\\Prisma\\\\Post",
+    "App\\\\Models\\\\Post",
   },
 }
 `;
@@ -1425,7 +1425,7 @@ Object {
     },
   ],
   "imports": Set {
-    "App\\\\Models\\\\Prisma\\\\EagerLoadB",
+    "App\\\\Models\\\\EagerLoadB",
   },
 }
 `;
@@ -1445,7 +1445,7 @@ Object {
   "hasMany": Array [],
   "hasOne": Array [],
   "imports": Set {
-    "App\\\\Models\\\\Prisma\\\\EagerLoadA",
+    "App\\\\Models\\\\EagerLoadA",
   },
 }
 `;
@@ -1468,8 +1468,8 @@ Object {
   "hasMany": Array [],
   "hasOne": Array [],
   "imports": Set {
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyB",
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyPivot",
+    "App\\\\Models\\\\ExplicitManyToManyB",
+    "App\\\\Models\\\\ExplicitManyToManyPivot",
   },
 }
 `;
@@ -1492,8 +1492,8 @@ Object {
   "hasMany": Array [],
   "hasOne": Array [],
   "imports": Set {
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyB2",
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyPivot2",
+    "App\\\\Models\\\\ExplicitManyToManyB2",
+    "App\\\\Models\\\\ExplicitManyToManyPivot2",
   },
 }
 `;
@@ -1516,8 +1516,8 @@ Object {
   "hasMany": Array [],
   "hasOne": Array [],
   "imports": Set {
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyB3",
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyPivot3",
+    "App\\\\Models\\\\ExplicitManyToManyB3",
+    "App\\\\Models\\\\ExplicitManyToManyPivot3",
   },
 }
 `;
@@ -1540,8 +1540,8 @@ Object {
   "hasMany": Array [],
   "hasOne": Array [],
   "imports": Set {
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyB4",
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyPivot4",
+    "App\\\\Models\\\\ExplicitManyToManyB4",
+    "App\\\\Models\\\\ExplicitManyToManyPivot4",
   },
 }
 `;
@@ -1571,8 +1571,8 @@ Object {
     },
   ],
   "imports": Set {
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyB5",
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyPivot5",
+    "App\\\\Models\\\\ExplicitManyToManyB5",
+    "App\\\\Models\\\\ExplicitManyToManyPivot5",
   },
 }
 `;
@@ -1595,8 +1595,8 @@ Object {
   "hasMany": Array [],
   "hasOne": Array [],
   "imports": Set {
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyB6",
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyPivot6",
+    "App\\\\Models\\\\ExplicitManyToManyB6",
+    "App\\\\Models\\\\ExplicitManyToManyPivot6",
   },
 }
 `;
@@ -1619,8 +1619,8 @@ Object {
   "hasMany": Array [],
   "hasOne": Array [],
   "imports": Set {
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyB7",
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyPivot7",
+    "App\\\\Models\\\\ExplicitManyToManyB7",
+    "App\\\\Models\\\\ExplicitManyToManyPivot7",
   },
 }
 `;
@@ -1643,8 +1643,8 @@ Object {
   "hasMany": Array [],
   "hasOne": Array [],
   "imports": Set {
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyA",
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyPivot",
+    "App\\\\Models\\\\ExplicitManyToManyA",
+    "App\\\\Models\\\\ExplicitManyToManyPivot",
   },
 }
 `;
@@ -1667,8 +1667,8 @@ Object {
   "hasMany": Array [],
   "hasOne": Array [],
   "imports": Set {
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyA2",
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyPivot2",
+    "App\\\\Models\\\\ExplicitManyToManyA2",
+    "App\\\\Models\\\\ExplicitManyToManyPivot2",
   },
 }
 `;
@@ -1691,8 +1691,8 @@ Object {
   "hasMany": Array [],
   "hasOne": Array [],
   "imports": Set {
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyA3",
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyPivot3",
+    "App\\\\Models\\\\ExplicitManyToManyA3",
+    "App\\\\Models\\\\ExplicitManyToManyPivot3",
   },
 }
 `;
@@ -1715,8 +1715,8 @@ Object {
   "hasMany": Array [],
   "hasOne": Array [],
   "imports": Set {
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyA4",
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyPivot4",
+    "App\\\\Models\\\\ExplicitManyToManyA4",
+    "App\\\\Models\\\\ExplicitManyToManyPivot4",
   },
 }
 `;
@@ -1747,8 +1747,8 @@ Object {
   "hasMany": Array [],
   "hasOne": Array [],
   "imports": Set {
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyA5",
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyPivot5",
+    "App\\\\Models\\\\ExplicitManyToManyA5",
+    "App\\\\Models\\\\ExplicitManyToManyPivot5",
   },
 }
 `;
@@ -1771,8 +1771,8 @@ Object {
   "hasMany": Array [],
   "hasOne": Array [],
   "imports": Set {
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyA6",
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyPivot6",
+    "App\\\\Models\\\\ExplicitManyToManyA6",
+    "App\\\\Models\\\\ExplicitManyToManyPivot6",
   },
 }
 `;
@@ -1795,8 +1795,8 @@ Object {
   "hasMany": Array [],
   "hasOne": Array [],
   "imports": Set {
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyA7",
-    "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyPivot7",
+    "App\\\\Models\\\\ExplicitManyToManyA7",
+    "App\\\\Models\\\\ExplicitManyToManyPivot7",
   },
 }
 `;
@@ -1946,7 +1946,7 @@ Object {
   "hasMany": Array [],
   "hasOne": Array [],
   "imports": Set {
-    "App\\\\Models\\\\Prisma\\\\ImplicitManyToManyB",
+    "App\\\\Models\\\\ImplicitManyToManyB",
   },
 }
 `;
@@ -1966,7 +1966,7 @@ Object {
   "hasMany": Array [],
   "hasOne": Array [],
   "imports": Set {
-    "App\\\\Models\\\\Prisma\\\\ImplicitManyToManyA",
+    "App\\\\Models\\\\ImplicitManyToManyA",
   },
 }
 `;
@@ -2085,7 +2085,7 @@ Object {
   ],
   "hasOne": Array [],
   "imports": Set {
-    "App\\\\Models\\\\Prisma\\\\OneToManyB",
+    "App\\\\Models\\\\OneToManyB",
   },
 }
 `;
@@ -2104,7 +2104,7 @@ Object {
   ],
   "hasOne": Array [],
   "imports": Set {
-    "App\\\\Models\\\\Prisma\\\\OneToManyB2",
+    "App\\\\Models\\\\OneToManyB2",
   },
 }
 `;
@@ -2123,7 +2123,7 @@ Object {
   ],
   "hasOne": Array [],
   "imports": Set {
-    "App\\\\Models\\\\Prisma\\\\OneToManyB3",
+    "App\\\\Models\\\\OneToManyB3",
   },
 }
 `;
@@ -2142,7 +2142,7 @@ Object {
   ],
   "hasOne": Array [],
   "imports": Set {
-    "App\\\\Models\\\\Prisma\\\\OneToManyB4",
+    "App\\\\Models\\\\OneToManyB4",
   },
 }
 `;
@@ -2162,7 +2162,7 @@ Object {
   "hasMany": Array [],
   "hasOne": Array [],
   "imports": Set {
-    "App\\\\Models\\\\Prisma\\\\OneToManyA",
+    "App\\\\Models\\\\OneToManyA",
   },
 }
 `;
@@ -2182,7 +2182,7 @@ Object {
   "hasMany": Array [],
   "hasOne": Array [],
   "imports": Set {
-    "App\\\\Models\\\\Prisma\\\\OneToManyA2",
+    "App\\\\Models\\\\OneToManyA2",
   },
 }
 `;
@@ -2202,7 +2202,7 @@ Object {
   "hasMany": Array [],
   "hasOne": Array [],
   "imports": Set {
-    "App\\\\Models\\\\Prisma\\\\OneToManyA3",
+    "App\\\\Models\\\\OneToManyA3",
   },
 }
 `;
@@ -2222,7 +2222,7 @@ Object {
   "hasMany": Array [],
   "hasOne": Array [],
   "imports": Set {
-    "App\\\\Models\\\\Prisma\\\\OneToManyA4",
+    "App\\\\Models\\\\OneToManyA4",
   },
 }
 `;
@@ -2241,7 +2241,7 @@ Object {
     },
   ],
   "imports": Set {
-    "App\\\\Models\\\\Prisma\\\\OneToOneB",
+    "App\\\\Models\\\\OneToOneB",
   },
 }
 `;
@@ -2260,7 +2260,7 @@ Object {
     },
   ],
   "imports": Set {
-    "App\\\\Models\\\\Prisma\\\\OneToOneB2",
+    "App\\\\Models\\\\OneToOneB2",
   },
 }
 `;
@@ -2279,7 +2279,7 @@ Object {
     },
   ],
   "imports": Set {
-    "App\\\\Models\\\\Prisma\\\\OneToOneB3",
+    "App\\\\Models\\\\OneToOneB3",
   },
 }
 `;
@@ -2298,7 +2298,7 @@ Object {
     },
   ],
   "imports": Set {
-    "App\\\\Models\\\\Prisma\\\\OneToOneB4",
+    "App\\\\Models\\\\OneToOneB4",
   },
 }
 `;
@@ -2317,7 +2317,7 @@ Object {
     },
   ],
   "imports": Set {
-    "App\\\\Models\\\\Prisma\\\\OneToOneB5",
+    "App\\\\Models\\\\OneToOneB5",
   },
 }
 `;
@@ -2337,7 +2337,7 @@ Object {
   "hasMany": Array [],
   "hasOne": Array [],
   "imports": Set {
-    "App\\\\Models\\\\Prisma\\\\OneToOneA",
+    "App\\\\Models\\\\OneToOneA",
   },
 }
 `;
@@ -2357,7 +2357,7 @@ Object {
   "hasMany": Array [],
   "hasOne": Array [],
   "imports": Set {
-    "App\\\\Models\\\\Prisma\\\\OneToOneA2",
+    "App\\\\Models\\\\OneToOneA2",
   },
 }
 `;
@@ -2377,7 +2377,7 @@ Object {
   "hasMany": Array [],
   "hasOne": Array [],
   "imports": Set {
-    "App\\\\Models\\\\Prisma\\\\OneToOneA3",
+    "App\\\\Models\\\\OneToOneA3",
   },
 }
 `;
@@ -2397,7 +2397,7 @@ Object {
   "hasMany": Array [],
   "hasOne": Array [],
   "imports": Set {
-    "App\\\\Models\\\\Prisma\\\\OneToOneA4",
+    "App\\\\Models\\\\OneToOneA4",
   },
 }
 `;
@@ -2417,7 +2417,7 @@ Object {
   "hasMany": Array [],
   "hasOne": Array [],
   "imports": Set {
-    "App\\\\Models\\\\Prisma\\\\OneToOneA5",
+    "App\\\\Models\\\\OneToOneA5",
   },
 }
 `;
@@ -2445,8 +2445,8 @@ Object {
   "hasMany": Array [],
   "hasOne": Array [],
   "imports": Set {
-    "App\\\\Models\\\\Prisma\\\\User",
-    "App\\\\Models\\\\Prisma\\\\Category",
+    "App\\\\Models\\\\User",
+    "App\\\\Models\\\\Category",
   },
 }
 `;
@@ -2466,7 +2466,7 @@ Object {
   "hasMany": Array [],
   "hasOne": Array [],
   "imports": Set {
-    "App\\\\Models\\\\Prisma\\\\User",
+    "App\\\\Models\\\\User",
   },
 }
 `;
@@ -2503,7 +2503,7 @@ Object {
     },
   ],
   "imports": Set {
-    "App\\\\Models\\\\Prisma\\\\SelfRelation",
+    "App\\\\Models\\\\SelfRelation",
   },
 }
 `;
@@ -2622,7 +2622,7 @@ Object {
     },
   ],
   "imports": Set {
-    "App\\\\Models\\\\Prisma\\\\TouchingB",
+    "App\\\\Models\\\\TouchingB",
   },
 }
 `;
@@ -2642,7 +2642,7 @@ Object {
   "hasMany": Array [],
   "hasOne": Array [],
   "imports": Set {
-    "App\\\\Models\\\\Prisma\\\\TouchingA",
+    "App\\\\Models\\\\TouchingA",
   },
 }
 `;
@@ -2698,8 +2698,8 @@ Object {
     },
   ],
   "imports": Set {
-    "App\\\\Models\\\\Prisma\\\\Post",
-    "App\\\\Models\\\\Prisma\\\\Profile",
+    "App\\\\Models\\\\Post",
+    "App\\\\Models\\\\Profile",
   },
 }
 `;

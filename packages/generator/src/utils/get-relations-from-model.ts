@@ -2,12 +2,12 @@ import {DMMF} from '@prisma/generator-helper';
 import _ from 'lodash';
 import isFieldRelation from '../helpers/is-field-relation';
 import snake from './strings/snake';
-import getPrismaFqcn from '../helpers/get-prisma-fqcn';
 import CompositeKeyOnRelationError from '../errors/composite-key-on-relation-error';
 import isModelPivot from '../helpers/is-model-pivot';
 import getTableNameFromModel from '../helpers/get-table-name-from-model';
 import getModelByName from '../helpers/get-model-by-name';
 import getRelatedFieldOfRelatedModel from '../helpers/get-related-field-of-related-model';
+import getModelFqcn from '../helpers/get-model-fqcn';
 
 // See: https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Concerns/HasRelationships.php
 type HasOneRelation = {
@@ -84,7 +84,7 @@ export const getHasOneRelation = (
 
   const primaryKeyField = _.find(model.fields, f => f.isId);
 
-  imports.add(getPrismaFqcn(relatedModel).fqcn);
+  imports.add(getModelFqcn(relatedModel).fqcn);
   let relation: HasOneRelation = {
     name: relationField.name,
     className: relatedModel.name,
@@ -152,7 +152,7 @@ export const getBelongsToRelation = (
 
   const relatedPrimaryKeyField = _.find(relatedModel.fields, f => f.isId);
 
-  imports.add(getPrismaFqcn(relatedModel).fqcn);
+  imports.add(getModelFqcn(relatedModel).fqcn);
   let relation: BelongsToRelation = {
     name: relationField.name,
     className: relatedModel.name,
@@ -223,7 +223,7 @@ export const getHasManyRelation = (
 
   const primaryKeyField = _.find(model.fields, f => f.isId);
 
-  imports.add(getPrismaFqcn(relatedModel).fqcn);
+  imports.add(getModelFqcn(relatedModel).fqcn);
   let relation: HasManyRelation = {
     name: relationField.name,
     className: relatedModel.name,
@@ -292,7 +292,7 @@ export const getBelongsToManyRelation = (
       // the schema this condition is always false
     }
 
-    imports.add(getPrismaFqcn(relatedModel).fqcn);
+    imports.add(getModelFqcn(relatedModel).fqcn);
 
     const relation: BelongsToManyRelation = {
       name: relationField.name,
@@ -360,8 +360,8 @@ export const getBelongsToManyRelation = (
         f => f.isId,
       );
 
-      imports.add(getPrismaFqcn(relatedPivotModel).fqcn);
-      imports.add(getPrismaFqcn(relatedModel).fqcn);
+      imports.add(getModelFqcn(relatedPivotModel).fqcn);
+      imports.add(getModelFqcn(relatedModel).fqcn);
       let relation: BelongsToManyRelation = {
         name: relationField.name,
         className: relatedPivotModel.name,

@@ -11,7 +11,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 use Illuminate\\\\Support\\\\Carbon;
 
 /**
- * MongoDbNow Model.
+ * PrismaMongoDbNow Model.
  *
  * @mixin Builder
  *
@@ -33,7 +33,7 @@ use Illuminate\\\\Support\\\\Carbon;
  * @property-read string $_id
  * @property Carbon $created_at
  */
-abstract class MongoDbNow extends Model
+abstract class PrismaMongoDbNow extends Model
 {
     public $incrementing = false;
 
@@ -71,7 +71,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 
 /**
- * UnsignedIntegers Model.
+ * PrismaUnsignedIntegers Model.
  *
  * @mixin Builder
  *
@@ -96,7 +96,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  * @property int $utinyint
  * @property int $ubigint
  */
-abstract class UnsignedIntegers extends Model
+abstract class PrismaUnsignedIntegers extends Model
 {
     public $timestamps = false;
     protected $table = 'UnsignedIntegers';
@@ -125,13 +125,14 @@ exports[`models: generation: Category 1`] = `
 
 namespace App\\\\Models\\\\Prisma;
 
+use App\\\\Models\\\\Post;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Collection;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 
 /**
- * Category Model.
+ * PrismaCategory Model.
  *
  * @mixin Builder
  *
@@ -154,7 +155,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  * @property string $name
  * @property-read Collection<Post> $posts
  */
-abstract class Category extends Model
+abstract class PrismaCategory extends Model
 {
     public $timestamps = false;
     protected $table = 'Category';
@@ -191,7 +192,7 @@ use Illuminate\\\\Support\\\\Str;
 use Illuminate\\\\Validation\\\\Rules\\\\Enum;
 
 /**
- * DefaultValues Model.
+ * PrismaDefaultValues Model.
  *
  * @mixin Builder
  *
@@ -219,7 +220,7 @@ use Illuminate\\\\Validation\\\\Rules\\\\Enum;
  * @property bool    $bool
  * @property Role    $role
  */
-abstract class DefaultValues extends Model
+abstract class PrismaDefaultValues extends Model
 {
     public $timestamps = false;
     protected $table = 'DefaultValues';
@@ -263,12 +264,13 @@ exports[`models: generation: EagerLoadA 1`] = `
 
 namespace App\\\\Models\\\\Prisma;
 
+use App\\\\Models\\\\EagerLoadB;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 
 /**
- * EagerLoadA Model.
+ * PrismaEagerLoadA Model.
  *
  * @mixin Builder
  *
@@ -290,7 +292,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  * @property-read int $id
  * @property-read null|EagerLoadB $related
  */
-abstract class EagerLoadA extends Model
+abstract class PrismaEagerLoadA extends Model
 {
     public $timestamps = false;
     protected $table = 'EagerLoadA';
@@ -318,13 +320,14 @@ exports[`models: generation: EagerLoadB 1`] = `
 
 namespace App\\\\Models\\\\Prisma;
 
+use App\\\\Models\\\\EagerLoadA;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 use Illuminate\\\\Validation\\\\Rule;
 
 /**
- * EagerLoadB Model.
+ * PrismaEagerLoadB Model.
  *
  * @mixin Builder
  *
@@ -347,7 +350,7 @@ use Illuminate\\\\Validation\\\\Rule;
  * @property int $relatedId
  * @property-read EagerLoadA $related
  */
-abstract class EagerLoadB extends Model
+abstract class PrismaEagerLoadB extends Model
 {
     public $timestamps = false;
     protected $table = 'EagerLoadB';
@@ -385,13 +388,15 @@ exports[`models: generation: ExplicitManyToManyA 1`] = `
 
 namespace App\\\\Models\\\\Prisma;
 
+use App\\\\Models\\\\ExplicitManyToManyB;
+use App\\\\Models\\\\ExplicitManyToManyPivot;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Collection;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 
 /**
- * ExplicitManyToManyA Model.
+ * PrismaExplicitManyToManyA Model.
  *
  * @mixin Builder
  *
@@ -413,7 +418,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  * @property-read int $id
  * @property-read Collection<ExplicitManyToManyB> $related
  */
-abstract class ExplicitManyToManyA extends Model
+abstract class PrismaExplicitManyToManyA extends Model
 {
     public $timestamps = false;
     protected $table = 'ExplicitManyToManyA';
@@ -446,13 +451,15 @@ exports[`models: generation: ExplicitManyToManyA2 1`] = `
 
 namespace App\\\\Models\\\\Prisma;
 
+use App\\\\Models\\\\ExplicitManyToManyB2;
+use App\\\\Models\\\\ExplicitManyToManyPivot2;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Collection;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 
 /**
- * ExplicitManyToManyA2 Model.
+ * PrismaExplicitManyToManyA2 Model.
  *
  * @mixin Builder
  *
@@ -474,7 +481,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  * @property-read int $id
  * @property-read Collection<ExplicitManyToManyB2> $explicit_many_to_many_b2
  */
-abstract class ExplicitManyToManyA2 extends Model
+abstract class PrismaExplicitManyToManyA2 extends Model
 {
     public $timestamps = false;
     protected $table = 'ExplicitManyToManyA2';
@@ -507,6 +514,8 @@ exports[`models: generation: ExplicitManyToManyA3 1`] = `
 
 namespace App\\\\Models\\\\Prisma;
 
+use App\\\\Models\\\\ExplicitManyToManyB3;
+use App\\\\Models\\\\ExplicitManyToManyPivot3;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Collection;
@@ -514,7 +523,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 use Illuminate\\\\Validation\\\\Rule;
 
 /**
- * ExplicitManyToManyA3 Model.
+ * PrismaExplicitManyToManyA3 Model.
  *
  * @mixin Builder
  *
@@ -537,7 +546,7 @@ use Illuminate\\\\Validation\\\\Rule;
  * @property int $otherIdA
  * @property-read Collection<ExplicitManyToManyB3> $related
  */
-abstract class ExplicitManyToManyA3 extends Model
+abstract class PrismaExplicitManyToManyA3 extends Model
 {
     public $timestamps = false;
     protected $table = 'ExplicitManyToManyA3';
@@ -580,6 +589,8 @@ exports[`models: generation: ExplicitManyToManyA4 1`] = `
 
 namespace App\\\\Models\\\\Prisma;
 
+use App\\\\Models\\\\ExplicitManyToManyB4;
+use App\\\\Models\\\\ExplicitManyToManyPivot4;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Collection;
@@ -587,7 +598,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 use Illuminate\\\\Validation\\\\Rule;
 
 /**
- * ExplicitManyToManyA4 Model.
+ * PrismaExplicitManyToManyA4 Model.
  *
  * @mixin Builder
  *
@@ -610,7 +621,7 @@ use Illuminate\\\\Validation\\\\Rule;
  * @property int $otherIdA
  * @property-read Collection<ExplicitManyToManyB4> $related
  */
-abstract class ExplicitManyToManyA4 extends Model
+abstract class PrismaExplicitManyToManyA4 extends Model
 {
     public $timestamps = false;
     protected $table = 'ExplicitManyToManyA4';
@@ -653,13 +664,15 @@ exports[`models: generation: ExplicitManyToManyA5 1`] = `
 
 namespace App\\\\Models\\\\Prisma;
 
+use App\\\\Models\\\\ExplicitManyToManyB5;
+use App\\\\Models\\\\ExplicitManyToManyPivot5;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Collection;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 
 /**
- * ExplicitManyToManyA5 Model.
+ * PrismaExplicitManyToManyA5 Model.
  *
  * @mixin Builder
  *
@@ -682,7 +695,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  * @property-read null|ExplicitManyToManyPivot5 $hasOne
  * @property-read Collection<ExplicitManyToManyB5> $related
  */
-abstract class ExplicitManyToManyA5 extends Model
+abstract class PrismaExplicitManyToManyA5 extends Model
 {
     public $timestamps = false;
     protected $table = 'ExplicitManyToManyA5';
@@ -720,13 +733,15 @@ exports[`models: generation: ExplicitManyToManyA6 1`] = `
 
 namespace App\\\\Models\\\\Prisma;
 
+use App\\\\Models\\\\ExplicitManyToManyB6;
+use App\\\\Models\\\\ExplicitManyToManyPivot6;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Collection;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 
 /**
- * ExplicitManyToManyA6 Model.
+ * PrismaExplicitManyToManyA6 Model.
  *
  * @mixin Builder
  *
@@ -748,7 +763,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  * @property-read int $key
  * @property-read Collection<ExplicitManyToManyB6> $related
  */
-abstract class ExplicitManyToManyA6 extends Model
+abstract class PrismaExplicitManyToManyA6 extends Model
 {
     public $timestamps = false;
     protected $table = 'ExplicitManyToManyA6';
@@ -783,6 +798,8 @@ exports[`models: generation: ExplicitManyToManyA7 1`] = `
 
 namespace App\\\\Models\\\\Prisma;
 
+use App\\\\Models\\\\ExplicitManyToManyB7;
+use App\\\\Models\\\\ExplicitManyToManyPivot7;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Collection;
@@ -790,7 +807,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 use Illuminate\\\\Validation\\\\Rule;
 
 /**
- * ExplicitManyToManyA7 Model.
+ * PrismaExplicitManyToManyA7 Model.
  *
  * @mixin Builder
  *
@@ -812,7 +829,7 @@ use Illuminate\\\\Validation\\\\Rule;
  * @property int $key
  * @property-read Collection<ExplicitManyToManyB7> $related
  */
-abstract class ExplicitManyToManyA7 extends Model
+abstract class PrismaExplicitManyToManyA7 extends Model
 {
     public $timestamps = false;
     protected $table = 'ExplicitManyToManyA7';
@@ -853,13 +870,15 @@ exports[`models: generation: ExplicitManyToManyB 1`] = `
 
 namespace App\\\\Models\\\\Prisma;
 
+use App\\\\Models\\\\ExplicitManyToManyA;
+use App\\\\Models\\\\ExplicitManyToManyPivot;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Collection;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 
 /**
- * ExplicitManyToManyB Model.
+ * PrismaExplicitManyToManyB Model.
  *
  * @mixin Builder
  *
@@ -881,7 +900,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  * @property-read int $id
  * @property-read Collection<ExplicitManyToManyA> $related
  */
-abstract class ExplicitManyToManyB extends Model
+abstract class PrismaExplicitManyToManyB extends Model
 {
     public $timestamps = false;
     protected $table = 'ExplicitManyToManyB';
@@ -914,13 +933,15 @@ exports[`models: generation: ExplicitManyToManyB2 1`] = `
 
 namespace App\\\\Models\\\\Prisma;
 
+use App\\\\Models\\\\ExplicitManyToManyA2;
+use App\\\\Models\\\\ExplicitManyToManyPivot2;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Collection;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 
 /**
- * ExplicitManyToManyB2 Model.
+ * PrismaExplicitManyToManyB2 Model.
  *
  * @mixin Builder
  *
@@ -942,7 +963,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  * @property-read int $id
  * @property-read Collection<ExplicitManyToManyA2> $explicit_many_to_many_a2
  */
-abstract class ExplicitManyToManyB2 extends Model
+abstract class PrismaExplicitManyToManyB2 extends Model
 {
     public $timestamps = false;
     protected $table = 'ExplicitManyToManyB2';
@@ -975,6 +996,8 @@ exports[`models: generation: ExplicitManyToManyB3 1`] = `
 
 namespace App\\\\Models\\\\Prisma;
 
+use App\\\\Models\\\\ExplicitManyToManyA3;
+use App\\\\Models\\\\ExplicitManyToManyPivot3;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Collection;
@@ -982,7 +1005,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 use Illuminate\\\\Validation\\\\Rule;
 
 /**
- * ExplicitManyToManyB3 Model.
+ * PrismaExplicitManyToManyB3 Model.
  *
  * @mixin Builder
  *
@@ -1005,7 +1028,7 @@ use Illuminate\\\\Validation\\\\Rule;
  * @property int $otherIdB
  * @property-read Collection<ExplicitManyToManyA3> $related
  */
-abstract class ExplicitManyToManyB3 extends Model
+abstract class PrismaExplicitManyToManyB3 extends Model
 {
     public $timestamps = false;
     protected $table = 'ExplicitManyToManyB3';
@@ -1048,6 +1071,8 @@ exports[`models: generation: ExplicitManyToManyB4 1`] = `
 
 namespace App\\\\Models\\\\Prisma;
 
+use App\\\\Models\\\\ExplicitManyToManyA4;
+use App\\\\Models\\\\ExplicitManyToManyPivot4;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Collection;
@@ -1055,7 +1080,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 use Illuminate\\\\Validation\\\\Rule;
 
 /**
- * ExplicitManyToManyB4 Model.
+ * PrismaExplicitManyToManyB4 Model.
  *
  * @mixin Builder
  *
@@ -1078,7 +1103,7 @@ use Illuminate\\\\Validation\\\\Rule;
  * @property int $otherIdB
  * @property-read Collection<ExplicitManyToManyA4> $related
  */
-abstract class ExplicitManyToManyB4 extends Model
+abstract class PrismaExplicitManyToManyB4 extends Model
 {
     public $timestamps = false;
     protected $table = 'ExplicitManyToManyB4';
@@ -1121,13 +1146,15 @@ exports[`models: generation: ExplicitManyToManyB5 1`] = `
 
 namespace App\\\\Models\\\\Prisma;
 
+use App\\\\Models\\\\ExplicitManyToManyA5;
+use App\\\\Models\\\\ExplicitManyToManyPivot5;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Collection;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 
 /**
- * ExplicitManyToManyB5 Model.
+ * PrismaExplicitManyToManyB5 Model.
  *
  * @mixin Builder
  *
@@ -1151,7 +1178,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  * @property-read ExplicitManyToManyPivot5 $pivot
  * @property-read Collection<ExplicitManyToManyA5> $related
  */
-abstract class ExplicitManyToManyB5 extends Model
+abstract class PrismaExplicitManyToManyB5 extends Model
 {
     public $timestamps = false;
     protected $table = 'ExplicitManyToManyB5';
@@ -1195,13 +1222,15 @@ exports[`models: generation: ExplicitManyToManyB6 1`] = `
 
 namespace App\\\\Models\\\\Prisma;
 
+use App\\\\Models\\\\ExplicitManyToManyA6;
+use App\\\\Models\\\\ExplicitManyToManyPivot6;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Collection;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 
 /**
- * ExplicitManyToManyB6 Model.
+ * PrismaExplicitManyToManyB6 Model.
  *
  * @mixin Builder
  *
@@ -1223,7 +1252,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  * @property-read int $key
  * @property-read Collection<ExplicitManyToManyA6> $related
  */
-abstract class ExplicitManyToManyB6 extends Model
+abstract class PrismaExplicitManyToManyB6 extends Model
 {
     public $timestamps = false;
     protected $table = 'ExplicitManyToManyB6';
@@ -1258,6 +1287,8 @@ exports[`models: generation: ExplicitManyToManyB7 1`] = `
 
 namespace App\\\\Models\\\\Prisma;
 
+use App\\\\Models\\\\ExplicitManyToManyA7;
+use App\\\\Models\\\\ExplicitManyToManyPivot7;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Collection;
@@ -1265,7 +1296,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 use Illuminate\\\\Validation\\\\Rule;
 
 /**
- * ExplicitManyToManyB7 Model.
+ * PrismaExplicitManyToManyB7 Model.
  *
  * @mixin Builder
  *
@@ -1287,7 +1318,7 @@ use Illuminate\\\\Validation\\\\Rule;
  * @property int $key
  * @property-read Collection<ExplicitManyToManyA7> $related
  */
-abstract class ExplicitManyToManyB7 extends Model
+abstract class PrismaExplicitManyToManyB7 extends Model
 {
     public $timestamps = false;
     protected $table = 'ExplicitManyToManyB7';
@@ -1333,7 +1364,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\Pivot;
 
 /**
- * ExplicitManyToManyPivot Model.
+ * PrismaExplicitManyToManyPivot Model.
  *
  * @mixin Builder
  *
@@ -1356,7 +1387,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\Pivot;
  * @property int $A_id
  * @property int $B_id
  */
-abstract class ExplicitManyToManyPivot extends Pivot
+abstract class PrismaExplicitManyToManyPivot extends Pivot
 {
     public $incrementing = true;
 
@@ -1388,7 +1419,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\Pivot;
 
 /**
- * ExplicitManyToManyPivot2 Model.
+ * PrismaExplicitManyToManyPivot2 Model.
  *
  * @mixin Builder
  *
@@ -1411,7 +1442,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\Pivot;
  * @property int $explicit_many_to_many_a2_id
  * @property int $explicit_many_to_many_b2_id
  */
-abstract class ExplicitManyToManyPivot2 extends Pivot
+abstract class PrismaExplicitManyToManyPivot2 extends Pivot
 {
     public $incrementing = true;
 
@@ -1443,7 +1474,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\Pivot;
 
 /**
- * ExplicitManyToManyPivot3 Model.
+ * PrismaExplicitManyToManyPivot3 Model.
  *
  * @mixin Builder
  *
@@ -1466,7 +1497,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\Pivot;
  * @property int $A_id
  * @property int $B_id
  */
-abstract class ExplicitManyToManyPivot3 extends Pivot
+abstract class PrismaExplicitManyToManyPivot3 extends Pivot
 {
     public $incrementing = true;
 
@@ -1498,7 +1529,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\Pivot;
 
 /**
- * ExplicitManyToManyPivot4 Model.
+ * PrismaExplicitManyToManyPivot4 Model.
  *
  * @mixin Builder
  *
@@ -1521,7 +1552,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\Pivot;
  * @property int $A_id
  * @property int $B_id
  */
-abstract class ExplicitManyToManyPivot4 extends Pivot
+abstract class PrismaExplicitManyToManyPivot4 extends Pivot
 {
     public $incrementing = true;
 
@@ -1554,7 +1585,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\Pivot;
 use Illuminate\\\\Validation\\\\Rule;
 
 /**
- * ExplicitManyToManyPivot5 Model.
+ * PrismaExplicitManyToManyPivot5 Model.
  *
  * @mixin Builder
  *
@@ -1578,7 +1609,7 @@ use Illuminate\\\\Validation\\\\Rule;
  * @property int $B_id
  * @property int $A2_id
  */
-abstract class ExplicitManyToManyPivot5 extends Pivot
+abstract class PrismaExplicitManyToManyPivot5 extends Pivot
 {
     public $incrementing = true;
 
@@ -1620,7 +1651,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\Pivot;
 
 /**
- * ExplicitManyToManyPivot6 Model.
+ * PrismaExplicitManyToManyPivot6 Model.
  *
  * @mixin Builder
  *
@@ -1643,7 +1674,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\Pivot;
  * @property int $A_id
  * @property int $B_id
  */
-abstract class ExplicitManyToManyPivot6 extends Pivot
+abstract class PrismaExplicitManyToManyPivot6 extends Pivot
 {
     public $incrementing = true;
 
@@ -1677,7 +1708,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\Pivot;
 
 /**
- * ExplicitManyToManyPivot7 Model.
+ * PrismaExplicitManyToManyPivot7 Model.
  *
  * @mixin Builder
  *
@@ -1700,7 +1731,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\Pivot;
  * @property int $A_id
  * @property int $B_id
  */
-abstract class ExplicitManyToManyPivot7 extends Pivot
+abstract class PrismaExplicitManyToManyPivot7 extends Pivot
 {
     public $incrementing = true;
 
@@ -1735,7 +1766,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 use Illuminate\\\\Validation\\\\Rule;
 
 /**
- * FieldComments Model.
+ * PrismaFieldComments Model.
  *
  * @mixin Builder
  *
@@ -1760,7 +1791,7 @@ use Illuminate\\\\Validation\\\\Rule;
  * @property int    $age
  * @property int    $height
  */
-abstract class FieldComments extends Model
+abstract class PrismaFieldComments extends Model
 {
     public $timestamps = false;
     protected $table = 'FieldComments';
@@ -1801,7 +1832,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 
 /**
- * FieldMultipleComments Model.
+ * PrismaFieldMultipleComments Model.
  *
  * @mixin Builder
  *
@@ -1823,7 +1854,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  * @property-read int $id
  * @property string $name
  */
-abstract class FieldMultipleComments extends Model
+abstract class PrismaFieldMultipleComments extends Model
 {
     public $timestamps = false;
     protected $table = 'FieldMultipleComments';
@@ -1851,7 +1882,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 
 /**
- * Fillable Model.
+ * PrismaFillable Model.
  *
  * @mixin Builder
  *
@@ -1876,7 +1907,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  * @property int     $age
  * @property ?string $name
  */
-abstract class Fillable extends Model
+abstract class PrismaFillable extends Model
 {
     public $timestamps = false;
     protected $table = 'Fillable';
@@ -1916,7 +1947,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 
 /**
- * Guarded Model.
+ * PrismaGuarded Model.
  *
  * @mixin Builder
  *
@@ -1941,7 +1972,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  * @property int     $age
  * @property ?string $name
  */
-abstract class Guarded extends Model
+abstract class PrismaGuarded extends Model
 {
     public $timestamps = false;
     protected $table = 'Guarded';
@@ -1981,7 +2012,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 
 /**
- * Hidden Model.
+ * PrismaHidden Model.
  *
  * @mixin Builder
  *
@@ -2006,7 +2037,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  * @property string  $api_key
  * @property ?string $name
  */
-abstract class Hidden extends Model
+abstract class PrismaHidden extends Model
 {
     public $timestamps = false;
     protected $table = 'Hidden';
@@ -2043,7 +2074,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 use Illuminate\\\\Validation\\\\Rule;
 
 /**
- * Ignore Model.
+ * PrismaIgnore Model.
  *
  * @mixin Builder
  *
@@ -2066,7 +2097,7 @@ use Illuminate\\\\Validation\\\\Rule;
  * @property string $email
  * @property int    $age
  */
-abstract class Ignore extends Model
+abstract class PrismaIgnore extends Model
 {
     public $timestamps = false;
     protected $table = 'Ignore';
@@ -2098,13 +2129,14 @@ exports[`models: generation: ImplicitManyToManyA 1`] = `
 
 namespace App\\\\Models\\\\Prisma;
 
+use App\\\\Models\\\\ImplicitManyToManyB;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Collection;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 
 /**
- * ImplicitManyToManyA Model.
+ * PrismaImplicitManyToManyA Model.
  *
  * @mixin Builder
  *
@@ -2126,7 +2158,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  * @property-read int $id
  * @property-read Collection<ImplicitManyToManyB> $related
  */
-abstract class ImplicitManyToManyA extends Model
+abstract class PrismaImplicitManyToManyA extends Model
 {
     public $timestamps = false;
     protected $table = 'ImplicitManyToManyA';
@@ -2157,13 +2189,14 @@ exports[`models: generation: ImplicitManyToManyB 1`] = `
 
 namespace App\\\\Models\\\\Prisma;
 
+use App\\\\Models\\\\ImplicitManyToManyA;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Collection;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 
 /**
- * ImplicitManyToManyB Model.
+ * PrismaImplicitManyToManyB Model.
  *
  * @mixin Builder
  *
@@ -2185,7 +2218,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  * @property-read int $id
  * @property-read Collection<ImplicitManyToManyA> $related
  */
-abstract class ImplicitManyToManyB extends Model
+abstract class PrismaImplicitManyToManyB extends Model
 {
     public $timestamps = false;
     protected $table = 'ImplicitManyToManyB';
@@ -2221,7 +2254,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 
 /**
- * MappedId Model.
+ * PrismaMappedId Model.
  *
  * @mixin Builder
  *
@@ -2243,7 +2276,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  * @property-read int $primary_id
  * @property string $firstname
  */
-abstract class MappedId extends Model
+abstract class PrismaMappedId extends Model
 {
     public $timestamps = false;
     protected $table = 'MappedId';
@@ -2277,7 +2310,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 
 /**
- * MassAssignable Model.
+ * PrismaMassAssignable Model.
  *
  * @mixin Builder
  *
@@ -2302,7 +2335,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  * @property int     $age
  * @property ?string $name
  */
-abstract class MassAssignable extends Model
+abstract class PrismaMassAssignable extends Model
 {
     public $timestamps = false;
     protected $table = 'MassAssignable';
@@ -2342,7 +2375,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 
 /**
- * ModelComments Model.
+ * PrismaModelComments Model.
  *
  * @mixin Builder
  *
@@ -2363,7 +2396,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  *
  * @property int $id
  */
-abstract class ModelComments extends Model
+abstract class PrismaModelComments extends Model
 {
     public $timestamps = false;
     protected $table = 'ModelComments';
@@ -2391,7 +2424,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 
 /**
- * ModelMultipleComments Model.
+ * PrismaModelMultipleComments Model.
  *
  * @mixin Builder
  *
@@ -2412,7 +2445,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  *
  * @property int $id
  */
-abstract class ModelMultipleComments extends Model
+abstract class PrismaModelMultipleComments extends Model
 {
     public $timestamps = false;
     protected $table = 'ModelMultipleComments';
@@ -2440,7 +2473,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 
 /**
- * MultipleComments Model.
+ * PrismaMultipleComments Model.
  *
  * @mixin Builder
  *
@@ -2462,7 +2495,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  * @property int $id
  * @property-read string $password
  */
-abstract class MultipleComments extends Model
+abstract class PrismaMultipleComments extends Model
 {
     public $timestamps = false;
     protected $table = 'MultipleComments';
@@ -2495,7 +2528,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 use Illuminate\\\\Validation\\\\Rule;
 
 /**
- * MultipleUnique Model.
+ * PrismaMultipleUnique Model.
  *
  * @mixin Builder
  *
@@ -2520,7 +2553,7 @@ use Illuminate\\\\Validation\\\\Rule;
  * @property string $lastname
  * @property ?int   $age
  */
-abstract class MultipleUnique extends Model
+abstract class PrismaMultipleUnique extends Model
 {
     public $timestamps = false;
     protected $table = 'MultipleUnique';
@@ -2570,7 +2603,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 use Illuminate\\\\Validation\\\\Rule;
 
 /**
- * MultipleUnique2 Model.
+ * PrismaMultipleUnique2 Model.
  *
  * @mixin Builder
  *
@@ -2595,7 +2628,7 @@ use Illuminate\\\\Validation\\\\Rule;
  * @property string $lastname
  * @property ?int   $age
  */
-abstract class MultipleUnique2 extends Model
+abstract class PrismaMultipleUnique2 extends Model
 {
     public $timestamps = false;
     protected $table = 'MultipleUnique2';
@@ -2644,7 +2677,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 use Illuminate\\\\Validation\\\\Rule;
 
 /**
- * NoPrimaryKey Model.
+ * PrismaNoPrimaryKey Model.
  *
  * @mixin Builder
  *
@@ -2666,7 +2699,7 @@ use Illuminate\\\\Validation\\\\Rule;
  * @property string $name
  * @property int    $age
  */
-abstract class NoPrimaryKey extends Model
+abstract class PrismaNoPrimaryKey extends Model
 {
     public $timestamps = false;
     protected $table = 'NoPrimaryKey';
@@ -2701,7 +2734,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 
 /**
- * NoRules Model.
+ * PrismaNoRules Model.
  *
  * @mixin Builder
  *
@@ -2720,7 +2753,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  */
-abstract class NoRules extends Model
+abstract class PrismaNoRules extends Model
 {
     public $timestamps = false;
     protected $table = 'NoRules';
@@ -2738,7 +2771,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 
 /**
- * NullableField Model.
+ * PrismaNullableField Model.
  *
  * @mixin Builder
  *
@@ -2760,7 +2793,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  * @property-read int $id
  * @property ?string $name
  */
-abstract class NullableField extends Model
+abstract class PrismaNullableField extends Model
 {
     public $timestamps = false;
     protected $table = 'NullableField';
@@ -2783,13 +2816,14 @@ exports[`models: generation: OneToManyA 1`] = `
 
 namespace App\\\\Models\\\\Prisma;
 
+use App\\\\Models\\\\OneToManyB;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Collection;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 
 /**
- * OneToManyA Model.
+ * PrismaOneToManyA Model.
  *
  * @mixin Builder
  *
@@ -2811,7 +2845,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  * @property-read int $id
  * @property-read Collection<OneToManyB> $related
  */
-abstract class OneToManyA extends Model
+abstract class PrismaOneToManyA extends Model
 {
     public $timestamps = false;
     protected $table = 'OneToManyA';
@@ -2837,13 +2871,14 @@ exports[`models: generation: OneToManyA2 1`] = `
 
 namespace App\\\\Models\\\\Prisma;
 
+use App\\\\Models\\\\OneToManyB2;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Collection;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 
 /**
- * OneToManyA2 Model.
+ * PrismaOneToManyA2 Model.
  *
  * @mixin Builder
  *
@@ -2865,7 +2900,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  * @property-read int $id
  * @property-read Collection<OneToManyB2> $related
  */
-abstract class OneToManyA2 extends Model
+abstract class PrismaOneToManyA2 extends Model
 {
     public $timestamps = false;
     protected $table = 'OneToManyA2';
@@ -2891,6 +2926,7 @@ exports[`models: generation: OneToManyA3 1`] = `
 
 namespace App\\\\Models\\\\Prisma;
 
+use App\\\\Models\\\\OneToManyB3;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Collection;
@@ -2898,7 +2934,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 use Illuminate\\\\Validation\\\\Rule;
 
 /**
- * OneToManyA3 Model.
+ * PrismaOneToManyA3 Model.
  *
  * @mixin Builder
  *
@@ -2921,7 +2957,7 @@ use Illuminate\\\\Validation\\\\Rule;
  * @property int $otherId
  * @property-read Collection<OneToManyB3> $related
  */
-abstract class OneToManyA3 extends Model
+abstract class PrismaOneToManyA3 extends Model
 {
     public $timestamps = false;
     protected $table = 'OneToManyA3';
@@ -2957,6 +2993,7 @@ exports[`models: generation: OneToManyA4 1`] = `
 
 namespace App\\\\Models\\\\Prisma;
 
+use App\\\\Models\\\\OneToManyB4;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Collection;
@@ -2964,7 +3001,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 use Illuminate\\\\Validation\\\\Rule;
 
 /**
- * OneToManyA4 Model.
+ * PrismaOneToManyA4 Model.
  *
  * @mixin Builder
  *
@@ -2986,7 +3023,7 @@ use Illuminate\\\\Validation\\\\Rule;
  * @property int $main_id
  * @property-read Collection<OneToManyB4> $related
  */
-abstract class OneToManyA4 extends Model
+abstract class PrismaOneToManyA4 extends Model
 {
     public $timestamps = false;
     protected $table = 'OneToManyA4';
@@ -3020,12 +3057,13 @@ exports[`models: generation: OneToManyB 1`] = `
 
 namespace App\\\\Models\\\\Prisma;
 
+use App\\\\Models\\\\OneToManyA;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 
 /**
- * OneToManyB Model.
+ * PrismaOneToManyB Model.
  *
  * @mixin Builder
  *
@@ -3048,7 +3086,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  * @property int $relatedId
  * @property-read OneToManyA $one_to_one_a2
  */
-abstract class OneToManyB extends Model
+abstract class PrismaOneToManyB extends Model
 {
     public $timestamps = false;
     protected $table = 'OneToManyB';
@@ -3076,12 +3114,13 @@ exports[`models: generation: OneToManyB2 1`] = `
 
 namespace App\\\\Models\\\\Prisma;
 
+use App\\\\Models\\\\OneToManyA2;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 
 /**
- * OneToManyB2 Model.
+ * PrismaOneToManyB2 Model.
  *
  * @mixin Builder
  *
@@ -3104,7 +3143,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  * @property int $one_to_many_a2_id
  * @property-read OneToManyA2 $one_to_many_a2
  */
-abstract class OneToManyB2 extends Model
+abstract class PrismaOneToManyB2 extends Model
 {
     public $timestamps = false;
     protected $table = 'OneToManyB2';
@@ -3132,12 +3171,13 @@ exports[`models: generation: OneToManyB3 1`] = `
 
 namespace App\\\\Models\\\\Prisma;
 
+use App\\\\Models\\\\OneToManyA3;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 
 /**
- * OneToManyB3 Model.
+ * PrismaOneToManyB3 Model.
  *
  * @mixin Builder
  *
@@ -3160,7 +3200,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  * @property int $relatedId
  * @property-read OneToManyA3 $related
  */
-abstract class OneToManyB3 extends Model
+abstract class PrismaOneToManyB3 extends Model
 {
     public $timestamps = false;
     protected $table = 'OneToManyB3';
@@ -3188,13 +3228,14 @@ exports[`models: generation: OneToManyB4 1`] = `
 
 namespace App\\\\Models\\\\Prisma;
 
+use App\\\\Models\\\\OneToManyA4;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 use Illuminate\\\\Validation\\\\Rule;
 
 /**
- * OneToManyB4 Model.
+ * PrismaOneToManyB4 Model.
  *
  * @mixin Builder
  *
@@ -3217,7 +3258,7 @@ use Illuminate\\\\Validation\\\\Rule;
  * @property int $relatedId
  * @property-read OneToManyA4 $related
  */
-abstract class OneToManyB4 extends Model
+abstract class PrismaOneToManyB4 extends Model
 {
     public $timestamps = false;
     protected $table = 'OneToManyB4';
@@ -3253,12 +3294,13 @@ exports[`models: generation: OneToOneA 1`] = `
 
 namespace App\\\\Models\\\\Prisma;
 
+use App\\\\Models\\\\OneToOneB;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 
 /**
- * OneToOneA Model.
+ * PrismaOneToOneA Model.
  *
  * @mixin Builder
  *
@@ -3280,7 +3322,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  * @property-read int $id
  * @property-read null|OneToOneB $related
  */
-abstract class OneToOneA extends Model
+abstract class PrismaOneToOneA extends Model
 {
     public $timestamps = false;
     protected $table = 'OneToOneA';
@@ -3306,12 +3348,13 @@ exports[`models: generation: OneToOneA2 1`] = `
 
 namespace App\\\\Models\\\\Prisma;
 
+use App\\\\Models\\\\OneToOneB2;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 
 /**
- * OneToOneA2 Model.
+ * PrismaOneToOneA2 Model.
  *
  * @mixin Builder
  *
@@ -3333,7 +3376,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  * @property-read int $id
  * @property-read null|OneToOneB2 $related
  */
-abstract class OneToOneA2 extends Model
+abstract class PrismaOneToOneA2 extends Model
 {
     public $timestamps = false;
     protected $table = 'OneToOneA2';
@@ -3359,13 +3402,14 @@ exports[`models: generation: OneToOneA3 1`] = `
 
 namespace App\\\\Models\\\\Prisma;
 
+use App\\\\Models\\\\OneToOneB3;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 use Illuminate\\\\Validation\\\\Rule;
 
 /**
- * OneToOneA3 Model.
+ * PrismaOneToOneA3 Model.
  *
  * @mixin Builder
  *
@@ -3388,7 +3432,7 @@ use Illuminate\\\\Validation\\\\Rule;
  * @property int $otherId
  * @property-read null|OneToOneB3 $related
  */
-abstract class OneToOneA3 extends Model
+abstract class PrismaOneToOneA3 extends Model
 {
     public $timestamps = false;
     protected $table = 'OneToOneA3';
@@ -3424,12 +3468,13 @@ exports[`models: generation: OneToOneA4 1`] = `
 
 namespace App\\\\Models\\\\Prisma;
 
+use App\\\\Models\\\\OneToOneB4;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 
 /**
- * OneToOneA4 Model.
+ * PrismaOneToOneA4 Model.
  *
  * @mixin Builder
  *
@@ -3451,7 +3496,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  * @property-read int $id
  * @property-read null|OneToOneB4 $related
  */
-abstract class OneToOneA4 extends Model
+abstract class PrismaOneToOneA4 extends Model
 {
     public $timestamps = false;
     protected $table = 'OneToOneA4';
@@ -3477,13 +3522,14 @@ exports[`models: generation: OneToOneA5 1`] = `
 
 namespace App\\\\Models\\\\Prisma;
 
+use App\\\\Models\\\\OneToOneB5;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 use Illuminate\\\\Validation\\\\Rule;
 
 /**
- * OneToOneA5 Model.
+ * PrismaOneToOneA5 Model.
  *
  * @mixin Builder
  *
@@ -3505,7 +3551,7 @@ use Illuminate\\\\Validation\\\\Rule;
  * @property int $main_id
  * @property-read null|OneToOneB5 $related
  */
-abstract class OneToOneA5 extends Model
+abstract class PrismaOneToOneA5 extends Model
 {
     public $timestamps = false;
     protected $table = 'OneToOneA5';
@@ -3539,13 +3585,14 @@ exports[`models: generation: OneToOneB 1`] = `
 
 namespace App\\\\Models\\\\Prisma;
 
+use App\\\\Models\\\\OneToOneA;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 use Illuminate\\\\Validation\\\\Rule;
 
 /**
- * OneToOneB Model.
+ * PrismaOneToOneB Model.
  *
  * @mixin Builder
  *
@@ -3568,7 +3615,7 @@ use Illuminate\\\\Validation\\\\Rule;
  * @property int $relatedId
  * @property-read OneToOneA $related
  */
-abstract class OneToOneB extends Model
+abstract class PrismaOneToOneB extends Model
 {
     public $timestamps = false;
     protected $table = 'OneToOneB';
@@ -3604,13 +3651,14 @@ exports[`models: generation: OneToOneB2 1`] = `
 
 namespace App\\\\Models\\\\Prisma;
 
+use App\\\\Models\\\\OneToOneA2;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 use Illuminate\\\\Validation\\\\Rule;
 
 /**
- * OneToOneB2 Model.
+ * PrismaOneToOneB2 Model.
  *
  * @mixin Builder
  *
@@ -3633,7 +3681,7 @@ use Illuminate\\\\Validation\\\\Rule;
  * @property int $one_to_one_a2_id
  * @property-read OneToOneA2 $one_to_one_a2
  */
-abstract class OneToOneB2 extends Model
+abstract class PrismaOneToOneB2 extends Model
 {
     public $timestamps = false;
     protected $table = 'OneToOneB2';
@@ -3669,13 +3717,14 @@ exports[`models: generation: OneToOneB3 1`] = `
 
 namespace App\\\\Models\\\\Prisma;
 
+use App\\\\Models\\\\OneToOneA3;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 use Illuminate\\\\Validation\\\\Rule;
 
 /**
- * OneToOneB3 Model.
+ * PrismaOneToOneB3 Model.
  *
  * @mixin Builder
  *
@@ -3698,7 +3747,7 @@ use Illuminate\\\\Validation\\\\Rule;
  * @property int $related_id
  * @property-read OneToOneA3 $related
  */
-abstract class OneToOneB3 extends Model
+abstract class PrismaOneToOneB3 extends Model
 {
     public $timestamps = false;
     protected $table = 'OneToOneB3';
@@ -3734,13 +3783,14 @@ exports[`models: generation: OneToOneB4 1`] = `
 
 namespace App\\\\Models\\\\Prisma;
 
+use App\\\\Models\\\\OneToOneA4;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 use Illuminate\\\\Validation\\\\Rule;
 
 /**
- * OneToOneB4 Model.
+ * PrismaOneToOneB4 Model.
  *
  * @mixin Builder
  *
@@ -3763,7 +3813,7 @@ use Illuminate\\\\Validation\\\\Rule;
  * @property ?int $relatedId
  * @property-read null|OneToOneA4 $related
  */
-abstract class OneToOneB4 extends Model
+abstract class PrismaOneToOneB4 extends Model
 {
     public $timestamps = false;
     protected $table = 'OneToOneB4';
@@ -3799,13 +3849,14 @@ exports[`models: generation: OneToOneB5 1`] = `
 
 namespace App\\\\Models\\\\Prisma;
 
+use App\\\\Models\\\\OneToOneA5;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 use Illuminate\\\\Validation\\\\Rule;
 
 /**
- * OneToOneB5 Model.
+ * PrismaOneToOneB5 Model.
  *
  * @mixin Builder
  *
@@ -3828,7 +3879,7 @@ use Illuminate\\\\Validation\\\\Rule;
  * @property ?int $relatedId
  * @property-read null|OneToOneA5 $related
  */
-abstract class OneToOneB5 extends Model
+abstract class PrismaOneToOneB5 extends Model
 {
     public $timestamps = false;
     protected $table = 'OneToOneB5';
@@ -3873,6 +3924,8 @@ exports[`models: generation: Post 1`] = `
 namespace App\\\\Models\\\\Prisma;
 
 use App\\\\Enums\\\\Prisma\\\\PostType;
+use App\\\\Models\\\\Category;
+use App\\\\Models\\\\User;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Collection;
@@ -3881,7 +3934,7 @@ use Illuminate\\\\Support\\\\Carbon;
 use Illuminate\\\\Validation\\\\Rules\\\\Enum;
 
 /**
- * Post Model.
+ * PrismaPost Model.
  *
  * @mixin Builder
  *
@@ -3910,7 +3963,7 @@ use Illuminate\\\\Validation\\\\Rules\\\\Enum;
  * @property-read User $author
  * @property-read Collection<Category> $categories
  */
-abstract class Post extends Model
+abstract class PrismaPost extends Model
 {
     public const CREATED_AT = 'createdAt';
     public const UPDATED_AT = 'updatedAt';
@@ -3963,13 +4016,14 @@ exports[`models: generation: Profile 1`] = `
 
 namespace App\\\\Models\\\\Prisma;
 
+use App\\\\Models\\\\User;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 use Illuminate\\\\Validation\\\\Rule;
 
 /**
- * Profile Model.
+ * PrismaProfile Model.
  *
  * @mixin Builder
  *
@@ -3993,7 +4047,7 @@ use Illuminate\\\\Validation\\\\Rule;
  * @property int    $userId
  * @property-read User $user
  */
-abstract class Profile extends Model
+abstract class PrismaProfile extends Model
 {
     public $timestamps = false;
     protected $table = 'Profile';
@@ -4036,7 +4090,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 
 /**
- * ReadOnlyField Model.
+ * PrismaReadOnlyField Model.
  *
  * @mixin Builder
  *
@@ -4061,7 +4115,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  * @property string  $password
  * @property ?string $name
  */
-abstract class ReadOnlyField extends Model
+abstract class PrismaReadOnlyField extends Model
 {
     public $timestamps = false;
     protected $table = 'ReadOnlyField';
@@ -4090,13 +4144,14 @@ exports[`models: generation: SelfRelation 1`] = `
 
 namespace App\\\\Models\\\\Prisma;
 
+use App\\\\Models\\\\SelfRelation;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 use Illuminate\\\\Validation\\\\Rule;
 
 /**
- * SelfRelation Model.
+ * PrismaSelfRelation Model.
  *
  * @mixin Builder
  *
@@ -4120,7 +4175,7 @@ use Illuminate\\\\Validation\\\\Rule;
  * @property-read null|SelfRelation $child
  * @property-read SelfRelation $parent
  */
-abstract class SelfRelation extends Model
+abstract class PrismaSelfRelation extends Model
 {
     public $timestamps = false;
     protected $table = 'SelfRelation';
@@ -4145,12 +4200,12 @@ abstract class SelfRelation extends Model
 
     public function child()
     {
-        return $this->hasOne(self::class, 'relatedId', 'id');
+        return $this->hasOne(SelfRelation::class, 'relatedId', 'id');
     }
 
     public function parent()
     {
-        return $this->belongsTo(self::class, 'relatedId', 'id');
+        return $this->belongsTo(SelfRelation::class, 'relatedId', 'id');
     }
 }
 "
@@ -4168,7 +4223,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\SoftDeletes;
 use Illuminate\\\\Support\\\\Carbon;
 
 /**
- * SoftDelete1 Model.
+ * PrismaSoftDelete1 Model.
  *
  * @mixin Builder
  *
@@ -4192,7 +4247,7 @@ use Illuminate\\\\Support\\\\Carbon;
  * @property string $password
  * @property Carbon $deleted_at
  */
-abstract class SoftDelete1 extends Model
+abstract class PrismaSoftDelete1 extends Model
 {
     use SoftDeletes;
 
@@ -4229,7 +4284,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\SoftDeletes;
 use Illuminate\\\\Support\\\\Carbon;
 
 /**
- * SoftDelete2 Model.
+ * PrismaSoftDelete2 Model.
  *
  * @mixin Builder
  *
@@ -4253,7 +4308,7 @@ use Illuminate\\\\Support\\\\Carbon;
  * @property string $password
  * @property Carbon $deleted_timestamp
  */
-abstract class SoftDelete2 extends Model
+abstract class PrismaSoftDelete2 extends Model
 {
     use SoftDeletes;
 
@@ -4291,7 +4346,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 use Illuminate\\\\Support\\\\Carbon;
 
 /**
- * Timestamps1 Model.
+ * PrismaTimestamps1 Model.
  *
  * @mixin Builder
  *
@@ -4314,7 +4369,7 @@ use Illuminate\\\\Support\\\\Carbon;
  * @property Carbon $created_timestamp
  * @property Carbon $updated_timestamp
  */
-abstract class Timestamps1 extends Model
+abstract class PrismaTimestamps1 extends Model
 {
     public const CREATED_AT = 'created_timestamp';
     public const UPDATED_AT = 'updated_timestamp';
@@ -4346,7 +4401,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 use Illuminate\\\\Support\\\\Carbon;
 
 /**
- * Timestamps2 Model.
+ * PrismaTimestamps2 Model.
  *
  * @mixin Builder
  *
@@ -4369,7 +4424,7 @@ use Illuminate\\\\Support\\\\Carbon;
  * @property Carbon $created_at
  * @property Carbon $updated_timestamp
  */
-abstract class Timestamps2 extends Model
+abstract class PrismaTimestamps2 extends Model
 {
     public const UPDATED_AT = 'updated_timestamp';
     protected $table = 'Timestamps2';
@@ -4400,7 +4455,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 use Illuminate\\\\Support\\\\Carbon;
 
 /**
- * Timestamps3 Model.
+ * PrismaTimestamps3 Model.
  *
  * @mixin Builder
  *
@@ -4423,7 +4478,7 @@ use Illuminate\\\\Support\\\\Carbon;
  * @property Carbon $created_timestamp
  * @property Carbon $updated_at
  */
-abstract class Timestamps3 extends Model
+abstract class PrismaTimestamps3 extends Model
 {
     public const CREATED_AT = 'created_timestamp';
     protected $table = 'Timestamps3';
@@ -4454,7 +4509,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 use Illuminate\\\\Support\\\\Carbon;
 
 /**
- * Timestamps4 Model.
+ * PrismaTimestamps4 Model.
  *
  * @mixin Builder
  *
@@ -4477,7 +4532,7 @@ use Illuminate\\\\Support\\\\Carbon;
  * @property Carbon $created_at
  * @property Carbon $updated_at
  */
-abstract class Timestamps4 extends Model
+abstract class PrismaTimestamps4 extends Model
 {
     protected $table = 'Timestamps4';
 
@@ -4507,7 +4562,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 use Illuminate\\\\Support\\\\Carbon;
 
 /**
- * Timestamps5 Model.
+ * PrismaTimestamps5 Model.
  *
  * @mixin Builder
  *
@@ -4530,7 +4585,7 @@ use Illuminate\\\\Support\\\\Carbon;
  * @property Carbon $created_at
  * @property Carbon $updated_at
  */
-abstract class Timestamps5 extends Model
+abstract class PrismaTimestamps5 extends Model
 {
     protected $table = 'Timestamps5';
 
@@ -4560,7 +4615,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 use Illuminate\\\\Support\\\\Carbon;
 
 /**
- * Timestamps6 Model.
+ * PrismaTimestamps6 Model.
  *
  * @mixin Builder
  *
@@ -4583,7 +4638,7 @@ use Illuminate\\\\Support\\\\Carbon;
  * @property Carbon $created_at
  * @property Carbon $updated_timestamp
  */
-abstract class Timestamps6 extends Model
+abstract class PrismaTimestamps6 extends Model
 {
     public const UPDATED_AT = 'updated_timestamp';
     protected $table = 'Timestamps6';
@@ -4614,7 +4669,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 use Illuminate\\\\Support\\\\Carbon;
 
 /**
- * Timestamps7 Model.
+ * PrismaTimestamps7 Model.
  *
  * @mixin Builder
  *
@@ -4637,7 +4692,7 @@ use Illuminate\\\\Support\\\\Carbon;
  * @property Carbon $created_at
  * @property Carbon $updated_at
  */
-abstract class Timestamps7 extends Model
+abstract class PrismaTimestamps7 extends Model
 {
     protected $table = 'Timestamps7';
 
@@ -4667,7 +4722,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 use Illuminate\\\\Support\\\\Carbon;
 
 /**
- * Timestamps8 Model.
+ * PrismaTimestamps8 Model.
  *
  * @mixin Builder
  *
@@ -4690,7 +4745,7 @@ use Illuminate\\\\Support\\\\Carbon;
  * @property Carbon $created_at
  * @property Carbon $updated_timestamp
  */
-abstract class Timestamps8 extends Model
+abstract class PrismaTimestamps8 extends Model
 {
     public const UPDATED_AT = 'updated_timestamp';
     protected $table = 'Timestamps8';
@@ -4715,12 +4770,13 @@ exports[`models: generation: TouchingA 1`] = `
 
 namespace App\\\\Models\\\\Prisma;
 
+use App\\\\Models\\\\TouchingB;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 
 /**
- * TouchingA Model.
+ * PrismaTouchingA Model.
  *
  * @mixin Builder
  *
@@ -4742,7 +4798,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  * @property-read int $id
  * @property-read null|TouchingB $related
  */
-abstract class TouchingA extends Model
+abstract class PrismaTouchingA extends Model
 {
     public $timestamps = false;
     protected $table = 'TouchingA';
@@ -4770,13 +4826,14 @@ exports[`models: generation: TouchingB 1`] = `
 
 namespace App\\\\Models\\\\Prisma;
 
+use App\\\\Models\\\\TouchingA;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 use Illuminate\\\\Validation\\\\Rule;
 
 /**
- * TouchingB Model.
+ * PrismaTouchingB Model.
  *
  * @mixin Builder
  *
@@ -4799,7 +4856,7 @@ use Illuminate\\\\Validation\\\\Rule;
  * @property int $relatedId
  * @property-read TouchingA $related
  */
-abstract class TouchingB extends Model
+abstract class PrismaTouchingB extends Model
 {
     public $timestamps = false;
     protected $table = 'TouchingB';
@@ -4843,7 +4900,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 use Illuminate\\\\Support\\\\Carbon;
 
 /**
- * Types Model.
+ * PrismaTypes Model.
  *
  * @mixin Builder
  *
@@ -4873,7 +4930,7 @@ use Illuminate\\\\Support\\\\Carbon;
  * @property Carbon $birth
  * @property array  $schema
  */
-abstract class Types extends Model
+abstract class PrismaTypes extends Model
 {
     public $timestamps = false;
     protected $table = 'Types';
@@ -4918,7 +4975,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 use Illuminate\\\\Validation\\\\Rule;
 
 /**
- * Unique Model.
+ * PrismaUnique Model.
  *
  * @mixin Builder
  *
@@ -4942,7 +4999,7 @@ use Illuminate\\\\Validation\\\\Rule;
  * @property string  $username
  * @property ?string $name
  */
-abstract class Unique extends Model
+abstract class PrismaUnique extends Model
 {
     public $timestamps = false;
     protected $table = 'Unique';
@@ -4988,7 +5045,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 
 /**
- * UnsupportedTypes Model.
+ * PrismaUnsupportedTypes Model.
  *
  * @mixin Builder
  *
@@ -5009,7 +5066,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  *
  * @property-read int $id
  */
-abstract class UnsupportedTypes extends Model
+abstract class PrismaUnsupportedTypes extends Model
 {
     public $incrementing = false;
 
@@ -5038,6 +5095,8 @@ exports[`models: generation: User 1`] = `
 namespace App\\\\Models\\\\Prisma;
 
 use App\\\\Enums\\\\Prisma\\\\Role;
+use App\\\\Models\\\\Post;
+use App\\\\Models\\\\Profile;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Collection;
@@ -5046,7 +5105,7 @@ use Illuminate\\\\Validation\\\\Rule;
 use Illuminate\\\\Validation\\\\Rules\\\\Enum;
 
 /**
- * User Model.
+ * PrismaUser Model.
  *
  * @mixin Builder
  *
@@ -5072,7 +5131,7 @@ use Illuminate\\\\Validation\\\\Rules\\\\Enum;
  * @property-read null|Profile $profile
  * @property-read Collection<Post> $posts
  */
-abstract class User extends Model
+abstract class PrismaUser extends Model
 {
     public $timestamps = false;
     protected $table = 'User';
@@ -5125,7 +5184,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 
 /**
- * Visible Model.
+ * PrismaVisible Model.
  *
  * @mixin Builder
  *
@@ -5150,7 +5209,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  * @property string  $api_key
  * @property ?string $name
  */
-abstract class Visible extends Model
+abstract class PrismaVisible extends Model
 {
     public $timestamps = false;
     protected $table = 'Visible';
@@ -5186,7 +5245,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 
 /**
- * WithArray Model.
+ * PrismaWithArray Model.
  *
  * @mixin Builder
  *
@@ -5208,7 +5267,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  * @property-read int $id
  * @property int[] $numbers
  */
-abstract class WithArray extends Model
+abstract class PrismaWithArray extends Model
 {
     public $timestamps = false;
     protected $table = 'WithArray';
@@ -5238,7 +5297,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 use Illuminate\\\\Validation\\\\Rules\\\\Enum;
 
 /**
- * WithBackedEnum Model.
+ * PrismaWithBackedEnum Model.
  *
  * @mixin Builder
  *
@@ -5263,7 +5322,7 @@ use Illuminate\\\\Validation\\\\Rules\\\\Enum;
  * @property BackedEnum[] $array
  * @property BackedEnum   $defaultEnum
  */
-abstract class WithBackedEnum extends Model
+abstract class PrismaWithBackedEnum extends Model
 {
     public $timestamps = false;
     protected $table = 'WithBackedEnum';
@@ -5301,7 +5360,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 
 /**
- * WithDbType Model.
+ * PrismaWithDbType Model.
  *
  * @mixin Builder
  *
@@ -5323,7 +5382,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  * @property-read int $id
  * @property string $email
  */
-abstract class WithDbType extends Model
+abstract class PrismaWithDbType extends Model
 {
     public $timestamps = false;
     protected $table = 'WithDbType';
@@ -5353,7 +5412,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 use Illuminate\\\\Validation\\\\Rules\\\\Enum;
 
 /**
- * WithEnum Model.
+ * PrismaWithEnum Model.
  *
  * @mixin Builder
  *
@@ -5378,7 +5437,7 @@ use Illuminate\\\\Validation\\\\Rules\\\\Enum;
  * @property Enum[] $array
  * @property Enum   $defaultEnum
  */
-abstract class WithEnum extends Model
+abstract class PrismaWithEnum extends Model
 {
     public $timestamps = false;
     protected $table = 'WithEnum';
@@ -5416,7 +5475,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 
 /**
- * WithGlobalPrimaryKey Model.
+ * PrismaWithGlobalPrimaryKey Model.
  *
  * @mixin Builder
  *
@@ -5437,7 +5496,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  *
  * @property-read int $id
  */
-abstract class WithGlobalPrimaryKey extends Model
+abstract class PrismaWithGlobalPrimaryKey extends Model
 {
     public $timestamps = false;
     protected $table = 'WithGlobalPrimaryKey';
@@ -5463,7 +5522,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 
 /**
- * WithGlobalPrimaryKeyDifferentName Model.
+ * PrismaWithGlobalPrimaryKeyDifferentName Model.
  *
  * @mixin Builder
  *
@@ -5484,7 +5543,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  *
  * @property-read int $primary_id
  */
-abstract class WithGlobalPrimaryKeyDifferentName extends Model
+abstract class PrismaWithGlobalPrimaryKeyDifferentName extends Model
 {
     public $timestamps = false;
     protected $table = 'WithGlobalPrimaryKeyDifferentName';
@@ -5512,7 +5571,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 
 /**
- * WithGlobalStringPrimaryKey Model.
+ * PrismaWithGlobalStringPrimaryKey Model.
  *
  * @mixin Builder
  *
@@ -5533,7 +5592,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  *
  * @property-read string $id
  */
-abstract class WithGlobalStringPrimaryKey extends Model
+abstract class PrismaWithGlobalStringPrimaryKey extends Model
 {
     public $incrementing = false;
 
@@ -5563,7 +5622,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 
 /**
- * WithGlobalStringPrimaryKeyDifferentName Model.
+ * PrismaWithGlobalStringPrimaryKeyDifferentName Model.
  *
  * @mixin Builder
  *
@@ -5584,7 +5643,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  *
  * @property-read string $primary_id
  */
-abstract class WithGlobalStringPrimaryKeyDifferentName extends Model
+abstract class PrismaWithGlobalStringPrimaryKeyDifferentName extends Model
 {
     public $incrementing = false;
 
@@ -5616,7 +5675,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 
 /**
- * WithPrimaryKey Model.
+ * PrismaWithPrimaryKey Model.
  *
  * @mixin Builder
  *
@@ -5637,7 +5696,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  *
  * @property-read int $id
  */
-abstract class WithPrimaryKey extends Model
+abstract class PrismaWithPrimaryKey extends Model
 {
     public $timestamps = false;
     protected $table = 'WithPrimaryKey';
@@ -5663,7 +5722,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 
 /**
- * WithPrimaryKeyDifferentName Model.
+ * PrismaWithPrimaryKeyDifferentName Model.
  *
  * @mixin Builder
  *
@@ -5684,7 +5743,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  *
  * @property-read int $primary_id
  */
-abstract class WithPrimaryKeyDifferentName extends Model
+abstract class PrismaWithPrimaryKeyDifferentName extends Model
 {
     public $timestamps = false;
     protected $table = 'WithPrimaryKeyDifferentName';
@@ -5712,7 +5771,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 
 /**
- * WithStringPrimaryKey Model.
+ * PrismaWithStringPrimaryKey Model.
  *
  * @mixin Builder
  *
@@ -5733,7 +5792,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  *
  * @property-read string $id
  */
-abstract class WithStringPrimaryKey extends Model
+abstract class PrismaWithStringPrimaryKey extends Model
 {
     public $incrementing = false;
 
@@ -5763,7 +5822,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 
 /**
- * WithStringPrimaryKeyDifferentName Model.
+ * PrismaWithStringPrimaryKeyDifferentName Model.
  *
  * @mixin Builder
  *
@@ -5784,7 +5843,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  *
  * @property-read string $primary_id
  */
-abstract class WithStringPrimaryKeyDifferentName extends Model
+abstract class PrismaWithStringPrimaryKeyDifferentName extends Model
 {
     public $incrementing = false;
 
@@ -5816,7 +5875,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 
 /**
- * WithTableMap Model.
+ * PrismaWithTableMap Model.
  *
  * @mixin Builder
  *
@@ -5837,9 +5896,10 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  *
  * @property-read int $id
  */
-abstract class WithTableMap extends Model
+abstract class PrismaWithTableMap extends Model
 {
     public $timestamps = false;
+    protected $table = 'with_table_map';
 
     protected $rules = [
         'id' => ['nullable', 'numeric', 'integer'],

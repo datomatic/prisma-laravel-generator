@@ -27,7 +27,6 @@ import getRelationsFromModel from '../../utils/get-relations-from-model';
 import isFieldTouching from '../../helpers/is-field-touching';
 import isFieldEagerLoaded from '../../helpers/is-field-eager-loaded';
 import isModelPivot from '../../helpers/is-model-pivot';
-import snake from '../../utils/strings/snake';
 import getPhpArgumentsWithDefaults from '../../helpers/get-php-arguments-with-defaults';
 import getUnsupportedFields from '../../utils/raw-schema/get-unsupported-fields';
 
@@ -39,6 +38,7 @@ const generateModel = (
   provider?: ConnectorType,
   baseModel = 'Illuminate\\Database\\Eloquent\\Model',
   basePivotModel = 'Illuminate\\Database\\Eloquent\\Relations\\Pivot',
+  prefix = 'Prisma',
 ) => {
   const {name: className, fields: allFields, primaryKey} = model;
 
@@ -49,7 +49,7 @@ const generateModel = (
 
   const tableName = getTableNameFromModel(model);
 
-  const {namespace} = getPrismaFqcn(model);
+  const {namespace} = getPrismaFqcn(model, prefix);
   const imports = new Set<string>();
   imports.add('\\Illuminate\\Database\\Eloquent\\Builder');
   imports.add('\\Closure');
@@ -258,7 +258,7 @@ const generateModel = (
       .value()}
 
     /**
-     * ${className} Model
+     * ${prefix}${className} Model
      *
      * @mixin Builder
      *
@@ -318,7 +318,7 @@ const generateModel = (
        .join('\n')
        .value()}
      */
-    abstract class ${className} extends ${getClassFromFQCN(
+    abstract class ${prefix}${className} extends ${getClassFromFQCN(
     isPivot ? basePivotModel : baseModel,
   )} {
 
@@ -327,11 +327,7 @@ const generateModel = (
         .join('\n')
         .value()}
 
-      ${
-        tableName === snake(className)
-          ? ''
-          : `protected $table = '${tableName}';`
-      }
+      protected $table = '${tableName}';
 
       ${
         primaryKeyField
