@@ -307,7 +307,7 @@ abstract class EagerLoadA extends Model
 
     public function related()
     {
-        return $this->hasOne(EagerLoadB::class, 'relatedId');
+        return $this->hasOne(EagerLoadB::class, 'relatedId', 'id');
     }
 }
 "
@@ -374,7 +374,7 @@ abstract class EagerLoadB extends Model
 
     public function related()
     {
-        return $this->belongsTo(EagerLoadA::class, 'relatedId');
+        return $this->belongsTo(EagerLoadA::class, 'relatedId', 'id');
     }
 }
 "
@@ -432,7 +432,9 @@ abstract class ExplicitManyToManyA extends Model
             ExplicitManyToManyB::class,
             'ExplicitManyToManyPivot',
             'A_id',
-            'B_id'
+            'B_id',
+            'id',
+            'id'
         )->using(ExplicitManyToManyPivot::class);
     }
 }
@@ -489,7 +491,11 @@ abstract class ExplicitManyToManyA2 extends Model
     {
         return $this->belongsToMany(
             ExplicitManyToManyB2::class,
-            'ExplicitManyToManyPivot2'
+            'ExplicitManyToManyPivot2',
+            'explicit_many_to_many_a2_id',
+            'explicit_many_to_many_b2_id',
+            'id',
+            'id'
         )->using(ExplicitManyToManyPivot2::class);
     }
 }
@@ -631,7 +637,7 @@ abstract class ExplicitManyToManyA4 extends Model
     {
         return $this->belongsToMany(
             ExplicitManyToManyB4::class,
-            null,
+            'explicit_many_to_many_a4_explicit_many_to_many_b4',
             'A_id',
             'B_id',
             'otherIdA',
@@ -691,7 +697,7 @@ abstract class ExplicitManyToManyA5 extends Model
 
     public function hasOne()
     {
-        return $this->hasOne(ExplicitManyToManyPivot5::class, 'A2_id');
+        return $this->hasOne(ExplicitManyToManyPivot5::class, 'A2_id', 'id');
     }
 
     public function related()
@@ -700,7 +706,9 @@ abstract class ExplicitManyToManyA5 extends Model
             ExplicitManyToManyB5::class,
             'ExplicitManyToManyPivot5',
             'A_id',
-            'B_id'
+            'B_id',
+            'id',
+            'id'
         )->using(ExplicitManyToManyPivot5::class);
     }
 }
@@ -761,7 +769,9 @@ abstract class ExplicitManyToManyA6 extends Model
             ExplicitManyToManyB6::class,
             'ExplicitManyToManyPivot6',
             'A_id',
-            'B_id'
+            'B_id',
+            'key',
+            'key'
         )->using(ExplicitManyToManyPivot6::class);
     }
 }
@@ -890,7 +900,9 @@ abstract class ExplicitManyToManyB extends Model
             ExplicitManyToManyA::class,
             'ExplicitManyToManyPivot',
             'B_id',
-            'A_id'
+            'A_id',
+            'id',
+            'id'
         )->using(ExplicitManyToManyPivot::class);
     }
 }
@@ -947,7 +959,11 @@ abstract class ExplicitManyToManyB2 extends Model
     {
         return $this->belongsToMany(
             ExplicitManyToManyA2::class,
-            'ExplicitManyToManyPivot2'
+            'ExplicitManyToManyPivot2',
+            'explicit_many_to_many_b2_id',
+            'explicit_many_to_many_a2_id',
+            'id',
+            'id'
         )->using(ExplicitManyToManyPivot2::class);
     }
 }
@@ -1089,7 +1105,7 @@ abstract class ExplicitManyToManyB4 extends Model
     {
         return $this->belongsToMany(
             ExplicitManyToManyA4::class,
-            null,
+            'explicit_many_to_many_a4_explicit_many_to_many_b4',
             'B_id',
             'A_id',
             'otherIdB',
@@ -1152,7 +1168,11 @@ abstract class ExplicitManyToManyB5 extends Model
 
     public function pivot()
     {
-        return $this->belongsTo(ExplicitManyToManyPivot5::class);
+        return $this->belongsTo(
+            ExplicitManyToManyPivot5::class,
+            'pivot_id',
+            'id'
+        );
     }
 
     public function related()
@@ -1161,7 +1181,9 @@ abstract class ExplicitManyToManyB5 extends Model
             ExplicitManyToManyA5::class,
             'ExplicitManyToManyPivot5',
             'B_id',
-            'A_id'
+            'A_id',
+            'id',
+            'id'
         )->using(ExplicitManyToManyPivot5::class);
     }
 }
@@ -1222,7 +1244,9 @@ abstract class ExplicitManyToManyB6 extends Model
             ExplicitManyToManyA6::class,
             'ExplicitManyToManyPivot6',
             'B_id',
-            'A_id'
+            'A_id',
+            'key',
+            'key'
         )->using(ExplicitManyToManyPivot6::class);
     }
 }
@@ -2802,7 +2826,7 @@ abstract class OneToManyA extends Model
 
     public function related()
     {
-        return $this->hasMany(OneToManyB::class, 'relatedId');
+        return $this->hasMany(OneToManyB::class, 'relatedId', 'id');
     }
 }
 "
@@ -2856,7 +2880,7 @@ abstract class OneToManyA2 extends Model
 
     public function related()
     {
-        return $this->hasMany(OneToManyB2::class);
+        return $this->hasMany(OneToManyB2::class, 'one_to_many_a2_id', 'id');
     }
 }
 "
@@ -3041,7 +3065,7 @@ abstract class OneToManyB extends Model
 
     public function one_to_one_a2()
     {
-        return $this->belongsTo(OneToManyA::class, 'relatedId');
+        return $this->belongsTo(OneToManyA::class, 'relatedId', 'id');
     }
 }
 "
@@ -3097,7 +3121,7 @@ abstract class OneToManyB2 extends Model
 
     public function one_to_many_a2()
     {
-        return $this->belongsTo(OneToManyA2::class);
+        return $this->belongsTo(OneToManyA2::class, 'one_to_many_a2_id', 'id');
     }
 }
 "
@@ -3271,7 +3295,7 @@ abstract class OneToOneA extends Model
 
     public function related()
     {
-        return $this->hasOne(OneToOneB::class, 'relatedId');
+        return $this->hasOne(OneToOneB::class, 'relatedId', 'id');
     }
 }
 "
@@ -3324,7 +3348,7 @@ abstract class OneToOneA2 extends Model
 
     public function related()
     {
-        return $this->hasOne(OneToOneB2::class);
+        return $this->hasOne(OneToOneB2::class, 'one_to_one_a2_id', 'id');
     }
 }
 "
@@ -3442,7 +3466,7 @@ abstract class OneToOneA4 extends Model
 
     public function related()
     {
-        return $this->hasOne(OneToOneB4::class, 'relatedId');
+        return $this->hasOne(OneToOneB4::class, 'relatedId', 'id');
     }
 }
 "
@@ -3569,7 +3593,7 @@ abstract class OneToOneB extends Model
 
     public function related()
     {
-        return $this->belongsTo(OneToOneA::class, 'relatedId');
+        return $this->belongsTo(OneToOneA::class, 'relatedId', 'id');
     }
 }
 "
@@ -3634,7 +3658,7 @@ abstract class OneToOneB2 extends Model
 
     public function one_to_one_a2()
     {
-        return $this->belongsTo(OneToOneA2::class);
+        return $this->belongsTo(OneToOneA2::class, 'one_to_one_a2_id', 'id');
     }
 }
 "
@@ -3764,7 +3788,7 @@ abstract class OneToOneB4 extends Model
 
     public function related()
     {
-        return $this->belongsTo(OneToOneA4::class, 'relatedId');
+        return $this->belongsTo(OneToOneA4::class, 'relatedId', 'id');
     }
 }
 "
@@ -3918,7 +3942,7 @@ abstract class Post extends Model
 
     public function author()
     {
-        return $this->belongsTo(User::class, 'authorId');
+        return $this->belongsTo(User::class, 'authorId', 'id');
     }
 
     public function categories()
@@ -3996,7 +4020,7 @@ abstract class Profile extends Model
 
     public function user()
     {
-        return $this->belongsTo(User::class, 'userId');
+        return $this->belongsTo(User::class, 'userId', 'id');
     }
 }
 "
@@ -4121,12 +4145,12 @@ abstract class SelfRelation extends Model
 
     public function child()
     {
-        return $this->hasOne(self::class, 'relatedId');
+        return $this->hasOne(self::class, 'relatedId', 'id');
     }
 
     public function parent()
     {
-        return $this->belongsTo(self::class, 'relatedId');
+        return $this->belongsTo(self::class, 'relatedId', 'id');
     }
 }
 "
@@ -4735,7 +4759,7 @@ abstract class TouchingA extends Model
 
     public function related()
     {
-        return $this->hasOne(TouchingB::class, 'relatedId');
+        return $this->hasOne(TouchingB::class, 'relatedId', 'id');
     }
 }
 "
@@ -4802,7 +4826,7 @@ abstract class TouchingB extends Model
 
     public function related()
     {
-        return $this->belongsTo(TouchingA::class, 'relatedId');
+        return $this->belongsTo(TouchingA::class, 'relatedId', 'id');
     }
 }
 "
@@ -5080,12 +5104,12 @@ abstract class User extends Model
 
     public function profile()
     {
-        return $this->hasOne(Profile::class, 'userId');
+        return $this->hasOne(Profile::class, 'userId', 'id');
     }
 
     public function posts()
     {
-        return $this->hasMany(Post::class, 'authorId');
+        return $this->hasMany(Post::class, 'authorId', 'id');
     }
 }
 "

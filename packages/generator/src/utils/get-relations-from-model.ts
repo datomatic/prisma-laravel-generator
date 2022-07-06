@@ -54,6 +54,7 @@ export const getHasOneRelation = (
   relationField: DMMF.Field,
   relatedModel: DMMF.Model,
   relatedField: DMMF.Field,
+  explicitTableNames = true,
 ): false | [HasOneRelation, Set<string>] => {
   if (isModelPivot(model)) {
     return false;
@@ -90,8 +91,9 @@ export const getHasOneRelation = (
   };
 
   if (
+    explicitTableNames ||
     relatedField.relationFromFields[0] !==
-    `${snake(model.name)}_${relatedField.relationToFields[0] as string}`
+      `${snake(model.name)}_${relatedField.relationToFields[0] as string}`
   ) {
     relation = {
       ...relation,
@@ -99,7 +101,10 @@ export const getHasOneRelation = (
     };
   }
 
-  if (relatedField.relationToFields[0] !== (primaryKeyField?.name ?? 'id')) {
+  if (
+    explicitTableNames ||
+    relatedField.relationToFields[0] !== (primaryKeyField?.name ?? 'id')
+  ) {
     relation = {
       ...relation,
       localKey: relatedField.relationToFields[0] as string,
@@ -114,6 +119,7 @@ export const getBelongsToRelation = (
   relationField: DMMF.Field,
   relatedModel: DMMF.Model,
   relatedField: DMMF.Field,
+  explicitTableNames = true,
 ): false | [BelongsToRelation, Set<string>] => {
   if (isModelPivot(model)) {
     return false;
@@ -154,10 +160,11 @@ export const getBelongsToRelation = (
   };
 
   if (
+    explicitTableNames ||
     relationField.relationFromFields[0] !==
-    `${snake(relationField.name)}_${
-      relationField.relationToFields[0] as string
-    }`
+      `${snake(relationField.name)}_${
+        relationField.relationToFields[0] as string
+      }`
   ) {
     relation = {
       ...relation,
@@ -166,6 +173,7 @@ export const getBelongsToRelation = (
   }
 
   if (
+    explicitTableNames ||
     relationField.relationToFields[0] !== (relatedPrimaryKeyField?.name ?? 'id')
   ) {
     relation = {
@@ -182,6 +190,7 @@ export const getHasManyRelation = (
   relationField: DMMF.Field,
   relatedModel: DMMF.Model,
   relatedField: DMMF.Field,
+  explicitTableNames = true,
 ): false | [HasManyRelation, Set<string>] => {
   if (isModelPivot(model)) {
     return false;
@@ -221,8 +230,9 @@ export const getHasManyRelation = (
   };
 
   if (
+    explicitTableNames ||
     relatedField.relationFromFields[0] !==
-    `${snake(model.name)}_${relatedField.relationToFields[0] as string}`
+      `${snake(model.name)}_${relatedField.relationToFields[0] as string}`
   ) {
     relation = {
       ...relation,
@@ -230,7 +240,10 @@ export const getHasManyRelation = (
     };
   }
 
-  if (relatedField.relationToFields[0] !== (primaryKeyField?.name ?? 'id')) {
+  if (
+    explicitTableNames ||
+    relatedField.relationToFields[0] !== (primaryKeyField?.name ?? 'id')
+  ) {
     relation = {
       ...relation,
       localKey: relatedField.relationToFields[0] as string,
@@ -246,6 +259,7 @@ export const getBelongsToManyRelation = (
   relatedModel: DMMF.Model,
   relatedField: DMMF.Field,
   models: DMMF.Model[],
+  explicitTableNames = true,
 ): false | [BelongsToManyRelation[], Set<string>] => {
   const relations = [];
   if (isModelPivot(model)) {
@@ -361,7 +375,7 @@ export const getBelongsToManyRelation = (
         [snakeFrom, snakeTo] = [snakeTo, snakeFrom];
       }
       const pivotTable = getTableNameFromModel(relatedModel);
-      if (pivotTable !== `${snakeFrom}_${snakeTo}`) {
+      if (explicitTableNames || pivotTable !== `${snakeFrom}_${snakeTo}`) {
         relation = {
           ...relation,
           pivotTable,
@@ -370,8 +384,9 @@ export const getBelongsToManyRelation = (
 
       // foreignPivotKey
       if (
+        explicitTableNames ||
         relatedField.relationFromFields[0] !==
-        `${snake(model.name)}_${relatedField.relationToFields[0] as string}`
+          `${snake(model.name)}_${relatedField.relationToFields[0] as string}`
       ) {
         relation = {
           ...relation,
@@ -381,10 +396,11 @@ export const getBelongsToManyRelation = (
 
       // relatedPivotKey
       if (
+        explicitTableNames ||
         pivotRelationField.relationFromFields[0] !==
-        `${snake(relatedPivotModel.name)}_${
-          pivotRelationField.relationToFields[0] as string
-        }`
+          `${snake(relatedPivotModel.name)}_${
+            pivotRelationField.relationToFields[0] as string
+          }`
       ) {
         relation = {
           ...relation,
@@ -393,6 +409,7 @@ export const getBelongsToManyRelation = (
       }
 
       if (
+        explicitTableNames ||
         relatedField.relationToFields[0] !== (primaryKeyField?.name ?? 'id')
       ) {
         relation = {
@@ -402,8 +419,9 @@ export const getBelongsToManyRelation = (
       }
 
       if (
+        explicitTableNames ||
         pivotRelationField.relationToFields[0] !==
-        (relatedPivotModelPrimaryKeyField?.name ?? 'id')
+          (relatedPivotModelPrimaryKeyField?.name ?? 'id')
       ) {
         relation = {
           ...relation,

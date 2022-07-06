@@ -28,7 +28,9 @@ Array [
       "className": "ExplicitManyToManyB",
       "foreignPivotKey": "A_id",
       "name": "related",
+      "parentKey": "id",
       "pivotTable": "ExplicitManyToManyPivot",
+      "relatedKey": "id",
       "relatedPivotKey": "B_id",
       "using": "ExplicitManyToManyPivot",
     },
@@ -45,8 +47,12 @@ Array [
   Array [
     Object {
       "className": "ExplicitManyToManyB2",
+      "foreignPivotKey": "explicit_many_to_many_a2_id",
       "name": "explicit_many_to_many_b2",
+      "parentKey": "id",
       "pivotTable": "ExplicitManyToManyPivot2",
+      "relatedKey": "id",
+      "relatedPivotKey": "explicit_many_to_many_b2_id",
       "using": "ExplicitManyToManyPivot2",
     },
   ],
@@ -86,6 +92,7 @@ Array [
       "foreignPivotKey": "A_id",
       "name": "related",
       "parentKey": "otherIdA",
+      "pivotTable": "explicit_many_to_many_a4_explicit_many_to_many_b4",
       "relatedKey": "otherIdB",
       "relatedPivotKey": "B_id",
       "using": "ExplicitManyToManyPivot4",
@@ -107,7 +114,9 @@ Array [
       "className": "ExplicitManyToManyB5",
       "foreignPivotKey": "A_id",
       "name": "related",
+      "parentKey": "id",
       "pivotTable": "ExplicitManyToManyPivot5",
+      "relatedKey": "id",
       "relatedPivotKey": "B_id",
       "using": "ExplicitManyToManyPivot5",
     },
@@ -126,7 +135,9 @@ Array [
       "className": "ExplicitManyToManyB6",
       "foreignPivotKey": "A_id",
       "name": "related",
+      "parentKey": "key",
       "pivotTable": "ExplicitManyToManyPivot6",
+      "relatedKey": "key",
       "relatedPivotKey": "B_id",
       "using": "ExplicitManyToManyPivot6",
     },
@@ -166,7 +177,9 @@ Array [
       "className": "ExplicitManyToManyA",
       "foreignPivotKey": "B_id",
       "name": "related",
+      "parentKey": "id",
       "pivotTable": "ExplicitManyToManyPivot",
+      "relatedKey": "id",
       "relatedPivotKey": "A_id",
       "using": "ExplicitManyToManyPivot",
     },
@@ -183,8 +196,12 @@ Array [
   Array [
     Object {
       "className": "ExplicitManyToManyA2",
+      "foreignPivotKey": "explicit_many_to_many_b2_id",
       "name": "explicit_many_to_many_a2",
+      "parentKey": "id",
       "pivotTable": "ExplicitManyToManyPivot2",
+      "relatedKey": "id",
+      "relatedPivotKey": "explicit_many_to_many_a2_id",
       "using": "ExplicitManyToManyPivot2",
     },
   ],
@@ -224,6 +241,7 @@ Array [
       "foreignPivotKey": "B_id",
       "name": "related",
       "parentKey": "otherIdB",
+      "pivotTable": "explicit_many_to_many_a4_explicit_many_to_many_b4",
       "relatedKey": "otherIdA",
       "relatedPivotKey": "A_id",
       "using": "ExplicitManyToManyPivot4",
@@ -245,7 +263,9 @@ Array [
       "className": "ExplicitManyToManyA5",
       "foreignPivotKey": "B_id",
       "name": "related",
+      "parentKey": "id",
       "pivotTable": "ExplicitManyToManyPivot5",
+      "relatedKey": "id",
       "relatedPivotKey": "A_id",
       "using": "ExplicitManyToManyPivot5",
     },
@@ -264,7 +284,9 @@ Array [
       "className": "ExplicitManyToManyA6",
       "foreignPivotKey": "B_id",
       "name": "related",
+      "parentKey": "key",
       "pivotTable": "ExplicitManyToManyPivot6",
+      "relatedKey": "key",
       "relatedPivotKey": "A_id",
       "using": "ExplicitManyToManyPivot6",
     },
@@ -443,6 +465,7 @@ Array [
     "foreignKey": "relatedId",
     "name": "related",
     "nullable": false,
+    "ownerKey": "id",
   },
   Set {
     "App\\\\Models\\\\Prisma\\\\EagerLoadA",
@@ -478,8 +501,10 @@ exports[`getBelongsToRelation: ExplicitManyToManyB5 - pivot 1`] = `
 Array [
   Object {
     "className": "ExplicitManyToManyPivot5",
+    "foreignKey": "pivot_id",
     "name": "pivot",
     "nullable": false,
+    "ownerKey": "id",
   },
   Set {
     "App\\\\Models\\\\Prisma\\\\ExplicitManyToManyPivot5",
@@ -544,6 +569,7 @@ Array [
     "foreignKey": "relatedId",
     "name": "one_to_one_a2",
     "nullable": false,
+    "ownerKey": "id",
   },
   Set {
     "App\\\\Models\\\\Prisma\\\\OneToManyA",
@@ -555,8 +581,10 @@ exports[`getBelongsToRelation: OneToManyB2 - one_to_many_a2 1`] = `
 Array [
   Object {
     "className": "OneToManyA2",
+    "foreignKey": "one_to_many_a2_id",
     "name": "one_to_many_a2",
     "nullable": false,
+    "ownerKey": "id",
   },
   Set {
     "App\\\\Models\\\\Prisma\\\\OneToManyA2",
@@ -611,6 +639,7 @@ Array [
     "foreignKey": "relatedId",
     "name": "related",
     "nullable": false,
+    "ownerKey": "id",
   },
   Set {
     "App\\\\Models\\\\Prisma\\\\OneToOneA",
@@ -622,8 +651,10 @@ exports[`getBelongsToRelation: OneToOneB2 - one_to_one_a2 1`] = `
 Array [
   Object {
     "className": "OneToOneA2",
+    "foreignKey": "one_to_one_a2_id",
     "name": "one_to_one_a2",
     "nullable": false,
+    "ownerKey": "id",
   },
   Set {
     "App\\\\Models\\\\Prisma\\\\OneToOneA2",
@@ -653,6 +684,7 @@ Array [
     "foreignKey": "relatedId",
     "name": "related",
     "nullable": true,
+    "ownerKey": "id",
   },
   Set {
     "App\\\\Models\\\\Prisma\\\\OneToOneA4",
@@ -682,6 +714,7 @@ Array [
     "foreignKey": "authorId",
     "name": "author",
     "nullable": false,
+    "ownerKey": "id",
   },
   Set {
     "App\\\\Models\\\\Prisma\\\\User",
@@ -698,6 +731,7 @@ Array [
     "foreignKey": "userId",
     "name": "user",
     "nullable": false,
+    "ownerKey": "id",
   },
   Set {
     "App\\\\Models\\\\Prisma\\\\User",
@@ -714,6 +748,7 @@ Array [
     "foreignKey": "relatedId",
     "name": "parent",
     "nullable": false,
+    "ownerKey": "id",
   },
   Set {
     "App\\\\Models\\\\Prisma\\\\SelfRelation",
@@ -730,6 +765,7 @@ Array [
     "foreignKey": "relatedId",
     "name": "related",
     "nullable": false,
+    "ownerKey": "id",
   },
   Set {
     "App\\\\Models\\\\Prisma\\\\TouchingA",
@@ -752,6 +788,7 @@ Array [
   Object {
     "className": "ExplicitManyToManyPivot",
     "foreignKey": "A_id",
+    "localKey": "id",
     "name": "related",
   },
   Set {
@@ -764,6 +801,8 @@ exports[`getHasManyRelation: ExplicitManyToManyA2 - explicit_many_to_many_b2 1`]
 Array [
   Object {
     "className": "ExplicitManyToManyPivot2",
+    "foreignKey": "explicit_many_to_many_a2_id",
+    "localKey": "id",
     "name": "explicit_many_to_many_b2",
   },
   Set {
@@ -807,6 +846,7 @@ Array [
   Object {
     "className": "ExplicitManyToManyPivot5",
     "foreignKey": "A_id",
+    "localKey": "id",
     "name": "related",
   },
   Set {
@@ -820,6 +860,7 @@ Array [
   Object {
     "className": "ExplicitManyToManyPivot6",
     "foreignKey": "A_id",
+    "localKey": "key",
     "name": "related",
   },
   Set {
@@ -847,6 +888,7 @@ Array [
   Object {
     "className": "ExplicitManyToManyPivot",
     "foreignKey": "B_id",
+    "localKey": "id",
     "name": "related",
   },
   Set {
@@ -859,6 +901,8 @@ exports[`getHasManyRelation: ExplicitManyToManyB2 - explicit_many_to_many_a2 1`]
 Array [
   Object {
     "className": "ExplicitManyToManyPivot2",
+    "foreignKey": "explicit_many_to_many_b2_id",
+    "localKey": "id",
     "name": "explicit_many_to_many_a2",
   },
   Set {
@@ -902,6 +946,7 @@ Array [
   Object {
     "className": "ExplicitManyToManyPivot5",
     "foreignKey": "B_id",
+    "localKey": "id",
     "name": "related",
   },
   Set {
@@ -915,6 +960,7 @@ Array [
   Object {
     "className": "ExplicitManyToManyPivot6",
     "foreignKey": "B_id",
+    "localKey": "key",
     "name": "related",
   },
   Set {
@@ -978,6 +1024,7 @@ Array [
   Object {
     "className": "OneToManyB",
     "foreignKey": "relatedId",
+    "localKey": "id",
     "name": "related",
   },
   Set {
@@ -990,6 +1037,8 @@ exports[`getHasManyRelation: OneToManyA2 - related 1`] = `
 Array [
   Object {
     "className": "OneToManyB2",
+    "foreignKey": "one_to_many_a2_id",
+    "localKey": "id",
     "name": "related",
   },
   Set {
@@ -1073,6 +1122,7 @@ Array [
   Object {
     "className": "Post",
     "foreignKey": "authorId",
+    "localKey": "id",
     "name": "posts",
   },
   Set {
@@ -1090,6 +1140,7 @@ Array [
   Object {
     "className": "EagerLoadB",
     "foreignKey": "relatedId",
+    "localKey": "id",
     "name": "related",
   },
   Set {
@@ -1113,6 +1164,7 @@ Array [
   Object {
     "className": "ExplicitManyToManyPivot5",
     "foreignKey": "A2_id",
+    "localKey": "id",
     "name": "hasOne",
   },
   Set {
@@ -1200,6 +1252,7 @@ Array [
   Object {
     "className": "OneToOneB",
     "foreignKey": "relatedId",
+    "localKey": "id",
     "name": "related",
   },
   Set {
@@ -1212,6 +1265,8 @@ exports[`getHasOneRelation: OneToOneA2 - related 1`] = `
 Array [
   Object {
     "className": "OneToOneB2",
+    "foreignKey": "one_to_one_a2_id",
+    "localKey": "id",
     "name": "related",
   },
   Set {
@@ -1239,6 +1294,7 @@ Array [
   Object {
     "className": "OneToOneB4",
     "foreignKey": "relatedId",
+    "localKey": "id",
     "name": "related",
   },
   Set {
@@ -1282,6 +1338,7 @@ Array [
   Object {
     "className": "SelfRelation",
     "foreignKey": "relatedId",
+    "localKey": "id",
     "name": "child",
   },
   Set {
@@ -1297,6 +1354,7 @@ Array [
   Object {
     "className": "TouchingB",
     "foreignKey": "relatedId",
+    "localKey": "id",
     "name": "related",
   },
   Set {
@@ -1314,6 +1372,7 @@ Array [
   Object {
     "className": "Profile",
     "foreignKey": "userId",
+    "localKey": "id",
     "name": "profile",
   },
   Set {
@@ -1361,6 +1420,7 @@ Object {
     Object {
       "className": "EagerLoadB",
       "foreignKey": "relatedId",
+      "localKey": "id",
       "name": "related",
     },
   ],
@@ -1378,6 +1438,7 @@ Object {
       "foreignKey": "relatedId",
       "name": "related",
       "nullable": false,
+      "ownerKey": "id",
     },
   ],
   "belongsToMany": Array [],
@@ -1397,7 +1458,9 @@ Object {
       "className": "ExplicitManyToManyB",
       "foreignPivotKey": "A_id",
       "name": "related",
+      "parentKey": "id",
       "pivotTable": "ExplicitManyToManyPivot",
+      "relatedKey": "id",
       "relatedPivotKey": "B_id",
       "using": "ExplicitManyToManyPivot",
     },
@@ -1417,8 +1480,12 @@ Object {
   "belongsToMany": Array [
     Object {
       "className": "ExplicitManyToManyB2",
+      "foreignPivotKey": "explicit_many_to_many_a2_id",
       "name": "explicit_many_to_many_b2",
+      "parentKey": "id",
       "pivotTable": "ExplicitManyToManyPivot2",
+      "relatedKey": "id",
+      "relatedPivotKey": "explicit_many_to_many_b2_id",
       "using": "ExplicitManyToManyPivot2",
     },
   ],
@@ -1464,6 +1531,7 @@ Object {
       "foreignPivotKey": "A_id",
       "name": "related",
       "parentKey": "otherIdA",
+      "pivotTable": "explicit_many_to_many_a4_explicit_many_to_many_b4",
       "relatedKey": "otherIdB",
       "relatedPivotKey": "B_id",
       "using": "ExplicitManyToManyPivot4",
@@ -1486,7 +1554,9 @@ Object {
       "className": "ExplicitManyToManyB5",
       "foreignPivotKey": "A_id",
       "name": "related",
+      "parentKey": "id",
       "pivotTable": "ExplicitManyToManyPivot5",
+      "relatedKey": "id",
       "relatedPivotKey": "B_id",
       "using": "ExplicitManyToManyPivot5",
     },
@@ -1496,6 +1566,7 @@ Object {
     Object {
       "className": "ExplicitManyToManyPivot5",
       "foreignKey": "A2_id",
+      "localKey": "id",
       "name": "hasOne",
     },
   ],
@@ -1514,7 +1585,9 @@ Object {
       "className": "ExplicitManyToManyB6",
       "foreignPivotKey": "A_id",
       "name": "related",
+      "parentKey": "key",
       "pivotTable": "ExplicitManyToManyPivot6",
+      "relatedKey": "key",
       "relatedPivotKey": "B_id",
       "using": "ExplicitManyToManyPivot6",
     },
@@ -1560,7 +1633,9 @@ Object {
       "className": "ExplicitManyToManyA",
       "foreignPivotKey": "B_id",
       "name": "related",
+      "parentKey": "id",
       "pivotTable": "ExplicitManyToManyPivot",
+      "relatedKey": "id",
       "relatedPivotKey": "A_id",
       "using": "ExplicitManyToManyPivot",
     },
@@ -1580,8 +1655,12 @@ Object {
   "belongsToMany": Array [
     Object {
       "className": "ExplicitManyToManyA2",
+      "foreignPivotKey": "explicit_many_to_many_b2_id",
       "name": "explicit_many_to_many_a2",
+      "parentKey": "id",
       "pivotTable": "ExplicitManyToManyPivot2",
+      "relatedKey": "id",
+      "relatedPivotKey": "explicit_many_to_many_a2_id",
       "using": "ExplicitManyToManyPivot2",
     },
   ],
@@ -1627,6 +1706,7 @@ Object {
       "foreignPivotKey": "B_id",
       "name": "related",
       "parentKey": "otherIdB",
+      "pivotTable": "explicit_many_to_many_a4_explicit_many_to_many_b4",
       "relatedKey": "otherIdA",
       "relatedPivotKey": "A_id",
       "using": "ExplicitManyToManyPivot4",
@@ -1646,8 +1726,10 @@ Object {
   "belongsTo": Array [
     Object {
       "className": "ExplicitManyToManyPivot5",
+      "foreignKey": "pivot_id",
       "name": "pivot",
       "nullable": false,
+      "ownerKey": "id",
     },
   ],
   "belongsToMany": Array [
@@ -1655,7 +1737,9 @@ Object {
       "className": "ExplicitManyToManyA5",
       "foreignPivotKey": "B_id",
       "name": "related",
+      "parentKey": "id",
       "pivotTable": "ExplicitManyToManyPivot5",
+      "relatedKey": "id",
       "relatedPivotKey": "A_id",
       "using": "ExplicitManyToManyPivot5",
     },
@@ -1677,7 +1761,9 @@ Object {
       "className": "ExplicitManyToManyA6",
       "foreignPivotKey": "B_id",
       "name": "related",
+      "parentKey": "key",
       "pivotTable": "ExplicitManyToManyPivot6",
+      "relatedKey": "key",
       "relatedPivotKey": "A_id",
       "using": "ExplicitManyToManyPivot6",
     },
@@ -1993,6 +2079,7 @@ Object {
     Object {
       "className": "OneToManyB",
       "foreignKey": "relatedId",
+      "localKey": "id",
       "name": "related",
     },
   ],
@@ -2010,6 +2097,8 @@ Object {
   "hasMany": Array [
     Object {
       "className": "OneToManyB2",
+      "foreignKey": "one_to_many_a2_id",
+      "localKey": "id",
       "name": "related",
     },
   ],
@@ -2066,6 +2155,7 @@ Object {
       "foreignKey": "relatedId",
       "name": "one_to_one_a2",
       "nullable": false,
+      "ownerKey": "id",
     },
   ],
   "belongsToMany": Array [],
@@ -2082,8 +2172,10 @@ Object {
   "belongsTo": Array [
     Object {
       "className": "OneToManyA2",
+      "foreignKey": "one_to_many_a2_id",
       "name": "one_to_many_a2",
       "nullable": false,
+      "ownerKey": "id",
     },
   ],
   "belongsToMany": Array [],
@@ -2144,6 +2236,7 @@ Object {
     Object {
       "className": "OneToOneB",
       "foreignKey": "relatedId",
+      "localKey": "id",
       "name": "related",
     },
   ],
@@ -2161,6 +2254,8 @@ Object {
   "hasOne": Array [
     Object {
       "className": "OneToOneB2",
+      "foreignKey": "one_to_one_a2_id",
+      "localKey": "id",
       "name": "related",
     },
   ],
@@ -2198,6 +2293,7 @@ Object {
     Object {
       "className": "OneToOneB4",
       "foreignKey": "relatedId",
+      "localKey": "id",
       "name": "related",
     },
   ],
@@ -2234,6 +2330,7 @@ Object {
       "foreignKey": "relatedId",
       "name": "related",
       "nullable": false,
+      "ownerKey": "id",
     },
   ],
   "belongsToMany": Array [],
@@ -2250,8 +2347,10 @@ Object {
   "belongsTo": Array [
     Object {
       "className": "OneToOneA2",
+      "foreignKey": "one_to_one_a2_id",
       "name": "one_to_one_a2",
       "nullable": false,
+      "ownerKey": "id",
     },
   ],
   "belongsToMany": Array [],
@@ -2291,6 +2390,7 @@ Object {
       "foreignKey": "relatedId",
       "name": "related",
       "nullable": true,
+      "ownerKey": "id",
     },
   ],
   "belongsToMany": Array [],
@@ -2330,6 +2430,7 @@ Object {
       "foreignKey": "authorId",
       "name": "author",
       "nullable": false,
+      "ownerKey": "id",
     },
   ],
   "belongsToMany": Array [
@@ -2358,6 +2459,7 @@ Object {
       "foreignKey": "userId",
       "name": "user",
       "nullable": false,
+      "ownerKey": "id",
     },
   ],
   "belongsToMany": Array [],
@@ -2387,6 +2489,7 @@ Object {
       "foreignKey": "relatedId",
       "name": "parent",
       "nullable": false,
+      "ownerKey": "id",
     },
   ],
   "belongsToMany": Array [],
@@ -2395,6 +2498,7 @@ Object {
     Object {
       "className": "SelfRelation",
       "foreignKey": "relatedId",
+      "localKey": "id",
       "name": "child",
     },
   ],
@@ -2513,6 +2617,7 @@ Object {
     Object {
       "className": "TouchingB",
       "foreignKey": "relatedId",
+      "localKey": "id",
       "name": "related",
     },
   ],
@@ -2530,6 +2635,7 @@ Object {
       "foreignKey": "relatedId",
       "name": "related",
       "nullable": false,
+      "ownerKey": "id",
     },
   ],
   "belongsToMany": Array [],
@@ -2579,6 +2685,7 @@ Object {
     Object {
       "className": "Post",
       "foreignKey": "authorId",
+      "localKey": "id",
       "name": "posts",
     },
   ],
@@ -2586,6 +2693,7 @@ Object {
     Object {
       "className": "Profile",
       "foreignKey": "userId",
+      "localKey": "id",
       "name": "profile",
     },
   ],
