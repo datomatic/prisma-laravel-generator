@@ -5,7 +5,7 @@ exports[`enum generation: BackedEnum 1`] = `
 
 namespace App\\\\Enums\\\\Prisma;
 
-enum BackedEnum
+enum BackedEnum: string
 {
     case A = '1';
 
@@ -23,15 +23,15 @@ exports[`enum generation: Enum 1`] = `
 
 namespace App\\\\Enums\\\\Prisma;
 
-enum Enum
+enum Enum: string
 {
-    case A;
+    case A = 'A';
 
-    case B;
+    case B = 'B';
 
-    case C;
+    case C = 'C';
 
-    case D;
+    case D = 'D';
 }
 "
 `;
@@ -41,7 +41,7 @@ exports[`enum generation: PostType 1`] = `
 
 namespace App\\\\Enums\\\\Prisma;
 
-enum PostType
+enum PostType: string
 {
     case article = '1';
 
@@ -59,11 +59,11 @@ exports[`enum generation: Role 1`] = `
 
 namespace App\\\\Enums\\\\Prisma;
 
-enum Role
+enum Role: string
 {
-    case USER;
+    case USER = 'USER';
 
-    case ADMIN;
+    case ADMIN = 'ADMIN';
 }
 "
 `;

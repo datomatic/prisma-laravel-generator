@@ -10,7 +10,7 @@ const generateEnum = (enumInfo: DMMF.DatamodelEnum) => {
       if (dbName) {
         return `case ${caseName} = '${dbName}';`;
       }
-      return `case ${caseName};`;
+      return `case ${caseName} = '${caseName}';`;
     })
     .join('\n');
 
@@ -19,7 +19,7 @@ const generateEnum = (enumInfo: DMMF.DatamodelEnum) => {
   return prettify(`<?php
     namespace ${namespace};
 
-    enum ${enumName} {
+    enum ${enumName}:string {
       ${enumValues}
     }
   `);
