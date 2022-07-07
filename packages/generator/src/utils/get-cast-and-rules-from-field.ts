@@ -78,12 +78,12 @@ const getCastAndRulesFromField = (
   } else {
     if (isRequired) {
       rules.push({
-        value: 'nullable',
+        value: 'required',
         isMethodCall: false,
       });
     } else {
       rules.push({
-        value: 'required',
+        value: 'nullable',
         isMethodCall: false,
       });
     }

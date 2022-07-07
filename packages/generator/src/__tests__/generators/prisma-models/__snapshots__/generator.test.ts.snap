@@ -47,8 +47,8 @@ abstract class PrismaMongoDbNow extends Model
     protected $attributes;
 
     protected array $rules = [
-        '_id' => ['nullable', 'string'],
-        'created_at' => ['nullable', 'date'],
+        '_id' => ['required', 'string'],
+        'created_at' => ['required', 'date'],
     ];
 
     protected $casts = [
@@ -110,11 +110,11 @@ abstract class PrismaUnsignedInteger extends Model
     protected $table = 'UnsignedIntegers';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'uint' => ['nullable', 'numeric', 'integer', 'min:0'],
-        'usmallint' => ['nullable', 'numeric', 'integer', 'min:0'],
-        'utinyint' => ['nullable', 'numeric', 'integer', 'min:0'],
-        'ubigint' => ['nullable', 'numeric', 'integer', 'min:0'],
+        'id' => ['required', 'numeric', 'integer'],
+        'uint' => ['required', 'numeric', 'integer', 'min:0'],
+        'usmallint' => ['required', 'numeric', 'integer', 'min:0'],
+        'utinyint' => ['required', 'numeric', 'integer', 'min:0'],
+        'ubigint' => ['required', 'numeric', 'integer', 'min:0'],
     ];
 
     protected $casts = [
@@ -169,8 +169,8 @@ abstract class AnotherPrefixCategory extends Model
     protected $table = 'Category';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'name' => ['nullable', 'string'],
+        'id' => ['required', 'numeric', 'integer'],
+        'name' => ['required', 'string'],
     ];
 
     protected $casts = [
@@ -251,14 +251,14 @@ abstract class AnotherPrefixDefaultValue extends Model
             ...$this->attributes ?? [],
         ];
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
-            'email' => ['nullable', 'string'],
-            'name' => ['required', 'string'],
-            'age' => ['nullable', 'numeric', 'integer'],
-            'uuid' => ['nullable', 'string', 'uuid'],
-            'now' => ['nullable', 'date'],
-            'bool' => ['nullable', 'boolean'],
-            'role' => ['nullable', new Enum(Role::class)],
+            'id' => ['required', 'numeric', 'integer'],
+            'email' => ['required', 'string'],
+            'name' => ['nullable', 'string'],
+            'age' => ['required', 'numeric', 'integer'],
+            'uuid' => ['required', 'string', 'uuid'],
+            'now' => ['required', 'date'],
+            'bool' => ['required', 'boolean'],
+            'role' => ['required', new Enum(Role::class)],
             ...$this->rules ?? [],
         ];
         $this->casts = [
@@ -319,7 +319,7 @@ abstract class AnotherPrefixEagerLoadA extends Model
     protected $with = ['related'];
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -386,13 +386,13 @@ abstract class AnotherPrefixEagerLoadB extends Model
     public function __construct(array $attributes = [])
     {
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
+            'id' => ['required', 'numeric', 'integer'],
             'relatedId' => [
                 Rule::unique('EagerLoadB', 'relatedId')->ignore(
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'numeric',
                 'integer',
             ],
@@ -451,7 +451,7 @@ abstract class AnotherPrefixExplicitManyToManyA extends Model
     protected $table = 'ExplicitManyToManyA';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -514,7 +514,7 @@ abstract class AnotherPrefixExplicitManyToManyA2 extends Model
     protected $table = 'ExplicitManyToManyA2';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -588,13 +588,13 @@ abstract class AnotherPrefixExplicitManyToManyA3 extends Model
     public function __construct(array $attributes = [])
     {
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
+            'id' => ['required', 'numeric', 'integer'],
             'otherIdA' => [
                 Rule::unique('ExplicitManyToManyA3', 'otherIdA')->ignore(
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'numeric',
                 'integer',
             ],
@@ -671,13 +671,13 @@ abstract class AnotherPrefixExplicitManyToManyA4 extends Model
     public function __construct(array $attributes = [])
     {
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
+            'id' => ['required', 'numeric', 'integer'],
             'otherIdA' => [
                 Rule::unique('ExplicitManyToManyA4', 'otherIdA')->ignore(
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'numeric',
                 'integer',
             ],
@@ -744,7 +744,7 @@ abstract class AnotherPrefixExplicitManyToManyA5 extends Model
     protected $table = 'ExplicitManyToManyA5';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -814,7 +814,7 @@ abstract class AnotherPrefixExplicitManyToManyA6 extends Model
     protected $primaryKey = 'key';
 
     protected array $rules = [
-        'key' => ['nullable', 'numeric', 'integer'],
+        'key' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -891,7 +891,7 @@ abstract class AnotherPrefixExplicitManyToManyA7 extends Model
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'numeric',
                 'integer',
             ],
@@ -957,7 +957,7 @@ abstract class AnotherPrefixExplicitManyToManyB extends Model
     protected $table = 'ExplicitManyToManyB';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -1020,7 +1020,7 @@ abstract class AnotherPrefixExplicitManyToManyB2 extends Model
     protected $table = 'ExplicitManyToManyB2';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -1094,13 +1094,13 @@ abstract class AnotherPrefixExplicitManyToManyB3 extends Model
     public function __construct(array $attributes = [])
     {
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
+            'id' => ['required', 'numeric', 'integer'],
             'otherIdB' => [
                 Rule::unique('ExplicitManyToManyB3', 'otherIdB')->ignore(
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'numeric',
                 'integer',
             ],
@@ -1177,13 +1177,13 @@ abstract class AnotherPrefixExplicitManyToManyB4 extends Model
     public function __construct(array $attributes = [])
     {
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
+            'id' => ['required', 'numeric', 'integer'],
             'otherIdB' => [
                 Rule::unique('ExplicitManyToManyB4', 'otherIdB')->ignore(
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'numeric',
                 'integer',
             ],
@@ -1251,8 +1251,8 @@ abstract class AnotherPrefixExplicitManyToManyB5 extends Model
     protected $table = 'ExplicitManyToManyB5';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'pivot_id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
+        'pivot_id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -1327,7 +1327,7 @@ abstract class AnotherPrefixExplicitManyToManyB6 extends Model
     protected $primaryKey = 'key';
 
     protected array $rules = [
-        'key' => ['nullable', 'numeric', 'integer'],
+        'key' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -1404,7 +1404,7 @@ abstract class AnotherPrefixExplicitManyToManyB7 extends Model
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'numeric',
                 'integer',
             ],
@@ -1470,9 +1470,9 @@ abstract class AnotherPrefixExplicitManyToManyPivot extends Pivot
     protected $table = 'ExplicitManyToManyPivot';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'A_id' => ['nullable', 'numeric', 'integer'],
-        'B_id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
+        'A_id' => ['required', 'numeric', 'integer'],
+        'B_id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -1525,9 +1525,9 @@ abstract class AnotherPrefixExplicitManyToManyPivot2 extends Pivot
     protected $table = 'ExplicitManyToManyPivot2';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'explicit_many_to_many_a2_id' => ['nullable', 'numeric', 'integer'],
-        'explicit_many_to_many_b2_id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
+        'explicit_many_to_many_a2_id' => ['required', 'numeric', 'integer'],
+        'explicit_many_to_many_b2_id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -1580,9 +1580,9 @@ abstract class AnotherPrefixExplicitManyToManyPivot3 extends Pivot
     protected $table = 'ExplicitManyToManyPivot3';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'A_id' => ['nullable', 'numeric', 'integer'],
-        'B_id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
+        'A_id' => ['required', 'numeric', 'integer'],
+        'B_id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -1635,9 +1635,9 @@ abstract class AnotherPrefixExplicitManyToManyPivot4 extends Pivot
     protected $table = 'explicit_many_to_many_a4_explicit_many_to_many_b4';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'A_id' => ['nullable', 'numeric', 'integer'],
-        'B_id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
+        'A_id' => ['required', 'numeric', 'integer'],
+        'B_id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -1703,15 +1703,15 @@ abstract class AnotherPrefixExplicitManyToManyPivot5 extends Pivot
     public function __construct(array $attributes = [])
     {
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
-            'A_id' => ['nullable', 'numeric', 'integer'],
-            'B_id' => ['nullable', 'numeric', 'integer'],
+            'id' => ['required', 'numeric', 'integer'],
+            'A_id' => ['required', 'numeric', 'integer'],
+            'B_id' => ['required', 'numeric', 'integer'],
             'A2_id' => [
                 Rule::unique('ExplicitManyToManyPivot5', 'A2_id')->ignore(
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'numeric',
                 'integer',
             ],
@@ -1767,9 +1767,9 @@ abstract class AnotherPrefixExplicitManyToManyPivot6 extends Pivot
     protected $primaryKey = 'key';
 
     protected array $rules = [
-        'key' => ['nullable', 'numeric', 'integer'],
-        'A_id' => ['nullable', 'numeric', 'integer'],
-        'B_id' => ['nullable', 'numeric', 'integer'],
+        'key' => ['required', 'numeric', 'integer'],
+        'A_id' => ['required', 'numeric', 'integer'],
+        'B_id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -1824,9 +1824,9 @@ abstract class AnotherPrefixExplicitManyToManyPivot7 extends Pivot
     protected $primaryKey = 'key';
 
     protected array $rules = [
-        'key' => ['nullable', 'numeric', 'integer'],
-        'A_id' => ['nullable', 'numeric', 'integer'],
-        'B_id' => ['nullable', 'numeric', 'integer'],
+        'key' => ['required', 'numeric', 'integer'],
+        'A_id' => ['required', 'numeric', 'integer'],
+        'B_id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -1892,18 +1892,18 @@ abstract class AnotherPrefixFieldComment extends Model
     public function __construct(array $attributes = [])
     {
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
+            'id' => ['required', 'numeric', 'integer'],
             'email' => [
                 Rule::unique('FieldComments', 'email')->ignore(
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'string',
             ],
-            'name' => ['nullable', 'string'],
-            'age' => ['nullable', 'numeric', 'integer'],
-            'height' => ['nullable', 'numeric', 'integer'],
+            'name' => ['required', 'string'],
+            'age' => ['required', 'numeric', 'integer'],
+            'height' => ['required', 'numeric', 'integer'],
             ...$this->rules ?? [],
         ];
 
@@ -1951,8 +1951,8 @@ abstract class AnotherPrefixFieldMultipleComment extends Model
     protected $table = 'FieldMultipleComments';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'name' => ['nullable', 'string'],
+        'id' => ['required', 'numeric', 'integer'],
+        'name' => ['required', 'string'],
     ];
 
     protected $casts = [
@@ -2010,11 +2010,11 @@ abstract class AnotherPrefixFillable extends Model
     protected $fillable = ['age', 'name'];
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'email' => ['nullable', 'string'],
-        'password' => ['nullable', 'string'],
-        'age' => ['nullable', 'numeric', 'integer'],
-        'name' => ['required', 'string'],
+        'id' => ['required', 'numeric', 'integer'],
+        'email' => ['required', 'string'],
+        'password' => ['required', 'string'],
+        'age' => ['required', 'numeric', 'integer'],
+        'name' => ['nullable', 'string'],
     ];
 
     protected $casts = [
@@ -2075,11 +2075,11 @@ abstract class AnotherPrefixGuarded extends Model
     protected $guarded = ['id', 'email', 'password'];
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'email' => ['nullable', 'string'],
-        'password' => ['nullable', 'string'],
-        'age' => ['nullable', 'numeric', 'integer'],
-        'name' => ['required', 'string'],
+        'id' => ['required', 'numeric', 'integer'],
+        'email' => ['required', 'string'],
+        'password' => ['required', 'string'],
+        'age' => ['required', 'numeric', 'integer'],
+        'name' => ['nullable', 'string'],
     ];
 
     protected $casts = [
@@ -2136,11 +2136,11 @@ abstract class AnotherPrefixHidden extends Model
     protected $hidden = ['password', 'api_key'];
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'email' => ['nullable', 'string'],
-        'password' => ['nullable', 'string'],
-        'api_key' => ['nullable', 'string'],
-        'name' => ['required', 'string'],
+        'id' => ['required', 'numeric', 'integer'],
+        'email' => ['required', 'string'],
+        'password' => ['required', 'string'],
+        'api_key' => ['required', 'string'],
+        'name' => ['nullable', 'string'],
     ];
 
     protected $casts = [
@@ -2204,16 +2204,16 @@ abstract class AnotherPrefixIgnore extends Model
     public function __construct(array $attributes = [])
     {
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
+            'id' => ['required', 'numeric', 'integer'],
             'email' => [
                 Rule::unique('Ignore', 'email')->ignore(
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'string',
             ],
-            'age' => ['nullable', 'numeric', 'integer'],
+            'age' => ['required', 'numeric', 'integer'],
             ...$this->rules ?? [],
         ];
 
@@ -2263,7 +2263,7 @@ abstract class AnotherPrefixImplicitManyToManyA extends Model
     protected $table = 'ImplicitManyToManyA';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -2323,7 +2323,7 @@ abstract class AnotherPrefixImplicitManyToManyB extends Model
     protected $table = 'ImplicitManyToManyB';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -2387,8 +2387,8 @@ abstract class AnotherPrefixMappedId extends Model
     protected $hidden = ['primary_id'];
 
     protected array $rules = [
-        'primary_id' => ['nullable', 'numeric', 'integer'],
-        'firstname' => ['nullable', 'string'],
+        'primary_id' => ['required', 'numeric', 'integer'],
+        'firstname' => ['required', 'string'],
     ];
 
     protected $casts = [
@@ -2446,11 +2446,11 @@ abstract class AnotherPrefixMassAssignable extends Model
     protected $guarded = [];
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'email' => ['nullable', 'string'],
-        'password' => ['nullable', 'string'],
-        'age' => ['nullable', 'numeric', 'integer'],
-        'name' => ['required', 'string'],
+        'id' => ['required', 'numeric', 'integer'],
+        'email' => ['required', 'string'],
+        'password' => ['required', 'string'],
+        'age' => ['required', 'numeric', 'integer'],
+        'name' => ['nullable', 'string'],
     ];
 
     protected $casts = [
@@ -2503,7 +2503,7 @@ abstract class AnotherPrefixModelComment extends Model
     protected $guarded = [];
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -2552,7 +2552,7 @@ abstract class AnotherPrefixModelMultipleComment extends Model
     protected $guarded = [];
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -2604,8 +2604,8 @@ abstract class AnotherPrefixMultipleComment extends Model
     protected $hidden = ['password'];
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'password' => ['nullable', 'string'],
+        'id' => ['required', 'numeric', 'integer'],
+        'password' => ['required', 'string'],
     ];
 
     protected $casts = [
@@ -2670,13 +2670,13 @@ abstract class AnotherPrefixMultipleUnique extends Model
     public function __construct(array $attributes = [])
     {
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
+            'id' => ['required', 'numeric', 'integer'],
             'email' => [
                 Rule::unique('MultipleUnique', 'email')->ignore(
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'string',
             ],
             'firstname' => [
@@ -2685,11 +2685,11 @@ abstract class AnotherPrefixMultipleUnique extends Model
                     ->where(
                         fn ($query) => $query->where('lastname', $this->lastname)
                     ),
-                'nullable',
+                'required',
                 'string',
             ],
-            'lastname' => ['nullable', 'string'],
-            'age' => ['required', 'numeric', 'integer'],
+            'lastname' => ['required', 'string'],
+            'age' => ['nullable', 'numeric', 'integer'],
             ...$this->rules ?? [],
         ];
 
@@ -2753,7 +2753,7 @@ abstract class AnotherPrefixMultipleUnique2 extends Model
     public function __construct(array $attributes = [])
     {
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
+            'id' => ['required', 'numeric', 'integer'],
             'email' => [
                 Rule::unique('MultipleUnique2', 'email')->ignore(
                     $this->getKey(),
@@ -2766,12 +2766,12 @@ abstract class AnotherPrefixMultipleUnique2 extends Model
                             ->where('firstname', $this->firstname)
                             ->where('lastname', $this->lastname)
                     ),
-                'nullable',
+                'required',
                 'string',
             ],
-            'firstname' => ['nullable', 'string'],
-            'lastname' => ['nullable', 'string'],
-            'age' => ['required', 'numeric', 'integer'],
+            'firstname' => ['required', 'string'],
+            'lastname' => ['required', 'string'],
+            'age' => ['nullable', 'numeric', 'integer'],
             ...$this->rules ?? [],
         ];
 
@@ -2834,10 +2834,10 @@ abstract class AnotherPrefixNoPrimaryKey extends Model
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'string',
             ],
-            'age' => ['nullable', 'numeric', 'integer'],
+            'age' => ['required', 'numeric', 'integer'],
             ...$this->rules ?? [],
         ];
 
@@ -2922,8 +2922,8 @@ abstract class AnotherPrefixNullableField extends Model
     protected $table = 'NullableField';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'name' => ['required', 'string'],
+        'id' => ['required', 'numeric', 'integer'],
+        'name' => ['nullable', 'string'],
     ];
 
     protected $casts = [
@@ -2974,7 +2974,7 @@ abstract class AnotherPrefixOneToManyA extends Model
     protected $table = 'OneToManyA';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -3029,7 +3029,7 @@ abstract class AnotherPrefixOneToManyA2 extends Model
     protected $table = 'OneToManyA2';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -3095,13 +3095,13 @@ abstract class AnotherPrefixOneToManyA3 extends Model
     public function __construct(array $attributes = [])
     {
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
+            'id' => ['required', 'numeric', 'integer'],
             'otherId' => [
                 Rule::unique('OneToManyA3', 'otherId')->ignore(
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'numeric',
                 'integer',
             ],
@@ -3173,7 +3173,7 @@ abstract class AnotherPrefixOneToManyA4 extends Model
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'numeric',
                 'integer',
             ],
@@ -3231,8 +3231,8 @@ abstract class AnotherPrefixOneToManyB extends Model
     protected $table = 'OneToManyB';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'relatedId' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
+        'relatedId' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -3288,8 +3288,8 @@ abstract class AnotherPrefixOneToManyB2 extends Model
     protected $table = 'OneToManyB2';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'one_to_many_a2_id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
+        'one_to_many_a2_id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -3345,8 +3345,8 @@ abstract class AnotherPrefixOneToManyB3 extends Model
     protected $table = 'OneToManyB3';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'relatedId' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
+        'relatedId' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -3417,11 +3417,11 @@ abstract class AnotherPrefixOneToManyB4 extends Model
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'numeric',
                 'integer',
             ],
-            'relatedId' => ['nullable', 'numeric', 'integer'],
+            'relatedId' => ['required', 'numeric', 'integer'],
             ...$this->rules ?? [],
         ];
 
@@ -3475,7 +3475,7 @@ abstract class AnotherPrefixOneToOneA extends Model
     protected $table = 'OneToOneA';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -3529,7 +3529,7 @@ abstract class AnotherPrefixOneToOneA2 extends Model
     protected $table = 'OneToOneA2';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -3594,13 +3594,13 @@ abstract class AnotherPrefixOneToOneA3 extends Model
     public function __construct(array $attributes = [])
     {
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
+            'id' => ['required', 'numeric', 'integer'],
             'otherId' => [
                 Rule::unique('OneToOneA3', 'otherId')->ignore(
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'numeric',
                 'integer',
             ],
@@ -3657,7 +3657,7 @@ abstract class AnotherPrefixOneToOneA4 extends Model
     protected $table = 'OneToOneA4';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -3725,7 +3725,7 @@ abstract class AnotherPrefixOneToOneA5 extends Model
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'numeric',
                 'integer',
             ],
@@ -3793,13 +3793,13 @@ abstract class AnotherPrefixOneToOneB extends Model
     public function __construct(array $attributes = [])
     {
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
+            'id' => ['required', 'numeric', 'integer'],
             'relatedId' => [
                 Rule::unique('OneToOneB', 'relatedId')->ignore(
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'numeric',
                 'integer',
             ],
@@ -3867,13 +3867,13 @@ abstract class AnotherPrefixOneToOneB2 extends Model
     public function __construct(array $attributes = [])
     {
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
+            'id' => ['required', 'numeric', 'integer'],
             'one_to_one_a2_id' => [
                 Rule::unique('OneToOneB2', 'one_to_one_a2_id')->ignore(
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'numeric',
                 'integer',
             ],
@@ -3941,13 +3941,13 @@ abstract class AnotherPrefixOneToOneB3 extends Model
     public function __construct(array $attributes = [])
     {
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
+            'id' => ['required', 'numeric', 'integer'],
             'related_id' => [
                 Rule::unique('OneToOneB3', 'related_id')->ignore(
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'numeric',
                 'integer',
             ],
@@ -4015,13 +4015,13 @@ abstract class AnotherPrefixOneToOneB4 extends Model
     public function __construct(array $attributes = [])
     {
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
+            'id' => ['required', 'numeric', 'integer'],
             'relatedId' => [
                 Rule::unique('OneToOneB4', 'relatedId')->ignore(
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'required',
+                'nullable',
                 'numeric',
                 'integer',
             ],
@@ -4094,7 +4094,7 @@ abstract class AnotherPrefixOneToOneB5 extends Model
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'numeric',
                 'integer',
             ],
@@ -4103,7 +4103,7 @@ abstract class AnotherPrefixOneToOneB5 extends Model
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'required',
+                'nullable',
                 'numeric',
                 'integer',
             ],
@@ -4183,13 +4183,13 @@ abstract class AnotherPrefixPost extends Model
     public function __construct(array $attributes = [])
     {
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
-            'title' => ['nullable', 'string'],
-            'published' => ['nullable', 'boolean'],
-            'type' => ['nullable', new Enum(PostType::class)],
-            'authorId' => ['nullable', 'numeric', 'integer'],
-            'createdAt' => ['nullable', 'date'],
-            'updatedAt' => ['nullable', 'date'],
+            'id' => ['required', 'numeric', 'integer'],
+            'title' => ['required', 'string'],
+            'published' => ['required', 'boolean'],
+            'type' => ['required', new Enum(PostType::class)],
+            'authorId' => ['required', 'numeric', 'integer'],
+            'createdAt' => ['required', 'date'],
+            'updatedAt' => ['required', 'date'],
             ...$this->rules ?? [],
         ];
         $this->casts = [
@@ -4275,14 +4275,14 @@ abstract class AnotherPrefixProfile extends Model
     public function __construct(array $attributes = [])
     {
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
-            'bio' => ['nullable', 'string'],
+            'id' => ['required', 'numeric', 'integer'],
+            'bio' => ['required', 'string'],
             'userId' => [
                 Rule::unique('Profile', 'userId')->ignore(
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'numeric',
                 'integer',
             ],
@@ -4341,11 +4341,11 @@ abstract class AnotherPrefixReadOnlyField extends Model
     protected $table = 'ReadOnlyField';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'email' => ['nullable', 'string'],
-        'phone' => ['nullable', 'string'],
-        'password' => ['nullable', 'string'],
-        'name' => ['required', 'string'],
+        'id' => ['required', 'numeric', 'integer'],
+        'email' => ['required', 'string'],
+        'phone' => ['required', 'string'],
+        'password' => ['required', 'string'],
+        'name' => ['nullable', 'string'],
     ];
 
     protected $casts = [
@@ -4410,13 +4410,13 @@ abstract class AnotherPrefixSelfRelation extends Model
     public function __construct(array $attributes = [])
     {
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
+            'id' => ['required', 'numeric', 'integer'],
             'relatedId' => [
                 Rule::unique('SelfRelation', 'relatedId')->ignore(
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'numeric',
                 'integer',
             ],
@@ -4484,10 +4484,10 @@ abstract class AnotherPrefixSoftDelete1 extends Model
     protected $table = 'SoftDelete1';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'email' => ['nullable', 'string'],
-        'password' => ['nullable', 'string'],
-        'deleted_at' => ['nullable', 'date'],
+        'id' => ['required', 'numeric', 'integer'],
+        'email' => ['required', 'string'],
+        'password' => ['required', 'string'],
+        'deleted_at' => ['required', 'date'],
     ];
 
     protected $casts = [
@@ -4547,10 +4547,10 @@ abstract class AnotherPrefixSoftDelete2 extends Model
     protected $table = 'SoftDelete2';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'email' => ['nullable', 'string'],
-        'password' => ['nullable', 'string'],
-        'deleted_timestamp' => ['nullable', 'date'],
+        'id' => ['required', 'numeric', 'integer'],
+        'email' => ['required', 'string'],
+        'password' => ['required', 'string'],
+        'deleted_timestamp' => ['required', 'date'],
     ];
 
     protected $casts = [
@@ -4604,9 +4604,9 @@ abstract class AnotherPrefixTimestamps1 extends Model
     protected $table = 'Timestamps1';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'created_timestamp' => ['nullable', 'date'],
-        'updated_timestamp' => ['nullable', 'date'],
+        'id' => ['required', 'numeric', 'integer'],
+        'created_timestamp' => ['required', 'date'],
+        'updated_timestamp' => ['required', 'date'],
     ];
 
     protected $casts = [
@@ -4658,9 +4658,9 @@ abstract class AnotherPrefixTimestamps2 extends Model
     protected $table = 'Timestamps2';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'created_at' => ['nullable', 'date'],
-        'updated_timestamp' => ['nullable', 'date'],
+        'id' => ['required', 'numeric', 'integer'],
+        'created_at' => ['required', 'date'],
+        'updated_timestamp' => ['required', 'date'],
     ];
 
     protected $casts = [
@@ -4712,9 +4712,9 @@ abstract class AnotherPrefixTimestamps3 extends Model
     protected $table = 'Timestamps3';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'created_timestamp' => ['nullable', 'date'],
-        'updated_at' => ['nullable', 'date'],
+        'id' => ['required', 'numeric', 'integer'],
+        'created_timestamp' => ['required', 'date'],
+        'updated_at' => ['required', 'date'],
     ];
 
     protected $casts = [
@@ -4765,9 +4765,9 @@ abstract class AnotherPrefixTimestamps4 extends Model
     protected $table = 'Timestamps4';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'created_at' => ['nullable', 'date'],
-        'updated_at' => ['nullable', 'date'],
+        'id' => ['required', 'numeric', 'integer'],
+        'created_at' => ['required', 'date'],
+        'updated_at' => ['required', 'date'],
     ];
 
     protected $casts = [
@@ -4818,9 +4818,9 @@ abstract class AnotherPrefixTimestamps5 extends Model
     protected $table = 'Timestamps5';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'created_at' => ['nullable', 'date'],
-        'updated_at' => ['nullable', 'date'],
+        'id' => ['required', 'numeric', 'integer'],
+        'created_at' => ['required', 'date'],
+        'updated_at' => ['required', 'date'],
     ];
 
     protected $casts = [
@@ -4872,9 +4872,9 @@ abstract class AnotherPrefixTimestamps6 extends Model
     protected $table = 'Timestamps6';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'created_at' => ['nullable', 'date'],
-        'updated_timestamp' => ['nullable', 'date'],
+        'id' => ['required', 'numeric', 'integer'],
+        'created_at' => ['required', 'date'],
+        'updated_timestamp' => ['required', 'date'],
     ];
 
     protected $casts = [
@@ -4925,9 +4925,9 @@ abstract class AnotherPrefixTimestamps7 extends Model
     protected $table = 'Timestamps7';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'created_at' => ['nullable', 'date'],
-        'updated_at' => ['nullable', 'date'],
+        'id' => ['required', 'numeric', 'integer'],
+        'created_at' => ['required', 'date'],
+        'updated_at' => ['required', 'date'],
     ];
 
     protected $casts = [
@@ -4979,9 +4979,9 @@ abstract class AnotherPrefixTimestamps8 extends Model
     protected $table = 'Timestamps8';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'created_at' => ['nullable', 'date'],
-        'updated_timestamp' => ['nullable', 'date'],
+        'id' => ['required', 'numeric', 'integer'],
+        'created_at' => ['required', 'date'],
+        'updated_timestamp' => ['required', 'date'],
     ];
 
     protected $casts = [
@@ -5034,7 +5034,7 @@ abstract class AnotherPrefixTouchingA extends Model
     protected $touches = ['related'];
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -5101,13 +5101,13 @@ abstract class AnotherPrefixTouchingB extends Model
     public function __construct(array $attributes = [])
     {
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
+            'id' => ['required', 'numeric', 'integer'],
             'relatedId' => [
                 Rule::unique('TouchingB', 'relatedId')->ignore(
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'numeric',
                 'integer',
             ],
@@ -5172,16 +5172,16 @@ abstract class AnotherPrefixType extends Model
     protected $table = 'Types';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'name' => ['nullable', 'string'],
-        'active' => ['nullable', 'boolean'],
-        'age' => ['nullable', 'numeric', 'integer'],
-        'seconds' => ['nullable', 'numeric', 'integer'],
-        'blob' => ['nullable', 'numeric', 'integer'],
-        'speed' => ['nullable', 'numeric'],
-        'price' => ['nullable', 'numeric'],
-        'birth' => ['nullable', 'date'],
-        'schema' => ['nullable', 'json'],
+        'id' => ['required', 'numeric', 'integer'],
+        'name' => ['required', 'string'],
+        'active' => ['required', 'boolean'],
+        'age' => ['required', 'numeric', 'integer'],
+        'seconds' => ['required', 'numeric', 'integer'],
+        'blob' => ['required', 'numeric', 'integer'],
+        'speed' => ['required', 'numeric'],
+        'price' => ['required', 'numeric'],
+        'birth' => ['required', 'date'],
+        'schema' => ['required', 'json'],
     ];
 
     protected $casts = [
@@ -5252,13 +5252,13 @@ abstract class AnotherPrefixUnique extends Model
     public function __construct(array $attributes = [])
     {
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
+            'id' => ['required', 'numeric', 'integer'],
             'email' => [
                 Rule::unique('Unique', 'email')->ignore(
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'string',
             ],
             'username' => [
@@ -5266,10 +5266,10 @@ abstract class AnotherPrefixUnique extends Model
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'string',
             ],
-            'name' => ['required', 'string'],
+            'name' => ['nullable', 'string'],
             ...$this->rules ?? [],
         ];
 
@@ -5318,10 +5318,10 @@ abstract class AnotherPrefixUnsupportedType extends Model
     protected $table = 'UnsupportedTypes';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'circle' => ['required'],
-        'square' => ['nullable'],
-        'triangle' => ['nullable'],
+        'id' => ['required', 'numeric', 'integer'],
+        'circle' => ['nullable'],
+        'square' => ['required'],
+        'triangle' => ['required'],
         'rectangle' => ['array', 'required'],
     ];
 
@@ -5393,17 +5393,17 @@ abstract class AnotherPrefixUser extends Model
             ...$this->attributes ?? [],
         ];
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
+            'id' => ['required', 'numeric', 'integer'],
             'email' => [
                 Rule::unique('User', 'email')->ignore(
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'string',
             ],
-            'name' => ['required', 'string'],
-            'role' => ['nullable', new Enum(Role::class)],
+            'name' => ['nullable', 'string'],
+            'role' => ['required', new Enum(Role::class)],
             ...$this->rules ?? [],
         ];
         $this->casts = [
@@ -5472,11 +5472,11 @@ abstract class AnotherPrefixVisible extends Model
     protected $visible = ['email', 'name'];
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'email' => ['nullable', 'string'],
-        'password' => ['nullable', 'string'],
-        'api_key' => ['nullable', 'string'],
-        'name' => ['required', 'string'],
+        'id' => ['required', 'numeric', 'integer'],
+        'email' => ['required', 'string'],
+        'password' => ['required', 'string'],
+        'api_key' => ['required', 'string'],
+        'name' => ['nullable', 'string'],
     ];
 
     protected $casts = [
@@ -5528,7 +5528,7 @@ abstract class AnotherPrefixWithArray extends Model
     protected $table = 'WithArray';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
         'numbers' => ['array', 'required'],
     ];
 
@@ -5595,11 +5595,11 @@ abstract class AnotherPrefixWithBackedEnum extends Model
             ...$this->attributes ?? [],
         ];
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
-            'enum' => ['nullable', new Enum(BackedEnum::class)],
-            'nullable' => ['required', new Enum(BackedEnum::class)],
+            'id' => ['required', 'numeric', 'integer'],
+            'enum' => ['required', new Enum(BackedEnum::class)],
+            'nullable' => ['nullable', new Enum(BackedEnum::class)],
             'array' => ['array', 'required'],
-            'defaultEnum' => ['nullable', new Enum(BackedEnum::class)],
+            'defaultEnum' => ['required', new Enum(BackedEnum::class)],
             ...$this->rules ?? [],
         ];
         $this->casts = [
@@ -5654,8 +5654,8 @@ abstract class AnotherPrefixWithDbType extends Model
     protected $table = 'WithDbType';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'email' => ['nullable', 'string'],
+        'id' => ['required', 'numeric', 'integer'],
+        'email' => ['required', 'string'],
     ];
 
     protected $casts = [
@@ -5721,11 +5721,11 @@ abstract class AnotherPrefixWithEnum extends Model
             ...$this->attributes ?? [],
         ];
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
-            'enum' => ['nullable', new Enum(Enum::class)],
-            'nullable' => ['required', new Enum(Enum::class)],
+            'id' => ['required', 'numeric', 'integer'],
+            'enum' => ['required', new Enum(Enum::class)],
+            'nullable' => ['nullable', new Enum(Enum::class)],
             'array' => ['array', 'required'],
-            'defaultEnum' => ['nullable', new Enum(Enum::class)],
+            'defaultEnum' => ['required', new Enum(Enum::class)],
             ...$this->rules ?? [],
         ];
         $this->casts = [
@@ -5779,7 +5779,7 @@ abstract class AnotherPrefixWithGlobalPrimaryKey extends Model
     protected $table = 'WithGlobalPrimaryKey';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -5828,7 +5828,7 @@ abstract class AnotherPrefixWithGlobalPrimaryKeyDifferentName extends Model
     protected $primaryKey = 'primary_id';
 
     protected array $rules = [
-        'primary_id' => ['nullable', 'numeric', 'integer'],
+        'primary_id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -5879,7 +5879,7 @@ abstract class AnotherPrefixWithGlobalStringPrimaryKey extends Model
     protected $keyType = 'string';
 
     protected array $rules = [
-        'id' => ['nullable', 'string'],
+        'id' => ['required', 'string'],
     ];
 
     protected $casts = [
@@ -5932,7 +5932,7 @@ abstract class AnotherPrefixWithGlobalStringPrimaryKeyDifferentName extends Mode
     protected $keyType = 'string';
 
     protected array $rules = [
-        'primary_id' => ['nullable', 'string'],
+        'primary_id' => ['required', 'string'],
     ];
 
     protected $casts = [
@@ -5979,7 +5979,7 @@ abstract class AnotherPrefixWithPrimaryKey extends Model
     protected $table = 'WithPrimaryKey';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -6028,7 +6028,7 @@ abstract class AnotherPrefixWithPrimaryKeyDifferentName extends Model
     protected $primaryKey = 'primary_id';
 
     protected array $rules = [
-        'primary_id' => ['nullable', 'numeric', 'integer'],
+        'primary_id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -6079,7 +6079,7 @@ abstract class AnotherPrefixWithStringPrimaryKey extends Model
     protected $keyType = 'string';
 
     protected array $rules = [
-        'id' => ['nullable', 'string'],
+        'id' => ['required', 'string'],
     ];
 
     protected $casts = [
@@ -6132,7 +6132,7 @@ abstract class AnotherPrefixWithStringPrimaryKeyDifferentName extends Model
     protected $keyType = 'string';
 
     protected array $rules = [
-        'primary_id' => ['nullable', 'string'],
+        'primary_id' => ['required', 'string'],
     ];
 
     protected $casts = [
@@ -6179,7 +6179,7 @@ abstract class AnotherPrefixWithTableMap extends Model
     protected $table = 'with_table_map';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -6227,8 +6227,8 @@ abstract class AnotherPrefixSnakeCasedModel extends Model
     protected $table = 'snake_cased_models';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'firstname' => ['nullable', 'string'],
+        'id' => ['required', 'numeric', 'integer'],
+        'firstname' => ['required', 'string'],
     ];
 
     protected $casts = [
@@ -6280,8 +6280,8 @@ abstract class PrismaCategory extends Model
     protected $table = 'Category';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'name' => ['nullable', 'string'],
+        'id' => ['required', 'numeric', 'integer'],
+        'name' => ['required', 'string'],
     ];
 
     protected $casts = [
@@ -6362,14 +6362,14 @@ abstract class PrismaDefaultValue extends Model
             ...$this->attributes ?? [],
         ];
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
-            'email' => ['nullable', 'string'],
-            'name' => ['required', 'string'],
-            'age' => ['nullable', 'numeric', 'integer'],
-            'uuid' => ['nullable', 'string', 'uuid'],
-            'now' => ['nullable', 'date'],
-            'bool' => ['nullable', 'boolean'],
-            'role' => ['nullable', new Enum(Role::class)],
+            'id' => ['required', 'numeric', 'integer'],
+            'email' => ['required', 'string'],
+            'name' => ['nullable', 'string'],
+            'age' => ['required', 'numeric', 'integer'],
+            'uuid' => ['required', 'string', 'uuid'],
+            'now' => ['required', 'date'],
+            'bool' => ['required', 'boolean'],
+            'role' => ['required', new Enum(Role::class)],
             ...$this->rules ?? [],
         ];
         $this->casts = [
@@ -6430,7 +6430,7 @@ abstract class PrismaEagerLoadA extends Model
     protected $with = ['related'];
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -6497,13 +6497,13 @@ abstract class PrismaEagerLoadB extends Model
     public function __construct(array $attributes = [])
     {
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
+            'id' => ['required', 'numeric', 'integer'],
             'relatedId' => [
                 Rule::unique('EagerLoadB', 'relatedId')->ignore(
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'numeric',
                 'integer',
             ],
@@ -6562,7 +6562,7 @@ abstract class PrismaExplicitManyToManyA extends Model
     protected $table = 'ExplicitManyToManyA';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -6623,7 +6623,7 @@ abstract class PrismaExplicitManyToManyA2 extends Model
     protected $table = 'ExplicitManyToManyA2';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -6693,13 +6693,13 @@ abstract class PrismaExplicitManyToManyA3 extends Model
     public function __construct(array $attributes = [])
     {
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
+            'id' => ['required', 'numeric', 'integer'],
             'otherIdA' => [
                 Rule::unique('ExplicitManyToManyA3', 'otherIdA')->ignore(
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'numeric',
                 'integer',
             ],
@@ -6776,13 +6776,13 @@ abstract class PrismaExplicitManyToManyA4 extends Model
     public function __construct(array $attributes = [])
     {
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
+            'id' => ['required', 'numeric', 'integer'],
             'otherIdA' => [
                 Rule::unique('ExplicitManyToManyA4', 'otherIdA')->ignore(
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'numeric',
                 'integer',
             ],
@@ -6849,7 +6849,7 @@ abstract class PrismaExplicitManyToManyA5 extends Model
     protected $table = 'ExplicitManyToManyA5';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -6917,7 +6917,7 @@ abstract class PrismaExplicitManyToManyA6 extends Model
     protected $primaryKey = 'key';
 
     protected array $rules = [
-        'key' => ['nullable', 'numeric', 'integer'],
+        'key' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -6992,7 +6992,7 @@ abstract class PrismaExplicitManyToManyA7 extends Model
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'numeric',
                 'integer',
             ],
@@ -7058,7 +7058,7 @@ abstract class PrismaExplicitManyToManyB extends Model
     protected $table = 'ExplicitManyToManyB';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -7119,7 +7119,7 @@ abstract class PrismaExplicitManyToManyB2 extends Model
     protected $table = 'ExplicitManyToManyB2';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -7189,13 +7189,13 @@ abstract class PrismaExplicitManyToManyB3 extends Model
     public function __construct(array $attributes = [])
     {
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
+            'id' => ['required', 'numeric', 'integer'],
             'otherIdB' => [
                 Rule::unique('ExplicitManyToManyB3', 'otherIdB')->ignore(
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'numeric',
                 'integer',
             ],
@@ -7272,13 +7272,13 @@ abstract class PrismaExplicitManyToManyB4 extends Model
     public function __construct(array $attributes = [])
     {
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
+            'id' => ['required', 'numeric', 'integer'],
             'otherIdB' => [
                 Rule::unique('ExplicitManyToManyB4', 'otherIdB')->ignore(
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'numeric',
                 'integer',
             ],
@@ -7346,8 +7346,8 @@ abstract class PrismaExplicitManyToManyB5 extends Model
     protected $table = 'ExplicitManyToManyB5';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'pivot_id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
+        'pivot_id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -7416,7 +7416,7 @@ abstract class PrismaExplicitManyToManyB6 extends Model
     protected $primaryKey = 'key';
 
     protected array $rules = [
-        'key' => ['nullable', 'numeric', 'integer'],
+        'key' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -7491,7 +7491,7 @@ abstract class PrismaExplicitManyToManyB7 extends Model
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'numeric',
                 'integer',
             ],
@@ -7557,9 +7557,9 @@ abstract class PrismaExplicitManyToManyPivot extends Pivot
     protected $table = 'ExplicitManyToManyPivot';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'A_id' => ['nullable', 'numeric', 'integer'],
-        'B_id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
+        'A_id' => ['required', 'numeric', 'integer'],
+        'B_id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -7612,9 +7612,9 @@ abstract class PrismaExplicitManyToManyPivot2 extends Pivot
     protected $table = 'ExplicitManyToManyPivot2';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'explicit_many_to_many_a2_id' => ['nullable', 'numeric', 'integer'],
-        'explicit_many_to_many_b2_id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
+        'explicit_many_to_many_a2_id' => ['required', 'numeric', 'integer'],
+        'explicit_many_to_many_b2_id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -7667,9 +7667,9 @@ abstract class PrismaExplicitManyToManyPivot3 extends Pivot
     protected $table = 'ExplicitManyToManyPivot3';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'A_id' => ['nullable', 'numeric', 'integer'],
-        'B_id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
+        'A_id' => ['required', 'numeric', 'integer'],
+        'B_id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -7722,9 +7722,9 @@ abstract class PrismaExplicitManyToManyPivot4 extends Pivot
     protected $table = 'explicit_many_to_many_a4_explicit_many_to_many_b4';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'A_id' => ['nullable', 'numeric', 'integer'],
-        'B_id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
+        'A_id' => ['required', 'numeric', 'integer'],
+        'B_id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -7790,15 +7790,15 @@ abstract class PrismaExplicitManyToManyPivot5 extends Pivot
     public function __construct(array $attributes = [])
     {
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
-            'A_id' => ['nullable', 'numeric', 'integer'],
-            'B_id' => ['nullable', 'numeric', 'integer'],
+            'id' => ['required', 'numeric', 'integer'],
+            'A_id' => ['required', 'numeric', 'integer'],
+            'B_id' => ['required', 'numeric', 'integer'],
             'A2_id' => [
                 Rule::unique('ExplicitManyToManyPivot5', 'A2_id')->ignore(
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'numeric',
                 'integer',
             ],
@@ -7854,9 +7854,9 @@ abstract class PrismaExplicitManyToManyPivot6 extends Pivot
     protected $primaryKey = 'key';
 
     protected array $rules = [
-        'key' => ['nullable', 'numeric', 'integer'],
-        'A_id' => ['nullable', 'numeric', 'integer'],
-        'B_id' => ['nullable', 'numeric', 'integer'],
+        'key' => ['required', 'numeric', 'integer'],
+        'A_id' => ['required', 'numeric', 'integer'],
+        'B_id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -7911,9 +7911,9 @@ abstract class PrismaExplicitManyToManyPivot7 extends Pivot
     protected $primaryKey = 'key';
 
     protected array $rules = [
-        'key' => ['nullable', 'numeric', 'integer'],
-        'A_id' => ['nullable', 'numeric', 'integer'],
-        'B_id' => ['nullable', 'numeric', 'integer'],
+        'key' => ['required', 'numeric', 'integer'],
+        'A_id' => ['required', 'numeric', 'integer'],
+        'B_id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -7979,18 +7979,18 @@ abstract class PrismaFieldComment extends Model
     public function __construct(array $attributes = [])
     {
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
+            'id' => ['required', 'numeric', 'integer'],
             'email' => [
                 Rule::unique('FieldComments', 'email')->ignore(
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'string',
             ],
-            'name' => ['nullable', 'string'],
-            'age' => ['nullable', 'numeric', 'integer'],
-            'height' => ['nullable', 'numeric', 'integer'],
+            'name' => ['required', 'string'],
+            'age' => ['required', 'numeric', 'integer'],
+            'height' => ['required', 'numeric', 'integer'],
             ...$this->rules ?? [],
         ];
 
@@ -8038,8 +8038,8 @@ abstract class PrismaFieldMultipleComment extends Model
     protected $table = 'FieldMultipleComments';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'name' => ['nullable', 'string'],
+        'id' => ['required', 'numeric', 'integer'],
+        'name' => ['required', 'string'],
     ];
 
     protected $casts = [
@@ -8097,11 +8097,11 @@ abstract class PrismaFillable extends Model
     protected $fillable = ['age', 'name'];
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'email' => ['nullable', 'string'],
-        'password' => ['nullable', 'string'],
-        'age' => ['nullable', 'numeric', 'integer'],
-        'name' => ['required', 'string'],
+        'id' => ['required', 'numeric', 'integer'],
+        'email' => ['required', 'string'],
+        'password' => ['required', 'string'],
+        'age' => ['required', 'numeric', 'integer'],
+        'name' => ['nullable', 'string'],
     ];
 
     protected $casts = [
@@ -8162,11 +8162,11 @@ abstract class PrismaGuarded extends Model
     protected $guarded = ['id', 'email', 'password'];
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'email' => ['nullable', 'string'],
-        'password' => ['nullable', 'string'],
-        'age' => ['nullable', 'numeric', 'integer'],
-        'name' => ['required', 'string'],
+        'id' => ['required', 'numeric', 'integer'],
+        'email' => ['required', 'string'],
+        'password' => ['required', 'string'],
+        'age' => ['required', 'numeric', 'integer'],
+        'name' => ['nullable', 'string'],
     ];
 
     protected $casts = [
@@ -8223,11 +8223,11 @@ abstract class PrismaHidden extends Model
     protected $hidden = ['password', 'api_key'];
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'email' => ['nullable', 'string'],
-        'password' => ['nullable', 'string'],
-        'api_key' => ['nullable', 'string'],
-        'name' => ['required', 'string'],
+        'id' => ['required', 'numeric', 'integer'],
+        'email' => ['required', 'string'],
+        'password' => ['required', 'string'],
+        'api_key' => ['required', 'string'],
+        'name' => ['nullable', 'string'],
     ];
 
     protected $casts = [
@@ -8291,16 +8291,16 @@ abstract class PrismaIgnore extends Model
     public function __construct(array $attributes = [])
     {
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
+            'id' => ['required', 'numeric', 'integer'],
             'email' => [
                 Rule::unique('Ignore', 'email')->ignore(
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'string',
             ],
-            'age' => ['nullable', 'numeric', 'integer'],
+            'age' => ['required', 'numeric', 'integer'],
             ...$this->rules ?? [],
         ];
 
@@ -8350,7 +8350,7 @@ abstract class PrismaImplicitManyToManyA extends Model
     protected $table = 'ImplicitManyToManyA';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -8410,7 +8410,7 @@ abstract class PrismaImplicitManyToManyB extends Model
     protected $table = 'ImplicitManyToManyB';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -8474,8 +8474,8 @@ abstract class PrismaMappedId extends Model
     protected $hidden = ['primary_id'];
 
     protected array $rules = [
-        'primary_id' => ['nullable', 'numeric', 'integer'],
-        'firstname' => ['nullable', 'string'],
+        'primary_id' => ['required', 'numeric', 'integer'],
+        'firstname' => ['required', 'string'],
     ];
 
     protected $casts = [
@@ -8533,11 +8533,11 @@ abstract class PrismaMassAssignable extends Model
     protected $guarded = [];
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'email' => ['nullable', 'string'],
-        'password' => ['nullable', 'string'],
-        'age' => ['nullable', 'numeric', 'integer'],
-        'name' => ['required', 'string'],
+        'id' => ['required', 'numeric', 'integer'],
+        'email' => ['required', 'string'],
+        'password' => ['required', 'string'],
+        'age' => ['required', 'numeric', 'integer'],
+        'name' => ['nullable', 'string'],
     ];
 
     protected $casts = [
@@ -8590,7 +8590,7 @@ abstract class PrismaModelComment extends Model
     protected $guarded = [];
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -8639,7 +8639,7 @@ abstract class PrismaModelMultipleComment extends Model
     protected $guarded = [];
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -8691,8 +8691,8 @@ abstract class PrismaMultipleComment extends Model
     protected $hidden = ['password'];
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'password' => ['nullable', 'string'],
+        'id' => ['required', 'numeric', 'integer'],
+        'password' => ['required', 'string'],
     ];
 
     protected $casts = [
@@ -8757,13 +8757,13 @@ abstract class PrismaMultipleUnique extends Model
     public function __construct(array $attributes = [])
     {
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
+            'id' => ['required', 'numeric', 'integer'],
             'email' => [
                 Rule::unique('MultipleUnique', 'email')->ignore(
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'string',
             ],
             'firstname' => [
@@ -8772,11 +8772,11 @@ abstract class PrismaMultipleUnique extends Model
                     ->where(
                         fn ($query) => $query->where('lastname', $this->lastname)
                     ),
-                'nullable',
+                'required',
                 'string',
             ],
-            'lastname' => ['nullable', 'string'],
-            'age' => ['required', 'numeric', 'integer'],
+            'lastname' => ['required', 'string'],
+            'age' => ['nullable', 'numeric', 'integer'],
             ...$this->rules ?? [],
         ];
 
@@ -8840,7 +8840,7 @@ abstract class PrismaMultipleUnique2 extends Model
     public function __construct(array $attributes = [])
     {
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
+            'id' => ['required', 'numeric', 'integer'],
             'email' => [
                 Rule::unique('MultipleUnique2', 'email')->ignore(
                     $this->getKey(),
@@ -8853,12 +8853,12 @@ abstract class PrismaMultipleUnique2 extends Model
                             ->where('firstname', $this->firstname)
                             ->where('lastname', $this->lastname)
                     ),
-                'nullable',
+                'required',
                 'string',
             ],
-            'firstname' => ['nullable', 'string'],
-            'lastname' => ['nullable', 'string'],
-            'age' => ['required', 'numeric', 'integer'],
+            'firstname' => ['required', 'string'],
+            'lastname' => ['required', 'string'],
+            'age' => ['nullable', 'numeric', 'integer'],
             ...$this->rules ?? [],
         ];
 
@@ -8921,10 +8921,10 @@ abstract class PrismaNoPrimaryKey extends Model
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'string',
             ],
-            'age' => ['nullable', 'numeric', 'integer'],
+            'age' => ['required', 'numeric', 'integer'],
             ...$this->rules ?? [],
         ];
 
@@ -9009,8 +9009,8 @@ abstract class PrismaNullableField extends Model
     protected $table = 'NullableField';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'name' => ['required', 'string'],
+        'id' => ['required', 'numeric', 'integer'],
+        'name' => ['nullable', 'string'],
     ];
 
     protected $casts = [
@@ -9061,7 +9061,7 @@ abstract class PrismaOneToManyA extends Model
     protected $table = 'OneToManyA';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -9116,7 +9116,7 @@ abstract class PrismaOneToManyA2 extends Model
     protected $table = 'OneToManyA2';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -9182,13 +9182,13 @@ abstract class PrismaOneToManyA3 extends Model
     public function __construct(array $attributes = [])
     {
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
+            'id' => ['required', 'numeric', 'integer'],
             'otherId' => [
                 Rule::unique('OneToManyA3', 'otherId')->ignore(
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'numeric',
                 'integer',
             ],
@@ -9260,7 +9260,7 @@ abstract class PrismaOneToManyA4 extends Model
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'numeric',
                 'integer',
             ],
@@ -9318,8 +9318,8 @@ abstract class PrismaOneToManyB extends Model
     protected $table = 'OneToManyB';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'relatedId' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
+        'relatedId' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -9375,8 +9375,8 @@ abstract class PrismaOneToManyB2 extends Model
     protected $table = 'OneToManyB2';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'one_to_many_a2_id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
+        'one_to_many_a2_id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -9432,8 +9432,8 @@ abstract class PrismaOneToManyB3 extends Model
     protected $table = 'OneToManyB3';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'relatedId' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
+        'relatedId' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -9504,11 +9504,11 @@ abstract class PrismaOneToManyB4 extends Model
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'numeric',
                 'integer',
             ],
-            'relatedId' => ['nullable', 'numeric', 'integer'],
+            'relatedId' => ['required', 'numeric', 'integer'],
             ...$this->rules ?? [],
         ];
 
@@ -9562,7 +9562,7 @@ abstract class PrismaOneToOneA extends Model
     protected $table = 'OneToOneA';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -9616,7 +9616,7 @@ abstract class PrismaOneToOneA2 extends Model
     protected $table = 'OneToOneA2';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -9681,13 +9681,13 @@ abstract class PrismaOneToOneA3 extends Model
     public function __construct(array $attributes = [])
     {
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
+            'id' => ['required', 'numeric', 'integer'],
             'otherId' => [
                 Rule::unique('OneToOneA3', 'otherId')->ignore(
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'numeric',
                 'integer',
             ],
@@ -9744,7 +9744,7 @@ abstract class PrismaOneToOneA4 extends Model
     protected $table = 'OneToOneA4';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -9812,7 +9812,7 @@ abstract class PrismaOneToOneA5 extends Model
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'numeric',
                 'integer',
             ],
@@ -9880,13 +9880,13 @@ abstract class PrismaOneToOneB extends Model
     public function __construct(array $attributes = [])
     {
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
+            'id' => ['required', 'numeric', 'integer'],
             'relatedId' => [
                 Rule::unique('OneToOneB', 'relatedId')->ignore(
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'numeric',
                 'integer',
             ],
@@ -9954,13 +9954,13 @@ abstract class PrismaOneToOneB2 extends Model
     public function __construct(array $attributes = [])
     {
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
+            'id' => ['required', 'numeric', 'integer'],
             'one_to_one_a2_id' => [
                 Rule::unique('OneToOneB2', 'one_to_one_a2_id')->ignore(
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'numeric',
                 'integer',
             ],
@@ -10028,13 +10028,13 @@ abstract class PrismaOneToOneB3 extends Model
     public function __construct(array $attributes = [])
     {
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
+            'id' => ['required', 'numeric', 'integer'],
             'related_id' => [
                 Rule::unique('OneToOneB3', 'related_id')->ignore(
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'numeric',
                 'integer',
             ],
@@ -10102,13 +10102,13 @@ abstract class PrismaOneToOneB4 extends Model
     public function __construct(array $attributes = [])
     {
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
+            'id' => ['required', 'numeric', 'integer'],
             'relatedId' => [
                 Rule::unique('OneToOneB4', 'relatedId')->ignore(
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'required',
+                'nullable',
                 'numeric',
                 'integer',
             ],
@@ -10181,7 +10181,7 @@ abstract class PrismaOneToOneB5 extends Model
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'numeric',
                 'integer',
             ],
@@ -10190,7 +10190,7 @@ abstract class PrismaOneToOneB5 extends Model
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'required',
+                'nullable',
                 'numeric',
                 'integer',
             ],
@@ -10270,13 +10270,13 @@ abstract class PrismaPost extends Model
     public function __construct(array $attributes = [])
     {
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
-            'title' => ['nullable', 'string'],
-            'published' => ['nullable', 'boolean'],
-            'type' => ['nullable', new Enum(PostType::class)],
-            'authorId' => ['nullable', 'numeric', 'integer'],
-            'createdAt' => ['nullable', 'date'],
-            'updatedAt' => ['nullable', 'date'],
+            'id' => ['required', 'numeric', 'integer'],
+            'title' => ['required', 'string'],
+            'published' => ['required', 'boolean'],
+            'type' => ['required', new Enum(PostType::class)],
+            'authorId' => ['required', 'numeric', 'integer'],
+            'createdAt' => ['required', 'date'],
+            'updatedAt' => ['required', 'date'],
             ...$this->rules ?? [],
         ];
         $this->casts = [
@@ -10362,14 +10362,14 @@ abstract class PrismaProfile extends Model
     public function __construct(array $attributes = [])
     {
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
-            'bio' => ['nullable', 'string'],
+            'id' => ['required', 'numeric', 'integer'],
+            'bio' => ['required', 'string'],
             'userId' => [
                 Rule::unique('Profile', 'userId')->ignore(
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'numeric',
                 'integer',
             ],
@@ -10428,11 +10428,11 @@ abstract class PrismaReadOnlyField extends Model
     protected $table = 'ReadOnlyField';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'email' => ['nullable', 'string'],
-        'phone' => ['nullable', 'string'],
-        'password' => ['nullable', 'string'],
-        'name' => ['required', 'string'],
+        'id' => ['required', 'numeric', 'integer'],
+        'email' => ['required', 'string'],
+        'phone' => ['required', 'string'],
+        'password' => ['required', 'string'],
+        'name' => ['nullable', 'string'],
     ];
 
     protected $casts = [
@@ -10497,13 +10497,13 @@ abstract class PrismaSelfRelation extends Model
     public function __construct(array $attributes = [])
     {
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
+            'id' => ['required', 'numeric', 'integer'],
             'relatedId' => [
                 Rule::unique('SelfRelation', 'relatedId')->ignore(
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'numeric',
                 'integer',
             ],
@@ -10571,10 +10571,10 @@ abstract class PrismaSoftDelete1 extends Model
     protected $table = 'SoftDelete1';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'email' => ['nullable', 'string'],
-        'password' => ['nullable', 'string'],
-        'deleted_at' => ['nullable', 'date'],
+        'id' => ['required', 'numeric', 'integer'],
+        'email' => ['required', 'string'],
+        'password' => ['required', 'string'],
+        'deleted_at' => ['required', 'date'],
     ];
 
     protected $casts = [
@@ -10634,10 +10634,10 @@ abstract class PrismaSoftDelete2 extends Model
     protected $table = 'SoftDelete2';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'email' => ['nullable', 'string'],
-        'password' => ['nullable', 'string'],
-        'deleted_timestamp' => ['nullable', 'date'],
+        'id' => ['required', 'numeric', 'integer'],
+        'email' => ['required', 'string'],
+        'password' => ['required', 'string'],
+        'deleted_timestamp' => ['required', 'date'],
     ];
 
     protected $casts = [
@@ -10691,9 +10691,9 @@ abstract class PrismaTimestamps1 extends Model
     protected $table = 'Timestamps1';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'created_timestamp' => ['nullable', 'date'],
-        'updated_timestamp' => ['nullable', 'date'],
+        'id' => ['required', 'numeric', 'integer'],
+        'created_timestamp' => ['required', 'date'],
+        'updated_timestamp' => ['required', 'date'],
     ];
 
     protected $casts = [
@@ -10745,9 +10745,9 @@ abstract class PrismaTimestamps2 extends Model
     protected $table = 'Timestamps2';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'created_at' => ['nullable', 'date'],
-        'updated_timestamp' => ['nullable', 'date'],
+        'id' => ['required', 'numeric', 'integer'],
+        'created_at' => ['required', 'date'],
+        'updated_timestamp' => ['required', 'date'],
     ];
 
     protected $casts = [
@@ -10799,9 +10799,9 @@ abstract class PrismaTimestamps3 extends Model
     protected $table = 'Timestamps3';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'created_timestamp' => ['nullable', 'date'],
-        'updated_at' => ['nullable', 'date'],
+        'id' => ['required', 'numeric', 'integer'],
+        'created_timestamp' => ['required', 'date'],
+        'updated_at' => ['required', 'date'],
     ];
 
     protected $casts = [
@@ -10852,9 +10852,9 @@ abstract class PrismaTimestamps4 extends Model
     protected $table = 'Timestamps4';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'created_at' => ['nullable', 'date'],
-        'updated_at' => ['nullable', 'date'],
+        'id' => ['required', 'numeric', 'integer'],
+        'created_at' => ['required', 'date'],
+        'updated_at' => ['required', 'date'],
     ];
 
     protected $casts = [
@@ -10905,9 +10905,9 @@ abstract class PrismaTimestamps5 extends Model
     protected $table = 'Timestamps5';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'created_at' => ['nullable', 'date'],
-        'updated_at' => ['nullable', 'date'],
+        'id' => ['required', 'numeric', 'integer'],
+        'created_at' => ['required', 'date'],
+        'updated_at' => ['required', 'date'],
     ];
 
     protected $casts = [
@@ -10959,9 +10959,9 @@ abstract class PrismaTimestamps6 extends Model
     protected $table = 'Timestamps6';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'created_at' => ['nullable', 'date'],
-        'updated_timestamp' => ['nullable', 'date'],
+        'id' => ['required', 'numeric', 'integer'],
+        'created_at' => ['required', 'date'],
+        'updated_timestamp' => ['required', 'date'],
     ];
 
     protected $casts = [
@@ -11012,9 +11012,9 @@ abstract class PrismaTimestamps7 extends Model
     protected $table = 'Timestamps7';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'created_at' => ['nullable', 'date'],
-        'updated_at' => ['nullable', 'date'],
+        'id' => ['required', 'numeric', 'integer'],
+        'created_at' => ['required', 'date'],
+        'updated_at' => ['required', 'date'],
     ];
 
     protected $casts = [
@@ -11066,9 +11066,9 @@ abstract class PrismaTimestamps8 extends Model
     protected $table = 'Timestamps8';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'created_at' => ['nullable', 'date'],
-        'updated_timestamp' => ['nullable', 'date'],
+        'id' => ['required', 'numeric', 'integer'],
+        'created_at' => ['required', 'date'],
+        'updated_timestamp' => ['required', 'date'],
     ];
 
     protected $casts = [
@@ -11121,7 +11121,7 @@ abstract class PrismaTouchingA extends Model
     protected $touches = ['related'];
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -11188,13 +11188,13 @@ abstract class PrismaTouchingB extends Model
     public function __construct(array $attributes = [])
     {
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
+            'id' => ['required', 'numeric', 'integer'],
             'relatedId' => [
                 Rule::unique('TouchingB', 'relatedId')->ignore(
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'numeric',
                 'integer',
             ],
@@ -11259,16 +11259,16 @@ abstract class PrismaType extends Model
     protected $table = 'Types';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'name' => ['nullable', 'string'],
-        'active' => ['nullable', 'boolean'],
-        'age' => ['nullable', 'numeric', 'integer'],
-        'seconds' => ['nullable', 'numeric', 'integer'],
-        'blob' => ['nullable', 'numeric', 'integer'],
-        'speed' => ['nullable', 'numeric'],
-        'price' => ['nullable', 'numeric'],
-        'birth' => ['nullable', 'date'],
-        'schema' => ['nullable', 'json'],
+        'id' => ['required', 'numeric', 'integer'],
+        'name' => ['required', 'string'],
+        'active' => ['required', 'boolean'],
+        'age' => ['required', 'numeric', 'integer'],
+        'seconds' => ['required', 'numeric', 'integer'],
+        'blob' => ['required', 'numeric', 'integer'],
+        'speed' => ['required', 'numeric'],
+        'price' => ['required', 'numeric'],
+        'birth' => ['required', 'date'],
+        'schema' => ['required', 'json'],
     ];
 
     protected $casts = [
@@ -11339,13 +11339,13 @@ abstract class PrismaUnique extends Model
     public function __construct(array $attributes = [])
     {
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
+            'id' => ['required', 'numeric', 'integer'],
             'email' => [
                 Rule::unique('Unique', 'email')->ignore(
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'string',
             ],
             'username' => [
@@ -11353,10 +11353,10 @@ abstract class PrismaUnique extends Model
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'string',
             ],
-            'name' => ['required', 'string'],
+            'name' => ['nullable', 'string'],
             ...$this->rules ?? [],
         ];
 
@@ -11405,10 +11405,10 @@ abstract class PrismaUnsupportedType extends Model
     protected $table = 'UnsupportedTypes';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'circle' => ['required'],
-        'square' => ['nullable'],
-        'triangle' => ['nullable'],
+        'id' => ['required', 'numeric', 'integer'],
+        'circle' => ['nullable'],
+        'square' => ['required'],
+        'triangle' => ['required'],
         'rectangle' => ['array', 'required'],
     ];
 
@@ -11480,17 +11480,17 @@ abstract class PrismaUser extends Model
             ...$this->attributes ?? [],
         ];
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
+            'id' => ['required', 'numeric', 'integer'],
             'email' => [
                 Rule::unique('User', 'email')->ignore(
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'string',
             ],
-            'name' => ['required', 'string'],
-            'role' => ['nullable', new Enum(Role::class)],
+            'name' => ['nullable', 'string'],
+            'role' => ['required', new Enum(Role::class)],
             ...$this->rules ?? [],
         ];
         $this->casts = [
@@ -11559,11 +11559,11 @@ abstract class PrismaVisible extends Model
     protected $visible = ['email', 'name'];
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'email' => ['nullable', 'string'],
-        'password' => ['nullable', 'string'],
-        'api_key' => ['nullable', 'string'],
-        'name' => ['required', 'string'],
+        'id' => ['required', 'numeric', 'integer'],
+        'email' => ['required', 'string'],
+        'password' => ['required', 'string'],
+        'api_key' => ['required', 'string'],
+        'name' => ['nullable', 'string'],
     ];
 
     protected $casts = [
@@ -11615,7 +11615,7 @@ abstract class PrismaWithArray extends Model
     protected $table = 'WithArray';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
         'numbers' => ['array', 'required'],
     ];
 
@@ -11682,11 +11682,11 @@ abstract class PrismaWithBackedEnum extends Model
             ...$this->attributes ?? [],
         ];
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
-            'enum' => ['nullable', new Enum(BackedEnum::class)],
-            'nullable' => ['required', new Enum(BackedEnum::class)],
+            'id' => ['required', 'numeric', 'integer'],
+            'enum' => ['required', new Enum(BackedEnum::class)],
+            'nullable' => ['nullable', new Enum(BackedEnum::class)],
             'array' => ['array', 'required'],
-            'defaultEnum' => ['nullable', new Enum(BackedEnum::class)],
+            'defaultEnum' => ['required', new Enum(BackedEnum::class)],
             ...$this->rules ?? [],
         ];
         $this->casts = [
@@ -11741,8 +11741,8 @@ abstract class PrismaWithDbType extends Model
     protected $table = 'WithDbType';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'email' => ['nullable', 'string'],
+        'id' => ['required', 'numeric', 'integer'],
+        'email' => ['required', 'string'],
     ];
 
     protected $casts = [
@@ -11808,11 +11808,11 @@ abstract class PrismaWithEnum extends Model
             ...$this->attributes ?? [],
         ];
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
-            'enum' => ['nullable', new Enum(Enum::class)],
-            'nullable' => ['required', new Enum(Enum::class)],
+            'id' => ['required', 'numeric', 'integer'],
+            'enum' => ['required', new Enum(Enum::class)],
+            'nullable' => ['nullable', new Enum(Enum::class)],
             'array' => ['array', 'required'],
-            'defaultEnum' => ['nullable', new Enum(Enum::class)],
+            'defaultEnum' => ['required', new Enum(Enum::class)],
             ...$this->rules ?? [],
         ];
         $this->casts = [
@@ -11866,7 +11866,7 @@ abstract class PrismaWithGlobalPrimaryKey extends Model
     protected $table = 'WithGlobalPrimaryKey';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -11915,7 +11915,7 @@ abstract class PrismaWithGlobalPrimaryKeyDifferentName extends Model
     protected $primaryKey = 'primary_id';
 
     protected array $rules = [
-        'primary_id' => ['nullable', 'numeric', 'integer'],
+        'primary_id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -11966,7 +11966,7 @@ abstract class PrismaWithGlobalStringPrimaryKey extends Model
     protected $keyType = 'string';
 
     protected array $rules = [
-        'id' => ['nullable', 'string'],
+        'id' => ['required', 'string'],
     ];
 
     protected $casts = [
@@ -12019,7 +12019,7 @@ abstract class PrismaWithGlobalStringPrimaryKeyDifferentName extends Model
     protected $keyType = 'string';
 
     protected array $rules = [
-        'primary_id' => ['nullable', 'string'],
+        'primary_id' => ['required', 'string'],
     ];
 
     protected $casts = [
@@ -12066,7 +12066,7 @@ abstract class PrismaWithPrimaryKey extends Model
     protected $table = 'WithPrimaryKey';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -12115,7 +12115,7 @@ abstract class PrismaWithPrimaryKeyDifferentName extends Model
     protected $primaryKey = 'primary_id';
 
     protected array $rules = [
-        'primary_id' => ['nullable', 'numeric', 'integer'],
+        'primary_id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -12166,7 +12166,7 @@ abstract class PrismaWithStringPrimaryKey extends Model
     protected $keyType = 'string';
 
     protected array $rules = [
-        'id' => ['nullable', 'string'],
+        'id' => ['required', 'string'],
     ];
 
     protected $casts = [
@@ -12219,7 +12219,7 @@ abstract class PrismaWithStringPrimaryKeyDifferentName extends Model
     protected $keyType = 'string';
 
     protected array $rules = [
-        'primary_id' => ['nullable', 'string'],
+        'primary_id' => ['required', 'string'],
     ];
 
     protected $casts = [
@@ -12266,7 +12266,7 @@ abstract class PrismaWithTableMap extends Model
     protected $table = 'with_table_map';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -12314,8 +12314,8 @@ abstract class PrismaSnakeCasedModel extends Model
     protected $table = 'snake_cased_models';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'firstname' => ['nullable', 'string'],
+        'id' => ['required', 'numeric', 'integer'],
+        'firstname' => ['required', 'string'],
     ];
 
     protected $casts = [
@@ -12367,8 +12367,8 @@ abstract class PrismaCategory extends Model
     protected $table = 'Category';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'name' => ['nullable', 'string'],
+        'id' => ['required', 'numeric', 'integer'],
+        'name' => ['required', 'string'],
     ];
 
     protected $casts = [
@@ -12449,14 +12449,14 @@ abstract class PrismaDefaultValue extends Model
             ...$this->attributes ?? [],
         ];
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
-            'email' => ['nullable', 'string'],
-            'name' => ['required', 'string'],
-            'age' => ['nullable', 'numeric', 'integer'],
-            'uuid' => ['nullable', 'string', 'uuid'],
-            'now' => ['nullable', 'date'],
-            'bool' => ['nullable', 'boolean'],
-            'role' => ['nullable', new Enum(Role::class)],
+            'id' => ['required', 'numeric', 'integer'],
+            'email' => ['required', 'string'],
+            'name' => ['nullable', 'string'],
+            'age' => ['required', 'numeric', 'integer'],
+            'uuid' => ['required', 'string', 'uuid'],
+            'now' => ['required', 'date'],
+            'bool' => ['required', 'boolean'],
+            'role' => ['required', new Enum(Role::class)],
             ...$this->rules ?? [],
         ];
         $this->casts = [
@@ -12517,7 +12517,7 @@ abstract class PrismaEagerLoadA extends Model
     protected $with = ['related'];
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -12584,13 +12584,13 @@ abstract class PrismaEagerLoadB extends Model
     public function __construct(array $attributes = [])
     {
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
+            'id' => ['required', 'numeric', 'integer'],
             'relatedId' => [
                 Rule::unique('EagerLoadB', 'relatedId')->ignore(
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'numeric',
                 'integer',
             ],
@@ -12649,7 +12649,7 @@ abstract class PrismaExplicitManyToManyA extends Model
     protected $table = 'ExplicitManyToManyA';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -12712,7 +12712,7 @@ abstract class PrismaExplicitManyToManyA2 extends Model
     protected $table = 'ExplicitManyToManyA2';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -12786,13 +12786,13 @@ abstract class PrismaExplicitManyToManyA3 extends Model
     public function __construct(array $attributes = [])
     {
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
+            'id' => ['required', 'numeric', 'integer'],
             'otherIdA' => [
                 Rule::unique('ExplicitManyToManyA3', 'otherIdA')->ignore(
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'numeric',
                 'integer',
             ],
@@ -12869,13 +12869,13 @@ abstract class PrismaExplicitManyToManyA4 extends Model
     public function __construct(array $attributes = [])
     {
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
+            'id' => ['required', 'numeric', 'integer'],
             'otherIdA' => [
                 Rule::unique('ExplicitManyToManyA4', 'otherIdA')->ignore(
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'numeric',
                 'integer',
             ],
@@ -12942,7 +12942,7 @@ abstract class PrismaExplicitManyToManyA5 extends Model
     protected $table = 'ExplicitManyToManyA5';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -13012,7 +13012,7 @@ abstract class PrismaExplicitManyToManyA6 extends Model
     protected $primaryKey = 'key';
 
     protected array $rules = [
-        'key' => ['nullable', 'numeric', 'integer'],
+        'key' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -13089,7 +13089,7 @@ abstract class PrismaExplicitManyToManyA7 extends Model
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'numeric',
                 'integer',
             ],
@@ -13155,7 +13155,7 @@ abstract class PrismaExplicitManyToManyB extends Model
     protected $table = 'ExplicitManyToManyB';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -13218,7 +13218,7 @@ abstract class PrismaExplicitManyToManyB2 extends Model
     protected $table = 'ExplicitManyToManyB2';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -13292,13 +13292,13 @@ abstract class PrismaExplicitManyToManyB3 extends Model
     public function __construct(array $attributes = [])
     {
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
+            'id' => ['required', 'numeric', 'integer'],
             'otherIdB' => [
                 Rule::unique('ExplicitManyToManyB3', 'otherIdB')->ignore(
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'numeric',
                 'integer',
             ],
@@ -13375,13 +13375,13 @@ abstract class PrismaExplicitManyToManyB4 extends Model
     public function __construct(array $attributes = [])
     {
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
+            'id' => ['required', 'numeric', 'integer'],
             'otherIdB' => [
                 Rule::unique('ExplicitManyToManyB4', 'otherIdB')->ignore(
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'numeric',
                 'integer',
             ],
@@ -13449,8 +13449,8 @@ abstract class PrismaExplicitManyToManyB5 extends Model
     protected $table = 'ExplicitManyToManyB5';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'pivot_id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
+        'pivot_id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -13525,7 +13525,7 @@ abstract class PrismaExplicitManyToManyB6 extends Model
     protected $primaryKey = 'key';
 
     protected array $rules = [
-        'key' => ['nullable', 'numeric', 'integer'],
+        'key' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -13602,7 +13602,7 @@ abstract class PrismaExplicitManyToManyB7 extends Model
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'numeric',
                 'integer',
             ],
@@ -13668,9 +13668,9 @@ abstract class PrismaExplicitManyToManyPivot extends Pivot
     protected $table = 'ExplicitManyToManyPivot';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'A_id' => ['nullable', 'numeric', 'integer'],
-        'B_id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
+        'A_id' => ['required', 'numeric', 'integer'],
+        'B_id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -13723,9 +13723,9 @@ abstract class PrismaExplicitManyToManyPivot2 extends Pivot
     protected $table = 'ExplicitManyToManyPivot2';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'explicit_many_to_many_a2_id' => ['nullable', 'numeric', 'integer'],
-        'explicit_many_to_many_b2_id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
+        'explicit_many_to_many_a2_id' => ['required', 'numeric', 'integer'],
+        'explicit_many_to_many_b2_id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -13778,9 +13778,9 @@ abstract class PrismaExplicitManyToManyPivot3 extends Pivot
     protected $table = 'ExplicitManyToManyPivot3';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'A_id' => ['nullable', 'numeric', 'integer'],
-        'B_id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
+        'A_id' => ['required', 'numeric', 'integer'],
+        'B_id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -13833,9 +13833,9 @@ abstract class PrismaExplicitManyToManyPivot4 extends Pivot
     protected $table = 'explicit_many_to_many_a4_explicit_many_to_many_b4';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'A_id' => ['nullable', 'numeric', 'integer'],
-        'B_id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
+        'A_id' => ['required', 'numeric', 'integer'],
+        'B_id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -13901,15 +13901,15 @@ abstract class PrismaExplicitManyToManyPivot5 extends Pivot
     public function __construct(array $attributes = [])
     {
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
-            'A_id' => ['nullable', 'numeric', 'integer'],
-            'B_id' => ['nullable', 'numeric', 'integer'],
+            'id' => ['required', 'numeric', 'integer'],
+            'A_id' => ['required', 'numeric', 'integer'],
+            'B_id' => ['required', 'numeric', 'integer'],
             'A2_id' => [
                 Rule::unique('ExplicitManyToManyPivot5', 'A2_id')->ignore(
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'numeric',
                 'integer',
             ],
@@ -13965,9 +13965,9 @@ abstract class PrismaExplicitManyToManyPivot6 extends Pivot
     protected $primaryKey = 'key';
 
     protected array $rules = [
-        'key' => ['nullable', 'numeric', 'integer'],
-        'A_id' => ['nullable', 'numeric', 'integer'],
-        'B_id' => ['nullable', 'numeric', 'integer'],
+        'key' => ['required', 'numeric', 'integer'],
+        'A_id' => ['required', 'numeric', 'integer'],
+        'B_id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -14022,9 +14022,9 @@ abstract class PrismaExplicitManyToManyPivot7 extends Pivot
     protected $primaryKey = 'key';
 
     protected array $rules = [
-        'key' => ['nullable', 'numeric', 'integer'],
-        'A_id' => ['nullable', 'numeric', 'integer'],
-        'B_id' => ['nullable', 'numeric', 'integer'],
+        'key' => ['required', 'numeric', 'integer'],
+        'A_id' => ['required', 'numeric', 'integer'],
+        'B_id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -14090,18 +14090,18 @@ abstract class PrismaFieldComment extends Model
     public function __construct(array $attributes = [])
     {
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
+            'id' => ['required', 'numeric', 'integer'],
             'email' => [
                 Rule::unique('FieldComments', 'email')->ignore(
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'string',
             ],
-            'name' => ['nullable', 'string'],
-            'age' => ['nullable', 'numeric', 'integer'],
-            'height' => ['nullable', 'numeric', 'integer'],
+            'name' => ['required', 'string'],
+            'age' => ['required', 'numeric', 'integer'],
+            'height' => ['required', 'numeric', 'integer'],
             ...$this->rules ?? [],
         ];
 
@@ -14149,8 +14149,8 @@ abstract class PrismaFieldMultipleComment extends Model
     protected $table = 'FieldMultipleComments';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'name' => ['nullable', 'string'],
+        'id' => ['required', 'numeric', 'integer'],
+        'name' => ['required', 'string'],
     ];
 
     protected $casts = [
@@ -14208,11 +14208,11 @@ abstract class PrismaFillable extends Model
     protected $fillable = ['age', 'name'];
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'email' => ['nullable', 'string'],
-        'password' => ['nullable', 'string'],
-        'age' => ['nullable', 'numeric', 'integer'],
-        'name' => ['required', 'string'],
+        'id' => ['required', 'numeric', 'integer'],
+        'email' => ['required', 'string'],
+        'password' => ['required', 'string'],
+        'age' => ['required', 'numeric', 'integer'],
+        'name' => ['nullable', 'string'],
     ];
 
     protected $casts = [
@@ -14273,11 +14273,11 @@ abstract class PrismaGuarded extends Model
     protected $guarded = ['id', 'email', 'password'];
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'email' => ['nullable', 'string'],
-        'password' => ['nullable', 'string'],
-        'age' => ['nullable', 'numeric', 'integer'],
-        'name' => ['required', 'string'],
+        'id' => ['required', 'numeric', 'integer'],
+        'email' => ['required', 'string'],
+        'password' => ['required', 'string'],
+        'age' => ['required', 'numeric', 'integer'],
+        'name' => ['nullable', 'string'],
     ];
 
     protected $casts = [
@@ -14334,11 +14334,11 @@ abstract class PrismaHidden extends Model
     protected $hidden = ['password', 'api_key'];
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'email' => ['nullable', 'string'],
-        'password' => ['nullable', 'string'],
-        'api_key' => ['nullable', 'string'],
-        'name' => ['required', 'string'],
+        'id' => ['required', 'numeric', 'integer'],
+        'email' => ['required', 'string'],
+        'password' => ['required', 'string'],
+        'api_key' => ['required', 'string'],
+        'name' => ['nullable', 'string'],
     ];
 
     protected $casts = [
@@ -14402,16 +14402,16 @@ abstract class PrismaIgnore extends Model
     public function __construct(array $attributes = [])
     {
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
+            'id' => ['required', 'numeric', 'integer'],
             'email' => [
                 Rule::unique('Ignore', 'email')->ignore(
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'string',
             ],
-            'age' => ['nullable', 'numeric', 'integer'],
+            'age' => ['required', 'numeric', 'integer'],
             ...$this->rules ?? [],
         ];
 
@@ -14461,7 +14461,7 @@ abstract class PrismaImplicitManyToManyA extends Model
     protected $table = 'ImplicitManyToManyA';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -14521,7 +14521,7 @@ abstract class PrismaImplicitManyToManyB extends Model
     protected $table = 'ImplicitManyToManyB';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -14585,8 +14585,8 @@ abstract class PrismaMappedId extends Model
     protected $hidden = ['primary_id'];
 
     protected array $rules = [
-        'primary_id' => ['nullable', 'numeric', 'integer'],
-        'firstname' => ['nullable', 'string'],
+        'primary_id' => ['required', 'numeric', 'integer'],
+        'firstname' => ['required', 'string'],
     ];
 
     protected $casts = [
@@ -14644,11 +14644,11 @@ abstract class PrismaMassAssignable extends Model
     protected $guarded = [];
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'email' => ['nullable', 'string'],
-        'password' => ['nullable', 'string'],
-        'age' => ['nullable', 'numeric', 'integer'],
-        'name' => ['required', 'string'],
+        'id' => ['required', 'numeric', 'integer'],
+        'email' => ['required', 'string'],
+        'password' => ['required', 'string'],
+        'age' => ['required', 'numeric', 'integer'],
+        'name' => ['nullable', 'string'],
     ];
 
     protected $casts = [
@@ -14701,7 +14701,7 @@ abstract class PrismaModelComment extends Model
     protected $guarded = [];
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -14750,7 +14750,7 @@ abstract class PrismaModelMultipleComment extends Model
     protected $guarded = [];
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -14802,8 +14802,8 @@ abstract class PrismaMultipleComment extends Model
     protected $hidden = ['password'];
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'password' => ['nullable', 'string'],
+        'id' => ['required', 'numeric', 'integer'],
+        'password' => ['required', 'string'],
     ];
 
     protected $casts = [
@@ -14868,13 +14868,13 @@ abstract class PrismaMultipleUnique extends Model
     public function __construct(array $attributes = [])
     {
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
+            'id' => ['required', 'numeric', 'integer'],
             'email' => [
                 Rule::unique('MultipleUnique', 'email')->ignore(
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'string',
             ],
             'firstname' => [
@@ -14883,11 +14883,11 @@ abstract class PrismaMultipleUnique extends Model
                     ->where(
                         fn ($query) => $query->where('lastname', $this->lastname)
                     ),
-                'nullable',
+                'required',
                 'string',
             ],
-            'lastname' => ['nullable', 'string'],
-            'age' => ['required', 'numeric', 'integer'],
+            'lastname' => ['required', 'string'],
+            'age' => ['nullable', 'numeric', 'integer'],
             ...$this->rules ?? [],
         ];
 
@@ -14951,7 +14951,7 @@ abstract class PrismaMultipleUnique2 extends Model
     public function __construct(array $attributes = [])
     {
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
+            'id' => ['required', 'numeric', 'integer'],
             'email' => [
                 Rule::unique('MultipleUnique2', 'email')->ignore(
                     $this->getKey(),
@@ -14964,12 +14964,12 @@ abstract class PrismaMultipleUnique2 extends Model
                             ->where('firstname', $this->firstname)
                             ->where('lastname', $this->lastname)
                     ),
-                'nullable',
+                'required',
                 'string',
             ],
-            'firstname' => ['nullable', 'string'],
-            'lastname' => ['nullable', 'string'],
-            'age' => ['required', 'numeric', 'integer'],
+            'firstname' => ['required', 'string'],
+            'lastname' => ['required', 'string'],
+            'age' => ['nullable', 'numeric', 'integer'],
             ...$this->rules ?? [],
         ];
 
@@ -15032,10 +15032,10 @@ abstract class PrismaNoPrimaryKey extends Model
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'string',
             ],
-            'age' => ['nullable', 'numeric', 'integer'],
+            'age' => ['required', 'numeric', 'integer'],
             ...$this->rules ?? [],
         ];
 
@@ -15120,8 +15120,8 @@ abstract class PrismaNullableField extends Model
     protected $table = 'NullableField';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'name' => ['required', 'string'],
+        'id' => ['required', 'numeric', 'integer'],
+        'name' => ['nullable', 'string'],
     ];
 
     protected $casts = [
@@ -15172,7 +15172,7 @@ abstract class PrismaOneToManyA extends Model
     protected $table = 'OneToManyA';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -15227,7 +15227,7 @@ abstract class PrismaOneToManyA2 extends Model
     protected $table = 'OneToManyA2';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -15293,13 +15293,13 @@ abstract class PrismaOneToManyA3 extends Model
     public function __construct(array $attributes = [])
     {
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
+            'id' => ['required', 'numeric', 'integer'],
             'otherId' => [
                 Rule::unique('OneToManyA3', 'otherId')->ignore(
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'numeric',
                 'integer',
             ],
@@ -15371,7 +15371,7 @@ abstract class PrismaOneToManyA4 extends Model
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'numeric',
                 'integer',
             ],
@@ -15429,8 +15429,8 @@ abstract class PrismaOneToManyB extends Model
     protected $table = 'OneToManyB';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'relatedId' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
+        'relatedId' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -15486,8 +15486,8 @@ abstract class PrismaOneToManyB2 extends Model
     protected $table = 'OneToManyB2';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'one_to_many_a2_id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
+        'one_to_many_a2_id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -15543,8 +15543,8 @@ abstract class PrismaOneToManyB3 extends Model
     protected $table = 'OneToManyB3';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'relatedId' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
+        'relatedId' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -15615,11 +15615,11 @@ abstract class PrismaOneToManyB4 extends Model
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'numeric',
                 'integer',
             ],
-            'relatedId' => ['nullable', 'numeric', 'integer'],
+            'relatedId' => ['required', 'numeric', 'integer'],
             ...$this->rules ?? [],
         ];
 
@@ -15673,7 +15673,7 @@ abstract class PrismaOneToOneA extends Model
     protected $table = 'OneToOneA';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -15727,7 +15727,7 @@ abstract class PrismaOneToOneA2 extends Model
     protected $table = 'OneToOneA2';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -15792,13 +15792,13 @@ abstract class PrismaOneToOneA3 extends Model
     public function __construct(array $attributes = [])
     {
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
+            'id' => ['required', 'numeric', 'integer'],
             'otherId' => [
                 Rule::unique('OneToOneA3', 'otherId')->ignore(
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'numeric',
                 'integer',
             ],
@@ -15855,7 +15855,7 @@ abstract class PrismaOneToOneA4 extends Model
     protected $table = 'OneToOneA4';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -15923,7 +15923,7 @@ abstract class PrismaOneToOneA5 extends Model
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'numeric',
                 'integer',
             ],
@@ -15991,13 +15991,13 @@ abstract class PrismaOneToOneB extends Model
     public function __construct(array $attributes = [])
     {
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
+            'id' => ['required', 'numeric', 'integer'],
             'relatedId' => [
                 Rule::unique('OneToOneB', 'relatedId')->ignore(
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'numeric',
                 'integer',
             ],
@@ -16065,13 +16065,13 @@ abstract class PrismaOneToOneB2 extends Model
     public function __construct(array $attributes = [])
     {
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
+            'id' => ['required', 'numeric', 'integer'],
             'one_to_one_a2_id' => [
                 Rule::unique('OneToOneB2', 'one_to_one_a2_id')->ignore(
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'numeric',
                 'integer',
             ],
@@ -16139,13 +16139,13 @@ abstract class PrismaOneToOneB3 extends Model
     public function __construct(array $attributes = [])
     {
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
+            'id' => ['required', 'numeric', 'integer'],
             'related_id' => [
                 Rule::unique('OneToOneB3', 'related_id')->ignore(
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'numeric',
                 'integer',
             ],
@@ -16213,13 +16213,13 @@ abstract class PrismaOneToOneB4 extends Model
     public function __construct(array $attributes = [])
     {
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
+            'id' => ['required', 'numeric', 'integer'],
             'relatedId' => [
                 Rule::unique('OneToOneB4', 'relatedId')->ignore(
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'required',
+                'nullable',
                 'numeric',
                 'integer',
             ],
@@ -16292,7 +16292,7 @@ abstract class PrismaOneToOneB5 extends Model
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'numeric',
                 'integer',
             ],
@@ -16301,7 +16301,7 @@ abstract class PrismaOneToOneB5 extends Model
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'required',
+                'nullable',
                 'numeric',
                 'integer',
             ],
@@ -16381,13 +16381,13 @@ abstract class PrismaPost extends Model
     public function __construct(array $attributes = [])
     {
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
-            'title' => ['nullable', 'string'],
-            'published' => ['nullable', 'boolean'],
-            'type' => ['nullable', new Enum(PostType::class)],
-            'authorId' => ['nullable', 'numeric', 'integer'],
-            'createdAt' => ['nullable', 'date'],
-            'updatedAt' => ['nullable', 'date'],
+            'id' => ['required', 'numeric', 'integer'],
+            'title' => ['required', 'string'],
+            'published' => ['required', 'boolean'],
+            'type' => ['required', new Enum(PostType::class)],
+            'authorId' => ['required', 'numeric', 'integer'],
+            'createdAt' => ['required', 'date'],
+            'updatedAt' => ['required', 'date'],
             ...$this->rules ?? [],
         ];
         $this->casts = [
@@ -16473,14 +16473,14 @@ abstract class PrismaProfile extends Model
     public function __construct(array $attributes = [])
     {
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
-            'bio' => ['nullable', 'string'],
+            'id' => ['required', 'numeric', 'integer'],
+            'bio' => ['required', 'string'],
             'userId' => [
                 Rule::unique('Profile', 'userId')->ignore(
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'numeric',
                 'integer',
             ],
@@ -16539,11 +16539,11 @@ abstract class PrismaReadOnlyField extends Model
     protected $table = 'ReadOnlyField';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'email' => ['nullable', 'string'],
-        'phone' => ['nullable', 'string'],
-        'password' => ['nullable', 'string'],
-        'name' => ['required', 'string'],
+        'id' => ['required', 'numeric', 'integer'],
+        'email' => ['required', 'string'],
+        'phone' => ['required', 'string'],
+        'password' => ['required', 'string'],
+        'name' => ['nullable', 'string'],
     ];
 
     protected $casts = [
@@ -16608,13 +16608,13 @@ abstract class PrismaSelfRelation extends Model
     public function __construct(array $attributes = [])
     {
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
+            'id' => ['required', 'numeric', 'integer'],
             'relatedId' => [
                 Rule::unique('SelfRelation', 'relatedId')->ignore(
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'numeric',
                 'integer',
             ],
@@ -16682,10 +16682,10 @@ abstract class PrismaSoftDelete1 extends Model
     protected $table = 'SoftDelete1';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'email' => ['nullable', 'string'],
-        'password' => ['nullable', 'string'],
-        'deleted_at' => ['nullable', 'date'],
+        'id' => ['required', 'numeric', 'integer'],
+        'email' => ['required', 'string'],
+        'password' => ['required', 'string'],
+        'deleted_at' => ['required', 'date'],
     ];
 
     protected $casts = [
@@ -16745,10 +16745,10 @@ abstract class PrismaSoftDelete2 extends Model
     protected $table = 'SoftDelete2';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'email' => ['nullable', 'string'],
-        'password' => ['nullable', 'string'],
-        'deleted_timestamp' => ['nullable', 'date'],
+        'id' => ['required', 'numeric', 'integer'],
+        'email' => ['required', 'string'],
+        'password' => ['required', 'string'],
+        'deleted_timestamp' => ['required', 'date'],
     ];
 
     protected $casts = [
@@ -16802,9 +16802,9 @@ abstract class PrismaTimestamps1 extends Model
     protected $table = 'Timestamps1';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'created_timestamp' => ['nullable', 'date'],
-        'updated_timestamp' => ['nullable', 'date'],
+        'id' => ['required', 'numeric', 'integer'],
+        'created_timestamp' => ['required', 'date'],
+        'updated_timestamp' => ['required', 'date'],
     ];
 
     protected $casts = [
@@ -16856,9 +16856,9 @@ abstract class PrismaTimestamps2 extends Model
     protected $table = 'Timestamps2';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'created_at' => ['nullable', 'date'],
-        'updated_timestamp' => ['nullable', 'date'],
+        'id' => ['required', 'numeric', 'integer'],
+        'created_at' => ['required', 'date'],
+        'updated_timestamp' => ['required', 'date'],
     ];
 
     protected $casts = [
@@ -16910,9 +16910,9 @@ abstract class PrismaTimestamps3 extends Model
     protected $table = 'Timestamps3';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'created_timestamp' => ['nullable', 'date'],
-        'updated_at' => ['nullable', 'date'],
+        'id' => ['required', 'numeric', 'integer'],
+        'created_timestamp' => ['required', 'date'],
+        'updated_at' => ['required', 'date'],
     ];
 
     protected $casts = [
@@ -16963,9 +16963,9 @@ abstract class PrismaTimestamps4 extends Model
     protected $table = 'Timestamps4';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'created_at' => ['nullable', 'date'],
-        'updated_at' => ['nullable', 'date'],
+        'id' => ['required', 'numeric', 'integer'],
+        'created_at' => ['required', 'date'],
+        'updated_at' => ['required', 'date'],
     ];
 
     protected $casts = [
@@ -17016,9 +17016,9 @@ abstract class PrismaTimestamps5 extends Model
     protected $table = 'Timestamps5';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'created_at' => ['nullable', 'date'],
-        'updated_at' => ['nullable', 'date'],
+        'id' => ['required', 'numeric', 'integer'],
+        'created_at' => ['required', 'date'],
+        'updated_at' => ['required', 'date'],
     ];
 
     protected $casts = [
@@ -17070,9 +17070,9 @@ abstract class PrismaTimestamps6 extends Model
     protected $table = 'Timestamps6';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'created_at' => ['nullable', 'date'],
-        'updated_timestamp' => ['nullable', 'date'],
+        'id' => ['required', 'numeric', 'integer'],
+        'created_at' => ['required', 'date'],
+        'updated_timestamp' => ['required', 'date'],
     ];
 
     protected $casts = [
@@ -17123,9 +17123,9 @@ abstract class PrismaTimestamps7 extends Model
     protected $table = 'Timestamps7';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'created_at' => ['nullable', 'date'],
-        'updated_at' => ['nullable', 'date'],
+        'id' => ['required', 'numeric', 'integer'],
+        'created_at' => ['required', 'date'],
+        'updated_at' => ['required', 'date'],
     ];
 
     protected $casts = [
@@ -17177,9 +17177,9 @@ abstract class PrismaTimestamps8 extends Model
     protected $table = 'Timestamps8';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'created_at' => ['nullable', 'date'],
-        'updated_timestamp' => ['nullable', 'date'],
+        'id' => ['required', 'numeric', 'integer'],
+        'created_at' => ['required', 'date'],
+        'updated_timestamp' => ['required', 'date'],
     ];
 
     protected $casts = [
@@ -17232,7 +17232,7 @@ abstract class PrismaTouchingA extends Model
     protected $touches = ['related'];
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -17299,13 +17299,13 @@ abstract class PrismaTouchingB extends Model
     public function __construct(array $attributes = [])
     {
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
+            'id' => ['required', 'numeric', 'integer'],
             'relatedId' => [
                 Rule::unique('TouchingB', 'relatedId')->ignore(
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'numeric',
                 'integer',
             ],
@@ -17370,16 +17370,16 @@ abstract class PrismaType extends Model
     protected $table = 'Types';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'name' => ['nullable', 'string'],
-        'active' => ['nullable', 'boolean'],
-        'age' => ['nullable', 'numeric', 'integer'],
-        'seconds' => ['nullable', 'numeric', 'integer'],
-        'blob' => ['nullable', 'numeric', 'integer'],
-        'speed' => ['nullable', 'numeric'],
-        'price' => ['nullable', 'numeric'],
-        'birth' => ['nullable', 'date'],
-        'schema' => ['nullable', 'json'],
+        'id' => ['required', 'numeric', 'integer'],
+        'name' => ['required', 'string'],
+        'active' => ['required', 'boolean'],
+        'age' => ['required', 'numeric', 'integer'],
+        'seconds' => ['required', 'numeric', 'integer'],
+        'blob' => ['required', 'numeric', 'integer'],
+        'speed' => ['required', 'numeric'],
+        'price' => ['required', 'numeric'],
+        'birth' => ['required', 'date'],
+        'schema' => ['required', 'json'],
     ];
 
     protected $casts = [
@@ -17450,13 +17450,13 @@ abstract class PrismaUnique extends Model
     public function __construct(array $attributes = [])
     {
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
+            'id' => ['required', 'numeric', 'integer'],
             'email' => [
                 Rule::unique('Unique', 'email')->ignore(
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'string',
             ],
             'username' => [
@@ -17464,10 +17464,10 @@ abstract class PrismaUnique extends Model
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'string',
             ],
-            'name' => ['required', 'string'],
+            'name' => ['nullable', 'string'],
             ...$this->rules ?? [],
         ];
 
@@ -17516,10 +17516,10 @@ abstract class PrismaUnsupportedType extends Model
     protected $table = 'UnsupportedTypes';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'circle' => ['required'],
-        'square' => ['nullable'],
-        'triangle' => ['nullable'],
+        'id' => ['required', 'numeric', 'integer'],
+        'circle' => ['nullable'],
+        'square' => ['required'],
+        'triangle' => ['required'],
         'rectangle' => ['array', 'required'],
     ];
 
@@ -17591,17 +17591,17 @@ abstract class PrismaUser extends Model
             ...$this->attributes ?? [],
         ];
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
+            'id' => ['required', 'numeric', 'integer'],
             'email' => [
                 Rule::unique('User', 'email')->ignore(
                     $this->getKey(),
                     $this->getKeyName()
                 ),
-                'nullable',
+                'required',
                 'string',
             ],
-            'name' => ['required', 'string'],
-            'role' => ['nullable', new Enum(Role::class)],
+            'name' => ['nullable', 'string'],
+            'role' => ['required', new Enum(Role::class)],
             ...$this->rules ?? [],
         ];
         $this->casts = [
@@ -17670,11 +17670,11 @@ abstract class PrismaVisible extends Model
     protected $visible = ['email', 'name'];
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'email' => ['nullable', 'string'],
-        'password' => ['nullable', 'string'],
-        'api_key' => ['nullable', 'string'],
-        'name' => ['required', 'string'],
+        'id' => ['required', 'numeric', 'integer'],
+        'email' => ['required', 'string'],
+        'password' => ['required', 'string'],
+        'api_key' => ['required', 'string'],
+        'name' => ['nullable', 'string'],
     ];
 
     protected $casts = [
@@ -17726,7 +17726,7 @@ abstract class PrismaWithArray extends Model
     protected $table = 'WithArray';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
         'numbers' => ['array', 'required'],
     ];
 
@@ -17793,11 +17793,11 @@ abstract class PrismaWithBackedEnum extends Model
             ...$this->attributes ?? [],
         ];
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
-            'enum' => ['nullable', new Enum(BackedEnum::class)],
-            'nullable' => ['required', new Enum(BackedEnum::class)],
+            'id' => ['required', 'numeric', 'integer'],
+            'enum' => ['required', new Enum(BackedEnum::class)],
+            'nullable' => ['nullable', new Enum(BackedEnum::class)],
             'array' => ['array', 'required'],
-            'defaultEnum' => ['nullable', new Enum(BackedEnum::class)],
+            'defaultEnum' => ['required', new Enum(BackedEnum::class)],
             ...$this->rules ?? [],
         ];
         $this->casts = [
@@ -17852,8 +17852,8 @@ abstract class PrismaWithDbType extends Model
     protected $table = 'WithDbType';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'email' => ['nullable', 'string'],
+        'id' => ['required', 'numeric', 'integer'],
+        'email' => ['required', 'string'],
     ];
 
     protected $casts = [
@@ -17919,11 +17919,11 @@ abstract class PrismaWithEnum extends Model
             ...$this->attributes ?? [],
         ];
         $this->rules = [
-            'id' => ['nullable', 'numeric', 'integer'],
-            'enum' => ['nullable', new Enum(Enum::class)],
-            'nullable' => ['required', new Enum(Enum::class)],
+            'id' => ['required', 'numeric', 'integer'],
+            'enum' => ['required', new Enum(Enum::class)],
+            'nullable' => ['nullable', new Enum(Enum::class)],
             'array' => ['array', 'required'],
-            'defaultEnum' => ['nullable', new Enum(Enum::class)],
+            'defaultEnum' => ['required', new Enum(Enum::class)],
             ...$this->rules ?? [],
         ];
         $this->casts = [
@@ -17977,7 +17977,7 @@ abstract class PrismaWithGlobalPrimaryKey extends Model
     protected $table = 'WithGlobalPrimaryKey';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -18026,7 +18026,7 @@ abstract class PrismaWithGlobalPrimaryKeyDifferentName extends Model
     protected $primaryKey = 'primary_id';
 
     protected array $rules = [
-        'primary_id' => ['nullable', 'numeric', 'integer'],
+        'primary_id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -18077,7 +18077,7 @@ abstract class PrismaWithGlobalStringPrimaryKey extends Model
     protected $keyType = 'string';
 
     protected array $rules = [
-        'id' => ['nullable', 'string'],
+        'id' => ['required', 'string'],
     ];
 
     protected $casts = [
@@ -18130,7 +18130,7 @@ abstract class PrismaWithGlobalStringPrimaryKeyDifferentName extends Model
     protected $keyType = 'string';
 
     protected array $rules = [
-        'primary_id' => ['nullable', 'string'],
+        'primary_id' => ['required', 'string'],
     ];
 
     protected $casts = [
@@ -18177,7 +18177,7 @@ abstract class PrismaWithPrimaryKey extends Model
     protected $table = 'WithPrimaryKey';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -18226,7 +18226,7 @@ abstract class PrismaWithPrimaryKeyDifferentName extends Model
     protected $primaryKey = 'primary_id';
 
     protected array $rules = [
-        'primary_id' => ['nullable', 'numeric', 'integer'],
+        'primary_id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -18277,7 +18277,7 @@ abstract class PrismaWithStringPrimaryKey extends Model
     protected $keyType = 'string';
 
     protected array $rules = [
-        'id' => ['nullable', 'string'],
+        'id' => ['required', 'string'],
     ];
 
     protected $casts = [
@@ -18330,7 +18330,7 @@ abstract class PrismaWithStringPrimaryKeyDifferentName extends Model
     protected $keyType = 'string';
 
     protected array $rules = [
-        'primary_id' => ['nullable', 'string'],
+        'primary_id' => ['required', 'string'],
     ];
 
     protected $casts = [
@@ -18377,7 +18377,7 @@ abstract class PrismaWithTableMap extends Model
     protected $table = 'with_table_map';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
+        'id' => ['required', 'numeric', 'integer'],
     ];
 
     protected $casts = [
@@ -18425,8 +18425,8 @@ abstract class PrismaSnakeCasedModel extends Model
     protected $table = 'snake_cased_models';
 
     protected array $rules = [
-        'id' => ['nullable', 'numeric', 'integer'],
-        'firstname' => ['nullable', 'string'],
+        'id' => ['required', 'numeric', 'integer'],
+        'firstname' => ['required', 'string'],
     ];
 
     protected $casts = [
