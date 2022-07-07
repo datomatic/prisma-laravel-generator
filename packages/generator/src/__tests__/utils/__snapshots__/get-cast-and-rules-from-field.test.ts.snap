@@ -6708,3 +6708,47 @@ Object {
   ],
 }
 `;
+
+exports[`getCastAndRulesFromField: snake_cased_models - firstname 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "string",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "string",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: snake_cased_models - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;

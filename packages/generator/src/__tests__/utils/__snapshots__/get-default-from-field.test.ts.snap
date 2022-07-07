@@ -2411,3 +2411,19 @@ Object {
   "isMethodCall": false,
 }
 `;
+
+exports[`getDefaultFromField: snake_cased_models - firstname 1`] = `
+Object {
+  "defaultValue": undefined,
+  "imports": Set {},
+  "isMethodCall": false,
+}
+`;
+
+exports[`getDefaultFromField: snake_cased_models - id 1`] = `
+Object {
+  "defaultValue": undefined,
+  "imports": Set {},
+  "isMethodCall": false,
+}
+`;

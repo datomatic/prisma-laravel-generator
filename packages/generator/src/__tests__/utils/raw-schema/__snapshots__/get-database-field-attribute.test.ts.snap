@@ -595,3 +595,7 @@ exports[`getDatabaseFieldAnnotation: WithStringPrimaryKey - id 1`] = `false`;
 exports[`getDatabaseFieldAnnotation: WithStringPrimaryKeyDifferentName - primary_id 1`] = `false`;
 
 exports[`getDatabaseFieldAnnotation: WithTableMap - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: snake_cased_models - firstname 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: snake_cased_models - id 1`] = `false`;

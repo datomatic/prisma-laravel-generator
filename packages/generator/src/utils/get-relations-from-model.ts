@@ -8,6 +8,7 @@ import getTableNameFromModel from '../helpers/get-table-name-from-model';
 import getModelByName from '../helpers/get-model-by-name';
 import getRelatedFieldOfRelatedModel from '../helpers/get-related-field-of-related-model';
 import getModelFqcn from '../helpers/get-model-fqcn';
+import getModelClassName from '../helpers/get-model-classname';
 
 // See: https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Concerns/HasRelationships.php
 type HasOneRelation = {
@@ -87,7 +88,7 @@ export const getHasOneRelation = (
   imports.add(getModelFqcn(relatedModel).fqcn);
   let relation: HasOneRelation = {
     name: relationField.name,
-    className: relatedModel.name,
+    className: getModelClassName(relatedModel),
   };
 
   if (
@@ -155,7 +156,7 @@ export const getBelongsToRelation = (
   imports.add(getModelFqcn(relatedModel).fqcn);
   let relation: BelongsToRelation = {
     name: relationField.name,
-    className: relatedModel.name,
+    className: getModelClassName(relatedModel),
     nullable: !relationField.isRequired,
   };
 
@@ -226,7 +227,7 @@ export const getHasManyRelation = (
   imports.add(getModelFqcn(relatedModel).fqcn);
   let relation: HasManyRelation = {
     name: relationField.name,
-    className: relatedModel.name,
+    className: getModelClassName(relatedModel),
   };
 
   if (
@@ -296,7 +297,7 @@ export const getBelongsToManyRelation = (
 
     const relation: BelongsToManyRelation = {
       name: relationField.name,
-      className: relatedModel.name,
+      className: getModelClassName(relatedModel),
       foreignPivotKey:
         model.name.localeCompare(relatedModel.name) < 0 ? 'A' : 'B',
       relatedPivotKey:
@@ -364,7 +365,7 @@ export const getBelongsToManyRelation = (
       imports.add(getModelFqcn(relatedModel).fqcn);
       let relation: BelongsToManyRelation = {
         name: relationField.name,
-        className: relatedPivotModel.name,
+        className: getModelClassName(relatedPivotModel),
         using: relatedModel.name,
       };
 

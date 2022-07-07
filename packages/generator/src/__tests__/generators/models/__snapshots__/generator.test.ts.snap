@@ -23,14 +23,14 @@ exports[`models: generation with different prefix: DefaultValues 1`] = `
 
 namespace App\\\\Models;
 
-use App\\\\Models\\\\Prisma\\\\AnotherPrefixDefaultValues;
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixDefaultValue;
 
 /**
- * DefaultValues Model.
+ * DefaultValue Model.
  *
  * {@inheritdoc}
  */
-class DefaultValues extends AnotherPrefixDefaultValues
+class DefaultValue extends AnotherPrefixDefaultValue
 {
 }
 "
@@ -455,14 +455,14 @@ exports[`models: generation with different prefix: FieldComments 1`] = `
 
 namespace App\\\\Models;
 
-use App\\\\Models\\\\Prisma\\\\AnotherPrefixFieldComments;
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixFieldComment;
 
 /**
- * FieldComments Model.
+ * FieldComment Model.
  *
  * {@inheritdoc}
  */
-class FieldComments extends AnotherPrefixFieldComments
+class FieldComment extends AnotherPrefixFieldComment
 {
 }
 "
@@ -473,14 +473,14 @@ exports[`models: generation with different prefix: FieldMultipleComments 1`] = `
 
 namespace App\\\\Models;
 
-use App\\\\Models\\\\Prisma\\\\AnotherPrefixFieldMultipleComments;
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixFieldMultipleComment;
 
 /**
- * FieldMultipleComments Model.
+ * FieldMultipleComment Model.
  *
  * {@inheritdoc}
  */
-class FieldMultipleComments extends AnotherPrefixFieldMultipleComments
+class FieldMultipleComment extends AnotherPrefixFieldMultipleComment
 {
 }
 "
@@ -635,14 +635,14 @@ exports[`models: generation with different prefix: ModelComments 1`] = `
 
 namespace App\\\\Models;
 
-use App\\\\Models\\\\Prisma\\\\AnotherPrefixModelComments;
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixModelComment;
 
 /**
- * ModelComments Model.
+ * ModelComment Model.
  *
  * {@inheritdoc}
  */
-class ModelComments extends AnotherPrefixModelComments
+class ModelComment extends AnotherPrefixModelComment
 {
 }
 "
@@ -653,14 +653,14 @@ exports[`models: generation with different prefix: ModelMultipleComments 1`] = `
 
 namespace App\\\\Models;
 
-use App\\\\Models\\\\Prisma\\\\AnotherPrefixModelMultipleComments;
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixModelMultipleComment;
 
 /**
- * ModelMultipleComments Model.
+ * ModelMultipleComment Model.
  *
  * {@inheritdoc}
  */
-class ModelMultipleComments extends AnotherPrefixModelMultipleComments
+class ModelMultipleComment extends AnotherPrefixModelMultipleComment
 {
 }
 "
@@ -671,14 +671,14 @@ exports[`models: generation with different prefix: MultipleComments 1`] = `
 
 namespace App\\\\Models;
 
-use App\\\\Models\\\\Prisma\\\\AnotherPrefixMultipleComments;
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixMultipleComment;
 
 /**
- * MultipleComments Model.
+ * MultipleComment Model.
  *
  * {@inheritdoc}
  */
-class MultipleComments extends AnotherPrefixMultipleComments
+class MultipleComment extends AnotherPrefixMultipleComment
 {
 }
 "
@@ -743,14 +743,14 @@ exports[`models: generation with different prefix: NoRules 1`] = `
 
 namespace App\\\\Models;
 
-use App\\\\Models\\\\Prisma\\\\AnotherPrefixNoRules;
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixNoRule;
 
 /**
- * NoRules Model.
+ * NoRule Model.
  *
  * {@inheritdoc}
  */
-class NoRules extends AnotherPrefixNoRules
+class NoRule extends AnotherPrefixNoRule
 {
 }
 "
@@ -1391,14 +1391,14 @@ exports[`models: generation with different prefix: Types 1`] = `
 
 namespace App\\\\Models;
 
-use App\\\\Models\\\\Prisma\\\\AnotherPrefixTypes;
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixType;
 
 /**
- * Types Model.
+ * Type Model.
  *
  * {@inheritdoc}
  */
-class Types extends AnotherPrefixTypes
+class Type extends AnotherPrefixType
 {
 }
 "
@@ -1427,14 +1427,14 @@ exports[`models: generation with different prefix: UnsupportedTypes 1`] = `
 
 namespace App\\\\Models;
 
-use App\\\\Models\\\\Prisma\\\\AnotherPrefixUnsupportedTypes;
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixUnsupportedType;
 
 /**
- * UnsupportedTypes Model.
+ * UnsupportedType Model.
  *
  * {@inheritdoc}
  */
-class UnsupportedTypes extends AnotherPrefixUnsupportedTypes
+class UnsupportedType extends AnotherPrefixUnsupportedType
 {
 }
 "
@@ -1710,6 +1710,24 @@ class WithTableMap extends AnotherPrefixWithTableMap
 "
 `;
 
+exports[`models: generation with different prefix: snake_cased_models 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixSnakeCasedModel;
+
+/**
+ * SnakeCasedModel Model.
+ *
+ * {@inheritdoc}
+ */
+class SnakeCasedModel extends AnotherPrefixSnakeCasedModel
+{
+}
+"
+`;
+
 exports[`models: generation: Category 1`] = `
 "<?php
 
@@ -1733,14 +1751,14 @@ exports[`models: generation: DefaultValues 1`] = `
 
 namespace App\\\\Models;
 
-use App\\\\Models\\\\Prisma\\\\PrismaDefaultValues;
+use App\\\\Models\\\\Prisma\\\\PrismaDefaultValue;
 
 /**
- * DefaultValues Model.
+ * DefaultValue Model.
  *
  * {@inheritdoc}
  */
-class DefaultValues extends PrismaDefaultValues
+class DefaultValue extends PrismaDefaultValue
 {
 }
 "
@@ -2165,14 +2183,14 @@ exports[`models: generation: FieldComments 1`] = `
 
 namespace App\\\\Models;
 
-use App\\\\Models\\\\Prisma\\\\PrismaFieldComments;
+use App\\\\Models\\\\Prisma\\\\PrismaFieldComment;
 
 /**
- * FieldComments Model.
+ * FieldComment Model.
  *
  * {@inheritdoc}
  */
-class FieldComments extends PrismaFieldComments
+class FieldComment extends PrismaFieldComment
 {
 }
 "
@@ -2183,14 +2201,14 @@ exports[`models: generation: FieldMultipleComments 1`] = `
 
 namespace App\\\\Models;
 
-use App\\\\Models\\\\Prisma\\\\PrismaFieldMultipleComments;
+use App\\\\Models\\\\Prisma\\\\PrismaFieldMultipleComment;
 
 /**
- * FieldMultipleComments Model.
+ * FieldMultipleComment Model.
  *
  * {@inheritdoc}
  */
-class FieldMultipleComments extends PrismaFieldMultipleComments
+class FieldMultipleComment extends PrismaFieldMultipleComment
 {
 }
 "
@@ -2345,14 +2363,14 @@ exports[`models: generation: ModelComments 1`] = `
 
 namespace App\\\\Models;
 
-use App\\\\Models\\\\Prisma\\\\PrismaModelComments;
+use App\\\\Models\\\\Prisma\\\\PrismaModelComment;
 
 /**
- * ModelComments Model.
+ * ModelComment Model.
  *
  * {@inheritdoc}
  */
-class ModelComments extends PrismaModelComments
+class ModelComment extends PrismaModelComment
 {
 }
 "
@@ -2363,14 +2381,14 @@ exports[`models: generation: ModelMultipleComments 1`] = `
 
 namespace App\\\\Models;
 
-use App\\\\Models\\\\Prisma\\\\PrismaModelMultipleComments;
+use App\\\\Models\\\\Prisma\\\\PrismaModelMultipleComment;
 
 /**
- * ModelMultipleComments Model.
+ * ModelMultipleComment Model.
  *
  * {@inheritdoc}
  */
-class ModelMultipleComments extends PrismaModelMultipleComments
+class ModelMultipleComment extends PrismaModelMultipleComment
 {
 }
 "
@@ -2381,14 +2399,14 @@ exports[`models: generation: MultipleComments 1`] = `
 
 namespace App\\\\Models;
 
-use App\\\\Models\\\\Prisma\\\\PrismaMultipleComments;
+use App\\\\Models\\\\Prisma\\\\PrismaMultipleComment;
 
 /**
- * MultipleComments Model.
+ * MultipleComment Model.
  *
  * {@inheritdoc}
  */
-class MultipleComments extends PrismaMultipleComments
+class MultipleComment extends PrismaMultipleComment
 {
 }
 "
@@ -2453,14 +2471,14 @@ exports[`models: generation: NoRules 1`] = `
 
 namespace App\\\\Models;
 
-use App\\\\Models\\\\Prisma\\\\PrismaNoRules;
+use App\\\\Models\\\\Prisma\\\\PrismaNoRule;
 
 /**
- * NoRules Model.
+ * NoRule Model.
  *
  * {@inheritdoc}
  */
-class NoRules extends PrismaNoRules
+class NoRule extends PrismaNoRule
 {
 }
 "
@@ -3101,14 +3119,14 @@ exports[`models: generation: Types 1`] = `
 
 namespace App\\\\Models;
 
-use App\\\\Models\\\\Prisma\\\\PrismaTypes;
+use App\\\\Models\\\\Prisma\\\\PrismaType;
 
 /**
- * Types Model.
+ * Type Model.
  *
  * {@inheritdoc}
  */
-class Types extends PrismaTypes
+class Type extends PrismaType
 {
 }
 "
@@ -3137,14 +3155,14 @@ exports[`models: generation: UnsupportedTypes 1`] = `
 
 namespace App\\\\Models;
 
-use App\\\\Models\\\\Prisma\\\\PrismaUnsupportedTypes;
+use App\\\\Models\\\\Prisma\\\\PrismaUnsupportedType;
 
 /**
- * UnsupportedTypes Model.
+ * UnsupportedType Model.
  *
  * {@inheritdoc}
  */
-class UnsupportedTypes extends PrismaUnsupportedTypes
+class UnsupportedType extends PrismaUnsupportedType
 {
 }
 "
@@ -3415,6 +3433,24 @@ use App\\\\Models\\\\Prisma\\\\PrismaWithTableMap;
  * {@inheritdoc}
  */
 class WithTableMap extends PrismaWithTableMap
+{
+}
+"
+`;
+
+exports[`models: generation: snake_cased_models 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaSnakeCasedModel;
+
+/**
+ * SnakeCasedModel Model.
+ *
+ * {@inheritdoc}
+ */
+class SnakeCasedModel extends PrismaSnakeCasedModel
 {
 }
 "

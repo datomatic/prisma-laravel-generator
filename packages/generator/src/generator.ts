@@ -12,6 +12,7 @@ import {version} from '../package.json';
 import MultipleDataSourcesError from './errors/multiple-data-sources-error';
 import generatePrismaModel from './generators/prisma-models/generator';
 import generateModel from './generators/models/generator';
+import getModelClassName from './helpers/get-model-classname';
 
 const GENERATOR_NAME = 'prisma-laravel-generator';
 
@@ -84,7 +85,7 @@ generatorHandler({
             'app',
             'Models',
             'Prisma',
-            `${config.modelsPrefix}${model.name}.php`,
+            `${getModelClassName(model, config.modelsPrefix)}.php`,
           );
           await writeFileSafely(writeLocation, generatedPrismaModel);
 
@@ -103,7 +104,7 @@ generatorHandler({
             outputPath,
             'app',
             'Models',
-            `${model.name}.php`,
+            `${getModelClassName(model)}.php`,
           );
 
           if (!existsSync(writeLocation)) {

@@ -648,6 +648,11 @@ model Types {
   schema  Json
 }
 
+model snake_cased_models {
+  id        Int    @id @default(autoincrement())
+  firstname String
+}
+
 model UnsupportedTypes {
   id        Int                              @id
   circle    Unsupported("circle")?           @default(dbgenerated("'<(10,4),11>'::circle"))

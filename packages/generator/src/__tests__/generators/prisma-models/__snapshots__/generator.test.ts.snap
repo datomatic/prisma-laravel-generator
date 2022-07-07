@@ -79,7 +79,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 
 /**
- * PrismaUnsignedIntegers Model.
+ * PrismaUnsignedInteger Model.
  *
  * @mixin Builder
  *
@@ -104,7 +104,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  * @property int $utinyint
  * @property int $ubigint
  */
-abstract class PrismaUnsignedIntegers extends Model
+abstract class PrismaUnsignedInteger extends Model
 {
     public $timestamps = false;
     protected $table = 'UnsignedIntegers';
@@ -200,7 +200,7 @@ use Illuminate\\\\Support\\\\Str;
 use Illuminate\\\\Validation\\\\Rules\\\\Enum;
 
 /**
- * AnotherPrefixDefaultValues Model.
+ * AnotherPrefixDefaultValue Model.
  *
  * @mixin Builder
  *
@@ -228,7 +228,7 @@ use Illuminate\\\\Validation\\\\Rules\\\\Enum;
  * @property bool    $bool
  * @property Role    $role
  */
-abstract class AnotherPrefixDefaultValues extends Model
+abstract class AnotherPrefixDefaultValue extends Model
 {
     public $timestamps = false;
     protected $table = 'DefaultValues';
@@ -1849,7 +1849,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 use Illuminate\\\\Validation\\\\Rule;
 
 /**
- * AnotherPrefixFieldComments Model.
+ * AnotherPrefixFieldComment Model.
  *
  * @mixin Builder
  *
@@ -1874,7 +1874,7 @@ use Illuminate\\\\Validation\\\\Rule;
  * @property int    $age
  * @property int    $height
  */
-abstract class AnotherPrefixFieldComments extends Model
+abstract class AnotherPrefixFieldComment extends Model
 {
     public $timestamps = false;
     protected $table = 'FieldComments';
@@ -1923,7 +1923,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 
 /**
- * AnotherPrefixFieldMultipleComments Model.
+ * AnotherPrefixFieldMultipleComment Model.
  *
  * @mixin Builder
  *
@@ -1945,7 +1945,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  * @property-read int $id
  * @property string $name
  */
-abstract class AnotherPrefixFieldMultipleComments extends Model
+abstract class AnotherPrefixFieldMultipleComment extends Model
 {
     public $timestamps = false;
     protected $table = 'FieldMultipleComments';
@@ -2474,7 +2474,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 
 /**
- * AnotherPrefixModelComments Model.
+ * AnotherPrefixModelComment Model.
  *
  * @mixin Builder
  *
@@ -2495,7 +2495,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  *
  * @property int $id
  */
-abstract class AnotherPrefixModelComments extends Model
+abstract class AnotherPrefixModelComment extends Model
 {
     public $timestamps = false;
     protected $table = 'ModelComments';
@@ -2523,7 +2523,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 
 /**
- * AnotherPrefixModelMultipleComments Model.
+ * AnotherPrefixModelMultipleComment Model.
  *
  * @mixin Builder
  *
@@ -2544,7 +2544,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  *
  * @property int $id
  */
-abstract class AnotherPrefixModelMultipleComments extends Model
+abstract class AnotherPrefixModelMultipleComment extends Model
 {
     public $timestamps = false;
     protected $table = 'ModelMultipleComments';
@@ -2572,7 +2572,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 
 /**
- * AnotherPrefixMultipleComments Model.
+ * AnotherPrefixMultipleComment Model.
  *
  * @mixin Builder
  *
@@ -2594,7 +2594,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  * @property int $id
  * @property-read string $password
  */
-abstract class AnotherPrefixMultipleComments extends Model
+abstract class AnotherPrefixMultipleComment extends Model
 {
     public $timestamps = false;
     protected $table = 'MultipleComments';
@@ -2857,7 +2857,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 
 /**
- * AnotherPrefixNoRules Model.
+ * AnotherPrefixNoRule Model.
  *
  * @mixin Builder
  *
@@ -2876,7 +2876,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  */
-abstract class AnotherPrefixNoRules extends Model
+abstract class AnotherPrefixNoRule extends Model
 {
     public $timestamps = false;
     protected $table = 'NoRules';
@@ -5136,7 +5136,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 use Illuminate\\\\Support\\\\Carbon;
 
 /**
- * AnotherPrefixTypes Model.
+ * AnotherPrefixType Model.
  *
  * @mixin Builder
  *
@@ -5166,7 +5166,7 @@ use Illuminate\\\\Support\\\\Carbon;
  * @property Carbon $birth
  * @property array  $schema
  */
-abstract class AnotherPrefixTypes extends Model
+abstract class AnotherPrefixType extends Model
 {
     public $timestamps = false;
     protected $table = 'Types';
@@ -5289,7 +5289,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 
 /**
- * AnotherPrefixUnsupportedTypes Model.
+ * AnotherPrefixUnsupportedType Model.
  *
  * @mixin Builder
  *
@@ -5310,7 +5310,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  *
  * @property-read int $id
  */
-abstract class AnotherPrefixUnsupportedTypes extends Model
+abstract class AnotherPrefixUnsupportedType extends Model
 {
     public $incrementing = false;
 
@@ -6189,6 +6189,56 @@ abstract class AnotherPrefixWithTableMap extends Model
 "
 `;
 
+exports[`prisma-models: generation with different prefix: snake_cased_models 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * AnotherPrefixSnakeCasedModel Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ * @property string $firstname
+ */
+abstract class AnotherPrefixSnakeCasedModel extends Model
+{
+    public $timestamps = false;
+    protected $table = 'snake_cased_models';
+
+    protected array $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+        'firstname' => ['nullable', 'string'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'firstname' => 'string',
+    ];
+}
+"
+`;
+
 exports[`prisma-models: generation without explicit table names on relations: Category 1`] = `
 "<?php
 
@@ -6261,7 +6311,7 @@ use Illuminate\\\\Support\\\\Str;
 use Illuminate\\\\Validation\\\\Rules\\\\Enum;
 
 /**
- * PrismaDefaultValues Model.
+ * PrismaDefaultValue Model.
  *
  * @mixin Builder
  *
@@ -6289,7 +6339,7 @@ use Illuminate\\\\Validation\\\\Rules\\\\Enum;
  * @property bool    $bool
  * @property Role    $role
  */
-abstract class PrismaDefaultValues extends Model
+abstract class PrismaDefaultValue extends Model
 {
     public $timestamps = false;
     protected $table = 'DefaultValues';
@@ -7886,7 +7936,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 use Illuminate\\\\Validation\\\\Rule;
 
 /**
- * PrismaFieldComments Model.
+ * PrismaFieldComment Model.
  *
  * @mixin Builder
  *
@@ -7911,7 +7961,7 @@ use Illuminate\\\\Validation\\\\Rule;
  * @property int    $age
  * @property int    $height
  */
-abstract class PrismaFieldComments extends Model
+abstract class PrismaFieldComment extends Model
 {
     public $timestamps = false;
     protected $table = 'FieldComments';
@@ -7960,7 +8010,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 
 /**
- * PrismaFieldMultipleComments Model.
+ * PrismaFieldMultipleComment Model.
  *
  * @mixin Builder
  *
@@ -7982,7 +8032,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  * @property-read int $id
  * @property string $name
  */
-abstract class PrismaFieldMultipleComments extends Model
+abstract class PrismaFieldMultipleComment extends Model
 {
     public $timestamps = false;
     protected $table = 'FieldMultipleComments';
@@ -8511,7 +8561,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 
 /**
- * PrismaModelComments Model.
+ * PrismaModelComment Model.
  *
  * @mixin Builder
  *
@@ -8532,7 +8582,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  *
  * @property int $id
  */
-abstract class PrismaModelComments extends Model
+abstract class PrismaModelComment extends Model
 {
     public $timestamps = false;
     protected $table = 'ModelComments';
@@ -8560,7 +8610,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 
 /**
- * PrismaModelMultipleComments Model.
+ * PrismaModelMultipleComment Model.
  *
  * @mixin Builder
  *
@@ -8581,7 +8631,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  *
  * @property int $id
  */
-abstract class PrismaModelMultipleComments extends Model
+abstract class PrismaModelMultipleComment extends Model
 {
     public $timestamps = false;
     protected $table = 'ModelMultipleComments';
@@ -8609,7 +8659,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 
 /**
- * PrismaMultipleComments Model.
+ * PrismaMultipleComment Model.
  *
  * @mixin Builder
  *
@@ -8631,7 +8681,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  * @property int $id
  * @property-read string $password
  */
-abstract class PrismaMultipleComments extends Model
+abstract class PrismaMultipleComment extends Model
 {
     public $timestamps = false;
     protected $table = 'MultipleComments';
@@ -8894,7 +8944,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 
 /**
- * PrismaNoRules Model.
+ * PrismaNoRule Model.
  *
  * @mixin Builder
  *
@@ -8913,7 +8963,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  */
-abstract class PrismaNoRules extends Model
+abstract class PrismaNoRule extends Model
 {
     public $timestamps = false;
     protected $table = 'NoRules';
@@ -11173,7 +11223,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 use Illuminate\\\\Support\\\\Carbon;
 
 /**
- * PrismaTypes Model.
+ * PrismaType Model.
  *
  * @mixin Builder
  *
@@ -11203,7 +11253,7 @@ use Illuminate\\\\Support\\\\Carbon;
  * @property Carbon $birth
  * @property array  $schema
  */
-abstract class PrismaTypes extends Model
+abstract class PrismaType extends Model
 {
     public $timestamps = false;
     protected $table = 'Types';
@@ -11326,7 +11376,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 
 /**
- * PrismaUnsupportedTypes Model.
+ * PrismaUnsupportedType Model.
  *
  * @mixin Builder
  *
@@ -11347,7 +11397,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  *
  * @property-read int $id
  */
-abstract class PrismaUnsupportedTypes extends Model
+abstract class PrismaUnsupportedType extends Model
 {
     public $incrementing = false;
 
@@ -12226,6 +12276,56 @@ abstract class PrismaWithTableMap extends Model
 "
 `;
 
+exports[`prisma-models: generation without explicit table names on relations: snake_cased_models 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * PrismaSnakeCasedModel Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ * @property string $firstname
+ */
+abstract class PrismaSnakeCasedModel extends Model
+{
+    public $timestamps = false;
+    protected $table = 'snake_cased_models';
+
+    protected array $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+        'firstname' => ['nullable', 'string'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'firstname' => 'string',
+    ];
+}
+"
+`;
+
 exports[`prisma-models: generation: Category 1`] = `
 "<?php
 
@@ -12298,7 +12398,7 @@ use Illuminate\\\\Support\\\\Str;
 use Illuminate\\\\Validation\\\\Rules\\\\Enum;
 
 /**
- * PrismaDefaultValues Model.
+ * PrismaDefaultValue Model.
  *
  * @mixin Builder
  *
@@ -12326,7 +12426,7 @@ use Illuminate\\\\Validation\\\\Rules\\\\Enum;
  * @property bool    $bool
  * @property Role    $role
  */
-abstract class PrismaDefaultValues extends Model
+abstract class PrismaDefaultValue extends Model
 {
     public $timestamps = false;
     protected $table = 'DefaultValues';
@@ -13947,7 +14047,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 use Illuminate\\\\Validation\\\\Rule;
 
 /**
- * PrismaFieldComments Model.
+ * PrismaFieldComment Model.
  *
  * @mixin Builder
  *
@@ -13972,7 +14072,7 @@ use Illuminate\\\\Validation\\\\Rule;
  * @property int    $age
  * @property int    $height
  */
-abstract class PrismaFieldComments extends Model
+abstract class PrismaFieldComment extends Model
 {
     public $timestamps = false;
     protected $table = 'FieldComments';
@@ -14021,7 +14121,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 
 /**
- * PrismaFieldMultipleComments Model.
+ * PrismaFieldMultipleComment Model.
  *
  * @mixin Builder
  *
@@ -14043,7 +14143,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  * @property-read int $id
  * @property string $name
  */
-abstract class PrismaFieldMultipleComments extends Model
+abstract class PrismaFieldMultipleComment extends Model
 {
     public $timestamps = false;
     protected $table = 'FieldMultipleComments';
@@ -14572,7 +14672,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 
 /**
- * PrismaModelComments Model.
+ * PrismaModelComment Model.
  *
  * @mixin Builder
  *
@@ -14593,7 +14693,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  *
  * @property int $id
  */
-abstract class PrismaModelComments extends Model
+abstract class PrismaModelComment extends Model
 {
     public $timestamps = false;
     protected $table = 'ModelComments';
@@ -14621,7 +14721,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 
 /**
- * PrismaModelMultipleComments Model.
+ * PrismaModelMultipleComment Model.
  *
  * @mixin Builder
  *
@@ -14642,7 +14742,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  *
  * @property int $id
  */
-abstract class PrismaModelMultipleComments extends Model
+abstract class PrismaModelMultipleComment extends Model
 {
     public $timestamps = false;
     protected $table = 'ModelMultipleComments';
@@ -14670,7 +14770,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 
 /**
- * PrismaMultipleComments Model.
+ * PrismaMultipleComment Model.
  *
  * @mixin Builder
  *
@@ -14692,7 +14792,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  * @property int $id
  * @property-read string $password
  */
-abstract class PrismaMultipleComments extends Model
+abstract class PrismaMultipleComment extends Model
 {
     public $timestamps = false;
     protected $table = 'MultipleComments';
@@ -14955,7 +15055,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 
 /**
- * PrismaNoRules Model.
+ * PrismaNoRule Model.
  *
  * @mixin Builder
  *
@@ -14974,7 +15074,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  */
-abstract class PrismaNoRules extends Model
+abstract class PrismaNoRule extends Model
 {
     public $timestamps = false;
     protected $table = 'NoRules';
@@ -17234,7 +17334,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 use Illuminate\\\\Support\\\\Carbon;
 
 /**
- * PrismaTypes Model.
+ * PrismaType Model.
  *
  * @mixin Builder
  *
@@ -17264,7 +17364,7 @@ use Illuminate\\\\Support\\\\Carbon;
  * @property Carbon $birth
  * @property array  $schema
  */
-abstract class PrismaTypes extends Model
+abstract class PrismaType extends Model
 {
     public $timestamps = false;
     protected $table = 'Types';
@@ -17387,7 +17487,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 
 /**
- * PrismaUnsupportedTypes Model.
+ * PrismaUnsupportedType Model.
  *
  * @mixin Builder
  *
@@ -17408,7 +17508,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Model;
  *
  * @property-read int $id
  */
-abstract class PrismaUnsupportedTypes extends Model
+abstract class PrismaUnsupportedType extends Model
 {
     public $incrementing = false;
 
@@ -18282,6 +18382,56 @@ abstract class PrismaWithTableMap extends Model
 
     protected $casts = [
         'id' => 'integer',
+    ];
+}
+"
+`;
+
+exports[`prisma-models: generation: snake_cased_models 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * PrismaSnakeCasedModel Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ * @property string $firstname
+ */
+abstract class PrismaSnakeCasedModel extends Model
+{
+    public $timestamps = false;
+    protected $table = 'snake_cased_models';
+
+    protected array $rules = [
+        'id' => ['nullable', 'numeric', 'integer'],
+        'firstname' => ['nullable', 'string'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'firstname' => 'string',
     ];
 }
 "

@@ -3,10 +3,9 @@ import getClassFromFQCN from '../../utils/get-class-from-fqcn';
 import getPrismaFqcn from '../../helpers/get-prisma-fqcn';
 import {prettify} from '../../utils/prettier';
 import getModelFqcn from '../../helpers/get-model-fqcn';
+import getModelClassname from '../../helpers/get-model-classname';
 
 const generateModel = (model: DMMF.Model, prefix = 'Prisma') => {
-  const {name: className} = model;
-
   const {namespace} = getModelFqcn(model);
   const {fqcn: prismaFqcn} = getPrismaFqcn(model, prefix);
 
@@ -19,11 +18,11 @@ const generateModel = (model: DMMF.Model, prefix = 'Prisma') => {
     use ${prismaFqcn};
 
     /**
-     * ${className} Model
+     * ${getModelClassname(model)} Model
      *
      * {@inheritdoc}
      */
-    class ${className} extends ${getClassFromFQCN(prismaFqcn)} {
+    class ${getModelClassname(model)} extends ${getClassFromFQCN(prismaFqcn)} {
 
     }
   `);

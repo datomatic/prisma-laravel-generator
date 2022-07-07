@@ -29,6 +29,7 @@ import isFieldEagerLoaded from '../../helpers/is-field-eager-loaded';
 import isModelPivot from '../../helpers/is-model-pivot';
 import getPhpArgumentsWithDefaults from '../../helpers/get-php-arguments-with-defaults';
 import getUnsupportedFields from '../../utils/raw-schema/get-unsupported-fields';
+import getModelClassName from '../../helpers/get-model-classname';
 
 const generatePrismaModel = (
   model: DMMF.Model,
@@ -268,7 +269,7 @@ const generatePrismaModel = (
       .value()}
 
     /**
-     * ${prefix}${className} Model
+     * ${getModelClassName(model, prefix)} Model
      *
      * @mixin Builder
      *
@@ -328,9 +329,10 @@ const generatePrismaModel = (
        .join('\n')
        .value()}
      */
-    abstract class ${prefix}${className} extends ${getClassFromFQCN(
-    isPivot ? basePivotModel : baseModel,
-  )} {
+    abstract class ${getModelClassName(
+      model,
+      prefix,
+    )} extends ${getClassFromFQCN(isPivot ? basePivotModel : baseModel)} {
 
       ${_.chain([...traits])
         .map(trait => `use ${trait};`)
@@ -401,9 +403,7 @@ const generatePrismaModel = (
                   (fieldDefault, fieldName) =>
                     `'${fieldName}' => ${
                       _.isString(fieldDefault.value)
-                        ? fieldDefault.isMethodCall
-                          ? fieldDefault.value
-                          : `'${fieldDefault.value}'`
+                        ? `'${fieldDefault.value}'`
                         : fieldDefault.value.toString()
                     }`,
                 )
@@ -490,9 +490,7 @@ const generatePrismaModel = (
                 .map(
                   (fieldRules, fieldName) =>
                     `'${fieldName}' => [${_.chain(fieldRules)
-                      .map(rule =>
-                        rule.isMethodCall ? rule.value : `'${rule.value}'`,
-                      )
+                      .map(rule => `'${rule.value}'`)
                       .join(',\n')
                       .value()}]`,
                 )
@@ -508,12 +506,7 @@ const generatePrismaModel = (
           : !_.isEmpty(casts)
           ? `protected $casts = [
               ${_.chain(casts)
-                .map(
-                  (cast, fieldName) =>
-                    `'${fieldName}' => ${
-                      cast.isMethodCall ? cast.value : `'${cast.value}'`
-                    }`,
-                )
+                .map((cast, fieldName) => `'${fieldName}' => '${cast.value}'`)
                 .join(',\n')
                 .value()}
             ];`

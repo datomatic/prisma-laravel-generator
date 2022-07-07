@@ -262,3 +262,5 @@ exports[`getUnsupportedFields: WithStringPrimaryKey 1`] = `Array []`;
 exports[`getUnsupportedFields: WithStringPrimaryKeyDifferentName 1`] = `Array []`;
 
 exports[`getUnsupportedFields: WithTableMap 1`] = `Array []`;
+
+exports[`getUnsupportedFields: snake_cased_models 1`] = `Array []`;

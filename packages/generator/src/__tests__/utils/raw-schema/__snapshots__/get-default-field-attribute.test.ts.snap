@@ -595,3 +595,7 @@ exports[`getDefaultFieldAnnotation: WithStringPrimaryKey - id 1`] = `false`;
 exports[`getDefaultFieldAnnotation: WithStringPrimaryKeyDifferentName - primary_id 1`] = `false`;
 
 exports[`getDefaultFieldAnnotation: WithTableMap - id 1`] = `"autoincrement()"`;
+
+exports[`getDefaultFieldAnnotation: snake_cased_models - firstname 1`] = `false`;
+
+exports[`getDefaultFieldAnnotation: snake_cased_models - id 1`] = `"autoincrement()"`;

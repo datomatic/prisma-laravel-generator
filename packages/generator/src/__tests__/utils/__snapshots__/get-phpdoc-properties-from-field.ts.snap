@@ -2449,3 +2449,19 @@ Object {
   "readOnly": true,
 }
 `;
+
+exports[`getPhpDocPropertiesFromField: snake_cased_models - firstname 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "string",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: snake_cased_models - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;

@@ -4117,6 +4117,16 @@ Object {
 }
 `;
 
+exports[`getRelationsFromModel - implicit table names: snake_cased_models 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
 exports[`getRelationsFromModel: Category 1`] = `
 Object {
   "belongsTo": Array [],
@@ -5571,6 +5581,16 @@ Object {
 `;
 
 exports[`getRelationsFromModel: WithTableMap 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel: snake_cased_models 1`] = `
 Object {
   "belongsTo": Array [],
   "belongsToMany": Array [],

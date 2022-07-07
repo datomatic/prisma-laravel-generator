@@ -600,3 +600,8 @@ exports[`getModelLines: WithTableMap 1`] = `
 
   "
 `;
+
+exports[`getModelLines: snake_cased_models 1`] = `
+"id        Int    @id @default(autoincrement())
+  firstname String"
+`;
