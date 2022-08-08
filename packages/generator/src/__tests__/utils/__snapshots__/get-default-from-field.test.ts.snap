@@ -110,6 +110,46 @@ Object {
 }
 `;
 
+exports[`getDefaultFromField: DefaultValuesWithoutMethodCall - age 1`] = `
+Object {
+  "defaultValue": 18,
+  "imports": Set {},
+  "isMethodCall": false,
+}
+`;
+
+exports[`getDefaultFromField: DefaultValuesWithoutMethodCall - bool 1`] = `
+Object {
+  "defaultValue": true,
+  "imports": Set {},
+  "isMethodCall": false,
+}
+`;
+
+exports[`getDefaultFromField: DefaultValuesWithoutMethodCall - email 1`] = `
+Object {
+  "defaultValue": "hello@world.test",
+  "imports": Set {},
+  "isMethodCall": false,
+}
+`;
+
+exports[`getDefaultFromField: DefaultValuesWithoutMethodCall - id 1`] = `
+Object {
+  "defaultValue": undefined,
+  "imports": Set {},
+  "isMethodCall": false,
+}
+`;
+
+exports[`getDefaultFromField: DefaultValuesWithoutMethodCall - name 1`] = `
+Object {
+  "defaultValue": "N.A.",
+  "imports": Set {},
+  "isMethodCall": false,
+}
+`;
+
 exports[`getDefaultFromField: EagerLoadA - id 1`] = `
 Object {
   "defaultValue": undefined,

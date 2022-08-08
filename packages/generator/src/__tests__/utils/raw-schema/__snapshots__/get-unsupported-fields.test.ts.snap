@@ -4,6 +4,8 @@ exports[`getUnsupportedFields: Category 1`] = `Array []`;
 
 exports[`getUnsupportedFields: DefaultValues 1`] = `Array []`;
 
+exports[`getUnsupportedFields: DefaultValuesWithoutMethodCall 1`] = `Array []`;
+
 exports[`getUnsupportedFields: EagerLoadA 1`] = `Array []`;
 
 exports[`getUnsupportedFields: EagerLoadB 1`] = `Array []`;

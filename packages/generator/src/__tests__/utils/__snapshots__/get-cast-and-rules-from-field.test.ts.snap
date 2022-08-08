@@ -375,6 +375,114 @@ Object {
 }
 `;
 
+exports[`getCastAndRulesFromField: DefaultValuesWithoutMethodCall - age 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: DefaultValuesWithoutMethodCall - bool 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "boolean",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "boolean",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: DefaultValuesWithoutMethodCall - email 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "string",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "string",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: DefaultValuesWithoutMethodCall - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: DefaultValuesWithoutMethodCall - name 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "string",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "nullable",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "string",
+    },
+  ],
+}
+`;
+
 exports[`getCastAndRulesFromField: EagerLoadA - id 1`] = `
 Object {
   "cast": Object {

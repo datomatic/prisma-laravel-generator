@@ -17,6 +17,14 @@ exports[`getModelLines: DefaultValues 1`] = `
   role  Role     @default(USER)"
 `;
 
+exports[`getModelLines: DefaultValuesWithoutMethodCall 1`] = `
+"id    Int     @id
+  email String  @default(\\"hello@world.test\\")
+  name  String? @default(\\"N.A.\\")
+  age   Int     @default(18)
+  bool  Boolean @default(true)"
+`;
+
 exports[`getModelLines: EagerLoadA 1`] = `
 "id      Int         @id @default(autoincrement())
   related EagerLoadB? /// eager-loaded"

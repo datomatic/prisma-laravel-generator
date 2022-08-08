@@ -22,6 +22,16 @@ exports[`getDatabaseFieldAnnotation: DefaultValues - role 1`] = `false`;
 
 exports[`getDatabaseFieldAnnotation: DefaultValues - uuid 1`] = `false`;
 
+exports[`getDatabaseFieldAnnotation: DefaultValuesWithoutMethodCall - age 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: DefaultValuesWithoutMethodCall - bool 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: DefaultValuesWithoutMethodCall - email 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: DefaultValuesWithoutMethodCall - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: DefaultValuesWithoutMethodCall - name 1`] = `false`;
+
 exports[`getDatabaseFieldAnnotation: EagerLoadA - id 1`] = `false`;
 
 exports[`getDatabaseFieldAnnotation: EagerLoadA - related 1`] = `false`;

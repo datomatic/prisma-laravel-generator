@@ -76,6 +76,41 @@ Array [
 ]
 `;
 
+exports[`getFieldLines: DefaultValuesWithoutMethodCall 1`] = `
+Array [
+  Object {
+    "attributes": "@id",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": "@default(\\"hello@world.test\\")",
+    "comment": undefined,
+    "id": "email",
+    "type": "String",
+  },
+  Object {
+    "attributes": "@default(\\"N.A.\\")",
+    "comment": undefined,
+    "id": "name",
+    "type": "String?",
+  },
+  Object {
+    "attributes": "@default(18)",
+    "comment": undefined,
+    "id": "age",
+    "type": "Int",
+  },
+  Object {
+    "attributes": "@default(true)",
+    "comment": undefined,
+    "id": "bool",
+    "type": "Boolean",
+  },
+]
+`;
+
 exports[`getFieldLines: EagerLoadA 1`] = `
 Array [
   Object {

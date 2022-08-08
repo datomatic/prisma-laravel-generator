@@ -99,6 +99,51 @@ Object {
 }
 `;
 
+exports[`getFieldLine: DefaultValuesWithoutMethodCall - age 1`] = `
+Object {
+  "attributes": "@default(18)",
+  "comment": undefined,
+  "id": "age",
+  "type": "Int",
+}
+`;
+
+exports[`getFieldLine: DefaultValuesWithoutMethodCall - bool 1`] = `
+Object {
+  "attributes": "@default(true)",
+  "comment": undefined,
+  "id": "bool",
+  "type": "Boolean",
+}
+`;
+
+exports[`getFieldLine: DefaultValuesWithoutMethodCall - email 1`] = `
+Object {
+  "attributes": "@default(\\"hello@world.test\\")",
+  "comment": undefined,
+  "id": "email",
+  "type": "String",
+}
+`;
+
+exports[`getFieldLine: DefaultValuesWithoutMethodCall - id 1`] = `
+Object {
+  "attributes": "@id",
+  "comment": undefined,
+  "id": "id",
+  "type": "Int",
+}
+`;
+
+exports[`getFieldLine: DefaultValuesWithoutMethodCall - name 1`] = `
+Object {
+  "attributes": "@default(\\"N.A.\\")",
+  "comment": undefined,
+  "id": "name",
+  "type": "String?",
+}
+`;
+
 exports[`getFieldLine: EagerLoadA - id 1`] = `
 Object {
   "attributes": "@id @default(autoincrement())",

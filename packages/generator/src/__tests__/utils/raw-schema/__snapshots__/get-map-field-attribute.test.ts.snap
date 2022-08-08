@@ -34,6 +34,16 @@ exports[`getMapFieldAnnotation: not mapped fields: DefaultValues - role 1`] = `f
 
 exports[`getMapFieldAnnotation: not mapped fields: DefaultValues - uuid 1`] = `false`;
 
+exports[`getMapFieldAnnotation: not mapped fields: DefaultValuesWithoutMethodCall - age 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: DefaultValuesWithoutMethodCall - bool 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: DefaultValuesWithoutMethodCall - email 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: DefaultValuesWithoutMethodCall - id 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: DefaultValuesWithoutMethodCall - name 1`] = `false`;
+
 exports[`getMapFieldAnnotation: not mapped fields: EagerLoadA - id 1`] = `false`;
 
 exports[`getMapFieldAnnotation: not mapped fields: EagerLoadA - related 1`] = `false`;

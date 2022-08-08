@@ -92,6 +92,46 @@ Object {
 }
 `;
 
+exports[`getPhpDocPropertiesFromField: DefaultValuesWithoutMethodCall - age 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: DefaultValuesWithoutMethodCall - bool 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "bool",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: DefaultValuesWithoutMethodCall - email 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "string",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: DefaultValuesWithoutMethodCall - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: DefaultValuesWithoutMethodCall - name 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "?string",
+  "readOnly": false,
+}
+`;
+
 exports[`getPhpDocPropertiesFromField: EagerLoadA - id 1`] = `
 Object {
   "imports": Set {},

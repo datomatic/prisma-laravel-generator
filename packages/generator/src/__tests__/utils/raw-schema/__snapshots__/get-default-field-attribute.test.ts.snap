@@ -22,6 +22,16 @@ exports[`getDefaultFieldAnnotation: DefaultValues - role 1`] = `"USER"`;
 
 exports[`getDefaultFieldAnnotation: DefaultValues - uuid 1`] = `"uuid()"`;
 
+exports[`getDefaultFieldAnnotation: DefaultValuesWithoutMethodCall - age 1`] = `"18"`;
+
+exports[`getDefaultFieldAnnotation: DefaultValuesWithoutMethodCall - bool 1`] = `"true"`;
+
+exports[`getDefaultFieldAnnotation: DefaultValuesWithoutMethodCall - email 1`] = `"\\"hello@world.test\\""`;
+
+exports[`getDefaultFieldAnnotation: DefaultValuesWithoutMethodCall - id 1`] = `false`;
+
+exports[`getDefaultFieldAnnotation: DefaultValuesWithoutMethodCall - name 1`] = `"\\"N.A.\\""`;
+
 exports[`getDefaultFieldAnnotation: EagerLoadA - id 1`] = `"autoincrement()"`;
 
 exports[`getDefaultFieldAnnotation: EagerLoadA - related 1`] = `false`;

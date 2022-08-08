@@ -13,6 +13,7 @@ import MultipleDataSourcesError from './errors/multiple-data-sources-error';
 import generatePrismaModel from './generators/prisma-models/generator';
 import generateModel from './generators/models/generator';
 import getModelClassName from './helpers/get-model-classname';
+import deleteAllFilesInDirectory from './helpers/delete-all-files-in-directory';
 
 const GENERATOR_NAME = 'prisma-laravel-generator';
 
@@ -44,6 +45,15 @@ generatorHandler({
 
     const buffer = await readFile(options.schemaPath);
     const rawSchema = buffer.toString();
+
+    await Promise.all([
+      deleteAllFilesInDirectory(
+        path.join(outputPath, 'app', 'Enums', 'Prisma'),
+      ),
+      deleteAllFilesInDirectory(
+        path.join(outputPath, 'app', 'Models', 'Prisma'),
+      ),
+    ]);
 
     await Promise.all(
       [

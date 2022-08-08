@@ -36,6 +36,24 @@ class DefaultValue extends AnotherPrefixDefaultValue
 "
 `;
 
+exports[`models: generation with different prefix: DefaultValuesWithoutMethodCall 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixDefaultValuesWithoutMethodCall;
+
+/**
+ * DefaultValuesWithoutMethodCall Model.
+ *
+ * {@inheritdoc}
+ */
+class DefaultValuesWithoutMethodCall extends AnotherPrefixDefaultValuesWithoutMethodCall
+{
+}
+"
+`;
+
 exports[`models: generation with different prefix: EagerLoadA 1`] = `
 "<?php
 
@@ -1759,6 +1777,24 @@ use App\\\\Models\\\\Prisma\\\\PrismaDefaultValue;
  * {@inheritdoc}
  */
 class DefaultValue extends PrismaDefaultValue
+{
+}
+"
+`;
+
+exports[`models: generation: DefaultValuesWithoutMethodCall 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaDefaultValuesWithoutMethodCall;
+
+/**
+ * DefaultValuesWithoutMethodCall Model.
+ *
+ * {@inheritdoc}
+ */
+class DefaultValuesWithoutMethodCall extends PrismaDefaultValuesWithoutMethodCall
 {
 }
 "

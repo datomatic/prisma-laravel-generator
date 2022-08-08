@@ -2733,6 +2733,16 @@ Object {
 }
 `;
 
+exports[`getRelationsFromModel - implicit table names: DefaultValuesWithoutMethodCall 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
 exports[`getRelationsFromModel - implicit table names: EagerLoadA 1`] = `
 Object {
   "belongsTo": Array [],
@@ -4148,6 +4158,16 @@ Object {
 `;
 
 exports[`getRelationsFromModel: DefaultValues 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel: DefaultValuesWithoutMethodCall 1`] = `
 Object {
   "belongsTo": Array [],
   "belongsToMany": Array [],
