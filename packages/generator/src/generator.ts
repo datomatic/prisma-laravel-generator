@@ -4,6 +4,7 @@ import path from 'node:path';
 import {readFile} from 'node:fs/promises';
 import _ from 'lodash';
 import {existsSync} from 'node:fs';
+import {Dictionary} from '@prisma/generator-helper/dist/types';
 import generateEnum from './generators/enums/generator';
 import writeFileSafely from './utils/write-file-safely';
 import {formatFile} from './utils/php-cs-fixer';
@@ -27,10 +28,13 @@ generatorHandler({
     };
   },
   onGenerate: async (options: GeneratorOptions) => {
-    const outputPath = options.generator.output?.value ?? '../generated';
+    const outputPath = options.generator.output?.value ?? '../';
 
     const config = {
-      modelsPrefix: options.generator.config.modelsPrefix ?? 'Prisma',
+      prismaModelsPath: './app/Models/Prisma',
+      prismaModelsPrefix: 'Prisma',
+      modelsPath: './app/Models',
+      prismaEnumsPath: './app/Enums/Prisma',
       baseModel: 'Illuminate\\Database\\Eloquent\\Model',
       basePivotModel: 'Illuminate\\Database\\Eloquent\\Relations\\Pivot',
       explicitTableNamesOnRelations: true,
@@ -47,12 +51,8 @@ generatorHandler({
     const rawSchema = buffer.toString();
 
     await Promise.all([
-      deleteAllFilesInDirectory(
-        path.join(outputPath, 'app', 'Enums', 'Prisma'),
-      ),
-      deleteAllFilesInDirectory(
-        path.join(outputPath, 'app', 'Models', 'Prisma'),
-      ),
+      deleteAllFilesInDirectory(path.join(outputPath, config.prismaEnumsPath)),
+      deleteAllFilesInDirectory(path.join(outputPath, config.prismaModelsPath)),
     ]);
 
     await Promise.all(
@@ -62,11 +62,10 @@ generatorHandler({
 
           const writeLocation = path.join(
             outputPath,
-            'app',
-            'Enums',
-            'Prisma',
+            config.prismaEnumsPath,
             `${enumInfo.name}.php`,
           );
+
           await writeFileSafely(writeLocation, generatedEnum);
 
           if (config.phpCsFixerBinPath && config.phpCsFixerConfigPath) {
@@ -86,16 +85,14 @@ generatorHandler({
             options.datasources[0].provider,
             config.baseModel,
             config.basePivotModel,
-            config.modelsPrefix,
+            config.prismaModelsPrefix,
             config.explicitTableNamesOnRelations,
           );
 
           const writeLocation = path.join(
             outputPath,
-            'app',
-            'Models',
-            'Prisma',
-            `${getModelClassName(model, config.modelsPrefix)}.php`,
+            config.prismaModelsPath,
+            `${getModelClassName(model, config.prismaModelsPrefix)}.php`,
           );
           await writeFileSafely(writeLocation, generatedPrismaModel);
 
@@ -107,28 +104,33 @@ generatorHandler({
             );
           }
         }),
-        ..._.map(options.dmmf.datamodel.models, async model => {
-          const generatedModel = generateModel(model, config.modelsPrefix);
+        ..._.map(
+          config.modelsPath !== 'false' ? options.dmmf.datamodel.models : [],
+          async model => {
+            const generatedModel = generateModel(
+              model,
+              config.prismaModelsPrefix,
+            );
 
-          const writeLocation = path.join(
-            outputPath,
-            'app',
-            'Models',
-            `${getModelClassName(model)}.php`,
-          );
+            const writeLocation = path.join(
+              outputPath,
+              config.modelsPath,
+              `${getModelClassName(model)}.php`,
+            );
 
-          if (!existsSync(writeLocation)) {
-            await writeFileSafely(writeLocation, generatedModel);
+            if (!existsSync(writeLocation)) {
+              await writeFileSafely(writeLocation, generatedModel);
 
-            if (config.phpCsFixerBinPath && config.phpCsFixerConfigPath) {
-              await formatFile(
-                writeLocation,
-                config.phpCsFixerBinPath,
-                config.phpCsFixerConfigPath,
-              );
+              if (config.phpCsFixerBinPath && config.phpCsFixerConfigPath) {
+                await formatFile(
+                  writeLocation,
+                  config.phpCsFixerBinPath,
+                  config.phpCsFixerConfigPath,
+                );
+              }
             }
-          }
-        }),
+          },
+        ),
       ].flat(),
     );
   },
