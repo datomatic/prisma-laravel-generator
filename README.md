@@ -3,6 +3,150 @@
 
 ---
 
+In Laravel, migrations are not easy to write: you always have to keep in mind what is the current structure of your database to apply changes. And after the migration, you have to deal with the creation and alignment of the models with your changes: you basically have to repeat, again and again, stuff that you have already defined in your migrations (relations, casts, ...).
+
+For me, this was unacceptable, considering how fast you can develop using Laravel: I always though that migrations were the bottleneck of Laravel.
+
+Now, imagine an auto-migration method, that allows you to easily define the structure of your database, and when you change something, it automatically makes the migrations and align the database to your clear-to-read structure. Not only that, but it also generates your models starting from that...
+
+Prisma is a Node.JS ORM and includes Prisma Migrate, which uses Prisma schema (*.schema files) changes to automatically generate database schema migrations. You can read more about it in its [official site](https://www.prisma.io/migrate/).
+
+Obviously, Laravel is not a Node.JS environment, and Laravel already provides us a very good ORM, Eloquent. But we still can use Prisma Migrate to easily manage our database. 
+
+And via this generator, we can also generate automatically your Eloquent models, filled with PHPDocs, attributes, casts, validation rules, ..., directly from your Prisma schema. 
+
+From a simple Prisma schema:
+```prisma
+/// trait:App\Traits\TokenOwner
+model User {
+  id                BigInt    @id @default(autoincrement())
+  name              String
+
+  email             String    @unique(map: "users_email_unique") /// read-only
+  email_verified_at DateTime? /// hidden
+
+  password          String    /// hidden
+  remember_token    String?   /// hidden, guarded
+
+  category_id       BigInt
+  category          UserCategory @relation(fields: [category_id], references: [id])
+
+  created_at        DateTime? /// read-only
+  updated_at        DateTime? /// read-only
+  deleted_at        DateTime? /// read-only
+}
+
+```
+
+To a migrated database and a Laravel model ready to be used:
+```php
+<?php
+
+namespace App\Models\Prisma;
+
+use App\Models\UserCategory;
+use App\Traits\TokenOwner;
+use Carbon\CarbonImmutable;
+use Closure;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Carbon;
+use Illuminate\Validation\Rule;
+
+/**
+ * PrismaUser Model
+ *
+ * @mixin Builder
+ *
+ * @method static Builder|static query()
+ * @method static static make(array $attributes = [])
+ * @method static static create(array $attributes = [])
+ * @method static static forceCreate(array $attributes)
+ * @method static firstOrNew(array $attributes = [], array $values = [])
+ * @method static firstOrFail($columns = ['*'])
+ * @method static firstOrCreate(array $attributes, array $values = [])
+ * @method static firstOr($columns = ['*'], Closure $callback = null)
+ * @method static firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static static findOrFail($id, $columns = ['*'])
+ * @method static static findOrNew($id, $columns = ['*'])
+ * @method static null|static find($id, $columns = ['*'])
+ *
+ * @property int $id
+ * @property string $name
+ * @property-read string $email
+ * @property ?Carbon $email_verified_at
+ * @property string $password
+ * @property ?string $remember_token
+ * @property int $category_id
+ * @property-read ?CarbonImmutable $created_at
+ * @property-read ?CarbonImmutable $updated_at
+ * @property-read ?CarbonImmutable $deleted_at
+ *
+
+ * @property-read UserCategory $category
+ */
+abstract class PrismaUser extends Model
+{
+    use TokenOwner;
+    use SoftDeletes;
+
+    protected $table = 'User';
+
+    protected $guarded = ['remember_token'];
+
+    protected $hidden = ['email_verified_at', 'password', 'remember_token'];
+
+    protected array $rules;
+
+    protected $casts = [
+        'id' => 'integer',
+        'name' => 'string',
+        'email' => 'string',
+        'email_verified_at' => 'immutable_datetime',
+        'password' => 'string',
+        'remember_token' => 'string',
+        'category_id' => 'integer',
+        'created_at' => 'immutable_datetime',
+        'updated_at' => 'immutable_datetime',
+        'deleted_at' => 'immutable_datetime',
+    ];
+
+    public function __construct(array $attributes = [])
+    {
+        $this->rules = [
+            'id' => ['required', 'numeric', 'integer'],
+            'name' => ['required', 'string'],
+            'email' => [
+                Rule::unique('User', 'email')->ignore(
+                    $this->getKey(),
+                    $this->getKeyName()
+                ),
+                'required',
+                'string',
+            ],
+            'email_verified_at' => ['nullable', 'date'],
+            'password' => ['required', 'string'],
+            'remember_token' => ['nullable', 'string'],
+            'category_id' => ['required', 'numeric', 'integer'],
+            'created_at' => ['nullable', 'date'],
+            'updated_at' => ['nullable', 'date'],
+            'deleted_at' => ['nullable', 'date'],
+            ...$this->rules ?? [],
+        ];
+
+        parent::__construct($attributes);
+    }
+
+    public function category()
+    {
+        return $this->belongsTo(UserCategory::class, 'category_id', 'id');
+    }
+}
+```
+
 # Initial configuration
 
 In this section we're going to follow you in the setup of `prisma-laravel-generator` inside your Laravel project, which can be a brand-new project but also an already existing (and published) project.
@@ -312,6 +456,11 @@ If you need to alter the data (e.g., you were using Eloquent to do some changes 
 
 It is sometimes useful to squash either some or all migration files into a single migration. See [Squashing migrations](https://www.prisma.io/docs/guides/database/developing-with-prisma-migrate/squashing-migrations) for more information.
 
+## Generated `$rules` property
+In the generated `Prisma*` models you'll find a property called `$rules`, which is populated with standard Laravel validation methods for every attribute of your model. This property **is not used** by Laravel, you have to manage your own validation depending on your APIs. You can create subsets of the rules depending on which attributes you're going to validate, and so on.
+
+See the [official Laravel documentation](https://laravel.com/docs/9.x/validation) to learn how to use those validation rules.
+
 # Schema configuration
 
 In this section we're going to see how to affect the generated models and the available configurations for the generator. 
@@ -329,6 +478,13 @@ In this section we're going to see how to affect the generated models and the av
 |      | basePivotModel       | FQCN of the class that all the generated pivots inherit from                                                                                                                                                                                                                                                                                                                   | `"Illuminate\\Database\\Eloquent\\Relations\\Pivot"` |
 |      | phpCsFixerBinPath    | Path of PHPCSFixer, starting from the root of your Laravel project (usually, `"./vendor/bin/php-cs-fixer"`). If provided, the generated models will be formatted by PHPCSFixer to align the code style of the generated models to the rest of your project. If not assigned, the models will be formatted using [Prettier PHP Plugin](https://github.com/prettier/plugin-php). | `undefined`                                          |
 |      | phpCsFixerConfigPath | Path of PHPCSFixer config file, starting from the root of your Laravel project (usually, `"./.php-cs.dist.php"`). Used if a valid `phpCsFixerBinPath` is provided.                                                                                                                                                                                                             | `undefined`                                          |
+
+## Naming conventions
+The name of models and enums can be:
+ * plural snake_case: The table name will keep that format, while the model name will be converted to singular PascalCase (e.g. `user_categories` to `UserCategory`) 
+ * singular PascalCase: In that case, the model and the table keep the same name
+
+The conversion from singular to plural (and vice-versa) used by this generator is exactly the same as the one used in Laravel.
 
 ## Annotations
 There are several annotations that you can add in your schema file to fine tune the generated models and enums. Some annotations are related to an entire model or enum, while others are specific to a field.
