@@ -4,6 +4,6 @@ datasource db {
 }
 
 model MongoDbNow {
-  id         String   @id @default(auto()) @map("_id") @db.ObjectId
-  created_at DateTime @default(now())
+  id  String   @id @default(auto()) @map("_id") @db.ObjectId
+  now DateTime @default(now())
 }

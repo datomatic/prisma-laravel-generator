@@ -5624,6 +5624,198 @@ Object {
 }
 `;
 
+exports[`getCastAndRulesFromField: Timestamps9 - created_at 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "immutable_datetime",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "date",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Timestamps9 - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Timestamps9 - updated_at 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "immutable_datetime",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "date",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Timestamps10 - created_at 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "immutable_datetime",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "date",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Timestamps10 - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Timestamps10 - updated_timestamp 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "immutable_datetime",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "date",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Timestamps11 - created_timestamp 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "immutable_datetime",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "date",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Timestamps11 - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: Timestamps11 - updated_at 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "immutable_datetime",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "date",
+    },
+  ],
+}
+`;
+
 exports[`getCastAndRulesFromField: TouchingA - id 1`] = `
 Object {
   "cast": Object {
@@ -6705,6 +6897,30 @@ Object {
 }
 `;
 
+exports[`getCastAndRulesFromField: WithMultipleTraits - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
 exports[`getCastAndRulesFromField: WithPrimaryKey - id 1`] = `
 Object {
   "cast": Object {
@@ -6794,6 +7010,30 @@ Object {
 `;
 
 exports[`getCastAndRulesFromField: WithTableMap - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: WithTrait - id 1`] = `
 Object {
   "cast": Object {
     "isMethodCall": false,

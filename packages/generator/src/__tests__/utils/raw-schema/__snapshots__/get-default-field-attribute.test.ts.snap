@@ -498,6 +498,24 @@ exports[`getDefaultFieldAnnotation: Timestamps8 - id 1`] = `"autoincrement()"`;
 
 exports[`getDefaultFieldAnnotation: Timestamps8 - updated_timestamp 1`] = `false`;
 
+exports[`getDefaultFieldAnnotation: Timestamps9 - created_at 1`] = `false`;
+
+exports[`getDefaultFieldAnnotation: Timestamps9 - id 1`] = `"autoincrement()"`;
+
+exports[`getDefaultFieldAnnotation: Timestamps9 - updated_at 1`] = `false`;
+
+exports[`getDefaultFieldAnnotation: Timestamps10 - created_at 1`] = `false`;
+
+exports[`getDefaultFieldAnnotation: Timestamps10 - id 1`] = `"autoincrement()"`;
+
+exports[`getDefaultFieldAnnotation: Timestamps10 - updated_timestamp 1`] = `false`;
+
+exports[`getDefaultFieldAnnotation: Timestamps11 - created_timestamp 1`] = `false`;
+
+exports[`getDefaultFieldAnnotation: Timestamps11 - id 1`] = `"autoincrement()"`;
+
+exports[`getDefaultFieldAnnotation: Timestamps11 - updated_at 1`] = `false`;
+
 exports[`getDefaultFieldAnnotation: TouchingA - id 1`] = `"autoincrement()"`;
 
 exports[`getDefaultFieldAnnotation: TouchingA - related 1`] = `false`;
@@ -596,6 +614,8 @@ exports[`getDefaultFieldAnnotation: WithGlobalStringPrimaryKey - id 1`] = `false
 
 exports[`getDefaultFieldAnnotation: WithGlobalStringPrimaryKeyDifferentName - primary_id 1`] = `false`;
 
+exports[`getDefaultFieldAnnotation: WithMultipleTraits - id 1`] = `"autoincrement()"`;
+
 exports[`getDefaultFieldAnnotation: WithPrimaryKey - id 1`] = `"autoincrement()"`;
 
 exports[`getDefaultFieldAnnotation: WithPrimaryKeyDifferentName - primary_id 1`] = `"autoincrement()"`;
@@ -605,6 +625,8 @@ exports[`getDefaultFieldAnnotation: WithStringPrimaryKey - id 1`] = `false`;
 exports[`getDefaultFieldAnnotation: WithStringPrimaryKeyDifferentName - primary_id 1`] = `false`;
 
 exports[`getDefaultFieldAnnotation: WithTableMap - id 1`] = `"autoincrement()"`;
+
+exports[`getDefaultFieldAnnotation: WithTrait - id 1`] = `"autoincrement()"`;
 
 exports[`getDefaultFieldAnnotation: snake_cased_models - firstname 1`] = `false`;
 

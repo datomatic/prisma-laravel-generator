@@ -63,6 +63,43 @@ enum BackedEnum {
   D  @map("4")
 }
 
+/// trait:App\Traits\EnumCustomTrait
+enum EnumWithTrait {
+  A
+  B
+  C
+  D
+}
+
+/// trait:App\Traits\EnumCustomTrait
+enum BackedEnumWithTrait {
+  A  @map("1")
+  B  @map("2")
+  C  @map("3")
+  D  @map("4")
+}
+
+/// trait:App\Traits\EnumCustomTrait
+/// trait:App\Traits\AnotherCustomTrait
+enum EnumWithTwoTraits {
+  A  @map("1")
+  B  @map("2")
+  C  @map("3")
+  D  @map("4")
+}
+
+/// trait:App\Traits\CustomTrait
+model WithTrait {
+  id Int @id @default(autoincrement())
+}
+
+/// trait:App\Traits\ATrait
+/// trait:App\Traits\BTrait
+/// trait:App\Traits\CTrait
+model WithMultipleTraits {
+  id Int @id @default(autoincrement())
+}
+
 model WithEnum {
   id          Int    @id @default(autoincrement())
   enum        Enum
@@ -239,6 +276,24 @@ model Timestamps8 {
   id                Int      @id @default(autoincrement())
   created_at        DateTime /// created_at
   updated_timestamp DateTime @updatedAt /// updated_at
+}
+
+model Timestamps9 {
+  id         Int      @id @default(autoincrement())
+  created_at DateTime
+  updated_at DateTime
+}
+
+model Timestamps10 {
+  id                Int      @id @default(autoincrement())
+  created_at        DateTime
+  updated_timestamp DateTime /// updated_at
+}
+
+model Timestamps11 {
+  id                Int      @id @default(autoincrement())
+  created_timestamp DateTime /// created_at
+  updated_at        DateTime
 }
 
 model Guarded {

@@ -30,6 +30,7 @@ import isModelPivot from '../../helpers/is-model-pivot';
 import getPhpArgumentsWithDefaults from '../../helpers/get-php-arguments-with-defaults';
 import getUnsupportedFields from '../../utils/raw-schema/get-unsupported-fields';
 import getModelClassName from '../../helpers/get-model-classname';
+import getModelTraits from '../../helpers/get-model-traits';
 
 const generatePrismaModel = (
   model: DMMF.Model,
@@ -57,6 +58,10 @@ const generatePrismaModel = (
   imports.add('\\Closure');
 
   const traits = new Set<string>();
+  for (const t of getModelTraits(model)) {
+    imports.add(t);
+    traits.add(getClassFromFQCN(t));
+  }
 
   if (primaryKey && primaryKey.fields.length > 1) {
     throw new CompositeKeyError();

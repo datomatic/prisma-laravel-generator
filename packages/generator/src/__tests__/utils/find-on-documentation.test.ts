@@ -37,3 +37,45 @@ test('findOnDocumentation: multiple with spaces', () => {
     findOnDocumentation('read-only', '   some   ,    read-only   , doc   '),
   ).toBe(true);
 });
+
+test('findOnDocumentation: regexp, undefined', () => {
+  expect(findOnDocumentation(/read-[a-z]+/g)).toBe(false);
+});
+
+test('findOnDocumentation: regexp empty', () => {
+  expect(findOnDocumentation(/read-[a-z]+/g, '')).toBe(false);
+});
+
+test('findOnDocumentation: regexp single not present', () => {
+  expect(findOnDocumentation(/read-[a-z]+/g, 'doc')).toBe(false);
+});
+
+test('findOnDocumentation: regexp multiple not present', () => {
+  expect(findOnDocumentation(/read-[a-z]+/g, 'some, other, doc')).toBe(false);
+});
+
+test('findOnDocumentation: regexp single present', () => {
+  expect(findOnDocumentation(/read-[a-z]+/g, 'read-only')).toBe(true);
+});
+
+test('findOnDocumentation: regexp multiple present', () => {
+  expect(findOnDocumentation(/read-[a-z]+/g, 'some, read-only, other')).toBe(
+    true,
+  );
+});
+
+test('findOnDocumentation: regexp case insensitivity', () => {
+  expect(findOnDocumentation(/read-[a-z]+/g, 'some, Read-OnLy, doc')).toBe(
+    true,
+  );
+});
+
+test('findOnDocumentation: regexp single with spaces', () => {
+  expect(findOnDocumentation(/read-[a-z]+/g, '    read-only   ')).toBe(true);
+});
+
+test('findOnDocumentation: regexp multiple with spaces', () => {
+  expect(
+    findOnDocumentation(/read-[a-z]+/g, '   some   ,    read-only   , doc   '),
+  ).toBe(true);
+});

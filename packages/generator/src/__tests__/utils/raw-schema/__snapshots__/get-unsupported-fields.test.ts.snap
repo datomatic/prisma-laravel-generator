@@ -152,6 +152,12 @@ exports[`getUnsupportedFields: Timestamps7 1`] = `Array []`;
 
 exports[`getUnsupportedFields: Timestamps8 1`] = `Array []`;
 
+exports[`getUnsupportedFields: Timestamps9 1`] = `Array []`;
+
+exports[`getUnsupportedFields: Timestamps10 1`] = `Array []`;
+
+exports[`getUnsupportedFields: Timestamps11 1`] = `Array []`;
+
 exports[`getUnsupportedFields: TouchingA 1`] = `Array []`;
 
 exports[`getUnsupportedFields: TouchingB 1`] = `Array []`;
@@ -255,6 +261,8 @@ exports[`getUnsupportedFields: WithGlobalStringPrimaryKey 1`] = `Array []`;
 
 exports[`getUnsupportedFields: WithGlobalStringPrimaryKeyDifferentName 1`] = `Array []`;
 
+exports[`getUnsupportedFields: WithMultipleTraits 1`] = `Array []`;
+
 exports[`getUnsupportedFields: WithPrimaryKey 1`] = `Array []`;
 
 exports[`getUnsupportedFields: WithPrimaryKeyDifferentName 1`] = `Array []`;
@@ -264,5 +272,7 @@ exports[`getUnsupportedFields: WithStringPrimaryKey 1`] = `Array []`;
 exports[`getUnsupportedFields: WithStringPrimaryKeyDifferentName 1`] = `Array []`;
 
 exports[`getUnsupportedFields: WithTableMap 1`] = `Array []`;
+
+exports[`getUnsupportedFields: WithTrait 1`] = `Array []`;
 
 exports[`getUnsupportedFields: snake_cased_models 1`] = `Array []`;

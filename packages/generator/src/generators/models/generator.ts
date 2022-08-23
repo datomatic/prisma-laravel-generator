@@ -1,4 +1,5 @@
 import {DMMF} from '@prisma/generator-helper';
+import _ from 'lodash';
 import getClassFromFQCN from '../../utils/get-class-from-fqcn';
 import getPrismaFqcn from '../../helpers/get-prisma-fqcn';
 import {prettify} from '../../utils/prettier';
@@ -15,7 +16,10 @@ const generateModel = (model: DMMF.Model, prefix = 'Prisma') => {
   return prettify(`<?php
     namespace ${namespace};
 
-    use ${prismaFqcn};
+    ${_.chain([...imports])
+      .map(importFcqn => `use ${importFcqn};`)
+      .join('\n')
+      .value()}
 
     /**
      * ${getModelClassname(model)} Model

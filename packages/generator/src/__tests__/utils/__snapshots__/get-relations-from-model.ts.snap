@@ -3895,6 +3895,36 @@ Object {
 }
 `;
 
+exports[`getRelationsFromModel - implicit table names: Timestamps9 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: Timestamps10 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: Timestamps11 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
 exports[`getRelationsFromModel - implicit table names: TouchingA 1`] = `
 Object {
   "belongsTo": Array [],
@@ -4077,6 +4107,16 @@ Object {
 }
 `;
 
+exports[`getRelationsFromModel - implicit table names: WithMultipleTraits 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
 exports[`getRelationsFromModel - implicit table names: WithPrimaryKey 1`] = `
 Object {
   "belongsTo": Array [],
@@ -4118,6 +4158,16 @@ Object {
 `;
 
 exports[`getRelationsFromModel - implicit table names: WithTableMap 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: WithTrait 1`] = `
 Object {
   "belongsTo": Array [],
   "belongsToMany": Array [],
@@ -5374,6 +5424,36 @@ Object {
 }
 `;
 
+exports[`getRelationsFromModel: Timestamps9 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel: Timestamps10 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel: Timestamps11 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
 exports[`getRelationsFromModel: TouchingA 1`] = `
 Object {
   "belongsTo": Array [],
@@ -5560,6 +5640,16 @@ Object {
 }
 `;
 
+exports[`getRelationsFromModel: WithMultipleTraits 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
 exports[`getRelationsFromModel: WithPrimaryKey 1`] = `
 Object {
   "belongsTo": Array [],
@@ -5601,6 +5691,16 @@ Object {
 `;
 
 exports[`getRelationsFromModel: WithTableMap 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel: WithTrait 1`] = `
 Object {
   "belongsTo": Array [],
   "belongsToMany": Array [],

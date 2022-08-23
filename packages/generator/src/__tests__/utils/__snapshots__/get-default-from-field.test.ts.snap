@@ -1,20 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`getDefaultFromField - mongodb: MongoDbNow - created_at 1`] = `
+exports[`getDefaultFromField - mongodb: MongoDbNow - id 1`] = `
+Object {
+  "defaultValue": undefined,
+  "imports": Set {},
+  "isMethodCall": false,
+}
+`;
+
+exports[`getDefaultFromField - mongodb: MongoDbNow - now 1`] = `
 Object {
   "defaultValue": "Carbon::now()",
   "imports": Set {
     "Illuminate\\\\Support\\\\Carbon",
   },
   "isMethodCall": true,
-}
-`;
-
-exports[`getDefaultFromField - mongodb: MongoDbNow - id 1`] = `
-Object {
-  "defaultValue": undefined,
-  "imports": Set {},
-  "isMethodCall": false,
 }
 `;
 
@@ -2014,6 +2014,78 @@ Object {
 }
 `;
 
+exports[`getDefaultFromField: Timestamps9 - created_at 1`] = `
+Object {
+  "defaultValue": undefined,
+  "imports": Set {},
+  "isMethodCall": false,
+}
+`;
+
+exports[`getDefaultFromField: Timestamps9 - id 1`] = `
+Object {
+  "defaultValue": undefined,
+  "imports": Set {},
+  "isMethodCall": false,
+}
+`;
+
+exports[`getDefaultFromField: Timestamps9 - updated_at 1`] = `
+Object {
+  "defaultValue": undefined,
+  "imports": Set {},
+  "isMethodCall": false,
+}
+`;
+
+exports[`getDefaultFromField: Timestamps10 - created_at 1`] = `
+Object {
+  "defaultValue": undefined,
+  "imports": Set {},
+  "isMethodCall": false,
+}
+`;
+
+exports[`getDefaultFromField: Timestamps10 - id 1`] = `
+Object {
+  "defaultValue": undefined,
+  "imports": Set {},
+  "isMethodCall": false,
+}
+`;
+
+exports[`getDefaultFromField: Timestamps10 - updated_timestamp 1`] = `
+Object {
+  "defaultValue": undefined,
+  "imports": Set {},
+  "isMethodCall": false,
+}
+`;
+
+exports[`getDefaultFromField: Timestamps11 - created_timestamp 1`] = `
+Object {
+  "defaultValue": undefined,
+  "imports": Set {},
+  "isMethodCall": false,
+}
+`;
+
+exports[`getDefaultFromField: Timestamps11 - id 1`] = `
+Object {
+  "defaultValue": undefined,
+  "imports": Set {},
+  "isMethodCall": false,
+}
+`;
+
+exports[`getDefaultFromField: Timestamps11 - updated_at 1`] = `
+Object {
+  "defaultValue": undefined,
+  "imports": Set {},
+  "isMethodCall": false,
+}
+`;
+
 exports[`getDefaultFromField: TouchingA - id 1`] = `
 Object {
   "defaultValue": undefined,
@@ -2412,6 +2484,14 @@ Object {
 }
 `;
 
+exports[`getDefaultFromField: WithMultipleTraits - id 1`] = `
+Object {
+  "defaultValue": undefined,
+  "imports": Set {},
+  "isMethodCall": false,
+}
+`;
+
 exports[`getDefaultFromField: WithPrimaryKey - id 1`] = `
 Object {
   "defaultValue": undefined,
@@ -2445,6 +2525,14 @@ Object {
 `;
 
 exports[`getDefaultFromField: WithTableMap - id 1`] = `
+Object {
+  "defaultValue": undefined,
+  "imports": Set {},
+  "isMethodCall": false,
+}
+`;
+
+exports[`getDefaultFromField: WithTrait - id 1`] = `
 Object {
   "defaultValue": undefined,
   "imports": Set {},

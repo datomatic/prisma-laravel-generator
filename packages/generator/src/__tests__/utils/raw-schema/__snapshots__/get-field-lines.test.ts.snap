@@ -1898,6 +1898,75 @@ Array [
 ]
 `;
 
+exports[`getFieldLines: Timestamps9 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "created_at",
+    "type": "DateTime",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "updated_at",
+    "type": "DateTime",
+  },
+]
+`;
+
+exports[`getFieldLines: Timestamps10 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "created_at",
+    "type": "DateTime",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": "updated_at",
+    "id": "updated_timestamp",
+    "type": "DateTime",
+  },
+]
+`;
+
+exports[`getFieldLines: Timestamps11 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": "created_at",
+    "id": "created_timestamp",
+    "type": "DateTime",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "updated_at",
+    "type": "DateTime",
+  },
+]
+`;
+
 exports[`getFieldLines: TouchingA 1`] = `
 Array [
   Object {
@@ -2291,6 +2360,17 @@ Array [
 ]
 `;
 
+exports[`getFieldLines: WithMultipleTraits 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+]
+`;
+
 exports[`getFieldLines: WithPrimaryKey 1`] = `
 Array [
   Object {
@@ -2336,6 +2416,17 @@ Array [
 `;
 
 exports[`getFieldLines: WithTableMap 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+]
+`;
+
+exports[`getFieldLines: WithTrait 1`] = `
 Array [
   Object {
     "attributes": "@id @default(autoincrement())",

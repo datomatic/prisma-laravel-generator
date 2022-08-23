@@ -2038,6 +2038,90 @@ Object {
 }
 `;
 
+exports[`getPhpDocPropertiesFromField: Timestamps9 - created_at 1`] = `
+Object {
+  "imports": Set {
+    "Illuminate\\\\Support\\\\Carbon",
+  },
+  "phpType": "Carbon",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Timestamps9 - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Timestamps9 - updated_at 1`] = `
+Object {
+  "imports": Set {
+    "Illuminate\\\\Support\\\\Carbon",
+  },
+  "phpType": "Carbon",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Timestamps10 - created_at 1`] = `
+Object {
+  "imports": Set {
+    "Illuminate\\\\Support\\\\Carbon",
+  },
+  "phpType": "Carbon",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Timestamps10 - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Timestamps10 - updated_timestamp 1`] = `
+Object {
+  "imports": Set {
+    "Illuminate\\\\Support\\\\Carbon",
+  },
+  "phpType": "Carbon",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Timestamps11 - created_timestamp 1`] = `
+Object {
+  "imports": Set {
+    "Illuminate\\\\Support\\\\Carbon",
+  },
+  "phpType": "Carbon",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Timestamps11 - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Timestamps11 - updated_at 1`] = `
+Object {
+  "imports": Set {
+    "Illuminate\\\\Support\\\\Carbon",
+  },
+  "phpType": "Carbon",
+  "readOnly": false,
+}
+`;
+
 exports[`getPhpDocPropertiesFromField: TouchingA - id 1`] = `
 Object {
   "imports": Set {},
@@ -2450,6 +2534,14 @@ Object {
 }
 `;
 
+exports[`getPhpDocPropertiesFromField: WithMultipleTraits - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
 exports[`getPhpDocPropertiesFromField: WithPrimaryKey - id 1`] = `
 Object {
   "imports": Set {},
@@ -2483,6 +2575,14 @@ Object {
 `;
 
 exports[`getPhpDocPropertiesFromField: WithTableMap - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: WithTrait - id 1`] = `
 Object {
   "imports": Set {},
   "phpType": "int",

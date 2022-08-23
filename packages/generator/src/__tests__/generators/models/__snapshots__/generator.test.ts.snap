@@ -1368,6 +1368,60 @@ class Timestamps8 extends AnotherPrefixTimestamps8
 "
 `;
 
+exports[`models: generation with different prefix: Timestamps9 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixTimestamps9;
+
+/**
+ * Timestamps9 Model.
+ *
+ * {@inheritdoc}
+ */
+class Timestamps9 extends AnotherPrefixTimestamps9
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: Timestamps10 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixTimestamps10;
+
+/**
+ * Timestamps10 Model.
+ *
+ * {@inheritdoc}
+ */
+class Timestamps10 extends AnotherPrefixTimestamps10
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: Timestamps11 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixTimestamps11;
+
+/**
+ * Timestamps11 Model.
+ *
+ * {@inheritdoc}
+ */
+class Timestamps11 extends AnotherPrefixTimestamps11
+{
+}
+"
+`;
+
 exports[`models: generation with different prefix: TouchingA 1`] = `
 "<?php
 
@@ -1638,6 +1692,24 @@ class WithGlobalStringPrimaryKeyDifferentName extends AnotherPrefixWithGlobalStr
 "
 `;
 
+exports[`models: generation with different prefix: WithMultipleTraits 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixWithMultipleTrait;
+
+/**
+ * WithMultipleTrait Model.
+ *
+ * {@inheritdoc}
+ */
+class WithMultipleTrait extends AnotherPrefixWithMultipleTrait
+{
+}
+"
+`;
+
 exports[`models: generation with different prefix: WithPrimaryKey 1`] = `
 "<?php
 
@@ -1723,6 +1795,24 @@ use App\\\\Models\\\\Prisma\\\\AnotherPrefixWithTableMap;
  * {@inheritdoc}
  */
 class WithTableMap extends AnotherPrefixWithTableMap
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: WithTrait 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixWithTrait;
+
+/**
+ * WithTrait Model.
+ *
+ * {@inheritdoc}
+ */
+class WithTrait extends AnotherPrefixWithTrait
 {
 }
 "
@@ -3114,6 +3204,60 @@ class Timestamps8 extends PrismaTimestamps8
 "
 `;
 
+exports[`models: generation: Timestamps9 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaTimestamps9;
+
+/**
+ * Timestamps9 Model.
+ *
+ * {@inheritdoc}
+ */
+class Timestamps9 extends PrismaTimestamps9
+{
+}
+"
+`;
+
+exports[`models: generation: Timestamps10 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaTimestamps10;
+
+/**
+ * Timestamps10 Model.
+ *
+ * {@inheritdoc}
+ */
+class Timestamps10 extends PrismaTimestamps10
+{
+}
+"
+`;
+
+exports[`models: generation: Timestamps11 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaTimestamps11;
+
+/**
+ * Timestamps11 Model.
+ *
+ * {@inheritdoc}
+ */
+class Timestamps11 extends PrismaTimestamps11
+{
+}
+"
+`;
+
 exports[`models: generation: TouchingA 1`] = `
 "<?php
 
@@ -3384,6 +3528,24 @@ class WithGlobalStringPrimaryKeyDifferentName extends PrismaWithGlobalStringPrim
 "
 `;
 
+exports[`models: generation: WithMultipleTraits 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaWithMultipleTrait;
+
+/**
+ * WithMultipleTrait Model.
+ *
+ * {@inheritdoc}
+ */
+class WithMultipleTrait extends PrismaWithMultipleTrait
+{
+}
+"
+`;
+
 exports[`models: generation: WithPrimaryKey 1`] = `
 "<?php
 
@@ -3469,6 +3631,24 @@ use App\\\\Models\\\\Prisma\\\\PrismaWithTableMap;
  * {@inheritdoc}
  */
 class WithTableMap extends PrismaWithTableMap
+{
+}
+"
+`;
+
+exports[`models: generation: WithTrait 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaWithTrait;
+
+/**
+ * WithTrait Model.
+ *
+ * {@inheritdoc}
+ */
+class WithTrait extends PrismaWithTrait
 {
 }
 "

@@ -31,7 +31,7 @@ use Illuminate\\\\Support\\\\Carbon;
  * @method static      null|static find($id, $columns = ['*'])
  *
  * @property-read string $_id
- * @property Carbon $created_at
+ * @property Carbon $now
  */
 abstract class PrismaMongoDbNow extends Model
 {
@@ -48,18 +48,18 @@ abstract class PrismaMongoDbNow extends Model
 
     protected array $rules = [
         '_id' => ['required', 'string'],
-        'created_at' => ['required', 'date'],
+        'now' => ['required', 'date'],
     ];
 
     protected $casts = [
         '_id' => 'string',
-        'created_at' => 'immutable_datetime',
+        'now' => 'immutable_datetime',
     ];
 
     public function __construct(array $attributes = [])
     {
         $this->attributes = [
-            'created_at' => Carbon::now(),
+            'now' => Carbon::now(),
             ...$this->attributes ?? [],
         ];
 
@@ -5061,6 +5061,167 @@ abstract class AnotherPrefixTimestamps8 extends Model
 "
 `;
 
+exports[`prisma-models: generation with different prefix: Timestamps9 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+use Illuminate\\\\Support\\\\Carbon;
+
+/**
+ * AnotherPrefixTimestamps9 Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ * @property Carbon $created_at
+ * @property Carbon $updated_at
+ */
+abstract class AnotherPrefixTimestamps9 extends Model
+{
+    protected $table = 'Timestamps9';
+
+    protected array $rules = [
+        'id' => ['required', 'numeric', 'integer'],
+        'created_at' => ['required', 'date'],
+        'updated_at' => ['required', 'date'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'created_at' => 'immutable_datetime',
+        'updated_at' => 'immutable_datetime',
+    ];
+}
+"
+`;
+
+exports[`prisma-models: generation with different prefix: Timestamps10 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+use Illuminate\\\\Support\\\\Carbon;
+
+/**
+ * AnotherPrefixTimestamps10 Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ * @property Carbon $created_at
+ * @property Carbon $updated_timestamp
+ */
+abstract class AnotherPrefixTimestamps10 extends Model
+{
+    public const UPDATED_AT = 'updated_timestamp';
+    protected $table = 'Timestamps10';
+
+    protected array $rules = [
+        'id' => ['required', 'numeric', 'integer'],
+        'created_at' => ['required', 'date'],
+        'updated_timestamp' => ['required', 'date'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'created_at' => 'immutable_datetime',
+        'updated_timestamp' => 'immutable_datetime',
+    ];
+}
+"
+`;
+
+exports[`prisma-models: generation with different prefix: Timestamps11 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+use Illuminate\\\\Support\\\\Carbon;
+
+/**
+ * AnotherPrefixTimestamps11 Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ * @property Carbon $created_timestamp
+ * @property Carbon $updated_at
+ */
+abstract class AnotherPrefixTimestamps11 extends Model
+{
+    public const CREATED_AT = 'created_timestamp';
+    protected $table = 'Timestamps11';
+
+    protected array $rules = [
+        'id' => ['required', 'numeric', 'integer'],
+        'created_timestamp' => ['required', 'date'],
+        'updated_at' => ['required', 'date'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'created_timestamp' => 'immutable_datetime',
+        'updated_at' => 'immutable_datetime',
+    ];
+}
+"
+`;
+
 exports[`prisma-models: generation with different prefix: TouchingA 1`] = `
 "<?php
 
@@ -6010,6 +6171,61 @@ abstract class AnotherPrefixWithGlobalStringPrimaryKeyDifferentName extends Mode
 "
 `;
 
+exports[`prisma-models: generation with different prefix: WithMultipleTraits 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use App\\\\Traits\\\\ATrait;
+use App\\\\Traits\\\\BTrait;
+use App\\\\Traits\\\\CTrait;
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * AnotherPrefixWithMultipleTrait Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ */
+abstract class AnotherPrefixWithMultipleTrait extends Model
+{
+    use ATrait;
+    use BTrait;
+    use CTrait;
+
+    public $timestamps = false;
+
+    protected $table = 'WithMultipleTraits';
+
+    protected array $rules = [
+        'id' => ['required', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+    ];
+}
+"
+`;
+
 exports[`prisma-models: generation with different prefix: WithPrimaryKey 1`] = `
 "<?php
 
@@ -6245,6 +6461,57 @@ abstract class AnotherPrefixWithTableMap extends Model
 {
     public $timestamps = false;
     protected $table = 'with_table_map';
+
+    protected array $rules = [
+        'id' => ['required', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+    ];
+}
+"
+`;
+
+exports[`prisma-models: generation with different prefix: WithTrait 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use App\\\\Traits\\\\CustomTrait;
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * AnotherPrefixWithTrait Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ */
+abstract class AnotherPrefixWithTrait extends Model
+{
+    use CustomTrait;
+
+    public $timestamps = false;
+
+    protected $table = 'WithTrait';
 
     protected array $rules = [
         'id' => ['required', 'numeric', 'integer'],
@@ -11216,6 +11483,167 @@ abstract class PrismaTimestamps8 extends Model
 "
 `;
 
+exports[`prisma-models: generation without explicit table names on relations: Timestamps9 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+use Illuminate\\\\Support\\\\Carbon;
+
+/**
+ * PrismaTimestamps9 Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ * @property Carbon $created_at
+ * @property Carbon $updated_at
+ */
+abstract class PrismaTimestamps9 extends Model
+{
+    protected $table = 'Timestamps9';
+
+    protected array $rules = [
+        'id' => ['required', 'numeric', 'integer'],
+        'created_at' => ['required', 'date'],
+        'updated_at' => ['required', 'date'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'created_at' => 'immutable_datetime',
+        'updated_at' => 'immutable_datetime',
+    ];
+}
+"
+`;
+
+exports[`prisma-models: generation without explicit table names on relations: Timestamps10 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+use Illuminate\\\\Support\\\\Carbon;
+
+/**
+ * PrismaTimestamps10 Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ * @property Carbon $created_at
+ * @property Carbon $updated_timestamp
+ */
+abstract class PrismaTimestamps10 extends Model
+{
+    public const UPDATED_AT = 'updated_timestamp';
+    protected $table = 'Timestamps10';
+
+    protected array $rules = [
+        'id' => ['required', 'numeric', 'integer'],
+        'created_at' => ['required', 'date'],
+        'updated_timestamp' => ['required', 'date'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'created_at' => 'immutable_datetime',
+        'updated_timestamp' => 'immutable_datetime',
+    ];
+}
+"
+`;
+
+exports[`prisma-models: generation without explicit table names on relations: Timestamps11 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+use Illuminate\\\\Support\\\\Carbon;
+
+/**
+ * PrismaTimestamps11 Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ * @property Carbon $created_timestamp
+ * @property Carbon $updated_at
+ */
+abstract class PrismaTimestamps11 extends Model
+{
+    public const CREATED_AT = 'created_timestamp';
+    protected $table = 'Timestamps11';
+
+    protected array $rules = [
+        'id' => ['required', 'numeric', 'integer'],
+        'created_timestamp' => ['required', 'date'],
+        'updated_at' => ['required', 'date'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'created_timestamp' => 'immutable_datetime',
+        'updated_at' => 'immutable_datetime',
+    ];
+}
+"
+`;
+
 exports[`prisma-models: generation without explicit table names on relations: TouchingA 1`] = `
 "<?php
 
@@ -12165,6 +12593,61 @@ abstract class PrismaWithGlobalStringPrimaryKeyDifferentName extends Model
 "
 `;
 
+exports[`prisma-models: generation without explicit table names on relations: WithMultipleTraits 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use App\\\\Traits\\\\ATrait;
+use App\\\\Traits\\\\BTrait;
+use App\\\\Traits\\\\CTrait;
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * PrismaWithMultipleTrait Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ */
+abstract class PrismaWithMultipleTrait extends Model
+{
+    use ATrait;
+    use BTrait;
+    use CTrait;
+
+    public $timestamps = false;
+
+    protected $table = 'WithMultipleTraits';
+
+    protected array $rules = [
+        'id' => ['required', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+    ];
+}
+"
+`;
+
 exports[`prisma-models: generation without explicit table names on relations: WithPrimaryKey 1`] = `
 "<?php
 
@@ -12400,6 +12883,57 @@ abstract class PrismaWithTableMap extends Model
 {
     public $timestamps = false;
     protected $table = 'with_table_map';
+
+    protected array $rules = [
+        'id' => ['required', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+    ];
+}
+"
+`;
+
+exports[`prisma-models: generation without explicit table names on relations: WithTrait 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use App\\\\Traits\\\\CustomTrait;
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * PrismaWithTrait Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ */
+abstract class PrismaWithTrait extends Model
+{
+    use CustomTrait;
+
+    public $timestamps = false;
+
+    protected $table = 'WithTrait';
 
     protected array $rules = [
         'id' => ['required', 'numeric', 'integer'],
@@ -17395,6 +17929,167 @@ abstract class PrismaTimestamps8 extends Model
 "
 `;
 
+exports[`prisma-models: generation: Timestamps9 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+use Illuminate\\\\Support\\\\Carbon;
+
+/**
+ * PrismaTimestamps9 Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ * @property Carbon $created_at
+ * @property Carbon $updated_at
+ */
+abstract class PrismaTimestamps9 extends Model
+{
+    protected $table = 'Timestamps9';
+
+    protected array $rules = [
+        'id' => ['required', 'numeric', 'integer'],
+        'created_at' => ['required', 'date'],
+        'updated_at' => ['required', 'date'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'created_at' => 'immutable_datetime',
+        'updated_at' => 'immutable_datetime',
+    ];
+}
+"
+`;
+
+exports[`prisma-models: generation: Timestamps10 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+use Illuminate\\\\Support\\\\Carbon;
+
+/**
+ * PrismaTimestamps10 Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ * @property Carbon $created_at
+ * @property Carbon $updated_timestamp
+ */
+abstract class PrismaTimestamps10 extends Model
+{
+    public const UPDATED_AT = 'updated_timestamp';
+    protected $table = 'Timestamps10';
+
+    protected array $rules = [
+        'id' => ['required', 'numeric', 'integer'],
+        'created_at' => ['required', 'date'],
+        'updated_timestamp' => ['required', 'date'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'created_at' => 'immutable_datetime',
+        'updated_timestamp' => 'immutable_datetime',
+    ];
+}
+"
+`;
+
+exports[`prisma-models: generation: Timestamps11 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+use Illuminate\\\\Support\\\\Carbon;
+
+/**
+ * PrismaTimestamps11 Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ * @property Carbon $created_timestamp
+ * @property Carbon $updated_at
+ */
+abstract class PrismaTimestamps11 extends Model
+{
+    public const CREATED_AT = 'created_timestamp';
+    protected $table = 'Timestamps11';
+
+    protected array $rules = [
+        'id' => ['required', 'numeric', 'integer'],
+        'created_timestamp' => ['required', 'date'],
+        'updated_at' => ['required', 'date'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'created_timestamp' => 'immutable_datetime',
+        'updated_at' => 'immutable_datetime',
+    ];
+}
+"
+`;
+
 exports[`prisma-models: generation: TouchingA 1`] = `
 "<?php
 
@@ -18344,6 +19039,61 @@ abstract class PrismaWithGlobalStringPrimaryKeyDifferentName extends Model
 "
 `;
 
+exports[`prisma-models: generation: WithMultipleTraits 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use App\\\\Traits\\\\ATrait;
+use App\\\\Traits\\\\BTrait;
+use App\\\\Traits\\\\CTrait;
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * PrismaWithMultipleTrait Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ */
+abstract class PrismaWithMultipleTrait extends Model
+{
+    use ATrait;
+    use BTrait;
+    use CTrait;
+
+    public $timestamps = false;
+
+    protected $table = 'WithMultipleTraits';
+
+    protected array $rules = [
+        'id' => ['required', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+    ];
+}
+"
+`;
+
 exports[`prisma-models: generation: WithPrimaryKey 1`] = `
 "<?php
 
@@ -18579,6 +19329,57 @@ abstract class PrismaWithTableMap extends Model
 {
     public $timestamps = false;
     protected $table = 'with_table_map';
+
+    protected array $rules = [
+        'id' => ['required', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+    ];
+}
+"
+`;
+
+exports[`prisma-models: generation: WithTrait 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use App\\\\Traits\\\\CustomTrait;
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * PrismaWithTrait Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ */
+abstract class PrismaWithTrait extends Model
+{
+    use CustomTrait;
+
+    public $timestamps = false;
+
+    protected $table = 'WithTrait';
 
     protected array $rules = [
         'id' => ['required', 'numeric', 'integer'],

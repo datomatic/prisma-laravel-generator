@@ -2241,6 +2241,87 @@ Object {
 }
 `;
 
+exports[`getFieldLine: Timestamps9 - created_at 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": undefined,
+  "id": "created_at",
+  "type": "DateTime",
+}
+`;
+
+exports[`getFieldLine: Timestamps9 - id 1`] = `
+Object {
+  "attributes": "@id @default(autoincrement())",
+  "comment": undefined,
+  "id": "id",
+  "type": "Int",
+}
+`;
+
+exports[`getFieldLine: Timestamps9 - updated_at 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": undefined,
+  "id": "updated_at",
+  "type": "DateTime",
+}
+`;
+
+exports[`getFieldLine: Timestamps10 - created_at 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": undefined,
+  "id": "created_at",
+  "type": "DateTime",
+}
+`;
+
+exports[`getFieldLine: Timestamps10 - id 1`] = `
+Object {
+  "attributes": "@id @default(autoincrement())",
+  "comment": undefined,
+  "id": "id",
+  "type": "Int",
+}
+`;
+
+exports[`getFieldLine: Timestamps10 - updated_timestamp 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": "updated_at",
+  "id": "updated_timestamp",
+  "type": "DateTime",
+}
+`;
+
+exports[`getFieldLine: Timestamps11 - created_timestamp 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": "created_at",
+  "id": "created_timestamp",
+  "type": "DateTime",
+}
+`;
+
+exports[`getFieldLine: Timestamps11 - id 1`] = `
+Object {
+  "attributes": "@id @default(autoincrement())",
+  "comment": undefined,
+  "id": "id",
+  "type": "Int",
+}
+`;
+
+exports[`getFieldLine: Timestamps11 - updated_at 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": undefined,
+  "id": "updated_at",
+  "type": "DateTime",
+}
+`;
+
 exports[`getFieldLine: TouchingA - id 1`] = `
 Object {
   "attributes": "@id @default(autoincrement())",
@@ -2682,6 +2763,15 @@ Object {
 }
 `;
 
+exports[`getFieldLine: WithMultipleTraits - id 1`] = `
+Object {
+  "attributes": "@id @default(autoincrement())",
+  "comment": undefined,
+  "id": "id",
+  "type": "Int",
+}
+`;
+
 exports[`getFieldLine: WithPrimaryKey - id 1`] = `
 Object {
   "attributes": "@id @default(autoincrement())",
@@ -2719,6 +2809,15 @@ Object {
 `;
 
 exports[`getFieldLine: WithTableMap - id 1`] = `
+Object {
+  "attributes": "@id @default(autoincrement())",
+  "comment": undefined,
+  "id": "id",
+  "type": "Int",
+}
+`;
+
+exports[`getFieldLine: WithTrait - id 1`] = `
 Object {
   "attributes": "@id @default(autoincrement())",
   "comment": undefined,

@@ -510,6 +510,24 @@ exports[`getMapFieldAnnotation: not mapped fields: Timestamps8 - id 1`] = `false
 
 exports[`getMapFieldAnnotation: not mapped fields: Timestamps8 - updated_timestamp 1`] = `false`;
 
+exports[`getMapFieldAnnotation: not mapped fields: Timestamps9 - created_at 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Timestamps9 - id 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Timestamps9 - updated_at 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Timestamps10 - created_at 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Timestamps10 - id 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Timestamps10 - updated_timestamp 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Timestamps11 - created_timestamp 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Timestamps11 - id 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: Timestamps11 - updated_at 1`] = `false`;
+
 exports[`getMapFieldAnnotation: not mapped fields: TouchingA - id 1`] = `false`;
 
 exports[`getMapFieldAnnotation: not mapped fields: TouchingA - related 1`] = `false`;
@@ -608,6 +626,8 @@ exports[`getMapFieldAnnotation: not mapped fields: WithGlobalStringPrimaryKey - 
 
 exports[`getMapFieldAnnotation: not mapped fields: WithGlobalStringPrimaryKeyDifferentName - primary_id 1`] = `false`;
 
+exports[`getMapFieldAnnotation: not mapped fields: WithMultipleTraits - id 1`] = `false`;
+
 exports[`getMapFieldAnnotation: not mapped fields: WithPrimaryKey - id 1`] = `false`;
 
 exports[`getMapFieldAnnotation: not mapped fields: WithPrimaryKeyDifferentName - primary_id 1`] = `false`;
@@ -617,6 +637,8 @@ exports[`getMapFieldAnnotation: not mapped fields: WithStringPrimaryKey - id 1`]
 exports[`getMapFieldAnnotation: not mapped fields: WithStringPrimaryKeyDifferentName - primary_id 1`] = `false`;
 
 exports[`getMapFieldAnnotation: not mapped fields: WithTableMap - id 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: WithTrait - id 1`] = `false`;
 
 exports[`getMapFieldAnnotation: not mapped fields: snake_cased_models - firstname 1`] = `false`;
 

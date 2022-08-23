@@ -489,6 +489,24 @@ exports[`getModelLines: Timestamps8 1`] = `
   updated_timestamp DateTime @updatedAt /// updated_at"
 `;
 
+exports[`getModelLines: Timestamps9 1`] = `
+"id         Int      @id @default(autoincrement())
+  created_at DateTime
+  updated_at DateTime"
+`;
+
+exports[`getModelLines: Timestamps10 1`] = `
+"id                Int      @id @default(autoincrement())
+  created_at        DateTime
+  updated_timestamp DateTime /// updated_at"
+`;
+
+exports[`getModelLines: Timestamps11 1`] = `
+"id                Int      @id @default(autoincrement())
+  created_timestamp DateTime /// created_at
+  updated_at        DateTime"
+`;
+
 exports[`getModelLines: TouchingA 1`] = `
 "id      Int        @id @default(autoincrement())
   related TouchingB? /// touch"
@@ -595,6 +613,8 @@ exports[`getModelLines: WithGlobalStringPrimaryKeyDifferentName 1`] = `
   "
 `;
 
+exports[`getModelLines: WithMultipleTraits 1`] = `"id Int @id @default(autoincrement())"`;
+
 exports[`getModelLines: WithPrimaryKey 1`] = `"id Int @id @default(autoincrement())"`;
 
 exports[`getModelLines: WithPrimaryKeyDifferentName 1`] = `"primary_id Int @id @default(autoincrement())"`;
@@ -608,6 +628,8 @@ exports[`getModelLines: WithTableMap 1`] = `
 
   "
 `;
+
+exports[`getModelLines: WithTrait 1`] = `"id Int @id @default(autoincrement())"`;
 
 exports[`getModelLines: snake_cased_models 1`] = `
 "id        Int    @id @default(autoincrement())

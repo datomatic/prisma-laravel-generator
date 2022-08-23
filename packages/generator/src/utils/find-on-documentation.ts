@@ -1,20 +1,11 @@
-import _ from 'lodash';
-
-const sanitize = (s: string) => _.chain(s).toLower().trim().value();
+import {isEmpty} from 'lodash';
+import getFromDocumentation from './get-from-documentation';
 
 const findOnDocumentation = (
-  find: string,
+  find: string | RegExp,
   documentation?: string | undefined,
 ): boolean => {
-  if (!documentation) {
-    return false;
-  }
-  const sanitizedFind = sanitize(find);
-  return _.chain(documentation)
-    .replace(/\n/g, ',')
-    .split(',')
-    .some(d => sanitize(d) === sanitizedFind)
-    .value();
+  return !isEmpty(getFromDocumentation(find, documentation));
 };
 
 export default findOnDocumentation;
