@@ -390,6 +390,8 @@ exports[`getDatabaseFieldAnnotation: OneToOneB5 - related 1`] = `false`;
 
 exports[`getDatabaseFieldAnnotation: OneToOneB5 - relatedId 1`] = `false`;
 
+exports[`getDatabaseFieldAnnotation: PivotWithCustomExtend - id 1`] = `false`;
+
 exports[`getDatabaseFieldAnnotation: Post - author 1`] = `false`;
 
 exports[`getDatabaseFieldAnnotation: Post - authorId 1`] = `false`;
@@ -592,6 +594,8 @@ exports[`getDatabaseFieldAnnotation: WithBackedEnum - id 1`] = `false`;
 
 exports[`getDatabaseFieldAnnotation: WithBackedEnum - nullable 1`] = `false`;
 
+exports[`getDatabaseFieldAnnotation: WithCustomExtend - id 1`] = `false`;
+
 exports[`getDatabaseFieldAnnotation: WithDbType - email 1`] = `"VarChar(100)"`;
 
 exports[`getDatabaseFieldAnnotation: WithDbType - id 1`] = `false`;
@@ -613,6 +617,10 @@ exports[`getDatabaseFieldAnnotation: WithGlobalPrimaryKeyDifferentName - primary
 exports[`getDatabaseFieldAnnotation: WithGlobalStringPrimaryKey - id 1`] = `false`;
 
 exports[`getDatabaseFieldAnnotation: WithGlobalStringPrimaryKeyDifferentName - primary_id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: WithInterface - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: WithMultipleInterfaces - id 1`] = `false`;
 
 exports[`getDatabaseFieldAnnotation: WithMultipleTraits - id 1`] = `false`;
 

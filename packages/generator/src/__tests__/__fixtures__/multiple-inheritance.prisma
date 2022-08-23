@@ -1,0 +1,11 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+/// extends:App\Models\CustomModelA
+/// extends:App\Models\CustomModelB
+/// extends:App\Models\CustomModelC
+model MultipleInheritance {
+  id Int @id @default(autoincrement())
+}

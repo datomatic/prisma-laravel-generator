@@ -100,6 +100,29 @@ model WithMultipleTraits {
   id Int @id @default(autoincrement())
 }
 
+/// implements:App\Contracts\CustomInterface
+model WithInterface {
+  id Int @id @default(autoincrement())
+}
+
+/// implements:App\Contracts\AInterface
+/// implements:App\Contracts\BInterface
+/// implements:App\Contracts\CInterface
+model WithMultipleInterfaces {
+  id Int @id @default(autoincrement())
+}
+
+/// extends:App\Models\CustomModel
+model WithCustomExtend {
+  id Int @id @default(autoincrement())
+}
+
+/// extends:App\Models\CustomPivot
+/// pivot
+model PivotWithCustomExtend {
+  id Int @id @default(autoincrement())
+}
+
 model WithEnum {
   id          Int    @id @default(autoincrement())
   enum        Enum

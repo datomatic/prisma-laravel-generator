@@ -124,6 +124,8 @@ exports[`getUnsupportedFields: OneToOneB4 1`] = `Array []`;
 
 exports[`getUnsupportedFields: OneToOneB5 1`] = `Array []`;
 
+exports[`getUnsupportedFields: PivotWithCustomExtend 1`] = `Array []`;
+
 exports[`getUnsupportedFields: Post 1`] = `Array []`;
 
 exports[`getUnsupportedFields: Profile 1`] = `Array []`;
@@ -249,6 +251,8 @@ exports[`getUnsupportedFields: WithArray 1`] = `Array []`;
 
 exports[`getUnsupportedFields: WithBackedEnum 1`] = `Array []`;
 
+exports[`getUnsupportedFields: WithCustomExtend 1`] = `Array []`;
+
 exports[`getUnsupportedFields: WithDbType 1`] = `Array []`;
 
 exports[`getUnsupportedFields: WithEnum 1`] = `Array []`;
@@ -260,6 +264,10 @@ exports[`getUnsupportedFields: WithGlobalPrimaryKeyDifferentName 1`] = `Array []
 exports[`getUnsupportedFields: WithGlobalStringPrimaryKey 1`] = `Array []`;
 
 exports[`getUnsupportedFields: WithGlobalStringPrimaryKeyDifferentName 1`] = `Array []`;
+
+exports[`getUnsupportedFields: WithInterface 1`] = `Array []`;
+
+exports[`getUnsupportedFields: WithMultipleInterfaces 1`] = `Array []`;
 
 exports[`getUnsupportedFields: WithMultipleTraits 1`] = `Array []`;
 

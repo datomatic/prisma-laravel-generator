@@ -1,6 +1,5 @@
 import {DMMF} from '@prisma/generator-helper';
 import _ from 'lodash';
-import getPrismaFqcn from '../helpers/get-prisma-fqcn';
 import isFieldEnum from '../helpers/is-field-enum';
 import isFieldReadOnly from '../helpers/is-field-read-only';
 import getEnumFqcn from '../helpers/get-enum-fqcn';
@@ -49,8 +48,13 @@ const getPhpDocPropertiesFromField = (
       phpType = 'double';
       break;
     case 'DateTime':
-      imports.add('Illuminate\\Support\\Carbon');
-      phpType = 'Carbon';
+      if (isFieldReadOnly(field)) {
+        imports.add('Carbon\\CarbonImmutable');
+        phpType = 'CarbonImmutable';
+      } else {
+        imports.add('Illuminate\\Support\\Carbon');
+        phpType = 'Carbon';
+      }
       break;
     case 'Json':
       phpType = 'array';

@@ -1116,6 +1116,24 @@ class OneToOneB5 extends AnotherPrefixOneToOneB5
 "
 `;
 
+exports[`models: generation with different prefix: PivotWithCustomExtend 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixPivotWithCustomExtend;
+
+/**
+ * PivotWithCustomExtend Model.
+ *
+ * {@inheritdoc}
+ */
+class PivotWithCustomExtend extends AnotherPrefixPivotWithCustomExtend
+{
+}
+"
+`;
+
 exports[`models: generation with different prefix: Post 1`] = `
 "<?php
 
@@ -1584,6 +1602,24 @@ class WithBackedEnum extends AnotherPrefixWithBackedEnum
 "
 `;
 
+exports[`models: generation with different prefix: WithCustomExtend 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixWithCustomExtend;
+
+/**
+ * WithCustomExtend Model.
+ *
+ * {@inheritdoc}
+ */
+class WithCustomExtend extends AnotherPrefixWithCustomExtend
+{
+}
+"
+`;
+
 exports[`models: generation with different prefix: WithDbType 1`] = `
 "<?php
 
@@ -1687,6 +1723,42 @@ use App\\\\Models\\\\Prisma\\\\AnotherPrefixWithGlobalStringPrimaryKeyDifferentN
  * {@inheritdoc}
  */
 class WithGlobalStringPrimaryKeyDifferentName extends AnotherPrefixWithGlobalStringPrimaryKeyDifferentName
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: WithInterface 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixWithInterface;
+
+/**
+ * WithInterface Model.
+ *
+ * {@inheritdoc}
+ */
+class WithInterface extends AnotherPrefixWithInterface
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: WithMultipleInterfaces 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixWithMultipleInterface;
+
+/**
+ * WithMultipleInterface Model.
+ *
+ * {@inheritdoc}
+ */
+class WithMultipleInterface extends AnotherPrefixWithMultipleInterface
 {
 }
 "
@@ -2952,6 +3024,24 @@ class OneToOneB5 extends PrismaOneToOneB5
 "
 `;
 
+exports[`models: generation: PivotWithCustomExtend 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaPivotWithCustomExtend;
+
+/**
+ * PivotWithCustomExtend Model.
+ *
+ * {@inheritdoc}
+ */
+class PivotWithCustomExtend extends PrismaPivotWithCustomExtend
+{
+}
+"
+`;
+
 exports[`models: generation: Post 1`] = `
 "<?php
 
@@ -3420,6 +3510,24 @@ class WithBackedEnum extends PrismaWithBackedEnum
 "
 `;
 
+exports[`models: generation: WithCustomExtend 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaWithCustomExtend;
+
+/**
+ * WithCustomExtend Model.
+ *
+ * {@inheritdoc}
+ */
+class WithCustomExtend extends PrismaWithCustomExtend
+{
+}
+"
+`;
+
 exports[`models: generation: WithDbType 1`] = `
 "<?php
 
@@ -3523,6 +3631,42 @@ use App\\\\Models\\\\Prisma\\\\PrismaWithGlobalStringPrimaryKeyDifferentName;
  * {@inheritdoc}
  */
 class WithGlobalStringPrimaryKeyDifferentName extends PrismaWithGlobalStringPrimaryKeyDifferentName
+{
+}
+"
+`;
+
+exports[`models: generation: WithInterface 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaWithInterface;
+
+/**
+ * WithInterface Model.
+ *
+ * {@inheritdoc}
+ */
+class WithInterface extends PrismaWithInterface
+{
+}
+"
+`;
+
+exports[`models: generation: WithMultipleInterfaces 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaWithMultipleInterface;
+
+/**
+ * WithMultipleInterface Model.
+ *
+ * {@inheritdoc}
+ */
+class WithMultipleInterface extends PrismaWithMultipleInterface
 {
 }
 "

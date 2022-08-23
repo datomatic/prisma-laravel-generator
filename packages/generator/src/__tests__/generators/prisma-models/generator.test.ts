@@ -9,6 +9,7 @@ import {
   getMappedFieldsSample,
   getMassAssignableConflictSample,
   getMongoSample,
+  getMultipleInheritanceSample,
   getMySqlSample,
   getSample,
 } from '../../__fixtures__/get-sample';
@@ -23,6 +24,7 @@ import HiddenVisibleConflictError from '../../../errors/hidden-visible-conflict-
 import FillableGuardedConflictError from '../../../errors/fillable-guarded-conflict-error';
 import CompositeKeyOnRelationError from '../../../errors/composite-key-on-relation-error';
 import isModelPivot from '../../../helpers/is-model-pivot';
+import MultipleInheritanceError from '../../../errors/multiple-inheritance-error';
 
 jest.setTimeout(60_000);
 
@@ -262,5 +264,23 @@ test('prisma-models: composite key on relation', async () => {
         raw,
       ),
     ).toThrow(CompositeKeyOnRelationError);
+  }
+});
+
+test('prisma-models: multiple inheritance', async () => {
+  const {dmmf, raw} = await getMultipleInheritanceSample();
+
+  for (const modelInfo of _.filter(
+    dmmf.datamodel.models,
+    m => !isModelPivot(m),
+  )) {
+    expect(() =>
+      generatePrismaModel(
+        modelInfo,
+        dmmf.datamodel.models,
+        dmmf.datamodel.enums,
+        raw,
+      ),
+    ).toThrow(MultipleInheritanceError);
   }
 });

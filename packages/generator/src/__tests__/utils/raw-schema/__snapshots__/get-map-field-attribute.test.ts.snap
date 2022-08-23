@@ -402,6 +402,8 @@ exports[`getMapFieldAnnotation: not mapped fields: OneToOneB5 - related 1`] = `f
 
 exports[`getMapFieldAnnotation: not mapped fields: OneToOneB5 - relatedId 1`] = `false`;
 
+exports[`getMapFieldAnnotation: not mapped fields: PivotWithCustomExtend - id 1`] = `false`;
+
 exports[`getMapFieldAnnotation: not mapped fields: Post - author 1`] = `false`;
 
 exports[`getMapFieldAnnotation: not mapped fields: Post - authorId 1`] = `false`;
@@ -604,6 +606,8 @@ exports[`getMapFieldAnnotation: not mapped fields: WithBackedEnum - id 1`] = `fa
 
 exports[`getMapFieldAnnotation: not mapped fields: WithBackedEnum - nullable 1`] = `false`;
 
+exports[`getMapFieldAnnotation: not mapped fields: WithCustomExtend - id 1`] = `false`;
+
 exports[`getMapFieldAnnotation: not mapped fields: WithDbType - email 1`] = `false`;
 
 exports[`getMapFieldAnnotation: not mapped fields: WithDbType - id 1`] = `false`;
@@ -625,6 +629,10 @@ exports[`getMapFieldAnnotation: not mapped fields: WithGlobalPrimaryKeyDifferent
 exports[`getMapFieldAnnotation: not mapped fields: WithGlobalStringPrimaryKey - id 1`] = `false`;
 
 exports[`getMapFieldAnnotation: not mapped fields: WithGlobalStringPrimaryKeyDifferentName - primary_id 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: WithInterface - id 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: WithMultipleInterfaces - id 1`] = `false`;
 
 exports[`getMapFieldAnnotation: not mapped fields: WithMultipleTraits - id 1`] = `false`;
 

@@ -393,6 +393,8 @@ exports[`getModelLines: OneToOneB5 1`] = `
   related   OneToOneA5? @relation(fields: [relatedId], references: [main_id])"
 `;
 
+exports[`getModelLines: PivotWithCustomExtend 1`] = `"id Int @id @default(autoincrement())"`;
+
 exports[`getModelLines: Post 1`] = `
 "id         Int        @id @default(autoincrement())
   title      String
@@ -576,6 +578,8 @@ exports[`getModelLines: WithBackedEnum 1`] = `
   defaultEnum BackedEnum   @default(A)"
 `;
 
+exports[`getModelLines: WithCustomExtend 1`] = `"id Int @id @default(autoincrement())"`;
+
 exports[`getModelLines: WithDbType 1`] = `
 "id    Int    @id @default(autoincrement())
   email String @db.VarChar(100)"
@@ -612,6 +616,10 @@ exports[`getModelLines: WithGlobalStringPrimaryKeyDifferentName 1`] = `
 
   "
 `;
+
+exports[`getModelLines: WithInterface 1`] = `"id Int @id @default(autoincrement())"`;
+
+exports[`getModelLines: WithMultipleInterfaces 1`] = `"id Int @id @default(autoincrement())"`;
 
 exports[`getModelLines: WithMultipleTraits 1`] = `"id Int @id @default(autoincrement())"`;
 

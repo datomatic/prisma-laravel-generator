@@ -9,6 +9,7 @@ import MappedFieldError from '../../errors/mapped-field-error';
 import MassAssignableConflictError from '../../errors/mass-assignable-conflict-error';
 import ModelNotFoundError from '../../errors/model-not-found-error';
 import MultipleDataSourcesError from '../../errors/multiple-data-sources-error';
+import MultipleInheritanceError from '../../errors/multiple-inheritance-error';
 
 const errors = [
   CompositeKeyError,
@@ -22,6 +23,7 @@ const errors = [
   MassAssignableConflictError,
   ModelNotFoundError,
   MultipleDataSourcesError,
+  MultipleInheritanceError,
 ];
 
 test.each(errors)('Error: %s', ErrorClass => {

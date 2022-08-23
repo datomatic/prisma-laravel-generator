@@ -1564,6 +1564,14 @@ Object {
 }
 `;
 
+exports[`getPhpDocPropertiesFromField: PivotWithCustomExtend - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
 exports[`getPhpDocPropertiesFromField: Post - author 1`] = `
 Object {
   "imports": Set {},
@@ -2438,6 +2446,14 @@ Object {
 }
 `;
 
+exports[`getPhpDocPropertiesFromField: WithCustomExtend - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
 exports[`getPhpDocPropertiesFromField: WithDbType - email 1`] = `
 Object {
   "imports": Set {},
@@ -2530,6 +2546,22 @@ exports[`getPhpDocPropertiesFromField: WithGlobalStringPrimaryKeyDifferentName -
 Object {
   "imports": Set {},
   "phpType": "string",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: WithInterface - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: WithMultipleInterfaces - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
   "readOnly": true,
 }
 `;

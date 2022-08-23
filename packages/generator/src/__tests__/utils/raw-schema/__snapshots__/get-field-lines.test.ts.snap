@@ -1504,6 +1504,17 @@ Array [
 ]
 `;
 
+exports[`getFieldLines: PivotWithCustomExtend 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+]
+`;
+
 exports[`getFieldLines: Post 1`] = `
 Array [
   Object {
@@ -2264,6 +2275,17 @@ Array [
 ]
 `;
 
+exports[`getFieldLines: WithCustomExtend 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+]
+`;
+
 exports[`getFieldLines: WithDbType 1`] = `
 Array [
   Object {
@@ -2356,6 +2378,28 @@ Array [
     "comment": undefined,
     "id": "primary_id",
     "type": "String",
+  },
+]
+`;
+
+exports[`getFieldLines: WithInterface 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+]
+`;
+
+exports[`getFieldLines: WithMultipleInterfaces 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
   },
 ]
 `;

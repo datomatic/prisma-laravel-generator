@@ -4189,6 +4189,55 @@ abstract class AnotherPrefixOneToOneB5 extends Model
 "
 `;
 
+exports[`prisma-models: generation with different prefix: PivotWithCustomExtend 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use App\\\\Models\\\\CustomPivot;
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+
+/**
+ * AnotherPrefixPivotWithCustomExtend Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property int $id
+ */
+abstract class AnotherPrefixPivotWithCustomExtend extends CustomPivot
+{
+    public $incrementing = true;
+
+    public $timestamps = false;
+    protected $table = 'PivotWithCustomExtend';
+
+    protected array $rules = [
+        'id' => ['required', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+    ];
+}
+"
+`;
+
 exports[`prisma-models: generation with different prefix: Post 1`] = `
 "<?php
 
@@ -5845,6 +5894,53 @@ abstract class AnotherPrefixWithBackedEnum extends Model
 "
 `;
 
+exports[`prisma-models: generation with different prefix: WithCustomExtend 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use App\\\\Models\\\\CustomModel;
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+
+/**
+ * AnotherPrefixWithCustomExtend Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ */
+abstract class AnotherPrefixWithCustomExtend extends CustomModel
+{
+    public $timestamps = false;
+    protected $table = 'WithCustomExtend';
+
+    protected array $rules = [
+        'id' => ['required', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+    ];
+}
+"
+`;
+
 exports[`prisma-models: generation with different prefix: WithDbType 1`] = `
 "<?php
 
@@ -6166,6 +6262,104 @@ abstract class AnotherPrefixWithGlobalStringPrimaryKeyDifferentName extends Mode
 
     protected $casts = [
         'primary_id' => 'string',
+    ];
+}
+"
+`;
+
+exports[`prisma-models: generation with different prefix: WithInterface 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use App\\\\Contracts\\\\CustomInterface;
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * AnotherPrefixWithInterface Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ */
+abstract class AnotherPrefixWithInterface extends Model implements CustomInterface
+{
+    public $timestamps = false;
+    protected $table = 'WithInterface';
+
+    protected array $rules = [
+        'id' => ['required', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+    ];
+}
+"
+`;
+
+exports[`prisma-models: generation with different prefix: WithMultipleInterfaces 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use App\\\\Contracts\\\\AInterface;
+use App\\\\Contracts\\\\BInterface;
+use App\\\\Contracts\\\\CInterface;
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * AnotherPrefixWithMultipleInterface Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ */
+abstract class AnotherPrefixWithMultipleInterface extends Model implements AInterface, BInterface, CInterface
+{
+    public $timestamps = false;
+    protected $table = 'WithMultipleInterfaces';
+
+    protected array $rules = [
+        'id' => ['required', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
     ];
 }
 "
@@ -10611,6 +10805,55 @@ abstract class PrismaOneToOneB5 extends Model
 "
 `;
 
+exports[`prisma-models: generation without explicit table names on relations: PivotWithCustomExtend 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use App\\\\Models\\\\CustomPivot;
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+
+/**
+ * PrismaPivotWithCustomExtend Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property int $id
+ */
+abstract class PrismaPivotWithCustomExtend extends CustomPivot
+{
+    public $incrementing = true;
+
+    public $timestamps = false;
+    protected $table = 'PivotWithCustomExtend';
+
+    protected array $rules = [
+        'id' => ['required', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+    ];
+}
+"
+`;
+
 exports[`prisma-models: generation without explicit table names on relations: Post 1`] = `
 "<?php
 
@@ -12267,6 +12510,53 @@ abstract class PrismaWithBackedEnum extends Model
 "
 `;
 
+exports[`prisma-models: generation without explicit table names on relations: WithCustomExtend 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use App\\\\Models\\\\CustomModel;
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+
+/**
+ * PrismaWithCustomExtend Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ */
+abstract class PrismaWithCustomExtend extends CustomModel
+{
+    public $timestamps = false;
+    protected $table = 'WithCustomExtend';
+
+    protected array $rules = [
+        'id' => ['required', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+    ];
+}
+"
+`;
+
 exports[`prisma-models: generation without explicit table names on relations: WithDbType 1`] = `
 "<?php
 
@@ -12588,6 +12878,104 @@ abstract class PrismaWithGlobalStringPrimaryKeyDifferentName extends Model
 
     protected $casts = [
         'primary_id' => 'string',
+    ];
+}
+"
+`;
+
+exports[`prisma-models: generation without explicit table names on relations: WithInterface 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use App\\\\Contracts\\\\CustomInterface;
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * PrismaWithInterface Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ */
+abstract class PrismaWithInterface extends Model implements CustomInterface
+{
+    public $timestamps = false;
+    protected $table = 'WithInterface';
+
+    protected array $rules = [
+        'id' => ['required', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+    ];
+}
+"
+`;
+
+exports[`prisma-models: generation without explicit table names on relations: WithMultipleInterfaces 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use App\\\\Contracts\\\\AInterface;
+use App\\\\Contracts\\\\BInterface;
+use App\\\\Contracts\\\\CInterface;
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * PrismaWithMultipleInterface Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ */
+abstract class PrismaWithMultipleInterface extends Model implements AInterface, BInterface, CInterface
+{
+    public $timestamps = false;
+    protected $table = 'WithMultipleInterfaces';
+
+    protected array $rules = [
+        'id' => ['required', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
     ];
 }
 "
@@ -17057,6 +17445,55 @@ abstract class PrismaOneToOneB5 extends Model
 "
 `;
 
+exports[`prisma-models: generation: PivotWithCustomExtend 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use App\\\\Models\\\\CustomPivot;
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+
+/**
+ * PrismaPivotWithCustomExtend Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property int $id
+ */
+abstract class PrismaPivotWithCustomExtend extends CustomPivot
+{
+    public $incrementing = true;
+
+    public $timestamps = false;
+    protected $table = 'PivotWithCustomExtend';
+
+    protected array $rules = [
+        'id' => ['required', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+    ];
+}
+"
+`;
+
 exports[`prisma-models: generation: Post 1`] = `
 "<?php
 
@@ -18713,6 +19150,53 @@ abstract class PrismaWithBackedEnum extends Model
 "
 `;
 
+exports[`prisma-models: generation: WithCustomExtend 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use App\\\\Models\\\\CustomModel;
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+
+/**
+ * PrismaWithCustomExtend Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ */
+abstract class PrismaWithCustomExtend extends CustomModel
+{
+    public $timestamps = false;
+    protected $table = 'WithCustomExtend';
+
+    protected array $rules = [
+        'id' => ['required', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+    ];
+}
+"
+`;
+
 exports[`prisma-models: generation: WithDbType 1`] = `
 "<?php
 
@@ -19034,6 +19518,104 @@ abstract class PrismaWithGlobalStringPrimaryKeyDifferentName extends Model
 
     protected $casts = [
         'primary_id' => 'string',
+    ];
+}
+"
+`;
+
+exports[`prisma-models: generation: WithInterface 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use App\\\\Contracts\\\\CustomInterface;
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * PrismaWithInterface Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ */
+abstract class PrismaWithInterface extends Model implements CustomInterface
+{
+    public $timestamps = false;
+    protected $table = 'WithInterface';
+
+    protected array $rules = [
+        'id' => ['required', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+    ];
+}
+"
+`;
+
+exports[`prisma-models: generation: WithMultipleInterfaces 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use App\\\\Contracts\\\\AInterface;
+use App\\\\Contracts\\\\BInterface;
+use App\\\\Contracts\\\\CInterface;
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * PrismaWithMultipleInterface Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ */
+abstract class PrismaWithMultipleInterface extends Model implements AInterface, BInterface, CInterface
+{
+    public $timestamps = false;
+    protected $table = 'WithMultipleInterfaces';
+
+    protected array $rules = [
+        'id' => ['required', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
     ];
 }
 "

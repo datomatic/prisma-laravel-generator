@@ -1755,6 +1755,15 @@ Object {
 }
 `;
 
+exports[`getFieldLine: PivotWithCustomExtend - id 1`] = `
+Object {
+  "attributes": "@id @default(autoincrement())",
+  "comment": undefined,
+  "id": "id",
+  "type": "Int",
+}
+`;
+
 exports[`getFieldLine: Post - author 1`] = `
 Object {
   "attributes": "@relation(fields: [authorId], references: [id])",
@@ -2664,6 +2673,15 @@ Object {
 }
 `;
 
+exports[`getFieldLine: WithCustomExtend - id 1`] = `
+Object {
+  "attributes": "@id @default(autoincrement())",
+  "comment": undefined,
+  "id": "id",
+  "type": "Int",
+}
+`;
+
 exports[`getFieldLine: WithDbType - email 1`] = `
 Object {
   "attributes": "@db.VarChar(100)",
@@ -2760,6 +2778,24 @@ Object {
   "comment": undefined,
   "id": "primary_id",
   "type": "String",
+}
+`;
+
+exports[`getFieldLine: WithInterface - id 1`] = `
+Object {
+  "attributes": "@id @default(autoincrement())",
+  "comment": undefined,
+  "id": "id",
+  "type": "Int",
+}
+`;
+
+exports[`getFieldLine: WithMultipleInterfaces - id 1`] = `
+Object {
+  "attributes": "@id @default(autoincrement())",
+  "comment": undefined,
+  "id": "id",
+  "type": "Int",
 }
 `;
 

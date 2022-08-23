@@ -31,6 +31,8 @@ import getPhpArgumentsWithDefaults from '../../helpers/get-php-arguments-with-de
 import getUnsupportedFields from '../../utils/raw-schema/get-unsupported-fields';
 import getModelClassName from '../../helpers/get-model-classname';
 import getModelTraits from '../../helpers/get-model-traits';
+import getModelExtend from '../../helpers/get-model-extend';
+import getModelImplements from '../../helpers/get-model-implements';
 
 const generatePrismaModel = (
   model: DMMF.Model,
@@ -99,6 +101,15 @@ const generatePrismaModel = (
   }
 
   const isPivot = isModelPivot(model);
+
+  const extendsClass =
+    getModelExtend(model) ?? (isPivot ? basePivotModel : baseModel);
+
+  const implementClasses = new Set<string>();
+  for (const implementClass of getModelImplements(model)) {
+    imports.add(implementClass);
+    implementClasses.add(getClassFromFQCN(implementClass));
+  }
 
   const {
     imports: relationImports,
@@ -266,7 +277,7 @@ const generatePrismaModel = (
   return prettify(`<?php
     namespace ${namespace};
 
-    use ${isPivot ? basePivotModel : baseModel};
+    use ${extendsClass};
 
     ${_.chain([...imports])
       .map(importFcqn => `use ${importFcqn};`)
@@ -337,7 +348,14 @@ const generatePrismaModel = (
     abstract class ${getModelClassName(
       model,
       prefix,
-    )} extends ${getClassFromFQCN(isPivot ? basePivotModel : baseModel)} {
+    )} extends ${getClassFromFQCN(extendsClass)} ${
+    implementClasses.size > 0
+      ? `implements ${_.chain([...implementClasses])
+          .map(implementClass => `${implementClass}`)
+          .join(', ')
+          .value()}`
+      : ''
+  } {
 
       ${_.chain([...traits])
         .map(trait => `use ${trait};`)

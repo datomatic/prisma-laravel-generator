@@ -1582,6 +1582,14 @@ Object {
 }
 `;
 
+exports[`getDefaultFromField: PivotWithCustomExtend - id 1`] = `
+Object {
+  "defaultValue": undefined,
+  "imports": Set {},
+  "isMethodCall": false,
+}
+`;
+
 exports[`getDefaultFromField: Post - author 1`] = `
 Object {
   "defaultValue": undefined,
@@ -2394,6 +2402,14 @@ Object {
 }
 `;
 
+exports[`getDefaultFromField: WithCustomExtend - id 1`] = `
+Object {
+  "defaultValue": undefined,
+  "imports": Set {},
+  "isMethodCall": false,
+}
+`;
+
 exports[`getDefaultFromField: WithDbType - email 1`] = `
 Object {
   "defaultValue": undefined,
@@ -2477,6 +2493,22 @@ Object {
 `;
 
 exports[`getDefaultFromField: WithGlobalStringPrimaryKeyDifferentName - primary_id 1`] = `
+Object {
+  "defaultValue": undefined,
+  "imports": Set {},
+  "isMethodCall": false,
+}
+`;
+
+exports[`getDefaultFromField: WithInterface - id 1`] = `
+Object {
+  "defaultValue": undefined,
+  "imports": Set {},
+  "isMethodCall": false,
+}
+`;
+
+exports[`getDefaultFromField: WithMultipleInterfaces - id 1`] = `
 Object {
   "defaultValue": undefined,
   "imports": Set {},

@@ -3713,6 +3713,16 @@ Object {
 }
 `;
 
+exports[`getRelationsFromModel - implicit table names: PivotWithCustomExtend 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
 exports[`getRelationsFromModel - implicit table names: Post 1`] = `
 Object {
   "belongsTo": Array [
@@ -4047,6 +4057,16 @@ Object {
 }
 `;
 
+exports[`getRelationsFromModel - implicit table names: WithCustomExtend 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
 exports[`getRelationsFromModel - implicit table names: WithDbType 1`] = `
 Object {
   "belongsTo": Array [],
@@ -4098,6 +4118,26 @@ Object {
 `;
 
 exports[`getRelationsFromModel - implicit table names: WithGlobalStringPrimaryKeyDifferentName 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: WithInterface 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: WithMultipleInterfaces 1`] = `
 Object {
   "belongsTo": Array [],
   "belongsToMany": Array [],
@@ -5238,6 +5278,16 @@ Object {
 }
 `;
 
+exports[`getRelationsFromModel: PivotWithCustomExtend 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
 exports[`getRelationsFromModel: Post 1`] = `
 Object {
   "belongsTo": Array [
@@ -5580,6 +5630,16 @@ Object {
 }
 `;
 
+exports[`getRelationsFromModel: WithCustomExtend 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
 exports[`getRelationsFromModel: WithDbType 1`] = `
 Object {
   "belongsTo": Array [],
@@ -5631,6 +5691,26 @@ Object {
 `;
 
 exports[`getRelationsFromModel: WithGlobalStringPrimaryKeyDifferentName 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel: WithInterface 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel: WithMultipleInterfaces 1`] = `
 Object {
   "belongsTo": Array [],
   "belongsToMany": Array [],

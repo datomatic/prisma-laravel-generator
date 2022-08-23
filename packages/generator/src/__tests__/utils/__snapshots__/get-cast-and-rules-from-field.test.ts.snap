@@ -4477,6 +4477,30 @@ Object {
 }
 `;
 
+exports[`getCastAndRulesFromField: PivotWithCustomExtend - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
 exports[`getCastAndRulesFromField: Post - author 1`] = `
 Object {
   "cast": Object {
@@ -6652,6 +6676,30 @@ Object {
 }
 `;
 
+exports[`getCastAndRulesFromField: WithCustomExtend - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
 exports[`getCastAndRulesFromField: WithDbType - email 1`] = `
 Object {
   "cast": Object {
@@ -6892,6 +6940,54 @@ Object {
     Object {
       "isMethodCall": false,
       "value": "string",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: WithInterface - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: WithMultipleInterfaces - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
     },
   ],
 }

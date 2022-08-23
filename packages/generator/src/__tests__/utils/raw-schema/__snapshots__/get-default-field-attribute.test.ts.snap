@@ -390,6 +390,8 @@ exports[`getDefaultFieldAnnotation: OneToOneB5 - related 1`] = `false`;
 
 exports[`getDefaultFieldAnnotation: OneToOneB5 - relatedId 1`] = `false`;
 
+exports[`getDefaultFieldAnnotation: PivotWithCustomExtend - id 1`] = `"autoincrement()"`;
+
 exports[`getDefaultFieldAnnotation: Post - author 1`] = `false`;
 
 exports[`getDefaultFieldAnnotation: Post - authorId 1`] = `false`;
@@ -592,6 +594,8 @@ exports[`getDefaultFieldAnnotation: WithBackedEnum - id 1`] = `"autoincrement()"
 
 exports[`getDefaultFieldAnnotation: WithBackedEnum - nullable 1`] = `false`;
 
+exports[`getDefaultFieldAnnotation: WithCustomExtend - id 1`] = `"autoincrement()"`;
+
 exports[`getDefaultFieldAnnotation: WithDbType - email 1`] = `false`;
 
 exports[`getDefaultFieldAnnotation: WithDbType - id 1`] = `"autoincrement()"`;
@@ -613,6 +617,10 @@ exports[`getDefaultFieldAnnotation: WithGlobalPrimaryKeyDifferentName - primary_
 exports[`getDefaultFieldAnnotation: WithGlobalStringPrimaryKey - id 1`] = `false`;
 
 exports[`getDefaultFieldAnnotation: WithGlobalStringPrimaryKeyDifferentName - primary_id 1`] = `false`;
+
+exports[`getDefaultFieldAnnotation: WithInterface - id 1`] = `"autoincrement()"`;
+
+exports[`getDefaultFieldAnnotation: WithMultipleInterfaces - id 1`] = `"autoincrement()"`;
 
 exports[`getDefaultFieldAnnotation: WithMultipleTraits - id 1`] = `"autoincrement()"`;
 
