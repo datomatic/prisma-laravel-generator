@@ -1,6 +1,5 @@
 import {ConnectorType, DMMF} from '@prisma/generator-helper';
 import _ from 'lodash';
-import getPrismaFqcn from '../helpers/get-prisma-fqcn';
 import getDatabaseFieldAttribute from './raw-schema/get-database-field-attribute';
 import isFieldUuid from '../helpers/is-field-uuid';
 import isFieldEnum from '../helpers/is-field-enum';
@@ -12,6 +11,9 @@ const getCastAndRulesFromField = (
   field: DMMF.Field,
   model: DMMF.Model,
   enums: DMMF.DatamodelEnum[],
+  guardedFields: DMMF.Field[],
+  fillableFields: DMMF.Field[],
+  massAssignable: boolean,
   rawSchema: string,
   provider?: ConnectorType,
 ): {
@@ -28,6 +30,13 @@ const getCastAndRulesFromField = (
   };
   const rules: {value: string; isMethodCall: boolean}[] = [];
   const imports = new Set<string>();
+
+  const isReadOnly = isFieldReadOnly(
+    field,
+    guardedFields,
+    fillableFields,
+    massAssignable,
+  );
 
   if (isUnique) {
     imports.add('Illuminate\\Validation\\Rule');
@@ -134,7 +143,7 @@ const getCastAndRulesFromField = (
         });
         break;
       case 'DateTime':
-        cast.value = isFieldReadOnly(field) ? 'immutable_datetime' : 'datetime';
+        cast.value = isReadOnly ? 'immutable_datetime' : 'datetime';
         rules.push({
           value: 'date',
           isMethodCall: false,

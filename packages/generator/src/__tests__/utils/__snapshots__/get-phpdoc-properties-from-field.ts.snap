@@ -488,7 +488,7 @@ exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot - id 1`] = `
 Object {
   "imports": Set {},
   "phpType": "int",
-  "readOnly": false,
+  "readOnly": true,
 }
 `;
 
@@ -528,7 +528,7 @@ exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot2 - id 1`] = `
 Object {
   "imports": Set {},
   "phpType": "int",
-  "readOnly": false,
+  "readOnly": true,
 }
 `;
 
@@ -568,7 +568,7 @@ exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot3 - id 1`] = `
 Object {
   "imports": Set {},
   "phpType": "int",
-  "readOnly": false,
+  "readOnly": true,
 }
 `;
 
@@ -608,7 +608,7 @@ exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot4 - id 1`] = `
 Object {
   "imports": Set {},
   "phpType": "int",
-  "readOnly": false,
+  "readOnly": true,
 }
 `;
 
@@ -672,7 +672,7 @@ exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot5 - id 1`] = `
 Object {
   "imports": Set {},
   "phpType": "int",
-  "readOnly": false,
+  "readOnly": true,
 }
 `;
 
@@ -712,7 +712,7 @@ exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot6 - key 1`] = `
 Object {
   "imports": Set {},
   "phpType": "int",
-  "readOnly": false,
+  "readOnly": true,
 }
 `;
 
@@ -752,7 +752,7 @@ exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot7 - key 1`] = `
 Object {
   "imports": Set {},
   "phpType": "int",
-  "readOnly": false,
+  "readOnly": true,
 }
 `;
 
@@ -1576,7 +1576,7 @@ exports[`getPhpDocPropertiesFromField: PivotWithCustomExtend - id 1`] = `
 Object {
   "imports": Set {},
   "phpType": "int",
-  "readOnly": false,
+  "readOnly": true,
 }
 `;
 

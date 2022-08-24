@@ -1526,7 +1526,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\Pivot;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  *
- * @property int $id
+ * @property-read int $id
  * @property int $A_id
  * @property int $B_id
  */
@@ -1581,7 +1581,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\Pivot;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  *
- * @property int $id
+ * @property-read int $id
  * @property int $explicit_many_to_many_a2_id
  * @property int $explicit_many_to_many_b2_id
  */
@@ -1636,7 +1636,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\Pivot;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  *
- * @property int $id
+ * @property-read int $id
  * @property int $A_id
  * @property int $B_id
  */
@@ -1691,7 +1691,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\Pivot;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  *
- * @property int $id
+ * @property-read int $id
  * @property int $A_id
  * @property int $B_id
  */
@@ -1747,7 +1747,7 @@ use Illuminate\\\\Validation\\\\Rule;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  *
- * @property int $id
+ * @property-read int $id
  * @property int $A_id
  * @property int $B_id
  * @property int $A2_id
@@ -1821,7 +1821,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\Pivot;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  *
- * @property int $key
+ * @property-read int $key
  * @property int $A_id
  * @property int $B_id
  */
@@ -1878,7 +1878,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\Pivot;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  *
- * @property int $key
+ * @property-read int $key
  * @property int $A_id
  * @property int $B_id
  */
@@ -4265,7 +4265,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  *
- * @property int $id
+ * @property-read int $id
  */
 abstract class AnotherPrefixPivotWithCustomExtend extends CustomPivot
 {
@@ -8244,7 +8244,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\Pivot;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  *
- * @property int $id
+ * @property-read int $id
  * @property int $A_id
  * @property int $B_id
  */
@@ -8299,7 +8299,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\Pivot;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  *
- * @property int $id
+ * @property-read int $id
  * @property int $explicit_many_to_many_a2_id
  * @property int $explicit_many_to_many_b2_id
  */
@@ -8354,7 +8354,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\Pivot;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  *
- * @property int $id
+ * @property-read int $id
  * @property int $A_id
  * @property int $B_id
  */
@@ -8409,7 +8409,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\Pivot;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  *
- * @property int $id
+ * @property-read int $id
  * @property int $A_id
  * @property int $B_id
  */
@@ -8465,7 +8465,7 @@ use Illuminate\\\\Validation\\\\Rule;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  *
- * @property int $id
+ * @property-read int $id
  * @property int $A_id
  * @property int $B_id
  * @property int $A2_id
@@ -8539,7 +8539,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\Pivot;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  *
- * @property int $key
+ * @property-read int $key
  * @property int $A_id
  * @property int $B_id
  */
@@ -8596,7 +8596,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\Pivot;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  *
- * @property int $key
+ * @property-read int $key
  * @property int $A_id
  * @property int $B_id
  */
@@ -10983,7 +10983,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  *
- * @property int $id
+ * @property-read int $id
  */
 abstract class PrismaPivotWithCustomExtend extends CustomPivot
 {
@@ -14986,7 +14986,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\Pivot;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  *
- * @property int $id
+ * @property-read int $id
  * @property int $A_id
  * @property int $B_id
  */
@@ -15041,7 +15041,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\Pivot;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  *
- * @property int $id
+ * @property-read int $id
  * @property int $explicit_many_to_many_a2_id
  * @property int $explicit_many_to_many_b2_id
  */
@@ -15096,7 +15096,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\Pivot;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  *
- * @property int $id
+ * @property-read int $id
  * @property int $A_id
  * @property int $B_id
  */
@@ -15151,7 +15151,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\Pivot;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  *
- * @property int $id
+ * @property-read int $id
  * @property int $A_id
  * @property int $B_id
  */
@@ -15207,7 +15207,7 @@ use Illuminate\\\\Validation\\\\Rule;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  *
- * @property int $id
+ * @property-read int $id
  * @property int $A_id
  * @property int $B_id
  * @property int $A2_id
@@ -15281,7 +15281,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\Pivot;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  *
- * @property int $key
+ * @property-read int $key
  * @property int $A_id
  * @property int $B_id
  */
@@ -15338,7 +15338,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\Pivot;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  *
- * @property int $key
+ * @property-read int $key
  * @property int $A_id
  * @property int $B_id
  */
@@ -17725,7 +17725,7 @@ use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
  * @method static      static findOrNew($id, $columns = ['*'])
  * @method static      null|static find($id, $columns = ['*'])
  *
- * @property int $id
+ * @property-read int $id
  */
 abstract class PrismaPivotWithCustomExtend extends CustomPivot
 {

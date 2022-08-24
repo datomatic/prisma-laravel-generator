@@ -89,17 +89,6 @@ const generatePrismaModel = (
     throw new MappedFieldError();
   }
 
-  let primaryKeyCast;
-  if (primaryKeyField) {
-    primaryKeyCast = getCastAndRulesFromField(
-      primaryKeyField,
-      model,
-      enums,
-      rawSchema,
-      provider,
-    ).cast;
-  }
-
   const isPivot = isModelPivot(model);
 
   const extendsClass =
@@ -186,6 +175,20 @@ const generatePrismaModel = (
     d => d.isMethodCall,
   );
 
+  let primaryKeyCast;
+  if (primaryKeyField) {
+    primaryKeyCast = getCastAndRulesFromField(
+      primaryKeyField,
+      model,
+      enums,
+      guardedFields,
+      fillableFields,
+      massAssignable,
+      rawSchema,
+      provider,
+    ).cast;
+  }
+
   const {casts, rules} = _.chain(fields)
     .reduce(
       (object, field) => {
@@ -195,7 +198,16 @@ const generatePrismaModel = (
           cast: fieldCast,
           rules: fieldRules,
           imports: fieldImports,
-        } = getCastAndRulesFromField(field, model, enums, rawSchema, provider);
+        } = getCastAndRulesFromField(
+          field,
+          model,
+          enums,
+          guardedFields,
+          fillableFields,
+          massAssignable,
+          rawSchema,
+          provider,
+        );
 
         result.casts[field.name] = _.isNil(fieldCast.value)
           ? undefined
@@ -251,7 +263,6 @@ const generatePrismaModel = (
           guardedFields,
           fillableFields,
           massAssignable,
-          isPivot,
         );
 
         result[field.name] = {value: phpType, readOnly};

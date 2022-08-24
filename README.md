@@ -747,6 +747,8 @@ Set the field as read-only (via PHPDocs). If the field is a DateTime, instead of
 
 By default, fields called `created_at`, `updated_at` and `deleted_at` are considered as read-only.
 
+The primary key of your model is automatically considered read-only if the model is not mass-assignable and the field is not fillable/is guarded.
+
 ```prisma
 model Example {
   id       Int     @id @default(autoincrement())
