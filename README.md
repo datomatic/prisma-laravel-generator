@@ -26,23 +26,25 @@ And via this generator, we can also generate automatically your Eloquent models,
 <td>
 
 ```prisma
-/// trait:App\Traits\TokenOwner
+/// trait:Illuminate\Auth\Authenticatable
+/// trait:Illuminate\Database\Eloquent\Factories\HasFactory
+/// trait:Illuminate\Notifications\Notifiable
+/// implements:Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract
 model User {
-  id                BigInt    @id @default(autoincrement())
-  name              String
+  id    Int        @id @default(autoincrement()) /// guarded
+  email String     @unique /// read-only
+  password String  /// hidden, guarded
+  first_name  String?
+  last_name  String?
+  role Role @default(GUEST)
 
-  email             String    @unique(map: "users_email_unique") /// read-only
-  email_verified_at DateTime? /// hidden
+  created_at DateTime @default(now())
+  updated_at DateTime @default(now())
+  deleted_at DateTime?
 
-  password          String    /// hidden
-  remember_token    String?   /// hidden, guarded
+  posts       Post[]
 
-  category_id       BigInt
-  category          UserCategory @relation(fields: [category_id], references: [id])
-
-  created_at        DateTime? /// read-only
-  updated_at        DateTime? /// read-only
-  deleted_at        DateTime? /// read-only
+  @@map("users")
 }
 ```
 
@@ -54,107 +56,156 @@ model User {
 
 namespace App\Models\Prisma;
 
-use App\Models\UserCategory;
-use App\Traits\TokenOwner;
+use App\Enums\Prisma\Role;
+use App\Models\Post;
 use Carbon\CarbonImmutable;
 use Closure;
+use Illuminate\Auth\Authenticatable;
+use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Illuminate\Support\Carbon;
+use Illuminate\Notifications\Notifiable;
 use Illuminate\Validation\Rule;
+use Illuminate\Validation\Rules\Enum;
 
 /**
-* PrismaUser Model
-*
-* @mixin Builder
-*
-* @method static Builder|static query()
-* @method static static make(array $attributes = [])
-* @method static static create(array $attributes = [])
-* @method static static forceCreate(array $attributes)
-* @method static firstOrNew(array $attributes = [], array $values = [])
-* @method static firstOrFail($columns = ['*'])
-* @method static firstOrCreate(array $attributes, array $values = [])
-* @method static firstOr($columns = ['*'], Closure $callback = null)
-* @method static firstWhere($column, $operator = null, $value = null, $boolean = 'and')
-* @method static updateOrCreate(array $attributes, array $values = [])
-* @method null|static first($columns = ['*'])
-* @method static static findOrFail($id, $columns = ['*'])
-* @method static static findOrNew($id, $columns = ['*'])
-* @method static null|static find($id, $columns = ['*'])
-*
-* @property int $id
-* @property string $name
-* @property-read string $email
-* @property ?Carbon $email_verified_at
-* @property string $password
-* @property ?string $remember_token
-* @property int $category_id
-* @property-read ?CarbonImmutable $created_at
-* @property-read ?CarbonImmutable $updated_at
-* @property-read ?CarbonImmutable $deleted_at
-*
-* @property-read UserCategory $category
-*/
-abstract class PrismaUser extends Model
+ * PrismaUser Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ * @property-read string $email
+ * @property string  $password
+ * @property ?string $first_name
+ * @property ?string $last_name
+ * @property Role    $role
+ * @property-read CarbonImmutable $created_at
+ * @property-read CarbonImmutable $updated_at
+ * @property-read ?CarbonImmutable $deleted_at
+ * @property-read Collection<Post> $posts
+ */
+abstract class PrismaUser extends Model implements AuthenticatableContract
 {
-  use TokenOwner;
-  use SoftDeletes;
+    use Authenticatable;
+    use HasFactory;
+    use Notifiable;
+    use SoftDeletes;
 
-  protected $table = 'User';
+    protected $table = 'users';
 
-  protected $guarded = ['remember_token'];
+    protected $attributes;
 
-  protected $hidden = ['email_verified_at', 'password', 'remember_token'];
+    protected $guarded = ['id', 'password'];
 
-  protected array $rules;
+    protected $hidden = ['password'];
 
-  protected $casts = [
-  'id' => 'integer',
-  'name' => 'string',
-  'email' => 'string',
-  'email_verified_at' => 'immutable_datetime',
-  'password' => 'string',
-  'remember_token' => 'string',
-  'category_id' => 'integer',
-  'created_at' => 'immutable_datetime',
-  'updated_at' => 'immutable_datetime',
-  'deleted_at' => 'immutable_datetime',
-  ];
+    protected array $rules;
 
-  public function __construct(array $attributes = [])
-  {
-  $this->rules = [
-  'id' => ['required', 'numeric', 'integer'],
-  'name' => ['required', 'string'],
-  'email' => [
-  Rule::unique('User', 'email')->ignore(
-  $this->getKey(),
-  $this->getKeyName()
-  ),
-  'required',
-  'string',
-  ],
-  'email_verified_at' => ['nullable', 'date'],
-  'password' => ['required', 'string'],
-  'remember_token' => ['nullable', 'string'],
-  'category_id' => ['required', 'numeric', 'integer'],
-  'created_at' => ['nullable', 'date'],
-  'updated_at' => ['nullable', 'date'],
-  'deleted_at' => ['nullable', 'date'],
-  ...$this->rules ?? [],
-  ];
+    protected $casts;
 
-       parent::__construct($attributes);
-  }
+    public function __construct(array $attributes = [])
+    {
+        $this->attributes = [
+            'role' => Role::GUEST,
+            ...$this->attributes ?? [],
+        ];
+        $this->rules = [
+            'id' => ['required', 'numeric', 'integer'],
+            'email' => [
+                Rule::unique('users', 'email')->ignore(
+                    $this->getKey(),
+                    $this->getKeyName()
+                ),
+                'required',
+                'string',
+            ],
+            'password' => ['required', 'string'],
+            'first_name' => ['nullable', 'string'],
+            'last_name' => ['nullable', 'string'],
+            'role' => ['required', new Enum(Role::class)],
+            'created_at' => ['required', 'date'],
+            'updated_at' => ['required', 'date'],
+            'deleted_at' => ['nullable', 'date'],
+            ...$this->rules ?? [],
+        ];
+        $this->casts = [
+            'id' => 'integer',
+            'email' => 'string',
+            'password' => 'string',
+            'first_name' => 'string',
+            'last_name' => 'string',
+            'role' => Role::class,
+            'created_at' => 'immutable_datetime',
+            'updated_at' => 'immutable_datetime',
+            'deleted_at' => 'immutable_datetime',
+            ...$this->casts ?? [],
+        ];
+        parent::__construct($attributes);
+    }
 
-  public function category()
-  {
-  return $this->belongsTo(UserCategory::class, 'category_id', 'id');
-  }
+    public function posts()
+    {
+        return $this->hasMany(Post::class, 'user_id', 'id');
+    }
 }
 ```
+
+</td>
+</tr>
+<tr>
+<td>
+
+```prisma
+enum Role {
+  GUEST @map("1")
+  MODERATOR @map("2")
+  ADMIN @map("3")
+}
+```
+
+</td>
+<td>
+
+```php
+<?php
+
+namespace App\Enums\Prisma;
+
+enum Role: string
+{
+    case GUEST = '1';
+
+    case MODERATOR = '2';
+
+    case ADMIN = '3';
+}
+
+```
+
+</td>
+</tr>
+<tr>
+<td colspan='2'>
+
+See a more detailed example in [./packages/usage](packages/usage) of this repository.
 
 </td>
 </tr>
@@ -563,30 +614,37 @@ model Example {
 ```
 
 #### Traits: `trait:FQCN/ClassName`
-Adds a specific trait to the model.
+Adds a specific trait to the model. You can also set an alias to the class.
 
 ```prisma
 /// trait:App/Traits/ModelTrait
+/// trait:App/Traits/AnotherModelTrait as Alias
 model Example {
   id Int @id @default(autoincrement())
 }
 ```
 
 #### Extends: `extends:FQCN/ClassName`
-Set which class should the model extends. Only one `extends:*` can be applied per model (no multiple inheritance is allowed in PHP).  
+Set which class should the model extends. Only one `extends:*` can be applied per model (no multiple inheritance is allowed in PHP).  You can also set an alias to the class.
 
 ```prisma
 /// extends:App/Models/CustomModel
 model Example {
   id Int @id @default(autoincrement())
 }
+
+/// extends:App/Models/CustomModel as Alias
+model ExampleWithAlias {
+  id Int @id @default(autoincrement())
+}
 ```
 
 #### Implements: `implements:FQCN/ClassName`
-Set which interfaces should the model implement.  
+Set which interfaces should the model implement. You can also set an alias to the class.  
 
 ```prisma
 /// implements:App/Contracts/CustomInterface
+/// implements:App/Contracts/AnotherCustomInterface as Alias
 model Example {
   id Int @id @default(autoincrement())
 }
@@ -794,10 +852,11 @@ enum PostType {
 ```
 
 #### Traits: `trait:FQCN/ClassName`
-Adds a specific trait to the enum.
+Adds a specific trait to the enum. You can also set an alias to the class.
 
 ```prisma
 /// trait:App/Traits/RoleEnumTrait
+/// trait:App/Traits/AnotherEnumTrait as Alias
 enum Enum {
   A
   B
@@ -906,6 +965,8 @@ model B {
 Some functionalities might not be supported: some are not supported by Prisma, others are not supported by Laravel, some are mis-understanding, and the remaining ones are going to be implemented in future versions! 
 
  * **Polymorphic relations: Not implemented yet! In the meanwhile, you can define the columns in your schema, and define the polymorphic relationship manually in the model**
+ * Databases different from MySQL: Currently MySQL is the only fully-tested driver for this generator, but it should work also with other databases types! We'll try soon to focus also on other databases, to check what works and what not.  
+
 
 
  * Allow data alterations inside Laravel migrations: This is not possible. Laravel's migrations should be only used to alter the structure of the tables, NOT to alter the data. When generating the .sql files compatible with Prisma starting from a Laravel migration, just the structural changes are converted. If you need to alter the data (e.g., you were using Eloquent to do some changes in a migration), you have to find some alternative ways (create an artisan command to migrate the data, or [customize Prisma migration](https://www.prisma.io/docs/guides/database/developing-with-prisma-migrate/customizing-migrations) to add some manipulations using raw SQL, ...).
@@ -913,6 +974,7 @@ Some functionalities might not be supported: some are not supported by Prisma, o
  * created_at without updated_at (and vice-versa): [Not supported by Laravel](https://laravel.com/docs/9.x/eloquent#timestamps)
  * [cuid()](https://www.prisma.io/docs/reference/api-reference/prisma-schema-reference#cuid): Not supported natively by Laravel (you can use some external packages, but this is up to you)
  * Mapped fields (e.g., `firstName String @map("first_name")`): Laravel does not provide a way to map attributes to columns with different names
+ * Mapped enums (backed enums) only allows string as db-value (i.e., you can't set `@map(1)` but only `@map("1")`): This is limited by Prisma, since [@map allows as an argument only strings](https://www.prisma.io/docs/reference/api-reference/prisma-schema-reference#map)
  * `fillable` and `guarded` fields at the same time: [Does not make sense in Laravel](https://laravel.com/docs/9.x/eloquent#mass-assignment)
  * `hidden` and `visible` fields at the same time: [Does not make sense in Laravel](https://laravel.com/docs/9.x/eloquent-serialization#hiding-attributes-from-json)
  * `mass-assignable` with `guarded` or `fillable` fields: `mass-assignable` annotation adds a `protected $guarded = [];` attribute to the model, so it does not make sense to define other fields as guarded or fillable.
