@@ -1906,6 +1906,100 @@ abstract class AnotherPrefixExplicitManyToManyPivot7 extends Pivot
 "
 `;
 
+exports[`prisma-models: generation with different prefix: ExtendAlias 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use App\\\\Models\\\\CustomModel as AliasModel;
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+
+/**
+ * AnotherPrefixExtendAlias Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ */
+abstract class AnotherPrefixExtendAlias extends AliasModel
+{
+    public $timestamps = false;
+    protected $table = 'ExtendAlias';
+
+    protected array $rules = [
+        'id' => ['required', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+    ];
+}
+"
+`;
+
+exports[`prisma-models: generation with different prefix: ExtendAlias2 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use App\\\\Models\\\\CustomModel as AliasModel;
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+
+/**
+ * AnotherPrefixExtendAlias2 Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ */
+abstract class AnotherPrefixExtendAlias2 extends AliasModel
+{
+    public $timestamps = false;
+    protected $table = 'ExtendAlias2';
+
+    protected array $rules = [
+        'id' => ['required', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+    ];
+}
+"
+`;
+
 exports[`prisma-models: generation with different prefix: FieldComments 1`] = `
 "<?php
 
@@ -2407,6 +2501,102 @@ abstract class AnotherPrefixImplicitManyToManyB extends Model
             'A'
         );
     }
+}
+"
+`;
+
+exports[`prisma-models: generation with different prefix: InterfaceWithAlias 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use App\\\\Contracts\\\\CustomInterface as AliasInterface;
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * AnotherPrefixInterfaceWithAlias Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ */
+abstract class AnotherPrefixInterfaceWithAlias extends Model implements AliasInterface
+{
+    public $timestamps = false;
+    protected $table = 'InterfaceWithAlias';
+
+    protected array $rules = [
+        'id' => ['required', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+    ];
+}
+"
+`;
+
+exports[`prisma-models: generation with different prefix: InterfaceWithAlias2 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use App\\\\Contracts\\\\CustomInterface as AliasInterface;
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * AnotherPrefixInterfaceWithAlias2 Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ */
+abstract class AnotherPrefixInterfaceWithAlias2 extends Model implements AliasInterface
+{
+    public $timestamps = false;
+    protected $table = 'InterfaceWithAlias2';
+
+    protected array $rules = [
+        'id' => ['required', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+    ];
 }
 "
 `;
@@ -5501,6 +5691,108 @@ abstract class AnotherPrefixTouchingB extends Model
     {
         return $this->belongsTo(TouchingA::class, 'relatedId', 'id');
     }
+}
+"
+`;
+
+exports[`prisma-models: generation with different prefix: TraitWithAlias 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use App\\\\Traits\\\\CustomTrait as AliasTrait;
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * AnotherPrefixTraitWithAlias Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ */
+abstract class AnotherPrefixTraitWithAlias extends Model
+{
+    use AliasTrait;
+
+    public $timestamps = false;
+
+    protected $table = 'TraitWithAlias';
+
+    protected array $rules = [
+        'id' => ['required', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+    ];
+}
+"
+`;
+
+exports[`prisma-models: generation with different prefix: TraitWithAlias2 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use App\\\\Traits\\\\CustomTrait as AliasTrait;
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * AnotherPrefixTraitWithAlias2 Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ */
+abstract class AnotherPrefixTraitWithAlias2 extends Model
+{
+    use AliasTrait;
+
+    public $timestamps = false;
+
+    protected $table = 'TraitWithAlias2';
+
+    protected array $rules = [
+        'id' => ['required', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+    ];
 }
 "
 `;
@@ -8624,6 +8916,100 @@ abstract class PrismaExplicitManyToManyPivot7 extends Pivot
 "
 `;
 
+exports[`prisma-models: generation without explicit table names on relations: ExtendAlias 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use App\\\\Models\\\\CustomModel as AliasModel;
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+
+/**
+ * PrismaExtendAlias Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ */
+abstract class PrismaExtendAlias extends AliasModel
+{
+    public $timestamps = false;
+    protected $table = 'ExtendAlias';
+
+    protected array $rules = [
+        'id' => ['required', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+    ];
+}
+"
+`;
+
+exports[`prisma-models: generation without explicit table names on relations: ExtendAlias2 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use App\\\\Models\\\\CustomModel as AliasModel;
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+
+/**
+ * PrismaExtendAlias2 Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ */
+abstract class PrismaExtendAlias2 extends AliasModel
+{
+    public $timestamps = false;
+    protected $table = 'ExtendAlias2';
+
+    protected array $rules = [
+        'id' => ['required', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+    ];
+}
+"
+`;
+
 exports[`prisma-models: generation without explicit table names on relations: FieldComments 1`] = `
 "<?php
 
@@ -9125,6 +9511,102 @@ abstract class PrismaImplicitManyToManyB extends Model
             'A'
         );
     }
+}
+"
+`;
+
+exports[`prisma-models: generation without explicit table names on relations: InterfaceWithAlias 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use App\\\\Contracts\\\\CustomInterface as AliasInterface;
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * PrismaInterfaceWithAlias Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ */
+abstract class PrismaInterfaceWithAlias extends Model implements AliasInterface
+{
+    public $timestamps = false;
+    protected $table = 'InterfaceWithAlias';
+
+    protected array $rules = [
+        'id' => ['required', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+    ];
+}
+"
+`;
+
+exports[`prisma-models: generation without explicit table names on relations: InterfaceWithAlias2 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use App\\\\Contracts\\\\CustomInterface as AliasInterface;
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * PrismaInterfaceWithAlias2 Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ */
+abstract class PrismaInterfaceWithAlias2 extends Model implements AliasInterface
+{
+    public $timestamps = false;
+    protected $table = 'InterfaceWithAlias2';
+
+    protected array $rules = [
+        'id' => ['required', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+    ];
 }
 "
 `;
@@ -12219,6 +12701,108 @@ abstract class PrismaTouchingB extends Model
     {
         return $this->belongsTo(TouchingA::class, 'relatedId');
     }
+}
+"
+`;
+
+exports[`prisma-models: generation without explicit table names on relations: TraitWithAlias 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use App\\\\Traits\\\\CustomTrait as AliasTrait;
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * PrismaTraitWithAlias Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ */
+abstract class PrismaTraitWithAlias extends Model
+{
+    use AliasTrait;
+
+    public $timestamps = false;
+
+    protected $table = 'TraitWithAlias';
+
+    protected array $rules = [
+        'id' => ['required', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+    ];
+}
+"
+`;
+
+exports[`prisma-models: generation without explicit table names on relations: TraitWithAlias2 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use App\\\\Traits\\\\CustomTrait as AliasTrait;
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * PrismaTraitWithAlias2 Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ */
+abstract class PrismaTraitWithAlias2 extends Model
+{
+    use AliasTrait;
+
+    public $timestamps = false;
+
+    protected $table = 'TraitWithAlias2';
+
+    protected array $rules = [
+        'id' => ['required', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+    ];
 }
 "
 `;
@@ -15366,6 +15950,100 @@ abstract class PrismaExplicitManyToManyPivot7 extends Pivot
 "
 `;
 
+exports[`prisma-models: generation: ExtendAlias 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use App\\\\Models\\\\CustomModel as AliasModel;
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+
+/**
+ * PrismaExtendAlias Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ */
+abstract class PrismaExtendAlias extends AliasModel
+{
+    public $timestamps = false;
+    protected $table = 'ExtendAlias';
+
+    protected array $rules = [
+        'id' => ['required', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+    ];
+}
+"
+`;
+
+exports[`prisma-models: generation: ExtendAlias2 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use App\\\\Models\\\\CustomModel as AliasModel;
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+
+/**
+ * PrismaExtendAlias2 Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ */
+abstract class PrismaExtendAlias2 extends AliasModel
+{
+    public $timestamps = false;
+    protected $table = 'ExtendAlias2';
+
+    protected array $rules = [
+        'id' => ['required', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+    ];
+}
+"
+`;
+
 exports[`prisma-models: generation: FieldComments 1`] = `
 "<?php
 
@@ -15867,6 +16545,102 @@ abstract class PrismaImplicitManyToManyB extends Model
             'A'
         );
     }
+}
+"
+`;
+
+exports[`prisma-models: generation: InterfaceWithAlias 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use App\\\\Contracts\\\\CustomInterface as AliasInterface;
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * PrismaInterfaceWithAlias Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ */
+abstract class PrismaInterfaceWithAlias extends Model implements AliasInterface
+{
+    public $timestamps = false;
+    protected $table = 'InterfaceWithAlias';
+
+    protected array $rules = [
+        'id' => ['required', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+    ];
+}
+"
+`;
+
+exports[`prisma-models: generation: InterfaceWithAlias2 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use App\\\\Contracts\\\\CustomInterface as AliasInterface;
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * PrismaInterfaceWithAlias2 Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ */
+abstract class PrismaInterfaceWithAlias2 extends Model implements AliasInterface
+{
+    public $timestamps = false;
+    protected $table = 'InterfaceWithAlias2';
+
+    protected array $rules = [
+        'id' => ['required', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+    ];
 }
 "
 `;
@@ -18961,6 +19735,108 @@ abstract class PrismaTouchingB extends Model
     {
         return $this->belongsTo(TouchingA::class, 'relatedId', 'id');
     }
+}
+"
+`;
+
+exports[`prisma-models: generation: TraitWithAlias 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use App\\\\Traits\\\\CustomTrait as AliasTrait;
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * PrismaTraitWithAlias Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ */
+abstract class PrismaTraitWithAlias extends Model
+{
+    use AliasTrait;
+
+    public $timestamps = false;
+
+    protected $table = 'TraitWithAlias';
+
+    protected array $rules = [
+        'id' => ['required', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+    ];
+}
+"
+`;
+
+exports[`prisma-models: generation: TraitWithAlias2 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use App\\\\Traits\\\\CustomTrait as AliasTrait;
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * PrismaTraitWithAlias2 Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ */
+abstract class PrismaTraitWithAlias2 extends Model
+{
+    use AliasTrait;
+
+    public $timestamps = false;
+
+    protected $table = 'TraitWithAlias2';
+
+    protected array $rules = [
+        'id' => ['required', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+    ];
 }
 "
 `;

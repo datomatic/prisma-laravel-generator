@@ -100,8 +100,28 @@ model WithMultipleTraits {
   id Int @id @default(autoincrement())
 }
 
+/// trait:App\Traits\CustomTrait as AliasTrait
+model TraitWithAlias {
+  id Int @id @default(autoincrement())
+}
+
+/// trait:App\Traits\CustomTrait AS AliasTrait
+model TraitWithAlias2 {
+  id Int @id @default(autoincrement())
+}
+
 /// implements:App\Contracts\CustomInterface
 model WithInterface {
+  id Int @id @default(autoincrement())
+}
+
+/// implements:App\Contracts\CustomInterface as AliasInterface
+model InterfaceWithAlias {
+  id Int @id @default(autoincrement())
+}
+
+/// implements:App\Contracts\CustomInterface aS AliasInterface
+model InterfaceWithAlias2 {
   id Int @id @default(autoincrement())
 }
 
@@ -114,6 +134,16 @@ model WithMultipleInterfaces {
 
 /// extends:App\Models\CustomModel
 model WithCustomExtend {
+  id Int @id @default(autoincrement())
+}
+
+/// extends:App\Models\CustomModel as AliasModel
+model ExtendAlias {
+  id Int @id @default(autoincrement())
+}
+
+/// extends:App\Models\CustomModel As AliasModel
+model ExtendAlias2 {
   id Int @id @default(autoincrement())
 }
 

@@ -200,6 +200,10 @@ exports[`getMapFieldAnnotation: not mapped fields: ExplicitManyToManyPivot7 - B_
 
 exports[`getMapFieldAnnotation: not mapped fields: ExplicitManyToManyPivot7 - key 1`] = `false`;
 
+exports[`getMapFieldAnnotation: not mapped fields: ExtendAlias - id 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: ExtendAlias2 - id 1`] = `false`;
+
 exports[`getMapFieldAnnotation: not mapped fields: FieldComments - age 1`] = `false`;
 
 exports[`getMapFieldAnnotation: not mapped fields: FieldComments - email 1`] = `false`;
@@ -257,6 +261,10 @@ exports[`getMapFieldAnnotation: not mapped fields: ImplicitManyToManyA - related
 exports[`getMapFieldAnnotation: not mapped fields: ImplicitManyToManyB - id 1`] = `false`;
 
 exports[`getMapFieldAnnotation: not mapped fields: ImplicitManyToManyB - related 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: InterfaceWithAlias - id 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: InterfaceWithAlias2 - id 1`] = `false`;
 
 exports[`getMapFieldAnnotation: not mapped fields: MappedId - firstname 1`] = `false`;
 
@@ -547,6 +555,10 @@ exports[`getMapFieldAnnotation: not mapped fields: TouchingB - id 1`] = `false`;
 exports[`getMapFieldAnnotation: not mapped fields: TouchingB - related 1`] = `false`;
 
 exports[`getMapFieldAnnotation: not mapped fields: TouchingB - relatedId 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: TraitWithAlias - id 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: TraitWithAlias2 - id 1`] = `false`;
 
 exports[`getMapFieldAnnotation: not mapped fields: Types - active 1`] = `false`;
 

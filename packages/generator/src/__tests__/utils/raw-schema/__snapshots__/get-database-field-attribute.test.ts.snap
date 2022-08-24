@@ -188,6 +188,10 @@ exports[`getDatabaseFieldAnnotation: ExplicitManyToManyPivot7 - B_id 1`] = `fals
 
 exports[`getDatabaseFieldAnnotation: ExplicitManyToManyPivot7 - key 1`] = `false`;
 
+exports[`getDatabaseFieldAnnotation: ExtendAlias - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ExtendAlias2 - id 1`] = `false`;
+
 exports[`getDatabaseFieldAnnotation: FieldComments - age 1`] = `false`;
 
 exports[`getDatabaseFieldAnnotation: FieldComments - email 1`] = `"VarChar(100)"`;
@@ -245,6 +249,10 @@ exports[`getDatabaseFieldAnnotation: ImplicitManyToManyA - related 1`] = `false`
 exports[`getDatabaseFieldAnnotation: ImplicitManyToManyB - id 1`] = `false`;
 
 exports[`getDatabaseFieldAnnotation: ImplicitManyToManyB - related 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: InterfaceWithAlias - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: InterfaceWithAlias2 - id 1`] = `false`;
 
 exports[`getDatabaseFieldAnnotation: MappedId - firstname 1`] = `false`;
 
@@ -535,6 +543,10 @@ exports[`getDatabaseFieldAnnotation: TouchingB - id 1`] = `false`;
 exports[`getDatabaseFieldAnnotation: TouchingB - related 1`] = `false`;
 
 exports[`getDatabaseFieldAnnotation: TouchingB - relatedId 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: TraitWithAlias - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: TraitWithAlias2 - id 1`] = `false`;
 
 exports[`getDatabaseFieldAnnotation: Types - active 1`] = `false`;
 

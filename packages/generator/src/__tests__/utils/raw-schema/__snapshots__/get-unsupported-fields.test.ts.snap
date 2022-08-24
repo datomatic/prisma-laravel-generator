@@ -52,6 +52,10 @@ exports[`getUnsupportedFields: ExplicitManyToManyPivot6 1`] = `Array []`;
 
 exports[`getUnsupportedFields: ExplicitManyToManyPivot7 1`] = `Array []`;
 
+exports[`getUnsupportedFields: ExtendAlias 1`] = `Array []`;
+
+exports[`getUnsupportedFields: ExtendAlias2 1`] = `Array []`;
+
 exports[`getUnsupportedFields: FieldComments 1`] = `Array []`;
 
 exports[`getUnsupportedFields: FieldMultipleComments 1`] = `Array []`;
@@ -67,6 +71,10 @@ exports[`getUnsupportedFields: Ignore 1`] = `Array []`;
 exports[`getUnsupportedFields: ImplicitManyToManyA 1`] = `Array []`;
 
 exports[`getUnsupportedFields: ImplicitManyToManyB 1`] = `Array []`;
+
+exports[`getUnsupportedFields: InterfaceWithAlias 1`] = `Array []`;
+
+exports[`getUnsupportedFields: InterfaceWithAlias2 1`] = `Array []`;
 
 exports[`getUnsupportedFields: MappedId 1`] = `Array []`;
 
@@ -167,6 +175,10 @@ exports[`getUnsupportedFields: Timestamps11 1`] = `Array []`;
 exports[`getUnsupportedFields: TouchingA 1`] = `Array []`;
 
 exports[`getUnsupportedFields: TouchingB 1`] = `Array []`;
+
+exports[`getUnsupportedFields: TraitWithAlias 1`] = `Array []`;
+
+exports[`getUnsupportedFields: TraitWithAlias2 1`] = `Array []`;
 
 exports[`getUnsupportedFields: Types 1`] = `Array []`;
 

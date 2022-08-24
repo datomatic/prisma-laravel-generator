@@ -468,6 +468,42 @@ class ExplicitManyToManyPivot7 extends AnotherPrefixExplicitManyToManyPivot7
 "
 `;
 
+exports[`models: generation with different prefix: ExtendAlias 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixExtendAlias;
+
+/**
+ * ExtendAlias Model.
+ *
+ * {@inheritdoc}
+ */
+class ExtendAlias extends AnotherPrefixExtendAlias
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: ExtendAlias2 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixExtendAlias2;
+
+/**
+ * ExtendAlias2 Model.
+ *
+ * {@inheritdoc}
+ */
+class ExtendAlias2 extends AnotherPrefixExtendAlias2
+{
+}
+"
+`;
+
 exports[`models: generation with different prefix: FieldComments 1`] = `
 "<?php
 
@@ -607,6 +643,42 @@ use App\\\\Models\\\\Prisma\\\\AnotherPrefixImplicitManyToManyB;
  * {@inheritdoc}
  */
 class ImplicitManyToManyB extends AnotherPrefixImplicitManyToManyB
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: InterfaceWithAlias 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixInterfaceWithAlias;
+
+/**
+ * InterfaceWithAlias Model.
+ *
+ * {@inheritdoc}
+ */
+class InterfaceWithAlias extends AnotherPrefixInterfaceWithAlias
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: InterfaceWithAlias2 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixInterfaceWithAlias2;
+
+/**
+ * InterfaceWithAlias2 Model.
+ *
+ * {@inheritdoc}
+ */
+class InterfaceWithAlias2 extends AnotherPrefixInterfaceWithAlias2
 {
 }
 "
@@ -1512,6 +1584,42 @@ class TouchingB extends AnotherPrefixTouchingB
 "
 `;
 
+exports[`models: generation with different prefix: TraitWithAlias 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixTraitWithAlias;
+
+/**
+ * TraitWithAlias Model.
+ *
+ * {@inheritdoc}
+ */
+class TraitWithAlias extends AnotherPrefixTraitWithAlias
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: TraitWithAlias2 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixTraitWithAlias2;
+
+/**
+ * TraitWithAlias2 Model.
+ *
+ * {@inheritdoc}
+ */
+class TraitWithAlias2 extends AnotherPrefixTraitWithAlias2
+{
+}
+"
+`;
+
 exports[`models: generation with different prefix: Types 1`] = `
 "<?php
 
@@ -2412,6 +2520,42 @@ class ExplicitManyToManyPivot7 extends PrismaExplicitManyToManyPivot7
 "
 `;
 
+exports[`models: generation: ExtendAlias 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaExtendAlias;
+
+/**
+ * ExtendAlias Model.
+ *
+ * {@inheritdoc}
+ */
+class ExtendAlias extends PrismaExtendAlias
+{
+}
+"
+`;
+
+exports[`models: generation: ExtendAlias2 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaExtendAlias2;
+
+/**
+ * ExtendAlias2 Model.
+ *
+ * {@inheritdoc}
+ */
+class ExtendAlias2 extends PrismaExtendAlias2
+{
+}
+"
+`;
+
 exports[`models: generation: FieldComments 1`] = `
 "<?php
 
@@ -2551,6 +2695,42 @@ use App\\\\Models\\\\Prisma\\\\PrismaImplicitManyToManyB;
  * {@inheritdoc}
  */
 class ImplicitManyToManyB extends PrismaImplicitManyToManyB
+{
+}
+"
+`;
+
+exports[`models: generation: InterfaceWithAlias 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaInterfaceWithAlias;
+
+/**
+ * InterfaceWithAlias Model.
+ *
+ * {@inheritdoc}
+ */
+class InterfaceWithAlias extends PrismaInterfaceWithAlias
+{
+}
+"
+`;
+
+exports[`models: generation: InterfaceWithAlias2 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaInterfaceWithAlias2;
+
+/**
+ * InterfaceWithAlias2 Model.
+ *
+ * {@inheritdoc}
+ */
+class InterfaceWithAlias2 extends PrismaInterfaceWithAlias2
 {
 }
 "
@@ -3451,6 +3631,42 @@ use App\\\\Models\\\\Prisma\\\\PrismaTouchingB;
  * {@inheritdoc}
  */
 class TouchingB extends PrismaTouchingB
+{
+}
+"
+`;
+
+exports[`models: generation: TraitWithAlias 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaTraitWithAlias;
+
+/**
+ * TraitWithAlias Model.
+ *
+ * {@inheritdoc}
+ */
+class TraitWithAlias extends PrismaTraitWithAlias
+{
+}
+"
+`;
+
+exports[`models: generation: TraitWithAlias2 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaTraitWithAlias2;
+
+/**
+ * TraitWithAlias2 Model.
+ *
+ * {@inheritdoc}
+ */
+class TraitWithAlias2 extends PrismaTraitWithAlias2
 {
 }
 "

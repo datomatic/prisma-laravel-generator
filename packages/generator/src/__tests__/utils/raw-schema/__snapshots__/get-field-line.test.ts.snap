@@ -846,6 +846,24 @@ Object {
 }
 `;
 
+exports[`getFieldLine: ExtendAlias - id 1`] = `
+Object {
+  "attributes": "@id @default(autoincrement())",
+  "comment": undefined,
+  "id": "id",
+  "type": "Int",
+}
+`;
+
+exports[`getFieldLine: ExtendAlias2 - id 1`] = `
+Object {
+  "attributes": "@id @default(autoincrement())",
+  "comment": undefined,
+  "id": "id",
+  "type": "Int",
+}
+`;
+
 exports[`getFieldLine: FieldComments - age 1`] = `
 Object {
   "attributes": undefined,
@@ -1104,6 +1122,24 @@ Object {
   "comment": undefined,
   "id": "related",
   "type": "ImplicitManyToManyA[]",
+}
+`;
+
+exports[`getFieldLine: InterfaceWithAlias - id 1`] = `
+Object {
+  "attributes": "@id @default(autoincrement())",
+  "comment": undefined,
+  "id": "id",
+  "type": "Int",
+}
+`;
+
+exports[`getFieldLine: InterfaceWithAlias2 - id 1`] = `
+Object {
+  "attributes": "@id @default(autoincrement())",
+  "comment": undefined,
+  "id": "id",
+  "type": "Int",
 }
 `;
 
@@ -2408,6 +2444,24 @@ Object {
   "attributes": "@unique",
   "comment": undefined,
   "id": "relatedId",
+  "type": "Int",
+}
+`;
+
+exports[`getFieldLine: TraitWithAlias - id 1`] = `
+Object {
+  "attributes": "@id @default(autoincrement())",
+  "comment": undefined,
+  "id": "id",
+  "type": "Int",
+}
+`;
+
+exports[`getFieldLine: TraitWithAlias2 - id 1`] = `
+Object {
+  "attributes": "@id @default(autoincrement())",
+  "comment": undefined,
+  "id": "id",
   "type": "Int",
 }
 `;

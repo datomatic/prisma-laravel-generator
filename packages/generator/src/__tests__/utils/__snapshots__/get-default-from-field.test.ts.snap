@@ -774,6 +774,22 @@ Object {
 }
 `;
 
+exports[`getDefaultFromField: ExtendAlias - id 1`] = `
+Object {
+  "defaultValue": undefined,
+  "imports": Set {},
+  "isMethodCall": false,
+}
+`;
+
+exports[`getDefaultFromField: ExtendAlias2 - id 1`] = `
+Object {
+  "defaultValue": undefined,
+  "imports": Set {},
+  "isMethodCall": false,
+}
+`;
+
 exports[`getDefaultFromField: FieldComments - age 1`] = `
 Object {
   "defaultValue": undefined,
@@ -999,6 +1015,22 @@ Object {
 `;
 
 exports[`getDefaultFromField: ImplicitManyToManyB - related 1`] = `
+Object {
+  "defaultValue": undefined,
+  "imports": Set {},
+  "isMethodCall": false,
+}
+`;
+
+exports[`getDefaultFromField: InterfaceWithAlias - id 1`] = `
+Object {
+  "defaultValue": undefined,
+  "imports": Set {},
+  "isMethodCall": false,
+}
+`;
+
+exports[`getDefaultFromField: InterfaceWithAlias2 - id 1`] = `
 Object {
   "defaultValue": undefined,
   "imports": Set {},
@@ -2159,6 +2191,22 @@ Object {
 `;
 
 exports[`getDefaultFromField: TouchingB - relatedId 1`] = `
+Object {
+  "defaultValue": undefined,
+  "imports": Set {},
+  "isMethodCall": false,
+}
+`;
+
+exports[`getDefaultFromField: TraitWithAlias - id 1`] = `
+Object {
+  "defaultValue": undefined,
+  "imports": Set {},
+  "isMethodCall": false,
+}
+`;
+
+exports[`getDefaultFromField: TraitWithAlias2 - id 1`] = `
 Object {
   "defaultValue": undefined,
   "imports": Set {},

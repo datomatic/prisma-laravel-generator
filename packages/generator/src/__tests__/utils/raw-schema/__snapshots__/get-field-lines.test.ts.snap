@@ -694,6 +694,28 @@ Array [
 ]
 `;
 
+exports[`getFieldLines: ExtendAlias 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+]
+`;
+
+exports[`getFieldLines: ExtendAlias2 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+]
+`;
+
 exports[`getFieldLines: FieldComments 1`] = `
 Array [
   Object {
@@ -916,6 +938,28 @@ Array [
     "comment": undefined,
     "id": "related",
     "type": "ImplicitManyToManyA[]",
+  },
+]
+`;
+
+exports[`getFieldLines: InterfaceWithAlias 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+]
+`;
+
+exports[`getFieldLines: InterfaceWithAlias2 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
   },
 ]
 `;
@@ -2048,6 +2092,28 @@ Array [
     "comment": "touch",
     "id": "related",
     "type": "TouchingA",
+  },
+]
+`;
+
+exports[`getFieldLines: TraitWithAlias 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+]
+`;
+
+exports[`getFieldLines: TraitWithAlias2 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
   },
 ]
 `;

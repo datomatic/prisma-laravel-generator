@@ -188,6 +188,10 @@ exports[`getDefaultFieldAnnotation: ExplicitManyToManyPivot7 - B_id 1`] = `false
 
 exports[`getDefaultFieldAnnotation: ExplicitManyToManyPivot7 - key 1`] = `"autoincrement()"`;
 
+exports[`getDefaultFieldAnnotation: ExtendAlias - id 1`] = `"autoincrement()"`;
+
+exports[`getDefaultFieldAnnotation: ExtendAlias2 - id 1`] = `"autoincrement()"`;
+
 exports[`getDefaultFieldAnnotation: FieldComments - age 1`] = `false`;
 
 exports[`getDefaultFieldAnnotation: FieldComments - email 1`] = `false`;
@@ -245,6 +249,10 @@ exports[`getDefaultFieldAnnotation: ImplicitManyToManyA - related 1`] = `false`;
 exports[`getDefaultFieldAnnotation: ImplicitManyToManyB - id 1`] = `"autoincrement()"`;
 
 exports[`getDefaultFieldAnnotation: ImplicitManyToManyB - related 1`] = `false`;
+
+exports[`getDefaultFieldAnnotation: InterfaceWithAlias - id 1`] = `"autoincrement()"`;
+
+exports[`getDefaultFieldAnnotation: InterfaceWithAlias2 - id 1`] = `"autoincrement()"`;
 
 exports[`getDefaultFieldAnnotation: MappedId - firstname 1`] = `false`;
 
@@ -535,6 +543,10 @@ exports[`getDefaultFieldAnnotation: TouchingB - id 1`] = `"autoincrement()"`;
 exports[`getDefaultFieldAnnotation: TouchingB - related 1`] = `false`;
 
 exports[`getDefaultFieldAnnotation: TouchingB - relatedId 1`] = `false`;
+
+exports[`getDefaultFieldAnnotation: TraitWithAlias - id 1`] = `"autoincrement()"`;
+
+exports[`getDefaultFieldAnnotation: TraitWithAlias2 - id 1`] = `"autoincrement()"`;
 
 exports[`getDefaultFieldAnnotation: Types - active 1`] = `false`;
 

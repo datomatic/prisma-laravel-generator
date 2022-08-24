@@ -68,6 +68,10 @@ exports[`getModelPath: samples: model_ExplicitManyToManyPivot6 1`] = `undefined`
 
 exports[`getModelPath: samples: model_ExplicitManyToManyPivot7 1`] = `undefined`;
 
+exports[`getModelPath: samples: model_ExtendAlias 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_ExtendAlias2 1`] = `undefined`;
+
 exports[`getModelPath: samples: model_FieldComments 1`] = `undefined`;
 
 exports[`getModelPath: samples: model_FieldMultipleComments 1`] = `undefined`;
@@ -83,6 +87,10 @@ exports[`getModelPath: samples: model_Ignore 1`] = `undefined`;
 exports[`getModelPath: samples: model_ImplicitManyToManyA 1`] = `undefined`;
 
 exports[`getModelPath: samples: model_ImplicitManyToManyB 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_InterfaceWithAlias 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_InterfaceWithAlias2 1`] = `undefined`;
 
 exports[`getModelPath: samples: model_MappedId 1`] = `undefined`;
 
@@ -183,6 +191,10 @@ exports[`getModelPath: samples: model_Timestamps11 1`] = `undefined`;
 exports[`getModelPath: samples: model_TouchingA 1`] = `undefined`;
 
 exports[`getModelPath: samples: model_TouchingB 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_TraitWithAlias 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_TraitWithAlias2 1`] = `undefined`;
 
 exports[`getModelPath: samples: model_Types 1`] = `undefined`;
 

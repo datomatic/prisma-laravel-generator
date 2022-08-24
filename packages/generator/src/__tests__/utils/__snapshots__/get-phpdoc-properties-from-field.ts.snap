@@ -756,6 +756,22 @@ Object {
 }
 `;
 
+exports[`getPhpDocPropertiesFromField: ExtendAlias - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExtendAlias2 - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
 exports[`getPhpDocPropertiesFromField: FieldComments - age 1`] = `
 Object {
   "imports": Set {},
@@ -985,6 +1001,22 @@ Object {
   "imports": Set {},
   "phpType": undefined,
   "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: InterfaceWithAlias - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: InterfaceWithAlias2 - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
 }
 `;
 
@@ -2203,6 +2235,22 @@ Object {
   "imports": Set {},
   "phpType": "int",
   "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: TraitWithAlias - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: TraitWithAlias2 - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
 }
 `;
 

@@ -3176,6 +3176,26 @@ Object {
 }
 `;
 
+exports[`getRelationsFromModel - implicit table names: ExtendAlias 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: ExtendAlias2 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
 exports[`getRelationsFromModel - implicit table names: FieldComments 1`] = `
 Object {
   "belongsTo": Array [],
@@ -3273,6 +3293,26 @@ Object {
   "imports": Set {
     "App\\\\Models\\\\ImplicitManyToManyA",
   },
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: InterfaceWithAlias 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: InterfaceWithAlias2 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
 }
 `;
 
@@ -3989,6 +4029,26 @@ Object {
   "imports": Set {
     "App\\\\Models\\\\TouchingA",
   },
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: TraitWithAlias 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: TraitWithAlias2 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
 }
 `;
 
@@ -4747,6 +4807,26 @@ Object {
 }
 `;
 
+exports[`getRelationsFromModel: ExtendAlias 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel: ExtendAlias2 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
 exports[`getRelationsFromModel: FieldComments 1`] = `
 Object {
   "belongsTo": Array [],
@@ -4844,6 +4924,26 @@ Object {
   "imports": Set {
     "App\\\\Models\\\\ImplicitManyToManyA",
   },
+}
+`;
+
+exports[`getRelationsFromModel: InterfaceWithAlias 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel: InterfaceWithAlias2 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
 }
 `;
 
@@ -5580,6 +5680,26 @@ Object {
   "imports": Set {
     "App\\\\Models\\\\TouchingA",
   },
+}
+`;
+
+exports[`getRelationsFromModel: TraitWithAlias 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel: TraitWithAlias2 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
 }
 `;
 
