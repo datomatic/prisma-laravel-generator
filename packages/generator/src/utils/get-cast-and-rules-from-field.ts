@@ -6,6 +6,7 @@ import isFieldUuid from '../helpers/is-field-uuid';
 import isFieldEnum from '../helpers/is-field-enum';
 import getTableNameFromModel from '../helpers/get-table-name-from-model';
 import getEnumFqcn from '../helpers/get-enum-fqcn';
+import isFieldReadOnly from '../helpers/is-field-read-only';
 
 const getCastAndRulesFromField = (
   field: DMMF.Field,
@@ -133,7 +134,7 @@ const getCastAndRulesFromField = (
         });
         break;
       case 'DateTime':
-        cast.value = 'immutable_datetime';
+        cast.value = isFieldReadOnly(field) ? 'immutable_datetime' : 'datetime';
         rules.push({
           value: 'date',
           isMethodCall: false,
