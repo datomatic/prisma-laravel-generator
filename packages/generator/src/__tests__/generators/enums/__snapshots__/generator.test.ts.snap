@@ -58,6 +58,20 @@ enum Enum: string
 "
 `;
 
+exports[`enum generation: EnumCustomPath 1`] = `
+"<?php
+
+namespace App\\\\Enums\\\\Prisma;
+
+enum EnumCustomPath: string
+{
+    case A = '1';
+
+    case B = '2';
+}
+"
+`;
+
 exports[`enum generation: EnumWithTrait 1`] = `
 "<?php
 

@@ -262,6 +262,8 @@ exports[`getDefaultFieldAnnotation: MassAssignable - password 1`] = `false`;
 
 exports[`getDefaultFieldAnnotation: ModelComments - id 1`] = `"autoincrement()"`;
 
+exports[`getDefaultFieldAnnotation: ModelCustomPath - id 1`] = `"autoincrement()"`;
+
 exports[`getDefaultFieldAnnotation: ModelMultipleComments - id 1`] = `"autoincrement()"`;
 
 exports[`getDefaultFieldAnnotation: MultipleComments - id 1`] = `"autoincrement()"`;
@@ -427,6 +429,12 @@ exports[`getDefaultFieldAnnotation: ReadOnlyField - name 1`] = `false`;
 exports[`getDefaultFieldAnnotation: ReadOnlyField - password 1`] = `false`;
 
 exports[`getDefaultFieldAnnotation: ReadOnlyField - phone 1`] = `false`;
+
+exports[`getDefaultFieldAnnotation: ReadonlyDatetime - editable 1`] = `false`;
+
+exports[`getDefaultFieldAnnotation: ReadonlyDatetime - id 1`] = `"autoincrement()"`;
+
+exports[`getDefaultFieldAnnotation: ReadonlyDatetime - readonly 1`] = `false`;
 
 exports[`getDefaultFieldAnnotation: SelfRelation - child 1`] = `false`;
 

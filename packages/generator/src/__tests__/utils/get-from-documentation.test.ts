@@ -73,9 +73,9 @@ test('getFromDocumentation: regexp multiple present', () => {
 });
 
 test('getFromDocumentation: regexp case insensitivity', () => {
-  expect(getFromDocumentation(/read-[a-z]+/g, 'some, Read-OnLy, doc')).toEqual([
-    'Read-OnLy',
-  ]);
+  expect(getFromDocumentation(/read-[a-z]+/gi, 'some, Read-OnLy, doc')).toEqual(
+    ['Read-OnLy'],
+  );
 });
 
 test('getFromDocumentation: regexp single with spaces', () => {

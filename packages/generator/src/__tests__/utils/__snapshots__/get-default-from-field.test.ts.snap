@@ -1070,6 +1070,14 @@ Object {
 }
 `;
 
+exports[`getDefaultFromField: ModelCustomPath - id 1`] = `
+Object {
+  "defaultValue": undefined,
+  "imports": Set {},
+  "isMethodCall": false,
+}
+`;
+
 exports[`getDefaultFromField: ModelMultipleComments - id 1`] = `
 Object {
   "defaultValue": undefined,
@@ -1727,6 +1735,30 @@ Object {
 `;
 
 exports[`getDefaultFromField: ReadOnlyField - phone 1`] = `
+Object {
+  "defaultValue": undefined,
+  "imports": Set {},
+  "isMethodCall": false,
+}
+`;
+
+exports[`getDefaultFromField: ReadonlyDatetime - editable 1`] = `
+Object {
+  "defaultValue": undefined,
+  "imports": Set {},
+  "isMethodCall": false,
+}
+`;
+
+exports[`getDefaultFromField: ReadonlyDatetime - id 1`] = `
+Object {
+  "defaultValue": undefined,
+  "imports": Set {},
+  "isMethodCall": false,
+}
+`;
+
+exports[`getDefaultFromField: ReadonlyDatetime - readonly 1`] = `
 Object {
   "defaultValue": undefined,
   "imports": Set {},

@@ -14,8 +14,17 @@ Prisma is a Node.JS ORM and includes Prisma Migrate, which uses Prisma schema (*
 Obviously, Laravel is not a Node.JS environment, and Laravel already provides us a very good ORM, Eloquent. But we still can use Prisma Migrate to easily manage our database. 
 
 And via this generator, we can also generate automatically your Eloquent models, filled with PHPDocs, attributes, casts, validation rules, ..., directly from your Prisma schema. 
+ 
+<table>
+<thead>
+<tr>
+<th>From</th>
+<th>To</th>
+</tr>
+</thead>
+<tr>
+<td>
 
-From a simple Prisma schema:
 ```prisma
 /// trait:App\Traits\TokenOwner
 model User {
@@ -35,10 +44,11 @@ model User {
   updated_at        DateTime? /// read-only
   deleted_at        DateTime? /// read-only
 }
-
 ```
 
-To a migrated database and a Laravel model ready to be used:
+</td>
+<td>
+
 ```php
 <?php
 
@@ -55,97 +65,101 @@ use Illuminate\Support\Carbon;
 use Illuminate\Validation\Rule;
 
 /**
- * PrismaUser Model
- *
- * @mixin Builder
- *
- * @method static Builder|static query()
- * @method static static make(array $attributes = [])
- * @method static static create(array $attributes = [])
- * @method static static forceCreate(array $attributes)
- * @method static firstOrNew(array $attributes = [], array $values = [])
- * @method static firstOrFail($columns = ['*'])
- * @method static firstOrCreate(array $attributes, array $values = [])
- * @method static firstOr($columns = ['*'], Closure $callback = null)
- * @method static firstWhere($column, $operator = null, $value = null, $boolean = 'and')
- * @method static updateOrCreate(array $attributes, array $values = [])
- * @method null|static first($columns = ['*'])
- * @method static static findOrFail($id, $columns = ['*'])
- * @method static static findOrNew($id, $columns = ['*'])
- * @method static null|static find($id, $columns = ['*'])
- *
- * @property int $id
- * @property string $name
- * @property-read string $email
- * @property ?Carbon $email_verified_at
- * @property string $password
- * @property ?string $remember_token
- * @property int $category_id
- * @property-read ?CarbonImmutable $created_at
- * @property-read ?CarbonImmutable $updated_at
- * @property-read ?CarbonImmutable $deleted_at
- *
-
- * @property-read UserCategory $category
- */
+* PrismaUser Model
+*
+* @mixin Builder
+*
+* @method static Builder|static query()
+* @method static static make(array $attributes = [])
+* @method static static create(array $attributes = [])
+* @method static static forceCreate(array $attributes)
+* @method static firstOrNew(array $attributes = [], array $values = [])
+* @method static firstOrFail($columns = ['*'])
+* @method static firstOrCreate(array $attributes, array $values = [])
+* @method static firstOr($columns = ['*'], Closure $callback = null)
+* @method static firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+* @method static updateOrCreate(array $attributes, array $values = [])
+* @method null|static first($columns = ['*'])
+* @method static static findOrFail($id, $columns = ['*'])
+* @method static static findOrNew($id, $columns = ['*'])
+* @method static null|static find($id, $columns = ['*'])
+*
+* @property int $id
+* @property string $name
+* @property-read string $email
+* @property ?Carbon $email_verified_at
+* @property string $password
+* @property ?string $remember_token
+* @property int $category_id
+* @property-read ?CarbonImmutable $created_at
+* @property-read ?CarbonImmutable $updated_at
+* @property-read ?CarbonImmutable $deleted_at
+*
+* @property-read UserCategory $category
+*/
 abstract class PrismaUser extends Model
 {
-    use TokenOwner;
-    use SoftDeletes;
+  use TokenOwner;
+  use SoftDeletes;
 
-    protected $table = 'User';
+  protected $table = 'User';
 
-    protected $guarded = ['remember_token'];
+  protected $guarded = ['remember_token'];
 
-    protected $hidden = ['email_verified_at', 'password', 'remember_token'];
+  protected $hidden = ['email_verified_at', 'password', 'remember_token'];
 
-    protected array $rules;
+  protected array $rules;
 
-    protected $casts = [
-        'id' => 'integer',
-        'name' => 'string',
-        'email' => 'string',
-        'email_verified_at' => 'immutable_datetime',
-        'password' => 'string',
-        'remember_token' => 'string',
-        'category_id' => 'integer',
-        'created_at' => 'immutable_datetime',
-        'updated_at' => 'immutable_datetime',
-        'deleted_at' => 'immutable_datetime',
-    ];
+  protected $casts = [
+  'id' => 'integer',
+  'name' => 'string',
+  'email' => 'string',
+  'email_verified_at' => 'immutable_datetime',
+  'password' => 'string',
+  'remember_token' => 'string',
+  'category_id' => 'integer',
+  'created_at' => 'immutable_datetime',
+  'updated_at' => 'immutable_datetime',
+  'deleted_at' => 'immutable_datetime',
+  ];
 
-    public function __construct(array $attributes = [])
-    {
-        $this->rules = [
-            'id' => ['required', 'numeric', 'integer'],
-            'name' => ['required', 'string'],
-            'email' => [
-                Rule::unique('User', 'email')->ignore(
-                    $this->getKey(),
-                    $this->getKeyName()
-                ),
-                'required',
-                'string',
-            ],
-            'email_verified_at' => ['nullable', 'date'],
-            'password' => ['required', 'string'],
-            'remember_token' => ['nullable', 'string'],
-            'category_id' => ['required', 'numeric', 'integer'],
-            'created_at' => ['nullable', 'date'],
-            'updated_at' => ['nullable', 'date'],
-            'deleted_at' => ['nullable', 'date'],
-            ...$this->rules ?? [],
-        ];
+  public function __construct(array $attributes = [])
+  {
+  $this->rules = [
+  'id' => ['required', 'numeric', 'integer'],
+  'name' => ['required', 'string'],
+  'email' => [
+  Rule::unique('User', 'email')->ignore(
+  $this->getKey(),
+  $this->getKeyName()
+  ),
+  'required',
+  'string',
+  ],
+  'email_verified_at' => ['nullable', 'date'],
+  'password' => ['required', 'string'],
+  'remember_token' => ['nullable', 'string'],
+  'category_id' => ['required', 'numeric', 'integer'],
+  'created_at' => ['nullable', 'date'],
+  'updated_at' => ['nullable', 'date'],
+  'deleted_at' => ['nullable', 'date'],
+  ...$this->rules ?? [],
+  ];
 
-        parent::__construct($attributes);
-    }
+       parent::__construct($attributes);
+  }
 
-    public function category()
-    {
-        return $this->belongsTo(UserCategory::class, 'category_id', 'id');
-    }
+  public function category()
+  {
+  return $this->belongsTo(UserCategory::class, 'category_id', 'id');
+  }
 }
 ```
+
+</td>
+</tr>
+</table>
+
 
 # Initial configuration
 
@@ -592,6 +606,16 @@ model Example {
 }
 ```
 
+#### Path: `path`
+If you need to export a specific model to a different folder to the one defined in your generator settings as `modelsPath` (see [generator settings](#generator-settings)),you can use this annotation. The path is relative to the `output` path defined in your generator settings. 
+
+```prisma
+/// path:./app/Models/domain
+model Example {
+  id   Int  @id @default(autoincrement())
+}
+```
+
 ### Field annotations
 
 There are several annotations available for fields. In this list, we're also covering some of the most important Prisma attributes (the ones that start with `@`). To better understand how to manage fields in Prisma and to check all the available attributes in Prisma, look at the [official documentation](https://www.prisma.io/docs/reference/api-reference/prisma-schema-reference#model-fields).
@@ -648,11 +672,13 @@ model Example {
 ```
 
 #### Timestamps: `created_at` and `updated_at`
-By default, if your field's name is `created_at` or `updated_at`, you don't need to add these annotations.
+By default, if your field's name is `created_at` or `updated_at`, you don't need to add these annotations since they're automatically classified as (created/updated)-at timestamp and considered read-only.
 
 If you define a `created_at`, you have to define also an `updated_at` field (and vice-versa).
 
 You might use `@updatedAt` instead of `/// updated_at`, if you prefer.
+
+Fields with these annotations are automatically considered as read-only.
 
 ```prisma
 model Example {
@@ -663,9 +689,11 @@ model Example {
 ```
 
 #### Soft delete: `deleted_at`
-By default, if your field's name is exactly `deleted_at`, you don't need to add this annotation. 
+By default, if your field's name is exactly `deleted_at`, you don't need to add these annotations since they're automatically classified as deleted-at timestamp and considered read-only. 
 
 When `deleted_at` is defined, the model will automatically implement the `SoftDelete` trait.
+
+Fields with this annotation are automatically considered as read-only.
 
 ```prisma
 model Example {
@@ -717,6 +745,8 @@ model Example {
 #### Read only: `read-only`
 Set the field as read-only (via PHPDocs). If the field is a DateTime, instead of a `Carbon` instance, it will be casted to `CarbonImmutable`.
 
+By default, fields called `created_at`, `updated_at` and `deleted_at` are considered as read-only.
+
 ```prisma
 model Example {
   id       Int     @id @default(autoincrement())
@@ -766,6 +796,19 @@ Adds a specific trait to the enum.
 
 ```prisma
 /// trait:App/Traits/RoleEnumTrait
+enum Enum {
+  A
+  B
+}
+```
+
+#### Path: `path`
+If you need to export a specific enum to a different folder to the one defined in your generator settings as `prismaEnumsPath` (see [generator settings](#generator-settings)),you can use this annotation. The path is relative to the `output` path defined in your generator settings.
+
+**Warning:** If you remove an enum with a custom path from your schema, the generated PHP file has to be deleted manually.
+
+```prisma
+/// path:./app/Enums/domain
 enum Enum {
   A
   B

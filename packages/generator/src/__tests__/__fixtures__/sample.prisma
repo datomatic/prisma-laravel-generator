@@ -123,6 +123,17 @@ model PivotWithCustomExtend {
   id Int @id @default(autoincrement())
 }
 
+/// path:./app/Models/custom
+model ModelCustomPath {
+  id Int @id @default(autoincrement())
+}
+
+/// path:./app/Enums/custom
+enum EnumCustomPath {
+  A  @map("1")
+  B  @map("2")
+}
+
 model WithEnum {
   id          Int    @id @default(autoincrement())
   enum        Enum
@@ -243,6 +254,12 @@ model DefaultValues {
   now   DateTime @default(now())
   bool  Boolean  @default(true)
   role  Role     @default(USER)
+}
+
+model ReadonlyDatetime {
+  id       Int      @id @default(autoincrement())
+  readonly DateTime /// read-only
+  editable DateTime
 }
 
 model DefaultValuesWithoutMethodCall {

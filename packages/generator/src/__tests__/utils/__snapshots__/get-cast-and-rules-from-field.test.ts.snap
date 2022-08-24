@@ -312,7 +312,7 @@ exports[`getCastAndRulesFromField: DefaultValues - now 1`] = `
 Object {
   "cast": Object {
     "isMethodCall": false,
-    "value": "immutable_datetime",
+    "value": "datetime",
   },
   "imports": Set {},
   "rules": Array [
@@ -3011,6 +3011,30 @@ Object {
 }
 `;
 
+exports[`getCastAndRulesFromField: ModelCustomPath - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
 exports[`getCastAndRulesFromField: ModelMultipleComments - id 1`] = `
 Object {
   "cast": Object {
@@ -4882,6 +4906,70 @@ Object {
 }
 `;
 
+exports[`getCastAndRulesFromField: ReadonlyDatetime - editable 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "datetime",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "date",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ReadonlyDatetime - id 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "integer",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "numeric",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "integer",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: ReadonlyDatetime - readonly 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "immutable_datetime",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "date",
+    },
+  ],
+}
+`;
+
 exports[`getCastAndRulesFromField: SelfRelation - child 1`] = `
 Object {
   "cast": Object {
@@ -5998,7 +6086,7 @@ exports[`getCastAndRulesFromField: Types - birth 1`] = `
 Object {
   "cast": Object {
     "isMethodCall": false,
-    "value": "immutable_datetime",
+    "value": "datetime",
   },
   "imports": Set {},
   "rules": Array [

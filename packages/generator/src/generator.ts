@@ -4,7 +4,6 @@ import path from 'node:path';
 import {readFile} from 'node:fs/promises';
 import _ from 'lodash';
 import {existsSync} from 'node:fs';
-import {Dictionary} from '@prisma/generator-helper/dist/types';
 import generateEnum from './generators/enums/generator';
 import writeFileSafely from './utils/write-file-safely';
 import {formatFile} from './utils/php-cs-fixer';
@@ -15,6 +14,7 @@ import generatePrismaModel from './generators/prisma-models/generator';
 import generateModel from './generators/models/generator';
 import getModelClassName from './helpers/get-model-classname';
 import deleteAllFilesInDirectory from './helpers/delete-all-files-in-directory';
+import getModelPath from './helpers/get-model-path';
 
 const GENERATOR_NAME = 'prisma-laravel-generator';
 
@@ -60,9 +60,11 @@ generatorHandler({
         ..._.map(options.dmmf.datamodel.enums, async enumInfo => {
           const generatedEnum = generateEnum(enumInfo);
 
+          const customPath = getModelPath(enumInfo);
+
           const writeLocation = path.join(
             outputPath,
-            config.prismaEnumsPath,
+            customPath ?? config.prismaEnumsPath,
             `${enumInfo.name}.php`,
           );
 
@@ -112,9 +114,11 @@ generatorHandler({
               config.prismaModelsPrefix,
             );
 
+            const customPath = getModelPath(model);
+
             const writeLocation = path.join(
               outputPath,
-              config.modelsPath,
+              customPath ?? config.modelsPath,
               `${getModelClassName(model)}.php`,
             );
 

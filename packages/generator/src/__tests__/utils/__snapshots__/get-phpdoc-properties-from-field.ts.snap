@@ -1052,6 +1052,14 @@ Object {
 }
 `;
 
+exports[`getPhpDocPropertiesFromField: ModelCustomPath - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
 exports[`getPhpDocPropertiesFromField: ModelMultipleComments - id 1`] = `
 Object {
   "imports": Set {},
@@ -1599,10 +1607,10 @@ Object {
 exports[`getPhpDocPropertiesFromField: Post - createdAt 1`] = `
 Object {
   "imports": Set {
-    "Illuminate\\\\Support\\\\Carbon",
+    "Carbon\\\\CarbonImmutable",
   },
-  "phpType": "Carbon",
-  "readOnly": false,
+  "phpType": "CarbonImmutable",
+  "readOnly": true,
 }
 `;
 
@@ -1643,10 +1651,10 @@ Object {
 exports[`getPhpDocPropertiesFromField: Post - updatedAt 1`] = `
 Object {
   "imports": Set {
-    "Illuminate\\\\Support\\\\Carbon",
+    "Carbon\\\\CarbonImmutable",
   },
-  "phpType": "Carbon",
-  "readOnly": false,
+  "phpType": "CarbonImmutable",
+  "readOnly": true,
 }
 `;
 
@@ -1722,6 +1730,34 @@ Object {
 }
 `;
 
+exports[`getPhpDocPropertiesFromField: ReadonlyDatetime - editable 1`] = `
+Object {
+  "imports": Set {
+    "Illuminate\\\\Support\\\\Carbon",
+  },
+  "phpType": "Carbon",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ReadonlyDatetime - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ReadonlyDatetime - readonly 1`] = `
+Object {
+  "imports": Set {
+    "Carbon\\\\CarbonImmutable",
+  },
+  "phpType": "CarbonImmutable",
+  "readOnly": true,
+}
+`;
+
 exports[`getPhpDocPropertiesFromField: SelfRelation - child 1`] = `
 Object {
   "imports": Set {},
@@ -1757,10 +1793,10 @@ Object {
 exports[`getPhpDocPropertiesFromField: SoftDelete1 - deleted_at 1`] = `
 Object {
   "imports": Set {
-    "Illuminate\\\\Support\\\\Carbon",
+    "Carbon\\\\CarbonImmutable",
   },
-  "phpType": "Carbon",
-  "readOnly": false,
+  "phpType": "CarbonImmutable",
+  "readOnly": true,
 }
 `;
 
@@ -1791,10 +1827,10 @@ Object {
 exports[`getPhpDocPropertiesFromField: SoftDelete2 - deleted_timestamp 1`] = `
 Object {
   "imports": Set {
-    "Illuminate\\\\Support\\\\Carbon",
+    "Carbon\\\\CarbonImmutable",
   },
-  "phpType": "Carbon",
-  "readOnly": false,
+  "phpType": "CarbonImmutable",
+  "readOnly": true,
 }
 `;
 
@@ -1825,10 +1861,10 @@ Object {
 exports[`getPhpDocPropertiesFromField: Timestamps1 - created_timestamp 1`] = `
 Object {
   "imports": Set {
-    "Illuminate\\\\Support\\\\Carbon",
+    "Carbon\\\\CarbonImmutable",
   },
-  "phpType": "Carbon",
-  "readOnly": false,
+  "phpType": "CarbonImmutable",
+  "readOnly": true,
 }
 `;
 
@@ -1843,20 +1879,20 @@ Object {
 exports[`getPhpDocPropertiesFromField: Timestamps1 - updated_timestamp 1`] = `
 Object {
   "imports": Set {
-    "Illuminate\\\\Support\\\\Carbon",
+    "Carbon\\\\CarbonImmutable",
   },
-  "phpType": "Carbon",
-  "readOnly": false,
+  "phpType": "CarbonImmutable",
+  "readOnly": true,
 }
 `;
 
 exports[`getPhpDocPropertiesFromField: Timestamps2 - created_at 1`] = `
 Object {
   "imports": Set {
-    "Illuminate\\\\Support\\\\Carbon",
+    "Carbon\\\\CarbonImmutable",
   },
-  "phpType": "Carbon",
-  "readOnly": false,
+  "phpType": "CarbonImmutable",
+  "readOnly": true,
 }
 `;
 
@@ -1871,20 +1907,20 @@ Object {
 exports[`getPhpDocPropertiesFromField: Timestamps2 - updated_timestamp 1`] = `
 Object {
   "imports": Set {
-    "Illuminate\\\\Support\\\\Carbon",
+    "Carbon\\\\CarbonImmutable",
   },
-  "phpType": "Carbon",
-  "readOnly": false,
+  "phpType": "CarbonImmutable",
+  "readOnly": true,
 }
 `;
 
 exports[`getPhpDocPropertiesFromField: Timestamps3 - created_timestamp 1`] = `
 Object {
   "imports": Set {
-    "Illuminate\\\\Support\\\\Carbon",
+    "Carbon\\\\CarbonImmutable",
   },
-  "phpType": "Carbon",
-  "readOnly": false,
+  "phpType": "CarbonImmutable",
+  "readOnly": true,
 }
 `;
 
@@ -1899,20 +1935,20 @@ Object {
 exports[`getPhpDocPropertiesFromField: Timestamps3 - updated_at 1`] = `
 Object {
   "imports": Set {
-    "Illuminate\\\\Support\\\\Carbon",
+    "Carbon\\\\CarbonImmutable",
   },
-  "phpType": "Carbon",
-  "readOnly": false,
+  "phpType": "CarbonImmutable",
+  "readOnly": true,
 }
 `;
 
 exports[`getPhpDocPropertiesFromField: Timestamps4 - created_at 1`] = `
 Object {
   "imports": Set {
-    "Illuminate\\\\Support\\\\Carbon",
+    "Carbon\\\\CarbonImmutable",
   },
-  "phpType": "Carbon",
-  "readOnly": false,
+  "phpType": "CarbonImmutable",
+  "readOnly": true,
 }
 `;
 
@@ -1927,20 +1963,20 @@ Object {
 exports[`getPhpDocPropertiesFromField: Timestamps4 - updated_at 1`] = `
 Object {
   "imports": Set {
-    "Illuminate\\\\Support\\\\Carbon",
+    "Carbon\\\\CarbonImmutable",
   },
-  "phpType": "Carbon",
-  "readOnly": false,
+  "phpType": "CarbonImmutable",
+  "readOnly": true,
 }
 `;
 
 exports[`getPhpDocPropertiesFromField: Timestamps5 - created_at 1`] = `
 Object {
   "imports": Set {
-    "Illuminate\\\\Support\\\\Carbon",
+    "Carbon\\\\CarbonImmutable",
   },
-  "phpType": "Carbon",
-  "readOnly": false,
+  "phpType": "CarbonImmutable",
+  "readOnly": true,
 }
 `;
 
@@ -1955,20 +1991,20 @@ Object {
 exports[`getPhpDocPropertiesFromField: Timestamps5 - updated_at 1`] = `
 Object {
   "imports": Set {
-    "Illuminate\\\\Support\\\\Carbon",
+    "Carbon\\\\CarbonImmutable",
   },
-  "phpType": "Carbon",
-  "readOnly": false,
+  "phpType": "CarbonImmutable",
+  "readOnly": true,
 }
 `;
 
 exports[`getPhpDocPropertiesFromField: Timestamps6 - created_at 1`] = `
 Object {
   "imports": Set {
-    "Illuminate\\\\Support\\\\Carbon",
+    "Carbon\\\\CarbonImmutable",
   },
-  "phpType": "Carbon",
-  "readOnly": false,
+  "phpType": "CarbonImmutable",
+  "readOnly": true,
 }
 `;
 
@@ -1983,20 +2019,20 @@ Object {
 exports[`getPhpDocPropertiesFromField: Timestamps6 - updated_timestamp 1`] = `
 Object {
   "imports": Set {
-    "Illuminate\\\\Support\\\\Carbon",
+    "Carbon\\\\CarbonImmutable",
   },
-  "phpType": "Carbon",
-  "readOnly": false,
+  "phpType": "CarbonImmutable",
+  "readOnly": true,
 }
 `;
 
 exports[`getPhpDocPropertiesFromField: Timestamps7 - created_at 1`] = `
 Object {
   "imports": Set {
-    "Illuminate\\\\Support\\\\Carbon",
+    "Carbon\\\\CarbonImmutable",
   },
-  "phpType": "Carbon",
-  "readOnly": false,
+  "phpType": "CarbonImmutable",
+  "readOnly": true,
 }
 `;
 
@@ -2011,20 +2047,20 @@ Object {
 exports[`getPhpDocPropertiesFromField: Timestamps7 - updated_at 1`] = `
 Object {
   "imports": Set {
-    "Illuminate\\\\Support\\\\Carbon",
+    "Carbon\\\\CarbonImmutable",
   },
-  "phpType": "Carbon",
-  "readOnly": false,
+  "phpType": "CarbonImmutable",
+  "readOnly": true,
 }
 `;
 
 exports[`getPhpDocPropertiesFromField: Timestamps8 - created_at 1`] = `
 Object {
   "imports": Set {
-    "Illuminate\\\\Support\\\\Carbon",
+    "Carbon\\\\CarbonImmutable",
   },
-  "phpType": "Carbon",
-  "readOnly": false,
+  "phpType": "CarbonImmutable",
+  "readOnly": true,
 }
 `;
 
@@ -2039,20 +2075,20 @@ Object {
 exports[`getPhpDocPropertiesFromField: Timestamps8 - updated_timestamp 1`] = `
 Object {
   "imports": Set {
-    "Illuminate\\\\Support\\\\Carbon",
+    "Carbon\\\\CarbonImmutable",
   },
-  "phpType": "Carbon",
-  "readOnly": false,
+  "phpType": "CarbonImmutable",
+  "readOnly": true,
 }
 `;
 
 exports[`getPhpDocPropertiesFromField: Timestamps9 - created_at 1`] = `
 Object {
   "imports": Set {
-    "Illuminate\\\\Support\\\\Carbon",
+    "Carbon\\\\CarbonImmutable",
   },
-  "phpType": "Carbon",
-  "readOnly": false,
+  "phpType": "CarbonImmutable",
+  "readOnly": true,
 }
 `;
 
@@ -2067,20 +2103,20 @@ Object {
 exports[`getPhpDocPropertiesFromField: Timestamps9 - updated_at 1`] = `
 Object {
   "imports": Set {
-    "Illuminate\\\\Support\\\\Carbon",
+    "Carbon\\\\CarbonImmutable",
   },
-  "phpType": "Carbon",
-  "readOnly": false,
+  "phpType": "CarbonImmutable",
+  "readOnly": true,
 }
 `;
 
 exports[`getPhpDocPropertiesFromField: Timestamps10 - created_at 1`] = `
 Object {
   "imports": Set {
-    "Illuminate\\\\Support\\\\Carbon",
+    "Carbon\\\\CarbonImmutable",
   },
-  "phpType": "Carbon",
-  "readOnly": false,
+  "phpType": "CarbonImmutable",
+  "readOnly": true,
 }
 `;
 
@@ -2095,20 +2131,20 @@ Object {
 exports[`getPhpDocPropertiesFromField: Timestamps10 - updated_timestamp 1`] = `
 Object {
   "imports": Set {
-    "Illuminate\\\\Support\\\\Carbon",
+    "Carbon\\\\CarbonImmutable",
   },
-  "phpType": "Carbon",
-  "readOnly": false,
+  "phpType": "CarbonImmutable",
+  "readOnly": true,
 }
 `;
 
 exports[`getPhpDocPropertiesFromField: Timestamps11 - created_timestamp 1`] = `
 Object {
   "imports": Set {
-    "Illuminate\\\\Support\\\\Carbon",
+    "Carbon\\\\CarbonImmutable",
   },
-  "phpType": "Carbon",
-  "readOnly": false,
+  "phpType": "CarbonImmutable",
+  "readOnly": true,
 }
 `;
 
@@ -2123,10 +2159,10 @@ Object {
 exports[`getPhpDocPropertiesFromField: Timestamps11 - updated_at 1`] = `
 Object {
   "imports": Set {
-    "Illuminate\\\\Support\\\\Carbon",
+    "Carbon\\\\CarbonImmutable",
   },
-  "phpType": "Carbon",
-  "readOnly": false,
+  "phpType": "CarbonImmutable",
+  "readOnly": true,
 }
 `;
 

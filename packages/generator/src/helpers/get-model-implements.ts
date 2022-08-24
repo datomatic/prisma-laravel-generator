@@ -4,11 +4,11 @@ import getFromDocumentation from '../utils/get-from-documentation';
 
 const getModelImplements = (model: DMMF.Model | DMMF.DatamodelEnum) => {
   const implementClasses = getFromDocumentation(
-    /implements:.*/g,
+    /^implements:.*/gi,
     model.documentation,
   );
 
-  return map(implementClasses, t => replace(t, /implements:/g, ''));
+  return map(implementClasses, t => replace(t, /^implements:/gi, ''));
 };
 
 export default getModelImplements;

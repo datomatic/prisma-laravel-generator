@@ -1,0 +1,233 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getModelPath: samples: enum_BackedEnum 1`] = `undefined`;
+
+exports[`getModelPath: samples: enum_BackedEnumWithTrait 1`] = `undefined`;
+
+exports[`getModelPath: samples: enum_Enum 1`] = `undefined`;
+
+exports[`getModelPath: samples: enum_EnumCustomPath 1`] = `"./app/Enums/custom"`;
+
+exports[`getModelPath: samples: enum_EnumWithTrait 1`] = `undefined`;
+
+exports[`getModelPath: samples: enum_EnumWithTwoTraits 1`] = `undefined`;
+
+exports[`getModelPath: samples: enum_PostType 1`] = `undefined`;
+
+exports[`getModelPath: samples: enum_Role 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_Category 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_DefaultValues 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_DefaultValuesWithoutMethodCall 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_EagerLoadA 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_EagerLoadB 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_ExplicitManyToManyA 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_ExplicitManyToManyA2 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_ExplicitManyToManyA3 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_ExplicitManyToManyA4 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_ExplicitManyToManyA5 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_ExplicitManyToManyA6 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_ExplicitManyToManyA7 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_ExplicitManyToManyB 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_ExplicitManyToManyB2 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_ExplicitManyToManyB3 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_ExplicitManyToManyB4 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_ExplicitManyToManyB5 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_ExplicitManyToManyB6 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_ExplicitManyToManyB7 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_ExplicitManyToManyPivot 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_ExplicitManyToManyPivot2 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_ExplicitManyToManyPivot3 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_ExplicitManyToManyPivot4 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_ExplicitManyToManyPivot5 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_ExplicitManyToManyPivot6 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_ExplicitManyToManyPivot7 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_FieldComments 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_FieldMultipleComments 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_Fillable 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_Guarded 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_Hidden 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_Ignore 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_ImplicitManyToManyA 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_ImplicitManyToManyB 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_MappedId 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_MassAssignable 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_ModelComments 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_ModelCustomPath 1`] = `"./app/Models/custom"`;
+
+exports[`getModelPath: samples: model_ModelMultipleComments 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_MultipleComments 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_MultipleUnique 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_MultipleUnique2 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_NoPrimaryKey 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_NoRules 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_NullableField 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_OneToManyA 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_OneToManyA2 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_OneToManyA3 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_OneToManyA4 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_OneToManyB 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_OneToManyB2 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_OneToManyB3 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_OneToManyB4 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_OneToOneA 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_OneToOneA2 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_OneToOneA3 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_OneToOneA4 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_OneToOneA5 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_OneToOneB 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_OneToOneB2 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_OneToOneB3 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_OneToOneB4 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_OneToOneB5 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_PivotWithCustomExtend 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_Post 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_Profile 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_ReadOnlyField 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_ReadonlyDatetime 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_SelfRelation 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_SoftDelete1 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_SoftDelete2 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_Timestamps1 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_Timestamps2 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_Timestamps3 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_Timestamps4 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_Timestamps5 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_Timestamps6 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_Timestamps7 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_Timestamps8 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_Timestamps9 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_Timestamps10 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_Timestamps11 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_TouchingA 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_TouchingB 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_Types 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_Unique 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_UnsupportedTypes 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_User 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_Visible 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_WithArray 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_WithBackedEnum 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_WithCustomExtend 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_WithDbType 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_WithEnum 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_WithGlobalPrimaryKey 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_WithGlobalPrimaryKeyDifferentName 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_WithGlobalStringPrimaryKey 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_WithGlobalStringPrimaryKeyDifferentName 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_WithInterface 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_WithMultipleInterfaces 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_WithMultipleTraits 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_WithPrimaryKey 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_WithPrimaryKeyDifferentName 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_WithStringPrimaryKey 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_WithStringPrimaryKeyDifferentName 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_WithTableMap 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_WithTrait 1`] = `undefined`;
+
+exports[`getModelPath: samples: model_snake_cased_models 1`] = `undefined`;

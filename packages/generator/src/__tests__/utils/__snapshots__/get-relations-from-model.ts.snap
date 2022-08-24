@@ -3306,6 +3306,16 @@ Object {
 }
 `;
 
+exports[`getRelationsFromModel - implicit table names: ModelCustomPath 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
 exports[`getRelationsFromModel - implicit table names: ModelMultipleComments 1`] = `
 Object {
   "belongsTo": Array [],
@@ -3771,6 +3781,16 @@ Object {
 `;
 
 exports[`getRelationsFromModel - implicit table names: ReadOnlyField 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel - implicit table names: ReadonlyDatetime 1`] = `
 Object {
   "belongsTo": Array [],
   "belongsToMany": Array [],
@@ -4857,6 +4877,16 @@ Object {
 }
 `;
 
+exports[`getRelationsFromModel: ModelCustomPath 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
 exports[`getRelationsFromModel: ModelMultipleComments 1`] = `
 Object {
   "belongsTo": Array [],
@@ -5338,6 +5368,16 @@ Object {
 `;
 
 exports[`getRelationsFromModel: ReadOnlyField 1`] = `
+Object {
+  "belongsTo": Array [],
+  "belongsToMany": Array [],
+  "hasMany": Array [],
+  "hasOne": Array [],
+  "imports": Set {},
+}
+`;
+
+exports[`getRelationsFromModel: ReadonlyDatetime 1`] = `
 Object {
   "belongsTo": Array [],
   "belongsToMany": Array [],

@@ -10,6 +10,7 @@ import MassAssignableConflictError from '../../errors/mass-assignable-conflict-e
 import ModelNotFoundError from '../../errors/model-not-found-error';
 import MultipleDataSourcesError from '../../errors/multiple-data-sources-error';
 import MultipleInheritanceError from '../../errors/multiple-inheritance-error';
+import TooManyPathsError from '../../errors/too-many-paths-error';
 
 const errors = [
   CompositeKeyError,
@@ -24,6 +25,7 @@ const errors = [
   ModelNotFoundError,
   MultipleDataSourcesError,
   MultipleInheritanceError,
+  TooManyPathsError,
 ];
 
 test.each(errors)('Error: %s', ErrorClass => {

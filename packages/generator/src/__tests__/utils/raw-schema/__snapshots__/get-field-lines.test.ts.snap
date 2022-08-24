@@ -983,6 +983,17 @@ Array [
 ]
 `;
 
+exports[`getFieldLines: ModelCustomPath 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+]
+`;
+
 exports[`getFieldLines: ModelMultipleComments 1`] = `
 Array [
   Object {
@@ -1634,6 +1645,29 @@ Array [
     "comment": undefined,
     "id": "name",
     "type": "String?",
+  },
+]
+`;
+
+exports[`getFieldLines: ReadonlyDatetime 1`] = `
+Array [
+  Object {
+    "attributes": "@id @default(autoincrement())",
+    "comment": undefined,
+    "id": "id",
+    "type": "Int",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": "read-only",
+    "id": "readonly",
+    "type": "DateTime",
+  },
+  Object {
+    "attributes": undefined,
+    "comment": undefined,
+    "id": "editable",
+    "type": "DateTime",
   },
 ]
 `;

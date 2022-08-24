@@ -74,6 +74,8 @@ exports[`getUnsupportedFields: MassAssignable 1`] = `Array []`;
 
 exports[`getUnsupportedFields: ModelComments 1`] = `Array []`;
 
+exports[`getUnsupportedFields: ModelCustomPath 1`] = `Array []`;
+
 exports[`getUnsupportedFields: ModelMultipleComments 1`] = `Array []`;
 
 exports[`getUnsupportedFields: MultipleComments 1`] = `Array []`;
@@ -131,6 +133,8 @@ exports[`getUnsupportedFields: Post 1`] = `Array []`;
 exports[`getUnsupportedFields: Profile 1`] = `Array []`;
 
 exports[`getUnsupportedFields: ReadOnlyField 1`] = `Array []`;
+
+exports[`getUnsupportedFields: ReadonlyDatetime 1`] = `Array []`;
 
 exports[`getUnsupportedFields: SelfRelation 1`] = `Array []`;
 

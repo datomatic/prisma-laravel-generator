@@ -31,6 +31,8 @@ export const getMassAssignableConflictSample = async () =>
   readSample('mass-assignable-conflict.prisma');
 export const getMultipleInheritanceSample = async () =>
   readSample('multiple-inheritance.prisma');
+export const getMultiplePathsSample = async () =>
+  readSample('multiple-paths.prisma');
 export const getEmptySample = async () => readSample('empty.prisma');
 export const getMongoSample = async () => readSample('mongo.prisma');
 export const getMySqlSample = async () => readSample('mysql.prisma');
@@ -46,6 +48,7 @@ export default {
   getHiddenVisibleConflictSample,
   getMassAssignableConflictSample,
   getMultipleInheritanceSample,
+  getMultiplePathsSample,
   getMongoSample,
   getMySqlSample,
 };

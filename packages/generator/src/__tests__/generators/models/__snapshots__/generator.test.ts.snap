@@ -666,6 +666,24 @@ class ModelComment extends AnotherPrefixModelComment
 "
 `;
 
+exports[`models: generation with different prefix: ModelCustomPath 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixModelCustomPath;
+
+/**
+ * ModelCustomPath Model.
+ *
+ * {@inheritdoc}
+ */
+class ModelCustomPath extends AnotherPrefixModelCustomPath
+{
+}
+"
+`;
+
 exports[`models: generation with different prefix: ModelMultipleComments 1`] = `
 "<?php
 
@@ -1183,6 +1201,24 @@ use App\\\\Models\\\\Prisma\\\\AnotherPrefixReadOnlyField;
  * {@inheritdoc}
  */
 class ReadOnlyField extends AnotherPrefixReadOnlyField
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: ReadonlyDatetime 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixReadonlyDatetime;
+
+/**
+ * ReadonlyDatetime Model.
+ *
+ * {@inheritdoc}
+ */
+class ReadonlyDatetime extends AnotherPrefixReadonlyDatetime
 {
 }
 "
@@ -2574,6 +2610,24 @@ class ModelComment extends PrismaModelComment
 "
 `;
 
+exports[`models: generation: ModelCustomPath 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaModelCustomPath;
+
+/**
+ * ModelCustomPath Model.
+ *
+ * {@inheritdoc}
+ */
+class ModelCustomPath extends PrismaModelCustomPath
+{
+}
+"
+`;
+
 exports[`models: generation: ModelMultipleComments 1`] = `
 "<?php
 
@@ -3091,6 +3145,24 @@ use App\\\\Models\\\\Prisma\\\\PrismaReadOnlyField;
  * {@inheritdoc}
  */
 class ReadOnlyField extends PrismaReadOnlyField
+{
+}
+"
+`;
+
+exports[`models: generation: ReadonlyDatetime 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaReadonlyDatetime;
+
+/**
+ * ReadonlyDatetime Model.
+ *
+ * {@inheritdoc}
+ */
+class ReadonlyDatetime extends PrismaReadonlyDatetime
 {
 }
 "

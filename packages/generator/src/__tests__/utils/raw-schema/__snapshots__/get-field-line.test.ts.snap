@@ -1179,6 +1179,15 @@ Object {
 }
 `;
 
+exports[`getFieldLine: ModelCustomPath - id 1`] = `
+Object {
+  "attributes": "@id @default(autoincrement())",
+  "comment": undefined,
+  "id": "id",
+  "type": "Int",
+}
+`;
+
 exports[`getFieldLine: ModelMultipleComments - id 1`] = `
 Object {
   "attributes": "@id @default(autoincrement())",
@@ -1923,6 +1932,33 @@ Object {
   "comment": "read-only",
   "id": "phone",
   "type": "String",
+}
+`;
+
+exports[`getFieldLine: ReadonlyDatetime - editable 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": undefined,
+  "id": "editable",
+  "type": "DateTime",
+}
+`;
+
+exports[`getFieldLine: ReadonlyDatetime - id 1`] = `
+Object {
+  "attributes": "@id @default(autoincrement())",
+  "comment": undefined,
+  "id": "id",
+  "type": "Int",
+}
+`;
+
+exports[`getFieldLine: ReadonlyDatetime - readonly 1`] = `
+Object {
+  "attributes": undefined,
+  "comment": "read-only",
+  "id": "readonly",
+  "type": "DateTime",
 }
 `;
 

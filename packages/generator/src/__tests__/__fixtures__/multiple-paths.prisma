@@ -1,0 +1,17 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+/// path:./app/Models/a
+/// path:./app/Models/b
+model MultiplePaths {
+  id Int @id @default(autoincrement())
+}
+
+/// path:./app/Enums/a
+/// path:./app/Enums/b
+enum MultiplePathsEnum {
+  A  @map("1")
+  B  @map("2")
+}

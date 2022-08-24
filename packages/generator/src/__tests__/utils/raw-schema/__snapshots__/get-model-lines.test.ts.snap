@@ -253,6 +253,8 @@ exports[`getModelLines: MassAssignable 1`] = `
 
 exports[`getModelLines: ModelComments 1`] = `"id Int @id @default(autoincrement())"`;
 
+exports[`getModelLines: ModelCustomPath 1`] = `"id Int @id @default(autoincrement())"`;
+
 exports[`getModelLines: ModelMultipleComments 1`] = `"id Int @id @default(autoincrement())"`;
 
 exports[`getModelLines: MultipleComments 1`] = `
@@ -420,6 +422,12 @@ exports[`getModelLines: ReadOnlyField 1`] = `
   phone    String /// read-only
   password String
   name     String?"
+`;
+
+exports[`getModelLines: ReadonlyDatetime 1`] = `
+"id       Int      @id @default(autoincrement())
+  readonly DateTime /// read-only
+  editable DateTime"
 `;
 
 exports[`getModelLines: SelfRelation 1`] = `

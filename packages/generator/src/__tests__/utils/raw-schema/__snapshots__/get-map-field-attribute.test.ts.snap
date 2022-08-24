@@ -274,6 +274,8 @@ exports[`getMapFieldAnnotation: not mapped fields: MassAssignable - password 1`]
 
 exports[`getMapFieldAnnotation: not mapped fields: ModelComments - id 1`] = `false`;
 
+exports[`getMapFieldAnnotation: not mapped fields: ModelCustomPath - id 1`] = `false`;
+
 exports[`getMapFieldAnnotation: not mapped fields: ModelMultipleComments - id 1`] = `false`;
 
 exports[`getMapFieldAnnotation: not mapped fields: MultipleComments - id 1`] = `false`;
@@ -439,6 +441,12 @@ exports[`getMapFieldAnnotation: not mapped fields: ReadOnlyField - name 1`] = `f
 exports[`getMapFieldAnnotation: not mapped fields: ReadOnlyField - password 1`] = `false`;
 
 exports[`getMapFieldAnnotation: not mapped fields: ReadOnlyField - phone 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: ReadonlyDatetime - editable 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: ReadonlyDatetime - id 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: ReadonlyDatetime - readonly 1`] = `false`;
 
 exports[`getMapFieldAnnotation: not mapped fields: SelfRelation - child 1`] = `false`;
 

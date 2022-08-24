@@ -262,6 +262,8 @@ exports[`getDatabaseFieldAnnotation: MassAssignable - password 1`] = `false`;
 
 exports[`getDatabaseFieldAnnotation: ModelComments - id 1`] = `false`;
 
+exports[`getDatabaseFieldAnnotation: ModelCustomPath - id 1`] = `false`;
+
 exports[`getDatabaseFieldAnnotation: ModelMultipleComments - id 1`] = `false`;
 
 exports[`getDatabaseFieldAnnotation: MultipleComments - id 1`] = `false`;
@@ -427,6 +429,12 @@ exports[`getDatabaseFieldAnnotation: ReadOnlyField - name 1`] = `false`;
 exports[`getDatabaseFieldAnnotation: ReadOnlyField - password 1`] = `false`;
 
 exports[`getDatabaseFieldAnnotation: ReadOnlyField - phone 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ReadonlyDatetime - editable 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ReadonlyDatetime - id 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: ReadonlyDatetime - readonly 1`] = `false`;
 
 exports[`getDatabaseFieldAnnotation: SelfRelation - child 1`] = `false`;
 

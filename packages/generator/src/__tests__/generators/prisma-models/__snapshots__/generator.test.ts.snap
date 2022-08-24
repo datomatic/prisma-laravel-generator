@@ -53,7 +53,7 @@ abstract class PrismaMongoDbNow extends Model
 
     protected $casts = [
         '_id' => 'string',
-        'now' => 'immutable_datetime',
+        'now' => 'datetime',
     ];
 
     public function __construct(array $attributes = [])
@@ -267,7 +267,7 @@ abstract class AnotherPrefixDefaultValue extends Model
             'name' => 'string',
             'age' => 'integer',
             'uuid' => 'string',
-            'now' => 'immutable_datetime',
+            'now' => 'datetime',
             'bool' => 'boolean',
             'role' => Role::class,
             ...$this->casts ?? [],
@@ -2581,6 +2581,53 @@ abstract class AnotherPrefixModelComment extends Model
 "
 `;
 
+exports[`prisma-models: generation with different prefix: ModelCustomPath 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * AnotherPrefixModelCustomPath Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ */
+abstract class AnotherPrefixModelCustomPath extends Model
+{
+    public $timestamps = false;
+    protected $table = 'ModelCustomPath';
+
+    protected array $rules = [
+        'id' => ['required', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+    ];
+}
+"
+`;
+
 exports[`prisma-models: generation with different prefix: ModelMultipleComments 1`] = `
 "<?php
 
@@ -4246,11 +4293,11 @@ namespace App\\\\Models\\\\Prisma;
 use App\\\\Enums\\\\Prisma\\\\PostType;
 use App\\\\Models\\\\Category;
 use App\\\\Models\\\\User;
+use Carbon\\\\CarbonImmutable;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Collection;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
-use Illuminate\\\\Support\\\\Carbon;
 use Illuminate\\\\Validation\\\\Rules\\\\Enum;
 
 /**
@@ -4278,8 +4325,8 @@ use Illuminate\\\\Validation\\\\Rules\\\\Enum;
  * @property bool     $published
  * @property PostType $type
  * @property int      $authorId
- * @property Carbon   $createdAt
- * @property Carbon   $updatedAt
+ * @property-read CarbonImmutable $createdAt
+ * @property-read CarbonImmutable $updatedAt
  * @property-read User $author
  * @property-read Collection<Category> $categories
  */
@@ -4476,6 +4523,61 @@ abstract class AnotherPrefixReadOnlyField extends Model
 "
 `;
 
+exports[`prisma-models: generation with different prefix: ReadonlyDatetime 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Carbon\\\\CarbonImmutable;
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+use Illuminate\\\\Support\\\\Carbon;
+
+/**
+ * AnotherPrefixReadonlyDatetime Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ * @property-read CarbonImmutable $readonly
+ * @property Carbon $editable
+ */
+abstract class AnotherPrefixReadonlyDatetime extends Model
+{
+    public $timestamps = false;
+    protected $table = 'ReadonlyDatetime';
+
+    protected array $rules = [
+        'id' => ['required', 'numeric', 'integer'],
+        'readonly' => ['required', 'date'],
+        'editable' => ['required', 'date'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'readonly' => 'immutable_datetime',
+        'editable' => 'datetime',
+    ];
+}
+"
+`;
+
 exports[`prisma-models: generation with different prefix: SelfRelation 1`] = `
 "<?php
 
@@ -4561,11 +4663,11 @@ exports[`prisma-models: generation with different prefix: SoftDelete1 1`] = `
 
 namespace App\\\\Models\\\\Prisma;
 
+use Carbon\\\\CarbonImmutable;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 use Illuminate\\\\Database\\\\Eloquent\\\\SoftDeletes;
-use Illuminate\\\\Support\\\\Carbon;
 
 /**
  * AnotherPrefixSoftDelete1 Model.
@@ -4590,7 +4692,7 @@ use Illuminate\\\\Support\\\\Carbon;
  * @property-read int $id
  * @property string $email
  * @property string $password
- * @property Carbon $deleted_at
+ * @property-read CarbonImmutable $deleted_at
  */
 abstract class AnotherPrefixSoftDelete1 extends Model
 {
@@ -4622,11 +4724,11 @@ exports[`prisma-models: generation with different prefix: SoftDelete2 1`] = `
 
 namespace App\\\\Models\\\\Prisma;
 
+use Carbon\\\\CarbonImmutable;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 use Illuminate\\\\Database\\\\Eloquent\\\\SoftDeletes;
-use Illuminate\\\\Support\\\\Carbon;
 
 /**
  * AnotherPrefixSoftDelete2 Model.
@@ -4651,7 +4753,7 @@ use Illuminate\\\\Support\\\\Carbon;
  * @property-read int $id
  * @property string $email
  * @property string $password
- * @property Carbon $deleted_timestamp
+ * @property-read CarbonImmutable $deleted_timestamp
  */
 abstract class AnotherPrefixSoftDelete2 extends Model
 {
@@ -4685,10 +4787,10 @@ exports[`prisma-models: generation with different prefix: Timestamps1 1`] = `
 
 namespace App\\\\Models\\\\Prisma;
 
+use Carbon\\\\CarbonImmutable;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
-use Illuminate\\\\Support\\\\Carbon;
 
 /**
  * AnotherPrefixTimestamps1 Model.
@@ -4711,8 +4813,8 @@ use Illuminate\\\\Support\\\\Carbon;
  * @method static      null|static find($id, $columns = ['*'])
  *
  * @property-read int $id
- * @property Carbon $created_timestamp
- * @property Carbon $updated_timestamp
+ * @property-read CarbonImmutable $created_timestamp
+ * @property-read CarbonImmutable $updated_timestamp
  */
 abstract class AnotherPrefixTimestamps1 extends Model
 {
@@ -4740,10 +4842,10 @@ exports[`prisma-models: generation with different prefix: Timestamps2 1`] = `
 
 namespace App\\\\Models\\\\Prisma;
 
+use Carbon\\\\CarbonImmutable;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
-use Illuminate\\\\Support\\\\Carbon;
 
 /**
  * AnotherPrefixTimestamps2 Model.
@@ -4766,8 +4868,8 @@ use Illuminate\\\\Support\\\\Carbon;
  * @method static      null|static find($id, $columns = ['*'])
  *
  * @property-read int $id
- * @property Carbon $created_at
- * @property Carbon $updated_timestamp
+ * @property-read CarbonImmutable $created_at
+ * @property-read CarbonImmutable $updated_timestamp
  */
 abstract class AnotherPrefixTimestamps2 extends Model
 {
@@ -4794,10 +4896,10 @@ exports[`prisma-models: generation with different prefix: Timestamps3 1`] = `
 
 namespace App\\\\Models\\\\Prisma;
 
+use Carbon\\\\CarbonImmutable;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
-use Illuminate\\\\Support\\\\Carbon;
 
 /**
  * AnotherPrefixTimestamps3 Model.
@@ -4820,8 +4922,8 @@ use Illuminate\\\\Support\\\\Carbon;
  * @method static      null|static find($id, $columns = ['*'])
  *
  * @property-read int $id
- * @property Carbon $created_timestamp
- * @property Carbon $updated_at
+ * @property-read CarbonImmutable $created_timestamp
+ * @property-read CarbonImmutable $updated_at
  */
 abstract class AnotherPrefixTimestamps3 extends Model
 {
@@ -4848,10 +4950,10 @@ exports[`prisma-models: generation with different prefix: Timestamps4 1`] = `
 
 namespace App\\\\Models\\\\Prisma;
 
+use Carbon\\\\CarbonImmutable;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
-use Illuminate\\\\Support\\\\Carbon;
 
 /**
  * AnotherPrefixTimestamps4 Model.
@@ -4874,8 +4976,8 @@ use Illuminate\\\\Support\\\\Carbon;
  * @method static      null|static find($id, $columns = ['*'])
  *
  * @property-read int $id
- * @property Carbon $created_at
- * @property Carbon $updated_at
+ * @property-read CarbonImmutable $created_at
+ * @property-read CarbonImmutable $updated_at
  */
 abstract class AnotherPrefixTimestamps4 extends Model
 {
@@ -4901,10 +5003,10 @@ exports[`prisma-models: generation with different prefix: Timestamps5 1`] = `
 
 namespace App\\\\Models\\\\Prisma;
 
+use Carbon\\\\CarbonImmutable;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
-use Illuminate\\\\Support\\\\Carbon;
 
 /**
  * AnotherPrefixTimestamps5 Model.
@@ -4927,8 +5029,8 @@ use Illuminate\\\\Support\\\\Carbon;
  * @method static      null|static find($id, $columns = ['*'])
  *
  * @property-read int $id
- * @property Carbon $created_at
- * @property Carbon $updated_at
+ * @property-read CarbonImmutable $created_at
+ * @property-read CarbonImmutable $updated_at
  */
 abstract class AnotherPrefixTimestamps5 extends Model
 {
@@ -4954,10 +5056,10 @@ exports[`prisma-models: generation with different prefix: Timestamps6 1`] = `
 
 namespace App\\\\Models\\\\Prisma;
 
+use Carbon\\\\CarbonImmutable;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
-use Illuminate\\\\Support\\\\Carbon;
 
 /**
  * AnotherPrefixTimestamps6 Model.
@@ -4980,8 +5082,8 @@ use Illuminate\\\\Support\\\\Carbon;
  * @method static      null|static find($id, $columns = ['*'])
  *
  * @property-read int $id
- * @property Carbon $created_at
- * @property Carbon $updated_timestamp
+ * @property-read CarbonImmutable $created_at
+ * @property-read CarbonImmutable $updated_timestamp
  */
 abstract class AnotherPrefixTimestamps6 extends Model
 {
@@ -5008,10 +5110,10 @@ exports[`prisma-models: generation with different prefix: Timestamps7 1`] = `
 
 namespace App\\\\Models\\\\Prisma;
 
+use Carbon\\\\CarbonImmutable;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
-use Illuminate\\\\Support\\\\Carbon;
 
 /**
  * AnotherPrefixTimestamps7 Model.
@@ -5034,8 +5136,8 @@ use Illuminate\\\\Support\\\\Carbon;
  * @method static      null|static find($id, $columns = ['*'])
  *
  * @property-read int $id
- * @property Carbon $created_at
- * @property Carbon $updated_at
+ * @property-read CarbonImmutable $created_at
+ * @property-read CarbonImmutable $updated_at
  */
 abstract class AnotherPrefixTimestamps7 extends Model
 {
@@ -5061,10 +5163,10 @@ exports[`prisma-models: generation with different prefix: Timestamps8 1`] = `
 
 namespace App\\\\Models\\\\Prisma;
 
+use Carbon\\\\CarbonImmutable;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
-use Illuminate\\\\Support\\\\Carbon;
 
 /**
  * AnotherPrefixTimestamps8 Model.
@@ -5087,8 +5189,8 @@ use Illuminate\\\\Support\\\\Carbon;
  * @method static      null|static find($id, $columns = ['*'])
  *
  * @property-read int $id
- * @property Carbon $created_at
- * @property Carbon $updated_timestamp
+ * @property-read CarbonImmutable $created_at
+ * @property-read CarbonImmutable $updated_timestamp
  */
 abstract class AnotherPrefixTimestamps8 extends Model
 {
@@ -5115,10 +5217,10 @@ exports[`prisma-models: generation with different prefix: Timestamps9 1`] = `
 
 namespace App\\\\Models\\\\Prisma;
 
+use Carbon\\\\CarbonImmutable;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
-use Illuminate\\\\Support\\\\Carbon;
 
 /**
  * AnotherPrefixTimestamps9 Model.
@@ -5141,8 +5243,8 @@ use Illuminate\\\\Support\\\\Carbon;
  * @method static      null|static find($id, $columns = ['*'])
  *
  * @property-read int $id
- * @property Carbon $created_at
- * @property Carbon $updated_at
+ * @property-read CarbonImmutable $created_at
+ * @property-read CarbonImmutable $updated_at
  */
 abstract class AnotherPrefixTimestamps9 extends Model
 {
@@ -5168,10 +5270,10 @@ exports[`prisma-models: generation with different prefix: Timestamps10 1`] = `
 
 namespace App\\\\Models\\\\Prisma;
 
+use Carbon\\\\CarbonImmutable;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
-use Illuminate\\\\Support\\\\Carbon;
 
 /**
  * AnotherPrefixTimestamps10 Model.
@@ -5194,8 +5296,8 @@ use Illuminate\\\\Support\\\\Carbon;
  * @method static      null|static find($id, $columns = ['*'])
  *
  * @property-read int $id
- * @property Carbon $created_at
- * @property Carbon $updated_timestamp
+ * @property-read CarbonImmutable $created_at
+ * @property-read CarbonImmutable $updated_timestamp
  */
 abstract class AnotherPrefixTimestamps10 extends Model
 {
@@ -5222,10 +5324,10 @@ exports[`prisma-models: generation with different prefix: Timestamps11 1`] = `
 
 namespace App\\\\Models\\\\Prisma;
 
+use Carbon\\\\CarbonImmutable;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
-use Illuminate\\\\Support\\\\Carbon;
 
 /**
  * AnotherPrefixTimestamps11 Model.
@@ -5248,8 +5350,8 @@ use Illuminate\\\\Support\\\\Carbon;
  * @method static      null|static find($id, $columns = ['*'])
  *
  * @property-read int $id
- * @property Carbon $created_timestamp
- * @property Carbon $updated_at
+ * @property-read CarbonImmutable $created_timestamp
+ * @property-read CarbonImmutable $updated_at
  */
 abstract class AnotherPrefixTimestamps11 extends Model
 {
@@ -5471,7 +5573,7 @@ abstract class AnotherPrefixType extends Model
         'blob' => 'integer',
         'speed' => 'double',
         'price' => 'string',
-        'birth' => 'immutable_datetime',
+        'birth' => 'datetime',
         'schema' => 'array',
     ];
 }
@@ -6907,7 +7009,7 @@ abstract class PrismaDefaultValue extends Model
             'name' => 'string',
             'age' => 'integer',
             'uuid' => 'string',
-            'now' => 'immutable_datetime',
+            'now' => 'datetime',
             'bool' => 'boolean',
             'role' => Role::class,
             ...$this->casts ?? [],
@@ -9197,6 +9299,53 @@ abstract class PrismaModelComment extends Model
 "
 `;
 
+exports[`prisma-models: generation without explicit table names on relations: ModelCustomPath 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * PrismaModelCustomPath Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ */
+abstract class PrismaModelCustomPath extends Model
+{
+    public $timestamps = false;
+    protected $table = 'ModelCustomPath';
+
+    protected array $rules = [
+        'id' => ['required', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+    ];
+}
+"
+`;
+
 exports[`prisma-models: generation without explicit table names on relations: ModelMultipleComments 1`] = `
 "<?php
 
@@ -10862,11 +11011,11 @@ namespace App\\\\Models\\\\Prisma;
 use App\\\\Enums\\\\Prisma\\\\PostType;
 use App\\\\Models\\\\Category;
 use App\\\\Models\\\\User;
+use Carbon\\\\CarbonImmutable;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Collection;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
-use Illuminate\\\\Support\\\\Carbon;
 use Illuminate\\\\Validation\\\\Rules\\\\Enum;
 
 /**
@@ -10894,8 +11043,8 @@ use Illuminate\\\\Validation\\\\Rules\\\\Enum;
  * @property bool     $published
  * @property PostType $type
  * @property int      $authorId
- * @property Carbon   $createdAt
- * @property Carbon   $updatedAt
+ * @property-read CarbonImmutable $createdAt
+ * @property-read CarbonImmutable $updatedAt
  * @property-read User $author
  * @property-read Collection<Category> $categories
  */
@@ -11092,6 +11241,61 @@ abstract class PrismaReadOnlyField extends Model
 "
 `;
 
+exports[`prisma-models: generation without explicit table names on relations: ReadonlyDatetime 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Carbon\\\\CarbonImmutable;
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+use Illuminate\\\\Support\\\\Carbon;
+
+/**
+ * PrismaReadonlyDatetime Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ * @property-read CarbonImmutable $readonly
+ * @property Carbon $editable
+ */
+abstract class PrismaReadonlyDatetime extends Model
+{
+    public $timestamps = false;
+    protected $table = 'ReadonlyDatetime';
+
+    protected array $rules = [
+        'id' => ['required', 'numeric', 'integer'],
+        'readonly' => ['required', 'date'],
+        'editable' => ['required', 'date'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'readonly' => 'immutable_datetime',
+        'editable' => 'datetime',
+    ];
+}
+"
+`;
+
 exports[`prisma-models: generation without explicit table names on relations: SelfRelation 1`] = `
 "<?php
 
@@ -11177,11 +11381,11 @@ exports[`prisma-models: generation without explicit table names on relations: So
 
 namespace App\\\\Models\\\\Prisma;
 
+use Carbon\\\\CarbonImmutable;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 use Illuminate\\\\Database\\\\Eloquent\\\\SoftDeletes;
-use Illuminate\\\\Support\\\\Carbon;
 
 /**
  * PrismaSoftDelete1 Model.
@@ -11206,7 +11410,7 @@ use Illuminate\\\\Support\\\\Carbon;
  * @property-read int $id
  * @property string $email
  * @property string $password
- * @property Carbon $deleted_at
+ * @property-read CarbonImmutable $deleted_at
  */
 abstract class PrismaSoftDelete1 extends Model
 {
@@ -11238,11 +11442,11 @@ exports[`prisma-models: generation without explicit table names on relations: So
 
 namespace App\\\\Models\\\\Prisma;
 
+use Carbon\\\\CarbonImmutable;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 use Illuminate\\\\Database\\\\Eloquent\\\\SoftDeletes;
-use Illuminate\\\\Support\\\\Carbon;
 
 /**
  * PrismaSoftDelete2 Model.
@@ -11267,7 +11471,7 @@ use Illuminate\\\\Support\\\\Carbon;
  * @property-read int $id
  * @property string $email
  * @property string $password
- * @property Carbon $deleted_timestamp
+ * @property-read CarbonImmutable $deleted_timestamp
  */
 abstract class PrismaSoftDelete2 extends Model
 {
@@ -11301,10 +11505,10 @@ exports[`prisma-models: generation without explicit table names on relations: Ti
 
 namespace App\\\\Models\\\\Prisma;
 
+use Carbon\\\\CarbonImmutable;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
-use Illuminate\\\\Support\\\\Carbon;
 
 /**
  * PrismaTimestamps1 Model.
@@ -11327,8 +11531,8 @@ use Illuminate\\\\Support\\\\Carbon;
  * @method static      null|static find($id, $columns = ['*'])
  *
  * @property-read int $id
- * @property Carbon $created_timestamp
- * @property Carbon $updated_timestamp
+ * @property-read CarbonImmutable $created_timestamp
+ * @property-read CarbonImmutable $updated_timestamp
  */
 abstract class PrismaTimestamps1 extends Model
 {
@@ -11356,10 +11560,10 @@ exports[`prisma-models: generation without explicit table names on relations: Ti
 
 namespace App\\\\Models\\\\Prisma;
 
+use Carbon\\\\CarbonImmutable;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
-use Illuminate\\\\Support\\\\Carbon;
 
 /**
  * PrismaTimestamps2 Model.
@@ -11382,8 +11586,8 @@ use Illuminate\\\\Support\\\\Carbon;
  * @method static      null|static find($id, $columns = ['*'])
  *
  * @property-read int $id
- * @property Carbon $created_at
- * @property Carbon $updated_timestamp
+ * @property-read CarbonImmutable $created_at
+ * @property-read CarbonImmutable $updated_timestamp
  */
 abstract class PrismaTimestamps2 extends Model
 {
@@ -11410,10 +11614,10 @@ exports[`prisma-models: generation without explicit table names on relations: Ti
 
 namespace App\\\\Models\\\\Prisma;
 
+use Carbon\\\\CarbonImmutable;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
-use Illuminate\\\\Support\\\\Carbon;
 
 /**
  * PrismaTimestamps3 Model.
@@ -11436,8 +11640,8 @@ use Illuminate\\\\Support\\\\Carbon;
  * @method static      null|static find($id, $columns = ['*'])
  *
  * @property-read int $id
- * @property Carbon $created_timestamp
- * @property Carbon $updated_at
+ * @property-read CarbonImmutable $created_timestamp
+ * @property-read CarbonImmutable $updated_at
  */
 abstract class PrismaTimestamps3 extends Model
 {
@@ -11464,10 +11668,10 @@ exports[`prisma-models: generation without explicit table names on relations: Ti
 
 namespace App\\\\Models\\\\Prisma;
 
+use Carbon\\\\CarbonImmutable;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
-use Illuminate\\\\Support\\\\Carbon;
 
 /**
  * PrismaTimestamps4 Model.
@@ -11490,8 +11694,8 @@ use Illuminate\\\\Support\\\\Carbon;
  * @method static      null|static find($id, $columns = ['*'])
  *
  * @property-read int $id
- * @property Carbon $created_at
- * @property Carbon $updated_at
+ * @property-read CarbonImmutable $created_at
+ * @property-read CarbonImmutable $updated_at
  */
 abstract class PrismaTimestamps4 extends Model
 {
@@ -11517,10 +11721,10 @@ exports[`prisma-models: generation without explicit table names on relations: Ti
 
 namespace App\\\\Models\\\\Prisma;
 
+use Carbon\\\\CarbonImmutable;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
-use Illuminate\\\\Support\\\\Carbon;
 
 /**
  * PrismaTimestamps5 Model.
@@ -11543,8 +11747,8 @@ use Illuminate\\\\Support\\\\Carbon;
  * @method static      null|static find($id, $columns = ['*'])
  *
  * @property-read int $id
- * @property Carbon $created_at
- * @property Carbon $updated_at
+ * @property-read CarbonImmutable $created_at
+ * @property-read CarbonImmutable $updated_at
  */
 abstract class PrismaTimestamps5 extends Model
 {
@@ -11570,10 +11774,10 @@ exports[`prisma-models: generation without explicit table names on relations: Ti
 
 namespace App\\\\Models\\\\Prisma;
 
+use Carbon\\\\CarbonImmutable;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
-use Illuminate\\\\Support\\\\Carbon;
 
 /**
  * PrismaTimestamps6 Model.
@@ -11596,8 +11800,8 @@ use Illuminate\\\\Support\\\\Carbon;
  * @method static      null|static find($id, $columns = ['*'])
  *
  * @property-read int $id
- * @property Carbon $created_at
- * @property Carbon $updated_timestamp
+ * @property-read CarbonImmutable $created_at
+ * @property-read CarbonImmutable $updated_timestamp
  */
 abstract class PrismaTimestamps6 extends Model
 {
@@ -11624,10 +11828,10 @@ exports[`prisma-models: generation without explicit table names on relations: Ti
 
 namespace App\\\\Models\\\\Prisma;
 
+use Carbon\\\\CarbonImmutable;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
-use Illuminate\\\\Support\\\\Carbon;
 
 /**
  * PrismaTimestamps7 Model.
@@ -11650,8 +11854,8 @@ use Illuminate\\\\Support\\\\Carbon;
  * @method static      null|static find($id, $columns = ['*'])
  *
  * @property-read int $id
- * @property Carbon $created_at
- * @property Carbon $updated_at
+ * @property-read CarbonImmutable $created_at
+ * @property-read CarbonImmutable $updated_at
  */
 abstract class PrismaTimestamps7 extends Model
 {
@@ -11677,10 +11881,10 @@ exports[`prisma-models: generation without explicit table names on relations: Ti
 
 namespace App\\\\Models\\\\Prisma;
 
+use Carbon\\\\CarbonImmutable;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
-use Illuminate\\\\Support\\\\Carbon;
 
 /**
  * PrismaTimestamps8 Model.
@@ -11703,8 +11907,8 @@ use Illuminate\\\\Support\\\\Carbon;
  * @method static      null|static find($id, $columns = ['*'])
  *
  * @property-read int $id
- * @property Carbon $created_at
- * @property Carbon $updated_timestamp
+ * @property-read CarbonImmutable $created_at
+ * @property-read CarbonImmutable $updated_timestamp
  */
 abstract class PrismaTimestamps8 extends Model
 {
@@ -11731,10 +11935,10 @@ exports[`prisma-models: generation without explicit table names on relations: Ti
 
 namespace App\\\\Models\\\\Prisma;
 
+use Carbon\\\\CarbonImmutable;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
-use Illuminate\\\\Support\\\\Carbon;
 
 /**
  * PrismaTimestamps9 Model.
@@ -11757,8 +11961,8 @@ use Illuminate\\\\Support\\\\Carbon;
  * @method static      null|static find($id, $columns = ['*'])
  *
  * @property-read int $id
- * @property Carbon $created_at
- * @property Carbon $updated_at
+ * @property-read CarbonImmutable $created_at
+ * @property-read CarbonImmutable $updated_at
  */
 abstract class PrismaTimestamps9 extends Model
 {
@@ -11784,10 +11988,10 @@ exports[`prisma-models: generation without explicit table names on relations: Ti
 
 namespace App\\\\Models\\\\Prisma;
 
+use Carbon\\\\CarbonImmutable;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
-use Illuminate\\\\Support\\\\Carbon;
 
 /**
  * PrismaTimestamps10 Model.
@@ -11810,8 +12014,8 @@ use Illuminate\\\\Support\\\\Carbon;
  * @method static      null|static find($id, $columns = ['*'])
  *
  * @property-read int $id
- * @property Carbon $created_at
- * @property Carbon $updated_timestamp
+ * @property-read CarbonImmutable $created_at
+ * @property-read CarbonImmutable $updated_timestamp
  */
 abstract class PrismaTimestamps10 extends Model
 {
@@ -11838,10 +12042,10 @@ exports[`prisma-models: generation without explicit table names on relations: Ti
 
 namespace App\\\\Models\\\\Prisma;
 
+use Carbon\\\\CarbonImmutable;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
-use Illuminate\\\\Support\\\\Carbon;
 
 /**
  * PrismaTimestamps11 Model.
@@ -11864,8 +12068,8 @@ use Illuminate\\\\Support\\\\Carbon;
  * @method static      null|static find($id, $columns = ['*'])
  *
  * @property-read int $id
- * @property Carbon $created_timestamp
- * @property Carbon $updated_at
+ * @property-read CarbonImmutable $created_timestamp
+ * @property-read CarbonImmutable $updated_at
  */
 abstract class PrismaTimestamps11 extends Model
 {
@@ -12087,7 +12291,7 @@ abstract class PrismaType extends Model
         'blob' => 'integer',
         'speed' => 'double',
         'price' => 'string',
-        'birth' => 'immutable_datetime',
+        'birth' => 'datetime',
         'schema' => 'array',
     ];
 }
@@ -13523,7 +13727,7 @@ abstract class PrismaDefaultValue extends Model
             'name' => 'string',
             'age' => 'integer',
             'uuid' => 'string',
-            'now' => 'immutable_datetime',
+            'now' => 'datetime',
             'bool' => 'boolean',
             'role' => Role::class,
             ...$this->casts ?? [],
@@ -15837,6 +16041,53 @@ abstract class PrismaModelComment extends Model
 "
 `;
 
+exports[`prisma-models: generation: ModelCustomPath 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+
+/**
+ * PrismaModelCustomPath Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ */
+abstract class PrismaModelCustomPath extends Model
+{
+    public $timestamps = false;
+    protected $table = 'ModelCustomPath';
+
+    protected array $rules = [
+        'id' => ['required', 'numeric', 'integer'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+    ];
+}
+"
+`;
+
 exports[`prisma-models: generation: ModelMultipleComments 1`] = `
 "<?php
 
@@ -17502,11 +17753,11 @@ namespace App\\\\Models\\\\Prisma;
 use App\\\\Enums\\\\Prisma\\\\PostType;
 use App\\\\Models\\\\Category;
 use App\\\\Models\\\\User;
+use Carbon\\\\CarbonImmutable;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Collection;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
-use Illuminate\\\\Support\\\\Carbon;
 use Illuminate\\\\Validation\\\\Rules\\\\Enum;
 
 /**
@@ -17534,8 +17785,8 @@ use Illuminate\\\\Validation\\\\Rules\\\\Enum;
  * @property bool     $published
  * @property PostType $type
  * @property int      $authorId
- * @property Carbon   $createdAt
- * @property Carbon   $updatedAt
+ * @property-read CarbonImmutable $createdAt
+ * @property-read CarbonImmutable $updatedAt
  * @property-read User $author
  * @property-read Collection<Category> $categories
  */
@@ -17732,6 +17983,61 @@ abstract class PrismaReadOnlyField extends Model
 "
 `;
 
+exports[`prisma-models: generation: ReadonlyDatetime 1`] = `
+"<?php
+
+namespace App\\\\Models\\\\Prisma;
+
+use Carbon\\\\CarbonImmutable;
+use Closure;
+use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
+use Illuminate\\\\Database\\\\Eloquent\\\\Model;
+use Illuminate\\\\Support\\\\Carbon;
+
+/**
+ * PrismaReadonlyDatetime Model.
+ *
+ * @mixin Builder
+ *
+ * @method static      Builder|static query()
+ * @method static      static make(array $attributes = [])
+ * @method static      static create(array $attributes = [])
+ * @method static      static forceCreate(array $attributes)
+ * @method static      firstOrNew(array $attributes = [], array $values = [])
+ * @method static      firstOrFail($columns = ['*'])
+ * @method static      firstOrCreate(array $attributes, array $values = [])
+ * @method static      firstOr($columns = ['*'], Closure $callback = null)
+ * @method static      firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+ * @method static      updateOrCreate(array $attributes, array $values = [])
+ * @method null|static first($columns = ['*'])
+ * @method static      static findOrFail($id, $columns = ['*'])
+ * @method static      static findOrNew($id, $columns = ['*'])
+ * @method static      null|static find($id, $columns = ['*'])
+ *
+ * @property-read int $id
+ * @property-read CarbonImmutable $readonly
+ * @property Carbon $editable
+ */
+abstract class PrismaReadonlyDatetime extends Model
+{
+    public $timestamps = false;
+    protected $table = 'ReadonlyDatetime';
+
+    protected array $rules = [
+        'id' => ['required', 'numeric', 'integer'],
+        'readonly' => ['required', 'date'],
+        'editable' => ['required', 'date'],
+    ];
+
+    protected $casts = [
+        'id' => 'integer',
+        'readonly' => 'immutable_datetime',
+        'editable' => 'datetime',
+    ];
+}
+"
+`;
+
 exports[`prisma-models: generation: SelfRelation 1`] = `
 "<?php
 
@@ -17817,11 +18123,11 @@ exports[`prisma-models: generation: SoftDelete1 1`] = `
 
 namespace App\\\\Models\\\\Prisma;
 
+use Carbon\\\\CarbonImmutable;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 use Illuminate\\\\Database\\\\Eloquent\\\\SoftDeletes;
-use Illuminate\\\\Support\\\\Carbon;
 
 /**
  * PrismaSoftDelete1 Model.
@@ -17846,7 +18152,7 @@ use Illuminate\\\\Support\\\\Carbon;
  * @property-read int $id
  * @property string $email
  * @property string $password
- * @property Carbon $deleted_at
+ * @property-read CarbonImmutable $deleted_at
  */
 abstract class PrismaSoftDelete1 extends Model
 {
@@ -17878,11 +18184,11 @@ exports[`prisma-models: generation: SoftDelete2 1`] = `
 
 namespace App\\\\Models\\\\Prisma;
 
+use Carbon\\\\CarbonImmutable;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
 use Illuminate\\\\Database\\\\Eloquent\\\\SoftDeletes;
-use Illuminate\\\\Support\\\\Carbon;
 
 /**
  * PrismaSoftDelete2 Model.
@@ -17907,7 +18213,7 @@ use Illuminate\\\\Support\\\\Carbon;
  * @property-read int $id
  * @property string $email
  * @property string $password
- * @property Carbon $deleted_timestamp
+ * @property-read CarbonImmutable $deleted_timestamp
  */
 abstract class PrismaSoftDelete2 extends Model
 {
@@ -17941,10 +18247,10 @@ exports[`prisma-models: generation: Timestamps1 1`] = `
 
 namespace App\\\\Models\\\\Prisma;
 
+use Carbon\\\\CarbonImmutable;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
-use Illuminate\\\\Support\\\\Carbon;
 
 /**
  * PrismaTimestamps1 Model.
@@ -17967,8 +18273,8 @@ use Illuminate\\\\Support\\\\Carbon;
  * @method static      null|static find($id, $columns = ['*'])
  *
  * @property-read int $id
- * @property Carbon $created_timestamp
- * @property Carbon $updated_timestamp
+ * @property-read CarbonImmutable $created_timestamp
+ * @property-read CarbonImmutable $updated_timestamp
  */
 abstract class PrismaTimestamps1 extends Model
 {
@@ -17996,10 +18302,10 @@ exports[`prisma-models: generation: Timestamps2 1`] = `
 
 namespace App\\\\Models\\\\Prisma;
 
+use Carbon\\\\CarbonImmutable;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
-use Illuminate\\\\Support\\\\Carbon;
 
 /**
  * PrismaTimestamps2 Model.
@@ -18022,8 +18328,8 @@ use Illuminate\\\\Support\\\\Carbon;
  * @method static      null|static find($id, $columns = ['*'])
  *
  * @property-read int $id
- * @property Carbon $created_at
- * @property Carbon $updated_timestamp
+ * @property-read CarbonImmutable $created_at
+ * @property-read CarbonImmutable $updated_timestamp
  */
 abstract class PrismaTimestamps2 extends Model
 {
@@ -18050,10 +18356,10 @@ exports[`prisma-models: generation: Timestamps3 1`] = `
 
 namespace App\\\\Models\\\\Prisma;
 
+use Carbon\\\\CarbonImmutable;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
-use Illuminate\\\\Support\\\\Carbon;
 
 /**
  * PrismaTimestamps3 Model.
@@ -18076,8 +18382,8 @@ use Illuminate\\\\Support\\\\Carbon;
  * @method static      null|static find($id, $columns = ['*'])
  *
  * @property-read int $id
- * @property Carbon $created_timestamp
- * @property Carbon $updated_at
+ * @property-read CarbonImmutable $created_timestamp
+ * @property-read CarbonImmutable $updated_at
  */
 abstract class PrismaTimestamps3 extends Model
 {
@@ -18104,10 +18410,10 @@ exports[`prisma-models: generation: Timestamps4 1`] = `
 
 namespace App\\\\Models\\\\Prisma;
 
+use Carbon\\\\CarbonImmutable;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
-use Illuminate\\\\Support\\\\Carbon;
 
 /**
  * PrismaTimestamps4 Model.
@@ -18130,8 +18436,8 @@ use Illuminate\\\\Support\\\\Carbon;
  * @method static      null|static find($id, $columns = ['*'])
  *
  * @property-read int $id
- * @property Carbon $created_at
- * @property Carbon $updated_at
+ * @property-read CarbonImmutable $created_at
+ * @property-read CarbonImmutable $updated_at
  */
 abstract class PrismaTimestamps4 extends Model
 {
@@ -18157,10 +18463,10 @@ exports[`prisma-models: generation: Timestamps5 1`] = `
 
 namespace App\\\\Models\\\\Prisma;
 
+use Carbon\\\\CarbonImmutable;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
-use Illuminate\\\\Support\\\\Carbon;
 
 /**
  * PrismaTimestamps5 Model.
@@ -18183,8 +18489,8 @@ use Illuminate\\\\Support\\\\Carbon;
  * @method static      null|static find($id, $columns = ['*'])
  *
  * @property-read int $id
- * @property Carbon $created_at
- * @property Carbon $updated_at
+ * @property-read CarbonImmutable $created_at
+ * @property-read CarbonImmutable $updated_at
  */
 abstract class PrismaTimestamps5 extends Model
 {
@@ -18210,10 +18516,10 @@ exports[`prisma-models: generation: Timestamps6 1`] = `
 
 namespace App\\\\Models\\\\Prisma;
 
+use Carbon\\\\CarbonImmutable;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
-use Illuminate\\\\Support\\\\Carbon;
 
 /**
  * PrismaTimestamps6 Model.
@@ -18236,8 +18542,8 @@ use Illuminate\\\\Support\\\\Carbon;
  * @method static      null|static find($id, $columns = ['*'])
  *
  * @property-read int $id
- * @property Carbon $created_at
- * @property Carbon $updated_timestamp
+ * @property-read CarbonImmutable $created_at
+ * @property-read CarbonImmutable $updated_timestamp
  */
 abstract class PrismaTimestamps6 extends Model
 {
@@ -18264,10 +18570,10 @@ exports[`prisma-models: generation: Timestamps7 1`] = `
 
 namespace App\\\\Models\\\\Prisma;
 
+use Carbon\\\\CarbonImmutable;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
-use Illuminate\\\\Support\\\\Carbon;
 
 /**
  * PrismaTimestamps7 Model.
@@ -18290,8 +18596,8 @@ use Illuminate\\\\Support\\\\Carbon;
  * @method static      null|static find($id, $columns = ['*'])
  *
  * @property-read int $id
- * @property Carbon $created_at
- * @property Carbon $updated_at
+ * @property-read CarbonImmutable $created_at
+ * @property-read CarbonImmutable $updated_at
  */
 abstract class PrismaTimestamps7 extends Model
 {
@@ -18317,10 +18623,10 @@ exports[`prisma-models: generation: Timestamps8 1`] = `
 
 namespace App\\\\Models\\\\Prisma;
 
+use Carbon\\\\CarbonImmutable;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
-use Illuminate\\\\Support\\\\Carbon;
 
 /**
  * PrismaTimestamps8 Model.
@@ -18343,8 +18649,8 @@ use Illuminate\\\\Support\\\\Carbon;
  * @method static      null|static find($id, $columns = ['*'])
  *
  * @property-read int $id
- * @property Carbon $created_at
- * @property Carbon $updated_timestamp
+ * @property-read CarbonImmutable $created_at
+ * @property-read CarbonImmutable $updated_timestamp
  */
 abstract class PrismaTimestamps8 extends Model
 {
@@ -18371,10 +18677,10 @@ exports[`prisma-models: generation: Timestamps9 1`] = `
 
 namespace App\\\\Models\\\\Prisma;
 
+use Carbon\\\\CarbonImmutable;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
-use Illuminate\\\\Support\\\\Carbon;
 
 /**
  * PrismaTimestamps9 Model.
@@ -18397,8 +18703,8 @@ use Illuminate\\\\Support\\\\Carbon;
  * @method static      null|static find($id, $columns = ['*'])
  *
  * @property-read int $id
- * @property Carbon $created_at
- * @property Carbon $updated_at
+ * @property-read CarbonImmutable $created_at
+ * @property-read CarbonImmutable $updated_at
  */
 abstract class PrismaTimestamps9 extends Model
 {
@@ -18424,10 +18730,10 @@ exports[`prisma-models: generation: Timestamps10 1`] = `
 
 namespace App\\\\Models\\\\Prisma;
 
+use Carbon\\\\CarbonImmutable;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
-use Illuminate\\\\Support\\\\Carbon;
 
 /**
  * PrismaTimestamps10 Model.
@@ -18450,8 +18756,8 @@ use Illuminate\\\\Support\\\\Carbon;
  * @method static      null|static find($id, $columns = ['*'])
  *
  * @property-read int $id
- * @property Carbon $created_at
- * @property Carbon $updated_timestamp
+ * @property-read CarbonImmutable $created_at
+ * @property-read CarbonImmutable $updated_timestamp
  */
 abstract class PrismaTimestamps10 extends Model
 {
@@ -18478,10 +18784,10 @@ exports[`prisma-models: generation: Timestamps11 1`] = `
 
 namespace App\\\\Models\\\\Prisma;
 
+use Carbon\\\\CarbonImmutable;
 use Closure;
 use Illuminate\\\\Database\\\\Eloquent\\\\Builder;
 use Illuminate\\\\Database\\\\Eloquent\\\\Model;
-use Illuminate\\\\Support\\\\Carbon;
 
 /**
  * PrismaTimestamps11 Model.
@@ -18504,8 +18810,8 @@ use Illuminate\\\\Support\\\\Carbon;
  * @method static      null|static find($id, $columns = ['*'])
  *
  * @property-read int $id
- * @property Carbon $created_timestamp
- * @property Carbon $updated_at
+ * @property-read CarbonImmutable $created_timestamp
+ * @property-read CarbonImmutable $updated_at
  */
 abstract class PrismaTimestamps11 extends Model
 {
@@ -18727,7 +19033,7 @@ abstract class PrismaType extends Model
         'blob' => 'integer',
         'speed' => 'double',
         'price' => 'string',
-        'birth' => 'immutable_datetime',
+        'birth' => 'datetime',
         'schema' => 'array',
     ];
 }
