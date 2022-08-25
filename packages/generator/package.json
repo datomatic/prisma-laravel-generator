@@ -25,7 +25,6 @@
     "type": "individual",
     "url": "https://www.paypal.com/donate/?business=W55676S5ZH78W&no_recurring=0&item_name=Support+me+for+the+development+and+maintainance+of+my+open-source+projects%21+Any+amount+will+be+appreciated%21+%F0%9F%8D%BB&currency_code=EUR"
   },
-  "private": true,
   "version": "0.1.0",
   "main": "dist/generator.js",
   "bin": {

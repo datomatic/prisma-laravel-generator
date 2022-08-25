@@ -27,7 +27,8 @@
   },
   "private": true,
   "workspaces": [
-    "packages/*"
+    "packages/generator",
+    "packages/usage"
   ],
   "scripts": {
     "prepare": "husky install",
