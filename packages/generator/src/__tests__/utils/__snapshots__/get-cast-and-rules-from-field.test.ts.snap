@@ -288,6 +288,86 @@ Object {
 }
 `;
 
+exports[`getCastAndRulesFromField: DefaultValues - listBool 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "array",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "array",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: DefaultValues - listEnum 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "array",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "array",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: DefaultValues - listInt 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "array",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "array",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+  ],
+}
+`;
+
+exports[`getCastAndRulesFromField: DefaultValues - listString 1`] = `
+Object {
+  "cast": Object {
+    "isMethodCall": false,
+    "value": "array",
+  },
+  "imports": Set {},
+  "rules": Array [
+    Object {
+      "isMethodCall": false,
+      "value": "array",
+    },
+    Object {
+      "isMethodCall": false,
+      "value": "required",
+    },
+  ],
+}
+`;
+
 exports[`getCastAndRulesFromField: DefaultValues - name 1`] = `
 Object {
   "cast": Object {

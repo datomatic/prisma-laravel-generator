@@ -15,7 +15,7 @@ Array [
     "type": "String",
   },
   Object {
-    "attributes": "@relation(references: [id])",
+    "attributes": undefined,
     "comment": undefined,
     "id": "posts",
     "type": "Post[]",
@@ -72,6 +72,30 @@ Array [
     "comment": undefined,
     "id": "role",
     "type": "Role",
+  },
+  Object {
+    "attributes": "@default([1, 3, 5])",
+    "comment": undefined,
+    "id": "listInt",
+    "type": "Int[]",
+  },
+  Object {
+    "attributes": "@default([\\"a\\", \\"b\\", \\"c\\"])",
+    "comment": undefined,
+    "id": "listString",
+    "type": "String[]",
+  },
+  Object {
+    "attributes": "@default([false, true, false])",
+    "comment": undefined,
+    "id": "listBool",
+    "type": "Boolean[]",
+  },
+  Object {
+    "attributes": "@default([USER, ADMIN])",
+    "comment": undefined,
+    "id": "listEnum",
+    "type": "Role[]",
   },
 ]
 `;
@@ -1609,7 +1633,7 @@ Array [
     "type": "Int",
   },
   Object {
-    "attributes": "@relation(references: [id])",
+    "attributes": undefined,
     "comment": undefined,
     "id": "categories",
     "type": "Category[]",

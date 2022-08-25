@@ -26,6 +26,14 @@ exports[`getMapFieldAnnotation: not mapped fields: DefaultValues - email 1`] = `
 
 exports[`getMapFieldAnnotation: not mapped fields: DefaultValues - id 1`] = `false`;
 
+exports[`getMapFieldAnnotation: not mapped fields: DefaultValues - listBool 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: DefaultValues - listEnum 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: DefaultValues - listInt 1`] = `false`;
+
+exports[`getMapFieldAnnotation: not mapped fields: DefaultValues - listString 1`] = `false`;
+
 exports[`getMapFieldAnnotation: not mapped fields: DefaultValues - name 1`] = `false`;
 
 exports[`getMapFieldAnnotation: not mapped fields: DefaultValues - now 1`] = `false`;

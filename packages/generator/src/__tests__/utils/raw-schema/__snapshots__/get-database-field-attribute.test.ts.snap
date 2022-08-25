@@ -14,6 +14,14 @@ exports[`getDatabaseFieldAnnotation: DefaultValues - email 1`] = `false`;
 
 exports[`getDatabaseFieldAnnotation: DefaultValues - id 1`] = `false`;
 
+exports[`getDatabaseFieldAnnotation: DefaultValues - listBool 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: DefaultValues - listEnum 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: DefaultValues - listInt 1`] = `false`;
+
+exports[`getDatabaseFieldAnnotation: DefaultValues - listString 1`] = `false`;
+
 exports[`getDatabaseFieldAnnotation: DefaultValues - name 1`] = `false`;
 
 exports[`getDatabaseFieldAnnotation: DefaultValues - now 1`] = `false`;

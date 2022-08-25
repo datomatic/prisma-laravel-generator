@@ -74,6 +74,40 @@ Object {
 }
 `;
 
+exports[`getDefaultFromField: DefaultValues - listBool 1`] = `
+Object {
+  "defaultValue": "[false, true, false]",
+  "imports": Set {},
+  "isMethodCall": true,
+}
+`;
+
+exports[`getDefaultFromField: DefaultValues - listEnum 1`] = `
+Object {
+  "defaultValue": "[Role::USER, Role::ADMIN]",
+  "imports": Set {
+    "App\\\\Enums\\\\Prisma\\\\Role",
+  },
+  "isMethodCall": true,
+}
+`;
+
+exports[`getDefaultFromField: DefaultValues - listInt 1`] = `
+Object {
+  "defaultValue": "[1, 3, 5]",
+  "imports": Set {},
+  "isMethodCall": true,
+}
+`;
+
+exports[`getDefaultFromField: DefaultValues - listString 1`] = `
+Object {
+  "defaultValue": "['a', 'b', 'c']",
+  "imports": Set {},
+  "isMethodCall": true,
+}
+`;
+
 exports[`getDefaultFromField: DefaultValues - name 1`] = `
 Object {
   "defaultValue": "N.A.",

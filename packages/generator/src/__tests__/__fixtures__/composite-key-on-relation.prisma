@@ -16,6 +16,7 @@ model CompositeKeyB {
   relatedId1 Int
   relatedId2 Int
   related    CompositeKeyA @relation(fields: [relatedId1, relatedId2], references: [id, otherId])
+  @@unique([relatedId1, relatedId2])
 }
 
 model CompositeKeyA2 {
