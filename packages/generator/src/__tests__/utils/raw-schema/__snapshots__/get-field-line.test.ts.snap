@@ -20,7 +20,7 @@ Object {
 
 exports[`getFieldLine: Category - posts 1`] = `
 Object {
-  "attributes": "@relation(references: [id])",
+  "attributes": undefined,
   "comment": undefined,
   "id": "posts",
   "type": "Post[]",
@@ -60,6 +60,42 @@ Object {
   "comment": undefined,
   "id": "id",
   "type": "Int",
+}
+`;
+
+exports[`getFieldLine: DefaultValues - listBool 1`] = `
+Object {
+  "attributes": "@default([false, true, false])",
+  "comment": undefined,
+  "id": "listBool",
+  "type": "Boolean[]",
+}
+`;
+
+exports[`getFieldLine: DefaultValues - listEnum 1`] = `
+Object {
+  "attributes": "@default([USER, ADMIN])",
+  "comment": undefined,
+  "id": "listEnum",
+  "type": "Role[]",
+}
+`;
+
+exports[`getFieldLine: DefaultValues - listInt 1`] = `
+Object {
+  "attributes": "@default([1, 3, 5])",
+  "comment": undefined,
+  "id": "listInt",
+  "type": "Int[]",
+}
+`;
+
+exports[`getFieldLine: DefaultValues - listString 1`] = `
+Object {
+  "attributes": "@default([\\"a\\", \\"b\\", \\"c\\"])",
+  "comment": undefined,
+  "id": "listString",
+  "type": "String[]",
 }
 `;
 
@@ -1829,7 +1865,7 @@ Object {
 
 exports[`getFieldLine: Post - categories 1`] = `
 Object {
-  "attributes": "@relation(references: [id])",
+  "attributes": undefined,
   "comment": undefined,
   "id": "categories",
   "type": "Category[]",

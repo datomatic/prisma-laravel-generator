@@ -56,6 +56,40 @@ Object {
 }
 `;
 
+exports[`getPhpDocPropertiesFromField: DefaultValues - listBool 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "bool[]",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: DefaultValues - listEnum 1`] = `
+Object {
+  "imports": Set {
+    "App\\\\Enums\\\\Prisma\\\\Role",
+  },
+  "phpType": "Role[]",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: DefaultValues - listInt 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int[]",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: DefaultValues - listString 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "string[]",
+  "readOnly": false,
+}
+`;
+
 exports[`getPhpDocPropertiesFromField: DefaultValues - name 1`] = `
 Object {
   "imports": Set {},

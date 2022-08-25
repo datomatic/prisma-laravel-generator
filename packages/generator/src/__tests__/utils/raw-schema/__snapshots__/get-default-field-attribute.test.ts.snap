@@ -14,6 +14,14 @@ exports[`getDefaultFieldAnnotation: DefaultValues - email 1`] = `"\\"hello@world
 
 exports[`getDefaultFieldAnnotation: DefaultValues - id 1`] = `"autoincrement()"`;
 
+exports[`getDefaultFieldAnnotation: DefaultValues - listBool 1`] = `"[false, true, false]"`;
+
+exports[`getDefaultFieldAnnotation: DefaultValues - listEnum 1`] = `"[USER, ADMIN]"`;
+
+exports[`getDefaultFieldAnnotation: DefaultValues - listInt 1`] = `"[1, 3, 5]"`;
+
+exports[`getDefaultFieldAnnotation: DefaultValues - listString 1`] = `"[\\"a\\", \\"b\\", \\"c\\"]"`;
+
 exports[`getDefaultFieldAnnotation: DefaultValues - name 1`] = `"\\"N.A.\\""`;
 
 exports[`getDefaultFieldAnnotation: DefaultValues - now 1`] = `"now()"`;

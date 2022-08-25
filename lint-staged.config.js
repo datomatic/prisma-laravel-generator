@@ -8,5 +8,5 @@ module.exports = {
   ],
   // Run prisma format on all prisma schemas
   '**/*.prisma': filenames =>
-    filenames.map(filename => `yarn prisma format --schema ${filename}`),
+    filenames.map(filename => `yarn prisma format ${filename}`),
 };

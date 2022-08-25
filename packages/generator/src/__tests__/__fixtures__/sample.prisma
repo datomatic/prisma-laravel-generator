@@ -26,7 +26,7 @@ model Post {
   type       PostType
   author     User       @relation(fields: [authorId], references: [id])
   authorId   Int
-  categories Category[] @relation(references: [id])
+  categories Category[]
   createdAt  DateTime /// created_at
   updatedAt  DateTime /// updated_at
 }
@@ -34,7 +34,7 @@ model Post {
 model Category {
   id    Int    @id @default(autoincrement())
   name  String
-  posts Post[] @relation(references: [id])
+  posts Post[]
 }
 
 enum Role {
@@ -276,14 +276,18 @@ model WithGlobalStringPrimaryKeyDifferentName {
 }
 
 model DefaultValues {
-  id    Int      @id @default(autoincrement())
-  email String   @default("hello@world.test")
-  name  String?  @default("N.A.")
-  age   Int      @default(18)
-  uuid  String   @default(uuid())
-  now   DateTime @default(now())
-  bool  Boolean  @default(true)
-  role  Role     @default(USER)
+  id            Int        @id @default(autoincrement())
+  email         String     @default("hello@world.test")
+  name          String?    @default("N.A.")
+  age           Int        @default(18)
+  uuid          String     @default(uuid())
+  now           DateTime   @default(now())
+  bool          Boolean    @default(true)
+  role          Role       @default(USER)
+  listInt       Int[]      @default([1, 3, 5])
+  listString    String[]   @default(["a", "b", "c"])
+  listBool      Boolean[]  @default([false, true, false])
+  listEnum      Role[]     @default([USER, ADMIN])
 }
 
 model ReadonlyDatetime {

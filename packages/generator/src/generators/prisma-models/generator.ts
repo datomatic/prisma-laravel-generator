@@ -1,5 +1,5 @@
 import {ConnectorType, DMMF} from '@prisma/generator-helper';
-import _ from 'lodash';
+import _, {isArray} from 'lodash';
 import getClassFromFQCN from '../../utils/get-class-from-fqcn';
 import CompositeKeyError from '../../errors/composite-key-error';
 import getPrismaFqcn from '../../helpers/get-prisma-fqcn';
@@ -388,6 +388,7 @@ const generatePrismaModel = (
         ${
           !primaryKeyField.hasDefaultValue ||
           typeof primaryKeyField.default !== 'object' ||
+          isArray(primaryKeyField.default) ||
           primaryKeyField.default.name !== 'autoincrement'
             ? 'public $incrementing = false;'
             : isPivot

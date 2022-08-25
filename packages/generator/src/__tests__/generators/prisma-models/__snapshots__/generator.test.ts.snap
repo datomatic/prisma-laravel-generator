@@ -220,13 +220,17 @@ use Illuminate\\\\Validation\\\\Rules\\\\Enum;
  * @method static      null|static find($id, $columns = ['*'])
  *
  * @property-read int $id
- * @property string  $email
- * @property ?string $name
- * @property int     $age
- * @property string  $uuid
- * @property Carbon  $now
- * @property bool    $bool
- * @property Role    $role
+ * @property string   $email
+ * @property ?string  $name
+ * @property int      $age
+ * @property string   $uuid
+ * @property Carbon   $now
+ * @property bool     $bool
+ * @property Role     $role
+ * @property int[]    $listInt
+ * @property string[] $listString
+ * @property bool[]   $listBool
+ * @property Role[]   $listEnum
  */
 abstract class AnotherPrefixDefaultValue extends Model
 {
@@ -248,6 +252,10 @@ abstract class AnotherPrefixDefaultValue extends Model
             'uuid' => Str::orderedUuid(),
             'bool' => true,
             'role' => Role::USER,
+            'listInt' => [1, 3, 5],
+            'listString' => ['a', 'b', 'c'],
+            'listBool' => [false, true, false],
+            'listEnum' => [Role::USER, Role::ADMIN],
             ...$this->attributes ?? [],
         ];
         $this->rules = [
@@ -259,6 +267,10 @@ abstract class AnotherPrefixDefaultValue extends Model
             'now' => ['required', 'date'],
             'bool' => ['required', 'boolean'],
             'role' => ['required', new Enum(Role::class)],
+            'listInt' => ['array', 'required'],
+            'listString' => ['array', 'required'],
+            'listBool' => ['array', 'required'],
+            'listEnum' => ['array', 'required'],
             ...$this->rules ?? [],
         ];
         $this->casts = [
@@ -270,6 +282,10 @@ abstract class AnotherPrefixDefaultValue extends Model
             'now' => 'datetime',
             'bool' => 'boolean',
             'role' => Role::class,
+            'listInt' => 'array',
+            'listString' => 'array',
+            'listBool' => 'array',
+            'listEnum' => 'array',
             ...$this->casts ?? [],
         ];
         parent::__construct($attributes);
@@ -7254,13 +7270,17 @@ use Illuminate\\\\Validation\\\\Rules\\\\Enum;
  * @method static      null|static find($id, $columns = ['*'])
  *
  * @property-read int $id
- * @property string  $email
- * @property ?string $name
- * @property int     $age
- * @property string  $uuid
- * @property Carbon  $now
- * @property bool    $bool
- * @property Role    $role
+ * @property string   $email
+ * @property ?string  $name
+ * @property int      $age
+ * @property string   $uuid
+ * @property Carbon   $now
+ * @property bool     $bool
+ * @property Role     $role
+ * @property int[]    $listInt
+ * @property string[] $listString
+ * @property bool[]   $listBool
+ * @property Role[]   $listEnum
  */
 abstract class PrismaDefaultValue extends Model
 {
@@ -7282,6 +7302,10 @@ abstract class PrismaDefaultValue extends Model
             'uuid' => Str::orderedUuid(),
             'bool' => true,
             'role' => Role::USER,
+            'listInt' => [1, 3, 5],
+            'listString' => ['a', 'b', 'c'],
+            'listBool' => [false, true, false],
+            'listEnum' => [Role::USER, Role::ADMIN],
             ...$this->attributes ?? [],
         ];
         $this->rules = [
@@ -7293,6 +7317,10 @@ abstract class PrismaDefaultValue extends Model
             'now' => ['required', 'date'],
             'bool' => ['required', 'boolean'],
             'role' => ['required', new Enum(Role::class)],
+            'listInt' => ['array', 'required'],
+            'listString' => ['array', 'required'],
+            'listBool' => ['array', 'required'],
+            'listEnum' => ['array', 'required'],
             ...$this->rules ?? [],
         ];
         $this->casts = [
@@ -7304,6 +7332,10 @@ abstract class PrismaDefaultValue extends Model
             'now' => 'datetime',
             'bool' => 'boolean',
             'role' => Role::class,
+            'listInt' => 'array',
+            'listString' => 'array',
+            'listBool' => 'array',
+            'listEnum' => 'array',
             ...$this->casts ?? [],
         ];
         parent::__construct($attributes);
@@ -14264,13 +14296,17 @@ use Illuminate\\\\Validation\\\\Rules\\\\Enum;
  * @method static      null|static find($id, $columns = ['*'])
  *
  * @property-read int $id
- * @property string  $email
- * @property ?string $name
- * @property int     $age
- * @property string  $uuid
- * @property Carbon  $now
- * @property bool    $bool
- * @property Role    $role
+ * @property string   $email
+ * @property ?string  $name
+ * @property int      $age
+ * @property string   $uuid
+ * @property Carbon   $now
+ * @property bool     $bool
+ * @property Role     $role
+ * @property int[]    $listInt
+ * @property string[] $listString
+ * @property bool[]   $listBool
+ * @property Role[]   $listEnum
  */
 abstract class PrismaDefaultValue extends Model
 {
@@ -14292,6 +14328,10 @@ abstract class PrismaDefaultValue extends Model
             'uuid' => Str::orderedUuid(),
             'bool' => true,
             'role' => Role::USER,
+            'listInt' => [1, 3, 5],
+            'listString' => ['a', 'b', 'c'],
+            'listBool' => [false, true, false],
+            'listEnum' => [Role::USER, Role::ADMIN],
             ...$this->attributes ?? [],
         ];
         $this->rules = [
@@ -14303,6 +14343,10 @@ abstract class PrismaDefaultValue extends Model
             'now' => ['required', 'date'],
             'bool' => ['required', 'boolean'],
             'role' => ['required', new Enum(Role::class)],
+            'listInt' => ['array', 'required'],
+            'listString' => ['array', 'required'],
+            'listBool' => ['array', 'required'],
+            'listEnum' => ['array', 'required'],
             ...$this->rules ?? [],
         ];
         $this->casts = [
@@ -14314,6 +14358,10 @@ abstract class PrismaDefaultValue extends Model
             'now' => 'datetime',
             'bool' => 'boolean',
             'role' => Role::class,
+            'listInt' => 'array',
+            'listString' => 'array',
+            'listBool' => 'array',
+            'listEnum' => 'array',
             ...$this->casts ?? [],
         ];
         parent::__construct($attributes);
