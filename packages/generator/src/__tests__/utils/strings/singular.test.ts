@@ -1,5 +1,4 @@
 import {singular} from 'pluralize';
-import plural from '../../../utils/strings/plural';
 
 const testWords = [
   ['', ''],

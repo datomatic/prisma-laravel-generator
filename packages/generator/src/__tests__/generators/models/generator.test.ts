@@ -12,8 +12,8 @@ test('models: generation', async () => {
       expect(
         await format(
           generateModel(modelInfo),
-          './../usage/tools/php-cs-fixer/vendor/bin/php-cs-fixer',
-          './../usage/tools/php-cs-fixer/.php-cs.dist.php',
+          './../../tools/php-cs-fixer/vendor/bin/php-cs-fixer',
+          './../../tools/php-cs-fixer/.php-cs.dist.php',
         ),
       ).toMatchSnapshot(modelInfo.name);
     }),
@@ -28,8 +28,8 @@ test('models: generation with different prefix', async () => {
       expect(
         await format(
           generateModel(modelInfo, 'AnotherPrefix'),
-          './../usage/tools/php-cs-fixer/vendor/bin/php-cs-fixer',
-          './../usage/tools/php-cs-fixer/.php-cs.dist.php',
+          './../../tools/php-cs-fixer/vendor/bin/php-cs-fixer',
+          './../../tools/php-cs-fixer/.php-cs.dist.php',
         ),
       ).toMatchSnapshot(modelInfo.name);
     }),

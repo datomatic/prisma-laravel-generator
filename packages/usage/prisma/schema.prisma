@@ -1,8 +1,8 @@
 generator laravel_generator {
   provider             = "node ../../node_modules/prisma-laravel-generator"
   output               = "../generated"
-  phpCsFixerBinPath    = "./tools/php-cs-fixer/vendor/bin/php-cs-fixer"
-  phpCsFixerConfigPath = "./tools/php-cs-fixer/.php-cs.dist.php"
+  phpCsFixerBinPath    = "../../tools/php-cs-fixer/vendor/bin/php-cs-fixer"
+  phpCsFixerConfigPath = "../../tools/php-cs-fixer/.php-cs.dist.php"
 }
 
 datasource db {
@@ -71,7 +71,7 @@ model Category {
 }
 
 enum Role {
-  GUEST      @map("1")
-  MODERATOR  @map("2")
-  ADMIN      @map("3")
+  GUEST     @map("1")
+  MODERATOR @map("2")
+  ADMIN     @map("3")
 }

@@ -41,7 +41,7 @@ jobs:
           path: "**/vendor"
           key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
       - name: Install composer dependencies
-        working-directory: ./packages/usage/tools/php-cs-fixer
+        working-directory: ./tools/php-cs-fixer
         run: composer install
       - name: Run Tests 🧪
         run: yarn workspace prisma-laravel-generator run test:coverage
@@ -70,7 +70,7 @@ jobs:
           path: "**/vendor"
           key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
       - name: Install composer dependencies
-        working-directory: ./packages/usage/tools/php-cs-fixer
+        working-directory: ./tools/php-cs-fixer
         run: composer install
       - name: Publish 🚀
         working-directory: ./packages/generator
