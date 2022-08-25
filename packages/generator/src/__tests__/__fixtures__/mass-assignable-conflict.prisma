@@ -1,0 +1,25 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+/// mass-assignable
+model MassAssignableConflict1 {
+  id        Int    @id @default(autoincrement())
+  email     String /// guarded
+  firstname String
+}
+
+/// mass-assignable
+model MassAssignableConflict2 {
+  id        Int    @id @default(autoincrement())
+  email     String
+  firstname String /// fillable
+}
+
+/// mass-assignable
+model MassAssignableConflict3 {
+  id        Int    @id @default(autoincrement())
+  email     String /// guarded
+  firstname String /// fillable
+}

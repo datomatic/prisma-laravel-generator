@@ -1,0 +1,4105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`models: generation with different prefix: Category 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixCategory;
+
+/**
+ * Category Model.
+ *
+ * {@inheritdoc}
+ */
+class Category extends AnotherPrefixCategory
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: DefaultValues 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixDefaultValue;
+
+/**
+ * DefaultValue Model.
+ *
+ * {@inheritdoc}
+ */
+class DefaultValue extends AnotherPrefixDefaultValue
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: DefaultValuesWithoutMethodCall 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixDefaultValuesWithoutMethodCall;
+
+/**
+ * DefaultValuesWithoutMethodCall Model.
+ *
+ * {@inheritdoc}
+ */
+class DefaultValuesWithoutMethodCall extends AnotherPrefixDefaultValuesWithoutMethodCall
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: EagerLoadA 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixEagerLoadA;
+
+/**
+ * EagerLoadA Model.
+ *
+ * {@inheritdoc}
+ */
+class EagerLoadA extends AnotherPrefixEagerLoadA
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: EagerLoadB 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixEagerLoadB;
+
+/**
+ * EagerLoadB Model.
+ *
+ * {@inheritdoc}
+ */
+class EagerLoadB extends AnotherPrefixEagerLoadB
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: ExplicitManyToManyA 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixExplicitManyToManyA;
+
+/**
+ * ExplicitManyToManyA Model.
+ *
+ * {@inheritdoc}
+ */
+class ExplicitManyToManyA extends AnotherPrefixExplicitManyToManyA
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: ExplicitManyToManyA2 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixExplicitManyToManyA2;
+
+/**
+ * ExplicitManyToManyA2 Model.
+ *
+ * {@inheritdoc}
+ */
+class ExplicitManyToManyA2 extends AnotherPrefixExplicitManyToManyA2
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: ExplicitManyToManyA3 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixExplicitManyToManyA3;
+
+/**
+ * ExplicitManyToManyA3 Model.
+ *
+ * {@inheritdoc}
+ */
+class ExplicitManyToManyA3 extends AnotherPrefixExplicitManyToManyA3
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: ExplicitManyToManyA4 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixExplicitManyToManyA4;
+
+/**
+ * ExplicitManyToManyA4 Model.
+ *
+ * {@inheritdoc}
+ */
+class ExplicitManyToManyA4 extends AnotherPrefixExplicitManyToManyA4
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: ExplicitManyToManyA5 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixExplicitManyToManyA5;
+
+/**
+ * ExplicitManyToManyA5 Model.
+ *
+ * {@inheritdoc}
+ */
+class ExplicitManyToManyA5 extends AnotherPrefixExplicitManyToManyA5
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: ExplicitManyToManyA6 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixExplicitManyToManyA6;
+
+/**
+ * ExplicitManyToManyA6 Model.
+ *
+ * {@inheritdoc}
+ */
+class ExplicitManyToManyA6 extends AnotherPrefixExplicitManyToManyA6
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: ExplicitManyToManyA7 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixExplicitManyToManyA7;
+
+/**
+ * ExplicitManyToManyA7 Model.
+ *
+ * {@inheritdoc}
+ */
+class ExplicitManyToManyA7 extends AnotherPrefixExplicitManyToManyA7
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: ExplicitManyToManyB 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixExplicitManyToManyB;
+
+/**
+ * ExplicitManyToManyB Model.
+ *
+ * {@inheritdoc}
+ */
+class ExplicitManyToManyB extends AnotherPrefixExplicitManyToManyB
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: ExplicitManyToManyB2 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixExplicitManyToManyB2;
+
+/**
+ * ExplicitManyToManyB2 Model.
+ *
+ * {@inheritdoc}
+ */
+class ExplicitManyToManyB2 extends AnotherPrefixExplicitManyToManyB2
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: ExplicitManyToManyB3 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixExplicitManyToManyB3;
+
+/**
+ * ExplicitManyToManyB3 Model.
+ *
+ * {@inheritdoc}
+ */
+class ExplicitManyToManyB3 extends AnotherPrefixExplicitManyToManyB3
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: ExplicitManyToManyB4 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixExplicitManyToManyB4;
+
+/**
+ * ExplicitManyToManyB4 Model.
+ *
+ * {@inheritdoc}
+ */
+class ExplicitManyToManyB4 extends AnotherPrefixExplicitManyToManyB4
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: ExplicitManyToManyB5 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixExplicitManyToManyB5;
+
+/**
+ * ExplicitManyToManyB5 Model.
+ *
+ * {@inheritdoc}
+ */
+class ExplicitManyToManyB5 extends AnotherPrefixExplicitManyToManyB5
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: ExplicitManyToManyB6 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixExplicitManyToManyB6;
+
+/**
+ * ExplicitManyToManyB6 Model.
+ *
+ * {@inheritdoc}
+ */
+class ExplicitManyToManyB6 extends AnotherPrefixExplicitManyToManyB6
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: ExplicitManyToManyB7 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixExplicitManyToManyB7;
+
+/**
+ * ExplicitManyToManyB7 Model.
+ *
+ * {@inheritdoc}
+ */
+class ExplicitManyToManyB7 extends AnotherPrefixExplicitManyToManyB7
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: ExplicitManyToManyPivot 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixExplicitManyToManyPivot;
+
+/**
+ * ExplicitManyToManyPivot Model.
+ *
+ * {@inheritdoc}
+ */
+class ExplicitManyToManyPivot extends AnotherPrefixExplicitManyToManyPivot
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: ExplicitManyToManyPivot2 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixExplicitManyToManyPivot2;
+
+/**
+ * ExplicitManyToManyPivot2 Model.
+ *
+ * {@inheritdoc}
+ */
+class ExplicitManyToManyPivot2 extends AnotherPrefixExplicitManyToManyPivot2
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: ExplicitManyToManyPivot3 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixExplicitManyToManyPivot3;
+
+/**
+ * ExplicitManyToManyPivot3 Model.
+ *
+ * {@inheritdoc}
+ */
+class ExplicitManyToManyPivot3 extends AnotherPrefixExplicitManyToManyPivot3
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: ExplicitManyToManyPivot4 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixExplicitManyToManyPivot4;
+
+/**
+ * ExplicitManyToManyPivot4 Model.
+ *
+ * {@inheritdoc}
+ */
+class ExplicitManyToManyPivot4 extends AnotherPrefixExplicitManyToManyPivot4
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: ExplicitManyToManyPivot5 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixExplicitManyToManyPivot5;
+
+/**
+ * ExplicitManyToManyPivot5 Model.
+ *
+ * {@inheritdoc}
+ */
+class ExplicitManyToManyPivot5 extends AnotherPrefixExplicitManyToManyPivot5
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: ExplicitManyToManyPivot6 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixExplicitManyToManyPivot6;
+
+/**
+ * ExplicitManyToManyPivot6 Model.
+ *
+ * {@inheritdoc}
+ */
+class ExplicitManyToManyPivot6 extends AnotherPrefixExplicitManyToManyPivot6
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: ExplicitManyToManyPivot7 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixExplicitManyToManyPivot7;
+
+/**
+ * ExplicitManyToManyPivot7 Model.
+ *
+ * {@inheritdoc}
+ */
+class ExplicitManyToManyPivot7 extends AnotherPrefixExplicitManyToManyPivot7
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: ExtendAlias 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixExtendAlias;
+
+/**
+ * ExtendAlias Model.
+ *
+ * {@inheritdoc}
+ */
+class ExtendAlias extends AnotherPrefixExtendAlias
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: ExtendAlias2 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixExtendAlias2;
+
+/**
+ * ExtendAlias2 Model.
+ *
+ * {@inheritdoc}
+ */
+class ExtendAlias2 extends AnotherPrefixExtendAlias2
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: FieldComments 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixFieldComment;
+
+/**
+ * FieldComment Model.
+ *
+ * {@inheritdoc}
+ */
+class FieldComment extends AnotherPrefixFieldComment
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: FieldMultipleComments 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixFieldMultipleComment;
+
+/**
+ * FieldMultipleComment Model.
+ *
+ * {@inheritdoc}
+ */
+class FieldMultipleComment extends AnotherPrefixFieldMultipleComment
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: Fillable 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixFillable;
+
+/**
+ * Fillable Model.
+ *
+ * {@inheritdoc}
+ */
+class Fillable extends AnotherPrefixFillable
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: Guarded 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixGuarded;
+
+/**
+ * Guarded Model.
+ *
+ * {@inheritdoc}
+ */
+class Guarded extends AnotherPrefixGuarded
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: Hidden 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixHidden;
+
+/**
+ * Hidden Model.
+ *
+ * {@inheritdoc}
+ */
+class Hidden extends AnotherPrefixHidden
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: Ignore 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixIgnore;
+
+/**
+ * Ignore Model.
+ *
+ * {@inheritdoc}
+ */
+class Ignore extends AnotherPrefixIgnore
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: ImplicitManyToManyA 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixImplicitManyToManyA;
+
+/**
+ * ImplicitManyToManyA Model.
+ *
+ * {@inheritdoc}
+ */
+class ImplicitManyToManyA extends AnotherPrefixImplicitManyToManyA
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: ImplicitManyToManyB 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixImplicitManyToManyB;
+
+/**
+ * ImplicitManyToManyB Model.
+ *
+ * {@inheritdoc}
+ */
+class ImplicitManyToManyB extends AnotherPrefixImplicitManyToManyB
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: InterfaceWithAlias 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixInterfaceWithAlias;
+
+/**
+ * InterfaceWithAlias Model.
+ *
+ * {@inheritdoc}
+ */
+class InterfaceWithAlias extends AnotherPrefixInterfaceWithAlias
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: InterfaceWithAlias2 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixInterfaceWithAlias2;
+
+/**
+ * InterfaceWithAlias2 Model.
+ *
+ * {@inheritdoc}
+ */
+class InterfaceWithAlias2 extends AnotherPrefixInterfaceWithAlias2
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: MappedId 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixMappedId;
+
+/**
+ * MappedId Model.
+ *
+ * {@inheritdoc}
+ */
+class MappedId extends AnotherPrefixMappedId
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: MassAssignable 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixMassAssignable;
+
+/**
+ * MassAssignable Model.
+ *
+ * {@inheritdoc}
+ */
+class MassAssignable extends AnotherPrefixMassAssignable
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: ModelComments 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixModelComment;
+
+/**
+ * ModelComment Model.
+ *
+ * {@inheritdoc}
+ */
+class ModelComment extends AnotherPrefixModelComment
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: ModelCustomPath 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixModelCustomPath;
+
+/**
+ * ModelCustomPath Model.
+ *
+ * {@inheritdoc}
+ */
+class ModelCustomPath extends AnotherPrefixModelCustomPath
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: ModelMultipleComments 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixModelMultipleComment;
+
+/**
+ * ModelMultipleComment Model.
+ *
+ * {@inheritdoc}
+ */
+class ModelMultipleComment extends AnotherPrefixModelMultipleComment
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: MultipleComments 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixMultipleComment;
+
+/**
+ * MultipleComment Model.
+ *
+ * {@inheritdoc}
+ */
+class MultipleComment extends AnotherPrefixMultipleComment
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: MultipleUnique 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixMultipleUnique;
+
+/**
+ * MultipleUnique Model.
+ *
+ * {@inheritdoc}
+ */
+class MultipleUnique extends AnotherPrefixMultipleUnique
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: MultipleUnique2 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixMultipleUnique2;
+
+/**
+ * MultipleUnique2 Model.
+ *
+ * {@inheritdoc}
+ */
+class MultipleUnique2 extends AnotherPrefixMultipleUnique2
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: NoPrimaryKey 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixNoPrimaryKey;
+
+/**
+ * NoPrimaryKey Model.
+ *
+ * {@inheritdoc}
+ */
+class NoPrimaryKey extends AnotherPrefixNoPrimaryKey
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: NoRules 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixNoRule;
+
+/**
+ * NoRule Model.
+ *
+ * {@inheritdoc}
+ */
+class NoRule extends AnotherPrefixNoRule
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: NullableField 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixNullableField;
+
+/**
+ * NullableField Model.
+ *
+ * {@inheritdoc}
+ */
+class NullableField extends AnotherPrefixNullableField
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: OneToManyA 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixOneToManyA;
+
+/**
+ * OneToManyA Model.
+ *
+ * {@inheritdoc}
+ */
+class OneToManyA extends AnotherPrefixOneToManyA
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: OneToManyA2 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixOneToManyA2;
+
+/**
+ * OneToManyA2 Model.
+ *
+ * {@inheritdoc}
+ */
+class OneToManyA2 extends AnotherPrefixOneToManyA2
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: OneToManyA3 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixOneToManyA3;
+
+/**
+ * OneToManyA3 Model.
+ *
+ * {@inheritdoc}
+ */
+class OneToManyA3 extends AnotherPrefixOneToManyA3
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: OneToManyA4 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixOneToManyA4;
+
+/**
+ * OneToManyA4 Model.
+ *
+ * {@inheritdoc}
+ */
+class OneToManyA4 extends AnotherPrefixOneToManyA4
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: OneToManyB 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixOneToManyB;
+
+/**
+ * OneToManyB Model.
+ *
+ * {@inheritdoc}
+ */
+class OneToManyB extends AnotherPrefixOneToManyB
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: OneToManyB2 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixOneToManyB2;
+
+/**
+ * OneToManyB2 Model.
+ *
+ * {@inheritdoc}
+ */
+class OneToManyB2 extends AnotherPrefixOneToManyB2
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: OneToManyB3 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixOneToManyB3;
+
+/**
+ * OneToManyB3 Model.
+ *
+ * {@inheritdoc}
+ */
+class OneToManyB3 extends AnotherPrefixOneToManyB3
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: OneToManyB4 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixOneToManyB4;
+
+/**
+ * OneToManyB4 Model.
+ *
+ * {@inheritdoc}
+ */
+class OneToManyB4 extends AnotherPrefixOneToManyB4
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: OneToOneA 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixOneToOneA;
+
+/**
+ * OneToOneA Model.
+ *
+ * {@inheritdoc}
+ */
+class OneToOneA extends AnotherPrefixOneToOneA
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: OneToOneA2 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixOneToOneA2;
+
+/**
+ * OneToOneA2 Model.
+ *
+ * {@inheritdoc}
+ */
+class OneToOneA2 extends AnotherPrefixOneToOneA2
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: OneToOneA3 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixOneToOneA3;
+
+/**
+ * OneToOneA3 Model.
+ *
+ * {@inheritdoc}
+ */
+class OneToOneA3 extends AnotherPrefixOneToOneA3
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: OneToOneA4 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixOneToOneA4;
+
+/**
+ * OneToOneA4 Model.
+ *
+ * {@inheritdoc}
+ */
+class OneToOneA4 extends AnotherPrefixOneToOneA4
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: OneToOneA5 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixOneToOneA5;
+
+/**
+ * OneToOneA5 Model.
+ *
+ * {@inheritdoc}
+ */
+class OneToOneA5 extends AnotherPrefixOneToOneA5
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: OneToOneB 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixOneToOneB;
+
+/**
+ * OneToOneB Model.
+ *
+ * {@inheritdoc}
+ */
+class OneToOneB extends AnotherPrefixOneToOneB
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: OneToOneB2 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixOneToOneB2;
+
+/**
+ * OneToOneB2 Model.
+ *
+ * {@inheritdoc}
+ */
+class OneToOneB2 extends AnotherPrefixOneToOneB2
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: OneToOneB3 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixOneToOneB3;
+
+/**
+ * OneToOneB3 Model.
+ *
+ * {@inheritdoc}
+ */
+class OneToOneB3 extends AnotherPrefixOneToOneB3
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: OneToOneB4 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixOneToOneB4;
+
+/**
+ * OneToOneB4 Model.
+ *
+ * {@inheritdoc}
+ */
+class OneToOneB4 extends AnotherPrefixOneToOneB4
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: OneToOneB5 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixOneToOneB5;
+
+/**
+ * OneToOneB5 Model.
+ *
+ * {@inheritdoc}
+ */
+class OneToOneB5 extends AnotherPrefixOneToOneB5
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: PivotWithCustomExtend 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixPivotWithCustomExtend;
+
+/**
+ * PivotWithCustomExtend Model.
+ *
+ * {@inheritdoc}
+ */
+class PivotWithCustomExtend extends AnotherPrefixPivotWithCustomExtend
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: Post 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixPost;
+
+/**
+ * Post Model.
+ *
+ * {@inheritdoc}
+ */
+class Post extends AnotherPrefixPost
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: Profile 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixProfile;
+
+/**
+ * Profile Model.
+ *
+ * {@inheritdoc}
+ */
+class Profile extends AnotherPrefixProfile
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: ReadOnlyField 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixReadOnlyField;
+
+/**
+ * ReadOnlyField Model.
+ *
+ * {@inheritdoc}
+ */
+class ReadOnlyField extends AnotherPrefixReadOnlyField
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: ReadonlyDatetime 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixReadonlyDatetime;
+
+/**
+ * ReadonlyDatetime Model.
+ *
+ * {@inheritdoc}
+ */
+class ReadonlyDatetime extends AnotherPrefixReadonlyDatetime
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: SelfRelation 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixSelfRelation;
+
+/**
+ * SelfRelation Model.
+ *
+ * {@inheritdoc}
+ */
+class SelfRelation extends AnotherPrefixSelfRelation
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: SoftDelete1 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixSoftDelete1;
+
+/**
+ * SoftDelete1 Model.
+ *
+ * {@inheritdoc}
+ */
+class SoftDelete1 extends AnotherPrefixSoftDelete1
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: SoftDelete2 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixSoftDelete2;
+
+/**
+ * SoftDelete2 Model.
+ *
+ * {@inheritdoc}
+ */
+class SoftDelete2 extends AnotherPrefixSoftDelete2
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: Timestamps1 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixTimestamps1;
+
+/**
+ * Timestamps1 Model.
+ *
+ * {@inheritdoc}
+ */
+class Timestamps1 extends AnotherPrefixTimestamps1
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: Timestamps2 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixTimestamps2;
+
+/**
+ * Timestamps2 Model.
+ *
+ * {@inheritdoc}
+ */
+class Timestamps2 extends AnotherPrefixTimestamps2
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: Timestamps3 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixTimestamps3;
+
+/**
+ * Timestamps3 Model.
+ *
+ * {@inheritdoc}
+ */
+class Timestamps3 extends AnotherPrefixTimestamps3
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: Timestamps4 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixTimestamps4;
+
+/**
+ * Timestamps4 Model.
+ *
+ * {@inheritdoc}
+ */
+class Timestamps4 extends AnotherPrefixTimestamps4
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: Timestamps5 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixTimestamps5;
+
+/**
+ * Timestamps5 Model.
+ *
+ * {@inheritdoc}
+ */
+class Timestamps5 extends AnotherPrefixTimestamps5
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: Timestamps6 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixTimestamps6;
+
+/**
+ * Timestamps6 Model.
+ *
+ * {@inheritdoc}
+ */
+class Timestamps6 extends AnotherPrefixTimestamps6
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: Timestamps7 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixTimestamps7;
+
+/**
+ * Timestamps7 Model.
+ *
+ * {@inheritdoc}
+ */
+class Timestamps7 extends AnotherPrefixTimestamps7
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: Timestamps8 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixTimestamps8;
+
+/**
+ * Timestamps8 Model.
+ *
+ * {@inheritdoc}
+ */
+class Timestamps8 extends AnotherPrefixTimestamps8
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: Timestamps9 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixTimestamps9;
+
+/**
+ * Timestamps9 Model.
+ *
+ * {@inheritdoc}
+ */
+class Timestamps9 extends AnotherPrefixTimestamps9
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: Timestamps10 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixTimestamps10;
+
+/**
+ * Timestamps10 Model.
+ *
+ * {@inheritdoc}
+ */
+class Timestamps10 extends AnotherPrefixTimestamps10
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: Timestamps11 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixTimestamps11;
+
+/**
+ * Timestamps11 Model.
+ *
+ * {@inheritdoc}
+ */
+class Timestamps11 extends AnotherPrefixTimestamps11
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: TouchingA 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixTouchingA;
+
+/**
+ * TouchingA Model.
+ *
+ * {@inheritdoc}
+ */
+class TouchingA extends AnotherPrefixTouchingA
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: TouchingB 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixTouchingB;
+
+/**
+ * TouchingB Model.
+ *
+ * {@inheritdoc}
+ */
+class TouchingB extends AnotherPrefixTouchingB
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: TraitWithAlias 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixTraitWithAlias;
+
+/**
+ * TraitWithAlias Model.
+ *
+ * {@inheritdoc}
+ */
+class TraitWithAlias extends AnotherPrefixTraitWithAlias
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: TraitWithAlias2 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixTraitWithAlias2;
+
+/**
+ * TraitWithAlias2 Model.
+ *
+ * {@inheritdoc}
+ */
+class TraitWithAlias2 extends AnotherPrefixTraitWithAlias2
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: Types 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixType;
+
+/**
+ * Type Model.
+ *
+ * {@inheritdoc}
+ */
+class Type extends AnotherPrefixType
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: Unique 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixUnique;
+
+/**
+ * Unique Model.
+ *
+ * {@inheritdoc}
+ */
+class Unique extends AnotherPrefixUnique
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: UnsupportedTypes 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixUnsupportedType;
+
+/**
+ * UnsupportedType Model.
+ *
+ * {@inheritdoc}
+ */
+class UnsupportedType extends AnotherPrefixUnsupportedType
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: User 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixUser;
+
+/**
+ * User Model.
+ *
+ * {@inheritdoc}
+ */
+class User extends AnotherPrefixUser
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: Visible 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixVisible;
+
+/**
+ * Visible Model.
+ *
+ * {@inheritdoc}
+ */
+class Visible extends AnotherPrefixVisible
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: WithArray 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixWithArray;
+
+/**
+ * WithArray Model.
+ *
+ * {@inheritdoc}
+ */
+class WithArray extends AnotherPrefixWithArray
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: WithBackedEnum 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixWithBackedEnum;
+
+/**
+ * WithBackedEnum Model.
+ *
+ * {@inheritdoc}
+ */
+class WithBackedEnum extends AnotherPrefixWithBackedEnum
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: WithCustomExtend 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixWithCustomExtend;
+
+/**
+ * WithCustomExtend Model.
+ *
+ * {@inheritdoc}
+ */
+class WithCustomExtend extends AnotherPrefixWithCustomExtend
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: WithDbType 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixWithDbType;
+
+/**
+ * WithDbType Model.
+ *
+ * {@inheritdoc}
+ */
+class WithDbType extends AnotherPrefixWithDbType
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: WithEnum 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixWithEnum;
+
+/**
+ * WithEnum Model.
+ *
+ * {@inheritdoc}
+ */
+class WithEnum extends AnotherPrefixWithEnum
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: WithGlobalPrimaryKey 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixWithGlobalPrimaryKey;
+
+/**
+ * WithGlobalPrimaryKey Model.
+ *
+ * {@inheritdoc}
+ */
+class WithGlobalPrimaryKey extends AnotherPrefixWithGlobalPrimaryKey
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: WithGlobalPrimaryKeyDifferentName 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixWithGlobalPrimaryKeyDifferentName;
+
+/**
+ * WithGlobalPrimaryKeyDifferentName Model.
+ *
+ * {@inheritdoc}
+ */
+class WithGlobalPrimaryKeyDifferentName extends AnotherPrefixWithGlobalPrimaryKeyDifferentName
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: WithGlobalStringPrimaryKey 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixWithGlobalStringPrimaryKey;
+
+/**
+ * WithGlobalStringPrimaryKey Model.
+ *
+ * {@inheritdoc}
+ */
+class WithGlobalStringPrimaryKey extends AnotherPrefixWithGlobalStringPrimaryKey
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: WithGlobalStringPrimaryKeyDifferentName 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixWithGlobalStringPrimaryKeyDifferentName;
+
+/**
+ * WithGlobalStringPrimaryKeyDifferentName Model.
+ *
+ * {@inheritdoc}
+ */
+class WithGlobalStringPrimaryKeyDifferentName extends AnotherPrefixWithGlobalStringPrimaryKeyDifferentName
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: WithInterface 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixWithInterface;
+
+/**
+ * WithInterface Model.
+ *
+ * {@inheritdoc}
+ */
+class WithInterface extends AnotherPrefixWithInterface
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: WithMultipleInterfaces 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixWithMultipleInterface;
+
+/**
+ * WithMultipleInterface Model.
+ *
+ * {@inheritdoc}
+ */
+class WithMultipleInterface extends AnotherPrefixWithMultipleInterface
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: WithMultipleTraits 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixWithMultipleTrait;
+
+/**
+ * WithMultipleTrait Model.
+ *
+ * {@inheritdoc}
+ */
+class WithMultipleTrait extends AnotherPrefixWithMultipleTrait
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: WithPrimaryKey 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixWithPrimaryKey;
+
+/**
+ * WithPrimaryKey Model.
+ *
+ * {@inheritdoc}
+ */
+class WithPrimaryKey extends AnotherPrefixWithPrimaryKey
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: WithPrimaryKeyDifferentName 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixWithPrimaryKeyDifferentName;
+
+/**
+ * WithPrimaryKeyDifferentName Model.
+ *
+ * {@inheritdoc}
+ */
+class WithPrimaryKeyDifferentName extends AnotherPrefixWithPrimaryKeyDifferentName
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: WithStringPrimaryKey 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixWithStringPrimaryKey;
+
+/**
+ * WithStringPrimaryKey Model.
+ *
+ * {@inheritdoc}
+ */
+class WithStringPrimaryKey extends AnotherPrefixWithStringPrimaryKey
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: WithStringPrimaryKeyDifferentName 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixWithStringPrimaryKeyDifferentName;
+
+/**
+ * WithStringPrimaryKeyDifferentName Model.
+ *
+ * {@inheritdoc}
+ */
+class WithStringPrimaryKeyDifferentName extends AnotherPrefixWithStringPrimaryKeyDifferentName
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: WithTableMap 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixWithTableMap;
+
+/**
+ * WithTableMap Model.
+ *
+ * {@inheritdoc}
+ */
+class WithTableMap extends AnotherPrefixWithTableMap
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: WithTrait 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixWithTrait;
+
+/**
+ * WithTrait Model.
+ *
+ * {@inheritdoc}
+ */
+class WithTrait extends AnotherPrefixWithTrait
+{
+}
+"
+`;
+
+exports[`models: generation with different prefix: snake_cased_models 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\AnotherPrefixSnakeCasedModel;
+
+/**
+ * SnakeCasedModel Model.
+ *
+ * {@inheritdoc}
+ */
+class SnakeCasedModel extends AnotherPrefixSnakeCasedModel
+{
+}
+"
+`;
+
+exports[`models: generation: Category 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaCategory;
+
+/**
+ * Category Model.
+ *
+ * {@inheritdoc}
+ */
+class Category extends PrismaCategory
+{
+}
+"
+`;
+
+exports[`models: generation: DefaultValues 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaDefaultValue;
+
+/**
+ * DefaultValue Model.
+ *
+ * {@inheritdoc}
+ */
+class DefaultValue extends PrismaDefaultValue
+{
+}
+"
+`;
+
+exports[`models: generation: DefaultValuesWithoutMethodCall 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaDefaultValuesWithoutMethodCall;
+
+/**
+ * DefaultValuesWithoutMethodCall Model.
+ *
+ * {@inheritdoc}
+ */
+class DefaultValuesWithoutMethodCall extends PrismaDefaultValuesWithoutMethodCall
+{
+}
+"
+`;
+
+exports[`models: generation: EagerLoadA 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaEagerLoadA;
+
+/**
+ * EagerLoadA Model.
+ *
+ * {@inheritdoc}
+ */
+class EagerLoadA extends PrismaEagerLoadA
+{
+}
+"
+`;
+
+exports[`models: generation: EagerLoadB 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaEagerLoadB;
+
+/**
+ * EagerLoadB Model.
+ *
+ * {@inheritdoc}
+ */
+class EagerLoadB extends PrismaEagerLoadB
+{
+}
+"
+`;
+
+exports[`models: generation: ExplicitManyToManyA 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaExplicitManyToManyA;
+
+/**
+ * ExplicitManyToManyA Model.
+ *
+ * {@inheritdoc}
+ */
+class ExplicitManyToManyA extends PrismaExplicitManyToManyA
+{
+}
+"
+`;
+
+exports[`models: generation: ExplicitManyToManyA2 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaExplicitManyToManyA2;
+
+/**
+ * ExplicitManyToManyA2 Model.
+ *
+ * {@inheritdoc}
+ */
+class ExplicitManyToManyA2 extends PrismaExplicitManyToManyA2
+{
+}
+"
+`;
+
+exports[`models: generation: ExplicitManyToManyA3 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaExplicitManyToManyA3;
+
+/**
+ * ExplicitManyToManyA3 Model.
+ *
+ * {@inheritdoc}
+ */
+class ExplicitManyToManyA3 extends PrismaExplicitManyToManyA3
+{
+}
+"
+`;
+
+exports[`models: generation: ExplicitManyToManyA4 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaExplicitManyToManyA4;
+
+/**
+ * ExplicitManyToManyA4 Model.
+ *
+ * {@inheritdoc}
+ */
+class ExplicitManyToManyA4 extends PrismaExplicitManyToManyA4
+{
+}
+"
+`;
+
+exports[`models: generation: ExplicitManyToManyA5 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaExplicitManyToManyA5;
+
+/**
+ * ExplicitManyToManyA5 Model.
+ *
+ * {@inheritdoc}
+ */
+class ExplicitManyToManyA5 extends PrismaExplicitManyToManyA5
+{
+}
+"
+`;
+
+exports[`models: generation: ExplicitManyToManyA6 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaExplicitManyToManyA6;
+
+/**
+ * ExplicitManyToManyA6 Model.
+ *
+ * {@inheritdoc}
+ */
+class ExplicitManyToManyA6 extends PrismaExplicitManyToManyA6
+{
+}
+"
+`;
+
+exports[`models: generation: ExplicitManyToManyA7 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaExplicitManyToManyA7;
+
+/**
+ * ExplicitManyToManyA7 Model.
+ *
+ * {@inheritdoc}
+ */
+class ExplicitManyToManyA7 extends PrismaExplicitManyToManyA7
+{
+}
+"
+`;
+
+exports[`models: generation: ExplicitManyToManyB 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaExplicitManyToManyB;
+
+/**
+ * ExplicitManyToManyB Model.
+ *
+ * {@inheritdoc}
+ */
+class ExplicitManyToManyB extends PrismaExplicitManyToManyB
+{
+}
+"
+`;
+
+exports[`models: generation: ExplicitManyToManyB2 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaExplicitManyToManyB2;
+
+/**
+ * ExplicitManyToManyB2 Model.
+ *
+ * {@inheritdoc}
+ */
+class ExplicitManyToManyB2 extends PrismaExplicitManyToManyB2
+{
+}
+"
+`;
+
+exports[`models: generation: ExplicitManyToManyB3 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaExplicitManyToManyB3;
+
+/**
+ * ExplicitManyToManyB3 Model.
+ *
+ * {@inheritdoc}
+ */
+class ExplicitManyToManyB3 extends PrismaExplicitManyToManyB3
+{
+}
+"
+`;
+
+exports[`models: generation: ExplicitManyToManyB4 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaExplicitManyToManyB4;
+
+/**
+ * ExplicitManyToManyB4 Model.
+ *
+ * {@inheritdoc}
+ */
+class ExplicitManyToManyB4 extends PrismaExplicitManyToManyB4
+{
+}
+"
+`;
+
+exports[`models: generation: ExplicitManyToManyB5 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaExplicitManyToManyB5;
+
+/**
+ * ExplicitManyToManyB5 Model.
+ *
+ * {@inheritdoc}
+ */
+class ExplicitManyToManyB5 extends PrismaExplicitManyToManyB5
+{
+}
+"
+`;
+
+exports[`models: generation: ExplicitManyToManyB6 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaExplicitManyToManyB6;
+
+/**
+ * ExplicitManyToManyB6 Model.
+ *
+ * {@inheritdoc}
+ */
+class ExplicitManyToManyB6 extends PrismaExplicitManyToManyB6
+{
+}
+"
+`;
+
+exports[`models: generation: ExplicitManyToManyB7 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaExplicitManyToManyB7;
+
+/**
+ * ExplicitManyToManyB7 Model.
+ *
+ * {@inheritdoc}
+ */
+class ExplicitManyToManyB7 extends PrismaExplicitManyToManyB7
+{
+}
+"
+`;
+
+exports[`models: generation: ExplicitManyToManyPivot 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaExplicitManyToManyPivot;
+
+/**
+ * ExplicitManyToManyPivot Model.
+ *
+ * {@inheritdoc}
+ */
+class ExplicitManyToManyPivot extends PrismaExplicitManyToManyPivot
+{
+}
+"
+`;
+
+exports[`models: generation: ExplicitManyToManyPivot2 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaExplicitManyToManyPivot2;
+
+/**
+ * ExplicitManyToManyPivot2 Model.
+ *
+ * {@inheritdoc}
+ */
+class ExplicitManyToManyPivot2 extends PrismaExplicitManyToManyPivot2
+{
+}
+"
+`;
+
+exports[`models: generation: ExplicitManyToManyPivot3 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaExplicitManyToManyPivot3;
+
+/**
+ * ExplicitManyToManyPivot3 Model.
+ *
+ * {@inheritdoc}
+ */
+class ExplicitManyToManyPivot3 extends PrismaExplicitManyToManyPivot3
+{
+}
+"
+`;
+
+exports[`models: generation: ExplicitManyToManyPivot4 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaExplicitManyToManyPivot4;
+
+/**
+ * ExplicitManyToManyPivot4 Model.
+ *
+ * {@inheritdoc}
+ */
+class ExplicitManyToManyPivot4 extends PrismaExplicitManyToManyPivot4
+{
+}
+"
+`;
+
+exports[`models: generation: ExplicitManyToManyPivot5 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaExplicitManyToManyPivot5;
+
+/**
+ * ExplicitManyToManyPivot5 Model.
+ *
+ * {@inheritdoc}
+ */
+class ExplicitManyToManyPivot5 extends PrismaExplicitManyToManyPivot5
+{
+}
+"
+`;
+
+exports[`models: generation: ExplicitManyToManyPivot6 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaExplicitManyToManyPivot6;
+
+/**
+ * ExplicitManyToManyPivot6 Model.
+ *
+ * {@inheritdoc}
+ */
+class ExplicitManyToManyPivot6 extends PrismaExplicitManyToManyPivot6
+{
+}
+"
+`;
+
+exports[`models: generation: ExplicitManyToManyPivot7 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaExplicitManyToManyPivot7;
+
+/**
+ * ExplicitManyToManyPivot7 Model.
+ *
+ * {@inheritdoc}
+ */
+class ExplicitManyToManyPivot7 extends PrismaExplicitManyToManyPivot7
+{
+}
+"
+`;
+
+exports[`models: generation: ExtendAlias 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaExtendAlias;
+
+/**
+ * ExtendAlias Model.
+ *
+ * {@inheritdoc}
+ */
+class ExtendAlias extends PrismaExtendAlias
+{
+}
+"
+`;
+
+exports[`models: generation: ExtendAlias2 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaExtendAlias2;
+
+/**
+ * ExtendAlias2 Model.
+ *
+ * {@inheritdoc}
+ */
+class ExtendAlias2 extends PrismaExtendAlias2
+{
+}
+"
+`;
+
+exports[`models: generation: FieldComments 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaFieldComment;
+
+/**
+ * FieldComment Model.
+ *
+ * {@inheritdoc}
+ */
+class FieldComment extends PrismaFieldComment
+{
+}
+"
+`;
+
+exports[`models: generation: FieldMultipleComments 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaFieldMultipleComment;
+
+/**
+ * FieldMultipleComment Model.
+ *
+ * {@inheritdoc}
+ */
+class FieldMultipleComment extends PrismaFieldMultipleComment
+{
+}
+"
+`;
+
+exports[`models: generation: Fillable 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaFillable;
+
+/**
+ * Fillable Model.
+ *
+ * {@inheritdoc}
+ */
+class Fillable extends PrismaFillable
+{
+}
+"
+`;
+
+exports[`models: generation: Guarded 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaGuarded;
+
+/**
+ * Guarded Model.
+ *
+ * {@inheritdoc}
+ */
+class Guarded extends PrismaGuarded
+{
+}
+"
+`;
+
+exports[`models: generation: Hidden 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaHidden;
+
+/**
+ * Hidden Model.
+ *
+ * {@inheritdoc}
+ */
+class Hidden extends PrismaHidden
+{
+}
+"
+`;
+
+exports[`models: generation: Ignore 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaIgnore;
+
+/**
+ * Ignore Model.
+ *
+ * {@inheritdoc}
+ */
+class Ignore extends PrismaIgnore
+{
+}
+"
+`;
+
+exports[`models: generation: ImplicitManyToManyA 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaImplicitManyToManyA;
+
+/**
+ * ImplicitManyToManyA Model.
+ *
+ * {@inheritdoc}
+ */
+class ImplicitManyToManyA extends PrismaImplicitManyToManyA
+{
+}
+"
+`;
+
+exports[`models: generation: ImplicitManyToManyB 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaImplicitManyToManyB;
+
+/**
+ * ImplicitManyToManyB Model.
+ *
+ * {@inheritdoc}
+ */
+class ImplicitManyToManyB extends PrismaImplicitManyToManyB
+{
+}
+"
+`;
+
+exports[`models: generation: InterfaceWithAlias 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaInterfaceWithAlias;
+
+/**
+ * InterfaceWithAlias Model.
+ *
+ * {@inheritdoc}
+ */
+class InterfaceWithAlias extends PrismaInterfaceWithAlias
+{
+}
+"
+`;
+
+exports[`models: generation: InterfaceWithAlias2 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaInterfaceWithAlias2;
+
+/**
+ * InterfaceWithAlias2 Model.
+ *
+ * {@inheritdoc}
+ */
+class InterfaceWithAlias2 extends PrismaInterfaceWithAlias2
+{
+}
+"
+`;
+
+exports[`models: generation: MappedId 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaMappedId;
+
+/**
+ * MappedId Model.
+ *
+ * {@inheritdoc}
+ */
+class MappedId extends PrismaMappedId
+{
+}
+"
+`;
+
+exports[`models: generation: MassAssignable 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaMassAssignable;
+
+/**
+ * MassAssignable Model.
+ *
+ * {@inheritdoc}
+ */
+class MassAssignable extends PrismaMassAssignable
+{
+}
+"
+`;
+
+exports[`models: generation: ModelComments 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaModelComment;
+
+/**
+ * ModelComment Model.
+ *
+ * {@inheritdoc}
+ */
+class ModelComment extends PrismaModelComment
+{
+}
+"
+`;
+
+exports[`models: generation: ModelCustomPath 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaModelCustomPath;
+
+/**
+ * ModelCustomPath Model.
+ *
+ * {@inheritdoc}
+ */
+class ModelCustomPath extends PrismaModelCustomPath
+{
+}
+"
+`;
+
+exports[`models: generation: ModelMultipleComments 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaModelMultipleComment;
+
+/**
+ * ModelMultipleComment Model.
+ *
+ * {@inheritdoc}
+ */
+class ModelMultipleComment extends PrismaModelMultipleComment
+{
+}
+"
+`;
+
+exports[`models: generation: MultipleComments 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaMultipleComment;
+
+/**
+ * MultipleComment Model.
+ *
+ * {@inheritdoc}
+ */
+class MultipleComment extends PrismaMultipleComment
+{
+}
+"
+`;
+
+exports[`models: generation: MultipleUnique 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaMultipleUnique;
+
+/**
+ * MultipleUnique Model.
+ *
+ * {@inheritdoc}
+ */
+class MultipleUnique extends PrismaMultipleUnique
+{
+}
+"
+`;
+
+exports[`models: generation: MultipleUnique2 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaMultipleUnique2;
+
+/**
+ * MultipleUnique2 Model.
+ *
+ * {@inheritdoc}
+ */
+class MultipleUnique2 extends PrismaMultipleUnique2
+{
+}
+"
+`;
+
+exports[`models: generation: NoPrimaryKey 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaNoPrimaryKey;
+
+/**
+ * NoPrimaryKey Model.
+ *
+ * {@inheritdoc}
+ */
+class NoPrimaryKey extends PrismaNoPrimaryKey
+{
+}
+"
+`;
+
+exports[`models: generation: NoRules 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaNoRule;
+
+/**
+ * NoRule Model.
+ *
+ * {@inheritdoc}
+ */
+class NoRule extends PrismaNoRule
+{
+}
+"
+`;
+
+exports[`models: generation: NullableField 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaNullableField;
+
+/**
+ * NullableField Model.
+ *
+ * {@inheritdoc}
+ */
+class NullableField extends PrismaNullableField
+{
+}
+"
+`;
+
+exports[`models: generation: OneToManyA 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaOneToManyA;
+
+/**
+ * OneToManyA Model.
+ *
+ * {@inheritdoc}
+ */
+class OneToManyA extends PrismaOneToManyA
+{
+}
+"
+`;
+
+exports[`models: generation: OneToManyA2 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaOneToManyA2;
+
+/**
+ * OneToManyA2 Model.
+ *
+ * {@inheritdoc}
+ */
+class OneToManyA2 extends PrismaOneToManyA2
+{
+}
+"
+`;
+
+exports[`models: generation: OneToManyA3 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaOneToManyA3;
+
+/**
+ * OneToManyA3 Model.
+ *
+ * {@inheritdoc}
+ */
+class OneToManyA3 extends PrismaOneToManyA3
+{
+}
+"
+`;
+
+exports[`models: generation: OneToManyA4 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaOneToManyA4;
+
+/**
+ * OneToManyA4 Model.
+ *
+ * {@inheritdoc}
+ */
+class OneToManyA4 extends PrismaOneToManyA4
+{
+}
+"
+`;
+
+exports[`models: generation: OneToManyB 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaOneToManyB;
+
+/**
+ * OneToManyB Model.
+ *
+ * {@inheritdoc}
+ */
+class OneToManyB extends PrismaOneToManyB
+{
+}
+"
+`;
+
+exports[`models: generation: OneToManyB2 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaOneToManyB2;
+
+/**
+ * OneToManyB2 Model.
+ *
+ * {@inheritdoc}
+ */
+class OneToManyB2 extends PrismaOneToManyB2
+{
+}
+"
+`;
+
+exports[`models: generation: OneToManyB3 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaOneToManyB3;
+
+/**
+ * OneToManyB3 Model.
+ *
+ * {@inheritdoc}
+ */
+class OneToManyB3 extends PrismaOneToManyB3
+{
+}
+"
+`;
+
+exports[`models: generation: OneToManyB4 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaOneToManyB4;
+
+/**
+ * OneToManyB4 Model.
+ *
+ * {@inheritdoc}
+ */
+class OneToManyB4 extends PrismaOneToManyB4
+{
+}
+"
+`;
+
+exports[`models: generation: OneToOneA 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaOneToOneA;
+
+/**
+ * OneToOneA Model.
+ *
+ * {@inheritdoc}
+ */
+class OneToOneA extends PrismaOneToOneA
+{
+}
+"
+`;
+
+exports[`models: generation: OneToOneA2 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaOneToOneA2;
+
+/**
+ * OneToOneA2 Model.
+ *
+ * {@inheritdoc}
+ */
+class OneToOneA2 extends PrismaOneToOneA2
+{
+}
+"
+`;
+
+exports[`models: generation: OneToOneA3 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaOneToOneA3;
+
+/**
+ * OneToOneA3 Model.
+ *
+ * {@inheritdoc}
+ */
+class OneToOneA3 extends PrismaOneToOneA3
+{
+}
+"
+`;
+
+exports[`models: generation: OneToOneA4 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaOneToOneA4;
+
+/**
+ * OneToOneA4 Model.
+ *
+ * {@inheritdoc}
+ */
+class OneToOneA4 extends PrismaOneToOneA4
+{
+}
+"
+`;
+
+exports[`models: generation: OneToOneA5 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaOneToOneA5;
+
+/**
+ * OneToOneA5 Model.
+ *
+ * {@inheritdoc}
+ */
+class OneToOneA5 extends PrismaOneToOneA5
+{
+}
+"
+`;
+
+exports[`models: generation: OneToOneB 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaOneToOneB;
+
+/**
+ * OneToOneB Model.
+ *
+ * {@inheritdoc}
+ */
+class OneToOneB extends PrismaOneToOneB
+{
+}
+"
+`;
+
+exports[`models: generation: OneToOneB2 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaOneToOneB2;
+
+/**
+ * OneToOneB2 Model.
+ *
+ * {@inheritdoc}
+ */
+class OneToOneB2 extends PrismaOneToOneB2
+{
+}
+"
+`;
+
+exports[`models: generation: OneToOneB3 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaOneToOneB3;
+
+/**
+ * OneToOneB3 Model.
+ *
+ * {@inheritdoc}
+ */
+class OneToOneB3 extends PrismaOneToOneB3
+{
+}
+"
+`;
+
+exports[`models: generation: OneToOneB4 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaOneToOneB4;
+
+/**
+ * OneToOneB4 Model.
+ *
+ * {@inheritdoc}
+ */
+class OneToOneB4 extends PrismaOneToOneB4
+{
+}
+"
+`;
+
+exports[`models: generation: OneToOneB5 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaOneToOneB5;
+
+/**
+ * OneToOneB5 Model.
+ *
+ * {@inheritdoc}
+ */
+class OneToOneB5 extends PrismaOneToOneB5
+{
+}
+"
+`;
+
+exports[`models: generation: PivotWithCustomExtend 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaPivotWithCustomExtend;
+
+/**
+ * PivotWithCustomExtend Model.
+ *
+ * {@inheritdoc}
+ */
+class PivotWithCustomExtend extends PrismaPivotWithCustomExtend
+{
+}
+"
+`;
+
+exports[`models: generation: Post 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaPost;
+
+/**
+ * Post Model.
+ *
+ * {@inheritdoc}
+ */
+class Post extends PrismaPost
+{
+}
+"
+`;
+
+exports[`models: generation: Profile 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaProfile;
+
+/**
+ * Profile Model.
+ *
+ * {@inheritdoc}
+ */
+class Profile extends PrismaProfile
+{
+}
+"
+`;
+
+exports[`models: generation: ReadOnlyField 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaReadOnlyField;
+
+/**
+ * ReadOnlyField Model.
+ *
+ * {@inheritdoc}
+ */
+class ReadOnlyField extends PrismaReadOnlyField
+{
+}
+"
+`;
+
+exports[`models: generation: ReadonlyDatetime 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaReadonlyDatetime;
+
+/**
+ * ReadonlyDatetime Model.
+ *
+ * {@inheritdoc}
+ */
+class ReadonlyDatetime extends PrismaReadonlyDatetime
+{
+}
+"
+`;
+
+exports[`models: generation: SelfRelation 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaSelfRelation;
+
+/**
+ * SelfRelation Model.
+ *
+ * {@inheritdoc}
+ */
+class SelfRelation extends PrismaSelfRelation
+{
+}
+"
+`;
+
+exports[`models: generation: SoftDelete1 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaSoftDelete1;
+
+/**
+ * SoftDelete1 Model.
+ *
+ * {@inheritdoc}
+ */
+class SoftDelete1 extends PrismaSoftDelete1
+{
+}
+"
+`;
+
+exports[`models: generation: SoftDelete2 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaSoftDelete2;
+
+/**
+ * SoftDelete2 Model.
+ *
+ * {@inheritdoc}
+ */
+class SoftDelete2 extends PrismaSoftDelete2
+{
+}
+"
+`;
+
+exports[`models: generation: Timestamps1 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaTimestamps1;
+
+/**
+ * Timestamps1 Model.
+ *
+ * {@inheritdoc}
+ */
+class Timestamps1 extends PrismaTimestamps1
+{
+}
+"
+`;
+
+exports[`models: generation: Timestamps2 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaTimestamps2;
+
+/**
+ * Timestamps2 Model.
+ *
+ * {@inheritdoc}
+ */
+class Timestamps2 extends PrismaTimestamps2
+{
+}
+"
+`;
+
+exports[`models: generation: Timestamps3 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaTimestamps3;
+
+/**
+ * Timestamps3 Model.
+ *
+ * {@inheritdoc}
+ */
+class Timestamps3 extends PrismaTimestamps3
+{
+}
+"
+`;
+
+exports[`models: generation: Timestamps4 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaTimestamps4;
+
+/**
+ * Timestamps4 Model.
+ *
+ * {@inheritdoc}
+ */
+class Timestamps4 extends PrismaTimestamps4
+{
+}
+"
+`;
+
+exports[`models: generation: Timestamps5 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaTimestamps5;
+
+/**
+ * Timestamps5 Model.
+ *
+ * {@inheritdoc}
+ */
+class Timestamps5 extends PrismaTimestamps5
+{
+}
+"
+`;
+
+exports[`models: generation: Timestamps6 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaTimestamps6;
+
+/**
+ * Timestamps6 Model.
+ *
+ * {@inheritdoc}
+ */
+class Timestamps6 extends PrismaTimestamps6
+{
+}
+"
+`;
+
+exports[`models: generation: Timestamps7 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaTimestamps7;
+
+/**
+ * Timestamps7 Model.
+ *
+ * {@inheritdoc}
+ */
+class Timestamps7 extends PrismaTimestamps7
+{
+}
+"
+`;
+
+exports[`models: generation: Timestamps8 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaTimestamps8;
+
+/**
+ * Timestamps8 Model.
+ *
+ * {@inheritdoc}
+ */
+class Timestamps8 extends PrismaTimestamps8
+{
+}
+"
+`;
+
+exports[`models: generation: Timestamps9 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaTimestamps9;
+
+/**
+ * Timestamps9 Model.
+ *
+ * {@inheritdoc}
+ */
+class Timestamps9 extends PrismaTimestamps9
+{
+}
+"
+`;
+
+exports[`models: generation: Timestamps10 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaTimestamps10;
+
+/**
+ * Timestamps10 Model.
+ *
+ * {@inheritdoc}
+ */
+class Timestamps10 extends PrismaTimestamps10
+{
+}
+"
+`;
+
+exports[`models: generation: Timestamps11 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaTimestamps11;
+
+/**
+ * Timestamps11 Model.
+ *
+ * {@inheritdoc}
+ */
+class Timestamps11 extends PrismaTimestamps11
+{
+}
+"
+`;
+
+exports[`models: generation: TouchingA 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaTouchingA;
+
+/**
+ * TouchingA Model.
+ *
+ * {@inheritdoc}
+ */
+class TouchingA extends PrismaTouchingA
+{
+}
+"
+`;
+
+exports[`models: generation: TouchingB 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaTouchingB;
+
+/**
+ * TouchingB Model.
+ *
+ * {@inheritdoc}
+ */
+class TouchingB extends PrismaTouchingB
+{
+}
+"
+`;
+
+exports[`models: generation: TraitWithAlias 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaTraitWithAlias;
+
+/**
+ * TraitWithAlias Model.
+ *
+ * {@inheritdoc}
+ */
+class TraitWithAlias extends PrismaTraitWithAlias
+{
+}
+"
+`;
+
+exports[`models: generation: TraitWithAlias2 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaTraitWithAlias2;
+
+/**
+ * TraitWithAlias2 Model.
+ *
+ * {@inheritdoc}
+ */
+class TraitWithAlias2 extends PrismaTraitWithAlias2
+{
+}
+"
+`;
+
+exports[`models: generation: Types 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaType;
+
+/**
+ * Type Model.
+ *
+ * {@inheritdoc}
+ */
+class Type extends PrismaType
+{
+}
+"
+`;
+
+exports[`models: generation: Unique 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaUnique;
+
+/**
+ * Unique Model.
+ *
+ * {@inheritdoc}
+ */
+class Unique extends PrismaUnique
+{
+}
+"
+`;
+
+exports[`models: generation: UnsupportedTypes 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaUnsupportedType;
+
+/**
+ * UnsupportedType Model.
+ *
+ * {@inheritdoc}
+ */
+class UnsupportedType extends PrismaUnsupportedType
+{
+}
+"
+`;
+
+exports[`models: generation: User 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaUser;
+
+/**
+ * User Model.
+ *
+ * {@inheritdoc}
+ */
+class User extends PrismaUser
+{
+}
+"
+`;
+
+exports[`models: generation: Visible 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaVisible;
+
+/**
+ * Visible Model.
+ *
+ * {@inheritdoc}
+ */
+class Visible extends PrismaVisible
+{
+}
+"
+`;
+
+exports[`models: generation: WithArray 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaWithArray;
+
+/**
+ * WithArray Model.
+ *
+ * {@inheritdoc}
+ */
+class WithArray extends PrismaWithArray
+{
+}
+"
+`;
+
+exports[`models: generation: WithBackedEnum 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaWithBackedEnum;
+
+/**
+ * WithBackedEnum Model.
+ *
+ * {@inheritdoc}
+ */
+class WithBackedEnum extends PrismaWithBackedEnum
+{
+}
+"
+`;
+
+exports[`models: generation: WithCustomExtend 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaWithCustomExtend;
+
+/**
+ * WithCustomExtend Model.
+ *
+ * {@inheritdoc}
+ */
+class WithCustomExtend extends PrismaWithCustomExtend
+{
+}
+"
+`;
+
+exports[`models: generation: WithDbType 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaWithDbType;
+
+/**
+ * WithDbType Model.
+ *
+ * {@inheritdoc}
+ */
+class WithDbType extends PrismaWithDbType
+{
+}
+"
+`;
+
+exports[`models: generation: WithEnum 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaWithEnum;
+
+/**
+ * WithEnum Model.
+ *
+ * {@inheritdoc}
+ */
+class WithEnum extends PrismaWithEnum
+{
+}
+"
+`;
+
+exports[`models: generation: WithGlobalPrimaryKey 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaWithGlobalPrimaryKey;
+
+/**
+ * WithGlobalPrimaryKey Model.
+ *
+ * {@inheritdoc}
+ */
+class WithGlobalPrimaryKey extends PrismaWithGlobalPrimaryKey
+{
+}
+"
+`;
+
+exports[`models: generation: WithGlobalPrimaryKeyDifferentName 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaWithGlobalPrimaryKeyDifferentName;
+
+/**
+ * WithGlobalPrimaryKeyDifferentName Model.
+ *
+ * {@inheritdoc}
+ */
+class WithGlobalPrimaryKeyDifferentName extends PrismaWithGlobalPrimaryKeyDifferentName
+{
+}
+"
+`;
+
+exports[`models: generation: WithGlobalStringPrimaryKey 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaWithGlobalStringPrimaryKey;
+
+/**
+ * WithGlobalStringPrimaryKey Model.
+ *
+ * {@inheritdoc}
+ */
+class WithGlobalStringPrimaryKey extends PrismaWithGlobalStringPrimaryKey
+{
+}
+"
+`;
+
+exports[`models: generation: WithGlobalStringPrimaryKeyDifferentName 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaWithGlobalStringPrimaryKeyDifferentName;
+
+/**
+ * WithGlobalStringPrimaryKeyDifferentName Model.
+ *
+ * {@inheritdoc}
+ */
+class WithGlobalStringPrimaryKeyDifferentName extends PrismaWithGlobalStringPrimaryKeyDifferentName
+{
+}
+"
+`;
+
+exports[`models: generation: WithInterface 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaWithInterface;
+
+/**
+ * WithInterface Model.
+ *
+ * {@inheritdoc}
+ */
+class WithInterface extends PrismaWithInterface
+{
+}
+"
+`;
+
+exports[`models: generation: WithMultipleInterfaces 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaWithMultipleInterface;
+
+/**
+ * WithMultipleInterface Model.
+ *
+ * {@inheritdoc}
+ */
+class WithMultipleInterface extends PrismaWithMultipleInterface
+{
+}
+"
+`;
+
+exports[`models: generation: WithMultipleTraits 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaWithMultipleTrait;
+
+/**
+ * WithMultipleTrait Model.
+ *
+ * {@inheritdoc}
+ */
+class WithMultipleTrait extends PrismaWithMultipleTrait
+{
+}
+"
+`;
+
+exports[`models: generation: WithPrimaryKey 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaWithPrimaryKey;
+
+/**
+ * WithPrimaryKey Model.
+ *
+ * {@inheritdoc}
+ */
+class WithPrimaryKey extends PrismaWithPrimaryKey
+{
+}
+"
+`;
+
+exports[`models: generation: WithPrimaryKeyDifferentName 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaWithPrimaryKeyDifferentName;
+
+/**
+ * WithPrimaryKeyDifferentName Model.
+ *
+ * {@inheritdoc}
+ */
+class WithPrimaryKeyDifferentName extends PrismaWithPrimaryKeyDifferentName
+{
+}
+"
+`;
+
+exports[`models: generation: WithStringPrimaryKey 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaWithStringPrimaryKey;
+
+/**
+ * WithStringPrimaryKey Model.
+ *
+ * {@inheritdoc}
+ */
+class WithStringPrimaryKey extends PrismaWithStringPrimaryKey
+{
+}
+"
+`;
+
+exports[`models: generation: WithStringPrimaryKeyDifferentName 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaWithStringPrimaryKeyDifferentName;
+
+/**
+ * WithStringPrimaryKeyDifferentName Model.
+ *
+ * {@inheritdoc}
+ */
+class WithStringPrimaryKeyDifferentName extends PrismaWithStringPrimaryKeyDifferentName
+{
+}
+"
+`;
+
+exports[`models: generation: WithTableMap 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaWithTableMap;
+
+/**
+ * WithTableMap Model.
+ *
+ * {@inheritdoc}
+ */
+class WithTableMap extends PrismaWithTableMap
+{
+}
+"
+`;
+
+exports[`models: generation: WithTrait 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaWithTrait;
+
+/**
+ * WithTrait Model.
+ *
+ * {@inheritdoc}
+ */
+class WithTrait extends PrismaWithTrait
+{
+}
+"
+`;
+
+exports[`models: generation: snake_cased_models 1`] = `
+"<?php
+
+namespace App\\\\Models;
+
+use App\\\\Models\\\\Prisma\\\\PrismaSnakeCasedModel;
+
+/**
+ * SnakeCasedModel Model.
+ *
+ * {@inheritdoc}
+ */
+class SnakeCasedModel extends PrismaSnakeCasedModel
+{
+}
+"
+`;

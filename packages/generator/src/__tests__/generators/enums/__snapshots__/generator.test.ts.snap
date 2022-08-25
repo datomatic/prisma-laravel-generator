@@ -1,0 +1,151 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`enum generation: BackedEnum 1`] = `
+"<?php
+
+namespace App\\\\Enums\\\\Prisma;
+
+enum BackedEnum: string
+{
+    case A = '1';
+
+    case B = '2';
+
+    case C = '3';
+
+    case D = '4';
+}
+"
+`;
+
+exports[`enum generation: BackedEnumWithTrait 1`] = `
+"<?php
+
+namespace App\\\\Enums\\\\Prisma;
+
+use App\\\\Traits\\\\EnumCustomTrait;
+
+enum BackedEnumWithTrait: string
+{
+    use EnumCustomTrait;
+
+    case A = '1';
+
+    case B = '2';
+
+    case C = '3';
+
+    case D = '4';
+}
+"
+`;
+
+exports[`enum generation: Enum 1`] = `
+"<?php
+
+namespace App\\\\Enums\\\\Prisma;
+
+enum Enum: string
+{
+    case A = 'A';
+
+    case B = 'B';
+
+    case C = 'C';
+
+    case D = 'D';
+}
+"
+`;
+
+exports[`enum generation: EnumCustomPath 1`] = `
+"<?php
+
+namespace App\\\\Enums\\\\Prisma;
+
+enum EnumCustomPath: string
+{
+    case A = '1';
+
+    case B = '2';
+}
+"
+`;
+
+exports[`enum generation: EnumWithTrait 1`] = `
+"<?php
+
+namespace App\\\\Enums\\\\Prisma;
+
+use App\\\\Traits\\\\EnumCustomTrait;
+
+enum EnumWithTrait: string
+{
+    use EnumCustomTrait;
+
+    case A = 'A';
+
+    case B = 'B';
+
+    case C = 'C';
+
+    case D = 'D';
+}
+"
+`;
+
+exports[`enum generation: EnumWithTwoTraits 1`] = `
+"<?php
+
+namespace App\\\\Enums\\\\Prisma;
+
+use App\\\\Traits\\\\AnotherCustomTrait;
+use App\\\\Traits\\\\EnumCustomTrait;
+
+enum EnumWithTwoTraits: string
+{
+    use AnotherCustomTrait;
+    use EnumCustomTrait;
+
+    case A = '1';
+
+    case B = '2';
+
+    case C = '3';
+
+    case D = '4';
+}
+"
+`;
+
+exports[`enum generation: PostType 1`] = `
+"<?php
+
+namespace App\\\\Enums\\\\Prisma;
+
+enum PostType: string
+{
+    case article = '1';
+
+    case release = '2';
+
+    case news = '3';
+
+    case event = '4';
+}
+"
+`;
+
+exports[`enum generation: Role 1`] = `
+"<?php
+
+namespace App\\\\Enums\\\\Prisma;
+
+enum Role: string
+{
+    case USER = 'USER';
+
+    case ADMIN = 'ADMIN';
+}
+"
+`;

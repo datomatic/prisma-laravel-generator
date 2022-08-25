@@ -1,0 +1,302 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getUnsupportedFields: Category 1`] = `Array []`;
+
+exports[`getUnsupportedFields: DefaultValues 1`] = `Array []`;
+
+exports[`getUnsupportedFields: DefaultValuesWithoutMethodCall 1`] = `Array []`;
+
+exports[`getUnsupportedFields: EagerLoadA 1`] = `Array []`;
+
+exports[`getUnsupportedFields: EagerLoadB 1`] = `Array []`;
+
+exports[`getUnsupportedFields: ExplicitManyToManyA 1`] = `Array []`;
+
+exports[`getUnsupportedFields: ExplicitManyToManyA2 1`] = `Array []`;
+
+exports[`getUnsupportedFields: ExplicitManyToManyA3 1`] = `Array []`;
+
+exports[`getUnsupportedFields: ExplicitManyToManyA4 1`] = `Array []`;
+
+exports[`getUnsupportedFields: ExplicitManyToManyA5 1`] = `Array []`;
+
+exports[`getUnsupportedFields: ExplicitManyToManyA6 1`] = `Array []`;
+
+exports[`getUnsupportedFields: ExplicitManyToManyA7 1`] = `Array []`;
+
+exports[`getUnsupportedFields: ExplicitManyToManyB 1`] = `Array []`;
+
+exports[`getUnsupportedFields: ExplicitManyToManyB2 1`] = `Array []`;
+
+exports[`getUnsupportedFields: ExplicitManyToManyB3 1`] = `Array []`;
+
+exports[`getUnsupportedFields: ExplicitManyToManyB4 1`] = `Array []`;
+
+exports[`getUnsupportedFields: ExplicitManyToManyB5 1`] = `Array []`;
+
+exports[`getUnsupportedFields: ExplicitManyToManyB6 1`] = `Array []`;
+
+exports[`getUnsupportedFields: ExplicitManyToManyB7 1`] = `Array []`;
+
+exports[`getUnsupportedFields: ExplicitManyToManyPivot 1`] = `Array []`;
+
+exports[`getUnsupportedFields: ExplicitManyToManyPivot2 1`] = `Array []`;
+
+exports[`getUnsupportedFields: ExplicitManyToManyPivot3 1`] = `Array []`;
+
+exports[`getUnsupportedFields: ExplicitManyToManyPivot4 1`] = `Array []`;
+
+exports[`getUnsupportedFields: ExplicitManyToManyPivot5 1`] = `Array []`;
+
+exports[`getUnsupportedFields: ExplicitManyToManyPivot6 1`] = `Array []`;
+
+exports[`getUnsupportedFields: ExplicitManyToManyPivot7 1`] = `Array []`;
+
+exports[`getUnsupportedFields: ExtendAlias 1`] = `Array []`;
+
+exports[`getUnsupportedFields: ExtendAlias2 1`] = `Array []`;
+
+exports[`getUnsupportedFields: FieldComments 1`] = `Array []`;
+
+exports[`getUnsupportedFields: FieldMultipleComments 1`] = `Array []`;
+
+exports[`getUnsupportedFields: Fillable 1`] = `Array []`;
+
+exports[`getUnsupportedFields: Guarded 1`] = `Array []`;
+
+exports[`getUnsupportedFields: Hidden 1`] = `Array []`;
+
+exports[`getUnsupportedFields: Ignore 1`] = `Array []`;
+
+exports[`getUnsupportedFields: ImplicitManyToManyA 1`] = `Array []`;
+
+exports[`getUnsupportedFields: ImplicitManyToManyB 1`] = `Array []`;
+
+exports[`getUnsupportedFields: InterfaceWithAlias 1`] = `Array []`;
+
+exports[`getUnsupportedFields: InterfaceWithAlias2 1`] = `Array []`;
+
+exports[`getUnsupportedFields: MappedId 1`] = `Array []`;
+
+exports[`getUnsupportedFields: MassAssignable 1`] = `Array []`;
+
+exports[`getUnsupportedFields: ModelComments 1`] = `Array []`;
+
+exports[`getUnsupportedFields: ModelCustomPath 1`] = `Array []`;
+
+exports[`getUnsupportedFields: ModelMultipleComments 1`] = `Array []`;
+
+exports[`getUnsupportedFields: MultipleComments 1`] = `Array []`;
+
+exports[`getUnsupportedFields: MultipleUnique 1`] = `Array []`;
+
+exports[`getUnsupportedFields: MultipleUnique2 1`] = `Array []`;
+
+exports[`getUnsupportedFields: NoPrimaryKey 1`] = `Array []`;
+
+exports[`getUnsupportedFields: NoRules 1`] = `Array []`;
+
+exports[`getUnsupportedFields: NullableField 1`] = `Array []`;
+
+exports[`getUnsupportedFields: OneToManyA 1`] = `Array []`;
+
+exports[`getUnsupportedFields: OneToManyA2 1`] = `Array []`;
+
+exports[`getUnsupportedFields: OneToManyA3 1`] = `Array []`;
+
+exports[`getUnsupportedFields: OneToManyA4 1`] = `Array []`;
+
+exports[`getUnsupportedFields: OneToManyB 1`] = `Array []`;
+
+exports[`getUnsupportedFields: OneToManyB2 1`] = `Array []`;
+
+exports[`getUnsupportedFields: OneToManyB3 1`] = `Array []`;
+
+exports[`getUnsupportedFields: OneToManyB4 1`] = `Array []`;
+
+exports[`getUnsupportedFields: OneToOneA 1`] = `Array []`;
+
+exports[`getUnsupportedFields: OneToOneA2 1`] = `Array []`;
+
+exports[`getUnsupportedFields: OneToOneA3 1`] = `Array []`;
+
+exports[`getUnsupportedFields: OneToOneA4 1`] = `Array []`;
+
+exports[`getUnsupportedFields: OneToOneA5 1`] = `Array []`;
+
+exports[`getUnsupportedFields: OneToOneB 1`] = `Array []`;
+
+exports[`getUnsupportedFields: OneToOneB2 1`] = `Array []`;
+
+exports[`getUnsupportedFields: OneToOneB3 1`] = `Array []`;
+
+exports[`getUnsupportedFields: OneToOneB4 1`] = `Array []`;
+
+exports[`getUnsupportedFields: OneToOneB5 1`] = `Array []`;
+
+exports[`getUnsupportedFields: PivotWithCustomExtend 1`] = `Array []`;
+
+exports[`getUnsupportedFields: Post 1`] = `Array []`;
+
+exports[`getUnsupportedFields: Profile 1`] = `Array []`;
+
+exports[`getUnsupportedFields: ReadOnlyField 1`] = `Array []`;
+
+exports[`getUnsupportedFields: ReadonlyDatetime 1`] = `Array []`;
+
+exports[`getUnsupportedFields: SelfRelation 1`] = `Array []`;
+
+exports[`getUnsupportedFields: SoftDelete1 1`] = `Array []`;
+
+exports[`getUnsupportedFields: SoftDelete2 1`] = `Array []`;
+
+exports[`getUnsupportedFields: Timestamps1 1`] = `Array []`;
+
+exports[`getUnsupportedFields: Timestamps2 1`] = `Array []`;
+
+exports[`getUnsupportedFields: Timestamps3 1`] = `Array []`;
+
+exports[`getUnsupportedFields: Timestamps4 1`] = `Array []`;
+
+exports[`getUnsupportedFields: Timestamps5 1`] = `Array []`;
+
+exports[`getUnsupportedFields: Timestamps6 1`] = `Array []`;
+
+exports[`getUnsupportedFields: Timestamps7 1`] = `Array []`;
+
+exports[`getUnsupportedFields: Timestamps8 1`] = `Array []`;
+
+exports[`getUnsupportedFields: Timestamps9 1`] = `Array []`;
+
+exports[`getUnsupportedFields: Timestamps10 1`] = `Array []`;
+
+exports[`getUnsupportedFields: Timestamps11 1`] = `Array []`;
+
+exports[`getUnsupportedFields: TouchingA 1`] = `Array []`;
+
+exports[`getUnsupportedFields: TouchingB 1`] = `Array []`;
+
+exports[`getUnsupportedFields: TraitWithAlias 1`] = `Array []`;
+
+exports[`getUnsupportedFields: TraitWithAlias2 1`] = `Array []`;
+
+exports[`getUnsupportedFields: Types 1`] = `Array []`;
+
+exports[`getUnsupportedFields: Unique 1`] = `Array []`;
+
+exports[`getUnsupportedFields: UnsupportedTypes 1`] = `
+Array [
+  Object {
+    "default": Object {
+      "args": Array [
+        "'<(10,4),11>'::circle",
+      ],
+      "name": "dbgenerated",
+    },
+    "documentation": undefined,
+    "hasDefaultValue": true,
+    "isGenerated": false,
+    "isId": false,
+    "isList": false,
+    "isReadOnly": false,
+    "isRequired": false,
+    "isUnique": false,
+    "isUpdatedAt": false,
+    "kind": "unsupported",
+    "name": "circle",
+    "type": "Unsupported(\\"circle\\")",
+  },
+  Object {
+    "default": Object {
+      "args": Array [
+        "'<(10,4),11>'::square(), test",
+      ],
+      "name": "dbgenerated",
+    },
+    "documentation": undefined,
+    "hasDefaultValue": true,
+    "isGenerated": false,
+    "isId": false,
+    "isList": false,
+    "isReadOnly": false,
+    "isRequired": true,
+    "isUnique": false,
+    "isUpdatedAt": false,
+    "kind": "unsupported",
+    "name": "square",
+    "type": "Unsupported(\\"square()!, hello!\\")",
+  },
+  Object {
+    "default": undefined,
+    "documentation": undefined,
+    "hasDefaultValue": false,
+    "isGenerated": false,
+    "isId": false,
+    "isList": false,
+    "isReadOnly": false,
+    "isRequired": true,
+    "isUnique": false,
+    "isUpdatedAt": false,
+    "kind": "unsupported",
+    "name": "triangle",
+    "type": "Unsupported(\\"triangle()\\")",
+  },
+  Object {
+    "default": undefined,
+    "documentation": undefined,
+    "hasDefaultValue": false,
+    "isGenerated": false,
+    "isId": false,
+    "isList": true,
+    "isReadOnly": false,
+    "isRequired": true,
+    "isUnique": false,
+    "isUpdatedAt": false,
+    "kind": "unsupported",
+    "name": "rectangle",
+    "type": "Unsupported(\\"rectangle()\\")",
+  },
+]
+`;
+
+exports[`getUnsupportedFields: User 1`] = `Array []`;
+
+exports[`getUnsupportedFields: Visible 1`] = `Array []`;
+
+exports[`getUnsupportedFields: WithArray 1`] = `Array []`;
+
+exports[`getUnsupportedFields: WithBackedEnum 1`] = `Array []`;
+
+exports[`getUnsupportedFields: WithCustomExtend 1`] = `Array []`;
+
+exports[`getUnsupportedFields: WithDbType 1`] = `Array []`;
+
+exports[`getUnsupportedFields: WithEnum 1`] = `Array []`;
+
+exports[`getUnsupportedFields: WithGlobalPrimaryKey 1`] = `Array []`;
+
+exports[`getUnsupportedFields: WithGlobalPrimaryKeyDifferentName 1`] = `Array []`;
+
+exports[`getUnsupportedFields: WithGlobalStringPrimaryKey 1`] = `Array []`;
+
+exports[`getUnsupportedFields: WithGlobalStringPrimaryKeyDifferentName 1`] = `Array []`;
+
+exports[`getUnsupportedFields: WithInterface 1`] = `Array []`;
+
+exports[`getUnsupportedFields: WithMultipleInterfaces 1`] = `Array []`;
+
+exports[`getUnsupportedFields: WithMultipleTraits 1`] = `Array []`;
+
+exports[`getUnsupportedFields: WithPrimaryKey 1`] = `Array []`;
+
+exports[`getUnsupportedFields: WithPrimaryKeyDifferentName 1`] = `Array []`;
+
+exports[`getUnsupportedFields: WithStringPrimaryKey 1`] = `Array []`;
+
+exports[`getUnsupportedFields: WithStringPrimaryKeyDifferentName 1`] = `Array []`;
+
+exports[`getUnsupportedFields: WithTableMap 1`] = `Array []`;
+
+exports[`getUnsupportedFields: WithTrait 1`] = `Array []`;
+
+exports[`getUnsupportedFields: snake_cased_models 1`] = `Array []`;

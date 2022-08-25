@@ -1,0 +1,9 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Cuid1 {
+  id   String @id @default(cuid())
+  name String
+}

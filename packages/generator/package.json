@@ -1,0 +1,94 @@
+{
+  "name": "prisma-laravel-generator",
+  "description": "Laravel generator for Prisma",
+  "keywords": [
+    "laravel",
+    "prisma",
+    "generator",
+    "orm",
+    "eloquent",
+    "mvc",
+    "models"
+  ],
+  "homepage": "https://github.com/datomatic/prisma-laravel-generator",
+  "license": "MIT",
+  "author": "Roberto Negro <info@squidlab.it> (https://squidlab.it/)",
+  "bugs": {
+    "url": "https://github.com/datomatic/prisma-laravel-generator/issues",
+    "email": "info@squidlab.it"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/squidlab-it/prisma-laravel-generator"
+  },
+  "funding": {
+    "type": "individual",
+    "url": "https://www.paypal.com/donate/?business=W55676S5ZH78W&no_recurring=0&item_name=Support+me+for+the+development+and+maintainance+of+my+open-source+projects%21+Any+amount+will+be+appreciated%21+%F0%9F%8D%BB&currency_code=EUR"
+  },
+  "version": "0.1.0",
+  "main": "dist/generator.js",
+  "bin": {
+    "prisma-laravel-generator": "dist/bin.js"
+  },
+  "engines": {
+    "node": ">=14.0"
+  },
+  "scripts": {
+    "start": "node dist/bin.js",
+    "build": "tsc --build src",
+    "build:watch": "tsc --build src --watch",
+    "type-check": "tsc --project src/tsconfig.json --pretty --noEmit",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "prepack": "yarn build"
+  },
+  "dependencies": {
+    "@prettier/plugin-php": "^0.18.7",
+    "@prisma/client": "3.14.0",
+    "@prisma/generator-helper": "3.14.0",
+    "@prisma/sdk": "3.14.0",
+    "lodash": "^4.17.21",
+    "pluralize": "^8.0.0",
+    "prettier": "^2.6.2"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/git": "^10.0.1",
+    "@types/jest": "27.5.1",
+    "@types/lodash": "^4.14.182",
+    "@types/node": "17.0.35",
+    "@types/pluralize": "^0.0.29",
+    "jest": "28.1.0",
+    "prisma": "3.14.0",
+    "semantic-release": "^19.0.2",
+    "ts-jest": "28.0.2",
+    "typescript": "4.6.4"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      [
+        "@semantic-release/changelog",
+        {
+          "changelogFile": "CHANGELOG.md"
+        }
+      ],
+      "@semantic-release/github",
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "CHANGELOG.md",
+            "package.json"
+          ],
+          "message": "chore(release): set `package.json` to ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+        }
+      ]
+    ]
+  }
+}

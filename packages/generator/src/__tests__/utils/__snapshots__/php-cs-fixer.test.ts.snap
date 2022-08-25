@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`format: empty content: prettified 1`] = `""`;
+
+exports[`format: valid content: prettified 1`] = `
+"<?php
+
+namespace App\\\\Enums\\\\Prisma;
+
+enum Test
+{
+    case A = 'A';
+
+    case B = 'B';
+
+    case C;
+}
+"
+`;
+
+exports[`formatFile: temporary folder setup formatFile: format empty file: prettified 1`] = `""`;
+
+exports[`formatFile: temporary folder setup formatFile: format php file: prettified 1`] = `
+"<?php
+
+namespace App\\\\Enums\\\\Prisma;
+
+enum test_valid
+{
+    case A = 'A';
+
+    case B = 'B';
+
+    case C;
+}
+"
+`;

@@ -1,0 +1,61 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model CompositeKeyA {
+  id      Int            @id @default(autoincrement())
+  otherId Int
+  related CompositeKeyB?
+
+  @@unique([id, otherId])
+}
+
+model CompositeKeyB {
+  id         Int           @id @default(autoincrement())
+  relatedId1 Int
+  relatedId2 Int
+  related    CompositeKeyA @relation(fields: [relatedId1, relatedId2], references: [id, otherId])
+}
+
+model CompositeKeyA2 {
+  id      Int                  @id @default(autoincrement())
+  otherId Int
+  related CompositeKeyPivot2[]
+
+  @@unique([id, otherId])
+}
+
+/// pivot
+model CompositeKeyPivot2 {
+  id        Int            @id @default(autoincrement())
+  A_id      Int
+  otherA_id Int
+  A         CompositeKeyA2 @relation(fields: [A_id, otherA_id], references: [id, otherId])
+  B_id      Int
+  otherB_id Int
+  B         CompositeKeyB2 @relation(fields: [B_id, otherB_id], references: [id, otherId])
+}
+
+model CompositeKeyB2 {
+  id      Int                  @id @default(autoincrement())
+  otherId Int
+  related CompositeKeyPivot2[]
+
+  @@unique([id, otherId])
+}
+
+model CompositeKeyA3 {
+  id      Int              @id @default(autoincrement())
+  otherId Int
+  related CompositeKeyB3[]
+
+  @@unique([id, otherId])
+}
+
+model CompositeKeyB3 {
+  id         Int            @id @default(autoincrement())
+  relatedId1 Int
+  relatedId2 Int
+  related    CompositeKeyA3 @relation(fields: [relatedId1, relatedId2], references: [id, otherId])
+}

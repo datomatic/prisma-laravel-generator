@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`prettify: empty content: prettified 1`] = `""`;
+
+exports[`prettify: valid content: prettified 1`] = `
+"<?php namespace App\\\\Enums\\\\Prisma;
+enum Test
+{
+    case A = \\"A\\";
+    case B = \\"B\\";
+    case C;
+}
+"
+`;

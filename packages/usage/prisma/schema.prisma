@@ -1,0 +1,77 @@
+generator laravel_generator {
+  provider             = "node ../../node_modules/prisma-laravel-generator"
+  output               = "../generated"
+  phpCsFixerBinPath    = "./tools/php-cs-fixer/vendor/bin/php-cs-fixer"
+  phpCsFixerConfigPath = "./tools/php-cs-fixer/.php-cs.dist.php"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+/// trait:Illuminate\Auth\Authenticatable
+/// trait:Illuminate\Database\Eloquent\Factories\HasFactory
+/// trait:Illuminate\Notifications\Notifiable
+/// implements:Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract
+model User {
+  id         Int     @id @default(autoincrement()) /// guarded
+  email      String  @unique /// read-only
+  password   String /// hidden, guarded
+  first_name String?
+  last_name  String?
+  role       Role    @default(GUEST)
+
+  created_at DateTime  @default(now())
+  updated_at DateTime  @default(now())
+  deleted_at DateTime?
+
+  posts Post[]
+
+  @@map("users")
+}
+
+model Post {
+  uuid    String @id @default(uuid())
+  title   String
+  content String
+
+  created_at DateTime @default(now())
+  updated_at DateTime @default(now())
+
+  user_id Int
+  user    User @relation(fields: [user_id], references: [id]) /// eager-loaded
+
+  categories CategoryPost[]
+
+  @@map("posts")
+}
+
+/// pivot
+model CategoryPost {
+  id Int @id @default(autoincrement())
+
+  post_id     String
+  post        Post     @relation(fields: [post_id], references: [uuid])
+  category_id String
+  category    Category @relation(fields: [category_id], references: [uuid])
+
+  affinity Float @default(1.0)
+
+  @@map("categories_posts")
+}
+
+model Category {
+  uuid String @id @default(uuid())
+  name String
+
+  posts CategoryPost[]
+
+  @@map("categories")
+}
+
+enum Role {
+  GUEST      @map("1")
+  MODERATOR  @map("2")
+  ADMIN      @map("3")
+}

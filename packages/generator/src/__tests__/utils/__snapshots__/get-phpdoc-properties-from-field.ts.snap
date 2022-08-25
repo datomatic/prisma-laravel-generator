@@ -1,0 +1,2723 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getPhpDocPropertiesFromField: Category - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Category - name 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "string",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Category - posts 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: DefaultValues - age 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: DefaultValues - bool 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "bool",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: DefaultValues - email 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "string",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: DefaultValues - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: DefaultValues - name 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "?string",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: DefaultValues - now 1`] = `
+Object {
+  "imports": Set {
+    "Illuminate\\\\Support\\\\Carbon",
+  },
+  "phpType": "Carbon",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: DefaultValues - role 1`] = `
+Object {
+  "imports": Set {
+    "App\\\\Enums\\\\Prisma\\\\Role",
+  },
+  "phpType": "Role",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: DefaultValues - uuid 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "string",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: DefaultValuesWithoutMethodCall - age 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: DefaultValuesWithoutMethodCall - bool 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "bool",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: DefaultValuesWithoutMethodCall - email 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "string",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: DefaultValuesWithoutMethodCall - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: DefaultValuesWithoutMethodCall - name 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "?string",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: EagerLoadA - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: EagerLoadA - related 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: EagerLoadB - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: EagerLoadB - related 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: EagerLoadB - relatedId 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyA - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyA - related 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyA2 - explicit_many_to_many_b2 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyA2 - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyA3 - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyA3 - otherIdA 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyA3 - related 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyA4 - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyA4 - otherIdA 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyA4 - related 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyA5 - hasOne 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyA5 - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyA5 - related 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyA6 - key 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyA6 - related 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyA7 - key 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyA7 - related 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyB - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyB - related 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyB2 - explicit_many_to_many_a2 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyB2 - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyB3 - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyB3 - otherIdB 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyB3 - related 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyB4 - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyB4 - otherIdB 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyB4 - related 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyB5 - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyB5 - pivot 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyB5 - pivot_id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyB5 - related 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyB6 - key 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyB6 - related 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyB7 - key 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyB7 - related 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot - A 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot - A_id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot - B 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot - B_id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot2 - explicit_many_to_many_a2 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot2 - explicit_many_to_many_a2_id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot2 - explicit_many_to_many_b2 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot2 - explicit_many_to_many_b2_id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot2 - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot3 - A 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot3 - A_id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot3 - B 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot3 - B_id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot3 - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot4 - A 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot4 - A_id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot4 - B 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot4 - B_id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot4 - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot5 - A 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot5 - A_id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot5 - A2 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot5 - A2_id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot5 - B 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot5 - B_id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot5 - B2 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot5 - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot6 - A 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot6 - A_id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot6 - B 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot6 - B_id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot6 - key 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot7 - A 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot7 - A_id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot7 - B 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot7 - B_id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExplicitManyToManyPivot7 - key 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExtendAlias - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ExtendAlias2 - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: FieldComments - age 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: FieldComments - email 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "string",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: FieldComments - height 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: FieldComments - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: FieldComments - name 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "string",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: FieldMultipleComments - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: FieldMultipleComments - name 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "string",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Fillable - age 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Fillable - email 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "string",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Fillable - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Fillable - name 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "?string",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Fillable - password 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "string",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Guarded - age 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Guarded - email 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "string",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Guarded - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Guarded - name 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "?string",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Guarded - password 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "string",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Hidden - api_key 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "string",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Hidden - email 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "string",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Hidden - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Hidden - name 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "?string",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Hidden - password 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "string",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Ignore - age 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Ignore - email 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "string",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Ignore - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ImplicitManyToManyA - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ImplicitManyToManyA - related 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ImplicitManyToManyB - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ImplicitManyToManyB - related 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: InterfaceWithAlias - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: InterfaceWithAlias2 - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: MappedId - firstname 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "string",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: MappedId - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: MassAssignable - age 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: MassAssignable - email 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "string",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: MassAssignable - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: MassAssignable - name 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "?string",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: MassAssignable - password 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "string",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ModelComments - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ModelCustomPath - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ModelMultipleComments - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: MultipleComments - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: MultipleComments - password 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "string",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: MultipleUnique - age 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "?int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: MultipleUnique - email 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "string",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: MultipleUnique - firstname 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "string",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: MultipleUnique - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: MultipleUnique - lastname 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "string",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: MultipleUnique2 - age 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "?int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: MultipleUnique2 - email 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "string",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: MultipleUnique2 - firstname 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "string",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: MultipleUnique2 - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: MultipleUnique2 - lastname 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "string",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: NoPrimaryKey - age 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: NoPrimaryKey - name 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "string",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: NullableField - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: NullableField - name 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "?string",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToManyA - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToManyA - related 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToManyA2 - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToManyA2 - related 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToManyA3 - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToManyA3 - otherId 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToManyA3 - related 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToManyA4 - main_id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToManyA4 - related 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToManyB - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToManyB - one_to_one_a2 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToManyB - relatedId 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToManyB2 - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToManyB2 - one_to_many_a2 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToManyB2 - one_to_many_a2_id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToManyB3 - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToManyB3 - related 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToManyB3 - relatedId 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToManyB4 - main_id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToManyB4 - related 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToManyB4 - relatedId 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToOneA - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToOneA - related 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToOneA2 - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToOneA2 - related 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToOneA3 - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToOneA3 - otherId 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToOneA3 - related 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToOneA4 - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToOneA4 - related 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToOneA5 - main_id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToOneA5 - related 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToOneB - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToOneB - related 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToOneB - relatedId 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToOneB2 - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToOneB2 - one_to_one_a2 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToOneB2 - one_to_one_a2_id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToOneB3 - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToOneB3 - related 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToOneB3 - related_id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToOneB4 - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToOneB4 - related 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToOneB4 - relatedId 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "?int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToOneB5 - main_id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToOneB5 - related 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: OneToOneB5 - relatedId 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "?int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: PivotWithCustomExtend - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Post - author 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Post - authorId 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Post - categories 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Post - createdAt 1`] = `
+Object {
+  "imports": Set {
+    "Carbon\\\\CarbonImmutable",
+  },
+  "phpType": "CarbonImmutable",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Post - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Post - published 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "bool",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Post - title 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "string",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Post - type 1`] = `
+Object {
+  "imports": Set {
+    "App\\\\Enums\\\\Prisma\\\\PostType",
+  },
+  "phpType": "PostType",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Post - updatedAt 1`] = `
+Object {
+  "imports": Set {
+    "Carbon\\\\CarbonImmutable",
+  },
+  "phpType": "CarbonImmutable",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Profile - bio 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "string",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Profile - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Profile - user 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Profile - userId 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ReadOnlyField - email 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "string",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ReadOnlyField - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ReadOnlyField - name 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "?string",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ReadOnlyField - password 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "string",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ReadOnlyField - phone 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "string",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ReadonlyDatetime - editable 1`] = `
+Object {
+  "imports": Set {
+    "Illuminate\\\\Support\\\\Carbon",
+  },
+  "phpType": "Carbon",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ReadonlyDatetime - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: ReadonlyDatetime - readonly 1`] = `
+Object {
+  "imports": Set {
+    "Carbon\\\\CarbonImmutable",
+  },
+  "phpType": "CarbonImmutable",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: SelfRelation - child 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: SelfRelation - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: SelfRelation - parent 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: SelfRelation - relatedId 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: SoftDelete1 - deleted_at 1`] = `
+Object {
+  "imports": Set {
+    "Carbon\\\\CarbonImmutable",
+  },
+  "phpType": "CarbonImmutable",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: SoftDelete1 - email 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "string",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: SoftDelete1 - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: SoftDelete1 - password 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "string",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: SoftDelete2 - deleted_timestamp 1`] = `
+Object {
+  "imports": Set {
+    "Carbon\\\\CarbonImmutable",
+  },
+  "phpType": "CarbonImmutable",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: SoftDelete2 - email 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "string",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: SoftDelete2 - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: SoftDelete2 - password 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "string",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Timestamps1 - created_timestamp 1`] = `
+Object {
+  "imports": Set {
+    "Carbon\\\\CarbonImmutable",
+  },
+  "phpType": "CarbonImmutable",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Timestamps1 - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Timestamps1 - updated_timestamp 1`] = `
+Object {
+  "imports": Set {
+    "Carbon\\\\CarbonImmutable",
+  },
+  "phpType": "CarbonImmutable",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Timestamps2 - created_at 1`] = `
+Object {
+  "imports": Set {
+    "Carbon\\\\CarbonImmutable",
+  },
+  "phpType": "CarbonImmutable",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Timestamps2 - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Timestamps2 - updated_timestamp 1`] = `
+Object {
+  "imports": Set {
+    "Carbon\\\\CarbonImmutable",
+  },
+  "phpType": "CarbonImmutable",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Timestamps3 - created_timestamp 1`] = `
+Object {
+  "imports": Set {
+    "Carbon\\\\CarbonImmutable",
+  },
+  "phpType": "CarbonImmutable",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Timestamps3 - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Timestamps3 - updated_at 1`] = `
+Object {
+  "imports": Set {
+    "Carbon\\\\CarbonImmutable",
+  },
+  "phpType": "CarbonImmutable",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Timestamps4 - created_at 1`] = `
+Object {
+  "imports": Set {
+    "Carbon\\\\CarbonImmutable",
+  },
+  "phpType": "CarbonImmutable",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Timestamps4 - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Timestamps4 - updated_at 1`] = `
+Object {
+  "imports": Set {
+    "Carbon\\\\CarbonImmutable",
+  },
+  "phpType": "CarbonImmutable",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Timestamps5 - created_at 1`] = `
+Object {
+  "imports": Set {
+    "Carbon\\\\CarbonImmutable",
+  },
+  "phpType": "CarbonImmutable",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Timestamps5 - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Timestamps5 - updated_at 1`] = `
+Object {
+  "imports": Set {
+    "Carbon\\\\CarbonImmutable",
+  },
+  "phpType": "CarbonImmutable",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Timestamps6 - created_at 1`] = `
+Object {
+  "imports": Set {
+    "Carbon\\\\CarbonImmutable",
+  },
+  "phpType": "CarbonImmutable",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Timestamps6 - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Timestamps6 - updated_timestamp 1`] = `
+Object {
+  "imports": Set {
+    "Carbon\\\\CarbonImmutable",
+  },
+  "phpType": "CarbonImmutable",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Timestamps7 - created_at 1`] = `
+Object {
+  "imports": Set {
+    "Carbon\\\\CarbonImmutable",
+  },
+  "phpType": "CarbonImmutable",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Timestamps7 - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Timestamps7 - updated_at 1`] = `
+Object {
+  "imports": Set {
+    "Carbon\\\\CarbonImmutable",
+  },
+  "phpType": "CarbonImmutable",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Timestamps8 - created_at 1`] = `
+Object {
+  "imports": Set {
+    "Carbon\\\\CarbonImmutable",
+  },
+  "phpType": "CarbonImmutable",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Timestamps8 - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Timestamps8 - updated_timestamp 1`] = `
+Object {
+  "imports": Set {
+    "Carbon\\\\CarbonImmutable",
+  },
+  "phpType": "CarbonImmutable",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Timestamps9 - created_at 1`] = `
+Object {
+  "imports": Set {
+    "Carbon\\\\CarbonImmutable",
+  },
+  "phpType": "CarbonImmutable",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Timestamps9 - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Timestamps9 - updated_at 1`] = `
+Object {
+  "imports": Set {
+    "Carbon\\\\CarbonImmutable",
+  },
+  "phpType": "CarbonImmutable",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Timestamps10 - created_at 1`] = `
+Object {
+  "imports": Set {
+    "Carbon\\\\CarbonImmutable",
+  },
+  "phpType": "CarbonImmutable",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Timestamps10 - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Timestamps10 - updated_timestamp 1`] = `
+Object {
+  "imports": Set {
+    "Carbon\\\\CarbonImmutable",
+  },
+  "phpType": "CarbonImmutable",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Timestamps11 - created_timestamp 1`] = `
+Object {
+  "imports": Set {
+    "Carbon\\\\CarbonImmutable",
+  },
+  "phpType": "CarbonImmutable",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Timestamps11 - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Timestamps11 - updated_at 1`] = `
+Object {
+  "imports": Set {
+    "Carbon\\\\CarbonImmutable",
+  },
+  "phpType": "CarbonImmutable",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: TouchingA - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: TouchingA - related 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: TouchingB - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: TouchingB - related 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: TouchingB - relatedId 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: TraitWithAlias - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: TraitWithAlias2 - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Types - active 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "bool",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Types - age 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Types - birth 1`] = `
+Object {
+  "imports": Set {
+    "Illuminate\\\\Support\\\\Carbon",
+  },
+  "phpType": "Carbon",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Types - blob 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Types - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Types - name 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "string",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Types - price 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "string",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Types - schema 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "array",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Types - seconds 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Types - speed 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "double",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Unique - email 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "string",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Unique - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Unique - name 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "?string",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Unique - username 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "string",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: UnsupportedTypes - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: User - email 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "string",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: User - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: User - name 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "?string",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: User - posts 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: User - profile 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": undefined,
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: User - role 1`] = `
+Object {
+  "imports": Set {
+    "App\\\\Enums\\\\Prisma\\\\Role",
+  },
+  "phpType": "Role",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Visible - api_key 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "string",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Visible - email 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "string",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Visible - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Visible - name 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "?string",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: Visible - password 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "string",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: WithArray - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: WithArray - numbers 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int[]",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: WithBackedEnum - array 1`] = `
+Object {
+  "imports": Set {
+    "App\\\\Enums\\\\Prisma\\\\BackedEnum",
+  },
+  "phpType": "BackedEnum[]",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: WithBackedEnum - defaultEnum 1`] = `
+Object {
+  "imports": Set {
+    "App\\\\Enums\\\\Prisma\\\\BackedEnum",
+  },
+  "phpType": "BackedEnum",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: WithBackedEnum - enum 1`] = `
+Object {
+  "imports": Set {
+    "App\\\\Enums\\\\Prisma\\\\BackedEnum",
+  },
+  "phpType": "BackedEnum",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: WithBackedEnum - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: WithBackedEnum - nullable 1`] = `
+Object {
+  "imports": Set {
+    "App\\\\Enums\\\\Prisma\\\\BackedEnum",
+  },
+  "phpType": "?BackedEnum",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: WithCustomExtend - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: WithDbType - email 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "string",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: WithDbType - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: WithEnum - array 1`] = `
+Object {
+  "imports": Set {
+    "App\\\\Enums\\\\Prisma\\\\Enum",
+  },
+  "phpType": "Enum[]",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: WithEnum - defaultEnum 1`] = `
+Object {
+  "imports": Set {
+    "App\\\\Enums\\\\Prisma\\\\Enum",
+  },
+  "phpType": "Enum",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: WithEnum - enum 1`] = `
+Object {
+  "imports": Set {
+    "App\\\\Enums\\\\Prisma\\\\Enum",
+  },
+  "phpType": "Enum",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: WithEnum - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: WithEnum - nullable 1`] = `
+Object {
+  "imports": Set {
+    "App\\\\Enums\\\\Prisma\\\\Enum",
+  },
+  "phpType": "?Enum",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: WithGlobalPrimaryKey - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: WithGlobalPrimaryKeyDifferentName - primary_id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: WithGlobalStringPrimaryKey - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "string",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: WithGlobalStringPrimaryKeyDifferentName - primary_id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "string",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: WithInterface - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: WithMultipleInterfaces - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: WithMultipleTraits - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: WithPrimaryKey - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: WithPrimaryKeyDifferentName - primary_id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: WithStringPrimaryKey - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "string",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: WithStringPrimaryKeyDifferentName - primary_id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "string",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: WithTableMap - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: WithTrait - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: snake_cased_models - firstname 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "string",
+  "readOnly": false,
+}
+`;
+
+exports[`getPhpDocPropertiesFromField: snake_cased_models - id 1`] = `
+Object {
+  "imports": Set {},
+  "phpType": "int",
+  "readOnly": true,
+}
+`;

@@ -1,0 +1,62 @@
+{
+  "name": "prisma-laravel-generator-monorepo",
+  "description": "Laravel generator for Prisma",
+  "keywords": [
+    "laravel",
+    "prisma",
+    "generator",
+    "orm",
+    "eloquent",
+    "mvc",
+    "models"
+  ],
+  "homepage": "https://github.com/datomatic/prisma-laravel-generator",
+  "license": "MIT",
+  "author": "Roberto Negro <info@squidlab.it> (https://squidlab.it/)",
+  "bugs": {
+    "url": "https://github.com/datomatic/prisma-laravel-generator/issues",
+    "email": "info@squidlab.it"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/squidlab-it/prisma-laravel-generator"
+  },
+  "funding": {
+    "type": "individual",
+    "url": "https://www.paypal.com/donate/?business=W55676S5ZH78W&no_recurring=0&item_name=Support+me+for+the+development+and+maintainance+of+my+open-source+projects%21+Any+amount+will+be+appreciated%21+%F0%9F%8D%BB&currency_code=EUR"
+  },
+  "private": true,
+  "workspaces": [
+    "packages/generator",
+    "packages/usage"
+  ],
+  "scripts": {
+    "prepare": "husky install",
+    "format": "eslint --fix",
+    "lint": "eslint",
+    "make-badges": "istanbul-badges-readme --coverageDir=\"./packages/generator/coverage\" --style=\"flat-square\"",
+    "make-badges:ci": "yarn make-badges --ci"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "17.0.0",
+    "@commitlint/config-conventional": "17.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.25.0",
+    "@typescript-eslint/parser": "^5.25.0",
+    "eslint": "^8.15.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jest": "^26.2.2",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-unicorn": "^42.0.0",
+    "eslint-plugin-workspaces": "^0.7.0",
+    "husky": "^8.0.1",
+    "istanbul-badges-readme": "^1.8.2",
+    "lint-staged": "^12.4.1",
+    "prettier": "^2.6.2"
+  }
+}

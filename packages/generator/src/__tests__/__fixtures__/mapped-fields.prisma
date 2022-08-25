@@ -1,0 +1,18 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model MappedFields2 {
+  id        Int    @id @default(autoincrement())
+  firstname String @map("first_name")
+  lastname  String
+}
+
+model MappedFields3 {
+  id        Int    @id @default(autoincrement())
+  firstname String @map("first_name")
+  lastname  String @map("last_name")
+
+  @@map("mapped_fields_3")
+}
