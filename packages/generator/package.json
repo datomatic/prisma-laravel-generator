@@ -44,7 +44,7 @@
     "prepack": "yarn build"
   },
   "dependencies": {
-    "@prettier/plugin-php": "^0.18.7",
+    "@prettier/plugin-php": "^0.18.9",
     "@prisma/client": "^4.0.0",
     "@prisma/generator-helper": "^4.0.0",
     "@prisma/sdk": "^4.0.0",
