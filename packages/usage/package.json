@@ -27,7 +27,7 @@
     "@prisma/client": "3.14.0"
   },
   "devDependencies": {
-    "@types/node": "17.0.35",
+    "@types/node": "18.7.13",
     "prisma": "3.14.0",
     "prisma-laravel-generator": "*",
     "typescript": "4.6.4"
