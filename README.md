@@ -1,6 +1,28 @@
 # Prisma Laravel Generator
 [Prisma](https://www.prisma.io) Generator for [Laravel](https://laravel.com)
 
+<p align="center">
+
+![Build status](https://img.shields.io/github/workflow/status/datomatic/prisma-laravel-generator/CI/main?style=flat-square)
+![Downloads](https://img.shields.io/npm/dt/prisma-laravel-generator?style=flat-square)
+![Version](https://img.shields.io/npm/v/prisma-laravel-generator?style=flat-square)
+![Prisma version](https://img.shields.io/github/package-json/dependency-version/Datomatic/prisma-laravel-generator/dev/prisma?filename=packages%2Fgenerator%2Fpackage.json&style=flat-square)
+
+![Open issues](https://img.shields.io/github/issues-raw/Datomatic/prisma-laravel-generator?style=flat-square)
+![Open pull requests](https://img.shields.io/github/issues-pr-raw/Datomatic/prisma-laravel-generator?style=flat-square)
+![License](https://img.shields.io/github/license/Datomatic/prisma-laravel-generator?style=flat-square)
+
+![Statements coverage](https://img.shields.io/badge/statements-100%25-brightgreen.svg?style=flat-square)
+![Branches coverage](https://img.shields.io/badge/branches-100%25-brightgreen.svg?style=flat-square)
+![Functions coverage](https://img.shields.io/badge/functions-100%25-brightgreen.svg?style=flat-square)
+![Lines coverage](https://img.shields.io/badge/lines-100%25-brightgreen.svg?style=flat-square)
+
+![GitHub Stars](https://img.shields.io/github/stars/Datomatic/prisma-laravel-generator?style=flat-square)
+![GitHub Sponsors](https://img.shields.io/github/sponsors/RobertoNegro?style=flat-square)
+[![Donate on PayPal](https://img.shields.io/badge/donate-PayPal-blue.svg?style=flat-square)](https://www.paypal.com/donate/?business=W55676S5ZH78W&no_recurring=0&item_name=Support+me+for+the+development+and+maintainance+of+my+open-source+projects%21+Any+amount+will+be+appreciated%21+%F0%9F%8D%BB&currency_code=EUR)
+
+</p>
+
 ---
 
 In Laravel, migrations are not easy to write: you always have to keep in mind what is the current structure of your database to apply changes. And after the migration, you have to deal with the creation and alignment of the models with your changes: you basically have to repeat, again and again, stuff that you have already defined in your migrations (relations, casts, ...).

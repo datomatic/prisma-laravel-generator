@@ -4085,6 +4085,11 @@ issue-parser@^6.0.0:
     lodash.isstring "^4.0.1"
     lodash.uniqby "^4.7.0"
 
+istanbul-badges-readme@^1.8.2:
+  version "1.8.2"
+  resolved "https://registry.yarnpkg.com/istanbul-badges-readme/-/istanbul-badges-readme-1.8.2.tgz#744821159797c109774f67ea625d19e19a3058b6"
+  integrity sha512-GUSoxOMAIackozEEuLQkRF8DsfA4AYEED42CgTKx6BesziVe+YYLn8Wa4svGHgGGeuhHo+6a6owxi7mNPhYnBg==
+
 istanbul-lib-coverage@^3.0.0, istanbul-lib-coverage@^3.2.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/istanbul-lib-coverage/-/istanbul-lib-coverage-3.2.0.tgz#189e7909d0a39fa5a3dfad5b03f71947770191d3"

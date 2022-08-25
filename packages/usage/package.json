@@ -1,9 +1,24 @@
 {
   "name": "prisma-laravel-generator-usage",
-  "private": true,
-  "version": "1.0.0",
-  "main": "src/app.js",
+  "description": "Laravel generator for Prisma",
+  "keywords": ["laravel", "prisma", "generator", "orm", "eloquent", "mvc", "models"],
+  "homepage": "https://github.com/datomatic/prisma-laravel-generator",
   "license": "MIT",
+  "author": "Roberto Negro <info@squidlab.it> (https://squidlab.it/)",
+  "bugs": {
+    "url" : "https://github.com/datomatic/prisma-laravel-generator/issues",
+    "email" : "info@squidlab.it"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/squidlab-it/prisma-laravel-generator"
+  },
+  "funding": {
+    "type" : "individual",
+    "url" : "https://www.paypal.com/donate/?business=W55676S5ZH78W&no_recurring=0&item_name=Support+me+for+the+development+and+maintainance+of+my+open-source+projects%21+Any+amount+will+be+appreciated%21+%F0%9F%8D%BB&currency_code=EUR"
+  },
+  "version": "1.0.0",
+  "private": true,
   "scripts": {
     "generate": "prisma generate",
     "generate:watch": "prisma generate --watch"
