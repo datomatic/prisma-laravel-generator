@@ -2,7 +2,7 @@ import {getSample} from '../../__fixtures__/get-sample';
 import {format} from '../../../utils/php-cs-fixer';
 import generateModel from '../../../generators/models/generator';
 
-jest.setTimeout(60_000);
+jest.setTimeout(120_000);
 
 test('models: generation', async () => {
   const {dmmf} = await getSample();

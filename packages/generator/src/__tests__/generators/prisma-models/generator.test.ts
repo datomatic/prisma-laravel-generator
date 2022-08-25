@@ -26,7 +26,7 @@ import CompositeKeyOnRelationError from '../../../errors/composite-key-on-relati
 import isModelPivot from '../../../helpers/is-model-pivot';
 import MultipleInheritanceError from '../../../errors/multiple-inheritance-error';
 
-jest.setTimeout(60_000);
+jest.setTimeout(120_000);
 
 test('prisma-models: generation', async () => {
   const {dmmf, raw} = await getSample();

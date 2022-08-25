@@ -2,7 +2,7 @@ import generateEnum from '../../../generators/enums/generator';
 import {getSample} from '../../__fixtures__/get-sample';
 import {format} from '../../../utils/php-cs-fixer';
 
-jest.setTimeout(60_000);
+jest.setTimeout(120_000);
 
 test('enum generation', async () => {
   const {dmmf} = await getSample();
