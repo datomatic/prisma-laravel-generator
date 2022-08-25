@@ -211,6 +211,7 @@ See a more detailed example in [./packages/usage](packages/usage) of this reposi
 </tr>
 </table>
 
+---
 
 # Initial configuration
 
@@ -222,22 +223,25 @@ In this section we're going to follow you in the setup of `prisma-laravel-genera
 
 Install `prisma` and `prisma-laravel-generator` as Node dev-dependencies:
 
-**With Laravel Sail:**
-> sail npm install --save-dev prisma prisma-laravel-generator
+```bash
+# With Laravel Sail
+sail npm install --save-dev prisma prisma-laravel-generator
 
-**NPM:**
-> npm install --save-dev prisma prisma-laravel-generator
+# NPM
+npm install --save-dev prisma prisma-laravel-generator
 
-**Yarn:**
-> yarn add -D prisma prisma-laravel-generator
+# Yarn
+yarn add -D prisma prisma-laravel-generator
+```
+Then, add `laravel-prisma-bridge` package to your Composer dependencies:
 
-Add `laravel-prisma-bridge` package to your Composer dependencies:
+```bash
+# With Laravel Sail
+sail composer install laravel-prisma-bridge
 
-**With Laravel Sail:**
-> sail composer install laravel-prisma-bridge
-
-**Without Laravel Sail:**
-> composer install laravel-prisma-bridge
+# Without Laravel Sail
+composer install laravel-prisma-bridge
+```
 
 ## 2. Set up a Shadow Database
 
@@ -249,9 +253,9 @@ Otherwise, you have to create a new database (eventually inside the same MySQL i
 Before proceeding, **create a new database** that will be used as the shadow database in the next steps. This is not covered by this readme since it's dependent on your environment, except if you're using Laravel Sail with the default mysql image.
 
 ### 2.1 With Laravel Sail and mysql/mysql-server:8.0
-IMPORTANT: this section assumes that you're using `mysql/mysql-server:8.0` as an image, but you might use a different image and/or database. In that case, you have to manage the creation of the database by yourself.
+**IMPORTANT:** this section assumes that you're using `mysql/mysql-server:8.0` as an image, but you might use a different image and/or database. In that case, you have to manage the creation of the database by yourself.
 
-MORE IMPORTANT: by following this section, you're going to delete your current database. All your data will be lost. Make a dump of your database before proceeding, and restore it when finished. 
+**MORE IMPORTANT:** by following this section, you're going to delete your current database. All your data will be lost. Make a dump of your database before proceeding, and restore it when finished. 
 
 If you're using Laravel Sail and its default MySQL image, in order to create a new database add to your `docker-compose.yml` this volume to your mysql image:
 ```yaml
@@ -351,7 +355,7 @@ So, you have to drop all the tables from your database: your database must be co
 But, before, you might like the idea to [make a dump of your data](#41-optional-dump-your-data).
 
 ### 4.1 (Optional) Dump your data
-If your development database already has some data in it that you want to keep, make a dump of your data before dropping the tables. Otherwise, jump to the next section [Initial migration](#5-initial-migration-your-database-needs-to-be-completely-empty).
+If your development database already has some data in it that you want to keep, make a dump of your data before dropping the tables. Otherwise, jump to the next section [Drop all tables](#42-drop-all-tables).
 
 To make a dump of your data (without structure) in MySQL, you can execute the following command:
 
@@ -378,7 +382,13 @@ If you're using a different database, you should find something similar appropri
 
 In order to execute all the initial Laravel migrations, execute the following command:
 
-> php artisan migrate
+```bash
+# With Laravel Sail:
+sail artisan migrate
+
+# Without Laravel Sail:
+php artisan migrate
+```
 
 Thanks to `laravel-prisma-bridge`, this command will now:
 1. Create the migrations files compatible with Prisma inside your `prisma/migrations` folder;
@@ -400,15 +410,13 @@ If you've manually performed some changes in your db in the past (outside of Lar
 
 To baseline your database, execute the following commands in order to create a new migration and then ignore it (since your database is already aligned to that migration):
 
-**With Laravel Sail:**
 ```bash
+# With Laravel Sail:
 sail npx prisma db pull
 sail npx prisma migrate dev --name initial_migration --create-only
 sail npx prisma migrate resolve --applied ***_initial_migration
-```
 
-**Without Laravel Sail:**
-```bash
+# Without Laravel Sail:
 npx prisma db pull
 npx prisma migrate dev --name initial_migration --create-only
 npx prisma migrate resolve --applied ***_initial_migration
@@ -428,16 +436,25 @@ Then, assuming that your database has exactly the same structure of your develop
 
 You have then to execute the following command in the root of your Laravel project in order to resolve as applied all Prisma migrations:
 
-**With Laravel Sail:**
-> find prisma/migrations -maxdepth 1 -mindepth 1 -type d -print0 | xargs -0 basename -a | xargs -I {} bash -c 'vendor/bin/sail npx prisma migrate resolve --applied "{}"'
+```bash
+# With Laravel Sail:
+find prisma/migrations -maxdepth 1 -mindepth 1 -type d -print0 | xargs -0 basename -a | xargs -I {} bash -c 'vendor/bin/sail npx prisma migrate resolve --applied "{}"'
 
-**Without Laravel Sail:**
-> find prisma/migrations -maxdepth 1 -mindepth 1 -type d -print0 | xargs -0 basename -a | xargs -I {} bash -c 'npx prisma migrate resolve --applied "{}"'
+# Without Laravel Sail:
+find prisma/migrations -maxdepth 1 -mindepth 1 -type d -print0 | xargs -0 basename -a | xargs -I {} bash -c 'npx prisma migrate resolve --applied "{}"'
+```
 
 In this way, we're telling Prisma that all the migrations found in `prisma/migrations` are already applied.
 
 If the command (tested on macOS 12.2.1 with zsh 5.8) does not work in your environment, you should write your own command that takes every migration in your `prisma/migrations` folder and execute the following command:
-> npx prisma migrate resolve --applied [migration-name]
+
+```bash
+# With Laravel Sail:
+sail npx prisma migrate resolve --applied [migration-name]
+
+# Without Laravel Sail:
+npx prisma migrate resolve --applied [migration-name]
+```
 
 (or you can do it manually instead of writing a command)
 
@@ -445,6 +462,8 @@ For more information about what is happening, see [Baselining a database](https:
 
 ## 8. Done!
 You can now play with your `schema.prisma` file and use Prisma as you would in a javascript project. See the [Usage](#usage) section for more details. 
+
+---
 
 # Usage
 
@@ -480,21 +499,25 @@ The folders in which the models are created, and how to manipulate the generated
 
 So, in general, you should never need to update manually your models. But, if you need it, you can execute:
 
-**With Laravel Sail:**
-> sail npx prisma generate
+```bash
+# With Laravel Sail:
+sail npx prisma generate
 
-**Without Laravel Sail:**
-> npx prisma generate
+# Without Laravel Sail:
+npx prisma generate
+```
 
 ## Execute a Laravel migration
 
 In order to execute Laravel migrations, execute the following command:
 
-**With Laravel Sail:**
-> sail artisan migrate
+```bash
+# With Laravel Sail:
+sail artisan migrate
 
-**Without Laravel Sail:**
-> php artisan migrate
+# Without Laravel Sail:
+php artisan migrate
+```
 
 Thanks to `laravel-prisma-bridge`, this command will now:
 1. Create the migrations files compatible with Prisma inside your `prisma/migrations` folder;
@@ -505,11 +528,13 @@ Thanks to `laravel-prisma-bridge`, this command will now:
 
 You can also roll back a Laravel migration with:
 
-**With Laravel Sail:**
-> sail artisan migrate:rollback
+```bash
+# With Laravel Sail:
+sail artisan migrate:rollback
 
-**Without Laravel Sail:**
-> php artisan migrate:rollback
+# Without Laravel Sail:
+php artisan migrate:rollback
+```
 
 In fact, all the `artisan migrate:*` commands are available and integrated with Prisma.
 
@@ -525,6 +550,8 @@ It is sometimes useful to squash either some or all migration files into a singl
 In the generated `Prisma*` models you'll find a property called `$rules`, which is populated with standard Laravel validation methods for every attribute of your model. This property **is not used** by Laravel, you have to manage your own validation depending on your APIs. You can create subsets of the rules depending on which attributes you're going to validate, and so on.
 
 See the [official Laravel documentation](https://laravel.com/docs/9.x/validation) to learn how to use those validation rules.
+
+---
 
 # Schema configuration
 
@@ -961,6 +988,8 @@ model B {
 }
 ```
 
+---
+
 # Not supported (yet?)
 Some functionalities might not be supported: some are not supported by Prisma, others are not supported by Laravel, some are mis-understanding, and the remaining ones are going to be implemented in future versions! 
 
@@ -968,12 +997,11 @@ Some functionalities might not be supported: some are not supported by Prisma, o
  * Databases different from MySQL: Currently MySQL is the only fully-tested driver for this generator, but it should work also with other databases types! We'll try soon to focus also on other databases, to check what works and what not.  
 
 
-
  * Allow data alterations inside Laravel migrations: This is not possible. Laravel's migrations should be only used to alter the structure of the tables, NOT to alter the data. When generating the .sql files compatible with Prisma starting from a Laravel migration, just the structural changes are converted. If you need to alter the data (e.g., you were using Eloquent to do some changes in a migration), you have to find some alternative ways (create an artisan command to migrate the data, or [customize Prisma migration](https://www.prisma.io/docs/guides/database/developing-with-prisma-migrate/customizing-migrations) to add some manipulations using raw SQL, ...).
  * Composite primary keys: [Not supported by Laravel](https://laravel.com/docs/9.x/eloquent#composite-primary-keys)
  * created_at without updated_at (and vice-versa): [Not supported by Laravel](https://laravel.com/docs/9.x/eloquent#timestamps)
  * [cuid()](https://www.prisma.io/docs/reference/api-reference/prisma-schema-reference#cuid): Not supported natively by Laravel (you can use some external packages, but this is up to you)
- * Mapped fields (e.g., `firstName String @map("first_name")`): Laravel does not provide a way to map attributes to columns with different names
+ * Mapped fields (e.g., `firstName String @map("first_name")`): Laravel does not provide a way to map attributes to columns with different names, except for the primary key.
  * Mapped enums (backed enums) only allows string as db-value (i.e., you can't set `@map(1)` but only `@map("1")`): This is limited by Prisma, since [@map allows as an argument only strings](https://www.prisma.io/docs/reference/api-reference/prisma-schema-reference#map)
  * `fillable` and `guarded` fields at the same time: [Does not make sense in Laravel](https://laravel.com/docs/9.x/eloquent#mass-assignment)
  * `hidden` and `visible` fields at the same time: [Does not make sense in Laravel](https://laravel.com/docs/9.x/eloquent-serialization#hiding-attributes-from-json)
