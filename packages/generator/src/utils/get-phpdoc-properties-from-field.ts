@@ -1,5 +1,4 @@
 import {DMMF} from '@prisma/generator-helper';
-import _ from 'lodash';
 import isFieldEnum from '../helpers/is-field-enum';
 import isFieldReadOnly from '../helpers/is-field-read-only';
 import getEnumFqcn from '../helpers/get-enum-fqcn';

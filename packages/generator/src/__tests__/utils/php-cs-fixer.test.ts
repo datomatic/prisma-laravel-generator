@@ -2,14 +2,13 @@ import {mkdtemp, readFile, rm, writeFile} from 'node:fs/promises';
 import {join} from 'node:path';
 import os from 'node:os';
 import {existsSync} from 'node:fs';
-import writeFileSafely from '../../utils/write-file-safely';
 import {checkPhpCsFixer, format, formatFile} from '../../utils/php-cs-fixer';
 
 test('checkPhpCsFixer: with valid paths', () => {
   expect(
     checkPhpCsFixer(
-      './../usage/tools/php-cs-fixer/vendor/bin/php-cs-fixer',
-      './../usage/tools/php-cs-fixer/.php-cs.dist.php',
+      './../../tools/php-cs-fixer/vendor/bin/php-cs-fixer',
+      './../../tools/php-cs-fixer/.php-cs.dist.php',
     ),
   ).toBeTruthy();
 });
@@ -18,7 +17,7 @@ test('checkPhpCsFixer: with invalid bin', () => {
   expect(() =>
     checkPhpCsFixer(
       './php-cs-fixer',
-      './../usage/tools/php-cs-fixer/.php-cs.dist.php',
+      './../../tools/php-cs-fixer/.php-cs.dist.php',
     ),
   ).toThrowError();
 });
@@ -26,7 +25,7 @@ test('checkPhpCsFixer: with invalid bin', () => {
 test('checkPhpCsFixer: with invalid config', () => {
   expect(() =>
     checkPhpCsFixer(
-      './../usage/tools/php-cs-fixer/vendor/bin/php-cs-fixer',
+      './../../tools/php-cs-fixer/vendor/bin/php-cs-fixer',
       './.php-cs.dist.php',
     ),
   ).toThrowError();
@@ -76,8 +75,8 @@ describe('formatFile: temporary folder setup', () => {
 
     await formatFile(
       path,
-      './../usage/tools/php-cs-fixer/vendor/bin/php-cs-fixer',
-      './../usage/tools/php-cs-fixer/.php-cs.dist.php',
+      './../../tools/php-cs-fixer/vendor/bin/php-cs-fixer',
+      './../../tools/php-cs-fixer/.php-cs.dist.php',
     );
     expect(existsSync(path)).toBeTruthy();
 
@@ -95,8 +94,8 @@ describe('formatFile: temporary folder setup', () => {
 
     await formatFile(
       path,
-      './../usage/tools/php-cs-fixer/vendor/bin/php-cs-fixer',
-      './../usage/tools/php-cs-fixer/.php-cs.dist.php',
+      './../../tools/php-cs-fixer/vendor/bin/php-cs-fixer',
+      './../../tools/php-cs-fixer/.php-cs.dist.php',
     );
     expect(existsSync(path)).toBeTruthy();
 
@@ -109,8 +108,8 @@ describe('formatFile: temporary folder setup', () => {
     await expect(async () =>
       formatFile(
         './test.php',
-        './../usage/tools/php-cs-fixer/vendor/bin/php-cs-fixer',
-        './../usage/tools/php-cs-fixer/.php-cs.dist.php',
+        './../../tools/php-cs-fixer/vendor/bin/php-cs-fixer',
+        './../../tools/php-cs-fixer/.php-cs.dist.php',
       ),
     ).rejects.toThrowError();
   });
@@ -129,8 +128,8 @@ describe('formatFile: temporary folder setup', () => {
 test('format: valid content', async () => {
   const prettified = await format(
     '<?php namespace App\\Enums\\Prisma; enum Test { case A = "A"; case B = \'B\'; case C; }',
-    './../usage/tools/php-cs-fixer/vendor/bin/php-cs-fixer',
-    './../usage/tools/php-cs-fixer/.php-cs.dist.php',
+    './../../tools/php-cs-fixer/vendor/bin/php-cs-fixer',
+    './../../tools/php-cs-fixer/.php-cs.dist.php',
   );
   expect(prettified).toMatchSnapshot('prettified');
 });
@@ -138,8 +137,8 @@ test('format: valid content', async () => {
 test('format: empty content', async () => {
   const prettified = await format(
     '',
-    './../usage/tools/php-cs-fixer/vendor/bin/php-cs-fixer',
-    './../usage/tools/php-cs-fixer/.php-cs.dist.php',
+    './../../tools/php-cs-fixer/vendor/bin/php-cs-fixer',
+    './../../tools/php-cs-fixer/.php-cs.dist.php',
   );
   expect(prettified).toMatchSnapshot('prettified');
 });

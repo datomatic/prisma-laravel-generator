@@ -18,6 +18,6 @@ updates:
     schedule:
       interval: 'weekly'
   - package-ecosystem: 'composer'
-    directory: '/packages/usage/tools/php-cs-fixer'
+    directory: '/tools/php-cs-fixer'
     schedule:
       interval: 'weekly'

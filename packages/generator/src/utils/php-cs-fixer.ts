@@ -27,8 +27,8 @@ export const checkPhpCsFixer = (
 
 export const formatFile = async (
   path: string,
-  phpCsFixerBin = './tools/php-cs-fixer/vendor/bin/php-cs-fixer',
-  phpCsFixerConfig = './tools/php-cs-fixer/.php-cs.dist.php',
+  phpCsFixerBin = '../vendor/bin/php-cs-fixer',
+  phpCsFixerConfig = '../.php-cs.dist.php',
 ): Promise<void> => {
   if (!existsSync(path)) {
     throw new Error(
@@ -44,8 +44,8 @@ export const formatFile = async (
 
 export const format = async (
   content: string,
-  phpCsFixerBin = './tools/php-cs-fixer/vendor/bin/php-cs-fixer',
-  phpCsFixerConfig = './tools/php-cs-fixer/.php-cs.dist.php',
+  phpCsFixerBin = '../vendor/bin/php-cs-fixer',
+  phpCsFixerConfig = '../.php-cs.dist.php',
 ): Promise<string> => {
   checkPhpCsFixer(phpCsFixerBin, phpCsFixerConfig);
 
