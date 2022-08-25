@@ -65,6 +65,13 @@ jobs:
           key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
       - name: Install dependencies
         run: yarn install --frozen-lockfile
+      - uses: actions/cache@v2
+        with:
+          path: "**/vendor"
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+      - name: Install composer dependencies
+        working-directory: ./packages/usage/tools/php-cs-fixer
+        run: composer install
       - name: Publish 🚀
         working-directory: ./packages/generator
         run: npx semantic-release
