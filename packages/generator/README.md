@@ -259,10 +259,10 @@ Then, add `laravel-prisma-bridge` package to your Composer dependencies:
 
 ```bash
 # With Laravel Sail
-sail composer install laravel-prisma-bridge
+sail composer install datomatic/laravel-prisma-bridge
 
 # Without Laravel Sail
-composer install laravel-prisma-bridge
+composer install datomatic/laravel-prisma-bridge
 ```
 
 ## 2. Set up a Shadow Database
