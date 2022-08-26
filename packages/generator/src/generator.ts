@@ -106,35 +106,32 @@ generatorHandler({
             );
           }
         }),
-        ..._.map(
-          config.modelsPath !== 'false' ? options.dmmf.datamodel.models : [],
-          async model => {
-            const generatedModel = generateModel(
-              model,
-              config.prismaModelsPrefix,
-            );
+        ..._.map(options.dmmf.datamodel.models, async model => {
+          const generatedModel = generateModel(
+            model,
+            config.prismaModelsPrefix,
+          );
 
-            const customPath = getModelPath(model);
+          const customPath = getModelPath(model);
 
-            const writeLocation = path.join(
-              outputPath,
-              customPath ?? config.modelsPath,
-              `${getModelClassName(model)}.php`,
-            );
+          const writeLocation = path.join(
+            outputPath,
+            customPath ?? config.modelsPath,
+            `${getModelClassName(model)}.php`,
+          );
 
-            if (!existsSync(writeLocation)) {
-              await writeFileSafely(writeLocation, generatedModel);
+          if (!existsSync(writeLocation)) {
+            await writeFileSafely(writeLocation, generatedModel);
 
-              if (config.phpCsFixerBinPath && config.phpCsFixerConfigPath) {
-                await formatFile(
-                  writeLocation,
-                  config.phpCsFixerBinPath,
-                  config.phpCsFixerConfigPath,
-                );
-              }
+            if (config.phpCsFixerBinPath && config.phpCsFixerConfigPath) {
+              await formatFile(
+                writeLocation,
+                config.phpCsFixerBinPath,
+                config.phpCsFixerConfigPath,
+              );
             }
-          },
-        ),
+          }
+        }),
       ].flat(),
     );
   },
