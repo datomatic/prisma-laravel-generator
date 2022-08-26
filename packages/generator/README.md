@@ -509,6 +509,8 @@ The models are stored as abstract classes, and in your `./app/Models` folder you
 
 You should never touch the models in your `./app/Models/Prisma` folder! Those files are recreated at every generation and any manual change will be lost. If you need to add some methods, properties, etc., change the model in your `./app/Models`, which will not be edited ever again by `prisma-laravel-generator`.
 
+When you delete a model from your schema, the related Prisma model in `./app/Models/Prisma` will be deleted, but not the main model in `./app/Models`, which needs to be removed manually. This behaviour is intentional, since the model can contain custom code.    
+
 Differently, enums are **not** generated as "abstract", since in PHP there is no abstraction in enums and there is no inheritance either. Even if they don't have `Prisma*` prefix in their names, you should not make changes to the enums, since they're going to be re-generated entirely.
 
 The folders in which the models are created, and how to manipulate the generated model, is further explained in the [Schema Configuration](#schema-configuration) section.
@@ -587,7 +589,7 @@ In this section we're going to see how to affect the generated models and the av
 |      | prismaModelsPath     | Path of the generated `Prisma*` abstract models, starting from the root of your Laravel project. WARNING: This folder will be emptied when the generator runs, so you should set it as a dedicated folder for generated Models.                                                                                                                                                | `"./app/Models/Prisma"`                              |
 |      | prismaModelsPrefix   | The prefix used for the generated abstract models                                                                                                                                                                                                                                                                                                                              | `"Prisma"`                                           |
 |      | prismaEnumsPath      | Path of the generated `Prisma*` enums, starting from the root of your Laravel project. WARNING: This folder will be emptied when the generator runs, so you should set it as a dedicated folder for generated Enums.                                                                                                                                                           | `"./app/Enums/Prisma"`                               |
-|      | modelsPath           | Path of the one-time generated models (the one that inherits from the generated `Prisma*` models which you should use and you are free to change), starting from the root of your Laravel project. If `false`, those models will not be generated.                                                                                                                             | `"./app/Models"`                                     |
+|      | modelsPath           | Path of the one-time generated models (the one that inherits from the generated `Prisma*` models which you should use and you are free to change), starting from the root of your Laravel project.                                                                                                                                                                             | `"./app/Models"`                                     |
 |      | baseModel            | FQCN of the class that all the models inherit from                                                                                                                                                                                                                                                                                                                             | `"Illuminate\\Database\\Eloquent\\Model"`            |
 |      | basePivotModel       | FQCN of the class that all the generated pivots inherit from                                                                                                                                                                                                                                                                                                                   | `"Illuminate\\Database\\Eloquent\\Relations\\Pivot"` |
 |      | phpCsFixerBinPath    | Path of PHPCSFixer, starting from the root of your Laravel project (usually, `"./vendor/bin/php-cs-fixer"`). If provided, the generated models will be formatted by PHPCSFixer to align the code style of the generated models to the rest of your project. If not assigned, the models will be formatted using [Prettier PHP Plugin](https://github.com/prettier/plugin-php). | `undefined`                                          |
@@ -945,13 +947,13 @@ model B {
 }
 ```
 
-#### Self-relation
+#### Self-relation One-To-One
 You need to define a relation name to avoid ambiguities. See the [official documentation](https://www.prisma.io/docs/concepts/components/prisma-schema/relations/self-relations) for more details. 
 ```prisma
 model Example {
   id        Int      @id @default(autoincrement())
-  relatedId Int      @unique
-  parent    Example  @relation("relation_name", fields: [relatedId], references: [id])
+  relatedId Int?     @unique
+  parent    Example? @relation("relation_name", fields: [relatedId], references: [id])
   child     Example? @relation("relation_name")
 }
 ```
@@ -968,6 +970,17 @@ model B {
   id            Int @id @default(autoincrement())
   relatedId     Int
   one_to_one_a2 A   @relation(fields: [relatedId], references: [id])
+}
+```
+
+#### Self-relation One-To-Many
+You need to define a relation name to avoid ambiguities. See the [official documentation](https://www.prisma.io/docs/concepts/components/prisma-schema/relations/self-relations) for more details.
+```prisma
+model Example {
+  id        Int       @id @default(autoincrement())
+  relatedId Int?
+  parent    Example?  @relation("relation_name", fields: [relatedId], references: [id])
+  childs    Example[] @relation("relation_name")
 }
 ```
 
@@ -1019,6 +1032,7 @@ Some functionalities might not be supported: some are not supported by Prisma, o
  * Databases different from MySQL: Currently MySQL is the only fully-tested driver for this generator, but it should work also with other databases types! We'll try soon to focus also on other databases, to check what works and what not.  
 
 
+ * Pivot with additional relations: If your pivot needs additional relations with other models, you should remove the `pivot` annotation and use it as a standard model. Pivots generation works only if there are just two one-to-many relations.
  * Allow data alterations inside Laravel migrations: This is not possible. Laravel's migrations should be only used to alter the structure of the tables, NOT to alter the data. When generating the .sql files compatible with Prisma starting from a Laravel migration, just the structural changes are converted. If you need to alter the data (e.g., you were using Eloquent to do some changes in a migration), you have to find some alternative ways (create an artisan command to migrate the data, or [customize Prisma migration](https://www.prisma.io/docs/guides/database/developing-with-prisma-migrate/customizing-migrations) to add some manipulations using raw SQL, ...).
  * Composite primary keys: [Not supported by Laravel](https://laravel.com/docs/9.x/eloquent#composite-primary-keys)
  * created_at without updated_at (and vice-versa): [Not supported by Laravel](https://laravel.com/docs/9.x/eloquent#timestamps)
@@ -1029,4 +1043,3 @@ Some functionalities might not be supported: some are not supported by Prisma, o
  * `hidden` and `visible` fields at the same time: [Does not make sense in Laravel](https://laravel.com/docs/9.x/eloquent-serialization#hiding-attributes-from-json)
  * `mass-assignable` with `guarded` or `fillable` fields: `mass-assignable` annotation adds a `protected $guarded = [];` attribute to the model, so it does not make sense to define other fields as guarded or fillable.
  * Multiple data sources: [Not supported by Prisma](https://www.prisma.io/docs/concepts/components/prisma-schema/data-sources)
- 
