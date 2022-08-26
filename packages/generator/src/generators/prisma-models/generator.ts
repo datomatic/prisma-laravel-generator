@@ -281,6 +281,11 @@ const generatePrismaModel = (
     [fieldName: string]: {value: string; readOnly: boolean};
   };
 
+  const fieldNames = _.chain(fields)
+    .map(f => `"${f.name}"`)
+    .join(', ')
+    .value();
+
   if (hasMany.length > 0 || belongsToMany.length > 0) {
     imports.add('\\Illuminate\\Database\\Eloquent\\Collection');
   }
@@ -344,14 +349,14 @@ const generatePrismaModel = (
      ${_.chain(hasMany)
        .map(
          relation =>
-           `* @property-read Collection<${relation.className}> $${relation.name}`,
+           `* @property-read Collection<${relation.className}>|${relation.className}[] $${relation.name}`,
        )
        .join('\n')
        .value()}
      ${_.chain(belongsToMany)
        .map(
          relation =>
-           `* @property-read Collection<${relation.className}> $${relation.name}`,
+           `* @property-read Collection<${relation.className}>|${relation.className}[] $${relation.name}`,
        )
        .join('\n')
        .value()}
@@ -374,6 +379,8 @@ const generatePrismaModel = (
         .value()}
 
       protected $table = '${tableName}';
+
+      ${isPivot ? `public static array $PIVOT_FIELDS = [${fieldNames}];` : ''}
 
       ${
         primaryKeyField
@@ -726,7 +733,9 @@ const generatePrismaModel = (
                         'null',
                       )}
                     )${
-                      relation.using ? `->using(${relation.using}::class)` : ''
+                      relation.using
+                        ? `->using(${relation.using}::class)->withPivot(${relation.using}::$PIVOT_FIELDS)`
+                        : ''
                     };
                   }`,
               )
