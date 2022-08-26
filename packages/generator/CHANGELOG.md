@@ -1,3 +1,11 @@
+## [1.0.1](https://github.com/datomatic/prisma-laravel-generator/compare/v1.0.0...v1.0.1) (2022-08-26)
+
+
+### Bug Fixes
+
+* model path not deactivable ([944e678](https://github.com/datomatic/prisma-laravel-generator/commit/944e678e9f9b10067f0aaf9c1474e88718c6ae25))
+* pivot fields passed to belongstomany relation ([3aa2583](https://github.com/datomatic/prisma-laravel-generator/commit/3aa2583835e169a155662335d781ae6ea83e3f55))
+
 # 1.0.0 (2022-08-25)
 
 
