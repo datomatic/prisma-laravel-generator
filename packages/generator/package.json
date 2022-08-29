@@ -58,6 +58,7 @@
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.1",
     "@semantic-release/git": "^10.0.1",
+    "@semantic-release/npm": "^9.0.1",
     "@types/jest": "28.1.8",
     "@types/lodash": "^4.14.184",
     "@types/node": "18.7.13",
@@ -91,7 +92,8 @@
           ],
           "message": "chore(release): set `package.json` to ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
         }
-      ]
+      ],
+      "@semantic-release/npm"
     ]
   }
 }
