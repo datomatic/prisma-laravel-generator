@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/datomatic/prisma-laravel-generator/compare/v1.0.2...v1.0.3) (2022-08-29)
+
+
+### Bug Fixes
+
+* update deps ([324a2ab](https://github.com/datomatic/prisma-laravel-generator/commit/324a2ab79321deaefca7c084bb1754c945fcd1df))
+
 ## [1.0.2](https://github.com/datomatic/prisma-laravel-generator/compare/v1.0.1...v1.0.2) (2022-08-29)
 
 
