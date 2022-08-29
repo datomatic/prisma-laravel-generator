@@ -32,7 +32,7 @@ use Illuminate\Support\Str;
  *
  * @property-read string $uuid
  * @property string $name
- * @property-read Collection<Post> $posts
+ * @property-read Collection<Post>|Post[] $posts
  */
 abstract class PrismaCategory extends Model
 {
@@ -76,6 +76,9 @@ abstract class PrismaCategory extends Model
             'post_id',
             'uuid',
             'uuid'
-        )->using(CategoryPost::class);
+        )
+            ->using(CategoryPost::class)
+            ->withPivot(CategoryPost::$PIVOT_FIELDS)
+        ;
     }
 }

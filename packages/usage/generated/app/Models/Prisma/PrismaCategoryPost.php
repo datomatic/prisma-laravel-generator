@@ -33,6 +33,13 @@ use Illuminate\Database\Eloquent\Relations\Pivot;
  */
 abstract class PrismaCategoryPost extends Pivot
 {
+    public static array $PIVOT_FIELDS = [
+        'id',
+        'post_id',
+        'category_id',
+        'affinity',
+    ];
+
     public $incrementing = true;
 
     public $timestamps = false;

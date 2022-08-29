@@ -1,5 +1,5 @@
 generator laravel_generator {
-  provider             = "node ../../node_modules/prisma-laravel-generator"
+  provider             = "node ../../node_modules/@datomatic/prisma-laravel-generator"
   output               = "../generated"
   phpCsFixerBinPath    = "../../tools/php-cs-fixer/vendor/bin/php-cs-fixer"
   phpCsFixerConfigPath = "../../tools/php-cs-fixer/.php-cs.dist.php"

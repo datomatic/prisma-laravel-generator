@@ -39,7 +39,7 @@ use Illuminate\Support\Str;
  * @property-read CarbonImmutable $updated_at
  * @property int $user_id
  * @property-read User $user
- * @property-read Collection<Category> $categories
+ * @property-read Category[]|Collection<Category> $categories
  */
 abstract class PrismaPost extends Model
 {
@@ -96,6 +96,9 @@ abstract class PrismaPost extends Model
             'category_id',
             'uuid',
             'uuid'
-        )->using(CategoryPost::class);
+        )
+            ->using(CategoryPost::class)
+            ->withPivot(CategoryPost::$PIVOT_FIELDS)
+        ;
     }
 }

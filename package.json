@@ -1,5 +1,5 @@
 {
-  "name": "prisma-laravel-generator-monorepo",
+  "name": "@datomatic/prisma-laravel-generator-monorepo",
   "description": "Laravel generator for Prisma",
   "keywords": [
     "laravel",

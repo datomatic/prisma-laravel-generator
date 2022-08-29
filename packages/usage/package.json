@@ -1,5 +1,5 @@
 {
-  "name": "prisma-laravel-generator-usage",
+  "name": "@datomatic/prisma-laravel-generator-usage",
   "description": "Laravel generator for Prisma",
   "keywords": ["laravel", "prisma", "generator", "orm", "eloquent", "mvc", "models"],
   "homepage": "https://github.com/datomatic/prisma-laravel-generator",
@@ -29,7 +29,7 @@
   "devDependencies": {
     "@types/node": "18.7.13",
     "prisma": "4.2.1",
-    "prisma-laravel-generator": "*",
+    "@datomatic/prisma-laravel-generator": "*",
     "typescript": "4.7.4"
   }
 }

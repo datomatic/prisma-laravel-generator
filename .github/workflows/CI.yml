@@ -44,7 +44,7 @@ jobs:
         working-directory: ./tools/php-cs-fixer
         run: composer install
       - name: Run Tests 🧪
-        run: yarn workspace prisma-laravel-generator run test:coverage
+        run: yarn workspace @datomatic/prisma-laravel-generator run test:coverage
       - name: Check coverage badges updated
         run: yarn make-badges:ci
   Publish:
