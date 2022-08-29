@@ -46,7 +46,7 @@ use Illuminate\Validation\Rules\Enum;
  * @property-read CarbonImmutable $created_at
  * @property-read CarbonImmutable $updated_at
  * @property-read ?CarbonImmutable $deleted_at
- * @property-read Collection<Post> $posts
+ * @property-read Collection<Post>|Post[] $posts
  */
 abstract class PrismaUser extends Model implements AuthenticatableContract
 {

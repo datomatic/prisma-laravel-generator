@@ -1,5 +1,5 @@
 {
-  "name": "prisma-laravel-generator",
+  "name": "@datomatic/prisma-laravel-generator",
   "description": "Laravel generator for Prisma",
   "keywords": [
     "laravel",
@@ -32,6 +32,9 @@
   },
   "engines": {
     "node": ">=14.0"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "scripts": {
     "start": "node dist/bin.js",

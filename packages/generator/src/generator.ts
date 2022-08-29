@@ -16,7 +16,7 @@ import getModelClassName from './helpers/get-model-classname';
 import deleteAllFilesInDirectory from './helpers/delete-all-files-in-directory';
 import getModelPath from './helpers/get-model-path';
 
-const GENERATOR_NAME = 'prisma-laravel-generator';
+const GENERATOR_NAME = '@datomatic/prisma-laravel-generator';
 
 generatorHandler({
   onManifest() {

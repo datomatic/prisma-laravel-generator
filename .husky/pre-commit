@@ -2,5 +2,5 @@
 . "$(dirname "$0")/_/husky.sh"
 
 npx lint-staged
-yarn workspace prisma-laravel-generator run test:coverage
+yarn workspace @datomatic/prisma-laravel-generator run test:coverage
 yarn make-badges

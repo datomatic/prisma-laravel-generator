@@ -1,6 +1,6 @@
 import {mkdtemp, readFile, rm} from 'node:fs/promises';
 import {join} from 'node:path';
-import os from 'node:os';
+import {tmpdir} from 'node:os';
 import {existsSync} from 'node:fs';
 import writeFileSafely from '../../utils/write-file-safely';
 
@@ -8,9 +8,7 @@ describe('writeFileSafely: temporary folder setup', () => {
   let temporaryPath = '';
 
   beforeAll(async () => {
-    temporaryPath = await mkdtemp(
-      join(os.tmpdir(), 'prisma-laravel-generator-'),
-    );
+    temporaryPath = await mkdtemp(join(tmpdir(), 'prisma-laravel-generator-'));
   });
 
   test('writeFileSafely: expect temporary folder available', () => {

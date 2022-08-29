@@ -1,12 +1,12 @@
 import {mkdtemp, readdir, writeFile} from 'node:fs/promises';
 import {join} from 'node:path';
-import os from 'node:os';
+import {tmpdir} from 'node:os';
 import {existsSync} from 'node:fs';
 import deleteAllFilesInDirectory from '../../helpers/delete-all-files-in-directory';
 
 test('deleteAllFilesInDirectory: delete files', async () => {
   const temporaryPath = await mkdtemp(
-    join(os.tmpdir(), 'prisma-laravel-generator-'),
+    join(tmpdir(), 'prisma-laravel-generator-'),
   );
 
   await writeFile(join(temporaryPath, '1.txt'), 'hello', 'utf8');
@@ -23,7 +23,7 @@ test('deleteAllFilesInDirectory: delete files', async () => {
 
 test('deleteAllFilesInDirectory: invalid directory', async () => {
   const invalidPath = join(
-    await mkdtemp(join(os.tmpdir(), 'prisma-laravel-generator-')),
+    await mkdtemp(join(tmpdir(), 'prisma-laravel-generator-')),
     'invalid',
   );
 
