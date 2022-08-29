@@ -7,17 +7,21 @@ version: 2
 updates:
   - package-ecosystem: 'npm'
     directory: '/packages/generator/'
+    target-branch: 'beta'
     schedule:
       interval: 'weekly'
   - package-ecosystem: 'npm'
     directory: '/packages/usage/'
+    target-branch: 'beta'
     schedule:
       interval: 'weekly'
   - package-ecosystem: 'npm'
     directory: '/'
+    target-branch: 'beta'
     schedule:
       interval: 'weekly'
   - package-ecosystem: 'composer'
     directory: '/tools/php-cs-fixer'
+    target-branch: 'beta'
     schedule:
       interval: 'weekly'
