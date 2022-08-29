@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/datomatic/prisma-laravel-generator/compare/v1.0.1...v1.0.2) (2022-08-29)
+
+
+### Bug Fixes
+
+* add organization scope ([c656117](https://github.com/datomatic/prisma-laravel-generator/commit/c656117f0fd6e623868b798f80939cc3a1b5e7bc))
+
 ## [1.0.1](https://github.com/datomatic/prisma-laravel-generator/compare/v1.0.0...v1.0.1) (2022-08-26)
 
 
