@@ -24,7 +24,7 @@
     "generate:watch": "prisma generate --watch"
   },
   "dependencies": {
-    "@prisma/client": "4.2.1"
+    "@prisma/client": "4.3.1"
   },
   "devDependencies": {
     "@types/node": "^18.7.13",
