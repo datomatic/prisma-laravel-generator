@@ -67,7 +67,7 @@
     "prisma": "^4.4.0",
     "semantic-release": "^19.0.5",
     "ts-jest": "28.0.8",
-    "typescript": "^4.8.2"
+    "typescript": "^4.8.4"
   },
   "release": {
     "branches": [
