@@ -4,8 +4,8 @@
 <p align="center">
 
 ![Build status](https://img.shields.io/github/workflow/status/datomatic/prisma-laravel-generator/CI/main?style=flat-square)
-![Downloads](https://img.shields.io/npm/dt/prisma-laravel-generator?style=flat-square)
-![Version](https://img.shields.io/npm/v/prisma-laravel-generator?style=flat-square)
+![Downloads](https://img.shields.io/npm/dt/@datomatic/prisma-laravel-generator?style=flat-square)
+![Version](https://img.shields.io/npm/v/@datomatic/prisma-laravel-generator?style=flat-square)
 ![Prisma version](https://img.shields.io/github/package-json/dependency-version/Datomatic/prisma-laravel-generator/dev/prisma?filename=packages%2Fgenerator%2Fpackage.json&style=flat-square)
 
 ![Open issues](https://img.shields.io/github/issues-raw/Datomatic/prisma-laravel-generator?style=flat-square)
