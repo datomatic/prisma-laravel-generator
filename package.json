@@ -52,7 +52,7 @@
     "eslint-plugin-jsx-a11y": "^6.6.1",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-promise": "^6.0.1",
-    "eslint-plugin-unicorn": "^43.0.2",
+    "eslint-plugin-unicorn": "^44.0.2",
     "eslint-plugin-workspaces": "^0.7.0",
     "husky": "^8.0.1",
     "istanbul-badges-readme": "^1.8.2",
