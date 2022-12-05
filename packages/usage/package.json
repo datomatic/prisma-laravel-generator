@@ -27,7 +27,7 @@
     "@prisma/client": "4.4.0"
   },
   "devDependencies": {
-    "@types/node": "^18.7.23",
+    "@types/node": "^18.11.10",
     "prisma": "4.4.0",
     "@datomatic/prisma-laravel-generator": "*",
     "typescript": "^4.8.4"
